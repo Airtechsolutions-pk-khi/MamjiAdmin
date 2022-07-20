@@ -52,12 +52,13 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapseCustomer">
                     <i class="fas fa-fw fa-user"></i>
-                    <span>Customer</span>
+                    <span>Pharmacy</span>
                 </a>
                 <div id="collapseCustomer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <a class="collapse-item" [routerLink]="['/admin/customer']">All Customers</a> -->
-                        <a class="collapse-item">All Customers</a>
+                        <a class="collapse-item" [routerLink]="['/admin/pharmacy/customerinquiry']">Customer Inquiry</a>
+                        <a class="collapse-item" [routerLink]="['/admin/pharmacy/prescription']">Prescription</a>
                     </div>
                 </div>
             </li>

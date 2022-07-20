@@ -57,6 +57,8 @@ import { ModalContentComponent } from './admin/sales/orders/modal-content/modal-
 import { NgbdModalContent } from './admin/sales/orders/modal-content/ngbd-OrderDetail-content.component';
 import { DoctorComponent } from './admin/managedoctor/doctor/doctor.component';
 import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/customerinquiry.component';
+import { PrescriptionComponent } from './admin/pharmacy/prescription/prescription.component';
+ 
  
  
  
@@ -106,6 +108,8 @@ import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/custo
     NgbdModalContent,
     DoctorComponent,
     CustomerinquiryComponent,
+    PrescriptionComponent,
+     
      
     
     
@@ -181,6 +185,11 @@ import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/custo
           { path: 'addons/edit/:id', component: AddaddonsComponent },
 
           { path: 'managedoctor/doctor', component: DoctorComponent },
+
+          { path: 'pharmacy/customerinquiry', component: CustomerinquiryComponent },
+
+          { path: 'pharmacy/prescription', component: PrescriptionComponent },
+          
         ]
       }
     ]),
