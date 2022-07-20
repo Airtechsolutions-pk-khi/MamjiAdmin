@@ -58,6 +58,8 @@ import { NgbdModalContent } from './admin/sales/orders/modal-content/ngbd-OrderD
 import { DoctorComponent } from './admin/managedoctor/doctor/doctor.component';
 import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/customerinquiry.component';
 import { PrescriptionComponent } from './admin/pharmacy/prescription/prescription.component';
+import { DrappoinmentComponent } from './admin/reception/drappoinment/drappoinment.component';
+import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/laboratoryinquiry.component';
  
  
  
@@ -109,6 +111,8 @@ import { PrescriptionComponent } from './admin/pharmacy/prescription/prescriptio
     DoctorComponent,
     CustomerinquiryComponent,
     PrescriptionComponent,
+    DrappoinmentComponent,
+    LaboratoryinquiryComponent,
      
      
     
@@ -189,6 +193,12 @@ import { PrescriptionComponent } from './admin/pharmacy/prescription/prescriptio
           { path: 'pharmacy/customerinquiry', component: CustomerinquiryComponent },
 
           { path: 'pharmacy/prescription', component: PrescriptionComponent },
+
+          { path: 'reception/customerinquiry', component: CustomerinquiryComponent },
+
+          { path: 'reception/drappoinment', component: DrappoinmentComponent },
+
+          { path: 'reception/laboratoryinquiry', component: LaboratoryinquiryComponent },
           
         ]
       }
