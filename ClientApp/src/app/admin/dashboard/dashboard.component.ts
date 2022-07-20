@@ -50,8 +50,8 @@ export class DashboardComponent {
   
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
   ngOnInit() {
-    const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);   
-    this._datepicker.fromDate=date;
+    // const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);   
+    // this._datepicker.fromDate=date;
     this.GetDataDashboard();
     
   }
@@ -106,26 +106,26 @@ export class DashboardComponent {
   }
   GetDashboard() {
     
-    this.service.GetDashboard(this.ls.getSelectedLocation().locationID,new Date()).subscribe((res: any) => {
+    // this.service.GetDashboard(this.ls.getSelectedLocation().locationID,new Date()).subscribe((res: any) => {
       
-      this.dashboardSummary = res.summarysales;
-      this.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
-      this.BindMAEN(res.maensales);
-    }, error => {
+    //   this.dashboardSummary = res.summarysales;
+    //   this.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
+    //   this.BindMAEN(res.maensales);
+    // }, error => {
 
-    });
+    // });
 
   }
 
   GetDataDashboard(){
-    this.service.GetDashboardRange(this.ls.getSelectedLocation().locationID,this.parseDate(this._datepicker.fromDate),this.parseDate(this._datepicker.toDate)).subscribe((res: any) => {
+    // this.service.GetDashboardRange(this.ls.getSelectedLocation().locationID,this.parseDate(this._datepicker.fromDate),this.parseDate(this._datepicker.toDate)).subscribe((res: any) => {
     
-      this.dashboardSummary = res.summarysales;
-      this.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
-      this.BindMAEN(res.maensales);
-    }, error => {
+    //   this.dashboardSummary = res.summarysales;
+    //   this.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
+    //   this.BindMAEN(res.maensales);
+    // }, error => {
 
-    });
+    // });
   }
   parseDate(obj) {
     return obj.year + "-" + obj.month + "-" + obj.day;;

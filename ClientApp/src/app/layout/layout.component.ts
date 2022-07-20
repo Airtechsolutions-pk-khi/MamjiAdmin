@@ -19,25 +19,25 @@ export class LayoutComponent implements OnInit {
   _Langname = "";
   branchname = "";
   email = "";
-  locationID: 0;
-  Locations: [];
+  //locationID: 0;
+  //Locations: [];
   private selectedBrand;
 
   ngOnInit() {
     var data = this.ls.getSelectedBrand();
 
-    this.loadLocations();
+    //this.loadLocations();
 
 
-    if (data == null)
-      this.router.navigate(["/"]);
+    // if (data == null)
+    //   this.router.navigate(["/"]);
 
   }
   constructor(private router: Router
     , public service: LocationsService
     , public ls: LocalStorageService) {
-    this.branchname = this.ls.getSelectedBrand().name;
-    this.email = this.ls.getSelectedBrand().email;
+    //this.branchname = this.ls.getSelectedBrand().name;
+    //this.email = this.ls.getSelectedBrand().email;
   }
   Logout() {
 
@@ -65,12 +65,12 @@ export class LayoutComponent implements OnInit {
     //     }
     //   });
     // }
-    this.Locations = this.ls.getLocation();
-    this.locationID = this.ls.getSelectedLocation().locationID;
+    //this.Locations = this.ls.getLocation();
+    //this.locationID = this.ls.getSelectedLocation().locationID;
 
   }
   changeloc(LocObj) {
 
-    this.locationID = this.ls.selectedLocation().locationID;
+    //this.locationID = this.ls.selectedLocation().locationID;
   }
 }

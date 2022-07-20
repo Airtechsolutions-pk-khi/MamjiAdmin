@@ -8,7 +8,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" [routerLink]="['dashboard']">
                 <div class="sidebar-brand-icon">
-                    <img src="../../assets/img/favicon.png" style="width: 40%;" />
+                    <img src="../../assets/img/logo-new.png" style="width: 60%;" />
                 </div>
             </a>
 
@@ -32,16 +32,18 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-list"></i>
-                    <span>Menu</span>
+                    <span>Manage Doctors</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
-                        <a class="collapse-item" [routerLink]="['/admin/category']">Category</a>
+                        <!-- <a class="collapse-item" [routerLink]="['/admin/category']">Category</a>
                         <a class="collapse-item" [routerLink]="['/admin/item']">Items</a>
                         <a class="collapse-item" [routerLink]="['/admin/item/settings']">Item Settings</a>
                         <a class="collapse-item" [routerLink]="['/admin/modifier']">Modifiers</a>
-                        <a class="collapse-item" [routerLink]="['/admin/addons']">Addons</a>
+                        <a class="collapse-item" [routerLink]="['/admin/addons']">Addons</a> -->
+                        <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Doctor</a>
+                        
                     </div>
                 </div>
             </li>
@@ -54,7 +56,8 @@
                 </a>
                 <div id="collapseCustomer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" [routerLink]="['/admin/customer']">All Customers</a>
+                        <!-- <a class="collapse-item" [routerLink]="['/admin/customer']">All Customers</a> -->
+                        <a class="collapse-item">All Customers</a>
                     </div>
                 </div>
             </li>
@@ -67,8 +70,10 @@
                 </a>
                 <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" [routerLink]="['/admin/brand']">Brands</a>
-                        <a class="collapse-item" [routerLink]="['/admin/location']">Branch Settings</a>
+                        <!-- <a class="collapse-item" [routerLink]="['/admin/brand']">Brands</a>
+                        <a class="collapse-item" [routerLink]="['/admin/location']">Branch Settings</a> -->
+                        <a class="collapse-item">Brands</a>
+                        <a class="collapse-item">Branch Settings</a>
                     </div>
                 </div>
             </li>
@@ -80,8 +85,8 @@
                 </a>
                 <div id="collapseSales" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" [routerLink]="['/admin/orders']">Orders</a>
-
+                        <!-- <a class="collapse-item" [routerLink]="['/admin/orders']">Orders</a> -->
+                        <a class="collapse-item">Orders</a>
                     </div>
                 </div>
             </li>
@@ -94,12 +99,18 @@
                 </a>
                 <div id="collapseReports" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" [routerLink]="['/admin/report/summary']">Sales Summary </a>
+                        <!-- <a class="collapse-item" [routerLink]="['/admin/report/summary']">Sales Summary </a>
                         <a class="collapse-item" [routerLink]="['/admin/report/salesdetail']"> Sales details</a>
                         <a class="collapse-item" [routerLink]="['/admin/report/salesitemwise']">Item Sales </a>
                         <a class="collapse-item" [routerLink]="['/admin/report/salescustomerwise']">Customer Sales </a>
                         <a class="collapse-item" [routerLink]="['/admin/report/salescategorywise']">Category Sales </a>
-                        <!-- <a class="collapse-item" [routerLink]="['/admin/report/salesuserwise']">User Sales </a> -->
+                         -->
+                        <a class="collapse-item">Sales Summary </a>
+                        <a class="collapse-item"> Sales details</a>
+                        <a class="collapse-item">Item Sales </a>
+                        <a class="collapse-item">Customer Sales </a>
+                        <a class="collapse-item">Category Sales </a>
+                        
                     </div>
                 </div>
             </li>
@@ -126,10 +137,15 @@
                 <div id="collapseSettings" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <a class="collapse-item" [routerLink]="['/generalsettings']">General Settings </a> -->
-                        <a class="collapse-item" [routerLink]="['/admin/banner']">Discount Banners | APP</a>
+                        <!-- <a class="collapse-item" [routerLink]="['/admin/banner']">Discount Banners | APP</a>
                         <a class="collapse-item" [routerLink]="['/admin/offers']">Offers | APP</a>
                         <a class="collapse-item" [routerLink]="['/admin/delivery']">Delivery</a>
-                        <a class="collapse-item" [routerLink]="['/admin/appsettings']">App Setting</a>
+                        <a class="collapse-item" [routerLink]="['/admin/appsettings']">App Setting</a> -->
+
+                        <a class="collapse-item" >Discount Banners | APP</a>
+                        <a class="collapse-item" >Offers | APP</a>
+                        <a class="collapse-item" >Delivery</a>
+                        <a class="collapse-item" >App Setting</a>
                         
                     </div>
                 </div>

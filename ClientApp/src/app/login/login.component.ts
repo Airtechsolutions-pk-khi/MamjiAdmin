@@ -36,10 +36,9 @@ export class LoginComponent implements OnInit {
         data => {
           
           if (data != null) {
-            
-            this.loadLocations(data["brandID"]);
-            this.ls.setSelectedBrand(data);
-            
+            debugger
+             
+            this.router.navigate(["/admin/dashboard"]);
       
           }
           else {
@@ -62,21 +61,7 @@ export class LoginComponent implements OnInit {
 
     });
   }
-  private loadLocations(bid) {
-    
-    this.service.getAllLocations(bid).subscribe((res: any) => {
-      
-      if(res.length>0){
-        this.ls.setLocation(res);
-        this.ls.setSelectedLocation(res[0]);
-        this.router.navigate(["/admin/dashboard"]);
-      }
-      else{
-        this.ls.setLocation(null);
-        this.ls.setSelectedLocation(null);
-      }
-    });
-  }
+   
 
  
 }

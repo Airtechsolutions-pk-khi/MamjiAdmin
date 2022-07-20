@@ -22,7 +22,7 @@ export class LoginService {
   }
 
   login(username, password) {
-
+    debugger
     return this.http.get<any[]>(`api/login/authenticate/${username}/${password}`);
    
   }

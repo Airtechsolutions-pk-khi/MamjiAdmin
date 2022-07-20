@@ -55,6 +55,11 @@ import { AddonsComponent } from './admin/menu/addons/addons.component';
 import { AddaddonsComponent } from './admin/menu/addons/addaddons/addaddons.component';
 import { ModalContentComponent } from './admin/sales/orders/modal-content/modal-OrderDetail.component';
 import { NgbdModalContent } from './admin/sales/orders/modal-content/ngbd-OrderDetail-content.component';
+import { DoctorComponent } from './admin/managedoctor/doctor/doctor.component';
+import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/customerinquiry.component';
+ 
+ 
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +103,12 @@ import { NgbdModalContent } from './admin/sales/orders/modal-content/ngbd-OrderD
     AddonsComponent,
     AddaddonsComponent,
     ModalContentComponent,
-    NgbdModalContent
+    NgbdModalContent,
+    DoctorComponent,
+    CustomerinquiryComponent,
+     
+    
+    
     
   ],
   imports: [
@@ -169,6 +179,8 @@ import { NgbdModalContent } from './admin/sales/orders/modal-content/ngbd-OrderD
           { path: 'addons', component: AddonsComponent },
           { path: 'addons/add', component: AddaddonsComponent },
           { path: 'addons/edit/:id', component: AddaddonsComponent },
+
+          { path: 'managedoctor/doctor', component: DoctorComponent },
         ]
       }
     ]),
