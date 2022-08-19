@@ -53,8 +53,8 @@ import { AdddeliveryComponent } from './admin/settings/Delivery/adddelivery/addd
 import { AppsettingsComponent } from './admin/settings/appsettings/appsettings.component';
 import { AddonsComponent } from './admin/menu/addons/addons.component';
 import { AddaddonsComponent } from './admin/menu/addons/addaddons/addaddons.component';
-import { ModalContentComponent } from './admin/sales/orders/modal-content/modal-OrderDetail.component';
-import { NgbdModalContent } from './admin/sales/orders/modal-content/ngbd-OrderDetail-content.component';
+//import { ModalContentComponent } from './admin/sales/orders/modal-content/modal-OrderDetail.component';
+//import { NgbdModalContent } from './admin/sales/orders/modal-content/ngbd-OrderDetail-content.component';
 import { DoctorComponent } from './admin/managedoctor/doctor/doctor.component';
 import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/customerinquiry.component';
 import { PrescriptionComponent } from './admin/pharmacy/prescription/prescription.component';
@@ -63,7 +63,7 @@ import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/
 import { UploadreportComponent } from './admin/laboratory/uploadreport/uploadreport.component';
 import { DeliverydetailComponent } from './admin/pharmacy/deliverydetail/deliverydetail.component';
 import { PromotionsComponent } from './admin/settings/offers/promotions/promotions.component';
- 
+//import { MedicineComponent } from './admin/pharmacy/medicine/medicine.component';
  
  
  
@@ -109,8 +109,8 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
     AppsettingsComponent,
     AddonsComponent,
     AddaddonsComponent,
-    ModalContentComponent,
-    NgbdModalContent,
+    //ModalContentComponent,
+   // NgbdModalContent,
     DoctorComponent,
     CustomerinquiryComponent,
     PrescriptionComponent,
@@ -118,6 +118,7 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
     LaboratoryinquiryComponent,
     UploadreportComponent,
     PromotionsComponent,
+    //MedicineComponent,
      
      
     
@@ -152,7 +153,7 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
           { path: 'modifier/add', component: AddmodifierComponent },
           { path: 'modifier/edit/:id', component: AddmodifierComponent },
 
-          { path: 'orders', component: OrdersComponent },
+          //{ path: 'orders', component: OrdersComponent },
           { path: 'orders/add', component: OrderdetailsComponent },
           { path: 'orders/view/:id', component: OrderdetailsComponent },
 
@@ -212,7 +213,10 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
           { path: 'pharmacy/deliverydetail', component: DeliverydetailComponent },
 
           { path: 'setting/promotions', component: PromotionsComponent },
+
+         // { path: 'pharmacy/medicine', component: MedicineComponent },
           
+          { path: 'sales/orders', component: OrdersComponent },
         ]
       }
     ]),
