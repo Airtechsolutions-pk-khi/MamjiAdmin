@@ -36,8 +36,7 @@ export class LoginComponent implements OnInit {
         data => {
           
           if (data != null) {
-            debugger
-             
+          
             this.router.navigate(["/admin/dashboard"]);
       
           }
