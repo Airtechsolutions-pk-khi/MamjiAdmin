@@ -5642,11 +5642,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Rar File\\MamjiAdmin\\MamjiAdmin.csproj",
+      "projectUniqueName": "D:\\Projects\\MamjiGit\\MamjiAdmin.csproj",
       "projectName": "MamjiAdmin",
-      "projectPath": "D:\\Rar File\\MamjiAdmin\\MamjiAdmin.csproj",
+      "projectPath": "D:\\Projects\\MamjiGit\\MamjiAdmin.csproj",
       "packagesPath": "C:\\Users\\ammad\\.nuget\\packages\\",
-      "outputPath": "D:\\Rar File\\MamjiAdmin\\obj\\",
+      "outputPath": "D:\\Projects\\MamjiGit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
