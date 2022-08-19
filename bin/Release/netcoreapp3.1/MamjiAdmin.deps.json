@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "MohsinFoodAdmin/1.0.0": {
+      "MamjiAdmin/1.0.0": {
         "dependencies": {
           "EntityFramework": "6.4.4",
           "Microsoft.AspNetCore.SpaServices.Extensions": "3.1.5",
@@ -295,10 +295,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "MohsinFoodAdmin.dll": {}
+          "MamjiAdmin.dll": {}
         },
         "compile": {
-          "MohsinFoodAdmin.dll": {}
+          "MamjiAdmin.dll": {}
         }
       },
       "EntityFramework/6.4.4": {
@@ -2997,7 +2997,7 @@
     }
   },
   "libraries": {
-    "MohsinFoodAdmin/1.0.0": {
+    "MamjiAdmin/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

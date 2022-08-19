@@ -60,6 +60,9 @@ import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/custo
 import { PrescriptionComponent } from './admin/pharmacy/prescription/prescription.component';
 import { DrappoinmentComponent } from './admin/reception/drappoinment/drappoinment.component';
 import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/laboratoryinquiry.component';
+import { UploadreportComponent } from './admin/laboratory/uploadreport/uploadreport.component';
+import { DeliverydetailComponent } from './admin/pharmacy/deliverydetail/deliverydetail.component';
+import { PromotionsComponent } from './admin/settings/offers/promotions/promotions.component';
  
  
  
@@ -113,6 +116,8 @@ import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/
     PrescriptionComponent,
     DrappoinmentComponent,
     LaboratoryinquiryComponent,
+    UploadreportComponent,
+    PromotionsComponent,
      
      
     
@@ -199,6 +204,14 @@ import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/
           { path: 'reception/drappoinment', component: DrappoinmentComponent },
 
           { path: 'reception/laboratoryinquiry', component: LaboratoryinquiryComponent },
+
+          { path: 'laboratory/customerinquiry', component: CustomerinquiryComponent },
+
+          { path: 'laboratory/uploadreport', component: UploadreportComponent },
+
+          { path: 'pharmacy/deliverydetail', component: DeliverydetailComponent },
+
+          { path: 'setting/promotions', component: PromotionsComponent },
           
         ]
       }

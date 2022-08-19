@@ -29,7 +29,7 @@ export class OffersComponent implements OnInit {
     public ls: LocalStorageService,
     public ts: ToastService,
     public router: Router) {
-    this.selectedBrand = this.ls.getSelectedBrand().brandID;
+    //this.selectedBrand = this.ls.getSelectedBrand().brandID;
 
     this.loading$ = service.loading$;
     this.submit = false;

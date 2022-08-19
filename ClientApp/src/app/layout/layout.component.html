@@ -8,7 +8,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" [routerLink]="['dashboard']">
                 <div class="sidebar-brand-icon">
-                    <img src="../../assets/img/logo-new.png" style="width: 60%;" />
+                    <img src="../../assets/img/logo-White.png" style="width: 45%;" />
                 </div>
             </a>
 
@@ -59,6 +59,7 @@
                         <!-- <a class="collapse-item" [routerLink]="['/admin/customer']">All Customers</a> -->
                         <a class="collapse-item" [routerLink]="['/admin/pharmacy/customerinquiry']">Customer Inquiry</a>
                         <a class="collapse-item" [routerLink]="['/admin/pharmacy/prescription']">Prescription</a>
+                        <a class="collapse-item" [routerLink]="['/admin/pharmacy/deliverydetail']">Delivery Details</a>
                     </div>
                 </div>
             </li>
@@ -67,14 +68,29 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="true" aria-controls="collapseCompany">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Company</span>
+                    <span>Reception</span>
                 </a>
                 <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <a class="collapse-item" [routerLink]="['/admin/brand']">Brands</a>
                         <a class="collapse-item" [routerLink]="['/admin/location']">Branch Settings</a> -->
-                        <a class="collapse-item">Brands</a>
-                        <a class="collapse-item">Branch Settings</a>
+                        <a class="collapse-item" [routerLink]="['/admin/reception/customerinquiry']">Customer Inquiry</a>
+                        <a class="collapse-item" [routerLink]="['/admin/reception/drappoinment']">Dr. Appoinment</a>
+                        <a class="collapse-item" [routerLink]="['/admin/reception/laboratoryinquiry']">Laboratory Inquiry</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLab" aria-expanded="true" aria-controls="collapseLab">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Laboratory</span>
+                </a>
+                <div id="collapseLab" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <!-- <a class="collapse-item" [routerLink]="['/admin/orders']">Orders</a> -->
+                        <a class="collapse-item" [routerLink]="['/admin/laboratory/uploadreport']">Upload Reports</a>
+                        <a class="collapse-item" [routerLink]="['/admin/laboratory/customerinquiry']">Customer Inquiry</a>
                     </div>
                 </div>
             </li>
@@ -91,21 +107,21 @@
                     </div>
                 </div>
             </li>
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" aria-expanded="true" aria-controls="collapseReports">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Reports</span>
                 </a>
                 <div id="collapseReports" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <!-- <a class="collapse-item" [routerLink]="['/admin/report/summary']">Sales Summary </a>
+                        <a class="collapse-item" [routerLink]="['/admin/report/summary']">Sales Summary </a>
                         <a class="collapse-item" [routerLink]="['/admin/report/salesdetail']"> Sales details</a>
                         <a class="collapse-item" [routerLink]="['/admin/report/salesitemwise']">Item Sales </a>
                         <a class="collapse-item" [routerLink]="['/admin/report/salescustomerwise']">Customer Sales </a>
                         <a class="collapse-item" [routerLink]="['/admin/report/salescategorywise']">Category Sales </a>
-                         -->
+                        
                         <a class="collapse-item">Sales Summary </a>
                         <a class="collapse-item"> Sales details</a>
                         <a class="collapse-item">Item Sales </a>
@@ -114,7 +130,7 @@
                         
                     </div>
                 </div>
-            </li>
+            </li> -->
             <!-- <hr class="sidebar-divider">
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupport" aria-expanded="true" aria-controls="collapseSupport">
@@ -143,10 +159,9 @@
                         <a class="collapse-item" [routerLink]="['/admin/delivery']">Delivery</a>
                         <a class="collapse-item" [routerLink]="['/admin/appsettings']">App Setting</a> -->
 
-                        <a class="collapse-item" >Discount Banners | APP</a>
-                        <a class="collapse-item" >Offers | APP</a>
-                        <a class="collapse-item" >Delivery</a>
-                        <a class="collapse-item" >App Setting</a>
+                        <a class="collapse-item" [routerLink]="['/admin/setting/promotions']">Promotions</a>
+                        <a class="collapse-item" [routerLink]="['/admin/offers']" >Offers | APP</a>
+                      
                         
                     </div>
                 </div>
