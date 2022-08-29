@@ -1,0 +1,106 @@
+<h1 class="h3 mb-2 text-gray-800">Add Doctor</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="doctorForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Doctor Details</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">First Name</label>
+                <input type="text" class="form-control" id=Name placeholder="" formControlName="firstName">
+                <div *ngIf="f.firstName.invalid && (f.firstName.dirty || f.firstName.touched)" class="alert alert-danger">
+                  <div *ngIf="f.fullName.errors.required">
+                    First Name is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Last Name</label>
+                <input type="text" class="form-control" id=Name placeholder="" formControlName="lastName">
+                <div *ngIf="f.lastName.invalid && (f.lastName.dirty || f.lastName.touched)" class="alert alert-danger">
+                  <div *ngIf="f.lastName.errors.required">
+                    last Name is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Name</label>
+                <input type="text" class="form-control" id=Name placeholder="" formControlName="fullName">
+                <div *ngIf="f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)" class="alert alert-danger">
+                  <div *ngIf="f.fullName.errors.required">
+                    Name is required.
+                  </div>
+                </div>
+              </div>
+              <!-- Form Row-->
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputFirstName">Email</label>
+                  <input type="email" class="form-control" id=email placeholder="" formControlName="email">
+                  <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger">
+                    <div *ngIf="f.email.errors.required">
+                      Email is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLastName">Profile</label>
+                  <input type="text" class="form-control" id=profile placeholder="" formControlName="profile">
+                  <div *ngIf="f.profile.invalid && (f.profile.dirty || f.profile.touched)" class="alert alert-danger">
+                    <div *ngIf="f.profile.errors.required">
+                      Profile is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLastName">Skills</label>
+                  <input type="text" class="form-control" id=skills placeholder="" formControlName="skills">
+                  <div *ngIf="f.skills.invalid && (f.skills.dirty || f.skills.touched)" class="alert alert-danger">
+                    <div *ngIf="f.skills.errors.required">
+                      Skills is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLastName">Education</label>
+                  <input type="text" class="form-control" id=education placeholder="" formControlName="education">
+                  <div *ngIf="f.education.invalid && (f.education.dirty || f.education.touched)" class="alert alert-danger">
+                    <div *ngIf="f.education.errors.required">
+                      Education is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -35,9 +35,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         data => {
           
-          if (data != null) {
-            debugger
-             
+          if (data != null) {            
             this.router.navigate(["/admin/dashboard"]);
       
           }

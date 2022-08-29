@@ -5636,19 +5636,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ammad Raza\\.nuget\\packages\\": {}
+    "C:\\Users\\ammad\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\Mamji\\MamjiAdminGit\\MamjiAdmin.csproj",
+      "projectUniqueName": "D:\\Rar File\\MamjiAdmin\\MamjiAdmin.csproj",
       "projectName": "MamjiAdmin",
-      "projectPath": "D:\\Project\\Mamji\\MamjiAdminGit\\MamjiAdmin.csproj",
-      "packagesPath": "C:\\Users\\Ammad Raza\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\Mamji\\MamjiAdminGit\\obj\\",
+      "projectPath": "D:\\Rar File\\MamjiAdmin\\MamjiAdmin.csproj",
+      "packagesPath": "C:\\Users\\ammad\\.nuget\\packages\\",
+      "outputPath": "D:\\Rar File\\MamjiAdmin\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Ammad Raza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ammad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5709,12 +5714,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.13, 3.1.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5723,7 +5722,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
       }
     }
   }
