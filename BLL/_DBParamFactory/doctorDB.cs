@@ -81,7 +81,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[11];
+                SqlParameter[] p = new SqlParameter[13];
 
                 p[0] = new SqlParameter("@FirstName", data.FirstName);
                 p[1] = new SqlParameter("@LastName", data.LastName);
@@ -107,52 +107,54 @@ namespace BAL.Repositories
             }
         }
 
-        //public int Update(DoctorBLL data)
-        //{
-        //    try
-        //    {
-        //        int rtn = 0;
-        //        SqlParameter[] p = new SqlParameter[11];
+        public int Update(DoctorBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[13];
 
-        //        p[0] = new SqlParameter("@FullName", data.FullName);
-        //        p[1] = new SqlParameter("@Email", data.Email);
-        //        p[2] = new SqlParameter("@Mobile", data.Mobile);
-        //        p[3] = new SqlParameter("@Image", data.Image);
-        //        p[4] = new SqlParameter("@StatusID", data.StatusID);
-        //        p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-        //        p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-        //        p[7] = new SqlParameter("@LocationID", data.LocationID);
-        //        p[8] = new SqlParameter("@BrandID", data.BrandID);
-        //        p[9] = new SqlParameter("@Password", data.Password);
-        //        p[10] = new SqlParameter("@doctorID", data.doctorID);
+                p[0] = new SqlParameter("@FirstName", data.FirstName);
+                p[1] = new SqlParameter("@LastName", data.LastName);
+                p[2] = new SqlParameter("@FullName", data.FullName);
+                p[3] = new SqlParameter("@Email", data.Email);
+                p[4] = new SqlParameter("@Profile", data.Profile);
+                p[5] = new SqlParameter("@Skills", data.Skills);
+                p[6] = new SqlParameter("@Education", data.Education);
+                p[7] = new SqlParameter("@StatusID", data.StatusID);
+                p[8] = new SqlParameter("@CreatedBy", data.CreatedBy);
+                p[9] = new SqlParameter("@CreatedOn", data.CreatedOn);
+                p[10] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+                p[11] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[12] = new SqlParameter("@doctorID", data.DoctorID);
 
-        //        rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updatedoctor_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateDoctor_Admin", p);
 
-        //        return rtn;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
 
-        //public int Delete(DoctorBLL data)
-        //{
-        //    try
-        //    {
-        //        int _obj = 0;
-        //        SqlParameter[] p = new SqlParameter[2];
-        //        p[0] = new SqlParameter("@id", data.doctorID);
-        //        p[1] = new SqlParameter("@brandid", data.BrandID);
+        public int Delete(DoctorBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[2];
+                p[0] = new SqlParameter("@id", data.DoctorID);
+                p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
-        //        _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_Deletedoctor", p);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteDoctor", p);
 
-        //        return _obj;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
     }
 }

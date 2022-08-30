@@ -300,7 +300,6 @@ D:\Rar File\MamjiAdmin\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Sy
 D:\Rar File\MamjiAdmin\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Rar File\MamjiAdmin\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Rar File\MamjiAdmin\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Rar File\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.csproj.AssemblyReference.cache
 D:\Rar File\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.GeneratedMSBuildEditorConfig.editorconfig
 D:\Rar File\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.AssemblyInfoInputs.cache
 D:\Rar File\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.AssemblyInfo.cs
@@ -324,3 +323,4 @@ D:\Rar File\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.csproj.CopyComplete
 D:\Rar File\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.dll
 D:\Rar File\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.pdb
 D:\Rar File\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.genruntimeconfig.cache
+D:\Rar File\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.csproj.AssemblyReference.cache

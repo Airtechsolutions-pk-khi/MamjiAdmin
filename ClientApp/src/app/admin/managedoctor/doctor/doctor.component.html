@@ -18,7 +18,7 @@
                 <button type="submit" class="btn btn-primary mt-4 mr-1" (click)="exportAsXLSX()">
                     <span translate>Export</span>
                 </button>
-                <button [routerLink]="['add']" class="btn btn-primary mt-4 mr-1">
+                <button [routerLink]="['adddoctors']" class="btn btn-primary mt-4 mr-1">
                     Add Doctor
                 </button>
             </div>
@@ -35,7 +35,6 @@
             <table class="table table-striped">
                 <thead>
                     <tr class="table-header">
-                        <th width="10%">IMAGE</th>
                         <th width="15%" sortable="FullName" > Name </th>
                         <th width="15%" sortable="Email" >Email </th>
                         <th width="15%" sortable="Profile" > Profile </th>
@@ -47,10 +46,6 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let item of data$ | async ">
-                        <td>
-                            <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
-                            <div *ngIf="item.image === ''" class="image-replace"></div>
-                        </td>
                         <td> {{item.fullName}} </td>
                         <td> {{item.email}} </td>
                         <td> {{item.profile}} </td>
@@ -63,7 +58,7 @@
                         <td>
                             <a (click)="Edit(item.doctorID)"><i class="fas fa-fw fa-edit"></i> </a>
 
-                            <a (click)="Delete(item.doctorID)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+                            <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
                         </td>
                     </tr>
                 </tbody>

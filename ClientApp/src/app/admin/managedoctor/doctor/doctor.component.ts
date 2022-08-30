@@ -63,12 +63,15 @@ export class DoctorComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
-  Edit(doctors) {
-    this.router.navigate(["admin/managedoctor/edit", doctors]);
-}
+  Edit(data) {
+    debugger;
+    this.router.navigate(["admin/managedoctor/doctor/edit", data]);
+  }
 
-Delete(obj) {
-this.service.delete(obj).subscribe((res: any) => {
+
+Delete(data) {
+  debugger
+this.service.delete(data).subscribe((res: any) => {
   if(res!=0){
     this.ts.showSuccess("Success","Record deleted successfully.")
     this.getData();

@@ -56,6 +56,7 @@ import { AddaddonsComponent } from './admin/menu/addons/addaddons/addaddons.comp
 //import { ModalContentComponent } from './admin/sales/orders/modal-content/modal-OrderDetail.component';
 //import { NgbdModalContent } from './admin/sales/orders/modal-content/ngbd-OrderDetail-content.component';
 import { DoctorComponent } from './admin/managedoctor/doctor/doctor.component';
+import { AdddoctorsComponent } from './admin/managedoctor/doctor/adddoctors/adddoctors.component';
 import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/customerinquiry.component';
 import { PrescriptionComponent } from './admin/pharmacy/prescription/prescription.component';
 import { DrappoinmentComponent } from './admin/reception/drappoinment/drappoinment.component';
@@ -112,6 +113,7 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
     //ModalContentComponent,
    // NgbdModalContent,
     DoctorComponent,
+    AdddoctorsComponent,
     CustomerinquiryComponent,
     PrescriptionComponent,
     DrappoinmentComponent,
@@ -195,6 +197,8 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
           { path: 'addons/edit/:id', component: AddaddonsComponent },
 
           { path: 'managedoctor/doctor', component: DoctorComponent },
+          { path: 'managedoctor/doctor/adddoctors', component: AdddoctorsComponent },
+          { path: 'managedoctor/doctor/edit/:id', component: AdddoctorsComponent },
 
           { path: 'pharmacy/customerinquiry', component: CustomerinquiryComponent },
 

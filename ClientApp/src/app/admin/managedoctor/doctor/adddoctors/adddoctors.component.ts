@@ -7,34 +7,34 @@ import { DoctorsService } from 'src/app/_services/doctors.service';
 import { ToastService } from 'src/app/_services/toastservice';
 
 @Component({
-    selector: 'app-adddoctors',
-    templateUrl: './adddoctors.component.html',
-    styleUrls: ['./adddoctors.component.css']
-  })
-  export class AdddoctorsComponent implements OnInit {
-    submitted = false;
-    doctorForm: FormGroup;
-    loading = false;
-    loadingDoctor = false;
-    ButtonText = "Save"; selectedCityIds
-    selectedSubCategoriesIds: string[];
-    selectedLocationIds: string[];
-    selectedgroupModifierIds: string[];
+  selector: 'app-adddoctors',
+  templateUrl: './adddoctors.component.html',
 
-    @ViewChild(ImageuploadComponent, { static: true }) imgComp;
-    constructor(
-      private formBuilder: FormBuilder,
-      private router: Router,
-      private route: ActivatedRoute,
-      private ls: LocalStorageService,
-      public ts: ToastService,
-      private doctorService: DoctorsService
-  
-    ) {
+})
+export class AdddoctorsComponent implements OnInit {
+  submitted = false;
+  doctorForm: FormGroup;
+  loading = false;
+  loadingDoctor = false;
+  ButtonText = "Save"; selectedCityIds
+  selectedSubCategoriesIds: string[];
+  selectedLocationIds: string[];
+  selectedgroupModifierIds: string[];
+
+  @ViewChild(ImageuploadComponent, { static: true }) imgComp;
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute,
+    private ls: LocalStorageService,
+    public ts: ToastService,
+    private doctorService: DoctorsService
+
+  ) {
     this.createForm();
   }
   ngOnInit() {
-    //this.setSelectedDoctor();
+    this.setSelectedDoctor();
   }
 
   get f() { return this.doctorForm.controls; }
@@ -53,53 +53,49 @@ import { ToastService } from 'src/app/_services/toastservice';
     });
   }
   private editForm(obj) {
-    this.f.firstName.setValue(obj.fullName);
-    this.f.lastName.setValue(obj.fullName);
+    debugger;
+    this.f.firstName.setValue(obj.firstName);
+    this.f.lastName.setValue(obj.lastName);
     this.f.fullName.setValue(obj.fullName);
     this.f.email.setValue(obj.email);
-    this.f.profile.setValue(obj.password);
-    this.f.skills.setValue(obj.mobile);
+    this.f.profile.setValue(obj.profile);
+    this.f.skills.setValue(obj.skills);
     this.f.doctorID.setValue(obj.doctorID);
-    this.f.education.setValue(obj.image);
+    this.f.education.setValue(obj.education);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.imgComp.imageUrl = obj.image;
   }
-
-//   setSelecteddoctor() {
-//     this.route.paramMap.subscribe(param => {
-//       const sid = +param.get('id');
-//       if (sid) {
-//         this.loadingDoctor = true;
-//         this.f.doctorID.setValue(sid);
-//         this.doctorService.getById(sid, this.f.doctorID.value).subscribe(res => {
-//           //Set Forms
-//           this.editForm(res);
-//           this.loadingdoctor = false;
-//         });
-//       }
-//     })
-//   }
-
-onSubmit() {
-    debugger;
+  setSelectedDoctor() {    
+    this.route.paramMap.subscribe(param => {
+      const sid = +param.get('id');
+      if (sid) {
+        this.loadingDoctor = true;
+        this.f.doctorID.setValue(sid);
+        this.doctorService.getById(sid, this.f.doctorID.value).subscribe(res => {
+          //Set Forms
+          this.editForm(res);
+          this.loadingDoctor = false;
+        });
+      }
+    })
+  }
+  onSubmit() {
     this.doctorForm.markAllAsTouched();
     this.submitted = true;
     if (this.doctorForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    this.f.image.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.doctorID.value) === 0) {
       //Insert doctor
       console.log(JSON.stringify(this.doctorForm.value));
       this.doctorService.insert(this.doctorForm.value).subscribe(data => {
         if (data != 0) {
-          this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/managedoctor']);
+          this.ts.showSuccess("Success", "Record added successfully.")
+          this.router.navigate(['/admin/managedoctor/doctor/adddoctors']);
         }
         this.loading = false;
       }, error => {
-        this.ts.showError("Error","Failed to insert record.")
+        this.ts.showError("Error", "Failed to insert record.")
         this.loading = false;
       });
     } else {
@@ -107,11 +103,11 @@ onSubmit() {
       this.doctorService.update(this.doctorForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
-          this.ts.showSuccess("Success","Record updated successfully.")
+          this.ts.showSuccess("Success", "Record updated successfully.")
           this.router.navigate(['/admin/managedoctor']);
         }
       }, error => {
-        this.ts.showError("Error","Failed to update record.")
+        this.ts.showError("Error", "Failed to update record.")
         this.loading = false;
       });
     }
@@ -121,4 +117,3 @@ onSubmit() {
 
 }
 
-  

@@ -20,7 +20,7 @@ namespace MohsinFoodAdmin.Controllers
             return _service.GetAll(DoctorID);
         }
 
-        [HttpGet("{id}/brand/{brandid}")]
+        [HttpGet("{id}/doctor/{doctorid}")]
         public DoctorBLL Get(int id, int DoctorID)
         {
             return _service.Get(id, DoctorID);
@@ -31,6 +31,19 @@ namespace MohsinFoodAdmin.Controllers
         {
             return _service.Insert(obj);
         }
+        [HttpPost]
+        [Route("update")]
+        public int PostUpdate([FromBody] DoctorBLL obj)
+        {
+            return _service.Update(obj);
+        }
 
+
+        [HttpPost]
+        [Route("delete")]
+        public int PostDelete([FromBody] DoctorBLL obj)
+        {
+            return _service.Delete(obj);
+        }
     }
 }

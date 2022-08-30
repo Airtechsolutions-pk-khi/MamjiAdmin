@@ -28,11 +28,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
         
-        public DoctorBLL Get(int id, int brandID)
+        public DoctorBLL Get(int id, int doctorID)
         {
             try
             {
-                return _service.Get(id, brandID);
+                return _service.Get(id, doctorID);
             }
             catch (Exception ex)
             {
@@ -54,35 +54,35 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        //public int Update(DoctorBLL data)
-        //{
-        //    try
-        //    {
-        //        data.LastUpdatedDate = _UTCDateTime_SA();
-        //        var result = _service.Update(data);
+        public int Update(DoctorBLL data)
+        {
+            try
+            {
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.Update(data);
 
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
 
-        //public int Delete(DoctorBLL data)
-        //{
-        //    try
-        //    {
-        //        data.LastUpdatedDate = _UTCDateTime_SA();
-        //        var result = _service.Delete(data);
+        public int Delete(DoctorBLL data)
+        {
+            try
+            {
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.Delete(data);
 
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
 
     }
 }
