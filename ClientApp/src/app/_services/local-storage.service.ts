@@ -43,6 +43,9 @@ export class LocalStorageService {
     }
   }
 
-
+  getSelectedDoctor() {
+    
+    return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
+  }
   
 }

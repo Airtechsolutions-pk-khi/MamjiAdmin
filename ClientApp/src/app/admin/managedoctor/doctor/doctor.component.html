@@ -1,4 +1,3 @@
-<!-- Page Heading -->
 <h1 class="h3 mb-2 text-gray-800">Doctors</h1>
 <p class="mb-4"></p>
 
@@ -7,20 +6,20 @@
     <div class="card-header py-3">
         <div class="row">
             <div class="col-md-5">
-                <h6 class="m-0 font-weight-bold text-orange">Doctor List</h6>
+                <h6 class="m-0 font-weight-bold text-orange">Doctors List</h6>
             </div>
             <div class=" col-lg-4 input-group mb-3"style="padding-top: 25px;">
                 <div class="input-group-prepend"style="height: 39px;">
                     <span class="input-group-text"><i class="fa fa-search"></i></span>
                 </div>
-                <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" />
+                <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
             </div>
             <div class="col-md-3 form-group text-right">
-                <button type="submit" class="btn btn-primary mt-4 mr-1" >
+                <button type="submit" class="btn btn-primary mt-4 mr-1" (click)="exportAsXLSX()">
                     <span translate>Export</span>
                 </button>
-                <button [routerLink]="['add']" class="btn btn-primary mt-4 mr-1">
-                    Doctor
+                <button [routerLink]="['adddoctors']" class="btn btn-primary mt-4 mr-1">
+                    Add Doctor
                 </button>
             </div>
             <!-- <div class="col-md-2 text-right"> <button [routerLink]="['add']" class="btn btn-primary ">
@@ -36,40 +35,30 @@
             <table class="table table-striped">
                 <thead>
                     <tr class="table-header">
-                        <th width="10%">IMAGE</th>
                         <th width="15%" sortable="FullName" > Name </th>
                         <th width="15%" sortable="Email" >Email </th>
                         <th width="15%" sortable="Profile" > Profile </th>
                         <th width="15%" sortable="Skills" > Skills </th>
                         <th width="15%" sortable="Education" > Education </th>
-                        <th width="15%" sortable="Mobile" >Mobile </th>
-                        <!-- <th width="15%" sortable="Password" >Type </th> -->
                         <th width="15%" sortable="Status" >Status </th>
-                        <th width="10%"></th>
+                        <th width="10%">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <!-- <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" /> -->
-                            <div class="image-replace"></div>
-                        </td>
-                        <td>Ammad </td>
-                        <td> ammadraza001@gmail.com </td>
-                        <td> Profile</td>
-                        <td> Skills</td>
-                        <td> MBBS</td>
-                        <td>03341897997</td>
-                        <!-- <td>abc123</td> -->
-                        <td>
-                            <ngb-highlight  class="btn btn-sm">
-                                 
+                    <tr *ngFor="let item of data$ | async ">
+                        <td> {{item.fullName}} </td>
+                        <td> {{item.email}} </td>
+                        <td> {{item.profile}} </td>
+                        <td> {{item.skills}} </td>
+                        <td> {{item.education}} </td>
+                        <td> 
+                            <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
                             </ngb-highlight>
                         </td>
                         <td>
-                            <a  ><i class="fas fa-fw fa-edit"></i> </a>
+                            <a (click)="Edit(item.doctorID)"><i class="fas fa-fw fa-edit"></i> </a>
 
-                            <a  ><i class="fas fa-fw fa-trash-alt"></i> </a>
+                            <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
                         </td>
                     </tr>
                 </tbody>
@@ -81,14 +70,14 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <p class="pagination-count">
                     Showing
-                    <!-- <strong>{{(service.pageSize * service.page)-9}}</strong> to
+                    <strong>{{(service.pageSize * service.page)-9}}</strong> to
                     <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of
-                    <strong>{{(total$ | async)!}}</strong> results -->
+                    <strong>{{(total$ | async)!}}</strong> results
                 </p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <!-- <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
-                </ngb-pagination> -->
+                <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
+                </ngb-pagination>
             </div>
         </div>
     </div>
