@@ -3,6 +3,7 @@ export class Doctors {
     firstName: string;
     lastName: string;
     fullName: string;
+    imagePath: string;
     email: string;
     profile: string;
     skills: string;

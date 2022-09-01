@@ -35,6 +35,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr class="table-header">
+                        <th width="10%">IMAGE</th>
                         <th width="15%" sortable="FullName" > Name </th>
                         <th width="15%" sortable="Email" >Email </th>
                         <th width="15%" sortable="Profile" > Profile </th>
@@ -46,6 +47,10 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let item of data$ | async ">
+                        <td>
+                            <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
+                            <div *ngIf="item.image === ''" class="image-replace"></div>
+                        </td>
                         <td> {{item.fullName}} </td>
                         <td> {{item.email}} </td>
                         <td> {{item.profile}} </td>

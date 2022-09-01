@@ -1,35 +1,43 @@
 ﻿
-using System.Collections.Generic;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-namespace MohsinFoodAdmin.Controllers
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+namespace MamjiAdmin.Controllers
 {
     [Route("api/[controller]")]
     public class doctorController : Controller
     {
+        private readonly IWebHostEnvironment _env;
         doctorService _service;
-        public doctorController()
+        public doctorController(IWebHostEnvironment env)
         {
             _service = new doctorService();
+            _env = env;
         }
 
-        [HttpGet("all/{doctorid}")]
-        public List<DoctorBLL> GetAll(int DoctorID)
+        [HttpGet("{all}")]
+        public List<DoctorBLL> GetAlldoctor()
         {
-            return _service.GetAll(DoctorID);
+            return _service.GetAll();
         }
 
-        [HttpGet("{id}/doctor/{doctorid}")]
-        public DoctorBLL Get(int id, int DoctorID)
+        [HttpGet("doctor/{id}")]
+        public DoctorBLL Get(int id)
         {
-            return _service.Get(id, DoctorID);
+            return _service.Get(id);
         }
+
         [HttpPost]
         [Route("insert")]
         public int Post([FromBody] DoctorBLL obj)
         {
-            return _service.Insert(obj);
+            return _service.Insert(obj, _env);
         }
         [HttpPost]
         [Route("update")]

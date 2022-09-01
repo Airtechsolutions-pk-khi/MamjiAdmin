@@ -48,6 +48,7 @@ export class AdddoctorsComponent implements OnInit {
       profile: ['', Validators.required],
       skills: ['', Validators.required],
       education: ['', Validators.required],
+      imagePath: [''],
       statusID: [true],
       doctorID: 0,
     });
@@ -60,6 +61,7 @@ export class AdddoctorsComponent implements OnInit {
     this.f.profile.setValue(obj.profile);
     this.f.skills.setValue(obj.skills);
     this.f.doctorID.setValue(obj.doctorID);
+    this.f.imagePath.setValue(obj.image);
     this.f.education.setValue(obj.education);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
   }
@@ -83,12 +85,12 @@ export class AdddoctorsComponent implements OnInit {
     if (this.doctorForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+    this.f.imagePath.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.doctorID.value) === 0) {
       //Insert doctor
       console.log(JSON.stringify(this.doctorForm.value));
       this.doctorService.insert(this.doctorForm.value).subscribe(data => {
-        debugger;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record added successfully.")
           this.router.navigate(['/admin/managedoctor/doctor']);
