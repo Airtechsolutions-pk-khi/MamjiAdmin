@@ -53,7 +53,6 @@ export class AdddoctorsComponent implements OnInit {
     });
   }
   private editForm(obj) {
-    debugger;
     this.f.firstName.setValue(obj.firstName);
     this.f.lastName.setValue(obj.lastName);
     this.f.fullName.setValue(obj.fullName);
@@ -64,13 +63,13 @@ export class AdddoctorsComponent implements OnInit {
     this.f.education.setValue(obj.education);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
   }
-  setSelectedDoctor() {    
+  setSelectedDoctor() {
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
         this.loadingDoctor = true;
         this.f.doctorID.setValue(sid);
-        this.doctorService.getById(sid, this.f.doctorID.value).subscribe(res => {
+        this.doctorService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
           this.loadingDoctor = false;
@@ -89,9 +88,10 @@ export class AdddoctorsComponent implements OnInit {
       //Insert doctor
       console.log(JSON.stringify(this.doctorForm.value));
       this.doctorService.insert(this.doctorForm.value).subscribe(data => {
+        debugger;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/managedoctor/doctor/adddoctors']);
+          this.router.navigate(['/admin/managedoctor/doctor']);
         }
         this.loading = false;
       }, error => {
@@ -104,7 +104,7 @@ export class AdddoctorsComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record updated successfully.")
-          this.router.navigate(['/admin/managedoctor']);
+          this.router.navigate(['/admin/managedoctor/doctor']);
         }
       }, error => {
         this.ts.showError("Error", "Failed to update record.")
