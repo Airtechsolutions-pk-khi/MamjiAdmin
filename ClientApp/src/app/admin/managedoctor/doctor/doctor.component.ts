@@ -36,9 +36,6 @@ export class DoctorComponent implements OnInit {
      
    }
  
-   ngOnInit() {
-     this.getData();
-   }
    exportAsXLSX(): void {
     this.service.ExportList(this.selectedDoctor).subscribe((res: any) => {    
       this.excelService.exportAsExcelFile(res, 'Report_Export');
@@ -46,8 +43,13 @@ export class DoctorComponent implements OnInit {
       this.ts.showError("Error","Failed to export")
     });
   }
-  getData() {    
-    this.service.getAllData(this.selectedDoctor);    
+
+  ngOnInit() {
+    this.getData();
+  }
+
+  getData() {
+    this.service.getAllData();
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
     this.loading$ = this.service.loading$;
@@ -63,14 +65,12 @@ export class DoctorComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
-  Edit(data) {
-    debugger;
-    this.router.navigate(["admin/managedoctor/doctor/edit", data]);
+  Edit(doctors) {
+    this.router.navigate(["admin/managedoctor/doctor/edit", doctors]);
   }
 
 
 Delete(data) {
-  debugger
 this.service.delete(data).subscribe((res: any) => {
   if(res!=0){
     this.ts.showSuccess("Success","Record deleted successfully.")

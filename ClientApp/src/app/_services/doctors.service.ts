@@ -61,21 +61,23 @@ export class DoctorsService {
   set sortColumn(sortColumn: SortColumn) { this._set({ sortColumn }); }
   set sortDirection(sortDirection: SortDirection) { this._set({ sortDirection }); }
 
+
   get data$() {
     return this._data$.asObservable();
   }
   get allData$() {
     return this._allData$.asObservable();
   }
+
+  getById(id) {
+    return this.http.get<Doctors[]>(`api/doctor/doctor/${id}`);
+  }
   ExportList(doctorID) {
-    debugger
     return this.http.get<Doctors[]>('api/doctor/all/${doctorID}');
   }
-  getById(id, doctorID) {
-    return this.http.get<Doctors[]>('api/doctor/${id}/doctor/${doctorid}');
-  }
-  getAllData(DoctorID) {
-    const url = 'api/doctor/all/${doctorID}';
+  getAllData() {
+
+    const url = `api/doctor/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Doctors[]>(url).subscribe(res => {
@@ -142,7 +144,6 @@ export class DoctorsService {
   }
 
   update(data) {
-    debugger;
     return this.http.post('api/doctor/update', data)
       .pipe(map(res => {
         console.log(res);

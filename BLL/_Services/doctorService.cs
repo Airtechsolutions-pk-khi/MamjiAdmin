@@ -1,5 +1,6 @@
 ﻿using BAL.Repositories;
 using MamjiAdmin._Models;
+using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,34 +16,33 @@ namespace MamjiAdmin.BLL._Services
         {
             _service = new doctorDB();
         }
-
-        public List<DoctorBLL> GetAll(int doctorID)
+        public List<DoctorBLL> GetAll()
         {
             try
             {
-                return _service.GetAll(doctorID);
+                return _service.GetAll();
             }
             catch (Exception ex)
             {
                 return new List<DoctorBLL>();
             }
         }
-        
-        public DoctorBLL Get(int id, int doctorID)
+        public DoctorBLL Get(int id)
         {
             try
             {
-                return _service.Get(id, doctorID);
+                return _service.Get(id);
             }
             catch (Exception ex)
             {
                 return null;
             }
         }
-        public int Insert(DoctorBLL data)
+        public int Insert(DoctorBLL data, IWebHostEnvironment _env)
         {
             try
             {
+                data.ImagePath = UploadImage(data.ImagePath, "Category", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 

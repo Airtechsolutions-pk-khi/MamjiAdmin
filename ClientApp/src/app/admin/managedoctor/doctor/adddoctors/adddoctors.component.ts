@@ -48,12 +48,12 @@ export class AdddoctorsComponent implements OnInit {
       profile: ['', Validators.required],
       skills: ['', Validators.required],
       education: ['', Validators.required],
+      imagePath: [''],
       statusID: [true],
       doctorID: 0,
     });
   }
   private editForm(obj) {
-    debugger;
     this.f.firstName.setValue(obj.firstName);
     this.f.lastName.setValue(obj.lastName);
     this.f.fullName.setValue(obj.fullName);
@@ -61,16 +61,17 @@ export class AdddoctorsComponent implements OnInit {
     this.f.profile.setValue(obj.profile);
     this.f.skills.setValue(obj.skills);
     this.f.doctorID.setValue(obj.doctorID);
+    this.f.imagePath.setValue(obj.image);
     this.f.education.setValue(obj.education);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
   }
-  setSelectedDoctor() {    
+  setSelectedDoctor() {
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
         this.loadingDoctor = true;
         this.f.doctorID.setValue(sid);
-        this.doctorService.getById(sid, this.f.doctorID.value).subscribe(res => {
+        this.doctorService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
           this.loadingDoctor = false;
@@ -84,6 +85,7 @@ export class AdddoctorsComponent implements OnInit {
     if (this.doctorForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+    this.f.imagePath.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.doctorID.value) === 0) {
       //Insert doctor
@@ -91,7 +93,7 @@ export class AdddoctorsComponent implements OnInit {
       this.doctorService.insert(this.doctorForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/managedoctor/doctor/adddoctors']);
+          this.router.navigate(['/admin/managedoctor/doctor']);
         }
         this.loading = false;
       }, error => {
@@ -104,7 +106,7 @@ export class AdddoctorsComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record updated successfully.")
-          this.router.navigate(['/admin/managedoctor']);
+          this.router.navigate(['/admin/managedoctor/doctor']);
         }
       }, error => {
         this.ts.showError("Error", "Failed to update record.")
