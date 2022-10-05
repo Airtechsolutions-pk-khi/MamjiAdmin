@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MamjiAdmin\\MamjiAdmin\\MamjiAdmin.csproj": {}
+    "D:\\Projects\\MamjiAdmin\\MamjiAdmin.csproj": {}
   },
   "projects": {
-    "D:\\MamjiAdmin\\MamjiAdmin\\MamjiAdmin.csproj": {
+    "D:\\Projects\\MamjiAdmin\\MamjiAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MamjiAdmin\\MamjiAdmin\\MamjiAdmin.csproj",
+        "projectUniqueName": "D:\\Projects\\MamjiAdmin\\MamjiAdmin.csproj",
         "projectName": "MamjiAdmin",
-        "projectPath": "D:\\MamjiAdmin\\MamjiAdmin\\MamjiAdmin.csproj",
+        "projectPath": "D:\\Projects\\MamjiAdmin\\MamjiAdmin.csproj",
         "packagesPath": "C:\\Users\\ammad\\.nuget\\packages\\",
-        "outputPath": "D:\\MamjiAdmin\\MamjiAdmin\\obj\\",
+        "outputPath": "D:\\Projects\\MamjiAdmin\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\ammad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,7 +71,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -87,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

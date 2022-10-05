@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { CustomersService } from 'src/app/_services/customers.service';
 import { ToastService } from 'src/app/_services/toastservice';
+//import { debug } from 'console';
 
 @Component({
   selector: 'app-addcustomer',
@@ -17,10 +18,7 @@ export class AddcustomerComponent implements OnInit {
   customerForm: FormGroup;
   loading = false;
   loadingCustomer = false;
-  ButtonText = "Save"; selectedCityIds
-  selectedSubCategoriesIds: string[];
-  selectedLocationIds: string[];
-  selectedgroupModifierIds: string[];
+  ButtonText = "Save";
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -45,17 +43,16 @@ export class AddcustomerComponent implements OnInit {
     this.customerForm = this.formBuilder.group({
       fullName: ['', Validators.required],
       email: ['', Validators.required],
-      password: ['', Validators.required],
       statusID: [true],
       mobile: ['', Validators.required],
+      password: ['', Validators.required],
       customerID: 0,
       image: [''],
-      brandID: this.ls.getSelectedBrand().brandID,
-      locationID: null
     });
   }
 
   private editForm(obj) {
+    debugger
     this.f.fullName.setValue(obj.fullName);
     this.f.email.setValue(obj.email);
     this.f.password.setValue(obj.password);
@@ -72,7 +69,7 @@ export class AddcustomerComponent implements OnInit {
       if (sid) {
         this.loadingCustomer = true;
         this.f.customerID.setValue(sid);
-        this.customerService.getById(sid, this.f.brandID.value).subscribe(res => {
+        this.customerService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
           this.loadingCustomer = false;
@@ -80,9 +77,7 @@ export class AddcustomerComponent implements OnInit {
       }
     })
   }
-
   onSubmit() {
-    debugger;
     this.customerForm.markAllAsTouched();
     this.submitted = true;
     if (this.customerForm.invalid) { return; }
@@ -96,7 +91,7 @@ export class AddcustomerComponent implements OnInit {
       this.customerService.insert(this.customerForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/customer']);
+          this.router.navigate(['/admin/reception/customers']);
         }
         this.loading = false;
       }, error => {
@@ -109,7 +104,7 @@ export class AddcustomerComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success","Record updated successfully.")
-          this.router.navigate(['/admin/customer']);
+          this.router.navigate(['/admin/reception/customers']);
         }
       }, error => {
         this.ts.showError("Error","Failed to update record.")
@@ -117,7 +112,4 @@ export class AddcustomerComponent implements OnInit {
       });
     }
   }
-
-
-
 }

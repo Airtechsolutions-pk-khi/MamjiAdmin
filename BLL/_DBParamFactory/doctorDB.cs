@@ -26,7 +26,6 @@ namespace BAL.Repositories
             _dt = new DataTable();
             _ds = new DataSet();
         }
-
         public List<DoctorBLL> GetAll()
         {
             try

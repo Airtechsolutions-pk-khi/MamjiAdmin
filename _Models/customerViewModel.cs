@@ -8,7 +8,6 @@ namespace MamjiAdmin._Models
     public class customerViewModel
     {
     }
-
     public class CustomerBLL
     {
         public int CustomerID { get; set; }
@@ -18,10 +17,9 @@ namespace MamjiAdmin._Models
         public string Image { get; set; }
         public int StatusID { get; set; }
         public string LastUpdatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedOn { get; set; }
+        public string CreatedBy { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
-        public Nullable<int> LocationID { get; set; }
-        public Nullable<int> BrandID { get; set; }
         public string Password { get; set; }
     }
-
 }

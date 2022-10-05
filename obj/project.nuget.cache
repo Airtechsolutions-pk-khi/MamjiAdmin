@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g6vV+9yD9o6VjT1YmSHF1rwc83O4QpXjAhTprlqwp12DV1WZI0sIlZ4B/l2dSxg7Gf0VV+L3icG6sR3UCVOpxg==",
+  "dgSpecHash": "Y+S/pb+WnEEl1CMHCsL1autLv47nlzPKaLvnIj3925ug64UHZ+XElLiXajeYSFZgQ8wmAdOKpCHCa9C8buhGew==",
   "success": true,
-  "projectFilePath": "D:\\MamjiAdmin\\MamjiAdmin\\MamjiAdmin.csproj",
+  "projectFilePath": "D:\\Projects\\MamjiAdmin\\MamjiAdmin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ammad\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\ammad\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.5\\microsoft.aspnetcore.nodeservices.3.1.5.nupkg.sha512",

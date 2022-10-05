@@ -15,35 +15,28 @@ namespace MamjiAdmin.Controllers
         {
             _service = new customerService();
         }
-
-        [HttpGet("all/{brandid}")]
-        public List<CustomerBLL> GetAll(int brandid)
+        [HttpGet("all")]
+        public List<CustomerBLL> GetAll()
         {
-            return _service.GetAll(brandid);
+            return _service.GetAll();
         }
-
-
-        [HttpGet("{id}/brand/{brandid}")]
-        public CustomerBLL Get(int id, int brandid)
+        [HttpGet("doctor/{id}")]
+        public CustomerBLL Get(int id)
         {
-            return _service.Get(id, brandid);
+            return _service.Get(id);
         }
-
         [HttpPost]
         [Route("insert")]
         public int Post([FromBody]CustomerBLL obj)
         {
             return _service.Insert(obj);
         }
-
         [HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody]CustomerBLL obj)
+        public int PostUpdate([FromBody] CustomerBLL obj)
         {
             return _service.Update(obj);
         }
-
-
         [HttpPost]
         [Route("delete")]
         public int PostDelete([FromBody]CustomerBLL obj)

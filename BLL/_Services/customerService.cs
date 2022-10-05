@@ -16,23 +16,22 @@ namespace MamjiAdmin.BLL._Services
             _service = new customerDB();
         }
 
-        public List<CustomerBLL> GetAll(int brandID)
+        public List<CustomerBLL> GetAll()
         {
             try
             {
-                return _service.GetAll(brandID);
+                return _service.GetAll();
             }
             catch (Exception ex)
             {
                 return new List<CustomerBLL>();
             }
         }
-        
-        public CustomerBLL Get(int id, int brandID)
+        public CustomerBLL Get(int id)
         {
             try
             {
-                return _service.Get(id, brandID);
+                return _service.Get(id);
             }
             catch (Exception ex)
             {
@@ -43,7 +42,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
                 return result;

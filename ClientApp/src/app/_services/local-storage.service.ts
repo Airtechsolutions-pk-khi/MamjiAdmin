@@ -47,5 +47,8 @@ export class LocalStorageService {
     
     return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
   }
-  
+  getSelectedPrescription() {
+
+    return JSON.parse(sessionStorage.getItem('_autheticatedUser'));
+  }
 }

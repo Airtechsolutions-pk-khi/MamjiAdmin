@@ -22,8 +22,10 @@ import { ItemsComponent } from './admin/menu/items/items.component';
 import { AdditemsComponent } from './admin/menu/items/additem/additem.component';
 import { ModifiersComponent } from './admin/menu/modifiers/modifiers.component';
 import { AddmodifierComponent } from './admin/menu/modifiers/addmodifier/addmodifier.component';
-import { CustomersComponent } from './admin/customer/customers/customers.component';
-import { AddcustomerComponent } from './admin/customer/customers/addcustomers/addcustomer.component';
+
+import { CustomersComponent } from './admin/reception/customers/customers.component';
+import { AddcustomerComponent } from './admin/reception/customers/addcustomers/addcustomer.component';
+
 import { LocationsComponent } from './admin/company/locations/locations.component';
 import { AddlocationComponent } from './admin/company/locations/addlocation/addlocation.component';
 import { NgSelectModule} from '@ng-select/ng-select';
@@ -58,14 +60,18 @@ import { AddaddonsComponent } from './admin/menu/addons/addaddons/addaddons.comp
 import { DoctorComponent } from './admin/managedoctor/doctor/doctor.component';
 import { AdddoctorsComponent } from './admin/managedoctor/doctor/adddoctors/adddoctors.component';
 import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/customerinquiry.component';
+
 import { PrescriptionComponent } from './admin/pharmacy/prescription/prescription.component';
+import { AddprescriptionComponent } from './admin/pharmacy/prescription/add/addprescription.component'
+
 import { DrappoinmentComponent } from './admin/reception/drappoinment/drappoinment.component';
 import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/laboratoryinquiry.component';
 import { UploadreportComponent } from './admin/laboratory/uploadreport/uploadreport.component';
 import { DeliverydetailComponent } from './admin/pharmacy/deliverydetail/deliverydetail.component';
 import { PromotionsComponent } from './admin/settings/offers/promotions/promotions.component';
-//import { MedicineComponent } from './admin/pharmacy/medicine/medicine.component';
- 
+
+import { MedicineComponent } from './admin/pharmacy/medicine/medicine.component';
+import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/addmedicine.component'
  
  
 @NgModule({
@@ -84,8 +90,10 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
     AdditemsComponent,
     ModifiersComponent,
     AddmodifierComponent,
+
     CustomersComponent,
     AddcustomerComponent,
+
     BrandComponent,
     AddbrandComponent,
     LocationsComponent,
@@ -115,12 +123,17 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
     DoctorComponent,
     AdddoctorsComponent,
     CustomerinquiryComponent,
+
     PrescriptionComponent,
+    AddprescriptionComponent,
+
     DrappoinmentComponent,
     LaboratoryinquiryComponent,
     UploadreportComponent,
     PromotionsComponent,
-    //MedicineComponent,
+
+    MedicineComponent,
+    AddmedicineComponent,
      
      
     
@@ -155,13 +168,8 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
           { path: 'modifier/add', component: AddmodifierComponent },
           { path: 'modifier/edit/:id', component: AddmodifierComponent },
 
-          //{ path: 'orders', component: OrdersComponent },
           { path: 'orders/add', component: OrderdetailsComponent },
           { path: 'orders/view/:id', component: OrderdetailsComponent },
-
-          { path: 'customer', component: CustomersComponent },
-          { path: 'customer/add', component: AddcustomerComponent },
-          { path: 'customer/edit/:id', component: AddcustomerComponent },
 
           { path: 'location', component: LocationsComponent },
           { path: 'location/add', component: AddlocationComponent },
@@ -203,24 +211,26 @@ import { PromotionsComponent } from './admin/settings/offers/promotions/promotio
           { path: 'pharmacy/customerinquiry', component: CustomerinquiryComponent },
 
           { path: 'pharmacy/prescription', component: PrescriptionComponent },
+          { path: 'pharmacy/prescription/addprescription', component: AddprescriptionComponent },
+          { path: 'pharmacy/prescription/edit/:id', component: AddprescriptionComponent },
 
           { path: 'reception/customerinquiry', component: CustomerinquiryComponent },
 
+          { path: 'reception/customers', component: CustomersComponent },
+          { path: 'reception/customers/addcustomers', component: AddcustomerComponent },
+          { path: 'reception/customers/edit/:id', component: AddcustomerComponent },
+
           { path: 'reception/drappoinment', component: DrappoinmentComponent },
-
           { path: 'reception/laboratoryinquiry', component: LaboratoryinquiryComponent },
-
           { path: 'laboratory/customerinquiry', component: CustomerinquiryComponent },
-
           { path: 'laboratory/uploadreport', component: UploadreportComponent },
-
           { path: 'pharmacy/deliverydetail', component: DeliverydetailComponent },
-
-          { path: 'setting/promotions', component: PromotionsComponent },
-
-         // { path: 'pharmacy/medicine', component: MedicineComponent },
-          
+          { path: 'setting/promotions', component: PromotionsComponent },          
           { path: 'sales/orders', component: OrdersComponent },
+
+          { path: 'pharmacy/medicine', component: MedicineComponent },
+          { path: 'pharmacy/medicine/addmedicines', component: AddmedicineComponent },
+          { path: 'pharmacy/medicine/edit/:id', component: AddmedicineComponent },
         ]
       }
     ]),
