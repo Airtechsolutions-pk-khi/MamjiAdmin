@@ -76,7 +76,7 @@ export class CustomersService {
     return this.http.get<Customers[]>(`api/customer/all`);
   }
   getById(id) {
-    return this.http.get<Customers[]>(`api/customer/${id}`);
+    return this.http.get<Customers[]>(`api/customer/customer/${id}`);
   }
   getAllData() {
     const url = `api/customer/all`;

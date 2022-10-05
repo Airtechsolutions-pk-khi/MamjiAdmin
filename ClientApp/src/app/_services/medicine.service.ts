@@ -70,7 +70,7 @@ export class MedicineService {
     return this.http.get<Medicine[]>(`api/medicine/all`);
   }
   getById(id) {
-    return this.http.get<Medicine[]>(`api/medicine/${id}`);
+    return this.http.get<Medicine[]>(`api/medicine/medicine/${id}`);
   }
   getAllData() {
     const url = `api/medicine/all`;
@@ -138,6 +138,7 @@ export class MedicineService {
       }));
   }
   update(updateData) {
+    debugger
     return this.http.post(`api/medicine/update`, updateData)
       .pipe(map(res => {
         console.log(res);

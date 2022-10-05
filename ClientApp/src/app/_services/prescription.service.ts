@@ -64,6 +64,7 @@ export class PrescriptionService {
   }
 
   getById(id) {
+    debugger;
     return this.http.get<Prescription[]>(`api/prescription/prescription/${id}`);
   }
   ExportList(prescriptionID) {

@@ -57,8 +57,8 @@ export class MedicineComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
-  Edit(customers) {
-    this.router.navigate(["admin/reception/medicine/edit", customers]);
+  Edit(medicine) {
+    this.router.navigate(["admin/pharmacy/medicine/edit", medicine]);
   }
 
   Delete(obj) {

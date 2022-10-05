@@ -54,6 +54,7 @@ export class AdddoctorsComponent implements OnInit {
     });
   }
   private editForm(obj) {
+    debugger;
     this.f.firstName.setValue(obj.firstName);
     this.f.lastName.setValue(obj.lastName);
     this.f.fullName.setValue(obj.fullName);
@@ -66,6 +67,7 @@ export class AdddoctorsComponent implements OnInit {
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
   }
   setSelectedDoctor() {
+    debugger;
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {

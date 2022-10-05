@@ -26,7 +26,7 @@ namespace MamjiAdmin.Controllers
         }
         [HttpPost]
         [Route("insert")]
-        public int Post([FromBody] MedicineBLL obj)
+        public int Post([FromBody]MedicineBLL obj)
         {
             return _service.Insert(obj);
         }

@@ -25,7 +25,7 @@ namespace MamjiAdmin.Controllers
         {
             return _service.GetAll();
         }
-        [HttpGet("doctor/{id}")]
+        [HttpGet("prescription/{id}")]
         public PrescriptionBLL Get(int id)
         {
             return _service.Get(id);

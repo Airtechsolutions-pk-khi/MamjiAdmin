@@ -33,7 +33,7 @@ export class AddmedicineComponent implements OnInit {
   }
 
   ngOnInit() {
-   // this.setSelectedmedicine();
+   this.setSelectedmedicine();
   }
 
   get f() { return this.medicineForm.controls; }
@@ -63,20 +63,20 @@ export class AddmedicineComponent implements OnInit {
     this.imgComp.imageUrl = obj.image;
   }
 
-  // setSelectedmedicine() {
-  //   this.route.paramMap.subscribe(param => {
-  //     const sid = +param.get('id');
-  //     if (sid) {
-  //       this.loadingmedicine = true;
-  //       this.f.medicineID.setValue(sid);
-  //       this.medicineService.getById(sid, this.f.medicineID.value).subscribe(res => {
-  //         //Set Forms
-  //         this.editForm(res);
-  //         this.loadingmedicine = false;
-  //       });
-  //     }
-  //   })
-  // }
+   setSelectedmedicine() {
+     this.route.paramMap.subscribe(param => {
+       const sid = +param.get('id');
+       if (sid) {
+         this.loadingmedicine = true;
+         this.f.medicineID.setValue(sid);
+         this.medicineService.getById(sid).subscribe(res => {
+           //Set Forms
+           this.editForm(res);
+           this.loadingmedicine = false;
+         });
+       }
+     })
+   }
 
   onSubmit() {
     this.medicineForm.markAllAsTouched();
@@ -92,7 +92,7 @@ export class AddmedicineComponent implements OnInit {
       this.medicineService.insert(this.medicineForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/reception/medicine']);
+          this.router.navigate(['/admin/pharmacy/medicine']);
         }
         this.loading = false;
       }, error => {
@@ -105,7 +105,7 @@ export class AddmedicineComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success","Record updated successfully.")
-          this.router.navigate(['/admin/reception/medicine']);
+          this.router.navigate(['/admin/pharmacy/medicine']);
         }
       }, error => {
         this.ts.showError("Error","Failed to update record.")
