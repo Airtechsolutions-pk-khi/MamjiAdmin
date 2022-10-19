@@ -7,39 +7,38 @@ using Microsoft.AspNetCore.Mvc;
 namespace MamjiAdmin.Controllers
 {
     [Route("api/[controller]")]
-  
-    public class customerController : ControllerBase
+    public class medicineController : ControllerBase
     {
-        customerService _service;
-        public customerController()
+        medicineService _service;
+        public medicineController()
         {
-            _service = new customerService();
+            _service = new medicineService();
         }
-        [HttpGet("all")]
-        public List<CustomerBLL> GetAll()
+        [HttpGet("{all}")]
+        public List<MedicineBLL> GetAll()
         {
             return _service.GetAll();
         }
-        [HttpGet("doctor/{id}")]
-        public CustomerBLL Get(int id)
+        [HttpGet("medicine/{id}")]
+        public MedicineBLL Get(int id)
         {
             return _service.Get(id);
         }
         [HttpPost]
         [Route("insert")]
-        public int Post([FromBody]CustomerBLL obj)
+        public int Post([FromBody] MedicineBLL obj)
         {
             return _service.Insert(obj);
         }
         [HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody] CustomerBLL obj)
+        public int PostUpdate([FromBody] MedicineBLL obj)
         {
             return _service.Update(obj);
         }
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody]CustomerBLL obj)
+        public int PostDelete([FromBody] MedicineBLL obj)
         {
             return _service.Delete(obj);
         }

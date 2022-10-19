@@ -1,20 +1,17 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 import { State } from '../_models/State';
-import { Customers } from '../_models/Customers';
+import { Prescription } from '../_models/Prescription';
 
-
-interface SearchCustomersResult {
-  data: Customers[];
+interface SearchPrescriptionResult {
+  data: Prescription[];
   total: number;
 }
 const compare = (v1: string, v2: string) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
-
-function sort(data: Customers[], column: SortColumn, direction: string): Customers[] {
+function sort(data: Prescription[], column: SortColumn, direction: string): Prescription[] {
   if (direction === '' || column === '') {
     return data;
   } else {
@@ -24,27 +21,21 @@ function sort(data: Customers[], column: SortColumn, direction: string): Custome
     });
   }
 }
-
-function matches(data: Customers, term: string) {
-  
-  return data.fullName.toLowerCase().includes(term.toLowerCase())
+function matches(data: Prescription, term: string) {
+  return data.customerName.toLowerCase().includes(term.toLowerCase())
 }
-
 @Injectable({
   providedIn: 'root'
 })
-
-export class CustomersService {
-
+export class PrescriptionService {
   constructor(private http: HttpClient) {
   }
-
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _allData$ = new BehaviorSubject<Customers[]>([]);
-  private _data$ = new BehaviorSubject<Customers[]>([]);
+  private _allData$ = new BehaviorSubject<Prescription[]>([]);
+  private _data$ = new BehaviorSubject<Prescription[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
-  public customers: Customers[];
+  public prescription: Prescription[];
   private _state: State = {
     page: 1,
     pageSize: 10,
@@ -52,7 +43,6 @@ export class CustomersService {
     sortColumn: '',
     sortDirection: ''
   };
-
   get total$() { return this._total$.asObservable(); }
   get loading$() { return this._loading$.asObservable(); }
   get page() { return this._state.page; }
@@ -65,28 +55,30 @@ export class CustomersService {
   set sortColumn(sortColumn: SortColumn) { this._set({ sortColumn }); }
   set sortDirection(sortDirection: SortDirection) { this._set({ sortDirection }); }
 
+
   get data$() {
     return this._data$.asObservable();
   }
   get allData$() {
     return this._allData$.asObservable();
   }
-  
-  ExportList(brandId) {
-    return this.http.get<Customers[]>(`api/customer/all`);
-  }
+
   getById(id) {
-    return this.http.get<Customers[]>(`api/customer/${id}`);
+    return this.http.get<Prescription[]>(`api/prescription/prescription/${id}`);
+  }
+  ExportList(prescriptionID) {
+    return this.http.get<Prescription[]>('api/prescription/all/${prescriptionID}');
   }
   getAllData() {
-    const url = `api/customer/all`;
+
+    const url = `api/prescription/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
-      this.http.get<Customers[]>(url).subscribe(res => {
-        this.customers = res;
-          
-        this._data$.next(this.customers);
-        this._allData$.next(this.customers);
+      this.http.get<Prescription[]>(url).subscribe(res => {
+        this.prescription = res;
+
+        this._data$.next(this.prescription);
+        this._allData$.next(this.prescription);
 
         this._search$.pipe(
           switchMap(() => this._search()),
@@ -95,7 +87,6 @@ export class CustomersService {
           this._data$.next(result.data);
           this._total$.next(result.total);
         });
-
         this._search$.next();
       });
   }
@@ -103,12 +94,11 @@ export class CustomersService {
     Object.assign(this._state, patch);
     this._search$.next();
   }
-
-  private _search(): Observable<SearchCustomersResult> {
+  private _search(): Observable<SearchPrescriptionResult> {
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
 
     // 1. sort
-    let sortedData = sort(this.customers, sortColumn, sortDirection);
+    let sortedData = sort(this.prescription, sortColumn, sortDirection);
 
     //// 2. filter
     sortedData = sortedData.filter(data => matches(data, searchTerm));
@@ -118,8 +108,6 @@ export class CustomersService {
     const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
     return of({ data, total });
   }
-
-  
   clear() {
     // clear by calling subject.next() without parameters
     this._search$.next();
@@ -136,24 +124,22 @@ export class CustomersService {
     };
   }
   insert(data) {
-    return this.http.post(`api/customer/insert`, data)
+    debugger
+    return this.http.post('api/prescription/insert', data)
       .pipe(map(res => {
-        
+
         console.log(res);
         return res;
       }));
   }
-
-  update(updateData) {
-    return this.http.post(`api/customer/update`, updateData)
+  update(data) {
+    return this.http.post('api/prescription/update', data)
       .pipe(map(res => {
         console.log(res);
         return res;
       }));
   }
   delete(data) {
-    debugger;
-    return this.http.post(`api/customer/delete`, data);
+    return this.http.post('api/prescription/delete', data);
   }
-
 }

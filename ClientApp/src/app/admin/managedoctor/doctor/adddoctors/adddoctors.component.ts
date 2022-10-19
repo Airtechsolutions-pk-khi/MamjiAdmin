@@ -114,8 +114,4 @@ export class AdddoctorsComponent implements OnInit {
       });
     }
   }
-
-
-
 }
-

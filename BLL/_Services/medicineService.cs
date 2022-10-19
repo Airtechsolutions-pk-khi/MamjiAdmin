@@ -1,5 +1,6 @@
 ﻿using BAL.Repositories;
 using MamjiAdmin._Models;
+using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,15 +9,14 @@ using System.Threading.Tasks;
 
 namespace MamjiAdmin.BLL._Services
 {
-    public class customerService : baseService
+    public class medicineService : baseService
     {
-        customerDB _service;
-        public customerService()
+        medicineDB _service;
+        public medicineService()
         {
-            _service = new customerDB();
+            _service = new medicineDB();
         }
-
-        public List<CustomerBLL> GetAll()
+        public List<MedicineBLL> GetAll()
         {
             try
             {
@@ -24,10 +24,10 @@ namespace MamjiAdmin.BLL._Services
             }
             catch (Exception ex)
             {
-                return new List<CustomerBLL>();
+                return new List<MedicineBLL>();
             }
         }
-        public CustomerBLL Get(int id)
+        public MedicineBLL Get(int id)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(CustomerBLL data)
+        public int Insert(MedicineBLL data)
         {
             try
             {
@@ -52,8 +52,7 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-
-        public int Update(CustomerBLL data)
+        public int Update(MedicineBLL data)
         {
             try
             {
@@ -67,8 +66,7 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-
-        public int Delete(CustomerBLL data)
+        public int Delete(MedicineBLL data)
         {
             try
             {
@@ -82,6 +80,5 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-
     }
 }

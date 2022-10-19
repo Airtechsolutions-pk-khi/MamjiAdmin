@@ -5,7 +5,5 @@ export class Customers {
   mobile: string;
   password: string;
   image: string;
-  locationID: number;
-  brandID: number;
   statusID: number;
 }

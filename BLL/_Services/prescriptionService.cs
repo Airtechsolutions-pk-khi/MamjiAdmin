@@ -1,5 +1,6 @@
 ﻿using BAL.Repositories;
 using MamjiAdmin._Models;
+using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,15 +9,14 @@ using System.Threading.Tasks;
 
 namespace MamjiAdmin.BLL._Services
 {
-    public class customerService : baseService
+    public class prescriptionService : baseService
     {
-        customerDB _service;
-        public customerService()
+        prescriptionDB _service;
+        public prescriptionService()
         {
-            _service = new customerDB();
+            _service = new prescriptionDB();
         }
-
-        public List<CustomerBLL> GetAll()
+        public List<PrescriptionBLL> GetAll()
         {
             try
             {
@@ -24,10 +24,10 @@ namespace MamjiAdmin.BLL._Services
             }
             catch (Exception ex)
             {
-                return new List<CustomerBLL>();
+                return new List<PrescriptionBLL>();
             }
         }
-        public CustomerBLL Get(int id)
+        public PrescriptionBLL Get(int id)
         {
             try
             {
@@ -38,10 +38,11 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(CustomerBLL data)
+        public int Insert(PrescriptionBLL data, IWebHostEnvironment _env)
         {
             try
             {
+                data.ImagePath = UploadImage(data.ImagePath, "Category", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -53,7 +54,7 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(CustomerBLL data)
+        public int Update(PrescriptionBLL data)
         {
             try
             {
@@ -67,8 +68,7 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-
-        public int Delete(CustomerBLL data)
+        public int Delete(PrescriptionBLL data)
         {
             try
             {
