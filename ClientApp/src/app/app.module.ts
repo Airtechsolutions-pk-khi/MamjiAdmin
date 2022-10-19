@@ -68,14 +68,6 @@ import { UploadreportComponent } from './admin/laboratory/uploadreport/uploadrep
 import { DeliverydetailComponent } from './admin/pharmacy/deliverydetail/deliverydetail.component';
 import { PromotionComponent } from './admin/settings/Promotion/promotion.component';
 import { AddPromotionComponent } from './admin/settings/Promotion/addpromotion/addpromotion.component';
-
-
-
- 
- 
- 
-import { PromotionsComponent } from './admin/settings/offers/promotions/promotions.component';
-
 import { MedicineComponent } from './admin/pharmacy/medicine/medicine.component';
 import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/addmedicine.component'
  
@@ -137,9 +129,7 @@ import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/add
 
     DrappoinmentComponent,
     LaboratoryinquiryComponent,
-    UploadreportComponent,
-    PromotionsComponent,
-
+    UploadreportComponent,   
     MedicineComponent,
     AddmedicineComponent,
      
@@ -236,13 +226,10 @@ import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/add
 
           { path: 'setting/promotion', component: PromotionComponent },
           { path: 'setting/addpromotion', component: AddPromotionComponent },
-          { path: 'setting/edit/:id', component: AddPromotionComponent },
-
-         // { path: 'pharmacy/medicine', component: MedicineComponent },
+          { path: 'setting/edit/:id', component: AddPromotionComponent },       
           
-          { path: 'sales/orders', component: OrdersComponent },
-          { path: 'setting/promotions', component: PromotionsComponent },          
-          { path: 'sales/orders', component: OrdersComponent },
+          { path: 'sales/orders', component: OrdersComponent },              
+       
 
           { path: 'pharmacy/medicine', component: MedicineComponent },
           { path: 'pharmacy/medicine/addmedicines', component: AddmedicineComponent },
