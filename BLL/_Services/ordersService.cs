@@ -23,11 +23,11 @@ namespace MamjiAdmin.BLL._Services
             _serviceLocation = new locationDB();
         }
 
-        public List<OrdersBLL> GetAll(string locaitonID, int brandID, DateTime FromDate, DateTime ToDate)
+        public List<OrdersBLL> GetAll( DateTime FromDate, DateTime ToDate)
         {
             try
             {
-                return _service.GetAll(brandID, locaitonID, FromDate, ToDate);
+                return _service.GetAll( FromDate, ToDate);
             }
             catch (Exception ex)
             {
@@ -39,7 +39,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                var order = Get(id, 0);
+                var order = Get(id);
                 var location = _serviceLocation.Get(order.Order.LocationID, 0);
                 string[] filePaths = Directory.GetFiles(Path.Combine(_env.ContentRootPath, "Template/"));
                 var content = System.IO.File.ReadAllText(filePaths.Where(x => x.Contains("receiptv3.txt")).FirstOrDefault());
@@ -69,10 +69,10 @@ namespace MamjiAdmin.BLL._Services
                     customerReceiptData += "</p>";
                 }
 
-                var _dtocheckout = order.OrderCheckouts;
+                //var _dtocheckout = order.OrderCheckouts;
                 content = content
                 .Replace("#orderno#", "<h4 style='text-align: center;border: 2px solid #000;font-weight: 800;font-size: 20px;width: 180px;padding: 5px;margin: auto;'>Order # " + order.Order.OrderNo + "</h4>")
-                .Replace("#companyname#", "Contact: " +location.Name)
+                .Replace("#companyname#", "Contact: " + location.Name)
                 .Replace("#contact#", location.ContactNo)
                 .Replace("#email#", location.Email)
                 .Replace("#address#", location.Address)
@@ -82,12 +82,12 @@ namespace MamjiAdmin.BLL._Services
                 .Replace("#orderitems#", itemsReceipt.ToString())
                 .Replace("#orderdate#", Convert.ToDateTime(order.Order.OrderDate).ToString("dd/MM/yyyy hh:mm tt"))
                 .Replace("#customerdata#", customerReceiptData)
-                .Replace("#receipttype#", "TAX INVOICE")
-                .Replace("#total#", _dtocheckout.AmountTotal == null ? "0.00" : String.Format("{0:0.00}", _dtocheckout.AmountTotal))
-                .Replace("#discount#", _dtocheckout.DiscountAmount == null ? "0.00" : String.Format("{0:0.00}", _dtocheckout.DiscountAmount))
-                .Replace("#tax#", _dtocheckout.Tax == null ? "0.00" : String.Format("{0:0.00}", _dtocheckout.Tax))
-                .Replace("#deliverycharges#", _dtocheckout.ServiceCharges == null ? "0.00" : String.Format("{0:0.00}", _dtocheckout.ServiceCharges))
-                .Replace("#grandtotal#", _dtocheckout.GrandTotal == null ? "0.000" : location.Currency + " " + String.Format("{0:0.00}", _dtocheckout.GrandTotal));
+                .Replace("#receipttype#", "TAX INVOICE");
+                //.Replace("#total#", _dtocheckout.AmountTotal == null ? "0.00" : String.Format("{0:0.00}", _dtocheckout.AmountTotal))
+                //.Replace("#discount#", _dtocheckout.DiscountAmount == null ? "0.00" : String.Format("{0:0.00}", _dtocheckout.DiscountAmount))
+                //.Replace("#tax#", _dtocheckout.Tax == null ? "0.00" : String.Format("{0:0.00}", _dtocheckout.Tax))
+                //.Replace("#deliverycharges#", _dtocheckout.ServiceCharges == null ? "0.00" : String.Format("{0:0.00}", _dtocheckout.ServiceCharges))
+                //.Replace("#grandtotal#", _dtocheckout.GrandTotal == null ? "0.000" : location.Currency + " " + String.Format("{0:0.00}", _dtocheckout.GrandTotal));
 
 
                 return new RspPrintReceipt
@@ -125,53 +125,56 @@ namespace MamjiAdmin.BLL._Services
 
         //    return folderPath + filename + ".pdf";
         //}
-        public RspOrderDetail Get(int id, int brandID)
+        public RspOrderDetail Get(int id)
         {
             try
             {
                 RspOrderDetail rsp = new RspOrderDetail();
                 var lstOD = new List<OrderDetailBLL>();
                 var lstODM = new List<OrderModifiersBLL>();
-                var oc = new OrderCheckoutBLL();
+                //var oc = new OrderCheckoutBLL();
                 var ocustomer = new OrderCustomerBLL();
                 var bll = new List<OrdersBLL>();
-                var ds = _service.Get(id, brandID);
+                var ds = _service.Get(id);
                 var _dsOrders = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<OrdersBLL>>();
+
                 var _dsorderdetail = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[1])).ToObject<List<OrderDetailBLL>>();
-                var _dsorderdetailmodifier = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[2])).ToObject<List<OrderModifiersBLL>>();
-                var _dsOrdercheckout = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[3])).ToObject<List<OrderCheckoutBLL>>();
-                var _dsOrderCustomerData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[4])).ToObject<List<OrderCustomerBLL>>();
+
+                //var _dsorderdetailmodifier = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[2])).ToObject<List<OrderModifiersBLL>>();
+                //var _dsOrdercheckout = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[3])).ToObject<List<OrderCheckoutBLL>>();
+                var _dsOrderCustomerData = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[2])).ToObject<List<OrderCustomerBLL>>();
 
                 foreach (var i in _dsOrders)
                 {
                     lstOD = new List<OrderDetailBLL>();
                     foreach (var j in _dsorderdetail.Where(x => x.StatusID == 201 && x.OrderID == i.OrderID))
                     {
-                        lstODM = new List<OrderModifiersBLL>();
-                        double? modPrice = 0;
-                        foreach (var k in _dsorderdetailmodifier.Where(x => x.StatusID == 201 && x.OrderDetailID == j.OrderDetailID))
-                        {
-                            lstODM.Add(new OrderModifiersBLL
-                            {
-                                StatusID = k.StatusID,
-                                Price = k.Price,
-                                ModifierID = k.ModifierID,
-                                Cost = k.Cost,
-                                LastUpdateBy = k.LastUpdateBy,
-                                LastUpdateDT = k.LastUpdateDT,
-                                OrderDetailID = k.OrderDetailID,
-                                OrderDetailModifierID = k.OrderDetailModifierID,
-                                Quantity = k.Quantity,
-                                ModifierName = k.ModifierName
-                            });
-                            modPrice += (j.Quantity * k.Price);
-                        }
+                        //lstODM = new List<OrderModifiersBLL>();
+                        //double? modPrice = 0;
+                        //foreach (var k in _dsorderdetailmodifier.Where(x => x.StatusID == 201 && x.OrderDetailID == j.OrderDetailID))
+                        //{
+                        //    lstODM.Add(new OrderModifiersBLL
+                        //    {
+                        //        StatusID = k.StatusID,
+                        //        Price = k.Price,
+                        //        ModifierID = k.ModifierID,
+                        //        Cost = k.Cost,
+                        //        LastUpdateBy = k.LastUpdateBy,
+                        //        LastUpdateDT = k.LastUpdateDT,
+                        //        OrderDetailID = k.OrderDetailID,
+                        //        OrderDetailModifierID = k.OrderDetailModifierID,
+                        //        Quantity = k.Quantity,
+                        //        ModifierName = k.ModifierName
+                        //    });
+                        //    modPrice += (j.Quantity * k.Price);
+                        //}
 
                         lstOD.Add(new OrderDetailBLL
                         {
                             StatusID = j.StatusID,
                             Cost = j.Cost,
-                            Price = j.Price + modPrice,
+                            //Price = j.Price + modPrice,
+                            Price = j.Price,
                             Quantity = j.Quantity,
                             OrderDetailID = j.OrderDetailID,
                             LastUpdateDT = j.LastUpdateDT,
@@ -192,8 +195,7 @@ namespace MamjiAdmin.BLL._Services
                         LastUpdateBy = i.LastUpdateBy,
                         OrderID = i.OrderID,
                         CustomerID = i.CustomerID,
-                        DeliverUserID = i.DeliverUserID,
-                        LocationID = i.LocationID,
+                        DeliverUserID = i.DeliverUserID,                         
                         OrderDate = i.OrderDate,
                         OrderNo = i.OrderNo,
                         OrderTakerID = i.OrderTakerID,
@@ -202,12 +204,18 @@ namespace MamjiAdmin.BLL._Services
                         TransactionNo = i.TransactionNo,
                         OrderDoneDate = i.OrderDoneDate,
                         OrderOFDDate = i.OrderOFDDate,
-                        OrderPreparedDate = i.OrderPreparedDate
+                        OrderPreparedDate = i.OrderPreparedDate,
+                        AmountTotal = i.AmountTotal,
+                        AmountPaid = i.AmountPaid,
+                        GrandTotal = i.GrandTotal,
+                        ServiceCharges = i.ServiceCharges,
+                        Tax = i.Tax,
+                        DiscountAmount = i.DiscountAmount
                     });
 
                     rsp.Order = bll.FirstOrDefault();
                     rsp.OrderDetails = lstOD;
-                    rsp.OrderCheckouts = _dsOrdercheckout.Where(x => x.OrderID == i.OrderID).FirstOrDefault();
+                    //rsp.OrderCheckouts = _dsOrdercheckout.Where(x => x.OrderID == i.OrderID).FirstOrDefault();
                     rsp.CustomerOrders = _dsOrderCustomerData.Where(x => x.OrderID == i.OrderID).FirstOrDefault();
                 }
 

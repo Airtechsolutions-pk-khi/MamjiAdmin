@@ -18,9 +18,9 @@
                     <div class="card-header border-bottom-0">Order Status</div>
                     <div class="card-body">
                       <div class="">
-                        <button class="btn btn-warning mr-1" (click)="updateOrder(order,102)" *ngIf="order.statusID!=102">
+                        <!-- <button class="btn btn-warning mr-1" (click)="updateOrder(order,102)" *ngIf="order.statusID!=102">
                           <i class="fas fa-check-circle"></i> Prepared
-                        </button>
+                        </button> -->
                         <button class="btn btn-info mr-1" (click)="updateOrder(order,103)" *ngIf="order.statusID!=103">
                           <i class="fas fa-truck"></i> Out For Delivery
                         </button>
@@ -213,7 +213,7 @@
                                 </a>
                                     </div>
                                 </div>
-                                <div class="mr-2">{{ (orderOrderCheckout.amountTotal | number : '1.2-2')}}</div>
+                                <div class="mr-2">{{ (order.amountTotal | number : '1.2-2')}}</div>
                             </div>
                             <div class="d-flex align-items-center">
                                 <div class="flex-grow-1">
@@ -223,7 +223,7 @@
                                 </a>
                                     </div>
                                 </div>
-                                <div class="mr-2">{{ orderOrderCheckout.discountAmount | number : '1.2-2'}}</div>
+                                <div class="mr-2">{{ order.discountAmount | number : '1.2-2'}}</div>
                             </div>
                             <div class="d-flex align-items-center">
                                 <div class="flex-grow-1">
@@ -233,7 +233,7 @@
                                 </a>
                                     </div>
                                 </div>
-                                <div class="mr-2">{{ orderOrderCheckout.tax | number : '1.2-2'}}</div>
+                                <div class="mr-2">{{ order.tax | number : '1.2-2'}}</div>
                             </div>
                             <div class="d-flex align-items-center">
                                 <div class="flex-grow-1">
@@ -243,7 +243,7 @@
                                 </a>
                                     </div>
                                 </div>
-                                <div class="mr-2">{{ orderOrderCheckout.serviceCharges | number : '1.2-2'}}</div>
+                                <div class="mr-2">{{ order.serviceCharges | number : '1.2-2'}}</div>
                             </div>
                             <div class="d-flex align-items-center">
                                 <div class="flex-grow-1">
@@ -253,7 +253,7 @@
                                 </a>
                                     </div>
                                 </div>
-                                <div class="mr-2">{{ orderOrderCheckout.grandTotal | number : '1.2-2'}}</div>
+                                <div class="mr-2">{{ order.grandTotal | number : '1.2-2'}}</div>
                             </div>
 
                         </div>
@@ -273,12 +273,7 @@
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let item of orderDetails ">
-                                        <td> {{item.name}}
-                                            <tr *ngFor="let item1 of item.orderDetailModifiers ">
-                                                <td class="badge badge-pill">Modifier: {{item1.modifierName }} [{{item.Quantity}}X {{item1.price}} ] </td>
-
-                                            </tr>
-                                        </td>
+                                        <td> {{item.name}}</td>
                                         <td> {{item.quantity}} </td>
                                         <td> {{item.price}} </td>
                                     </tr>

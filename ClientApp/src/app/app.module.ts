@@ -46,8 +46,7 @@ import { SalescategorywiseComponent } from './admin/report/salescategorywise/sal
 import { SalesitemwiseComponent } from './admin/report/salesitemwise/salesitemwise.component';
 import { OffersComponent } from './admin/settings/offers/offers.component';
 import { AddoffersComponent } from './admin/settings/offers/addoffers/addoffers.component';
-import { OrdersComponent } from './admin/sales/orders/orders.component';
-import { OrderdetailsComponent } from './admin/sales/orderdetails/orderdetails.component';
+ 
 import { ItemsettingsComponent } from './admin/menu/items/itemsettings/itemsettings.component';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { DeliveryComponent } from './admin/settings/delivery/delivery.component';
@@ -72,6 +71,8 @@ import { PromotionComponent } from './admin/settings/Promotion/promotion.compone
 import { AddPromotionComponent } from './admin/settings/Promotion/addpromotion/addpromotion.component';
 import { MedicineComponent } from './admin/pharmacy/medicine/medicine.component';
 import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/addmedicine.component'
+import { OrdersComponent } from './admin/pharmacy/orders/orders.component';
+import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetails.component';
  
  
 @NgModule({
@@ -110,8 +111,7 @@ import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/add
     SalescustomerwiseComponent,
     SalesitemwiseComponent,
     SalesuserwiseComponent,
-    OrdersComponent,
-    OrderdetailsComponent,
+    
     ItemsettingsComponent,
     DeliveryComponent,
     AdddeliveryComponent,
@@ -136,7 +136,8 @@ import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/add
     UploadreportComponent,   
     MedicineComponent,
     AddmedicineComponent,
-     
+     OrdersComponent,
+     OrderdetailsComponent
      
     
     
@@ -170,8 +171,7 @@ import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/add
           { path: 'modifier/add', component: AddmodifierComponent },
           { path: 'modifier/edit/:id', component: AddmodifierComponent },
 
-          { path: 'orders/add', component: OrderdetailsComponent },
-          { path: 'orders/view/:id', component: OrderdetailsComponent },
+          
 
           { path: 'location', component: LocationsComponent },
           { path: 'location/add', component: AddlocationComponent },
@@ -235,12 +235,15 @@ import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/add
           { path: 'setting/addpromotion', component: AddPromotionComponent },
           { path: 'setting/edit/:id', component: AddPromotionComponent },       
           
-          { path: 'sales/orders', component: OrdersComponent },              
-       
+          
 
           { path: 'pharmacy/medicine', component: MedicineComponent },
           { path: 'pharmacy/medicine/addmedicines', component: AddmedicineComponent },
           { path: 'pharmacy/medicine/edit/:id', component: AddmedicineComponent },
+
+          { path: 'pharmacy/orders', component: OrdersComponent },
+          { path: 'orders/view/:id', component: OrderdetailsComponent },
+          
         ]
       }
     ]),

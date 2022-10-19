@@ -19,7 +19,7 @@ export class OrderdetailsComponent implements OnInit {
   selectedLocations = [];
   locationID = 0;
   public orderDetails = new OrderDetails();
-  public orderOrderCheckout = new OrderCheckout();
+  public orderOrderCheckout = new Orders();
   public orderCustomerInfo = new CustomerOrders();
 
   locationSubscription: Subscription;
@@ -28,8 +28,8 @@ export class OrderdetailsComponent implements OnInit {
     public ts: ToastService,
     public router: Router,
     private route: ActivatedRoute) {
-    debugger
-    this.selectedBrand = this.ls.getSelectedBrand().brandID;
+    
+    //this.selectedBrand = this.ls.getSelectedBrand().brandID;
 
   }
 
@@ -42,9 +42,9 @@ export class OrderdetailsComponent implements OnInit {
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
-        this.service.getById(sid, this.selectedBrand).subscribe(res => {
+        this.service.getById(sid).subscribe(res => {
           //Set Forms
-          debugger
+          
           this.editForm(res);
         });
       }
@@ -52,7 +52,6 @@ export class OrderdetailsComponent implements OnInit {
   }
 
   updateOrder(order, status) {
-    debugger
     order.statusID = status;
     //Update customer
     this.service.update(order).subscribe(data => {
@@ -66,7 +65,7 @@ export class OrderdetailsComponent implements OnInit {
     });
   }
   private editForm(obj) {
-    debugger
+    
     this.order = obj.order;
     this.orderDetails = obj.orderDetails;
     this.orderCustomerInfo = obj.customerOrders;
