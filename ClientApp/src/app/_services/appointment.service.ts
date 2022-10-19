@@ -1,18 +1,23 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 import { State } from '../_models/State';
-import { Medicine } from '../_models/Medicine';
+import { Appointment } from '../_models/Appointment';
+import { Specialities } from '../_models/Specialities';
+import { Doctors } from '../_models/Doctors';
+import { Days } from '../_models/Days';
 
-interface SearchMedicineResult {
-  data: Medicine[];
+interface SearchAppointmentResult
+{
+  data: Appointment[];
   total: number;
 }
 const compare = (v1: string, v2: string) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
-function sort(data: Medicine[], column: SortColumn, direction: string): Medicine[] {
+
+function sort(data: Appointment[], column: SortColumn, direction: string): Appointment[]
+{
   if (direction === '' || column === '') {
     return data;
   } else {
@@ -22,24 +27,27 @@ function sort(data: Medicine[], column: SortColumn, direction: string): Medicine
     });
   }
 }
-function matches(data: Medicine, term: string) {
-  return data.name.toLowerCase().includes(term.toLowerCase())
+
+function matches(data: Appointment, term: string)
+{
+  return data.patientName.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({
   providedIn: 'root'
 })
-export class MedicineService {
+export class AppointmentService {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient)
+  {
   }
-
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _allData$ = new BehaviorSubject<Medicine[]>([]);
-  private _data$ = new BehaviorSubject<Medicine[]>([]);
+  private _allData$ = new BehaviorSubject<Appointment[]>([]);
+  private _data$ = new BehaviorSubject<Appointment[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
-  public medicine: Medicine[];
+  public appointments: Appointment[];
+  public doctors: Doctors[];
   private _state: State = {
     page: 1,
     pageSize: 10,
@@ -52,36 +60,49 @@ export class MedicineService {
   get page() { return this._state.page; }
   get pageSize() { return this._state.pageSize; }
   get searchTerm() { return this._state.searchTerm; }
-
   set page(page: number) { this._set({ page }); }
   set pageSize(pageSize: number) { this._set({ pageSize }); }
   set searchTerm(searchTerm: any) { this._set({ searchTerm }); }
   set sortColumn(sortColumn: SortColumn) { this._set({ sortColumn }); }
   set sortDirection(sortDirection: SortDirection) { this._set({ sortDirection }); }
 
-  get data$() {
+  get data$()
+  {
     return this._data$.asObservable();
   }
-  get allData$() {
+  get allData$()
+  {
     return this._allData$.asObservable();
   }
 
-  ExportList(medicineID) {
-    return this.http.get<Medicine[]>(`api/medicine/all`);
+  loadDoctor() {
+    return this.http.get<Doctors[]>(`api/doctor/all`);
   }
-  getById(id) {
-    return this.http.get<Medicine[]>(`api/medicine/medicine/${id}`);
+
+  loadSpecialities() {
+    return this.http.get<Specialities[]>(`api/doctor/speciality`);
   }
-  getAllData() {
-    const url = `api/medicine/all`;
+  loadDay() {
+    return this.http.get<Days[]>(`api/doctor/days`);
+  }
+  getById(id)
+  {
+    return this.http.get<Appointment[]>(`api/appointment/appointment/${id}`);
+  }
+  ExportList(doctorID)
+  {
+    return this.http.get<Appointment[]>('api/appointment/all/${appointmentID}');
+  }
+  getAllData()
+  {
+    const url = `api/appointment/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
-      this.http.get<Medicine[]>(url).subscribe(res => {
-        this.medicine = res;
-
-        this._data$.next(this.medicine);
-        this._allData$.next(this.medicine);
-
+      this.http.get<Appointment[]>(url).subscribe(res =>
+      {
+        this.appointments = res;
+        this._data$.next(this.appointments);
+        this._allData$.next(this.appointments);
         this._search$.pipe(
           switchMap(() => this._search()),
           tap(() => this._loading$.next(false))
@@ -89,33 +110,28 @@ export class MedicineService {
           this._data$.next(result.data);
           this._total$.next(result.total);
         });
-
         this._search$.next();
       });
   }
-  private _set(patch: Partial<State>) {
+  private _set(patch: Partial<State>)
+  {
     Object.assign(this._state, patch);
     this._search$.next();
   }
-
-  private _search(): Observable<SearchMedicineResult> {
+  private _search(): Observable<SearchAppointmentResult>
+  {
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
-
     // 1. sort
-    let sortedData = sort(this.medicine, sortColumn, sortDirection);
-
+    let sortedData = sort(this.appointments, sortColumn, sortDirection);
     //// 2. filter
     sortedData = sortedData.filter(data => matches(data, searchTerm));
     const total = sortedData.length;
-
     // 3. paginate
     const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
     return of({ data, total });
   }
-
-
-  clear() {
-    // clear by calling subject.next() without parameters
+  clear()
+  {
     this._search$.next();
     this._data$.next(null);
     this._allData$.next(null);
@@ -129,24 +145,25 @@ export class MedicineService {
       sortDirection: ''
     };
   }
-  insert(data) {
-    return this.http.post('api/medicine/insert', data)
+  insert(data)
+  {
+    return this.http.post('api/appointment/insert', data)
       .pipe(map(res => {
+        console.log(res);
+        return res;
+      }));
+  }
 
-        console.log(res);
-        return res;
-      }));
-  }
-  update(updateData) {
-    debugger
-    return this.http.post(`api/medicine/update`, updateData)
+  update(data)
+  {
+    return this.http.post('api/appointment/update', data)
       .pipe(map(res => {
         console.log(res);
         return res;
       }));
   }
-  delete(data) {
-    debugger;
-    return this.http.post(`api/medicine/delete`, data);
+  delete(data)
+  {
+    return this.http.post('api/appointment/delete', data);
   }
 }

@@ -99,7 +99,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[12];
+                SqlParameter[] p = new SqlParameter[10];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@ImagePath", data.ImagePath);
@@ -108,11 +108,9 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@Price", data.Price);
                 p[5] = new SqlParameter("@QuantityDescription", data.QuantityDescription);
                 p[6] = new SqlParameter("@StatusID", data.StatusID);
-                p[7] = new SqlParameter("@CreatedBy", data.CreatedBy);
-                p[8] = new SqlParameter("@CreatedOn", data.CreatedOn);
-                p[9] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-                p[10] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[11] = new SqlParameter("@medicineID", data.MedicineID);
+                p[7] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+                p[8] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[9] = new SqlParameter("@medicineID", data.MedicineID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateMedicine_Admin", p);
 

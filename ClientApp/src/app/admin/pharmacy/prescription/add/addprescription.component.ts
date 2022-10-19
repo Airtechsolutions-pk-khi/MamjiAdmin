@@ -44,16 +44,15 @@ export class AddprescriptionComponent implements OnInit {
     });
 }
   private editForm(obj) {
-    debugger;
     this.f.customerName.setValue(obj.customerName);
     this.f.mobile.setValue(obj.mobile);
     this.f.address.setValue(obj.address);
-    this.f.notes.setValue(obj.notes);
+    this.f.note.setValue(obj.note);
     this.f.prescriptionID.setValue(obj.prescriptionID);
     this.f.imagePath.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
 }
-setSelectedPrescription() {
+  setSelectedPrescription() {
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {

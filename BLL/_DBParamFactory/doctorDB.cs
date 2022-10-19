@@ -48,6 +48,28 @@ namespace BAL.Repositories
                 return null;
             }
         }
+        public List<SpecialistBLL> GetSpeciality()
+        {
+            try
+            {
+                var lst = new List<SpecialistBLL>();
+                //SqlParameter[] p = new SqlParameter[1];
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetDocSpecialities_admin");
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<SpecialistBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public DoctorBLL Get(int id)
         {
             try
@@ -77,12 +99,9 @@ namespace BAL.Repositories
                 int rtn = 0;
                 SqlParameter[] p = new SqlParameter[14];
 
-                p[0] = new SqlParameter("@FirstName", data.FirstName);
-                p[1] = new SqlParameter("@LastName", data.LastName);
                 p[2] = new SqlParameter("@FullName", data.FullName);
                 p[3] = new SqlParameter("@ImagePath", data.ImagePath);
                 p[4] = new SqlParameter("@Email", data.Email);
-                p[5] = new SqlParameter("@Profile", data.Profile);
                 p[6] = new SqlParameter("@Skills", data.Skills);
                 p[7] = new SqlParameter("@Education", data.Education);
                 p[8] = new SqlParameter("@StatusID", data.StatusID);
@@ -109,13 +128,9 @@ namespace BAL.Repositories
             {
                 int rtn = 0;
                 SqlParameter[] p = new SqlParameter[14];
-
-                p[0] = new SqlParameter("@FirstName", data.FirstName);
-                p[1] = new SqlParameter("@LastName", data.LastName);
                 p[2] = new SqlParameter("@FullName", data.FullName);
                 p[3] = new SqlParameter("@ImagePath", data.ImagePath);
                 p[4] = new SqlParameter("@Email", data.Email);
-                p[5] = new SqlParameter("@Profile", data.Profile);
                 p[6] = new SqlParameter("@Skills", data.Skills);
                 p[7] = new SqlParameter("@Education", data.Education);
                 p[8] = new SqlParameter("@StatusID", data.StatusID);

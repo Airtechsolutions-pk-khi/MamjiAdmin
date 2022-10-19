@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace MamjiAdmin.BLL._Services
 {
-    public class doctorService : baseService
+    public class appointmentService : baseService
     {
-        doctorDB _service;
-        public doctorService()
+        appointmentDB _service;
+        public appointmentService()
         {
-            _service = new doctorDB();
+            _service = new appointmentDB();
         }
-        public List<DoctorBLL> GetAll()
+        public List<AppointmentBLL> GetAll()
         {
             try
             {
@@ -24,21 +24,10 @@ namespace MamjiAdmin.BLL._Services
             }
             catch (Exception ex)
             {
-                return new List<DoctorBLL>();
+                return new List<AppointmentBLL>();
             }
         }
-        public List<SpecialistBLL> GetSpeciality()
-        {
-            try
-            {
-                return _service.GetSpeciality();
-            }
-            catch (Exception ex)
-            {
-                return new List<SpecialistBLL>();
-            }
-        }
-        public DoctorBLL Get(int id)
+        public AppointmentBLL Get(int id)
         {
             try
             {
@@ -49,11 +38,10 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(DoctorBLL data, IWebHostEnvironment _env)
+        public int Insert(AppointmentBLL data)
         {
             try
             {
-                data.ImagePath = UploadImage(data.ImagePath, "Category", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -65,22 +53,22 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(DoctorBLL data)
-        {
-            try
-            {
-                data.LastUpdatedDate = _UTCDateTime_SA();
-                var result = _service.Update(data);
+        //public int Update(AppointmentBLL data)
+        //{
+        //    try
+        //    {
+        //        data.LastUpdatedDate = _UTCDateTime_SA();
+        //        var result = _service.Update(data);
 
-                return result;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
+        //        return result;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return 0;
+        //    }
+        //}
 
-        public int Delete(DoctorBLL data)
+        public int Delete(AppointmentBLL data)
         {
             try
             {

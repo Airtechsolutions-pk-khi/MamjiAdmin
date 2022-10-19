@@ -54,6 +54,7 @@ export class AdddoctorsComponent implements OnInit {
     });
   }
   private editForm(obj) {
+    debugger;
     this.f.firstName.setValue(obj.firstName);
     this.f.lastName.setValue(obj.lastName);
     this.f.fullName.setValue(obj.fullName);
