@@ -64,7 +64,9 @@ import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/custo
 import { PrescriptionComponent } from './admin/pharmacy/prescription/prescription.component';
 import { AddprescriptionComponent } from './admin/pharmacy/prescription/add/addprescription.component'
 
-import { DrappoinmentComponent } from './admin/reception/drappoinment/drappoinment.component';
+import { AppointmentComponent } from './admin/reception/appointment/appointment.component';
+import { AddappointmentComponent } from './admin/reception/appointment/addappointment/addappointment.component';
+
 import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/laboratoryinquiry.component';
 import { UploadreportComponent } from './admin/laboratory/uploadreport/uploadreport.component';
 import { DeliverydetailComponent } from './admin/pharmacy/deliverydetail/deliverydetail.component';
@@ -119,7 +121,7 @@ import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/add
     AddonsComponent,
     AddaddonsComponent,
     //ModalContentComponent,
-   // NgbdModalContent,
+    //NgbdModalContent,
     DoctorComponent,
     AdddoctorsComponent,
     CustomerinquiryComponent,
@@ -127,7 +129,9 @@ import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/add
     PrescriptionComponent,
     AddprescriptionComponent,
 
-    DrappoinmentComponent,
+    AppointmentComponent,
+    AddappointmentComponent,
+
     LaboratoryinquiryComponent,
     UploadreportComponent,
     PromotionsComponent,
@@ -220,7 +224,10 @@ import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/add
           { path: 'reception/customers/addcustomers', component: AddcustomerComponent },
           { path: 'reception/customers/edit/:id', component: AddcustomerComponent },
 
-          { path: 'reception/drappoinment', component: DrappoinmentComponent },
+          { path: 'reception/appointment', component: AppointmentComponent },
+          { path: 'reception/appointment/addappointment', component: AddappointmentComponent },
+          { path: 'reception/appointment/edit/:id', component: AddappointmentComponent },
+
           { path: 'reception/laboratoryinquiry', component: LaboratoryinquiryComponent },
           { path: 'laboratory/customerinquiry', component: CustomerinquiryComponent },
           { path: 'laboratory/uploadreport', component: UploadreportComponent },

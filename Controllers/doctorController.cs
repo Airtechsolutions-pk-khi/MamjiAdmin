@@ -21,12 +21,23 @@ namespace MamjiAdmin.Controllers
             _env = env;
         }
 
-        [HttpGet("{all}")]
+        [HttpGet("all")]
         public List<DoctorBLL> GetAlldoctor()
         {
             return _service.GetAll();
         }
 
+        [HttpGet("speciality")]
+        public List<SpecialistBLL> GetSpecialities()
+        {
+            return _service.GetSpeciality();
+        }
+
+        [HttpGet("days")]
+        public List<SpecialistBLL> GetDays()
+        {
+            return _service.GetSpeciality();
+        }
         [HttpGet("doctor/{id}")]
         public DoctorBLL Get(int id)
         {

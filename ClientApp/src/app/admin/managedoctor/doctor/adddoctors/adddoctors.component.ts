@@ -67,7 +67,6 @@ export class AdddoctorsComponent implements OnInit {
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
   }
   setSelectedDoctor() {
-    debugger;
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
