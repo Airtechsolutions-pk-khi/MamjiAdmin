@@ -34,7 +34,7 @@ namespace BAL.Repositories
                 var lst = new List<DoctorBLL>();
                 //SqlParameter[] p = new SqlParameter[1];
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_Doctor_admin");
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetAllPromotion_admin");
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
