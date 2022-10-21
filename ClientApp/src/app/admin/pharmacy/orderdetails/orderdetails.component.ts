@@ -53,7 +53,7 @@ export class OrderdetailsComponent implements OnInit {
 
   updateOrder(order, status) {
     order.statusID = status;
-    //Update customer
+    //Update 
     this.service.update(order).subscribe(data => {
 
       if (data != 0) {

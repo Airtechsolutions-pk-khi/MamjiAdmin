@@ -16,12 +16,18 @@ namespace MamjiAdmin._Models
         public string ImagePath { get; set; }
         public string Email { get; set; }
         public string Skills { get; set; }
+        public double? Fees { get; set; }
+        public string Gender { get; set; }
         public string Education { get; set; }
         public int StatusID { get; set; }
         public string CreatedBy { get; set; }
         public string LastUpdatedBy { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
+        public string Specialities { get; set; }
+        public string Days { get; set; }
+        public string TimeSlot { get; set; }
+        public string Times { get; set; }
     }
 
 }

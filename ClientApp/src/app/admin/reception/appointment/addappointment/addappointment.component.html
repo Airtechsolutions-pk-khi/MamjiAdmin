@@ -16,11 +16,11 @@
                 <div *ngIf="f.appointmentNo.invalid && (f.appointmentNo.dirty || f.appointmentNo.touched)" class="alert alert-danger">
                   <div *ngIf="f.appointmentNo.errors.required">
                     Appointment is required.
-                  </div>
+                  </div>  
                 </div>
               </div>
               <div class="form-group">
-                <label class="small mb-1" for="inputAppointmentNo">Speciality</label>
+                <!-- <label class="small mb-1" for="inputAppointmentNo">Speciality</label>
                 <ng-select [items]="drpSpecialityList" bindLabel="specialityName" bindValue="specialityID" [multiple]="false" placeholder="">
                   <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                     <div class="ng-value" *ngFor="let item of items">
@@ -28,7 +28,19 @@
                       <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
                     </div>
                   </ng-template>
-                </ng-select>
+                </ng-select> -->
+
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLocation">Speciality</label>
+                  <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSpecialistIds">
+                      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                          <div class="ng-value" *ngFor="let item of items">
+                              <span class="ng-value-label">{{item.name}}</span>
+                              <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                          </div>
+                      </ng-template>
+                  </ng-select>
+              </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
@@ -90,7 +102,7 @@
                 </ng-select>
               </div>
               <div class="form-row">
-                <div class="form-group col-md-12">
+                <!-- <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputLastName">Day</label>
                   <input type="text" class="form-control" id=day placeholder="" formControlName="day">
                   <div *ngIf="f.day.invalid && (f.day.dirty || f.day.touched)" class="alert alert-danger">
@@ -98,7 +110,22 @@
                       Day is required.
                     </div>
                   </div>
-                </div>
+                </div> -->
+
+
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLocation">Days</label>
+                  <ng-select [items]="DoctorDaysList" bindLabel="name" bindValue="daysID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedDaysID">
+                      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                          <div class="ng-value" *ngFor="let item of items">
+                              <span class="ng-value-label">{{item.name}}</span>
+                              <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                          </div>
+                      </ng-template>
+                  </ng-select>
+              </div>
+
+
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">

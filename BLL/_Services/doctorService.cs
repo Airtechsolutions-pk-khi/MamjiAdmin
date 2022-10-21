@@ -38,6 +38,17 @@ namespace MamjiAdmin.BLL._Services
                 return new List<SpecialistBLL>();
             }
         }
+        public List<DaysBLL> GetDocDays()
+        {
+            try
+            {
+                return _service.GetDocDays();
+            }
+            catch (Exception ex)
+            {
+                return new List<DaysBLL>();
+            }
+        }
         public DoctorBLL Get(int id)
         {
             try
@@ -53,7 +64,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.ImagePath = UploadImage(data.ImagePath, "Category", _env);
+                data.ImagePath = UploadImage(data.ImagePath, "Doctor", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 

@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { DoctorsService } from 'src/app/_services/doctors.service';
 import { ToastService } from 'src/app/_services/toastservice';
+import { AppointmentService } from 'src/app/_services/appointment.service';
 
 @Component({
   selector: 'app-adddoctors',
@@ -21,6 +22,13 @@ export class AdddoctorsComponent implements OnInit {
   selectedLocationIds: string[];
   selectedgroupModifierIds: string[];
 
+  selectedSpecialityList=[];
+  selectedSpecialistIds=[];
+  DoctorDaysList=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturdey','Sunday'];
+  TimeList=['10:00 AM - 11:00 AM','11:00 AM - 12:00 PM','12:00 PM - 01:00 PM','01:00 PM - 02:00 PM']
+  selectedDaysID=[];
+  selectedTimeslot=[];
+
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
     private formBuilder: FormBuilder,
@@ -28,10 +36,13 @@ export class AdddoctorsComponent implements OnInit {
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
-    private doctorService: DoctorsService
+    private doctorService: DoctorsService,
+    private appointmentService: AppointmentService
 
   ) {
     this.createForm();
+    // this.loadDay();
+    this.loadSpecialitiesAll();
   }
   ngOnInit() {
     this.setSelectedDoctor();
@@ -41,16 +52,22 @@ export class AdddoctorsComponent implements OnInit {
 
   private createForm() {
     this.doctorForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      firstName: [''],
+      lastName: [''],
       fullName: ['', Validators.required],
-      email: ['', Validators.required],
-      profile: ['', Validators.required],
+      email: ['', Validators.required],      
       skills: ['', Validators.required],
       education: ['', Validators.required],
       imagePath: [''],
       statusID: [true],
-      doctorID: 0,
+      fees:[0],
+      gender:[''],
+      timeslot:[''],
+      doctorID:[0],
+
+      specialities:[],
+      days:[],
+      times:[],
     });
   }
   private editForm(obj) {
@@ -80,11 +97,30 @@ export class AdddoctorsComponent implements OnInit {
       }
     })
   }
+
+  loadSpecialitiesAll() {
+    debugger
+     this.appointmentService.loadSpecialities().subscribe((res: any) => {
+       this.selectedSpecialityList = res;
+     });
+   }
+  // loadDay() {
+  //   debugger
+  //   this.appointmentService.loadDay().subscribe((res: any) => {
+  //     this.DoctorDaysList = res;
+  //   });
+  // }
+
   onSubmit() {
+    debugger
     this.doctorForm.markAllAsTouched();
     this.submitted = true;
     if (this.doctorForm.invalid) { return; }
     this.loading = true;
+    this.f.specialities.setValue(this.selectedSpecialistIds == undefined ? "" : this.selectedSpecialistIds.toString());
+    this.f.days.setValue(this.selectedDaysID == undefined ? "" : this.selectedDaysID.toString());
+    this.f.times.setValue(this.selectedTimeslot == undefined ? "" : this.selectedTimeslot.toString());
+    
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.imagePath.setValue(this.imgComp.imageUrl);
 
@@ -94,7 +130,7 @@ export class AdddoctorsComponent implements OnInit {
       this.doctorService.insert(this.doctorForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/managedoctor/doctor']);
+          this.router.navigate(['/admin/doctor']);
         }
         this.loading = false;
       }, error => {
@@ -115,4 +151,31 @@ export class AdddoctorsComponent implements OnInit {
       });
     }
   }
+
+  RemoveChild(obj) {
+    // const index = this.OrderDetailList.indexOf(obj);
+    // this.OrderDetailList.splice(index, 1);
+  }
+  AddChild(val) {
+   
+  //  var obj = this.ItemsList.find(element => element.itemID == val.itemID);
+  //   if (val.itemID != null) {
+  //     if (!this.OrderDetailList.find(element => element.itemID == val.itemID)) {
+  //       this.OrderDetailList.push({
+  //         title: obj.title,
+  //         price: obj.price == null ? 0 : obj.price,
+  //         quantity: val.quantity == null ? 1 : val.quantity,
+
+  //         total: val.quantity * obj.price,
+  //         itemID: obj.itemID,
+  //         image: obj.image == null ? 0 : obj.image
+  //       });
+  //     }
+  //     else {
+  //       alert("Item already added in list")
+  //     }
+  //     this.clear();
+  //   }
+  }
+
 }

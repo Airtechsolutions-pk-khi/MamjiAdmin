@@ -34,9 +34,9 @@ namespace MamjiAdmin.Controllers
         }
 
         [HttpGet("days")]
-        public List<SpecialistBLL> GetDays()
+        public List<DaysBLL> GetDays()
         {
-            return _service.GetSpeciality();
+            return _service.GetDocDays();
         }
         [HttpGet("doctor/{id}")]
         public DoctorBLL Get(int id)

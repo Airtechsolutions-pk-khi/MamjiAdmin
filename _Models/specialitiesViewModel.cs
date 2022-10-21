@@ -13,7 +13,7 @@ namespace MamjiAdmin._Models
     {
         public int SpecialistID { get; set; }
         public int DoctorID { get; set; }
-        public string SpecialityName { get; set; }
+        public string Name { get; set; }
         public int StatusID { get; set; }
     }
 

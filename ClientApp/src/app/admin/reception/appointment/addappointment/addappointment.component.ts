@@ -20,11 +20,13 @@ export class AddappointmentComponent implements OnInit {
   ButtonText = "Save";
   DoctorList = [];
   selectedDoctorIds: string[];
-
+  DoctorDaysList =[];
+  selectedDaysID =[];
   SpecialityList = [];
   drpSpecialityList = [];
+  selectedSpecialityList = [];
   selectedSpecialistIds: string[];
-  DaysList = [];
+ 
   drpDayList = [];
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
@@ -40,6 +42,8 @@ export class AddappointmentComponent implements OnInit {
     this.createForm();
 
     this.loadDoctor();
+    this.loadDay();
+    this.loadSpecialitiesAll();
   }
   ngOnInit() {
     this.setSelectedAppointment();
@@ -55,7 +59,8 @@ export class AddappointmentComponent implements OnInit {
       gender: ['', Validators.required],
       fees: ['', Validators.required],
       bookingDate: ['', Validators.required],
-      day: ['', Validators.required],
+      DoctorDaysList: [],
+      
       timeslot: ['', Validators.required],
       appointmentStatus: [''],
       statusID: [true],
@@ -139,7 +144,7 @@ export class AddappointmentComponent implements OnInit {
       });
     }
   }
-  private loadDoctor() {
+  private loadDoctor() {    
     this.appointmentService.loadDoctor().subscribe((res: any) => {
       this.DoctorList = res;
     });
@@ -150,9 +155,16 @@ export class AddappointmentComponent implements OnInit {
       this.SpecialityList = res;
     });
   }
+  loadSpecialitiesAll() {
+    debugger
+     this.appointmentService.loadSpecialities().subscribe((res: any) => {
+       this.selectedSpecialityList = res;
+     });
+   }
   loadDay() {
+    debugger
     this.appointmentService.loadDay().subscribe((res: any) => {
-      this.DaysList = res;
+      this.DoctorDaysList = res;
     });
   }
   selectedSpeciality(id) {
@@ -162,7 +174,7 @@ export class AddappointmentComponent implements OnInit {
     //enable the drp down
   }
   selectedDay(id) {
-    this.drpDayList = this.DaysList.filter(x => x.SpecialityID == id);
+    this.drpDayList = this.DoctorDaysList.filter(x => x.SpecialityID == id);
     this.f.specialityID.setValue(id);
     //enable the drp down
   }

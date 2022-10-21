@@ -14,7 +14,7 @@ namespace MamjiAdmin._Models
         public int DaysID { get; set; }
         public int SpecialistID { get; set; }
         public int DoctorID { get; set; }
-        public string DaysName { get; set; }
+        public string Name { get; set; }
     }
 
 }
