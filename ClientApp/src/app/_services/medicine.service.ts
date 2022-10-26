@@ -138,7 +138,6 @@ export class MedicineService {
       }));
   }
   update(updateData) {
-    debugger
     return this.http.post(`api/medicine/update`, updateData)
       .pipe(map(res => {
         console.log(res);
@@ -146,7 +145,6 @@ export class MedicineService {
       }));
   }
   delete(data) {
-    debugger;
     return this.http.post(`api/medicine/delete`, data);
   }
 }

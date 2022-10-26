@@ -44,9 +44,9 @@
               </td>
               <td> {{item.name}} </td>
               <td> {{item.description}} </td>
-              <td> {{item.branddetails}} </td>
+              <td> {{item.brandDetails}} </td>
               <td> {{item.price}} </td>
-              <td> {{item.quantitydescription}} </td>
+              <td> {{item.quantityDescription}} </td>
               <td>
                 <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
                 </ngb-highlight>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MamjiAdmin.Controllers
@@ -9,10 +10,12 @@ namespace MamjiAdmin.Controllers
     [Route("api/[controller]")]
     public class medicineController : ControllerBase
     {
+        private readonly IWebHostEnvironment _env;
         medicineService _service;
-        public medicineController()
+        public medicineController(IWebHostEnvironment env)
         {
             _service = new medicineService();
+            _env = env;
         }
         [HttpGet("{all}")]
         public List<MedicineBLL> GetAll()
@@ -28,7 +31,7 @@ namespace MamjiAdmin.Controllers
         [Route("insert")]
         public int Post([FromBody]MedicineBLL obj)
         {
-            return _service.Insert(obj);
+            return _service.Insert(obj, _env);
         }
         [HttpPost]
         [Route("update")]
