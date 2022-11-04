@@ -140,50 +140,50 @@ namespace BAL.Repositories
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertDoctor_Admin", p).Rows[0]["DoctorID"].ToString());
 
 
-                if (data.Specialities != "")
-                {
-                    SqlParameter[] p1 = new SqlParameter[2];
+                //if (data.Specialities != "")
+                //{
+                //    SqlParameter[] p1 = new SqlParameter[2];
 
-                    p1[0] = new SqlParameter("@Specialities", data.Specialities == "" ? null : data.Specialities);
-                    p1[1] = new SqlParameter("@DoctorID", rtn);
+                //    p1[0] = new SqlParameter("@Specialities", data.Specialities == "" ? null : data.Specialities);
+                //    p1[1] = new SqlParameter("@DoctorID", rtn);
 
-                    (new DBHelper().ExecuteNonQueryReturn)("sp_insertDocSpecialities_Admin", p1);
-                }
-                if (data.Days != "")
-                {
-                    //char[] spearator = { ',' };
-                    var days = data.Days.Split(',');
-                    var speciality = data.Specialities.Split(',');
+                //    (new DBHelper().ExecuteNonQueryReturn)("sp_insertDocSpecialities_Admin", p1);
+                //}
+                //if (data.Days != "")
+                //{
+                //    //char[] spearator = { ',' };
+                //    var days = data.Days.Split(',');
+                //    var speciality = data.Specialities.Split(',');
                                                     
-                        SqlParameter[] p2 = new SqlParameter[3];
-                        p2[0] = new SqlParameter("@Days", data.Days);
-                        p2[1] = new SqlParameter("@DoctorID", rtn);
-                        p2[2] = new SqlParameter("@Specialities", data.Specialities);
+                //        SqlParameter[] p2 = new SqlParameter[3];
+                //        p2[0] = new SqlParameter("@Days", data.Days);
+                //        p2[1] = new SqlParameter("@DoctorID", rtn);
+                //        p2[2] = new SqlParameter("@Specialities", data.Specialities);
 
-                        (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertDocDays_Admin", p2);
+                //        (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertDocDays_Admin", p2);
                      
                      
-                }
+                //}
 
-                if (data.Times != "")
-                {
-                    char[] spearator = { ',' };
-                    var times = data.Times.Split(spearator);
-                    var speciality = data.Specialities.Split(spearator);
-                    foreach (var time in times)
-                    {
-                        foreach (var specialtime in speciality)
-                        {
-                            SqlParameter[] p2 = new SqlParameter[4];
+                //if (data.Times != "")
+                //{
+                //    char[] spearator = { ',' };
+                //    var times = data.Times.Split(spearator);
+                //    var speciality = data.Specialities.Split(spearator);
+                //    foreach (var time in times)
+                //    {
+                //        foreach (var specialtime in speciality)
+                //        {
+                //            SqlParameter[] p2 = new SqlParameter[4];
 
-                            p2[0] = new SqlParameter("@DaysID", rtn1);
-                            p2[1] = new SqlParameter("@DoctorID", rtn);
-                            p2[2] = new SqlParameter("@SpecialistID", int.Parse(specialtime));
-                            p2[3] = new SqlParameter("@TimeSlot", time);
-                            (new DBHelper().ExecuteNonQueryReturn)("sp_insertDocTimeslot_Admin", p2);
-                        }
-                    }
-                }
+                //            p2[0] = new SqlParameter("@DaysID", rtn1);
+                //            p2[1] = new SqlParameter("@DoctorID", rtn);
+                //            p2[2] = new SqlParameter("@SpecialistID", int.Parse(specialtime));
+                //            p2[3] = new SqlParameter("@TimeSlot", time);
+                //            (new DBHelper().ExecuteNonQueryReturn)("sp_insertDocTimeslot_Admin", p2);
+                //        }
+                //    }
+                //}
 
                 //return rtn;
                 return 0;

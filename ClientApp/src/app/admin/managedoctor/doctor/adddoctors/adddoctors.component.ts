@@ -21,7 +21,7 @@ export class AdddoctorsComponent implements OnInit {
   selectedSubCategoriesIds: string[];
   selectedLocationIds: string[];
   selectedgroupModifierIds: string[];
-
+  DoctorDaysDetailList = [];
   selectedSpecialityList=[];
   selectedSpecialistIds=[];
   DoctorDaysList=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturdey','Sunday'];
@@ -68,10 +68,16 @@ export class AdddoctorsComponent implements OnInit {
       specialities:[],
       days:[],
       times:[],
+
+      
+       
     });
   }
   private editForm(obj) {
     debugger;
+    this.selectedSpecialityList = obj.doctorSpeciality;
+    this.DoctorDaysDetailList = obj.DaysDetail;
+    this.selectedTimeslot = obj.times;
     this.f.firstName.setValue(obj.firstName);
     this.f.lastName.setValue(obj.lastName);
     this.f.fullName.setValue(obj.fullName);
@@ -117,9 +123,12 @@ export class AdddoctorsComponent implements OnInit {
     this.submitted = true;
     if (this.doctorForm.invalid) { return; }
     this.loading = true;
+
     this.f.specialities.setValue(this.selectedSpecialistIds == undefined ? "" : this.selectedSpecialistIds.toString());
-    this.f.days.setValue(this.selectedDaysID == undefined ? "" : this.selectedDaysID.toString());
-    this.f.times.setValue(this.selectedTimeslot == undefined ? "" : this.selectedTimeslot.toString());
+    
+    // this.f.days.setValue(this.selectedDaysID == undefined ? "" : this.selectedDaysID.toString());
+    this.f.days.setValue(this.selectedDaysID);
+     this.f.times.setValue(this.selectedTimeslot == undefined ? "" : this.selectedTimeslot.toString());
     
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.imagePath.setValue(this.imgComp.imageUrl);
@@ -157,25 +166,23 @@ export class AdddoctorsComponent implements OnInit {
     // this.OrderDetailList.splice(index, 1);
   }
   AddChild(val) {
-   
-  //  var obj = this.ItemsList.find(element => element.itemID == val.itemID);
-  //   if (val.itemID != null) {
-  //     if (!this.OrderDetailList.find(element => element.itemID == val.itemID)) {
-  //       this.OrderDetailList.push({
-  //         title: obj.title,
-  //         price: obj.price == null ? 0 : obj.price,
-  //         quantity: val.quantity == null ? 1 : val.quantity,
-
-  //         total: val.quantity * obj.price,
-  //         itemID: obj.itemID,
-  //         image: obj.image == null ? 0 : obj.image
-  //       });
-  //     }
-  //     else {
-  //       alert("Item already added in list")
-  //     }
-  //     this.clear();
-  //   }
+   debugger
+    var obj = this.selectedSpecialityList.find(element => element.doctorSpeciality == val.doctorSpeciality);
+     
+     if (val.specialistID != null) {
+       if (!this.selectedSpecialityList.find(element => element.name == val.name)) {
+         this.selectedSpecialityList.push({
+           name: obj.name,
+           
+         });
+       }
+       else {
+         alert("Item already added in list")
+       }
+       //this.clear();
+     }
+   }
+  
   }
 
-}
+ 

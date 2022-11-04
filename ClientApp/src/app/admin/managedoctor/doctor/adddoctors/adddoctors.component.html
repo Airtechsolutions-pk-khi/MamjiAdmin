@@ -350,7 +350,6 @@
  
                     <div class="form-row">
                         <div class="form-group col-md-12">
-
                             <label class="small mb-1" for="inputLocation">Attach Speciality</label>
                             <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSpecialistIds">
                               <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
@@ -418,32 +417,28 @@
                       <br/>
                       <button class="btn btn-primary" type="submit" (click)="AddChild(doctorForm)" [disabled]="doctorForm==null">Add</button>
                   </div>
-                  <!-- <div class="tile-body p-0 table-responsive ">
+                  <div class="tile-body p-0 table-responsive ">
                     <table class="table table-striped">
                         <thead>
                             <tr class="table-header">
-                                <th width="10%">Speciality </th>
-                                <th width="40%">Days </th>
-                                <th width="10%">Timeslot</th>                                
-                                <th width="10%">Action</th>
+                                <th width="25%">Speciality </th>
+                                <th width="25%">Days </th>
+                                <th width="25%">Timeslot</th>                                
+                                <th width="25%">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of OrderDetailList">
+                            <tr *ngFor="let item of  selectedSpecialistIds">
+                                 
                                 <td>
-                                    <img style="width: 100% !important;"  *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt=""  />
-                                    <div *ngIf="item.image === ''"  class="image-replace"></div>
-                                </td>
-                                <td>
-                                  {{item.title}}
-                                  <tr *ngFor="let item1 of item.orderDetailGifts ">
-                                      <td class="badge badge-pill">GIFT: {{item1.title }} [ {{item1.price}} BD ] </td>
-                                  </tr>
-                              </td>
-                                <td> Name </td>
-                                <td> Qty </td>
-                                <td> Price </td>
-                                <td> T.Price </td>
+                                  {{item.name}}
+                                  <!-- <tr *ngFor="let item1 of item.doctorDetailTimes ">
+                                      <td class="badge badge-pill">Times: {{item1.TimeSlot }}  </td>
+                                  </tr> -->
+                              </td>                              
+                                <td> Days </td>
+                                <td> Timeslot </td>
+                                
                                 <td>
                                     <i  class="fas fa-fw fa-trash-alt "></i>
                                 </td>
@@ -451,7 +446,7 @@
 
                         </tbody>
                     </table>
-                </div> -->
+                </div>
 
                     <div class="form-row">
                       <div class="form-group col-lg-12">

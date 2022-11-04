@@ -24,10 +24,23 @@ namespace MamjiAdmin._Models
         public string LastUpdatedBy { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
-        public string Specialities { get; set; }
-        public string Days { get; set; }
+        //public string Specialities { get; set; }
+        //public string Days { get; set; }
         public string TimeSlot { get; set; }
-        public string Times { get; set; }
+        //public string Times { get; set; }
+        public List<TimeBLL> Times { get; set; }
+        public List<DaysBLL> Days { get; set; }
+        public List<SpecialistBLL> Specialities { get; set; }
+        
+    }
+    public class TimeBLL
+    {
+        public int TimeID { get; set; }
+        public int? DaysID { get; set; }
+        public int? DoctorID { get; set; }
+        public int? SpecialistID { get; set; }
+
+        public string TimeSlot { get; set; }
     }
 
 }
