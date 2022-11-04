@@ -32,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\admin\reception\laboratoryinquiry\addlabreport\" />
     <Folder Include="ClientApp\src\app\admin\sales\orders\modal-content\" />
     <Folder Include="Upload\Offers\" />
   </ItemGroup>

@@ -1,0 +1,57 @@
+<h1 class="h3 mb-2 text-gray-800">Upload Reports</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="reportForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Report Details</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputlabReferenceNo">Lab Reference#</label>
+                  <input type="text" class="form-control" id=labReferenceNo placeholder="" formControlName="labReferenceNo">
+                  <div *ngIf="f.labReferenceNo.invalid && (f.labReferenceNo.dirty || f.labReferenceNo.touched)" class="alert alert-danger">
+                    <div *ngIf="f.labReferenceNo.errors.required">
+                      Lab Reference No is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputcustomerID">Customer Name</label>
+                  <ng-select [items]="CustomerList" bindLabel="fullName" bindValue="customerID" [multiple]="false" placeholder="">
+                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                      <div class="ng-value" *ngFor="let item of items" [value]="items.customerID">
+                        <span class="ng-value-label">{{item.fullName}}</span>
+                        <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                      </div>
+                    </ng-template>
+                  </ng-select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-md-4 text-center">
+              <app-imageupload></app-imageupload>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
+            </div>
+          </div>
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
