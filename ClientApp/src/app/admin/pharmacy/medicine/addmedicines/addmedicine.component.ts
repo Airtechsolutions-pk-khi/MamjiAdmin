@@ -46,8 +46,8 @@ export class AddmedicineComponent implements OnInit {
       branddetails: ['', Validators.required],
       price: ['', Validators.required],
       quantitydescription: ['', Validators.required],
-      medicineID: 0,
-      image: [''],
+      medicineID: [0],
+      imagePath: [''],
     });
   }
 
@@ -58,9 +58,9 @@ export class AddmedicineComponent implements OnInit {
     this.f.price.setValue(obj.price);
     this.f.quantitydescription.setValue(obj.description);
     this.f.medicineID.setValue(obj.medicineID);
-    this.f.image.setValue(obj.image);
+    this.f.imagePath.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.imgComp.imageUrl = obj.image;
+/*    this.imgComp.imageUrl = obj.imagePath;*/
   }
 
    setSelectedmedicine() {
@@ -84,7 +84,7 @@ export class AddmedicineComponent implements OnInit {
     if (this.medicineForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    this.f.image.setValue(this.imgComp.imageUrl);
+    this.f.imagePath.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.medicineID.value) === 0) {
       //Insert medicine

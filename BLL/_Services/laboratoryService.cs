@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace MamjiAdmin.BLL._Services
 {
-    public class medicineService : baseService
+    public class laboratoryService : baseService
     {
-        medicineDB _service;
-        public medicineService()
+        laboratoryDB _service;
+        public laboratoryService()
         {
-            _service = new medicineDB();
+            _service = new laboratoryDB();
         }
-        public List<MedicineBLL> GetAll()
+        public List<LaboratoryBLL> GetAll()
         {
             try
             {
@@ -24,10 +24,10 @@ namespace MamjiAdmin.BLL._Services
             }
             catch (Exception ex)
             {
-                return new List<MedicineBLL>();
+                return new List<LaboratoryBLL>();
             }
         }
-        public MedicineBLL Get(int id)
+        public LaboratoryBLL Get(int id)
         {
             try
             {
@@ -38,12 +38,12 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(MedicineBLL data, IWebHostEnvironment _env)
+        public int Insert(LaboratoryBLL data, IWebHostEnvironment _env)
         {
             try
             {
-                data.ImagePath = UploadImage(data.ImagePath, "Medicine", _env);
-                data.CreatedOn = _UTCDateTime_SA();
+                data.ImagePath = UploadImage(data.ImagePath, "laboratory", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
                 return result;
@@ -53,7 +53,7 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-        public int Update(MedicineBLL data)
+        public int Update(LaboratoryBLL data)
         {
             try
             {
@@ -67,11 +67,10 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-        public int Delete(MedicineBLL data)
+        public int Delete(LaboratoryBLL data)
         {
             try
             {
-                data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Delete(data);
 
                 return result;

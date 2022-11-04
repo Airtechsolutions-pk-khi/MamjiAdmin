@@ -8,40 +8,40 @@ using Microsoft.AspNetCore.Mvc;
 namespace MamjiAdmin.Controllers
 {
     [Route("api/[controller]")]
-    public class medicineController : ControllerBase
+    public class laboratoryController : ControllerBase
     {
         private readonly IWebHostEnvironment _env;
-        medicineService _service;
-        public medicineController(IWebHostEnvironment env)
+        laboratoryService _service;
+        public laboratoryController(IWebHostEnvironment env)
         {
-            _service = new medicineService();
+            _service = new laboratoryService();
             _env = env;
         }
-        [HttpGet("{all}")]
-        public List<MedicineBLL> GetAll()
+        [HttpGet("all")]
+        public List<LaboratoryBLL> GetAll()
         {
             return _service.GetAll();
         }
-        [HttpGet("medicine/{id}")]
-        public MedicineBLL Get(int id)
+        [HttpGet("laboratory/{id}")]
+        public LaboratoryBLL Get(int id)
         {
             return _service.Get(id);
         }
         [HttpPost]
         [Route("insert")]
-        public int Post([FromBody]MedicineBLL obj)
+        public int Post([FromBody] LaboratoryBLL obj)
         {
             return _service.Insert(obj, _env);
         }
         [HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody] MedicineBLL obj)
+        public int PostUpdate([FromBody] LaboratoryBLL obj)
         {
             return _service.Update(obj);
         }
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody] MedicineBLL obj)
+        public int PostDelete([FromBody] LaboratoryBLL obj)
         {
             return _service.Delete(obj);
         }

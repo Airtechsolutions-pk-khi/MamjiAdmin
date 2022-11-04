@@ -10,8 +10,8 @@
         <div class="card-body">
           <div class="form-row">
             <div class="form-group col-md-8">
-              
-              
+
+
               <div class="form-group">
                 <label class="small mb-1" for="inputUsername">Name</label>
                 <input type="text" class="form-control" id=Name placeholder="" formControlName="fullName">
@@ -21,7 +21,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputFirstName">Email</label>
@@ -82,32 +82,13 @@
               </div>
             </div>
           </div>
-          
+
           <button class="btn btn-primary" type="submit">Save changes</button>
         </div>
       </div>
     </div>
   </div>
 </form> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- <h1 class="h3 mb-2 text-gray-800">Add Doctor</h1>
 <p class="mb-4"></p>
 
@@ -126,11 +107,11 @@
                 <div *ngIf="f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)" class="alert alert-danger">
                   <div *ngIf="f.fullName.errors.required">
                     Name is required.
-                  </div>  
+                  </div>
                 </div>
               </div>
               <div class="form-group">
-              
+
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputLocation">Speciality</label>
                   <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSpecialistIds">
@@ -201,7 +182,7 @@
                 </div>
               </div>
               <div class="form-row">
-              
+
 
 
                 <div class="form-group col-md-12">
@@ -229,7 +210,7 @@
                   </div>
                 </div>
               </div>
-             
+
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputGender">Gender</label>
@@ -259,7 +240,7 @@
               </div>
             </div>
           </div>
-          
+
           <button class="btn btn-primary" type="submit">Save changes</button>
         </div>
       </div>
@@ -277,18 +258,18 @@
 
 
 
- <h1 class="h3 mb-2 text-gray-800">Add Doctor</h1>
+<h1 class="h3 mb-2 text-gray-800">Add Doctor</h1>
 <p class="mb-4"></p>
 
 <form [formGroup]="doctorForm" class="form" (ngSubmit)="onSubmit()">
-    <div class="row">
+  <div class="row">
 
-        <div class="col-xl-12">
-            <div class="card mb-4">
-                <div class="card-header">Item Details</div>
-                <div class="card-body">
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Item Details</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
 
                             <div class="form-row">
                                 <div class="form-group col-md-12">
@@ -362,40 +343,40 @@
                         </div>
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
+          <div class="form-row">
+            <div class="form-group col-md-12">
 
-                            <label class="small mb-1" for="inputLocation">Attach Days</label>
-                            <ng-select [items]="DoctorDaysList" bindLabel="name" [multiple]="true" bindValue="name" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedDaysID">
-                              <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                                  <div class="ng-value" *ngFor="let item of items">
-                                      <span class="ng-value-label">{{item}}</span>
-                                      <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                                  </div>
-                              </ng-template>
-                          </ng-select>
-                            <!-- <ng-select [items]="DoctorDaysList" bindLabel="name" bindValue="daysID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedDaysID">
-                              <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                                  <div class="ng-value" *ngFor="let item of items">
-                                      <span class="ng-value-label">{{item.name}}</span>
-                                      <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                                  </div>
-                              </ng-template>
-                          </ng-select> -->
-                        </div>
-                    </div>
+              <label class="small mb-1" for="inputLocation">Attach Days</label>
+              <ng-select [items]="DoctorDaysList" bindLabel="name" [multiple]="true" bindValue="name" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedDaysID">
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                  <div class="ng-value" *ngFor="let item of items">
+                    <span class="ng-value-label">{{item}}</span>
+                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                  </div>
+                </ng-template>
+              </ng-select>
+              <!-- <ng-select [items]="DoctorDaysList" bindLabel="name" bindValue="daysID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedDaysID">
+                  <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                      <div class="ng-value" *ngFor="let item of items">
+                          <span class="ng-value-label">{{item.name}}</span>
+                          <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                      </div>
+                  </ng-template>
+              </ng-select> -->
+            </div>
+          </div>
 
-                    <div class="form-row">
-                      <div class="form-group col-md-12">
-                        <label class="small mb-1" for="inputUsername">Timeslot</label>
-                        <ng-select [items]="TimeList" bindLabel="name" [multiple]="true" bindValue="name" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedTimeslot">
-                          <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                              <div class="ng-value" *ngFor="let item of items">
-                                  <span class="ng-value-label">{{item}}</span>
-                                  <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                              </div>
-                          </ng-template>
-                      </ng-select>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="small mb-1" for="inputUsername">Timeslot</label>
+              <ng-select [items]="TimeList" bindLabel="name" [multiple]="true" bindValue="name" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedTimeslot">
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                  <div class="ng-value" *ngFor="let item of items">
+                    <span class="ng-value-label">{{item}}</span>
+                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                  </div>
+                </ng-template>
+              </ng-select>
 
                         <!-- <select type="time" class="form-control" id=timeslot placeholder="" formControlName="timeslot">
                           <option selected disabled> -- Please Select -- </option>
@@ -448,21 +429,21 @@
                     </table>
                 </div>
 
-                    <div class="form-row">
-                      <div class="form-group col-lg-12">
-                        <label for="Item Status">Status</label>
-                        <div class="custom-control custom-switch custom-switch-md">
-                          <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
-                          <label class="custom-control-label" for="statusID"></label>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <!-- Save changes button-->
-                    <button class="btn btn-primary" type="submit">Save changes</button>
-
-                </div>
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label for="Item Status">Status</label>
+              <div class="custom-control custom-switch custom-switch-md">
+                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
+                <label class="custom-control-label" for="statusID"></label>
+              </div>
             </div>
+          </div>
+
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+
         </div>
+      </div>
     </div>
+  </div>
 </form>

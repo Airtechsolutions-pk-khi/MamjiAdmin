@@ -3,8 +3,8 @@ export class Medicine {
   imagePath: string;
   name: string;
   description: string;
-  branddetails: string;
+  brandDetails: string;
   price: number;
-  quantitydescription: string;
+  quantityDescription: string;
   statusID: number;
 }

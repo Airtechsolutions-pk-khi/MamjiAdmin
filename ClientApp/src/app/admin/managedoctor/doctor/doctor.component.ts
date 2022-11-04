@@ -14,7 +14,7 @@ import { DoctorsService } from 'src/app/_services/doctors.service';
   providers: [ExcelService]
 })
 export class DoctorComponent implements OnInit {
-  data$: Observable<Doctors[]>;  
+  data$: Observable<Doctors[]>;
   oldData: Doctors[];
   total$: Observable<number>;
   loading$: Observable<boolean>;
@@ -23,24 +23,24 @@ export class DoctorComponent implements OnInit {
   locationSubscription: Subscription;
   submit: boolean;
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
-  
+
   constructor(public service: DoctorsService,
-    public ls :LocalStorageService,
+    public ls: LocalStorageService,
     public excelService: ExcelService,
-    public ts :ToastService,
-    public router:Router) {
-     //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
- 
-     this.loading$ = service.loading$;
-     this.submit = false;
-     
-   }
- 
-   exportAsXLSX(): void {
-    this.service.ExportList(this.selectedDoctor).subscribe((res: any) => {    
+    public ts: ToastService,
+    public router: Router) {
+    //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
+
+    this.loading$ = service.loading$;
+    this.submit = false;
+
+  }
+
+  exportAsXLSX(): void {
+    this.service.ExportList(this.selectedDoctor).subscribe((res: any) => {
       this.excelService.exportAsExcelFile(res, 'Report_Export');
     }, error => {
-      this.ts.showError("Error","Failed to export")
+      this.ts.showError("Error", "Failed to export")
     });
   }
 
@@ -70,18 +70,18 @@ export class DoctorComponent implements OnInit {
   }
 
 
-Delete(data) {
-this.service.delete(data).subscribe((res: any) => {
-  if(res!=0){
-    this.ts.showSuccess("Success","Record deleted successfully.")
-    this.getData();
-  }
-  else
-  this.ts.showError("Error","Failed to delete record.")
+  Delete(data) {
+    this.service.delete(data).subscribe((res: any) => {
+      if (res != 0) {
+        this.ts.showSuccess("Success", "Record deleted successfully.")
+        this.getData();
+      }
+      else
+        this.ts.showError("Error", "Failed to delete record.")
 
-}, error => {
-  this.ts.showError("Error","Failed to delete record.")
-});
-}
+    }, error => {
+      this.ts.showError("Error", "Failed to delete record.")
+    });
+  }
 
 }

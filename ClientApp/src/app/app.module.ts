@@ -64,8 +64,9 @@ import { AddprescriptionComponent } from './admin/pharmacy/prescription/add/addp
 import { AppointmentComponent } from './admin/reception/appointment/appointment.component';
 import { AddappointmentComponent } from './admin/reception/appointment/addappointment/addappointment.component';
 
-import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/laboratoryinquiry.component';
+/*import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/laboratoryinquiry.component';*/
 import { UploadreportComponent } from './admin/laboratory/uploadreport/uploadreport.component';
+import { AddreportsComponent } from './admin/laboratory/uploadreport/addreports/addreports.component';
 import { DeliverydetailComponent } from './admin/pharmacy/deliverydetail/deliverydetail.component';
 import { PromotionComponent } from './admin/settings/Promotion/promotion.component';
 import { AddPromotionComponent } from './admin/settings/Promotion/addpromotion/addpromotion.component';
@@ -132,8 +133,9 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
     AppointmentComponent,
     AddappointmentComponent,
 
-    LaboratoryinquiryComponent,
-    UploadreportComponent,   
+/*    LaboratoryinquiryComponent,*/
+    UploadreportComponent,
+    AddreportsComponent,
     MedicineComponent,
     AddmedicineComponent,
      OrdersComponent,
@@ -226,9 +228,11 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
           { path: 'reception/appointment/addappointment', component: AddappointmentComponent },
           { path: 'reception/appointment/edit/:id', component: AddappointmentComponent },
 
-          { path: 'reception/laboratoryinquiry', component: LaboratoryinquiryComponent },
+/*          { path: 'reception/laboratoryinquiry', component: LaboratoryinquiryComponent },*/
           { path: 'laboratory/customerinquiry', component: CustomerinquiryComponent },
           { path: 'laboratory/uploadreport', component: UploadreportComponent },
+          { path: 'laboratory/uploadreport/addreports', component: AddreportsComponent },
+          { path: 'laboratory/uploadreport/edit/:id', component: AddreportsComponent },
           { path: 'pharmacy/deliverydetail', component: DeliverydetailComponent },
 
           { path: 'setting/promotion', component: PromotionComponent },

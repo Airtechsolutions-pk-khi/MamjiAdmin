@@ -5,14 +5,15 @@ import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 import { State } from '../_models/State';
-import { Medicine } from '../_models/Medicine';
+import { Laboratory } from '../_models/Laboratory';
+import { Customers } from '../_models/Customers';
 
-interface SearchMedicineResult {
-  data: Medicine[];
+interface SearchLaboratoryResult {
+  data: Laboratory[];
   total: number;
 }
 const compare = (v1: string, v2: string) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
-function sort(data: Medicine[], column: SortColumn, direction: string): Medicine[] {
+function sort(data: Laboratory[], column: SortColumn, direction: string): Laboratory[] {
   if (direction === '' || column === '') {
     return data;
   } else {
@@ -22,24 +23,24 @@ function sort(data: Medicine[], column: SortColumn, direction: string): Medicine
     });
   }
 }
-function matches(data: Medicine, term: string) {
-  return data.name.toLowerCase().includes(term.toLowerCase())
+function matches(data: Laboratory, term: string) {
+  return data.labReferenceNo.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({
   providedIn: 'root'
 })
-export class MedicineService {
+export class LaboratoryService {
 
   constructor(private http: HttpClient) {
   }
 
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _allData$ = new BehaviorSubject<Medicine[]>([]);
-  private _data$ = new BehaviorSubject<Medicine[]>([]);
+  private _allData$ = new BehaviorSubject<Laboratory[]>([]);
+  private _data$ = new BehaviorSubject<Laboratory[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
-  public medicine: Medicine[];
+  public laboratory: Laboratory[];
   private _state: State = {
     page: 1,
     pageSize: 10,
@@ -65,22 +66,24 @@ export class MedicineService {
   get allData$() {
     return this._allData$.asObservable();
   }
-
-  ExportList(medicineID) {
-    return this.http.get<Medicine[]>(`api/medicine/all`);
+  loadCustomer() {
+    return this.http.get<Customers[]>(`api/customer/all`);
+  }
+  ExportList(LaboratoryID) {
+    return this.http.get<Laboratory[]>(`api/Laboratory/all`);
   }
   getById(id) {
-    return this.http.get<Medicine[]>(`api/medicine/medicine/${id}`);
+    return this.http.get<Laboratory[]>(`api/Laboratory/Laboratory/${id}`);
   }
   getAllData() {
-    const url = `api/medicine/all`;
+    const url = `api/Laboratory/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
-      this.http.get<Medicine[]>(url).subscribe(res => {
-        this.medicine = res;
+      this.http.get<Laboratory[]>(url).subscribe(res => {
+        this.laboratory = res;
 
-        this._data$.next(this.medicine);
-        this._allData$.next(this.medicine);
+        this._data$.next(this.laboratory);
+        this._allData$.next(this.laboratory);
 
         this._search$.pipe(
           switchMap(() => this._search()),
@@ -98,11 +101,11 @@ export class MedicineService {
     this._search$.next();
   }
 
-  private _search(): Observable<SearchMedicineResult> {
+  private _search(): Observable<SearchLaboratoryResult> {
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
 
     // 1. sort
-    let sortedData = sort(this.medicine, sortColumn, sortDirection);
+    let sortedData = sort(this.laboratory, sortColumn, sortDirection);
 
     //// 2. filter
     sortedData = sortedData.filter(data => matches(data, searchTerm));
@@ -130,7 +133,7 @@ export class MedicineService {
     };
   }
   insert(data) {
-    return this.http.post('api/medicine/insert', data)
+    return this.http.post('api/laboratory/insert', data)
       .pipe(map(res => {
 
         console.log(res);
@@ -138,13 +141,13 @@ export class MedicineService {
       }));
   }
   update(updateData) {
-    return this.http.post(`api/medicine/update`, updateData)
+    return this.http.post(`api/laboratory/update`, updateData)
       .pipe(map(res => {
         console.log(res);
         return res;
       }));
   }
   delete(data) {
-    return this.http.post(`api/medicine/delete`, data);
+    return this.http.post(`api/laboratory/delete`, data);
   }
 }
