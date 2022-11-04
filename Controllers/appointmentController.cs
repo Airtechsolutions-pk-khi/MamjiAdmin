@@ -21,6 +21,7 @@ namespace MamjiAdmin.Controllers
             _env = env;
         }
 
+
         [HttpGet("{all}")]
         public List<AppointmentBLL> GetAll()
         {
