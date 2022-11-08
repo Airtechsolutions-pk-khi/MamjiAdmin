@@ -404,6 +404,7 @@ D:\Project\Mamji\MamjiAdminGit\obj\Debug\netcoreapp3.1\MamjiAdmin.csproj.CopyCom
 D:\Project\Mamji\MamjiAdminGit\obj\Debug\netcoreapp3.1\MamjiAdmin.dll
 D:\Project\Mamji\MamjiAdminGit\obj\Debug\netcoreapp3.1\MamjiAdmin.pdb
 D:\Project\Mamji\MamjiAdminGit\obj\Debug\netcoreapp3.1\MamjiAdmin.genruntimeconfig.cache
+D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.dll
 D:\Projects\Mamji\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Projects\Mamji\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.StaticWebAssets.xml
@@ -411,10 +412,6 @@ D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.exe
 D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.deps.json
 D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.runtimeconfig.json
 D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.runtimeconfig.dev.json
-D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.dll
-D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.pdb
-D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.Views.dll
-D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.Views.pdb
 D:\Projects\Mamji\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
 D:\Projects\Mamji\bin\Debug\netcoreapp3.1\EntityFramework.dll
 D:\Projects\Mamji\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.NodeServices.dll

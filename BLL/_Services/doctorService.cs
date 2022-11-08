@@ -64,7 +64,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.ImagePath = UploadImage(data.ImagePath, "Doctor", _env);
+                data.ImagePath = UploadImage(data.ImagePath, "Brand", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 

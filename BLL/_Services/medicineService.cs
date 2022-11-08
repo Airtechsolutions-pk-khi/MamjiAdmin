@@ -22,7 +22,7 @@ namespace MamjiAdmin.BLL._Services
             {
                 return _service.GetAll();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<MedicineBLL>();
             }
@@ -33,7 +33,7 @@ namespace MamjiAdmin.BLL._Services
             {
                 return _service.Get(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -42,13 +42,13 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.ImagePath = UploadImage(data.ImagePath, "Medicine", _env);
+                data.ImagePath = UploadImage(data.ImagePath, "Brand", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -62,7 +62,7 @@ namespace MamjiAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -76,7 +76,7 @@ namespace MamjiAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
