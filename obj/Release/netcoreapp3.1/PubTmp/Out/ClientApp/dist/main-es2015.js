@@ -7144,13 +7144,12 @@ let AddmedicineComponent = class AddmedicineComponent {
     editForm(obj) {
         this.f.name.setValue(obj.name);
         this.f.description.setValue(obj.description);
-        this.f.branddetails.setValue(obj.branddetails);
+        this.f.brandDetails.setValue(obj.brandDetails);
         this.f.price.setValue(obj.price);
         this.f.quantitydescription.setValue(obj.description);
         this.f.medicineID.setValue(obj.medicineID);
         this.f.imagePath.setValue(obj.image);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-        /*    this.imgComp.imageUrl = obj.imagePath;*/
     }
     setSelectedmedicine() {
         this.route.paramMap.subscribe(param => {
