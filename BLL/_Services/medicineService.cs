@@ -38,11 +38,11 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(MedicineBLL data, IWebHostEnvironment _env)
+        public int Insert(MedicineBLL data)
         {
             try
             {
-                data.ImagePath = UploadImage(data.ImagePath, "Brand", _env);
+                //data.ImagePath = UploadImage(data.ImagePath, "Medicine", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -57,6 +57,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
+                //data.ImagePath = UploadImage(data.ImagePath, "Medicine", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

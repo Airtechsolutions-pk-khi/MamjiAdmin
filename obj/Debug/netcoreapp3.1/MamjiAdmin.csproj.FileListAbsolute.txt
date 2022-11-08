@@ -482,3 +482,6 @@ D:\Projects\Mamji\obj\Debug\netcoreapp3.1\MamjiAdmin.csproj.CopyComplete
 D:\Projects\Mamji\obj\Debug\netcoreapp3.1\MamjiAdmin.dll
 D:\Projects\Mamji\obj\Debug\netcoreapp3.1\MamjiAdmin.pdb
 D:\Projects\Mamji\obj\Debug\netcoreapp3.1\MamjiAdmin.genruntimeconfig.cache
+D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.pdb
+D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.Views.dll
+D:\Projects\Mamji\bin\Debug\netcoreapp3.1\MamjiAdmin.Views.pdb

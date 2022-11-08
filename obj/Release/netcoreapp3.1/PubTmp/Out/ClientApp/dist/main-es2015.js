@@ -5346,7 +5346,7 @@ let AdddoctorsComponent = class AdddoctorsComponent {
         this.f.profile.setValue(obj.profile);
         this.f.skills.setValue(obj.skills);
         this.f.doctorID.setValue(obj.doctorID);
-        this.f.imagePath.setValue(obj.image);
+        this.f.imagePath.setValue(obj.imagePath);
         this.f.education.setValue(obj.education);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     }

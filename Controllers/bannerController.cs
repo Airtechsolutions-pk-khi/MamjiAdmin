@@ -36,14 +36,14 @@ namespace MamjiAdmin.Controllers
         [Route("insert")]
         public int Post([FromBody]BannerBLL obj)
         {
-            return _service.Insert(obj, _env);
+            return _service.Insert(obj);
         }
 
         [HttpPost]
         [Route("update")]
         public int PostUpdate([FromBody]BannerBLL obj)
         {
-            return _service.Update(obj, _env);
+            return _service.Update(obj);
         }
 
 

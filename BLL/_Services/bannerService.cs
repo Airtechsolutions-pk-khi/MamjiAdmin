@@ -40,11 +40,11 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(BannerBLL data, IWebHostEnvironment _env)
+        public int Insert(BannerBLL data)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Banner", _env);
+                //data.Image = UploadImage(data.Image, "Banner", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -56,11 +56,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(BannerBLL data, IWebHostEnvironment _env)
+        public int Update(BannerBLL data)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Banner", _env);
+                //data.Image = UploadImage(data.Image, "Banner", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 
