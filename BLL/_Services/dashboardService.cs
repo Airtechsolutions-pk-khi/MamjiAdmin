@@ -16,78 +16,17 @@ namespace MamjiAdmin.BLL._Services
             _service = new dashboardDB();
         }
 
-        public RspDashboard GetDashboard(int LocationID, string Date)
+        public List<DashboardSummary> GetAll()
         {
-            var rsp = new RspDashboard();
             try
             {
-                rsp.summarysales = _service.GetDashboardSummary(LocationID, DateTime.Parse(Date));
+                return _service.GetDashboardSummary();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                rsp.summarysales = new DashboardSummary();
+                return new List<DashboardSummary>();
             }
-
-
-            try
-            {
-                rsp.maensales = _service.GetMAENSummary(LocationID, DateTime.Parse(Date));
-            }
-            catch (Exception)
-            {
-                rsp.maensales = new DashboardMAEN();
-            }
-
-
-            try
-            {
-                rsp.todaysales = _service.GetTodaySales(LocationID, DateTime.Parse(Date));
-            }
-            catch (Exception)
-            {
-                rsp.todaysales = new DashboardToday();
-            }
-
-
-            return rsp;
-
         }
 
-        public RspDashboard GetDashboardRange(int LocationID, string FDate, string TDate)
-        {
-            var rsp = new RspDashboard();
-            try
-            {
-                rsp.summarysales = _service.GetDashboardSummaryRange(LocationID,DateTime.Parse(FDate), DateTime.Parse(TDate));
-            }
-            catch (Exception)
-            {
-                rsp.summarysales = new DashboardSummary();
-            }
-
-
-            try
-            {
-                rsp.maensales = _service.GetMAENSummaryRange(LocationID,DateTime.Parse(FDate));
-            }
-            catch (Exception)
-            {
-                rsp.maensales = new DashboardMAEN();
-            }
-
-
-            try
-            {
-                rsp.todaysales = _service.GetTodaySalesRange(LocationID,DateTime.Parse(FDate));
-            }
-            catch (Exception)
-            {
-                rsp.todaysales = new DashboardToday();
-            }
-
-
-            return rsp;
-
-        }
     }
 }

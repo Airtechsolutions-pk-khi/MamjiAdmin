@@ -3,22 +3,20 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
+import { CouponService } from 'src/app/_services/coupon.service';
 import { ToastService } from 'src/app/_services/toastservice';
-import { PromotionService } from 'src/app/_services/promotion.service';
- 
-
 
 @Component({
-  selector: 'app-addpromotion',
-  templateUrl: './addpromotion.component.html',
-
+  selector: 'app-addcoupon',
+  templateUrl: './addcoupon.component.html',
 })
-export class AddPromotionComponent implements OnInit {
+export class AddCouponComponent implements OnInit {
+
   submitted = false;
-  promotionForm: FormGroup;
+  couponForm: FormGroup;
   loading = false;
-  loadingPromotion = false;
-  ButtonText = "Save"; selectedCityIds
+  loadingCoupon = false;
+  ButtonText = "Save";
   selectedSubCategoriesIds: string[];
   selectedLocationIds: string[];
   selectedgroupModifierIds: string[];
@@ -30,63 +28,67 @@ export class AddPromotionComponent implements OnInit {
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
-    private Promotionesrvice: PromotionService
+    private couponService: CouponService
 
   ) {
     this.createForm();
   }
+
   ngOnInit() {
-    this.setSelectedDoctor();
+    this.setSelectedCustomer();
   }
 
-  get f() { return this.promotionForm.controls; }
+  get f() { return this.couponForm.controls; }
 
   private createForm() {
-    this.promotionForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      description: ['', Validators.required],
-      discount: [0],     
-      image: [''],
+    this.couponForm = this.formBuilder.group({
+      title: ['', Validators.required],
+      type: ['', Validators.required],
+      amount: [''],
       statusID: [true],
-      promotionID: 0,
+      couponID: 0,
+      couponCode: [''],
     });
   }
+
   private editForm(obj) {
-    this.f.name.setValue(obj.name);
-    this.f.description.setValue(obj.description);
-    this.f.discount.setValue(obj.discount);    
-    this.f.image.setValue(obj.image);   
+    this.f.title.setValue(obj.title);
+    this.f.type.setValue(obj.type);
+    this.f.couponID.setValue(obj.couponID);
+    this.f.couponCode.setValue(obj.couponCode);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.f.amount.setValue(obj.amount);
   }
-  setSelectedDoctor() {
+
+  setSelectedCustomer() {
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
-        this.loadingPromotion = true;
-        this.f.promotionID.setValue(sid);
-        this.Promotionesrvice.getById(sid).subscribe(res => {
+        this.loadingCoupon = true;
+        this.f.couponID.setValue(sid);
+        this.couponService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
-          this.loadingPromotion = false;
+          this.loadingCoupon = false;
         });
       }
     })
   }
+
   onSubmit() {
-    this.promotionForm.markAllAsTouched();
+    this.couponForm.markAllAsTouched();
     this.submitted = true;
-    if (this.promotionForm.invalid) { return; }
+    if (this.couponForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    this.f.image.setValue(this.imgComp.imageUrl);
 
-    if (parseInt(this.f.promotionID.value) === 0) {
-      //Insert doctor
-      console.log(JSON.stringify(this.promotionForm.value));
-      this.Promotionesrvice.insert(this.promotionForm.value).subscribe(data => {
+    if (parseInt(this.f.couponID.value) === 0) {
+      //Insert banner
+      console.log(JSON.stringify(this.couponForm.value));
+      this.couponService.insert(this.couponForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/managedoctor/doctor']);
+          this.router.navigate(['/admin/settings/coupon']);
         }
         this.loading = false;
       }, error => {
@@ -94,12 +96,12 @@ export class AddPromotionComponent implements OnInit {
         this.loading = false;
       });
     } else {
-      //Update doctor
-      this.Promotionesrvice.update(this.promotionForm.value).subscribe(data => {
+      //Update banner
+      this.couponService.update(this.couponForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success", "Record updated successfully.")
-          this.router.navigate(['/admin/settings/promotion']);
+          this.router.navigate(['/admin/settings/coupon']);
         }
       }, error => {
         this.ts.showError("Error", "Failed to update record.")
@@ -111,4 +113,3 @@ export class AddPromotionComponent implements OnInit {
 
 
 }
-

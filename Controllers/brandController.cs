@@ -20,10 +20,10 @@ namespace MamjiAdmin.Controllers
         }
       
 
-        [HttpGet("all/{brandid}")]
-        public List<BrandBLL> GetAll(int brandid)
+        [HttpGet("all")]
+        public List<BrandBLL> GetAll()
         {
-            return _service.GetAll(brandid);
+            return _service.GetAll();
         }
 
 
@@ -40,12 +40,12 @@ namespace MamjiAdmin.Controllers
             return _service.Insert(obj, _env);
         }
 
-        [HttpPost]
-        [Route("update")]
-        public int Put([FromBody]BrandBLL obj)
-        {
-            return _service.Update(obj, _env);
-        }
+        //[HttpPost]
+        //[Route("update")]
+        //public int Put([FromBody]BrandBLL obj)
+        //{
+        //    return _service.Update(obj, _env);
+        //}
 
 
         [HttpPost]

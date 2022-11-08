@@ -1,39 +1,40 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Location } from '../_models/Location';
-import { BehaviorSubject, Subject } from 'rxjs';
-import { switchMap, tap } from 'rxjs/operators';
-import { DashboardSummary } from '../_models/Dashboard';
+import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
+import { switchMap, tap, map } from 'rxjs/operators';
+import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 import { State } from '../_models/State';
+import { DashboardSummary } from '../_models/Dashboard';
 
-interface SearchDashboardResult {
+
+interface SearchDoctorsResult {
   data: DashboardSummary[];
-  total: number;
 }
+
 @Injectable({
   providedIn: 'root'
 })
-
-export class DashboadService {
+export class DashboardService {
 
   constructor(private http: HttpClient) {
   }
-  
+
+  private _loading$ = new BehaviorSubject<boolean>(true);
+  private _search$ = new Subject<void>();
   private _allData$ = new BehaviorSubject<DashboardSummary[]>([]);
-  private _total$ = new BehaviorSubject<number>(0);
-  public dashboard: DashboardSummary[];
+  private _data$ = new BehaviorSubject<DashboardSummary[]>([]);
+  public dashboardSummary: DashboardSummary[];
 
-  GetDashboard(locationID, date) {
-    var today = date;
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
+  get loading$() { return this._loading$.asObservable(); }
 
-    today = yyyy + '-' + dd + '-' + mm;
-    return this.http.get<any[]>(`api/dashboard/get/${locationID}/${today}`);
+  get data$() {
+    return this._data$.asObservable();
+  }
+  get allData$() {
+    return this._allData$.asObservable();
   }
 
-  GetDashboardRange(locationID, fdate,tdate) {
-    return this.http.get<any[]>(`api/dashboard/range/get/${locationID}/${fdate}/${tdate}`);
+  getAllData() {
+    return this.http.get<any[]>(`api/dashboard/all`);
   }
 }

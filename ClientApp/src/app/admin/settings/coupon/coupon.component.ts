@@ -5,47 +5,45 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { Router } from '@angular/router';
 import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
-import { Promotion } from 'src/app/_models/Promotion';
-import { PromotionService } from 'src/app/_services/promotion.service';
- 
-
+import { Coupon } from 'src/app/_models/Coupon';
+import { CouponService } from 'src/app/_services/coupon.service';
 
 @Component({
-  selector: 'app-promotion',
-  templateUrl: './promotion.component.html',
-  styleUrls: ['./promotion.component.css'],
+  selector: 'app-coupon',
+  templateUrl: './coupon.component.html',
+  styleUrls: ['./coupon.component.css'],
   providers: [ExcelService]
 })
-export class PromotionComponent implements OnInit {
-  data$: Observable<Promotion[]>;  
-  oldData: Promotion[];
+export class CouponComponent implements OnInit {
+  data$: Observable<Coupon[]>;  
+  oldData: Coupon[];
   total$: Observable<number>;
   loading$: Observable<boolean>;
-  private selectedDoctor;
+  private selectedCoupon;
 
   locationSubscription: Subscription;
   submit: boolean;
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
   
-  constructor(public service: PromotionService,
+  constructor(public service: CouponService,
     public ls :LocalStorageService,
     public excelService: ExcelService,
     public ts :ToastService,
     public router:Router) {
-     //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
+/*    this.selectedCoupon =this.ls.getSelectedDoctor().doctorID;*/
  
      this.loading$ = service.loading$;
      this.submit = false;
      
    }
  
-   exportAsXLSX(): void {
-    this.service.ExportList(this.selectedDoctor).subscribe((res: any) => {    
-      this.excelService.exportAsExcelFile(res, 'Report_Export');
-    }, error => {
-      this.ts.showError("Error","Failed to export")
-    });
-  }
+  // exportAsXLSX(): void {
+  //  this.service.ExportList(this.selectedDoctor).subscribe((res: any) => {    
+  //  //  this.excelService.exportAsExcelFile(res, 'Report_Export');
+  //  }, error => {
+  //    this.ts.showError("Error","Failed to export")
+  //  });
+  //}
 
   ngOnInit() {
     this.getData();
@@ -68,8 +66,8 @@ export class PromotionComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
-  Edit(doctors) {
-    this.router.navigate(["admin/managedoctor/doctor/edit", doctors]);
+  Edit(coupons) {
+    this.router.navigate(["admin/settings/coupon/edit", coupons]);
   }
 
 

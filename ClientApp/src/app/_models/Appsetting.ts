@@ -1,19 +1,8 @@
 export class Appsetting {
-  iD: number;
-  branchName: string;
-  branchAddress: string;
-  branchTiming: string;
-  deliveryNo: string;
-  discount: number;
-  discountdescription: string;
-  brandID: number;
+  appSettingID: number;
+  discount: string;
+  deliveryCharges: string;
+  tax: string;
+  minimumOrderAmount: string;
   statusID: number;
-  whatsappNo:string;
-
-
-  appInfoID:number;
-  appDescription:string;
-  facebook: string;
-  twitter: string;
-  instagram: string;
 }

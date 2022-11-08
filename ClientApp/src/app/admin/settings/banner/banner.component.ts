@@ -29,7 +29,7 @@ export class BannerComponent implements OnInit {
     public ls :LocalStorageService,
     public ts :ToastService,
     public router:Router) {
-     this.selectedBrand =this.ls.getSelectedBrand().brandID;
+/*     this.selectedBrand =this.ls.getSelectedBrand().brandID;*/
 
     this.loading$ = service.loading$;
     this.submit = false;
@@ -41,7 +41,7 @@ export class BannerComponent implements OnInit {
   }
 
   getData() {    
-    this.service.getAllData(this.selectedBrand);    
+    this.service.getAllData();    
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
     this.loading$ = this.service.loading$;
@@ -59,7 +59,7 @@ export class BannerComponent implements OnInit {
   }
 
   Edit(banner) {
-        this.router.navigate(["admin/banner/edit", banner]);
+        this.router.navigate(["admin/settings/banner/edit", banner]);
   }
 
   Delete(obj) {
