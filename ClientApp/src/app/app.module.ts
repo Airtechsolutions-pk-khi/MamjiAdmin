@@ -77,6 +77,9 @@ import { MedicineComponent } from './admin/pharmacy/medicine/medicine.component'
 import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/addmedicine.component'
 import { OrdersComponent } from './admin/pharmacy/orders/orders.component';
 import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetails.component';
+
+import { ServiceComponent } from './admin/settings/medicalservices/service.component';
+import { AddServiceComponent } from './admin/settings/medicalservices/add/addservice.component';
  
  
 @NgModule({
@@ -143,7 +146,9 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
     AddmedicineComponent,
      OrdersComponent,
     OrderdetailsComponent,
-    AddsettingsComponent
+    AddsettingsComponent,
+    ServiceComponent,
+    AddServiceComponent
      
     
     
@@ -253,7 +258,10 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
 
           { path: 'pharmacy/orders', component: OrdersComponent },
           { path: 'orders/view/:id', component: OrderdetailsComponent },
-          
+
+          { path: 'settings/medicalservices', component: ServiceComponent },
+          { path: 'settings/medicalservices/add', component: AddServiceComponent },
+          { path: 'settings/medicalservices/edit/:id', component: AddServiceComponent },
         ]
       }
     ]),

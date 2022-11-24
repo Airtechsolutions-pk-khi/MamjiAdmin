@@ -26,14 +26,17 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\app\admin\sales\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\admin\sales\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\admin\sales\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\app\admin\sales\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ClientApp\src\app\admin\reception\laboratoryinquiry\addlabreport\" />
-    <Folder Include="ClientApp\src\app\admin\sales\orders\modal-content\" />
     <Folder Include="Upload\Offers\" />
   </ItemGroup>
 
