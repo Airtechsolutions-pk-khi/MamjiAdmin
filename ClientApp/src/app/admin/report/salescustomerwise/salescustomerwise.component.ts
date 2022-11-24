@@ -9,18 +9,17 @@ import { SalescustomerwiseReport } from 'src/app/_models/Report';
 import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-range-popup';
 import { delay, map } from 'rxjs/operators';
 import { Location } from 'src/app/_models/Location';
-import { ExcelService } from 'src/ExportExcel/excel.service';
+//import { ExcelService } from 'src/ExportExcel/excel.service';
 @Component({
   selector: 'app-salescustomerwise',
-  templateUrl: './salescustomerwise.component.html',  
-  providers: [ExcelService]
+  templateUrl: './salescustomerwise.component.html',
 })
 
 export class SalescustomerwiseComponent implements OnInit {
   data$: Observable<SalescustomerwiseReport[]>;
 
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
-  
+
   private selectedBrand;
   private selectedLocation;
   Locations: Location[] = [];
@@ -28,16 +27,16 @@ export class SalescustomerwiseComponent implements OnInit {
   locationID = 0;
 
   orders: SalescustomerwiseReport[] = [];
-  
+
   locationSubscription: Subscription;
   submit: boolean;
-  
+
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
   @ViewChild('locationDrp') drplocation: any;
   constructor(public service: ReportService,
     public ls: LocalStorageService,
     public ts: ToastService,
-    public excelService: ExcelService,
+/*    public excelService: ExcelService,*/
     public router: Router) {
     this.selectedBrand = this.ls.getSelectedBrand().brandID;
     // this.selectedLocation = this.ls.getSelectedLocation().locationID
@@ -46,17 +45,17 @@ export class SalescustomerwiseComponent implements OnInit {
   }
 
   ngOnInit() {
-   
+
   }
   exportAsXLSX(): void {
     debugger;
-    this.excelService.exportAsExcelFile(this.orders, 'Report_Export');
+  //  this.excelService.exportAsExcelFile(this.orders, 'Report_Export');
   }
   getData(locaionID) {
-    this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID,0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+    this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
       .subscribe((res: any) => {
         if (res != null) {
-          this.orders= res;
+          this.orders = res;
         }
         else
           this.ts.showError("Error", "Something went wrong");
@@ -76,21 +75,21 @@ export class SalescustomerwiseComponent implements OnInit {
       this.locationID = this.selectedLocation;
 
       this.loadLocationsMulti()
-      .pipe(map(x => x.filter(y => !y.disabled)))
-      .subscribe((res) => {
-        this.Locations = res;
-        var arr=[];
-        this.Locations.forEach(element => {
-           arr.push(element.locationID);
-        });
-        this.selectedLocations=arr;
+        .pipe(map(x => x.filter(y => !y.disabled)))
+        .subscribe((res) => {
+          this.Locations = res;
+          var arr = [];
+          this.Locations.forEach(element => {
+            arr.push(element.locationID);
+          });
+          this.selectedLocations = arr;
 
-        this.getData(this.selectedLocations.toString());
-    
-      });
+          this.getData(this.selectedLocations.toString());
+
+        });
 
     });
-    
+
   }
   loadLocationsMulti(term: string = null): Observable<Location[]> {
     let items = this.Locations;
@@ -100,7 +99,7 @@ export class SalescustomerwiseComponent implements OnInit {
     return of(items).pipe(delay(500));
   }
   Filter() {
-    
+
     this.getData(this.selectedLocations.toString());
   }
 }

@@ -39,7 +39,7 @@ export class ItemsComponent implements OnInit {
   }
   exportAsXLSX(): void {
     this.service.ExportList(this.selectedBrand).subscribe((res: any) => {    
-      this.excelService.exportAsExcelFile(res, 'Report_Export');
+/*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
     }, error => {
       this.ts.showError("Error","Failed to export")
     });

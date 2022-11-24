@@ -1,121 +1,79 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
+import { NgbdSortableHeader, SortEvent } from 'src/app/_directives/sortable.directive';
+
+import { LocalStorageService } from 'src/app/_services/local-storage.service';
+import { Router } from '@angular/router';
+import { Appsetting } from 'src/app/_models/Appsetting';
 import { ToastService } from 'src/app/_services/toastservice';
 import { AppsettingService } from 'src/app/_services/appsetting.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { LocalStorageService } from 'src/app/_services/local-storage.service';
 
 @Component({
   selector: 'app-appsettings',
   templateUrl: './appsettings.component.html',
-  styleUrls: ['./appsettings.component.css']
+  providers: []
 })
-export class AppsettingsComponent implements OnInit {
-  submitted = false;
-  categoryForm: FormGroup;
-  loadingCategory = false;  
-  loading = false;
-  constructor(  
-    public ts :ToastService,
-    private appsettingService: AppsettingService,
-    private router: Router,
-    private route: ActivatedRoute,    
-    private formBuilder: FormBuilder,
-    private ls: LocalStorageService
-    ) { 
-      this.createForm();
-     
-      brandID: this.ls.getSelectedBrand().brandID;
-      this.setSelectedCategory();
+
+export class AppsettingComponent implements OnInit {
+  data$: Observable<Appsetting[]>;
+  oldData: Appsetting[];
+  total$: Observable<number>;
+  loading$: Observable<boolean>;
+  private selectedsetting;
+
+  locationSubscription: Subscription;
+  submit: boolean;
+  @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
+
+  constructor(public service: AppsettingService,
+    public ls: LocalStorageService,
+    public ts: ToastService,
+    public router: Router) {
+    /*this.selectedBrand =this.ls.getSelectedBrand().brandID;*/
+
+    this.loading$ = service.loading$;
+    this.submit = false;
+
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getData();
   }
- 
- 
 
-  get f() { return this.categoryForm.controls; }
-  
-  private createForm() {
-   
-    this.categoryForm = this.formBuilder.group({
-      branchName: ['', Validators.required],
-      branchAddress: [''],
-      branchTiming: [''],
-      statusID: [true],
-      deliveryNo: [''],
-      whatsappNo:[''],
-      discount: 0,
-      discountdescription:[''],          
-      brandID: this.ls.getSelectedBrand().brandID,
-      ID: 0,
-      AppInfoID: 0,
-      appDescription:[''],     
-      facebook:[''],
-      twitter:[''],
-      instagram:[''],
+  getData() {
+    debugger
+    this.service.getAllData();
+    this.data$ = this.service.data$;
+    this.total$ = this.service.total$;
+    this.loading$ = this.service.loading$;
+  }
+
+  onSort({ column, direction }: SortEvent) {
+
+    this.headers.forEach(header => {
+      if (header.sortable !== column) {
+        header.direction = '';
+      }
     });
+    this.service.sortColumn = column;
+    this.service.sortDirection = direction;
   }
 
-  private editForm(obj) {
-debugger;
-    this.f.branchName.setValue(obj.branchName);
-    this.f.branchAddress.setValue(obj.branchAddress);
-    this.f.branchTiming.setValue(obj.branchTiming);
-    this.f.deliveryNo.setValue(obj.deliveryNo);
-    this.f.discount.setValue(obj.discount);
-    this.f.discountdescription.setValue(obj.discountdescription);
-    this.f.whatsappNo.setValue(obj.whatsappNo);
-    this.f.appDescription.setValue(obj.appDescription);
-    this.f.facebook.setValue(obj.facebook);
-    this.f.twitter.setValue(obj.twitter);
-    this.f.instagram.setValue(obj.instagram);
-    this.f.statusID.setValue(obj.statusID === 1 ? true : false);    
-    this.f.ID.setValue(obj.id);
-    this.f.appInfoID.setValue(obj.appInfoID);
+  Edit(appsetting) {
+    this.router.navigate(["admin/settings/appsettings/edit", appsetting]);
   }
 
-  setSelectedCategory() {
-    
-    this.loadingCategory = true;
-    this.appsettingService.getById(this.f.brandID.value).subscribe(res => {
-      //Set Forms
-      this.editForm(res);
-      this.loadingCategory = false;
+  Delete(obj) {
+    this.service.delete(obj).subscribe((res: any) => {
+      if (res != 0) {
+        this.ts.showSuccess("Success", "Record deleted successfully.")
+        this.getData();
+      }
+      else
+        this.ts.showError("Error", "Failed to delete record.")
+
+    }, error => {
+      this.ts.showError("Error", "Failed to delete record.")
     });
-  }
-  onSubmit() {    
-    this.categoryForm.markAllAsTouched();
-    this.submitted = true;
-    if (this.categoryForm.invalid) { return; }
-    this.loading = true;
-    this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);    
-    debugger;
-    if (parseInt(this.f.ID.value) === 0) {
-      //Insert appsetting
-      this.appsettingService.insert(this.categoryForm.value).subscribe(data => {
-        if (data != 0) {
-          this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/appsettings']);
-        }
-        this.loading = false;
-      }, error => {
-        this.ts.showError("Error","Failed to insert record.")
-        this.loading = false;
-      });
-
-    } else {
-      //Update appsetting
-      this.appsettingService.update(this.categoryForm.value).subscribe(data => {
-        this.loading = false;
-        if (data != 0) {
-          this.ts.showSuccess("Success","Record updated successfully.")
-          this.router.navigate(['/admin/appsettings']);
-        }
-      }, error => {
-        this.ts.showError("Error","Failed to update record.")
-        this.loading = false;
-      });
-    }
   }
 }

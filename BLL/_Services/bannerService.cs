@@ -17,11 +17,11 @@ namespace MamjiAdmin.BLL._Services
             _service = new bannerDB();
         }
 
-        public List<BannerBLL> GetAll(int brandID)
+        public List<BannerBLL> GetAll()
         {
             try
             {
-                return _service.GetAll(brandID);
+                return _service.GetAll();
             }
             catch (Exception ex)
             {
@@ -29,22 +29,22 @@ namespace MamjiAdmin.BLL._Services
             }
         }
         
-        public BannerBLL Get(int id, int brandID)
+        public BannerBLL Get(int id)
         {
             try
             {
-                return _service.Get(id, brandID);
+                return _service.Get(id);
             }
             catch (Exception ex)
             {
                 return null;
             }
         }
-        public int Insert(BannerBLL data, IWebHostEnvironment _env)
+        public int Insert(BannerBLL data)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Banner", _env);
+                //data.Image = UploadImage(data.Image, "Banner", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -56,11 +56,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(BannerBLL data, IWebHostEnvironment _env)
+        public int Update(BannerBLL data)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Banner", _env);
+                //data.Image = UploadImage(data.Image, "Banner", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

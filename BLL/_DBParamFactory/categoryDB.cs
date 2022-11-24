@@ -49,7 +49,7 @@ namespace BAL.Repositories
            
                 return lst;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -76,7 +76,7 @@ namespace BAL.Repositories
 
                 return lst;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -103,7 +103,7 @@ namespace BAL.Repositories
 
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -130,7 +130,7 @@ namespace BAL.Repositories
               
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -158,7 +158,7 @@ namespace BAL.Repositories
 
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -177,7 +177,7 @@ namespace BAL.Repositories
 
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }

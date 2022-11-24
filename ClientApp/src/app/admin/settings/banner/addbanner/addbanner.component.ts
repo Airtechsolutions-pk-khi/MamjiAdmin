@@ -48,8 +48,6 @@ export class AddbannerComponent implements OnInit {
       statusID: [true],
       bannerID: 0,
       image: [''],
-      brandID: this.ls.getSelectedBrand().brandID,
-      locationID: null
     });
   }
 
@@ -68,7 +66,7 @@ export class AddbannerComponent implements OnInit {
       if (sid) {
         this.loadingCustomer = true;
         this.f.bannerID.setValue(sid);
-        this.bannerService.getById(sid, this.f.brandID.value).subscribe(res => {
+        this.bannerService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
           this.loadingCustomer = false;
@@ -91,7 +89,7 @@ export class AddbannerComponent implements OnInit {
       this.bannerService.insert(this.bannerForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/banner']);
+          this.router.navigate(['/admin/settings/banner']);
         }
         this.loading = false;
       }, error => {
@@ -104,7 +102,7 @@ export class AddbannerComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success","Record updated successfully.")
-          this.router.navigate(['/admin/banner']);
+          this.router.navigate(['/admin/settings/banner']);
         }
       }, error => {
         this.ts.showError("Error","Failed to update record.")

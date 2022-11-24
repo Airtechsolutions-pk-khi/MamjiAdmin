@@ -45,7 +45,7 @@ export class SalesitemwiseComponent implements OnInit {
   }
   exportAsXLSX(): void {
     debugger;
-    this.excelService.exportAsExcelFile(this.salesItemWise, 'Report_Export');
+  //  this.excelService.exportAsExcelFile(this.salesItemWise, 'Report_Export');
   }
   getData(locaionID) {
     

@@ -42,7 +42,7 @@ export class SalesuserwiseComponent implements OnInit {
     this.loadLocations();
   }
   exportAsXLSX(): void {
-    this.excelService.exportAsExcelFile(this.salesUserWise, 'Report_Export');
+  //  this.excelService.exportAsExcelFile(this.salesUserWise, 'Report_Export');
   }
   getData(locaionID) {
     this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))

@@ -46,7 +46,7 @@ export class SalescategorywiseComponent implements OnInit {
   }
   exportAsXLSX(): void {
 
-    this.excelService.exportAsExcelFile(this.salesCategoryWise, 'Report_Export');
+  //  this.excelService.exportAsExcelFile(this.salesCategoryWise, 'Report_Export');
   }
   getData(locaionID) {
     this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))

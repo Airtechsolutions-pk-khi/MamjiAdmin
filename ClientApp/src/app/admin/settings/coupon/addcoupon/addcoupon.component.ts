@@ -3,21 +3,23 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
-import { MedicineService } from 'src/app/_services/medicine.service';
+import { CouponService } from 'src/app/_services/coupon.service';
 import { ToastService } from 'src/app/_services/toastservice';
-//import { debug } from 'console';
 
 @Component({
-  selector: 'app-addmedicine',
-  templateUrl: './addmedicine.component.html'
+  selector: 'app-addcoupon',
+  templateUrl: './addcoupon.component.html',
 })
-export class AddmedicineComponent implements OnInit {
+export class AddCouponComponent implements OnInit {
 
   submitted = false;
-  medicineForm: FormGroup;
+  couponForm: FormGroup;
   loading = false;
-  loadingmedicine = false;
+  loadingCoupon = false;
   ButtonText = "Save";
+  selectedSubCategoriesIds: string[];
+  selectedLocationIds: string[];
+  selectedgroupModifierIds: string[];
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -26,91 +28,88 @@ export class AddmedicineComponent implements OnInit {
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
-    private medicineService: MedicineService
+    private couponService: CouponService
 
   ) {
     this.createForm();
   }
 
   ngOnInit() {
-   this.setSelectedmedicine();
+    this.setSelectedCustomer();
   }
 
-  get f() { return this.medicineForm.controls; }
+  get f() { return this.couponForm.controls; }
 
   private createForm() {
-    this.medicineForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      description: ['', Validators.required],
+    this.couponForm = this.formBuilder.group({
+      title: ['', Validators.required],
+      type: ['', Validators.required],
+      amount: [''],
       statusID: [true],
-      branddetails: ['', Validators.required],
-      price: ['', Validators.required],
-      quantitydescription: ['', Validators.required],
-      medicineID: [0],
-      imagePath: [''],
+      couponID: 0,
+      couponCode: [''],
     });
   }
 
   private editForm(obj) {
-    this.f.name.setValue(obj.name);
-    this.f.description.setValue(obj.description);
-    this.f.branddetails.setValue(obj.branddetails);
-    this.f.price.setValue(obj.price);
-    this.f.quantitydescription.setValue(obj.description);
-    this.f.medicineID.setValue(obj.medicineID);
-    this.f.imagePath.setValue(obj.image);
+    this.f.title.setValue(obj.title);
+    this.f.type.setValue(obj.type);
+    this.f.couponID.setValue(obj.couponID);
+    this.f.couponCode.setValue(obj.couponCode);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-/*    this.imgComp.imageUrl = obj.imagePath;*/
+    this.f.amount.setValue(obj.amount);
   }
 
-   setSelectedmedicine() {
-     this.route.paramMap.subscribe(param => {
-       const sid = +param.get('id');
-       if (sid) {
-         this.loadingmedicine = true;
-         this.f.medicineID.setValue(sid);
-         this.medicineService.getById(sid).subscribe(res => {
-           //Set Forms
-           this.editForm(res);
-           this.loadingmedicine = false;
-         });
-       }
-     })
-   }
+  setSelectedCustomer() {
+    this.route.paramMap.subscribe(param => {
+      const sid = +param.get('id');
+      if (sid) {
+        this.loadingCoupon = true;
+        this.f.couponID.setValue(sid);
+        this.couponService.getById(sid).subscribe(res => {
+          //Set Forms
+          this.editForm(res);
+          this.loadingCoupon = false;
+        });
+      }
+    })
+  }
 
   onSubmit() {
-    this.medicineForm.markAllAsTouched();
+    this.couponForm.markAllAsTouched();
     this.submitted = true;
-    if (this.medicineForm.invalid) { return; }
+    if (this.couponForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    this.f.imagePath.setValue(this.imgComp.imageUrl);
 
-    if (parseInt(this.f.medicineID.value) === 0) {
-      //Insert medicine
-      console.log(JSON.stringify(this.medicineForm.value));
-      this.medicineService.insert(this.medicineForm.value).subscribe(data => {
+    if (parseInt(this.f.couponID.value) === 0) {
+      //Insert banner
+      console.log(JSON.stringify(this.couponForm.value));
+      this.couponService.insert(this.couponForm.value).subscribe(data => {
         if (data != 0) {
-          this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/pharmacy/medicine']);
+          this.ts.showSuccess("Success", "Record added successfully.")
+          this.router.navigate(['/admin/settings/coupon']);
         }
         this.loading = false;
       }, error => {
-        this.ts.showError("Error","Failed to insert record.")
+        this.ts.showError("Error", "Failed to insert record.")
         this.loading = false;
       });
     } else {
-      //Update medicine
-      this.medicineService.update(this.medicineForm.value).subscribe(data => {
+      //Update banner
+      this.couponService.update(this.couponForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
-          this.ts.showSuccess("Success","Record updated successfully.")
-          this.router.navigate(['/admin/pharmacy/medicine']);
+          this.ts.showSuccess("Success", "Record updated successfully.")
+          this.router.navigate(['/admin/settings/coupon']);
         }
       }, error => {
-        this.ts.showError("Error","Failed to update record.")
+        this.ts.showError("Error", "Failed to update record.")
         this.loading = false;
       });
     }
   }
+
+
+
 }

@@ -66,7 +66,7 @@ export class SalesdetailComponent implements OnInit {
   }
   exportAsXLSX(): void {
     debugger;
-    this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+  //  this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
   }
   loadLocations() {
     this.service.loadLocations(this.selectedBrand).subscribe((res: any) => {

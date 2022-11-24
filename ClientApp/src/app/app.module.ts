@@ -31,7 +31,7 @@ import { AddlocationComponent } from './admin/company/locations/addlocation/addl
 import { NgSelectModule} from '@ng-select/ng-select';
 import { AddbrandComponent } from './admin/company/brands/addbrand/addbrand.component';
 
-import { NgApexchartsModule } from 'ng-apexcharts';
+/*import { NgApexchartsModule } from 'ng-apexcharts';*/
 import { ToastrModule } from 'ngx-toastr';
 import { BrandComponent } from './admin/company/brands/brands.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -51,7 +51,10 @@ import { ItemsettingsComponent } from './admin/menu/items/itemsettings/itemsetti
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { DeliveryComponent } from './admin/settings/delivery/delivery.component';
 import { AdddeliveryComponent } from './admin/settings/Delivery/adddelivery/adddelivery.component';
-import { AppsettingsComponent } from './admin/settings/appsettings/appsettings.component';
+
+import { AppsettingComponent } from './admin/settings/appsettings/appsettings.component';
+import { AddsettingsComponent } from './admin/settings/appsettings/addappsettings/addsettings.component';
+
 import { AddonsComponent } from './admin/menu/addons/addons.component';
 import { AddaddonsComponent } from './admin/menu/addons/addaddons/addaddons.component';
 import { DoctorComponent } from './admin/managedoctor/doctor/doctor.component';
@@ -68,12 +71,15 @@ import { AddappointmentComponent } from './admin/reception/appointment/addappoin
 import { UploadreportComponent } from './admin/laboratory/uploadreport/uploadreport.component';
 import { AddreportsComponent } from './admin/laboratory/uploadreport/addreports/addreports.component';
 import { DeliverydetailComponent } from './admin/pharmacy/deliverydetail/deliverydetail.component';
-import { PromotionComponent } from './admin/settings/Promotion/promotion.component';
-import { AddPromotionComponent } from './admin/settings/Promotion/addpromotion/addpromotion.component';
+import { CouponComponent } from './admin/settings/coupon/coupon.component';
+import { AddCouponComponent } from './admin/settings/coupon/addcoupon/addcoupon.component';
 import { MedicineComponent } from './admin/pharmacy/medicine/medicine.component';
 import { AddmedicineComponent } from './admin/pharmacy/medicine/addmedicines/addmedicine.component'
 import { OrdersComponent } from './admin/pharmacy/orders/orders.component';
 import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetails.component';
+
+import { ServiceComponent } from './admin/settings/medicalservices/service.component';
+import { AddServiceComponent } from './admin/settings/medicalservices/add/addservice.component';
  
  
 @NgModule({
@@ -116,15 +122,15 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
     ItemsettingsComponent,
     DeliveryComponent,
     AdddeliveryComponent,
-    AppsettingsComponent,
+    AppsettingComponent,
     AddonsComponent,
     AddaddonsComponent,
     //ModalContentComponent,
     //NgbdModalContent,
     DoctorComponent,
     AdddoctorsComponent,
-    PromotionComponent,    
-    AddPromotionComponent,
+    CouponComponent,    
+    AddCouponComponent,
     CustomerinquiryComponent,
 
     PrescriptionComponent,
@@ -139,7 +145,10 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
     MedicineComponent,
     AddmedicineComponent,
      OrdersComponent,
-     OrderdetailsComponent
+    OrderdetailsComponent,
+    AddsettingsComponent,
+    ServiceComponent,
+    AddServiceComponent
      
     
     
@@ -153,7 +162,7 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    NgApexchartsModule,
+/*    NgApexchartsModule,*/
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
       {
@@ -183,9 +192,9 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
           { path: 'brand/add', component: AddbrandComponent },
           { path: 'brand/edit/:id', component: AddbrandComponent },
 
-          { path: 'banner', component: BannerComponent },
-          { path: 'banner/add', component: AddbannerComponent },
-          { path: 'banner/edit/:id', component: AddbannerComponent },
+          { path: 'settings/banner', component: BannerComponent },
+          { path: 'settings/banner/add', component: AddbannerComponent },
+          { path: 'settings/banner/edit/:id', component: AddbannerComponent },
 
           { path: 'offers', component: OffersComponent },
           { path: 'offers/add', component: AddoffersComponent },
@@ -202,7 +211,9 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
             { path: 'delivery/add', component: AdddeliveryComponent },
             { path: 'delivery/edit/:id', component: AdddeliveryComponent },
 
-          { path: 'appsettings', component: AppsettingsComponent },
+          { path: 'settings/appsettings', component: AppsettingComponent },
+          { path: 'settings/appsettings/add', component: AddsettingsComponent },
+          { path: 'settings/appsettings/edit/:id', component: AddsettingsComponent },
 
           { path: 'addons', component: AddonsComponent },
           { path: 'addons/add', component: AddaddonsComponent },
@@ -235,9 +246,9 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
           { path: 'laboratory/uploadreport/edit/:id', component: AddreportsComponent },
           { path: 'pharmacy/deliverydetail', component: DeliverydetailComponent },
 
-          { path: 'setting/promotion', component: PromotionComponent },
-          { path: 'setting/addpromotion', component: AddPromotionComponent },
-          { path: 'setting/edit/:id', component: AddPromotionComponent },       
+          { path: 'settings/coupon', component: CouponComponent },
+          { path: 'settings/coupon/add', component: AddCouponComponent },
+          { path: 'settings/coupon/edit/:id', component: AddCouponComponent },       
           
           
 
@@ -247,7 +258,10 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
 
           { path: 'pharmacy/orders', component: OrdersComponent },
           { path: 'orders/view/:id', component: OrderdetailsComponent },
-          
+
+          { path: 'settings/medicalservices', component: ServiceComponent },
+          { path: 'settings/medicalservices/add', component: AddServiceComponent },
+          { path: 'settings/medicalservices/edit/:id', component: AddServiceComponent },
         ]
       }
     ]),

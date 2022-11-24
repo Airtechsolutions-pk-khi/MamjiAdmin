@@ -35,13 +35,13 @@ export class AppointmentComponent implements OnInit {
     this.submit = false;
   }
 
-  exportAsXLSX(): void {
-    this.service.ExportList(this.selectedAppointment).subscribe((res: any) => {
-      this.excelService.exportAsExcelFile(res, 'Report_Export');
-    }, error => {
-      this.ts.showError("Error", "Failed to export")
-    });
-  }
+  //exportAsXLSX(): void {
+  //  this.service.ExportList(this.selectedAppointment).subscribe((res: any) => {
+  //    this.excelService.exportAsExcelFile(res, 'Report_Export');
+  //  }, error => {
+  //    this.ts.showError("Error", "Failed to export")
+  //  });
+  //}
   ngOnInit() {
     this.getData();
   }
