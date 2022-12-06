@@ -15,9 +15,9 @@
         <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
       </div>
       <div class="col-md-3 form-group text-right">
-        <button type="submit" class="btn btn-primary mt-4 mr-1" (click)="exportAsXLSX()">
+        <!-- <button type="submit" class="btn btn-primary mt-4 mr-1" (click)="exportAsXLSX()">
           <span translate>Export</span>
-        </button>
+        </button> -->
         <button [routerLink]="['add']" class="btn btn-primary mt-4 mr-1">
           Add Coupon
         </button>
@@ -43,10 +43,11 @@
             <td> {{item.type}} </td>
             <td> {{item.amount}} </td>
             <td> {{item.couponCode}} </td>
+            
             <td>
               <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
               </ngb-highlight>
-            </td>
+          </td>
             <td>
               <a (click)="Edit(item.couponID)"><i class="fas fa-fw fa-edit"></i> </a>
 

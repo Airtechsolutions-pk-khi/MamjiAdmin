@@ -135,6 +135,7 @@ export class DoctorsService {
     };
   }
   insert(data) {
+    debugger
     return this.http.post('api/doctor/insert', data)
       .pipe(map(res => {
 

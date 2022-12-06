@@ -14,9 +14,9 @@ namespace MamjiAdmin._Models
         public int CouponID { get; set; }
         public string Title { get; set; }
         public string Type { get; set; }      
-        public int Amount { get; set; }
+        public int? Amount { get; set; }
         public string CouponCode { get; set; }
-        public int StatusID { get; set; }
+        public int? StatusID { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
     }
 

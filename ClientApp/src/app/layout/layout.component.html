@@ -33,7 +33,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Doctor</a>
-
+            <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">Dr. Appoinment</a>
           </div>
         </div>
       </li>
@@ -48,6 +48,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" [routerLink]="['/admin/pharmacy/medicine']">Medicine</a>
             <a class="collapse-item" [routerLink]="['/admin/pharmacy/prescription']">Prescription</a>
+            <a class="collapse-item" [routerLink]="['/admin/pharmacy/orders']">Orders</a>
           </div>
         </div>
       </li>
@@ -61,7 +62,7 @@
         <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" [routerLink]="['/admin/reception/customers']">Customer Informations</a>
-            <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">Dr. Appoinment</a>
+            
           </div>
         </div>
       </li>
@@ -80,6 +81,22 @@
         </div>
       </li>
       <hr class="sidebar-divider">
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMedicalService" aria-expanded="true" aria-controls="collapseSettings">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Home Nursing</span>
+        </a>
+        <div id="collapseMedicalService" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" [routerLink]="['/admin/settings/medicalservicetype']">Medical Service Type </a>
+            <a class="collapse-item" [routerLink]="['/admin/settings/medicalservices']">Medical Services</a>
+            <a class="collapse-item" [routerLink]="['/admin/reception/nursingappointment']">Nursing Appoinment</a>
+          </div>
+        </div>
+      </li>
+
+      <hr class="sidebar-divider d-none d-md-block">
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
           <i class="fas fa-fw fa-wrench"></i>
@@ -87,15 +104,19 @@
         </a>
         <div id="collapseSettings" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-             <a class="collapse-item" [routerLink]="['/admin/settings/appsettings']">General Settings</a> 
+            <a class="collapse-item" [routerLink]="['/admin/delivery']">Delivery</a>
+             <a class="collapse-item" [routerLink]="['/admin/settings/appsettings/add']">General Settings</a> 
             <a class="collapse-item" [routerLink]="['/admin/settings/banner']">Discount Banners | APP</a>
             <a class="collapse-item" [routerLink]="['/admin/settings/coupon']">Coupons</a>
-            <a class="collapse-item" [routerLink]="['/admin/settings/medicalservices']">Medical Services</a>
+       
           </div>
         </div>
       </li>
       <!-- Divider -->
+     
+      <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
+
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -115,8 +136,8 @@
 
           <!-- Topbar Search -->
           <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100">
-            <strong>Branch Name</strong> : {{branchname}} |
-            <strong>Email</strong> : {{email}}
+            <strong>Welcome to Mamji Hospital</strong> 
+            
           </div>
 
           <!-- Topbar Navbar -->

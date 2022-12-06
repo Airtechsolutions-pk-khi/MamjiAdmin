@@ -69,10 +69,10 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[11];
+                SqlParameter[] p = new SqlParameter[12];
 
                 p[0] = new SqlParameter("@Name", data.Name);
-                p[1] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[1] = new SqlParameter("@ImagePath", data.Image);
                 p[2] = new SqlParameter("@Description", data.Description);
                 p[3] = new SqlParameter("@BrandDetails", data.BrandDetails);
                 p[4] = new SqlParameter("@Price", data.Price);
@@ -82,6 +82,7 @@ namespace BAL.Repositories
                 p[8] = new SqlParameter("@CreatedOn", data.CreatedOn);
                 p[9] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[10] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[11] = new SqlParameter("@MedicineID", data.MedicineID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_insertMedicine_Admin", p);
 
@@ -100,7 +101,7 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[10];
 
                 p[0] = new SqlParameter("@Name", data.Name);
-                p[1] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[1] = new SqlParameter("@ImagePath", data.Image);
                 p[2] = new SqlParameter("@Description", data.Description);
                 p[3] = new SqlParameter("@BrandDetails", data.BrandDetails);
                 p[4] = new SqlParameter("@Price", data.Price);
@@ -119,13 +120,14 @@ namespace BAL.Repositories
                 return 0;
             }
         }
-        public int Delete(MedicineBLL data)
+        public int Delete(int MedicineID)
         {
             try
             {
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@id", data.MedicineID);
+                p[0] = new SqlParameter("@id", MedicineID);
+                
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteMedicine", p);
 

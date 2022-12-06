@@ -9,6 +9,19 @@
         <div class="card-header">Medical Services Details</div>
         <div class="card-body">
           <div class="form-row">
+            
+              <div class="form-group col-md-8">
+                <div class="form-group">
+                  <label class="small mb-1" for="inputUsername">Nursing Type</label>
+                  <select class="custom-select" formControlName="nursingTypeID"> 
+                  <option [ngValue]="option.nursingTypeID"  selected="option.nursingTypeID == nursingTypeID"
+                  *ngFor="let option of NursingTypeActive">
+                  {{option.type}}
+                  </option>
+                  </select>
+                </div>
+              </div>          
+
             <div class="form-group col-md-8">
               <div class="form-group">
                 <label class="small mb-1" for="inputUsername">Name</label>
@@ -31,7 +44,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-row">
+              <!-- <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputFirstName">Requirement</label>
                   <input type="text" class="form-control" id=requirment placeholder="" formControlName="requirment">
@@ -41,11 +54,20 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="small mb-1" for="inputFirstName">Requirement</label>
+                    <input type="text" class="form-control" id=requirment placeholder="" formControlName="requirment">
+
+                </div>
+            </div>
+
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputFirstName">Fees</label>
-                  <input type="text" class="form-control" id=fees placeholder="" formControlName="fees">
+                  <input type="number" class="form-control" id=fees placeholder="" formControlName="fees">
                   <div *ngIf="f.fees.invalid && (f.fees.dirty || f.fees.touched)" class="alert alert-danger">
                     <div *ngIf="f.fees.errors.required">
                       Fees is required.
@@ -53,6 +75,8 @@
                   </div>
                 </div>
               </div>
+
+              
 
             </div>
             <div class="form-group col-md-4 text-center">

@@ -20,7 +20,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-row">
+              <!-- <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputcustomerID">Customer Name</label>
                   <ng-select [items]="CustomerList" bindLabel="fullName" bindValue="customerID" [multiple]="false" placeholder="">
@@ -32,7 +32,24 @@
                     </ng-template>
                   </ng-select>
                 </div>
-              </div>
+              </div> -->
+
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="small mb-1" for="inputUsername">Customer Name</label>
+                    <select class="custom-select" formControlName="customerID"> 
+
+                <option [ngValue]="option.customerID"  selected="option.customerID == customerID"
+                    *ngFor="let option of CustomerList">
+                    {{option.fullName}}
+                </option>
+            </select>
+                </div>
+            </div>
+
+
+
             </div>
 
             <div class="form-group col-md-4 text-center">

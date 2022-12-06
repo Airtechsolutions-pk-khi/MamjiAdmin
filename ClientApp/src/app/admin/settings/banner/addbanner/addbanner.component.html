@@ -32,6 +32,33 @@
                 </div>
               </div>
 
+              
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLastName">Banner Type</label>
+                  <select type="text" class="form-control" id=type placeholder="" formControlName="type">
+                    <option selected disabled> -- Please Select -- </option>
+                    <option>Header</option>
+                    <option>Featured</option>
+                  </select>
+                   
+                </div>
+              </div>
+
+
+              <!-- <div class="form-row">
+            <div class="form-group col-md-8">
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Banner Type</label>              
+              <select class="custom-select" formControlName="type" class="form-control">
+                <option disabled>Select Type</option>                  
+                <option *ngFor="let web of NursingTypeActive" >{{web}}</option>
+            </select>          
+              </div>
+            </div>          
+          </div> -->
+
+
             </div>
             <div class="form-group col-md-4 text-center">
               <app-imageupload></app-imageupload>

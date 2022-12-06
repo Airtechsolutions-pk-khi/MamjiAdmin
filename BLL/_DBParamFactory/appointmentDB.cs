@@ -40,7 +40,7 @@ namespace BAL.Repositories
                 }
                 return lst;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return null;
             }
@@ -51,7 +51,7 @@ namespace BAL.Repositories
             {
                 var _obj = new AppointmentBLL();
                 SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@AppointmentID", id);
+                p[0] = new SqlParameter("@id", id);
                 _dt = (new DBHelper().GetTableFromSP)("sp_GetAppointmentbyID_Admin", p);
                 if (_dt != null)
                 {
@@ -62,7 +62,7 @@ namespace BAL.Repositories
                 }
                 return _obj;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return null;
             }

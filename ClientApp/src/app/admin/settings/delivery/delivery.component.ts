@@ -18,7 +18,7 @@ export class DeliveryComponent implements OnInit {
   oldData: Delivery[];
   total$: Observable<number>;
   loading$: Observable<boolean>;
-  private selectedBrand;
+  //private selectedBrand;
   
   locationSubscription: Subscription;
   submit: boolean;
@@ -28,7 +28,7 @@ export class DeliveryComponent implements OnInit {
     public ls :LocalStorageService,
     public ts :ToastService,
     public router:Router) {
-     this.selectedBrand =this.ls.getSelectedBrand().brandID;
+     //this.selectedBrand =this.ls.getSelectedBrand().brandID;
 
     this.loading$ = service.loading$;
     this.submit = false;
@@ -40,7 +40,7 @@ export class DeliveryComponent implements OnInit {
   }
 
   getData() {    
-    this.service.getAllData(this.selectedBrand);    
+    this.service.getAllData();    
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
     this.loading$ = this.service.loading$;

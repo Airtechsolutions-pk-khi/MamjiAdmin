@@ -31,19 +31,19 @@ namespace MamjiAdmin.Controllers
         [Route("insert")]
         public int Post([FromBody]MedicineBLL obj)
         {
-            return _service.Insert(obj);
+            return _service.Insert(obj, _env);
         }
         [HttpPost]
         [Route("update")]
         public int PostUpdate([FromBody] MedicineBLL obj)
         {
-            return _service.Update(obj);
+            return _service.Update(obj, _env);
         }
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody] MedicineBLL obj)
+        public int PostDelete([FromBody] int MedicineID)
         {
-            return _service.Delete(obj);
+            return _service.Delete(MedicineID);
         }
     }
 }

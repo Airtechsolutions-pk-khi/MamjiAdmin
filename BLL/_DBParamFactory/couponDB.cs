@@ -129,7 +129,7 @@ namespace BAL.Repositories
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@id", data.CouponID);
-                p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                //p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteCoupon", p);
 

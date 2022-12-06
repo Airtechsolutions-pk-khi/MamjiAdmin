@@ -38,7 +38,7 @@ export class AddprescriptionComponent implements OnInit {
         mobile: ['', Validators.required],
         address: ['', Validators.required],
         note: ['', Validators.required],
-        imagePath: [''],
+        image: [''],
         statusID: [true],
         prescriptionID: 0,
     });
@@ -49,7 +49,7 @@ export class AddprescriptionComponent implements OnInit {
     this.f.address.setValue(obj.address);
     this.f.note.setValue(obj.note);
     this.f.prescriptionID.setValue(obj.prescriptionID);
-    this.f.imagePath.setValue(obj.image);
+    this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
 }
   setSelectedPrescription() {
@@ -67,12 +67,13 @@ export class AddprescriptionComponent implements OnInit {
     })
   }
   onSubmit() {
+    debugger
     this.prescriptionForm.markAllAsTouched();
     this.submitted = true;
     if (this.prescriptionForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    this.f.imagePath.setValue(this.imgComp.imageUrl);
+    this.f.image.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.prescriptionID.value) === 0) {
       //Insert doctor

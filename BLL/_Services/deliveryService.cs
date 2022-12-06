@@ -17,11 +17,11 @@ namespace MamjiAdmin.BLL._Services
             _service = new deliveryDB();
         }
 
-        public List<DeliveryBLL> GetAll(int brandID)
+        public List<DeliveryBLL> GetAll()
         {
             try
             {
-                return _service.GetAll(brandID);
+                return _service.GetAll();
             }
             catch (Exception ex)
             {

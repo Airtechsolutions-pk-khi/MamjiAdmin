@@ -72,7 +72,7 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[6];
 
                 p[0] = new SqlParameter("@CustomerID", data.CustomerID);
-                p[1] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[1] = new SqlParameter("@ImagePath", data.Image);
                 p[2] = new SqlParameter("@LabReferenceNo", data.LabReferenceNo);
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
@@ -82,7 +82,7 @@ namespace BAL.Repositories
 
                 return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }
@@ -95,7 +95,7 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[6];
 
                 p[0] = new SqlParameter("@CustomerID", data.CustomerID);
-                p[1] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[1] = new SqlParameter("@ImagePath", data.Image);
                 p[2] = new SqlParameter("@LabReferenceNo", data.LabReferenceNo);
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);

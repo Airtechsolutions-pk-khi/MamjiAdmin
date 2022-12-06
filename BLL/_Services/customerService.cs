@@ -1,5 +1,6 @@
 ﻿using BAL.Repositories;
 using MamjiAdmin._Models;
+using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -38,10 +39,11 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(CustomerBLL data)
+        public int Insert(CustomerBLL data, IWebHostEnvironment _env)
         {
             try
             {
+                data.Image = UploadImage(data.Image, "Customer", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -53,10 +55,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(CustomerBLL data)
+        public int Update(CustomerBLL data, IWebHostEnvironment _env)
         {
             try
             {
+                data.Image = UploadImage(data.Image, "Customer", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

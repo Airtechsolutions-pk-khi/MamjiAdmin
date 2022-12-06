@@ -32,7 +32,7 @@
             <div class="form-group col-md-6">
               <div class="form-group">
                 <label class="small mb-1" for="inputUsername">Amount</label>
-                <input type="text" class="form-control" id=Amount placeholder="" formControlName="amount">
+                <input type="number" class="form-control" id=Amount placeholder="" formControlName="amount">
                 <div *ngIf="f.amount.invalid && (f.amount.dirty || f.amount.touched)" class="alert alert-danger">
                   <div *ngIf="f.amount.errors.required">
                     Amount is required.

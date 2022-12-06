@@ -1,267 +1,8 @@
-<!-- <h1 class="h3 mb-2 text-gray-800">Add Doctor</h1>
-<p class="mb-4"></p>
-
-<form [formGroup]="doctorForm" class="form" (ngSubmit)="onSubmit()">
-  <div class="row">
-
-    <div class="col-xl-12">
-      <div class="card mb-4">
-        <div class="card-header">Doctor Details</div>
-        <div class="card-body">
-          <div class="form-row">
-            <div class="form-group col-md-8">
-
-
-              <div class="form-group">
-                <label class="small mb-1" for="inputUsername">Name</label>
-                <input type="text" class="form-control" id=Name placeholder="" formControlName="fullName">
-                <div *ngIf="f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)" class="alert alert-danger">
-                  <div *ngIf="f.fullName.errors.required">
-                    Name is required.
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputFirstName">Email</label>
-                  <input type="email" class="form-control" id=email placeholder="" formControlName="email">
-                  <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger">
-                    <div *ngIf="f.email.errors.required">
-                      Email is required.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputLastName">Profile</label>
-                  <input type="text" class="form-control" id=profile placeholder="" formControlName="profile">
-                  <div *ngIf="f.profile.invalid && (f.profile.dirty || f.profile.touched)" class="alert alert-danger">
-                    <div *ngIf="f.profile.errors.required">
-                      Profile is required.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputLastName">Skills</label>
-                  <input type="text" class="form-control" id=skills placeholder="" formControlName="skills">
-                  <div *ngIf="f.skills.invalid && (f.skills.dirty || f.skills.touched)" class="alert alert-danger">
-                    <div *ngIf="f.skills.errors.required">
-                      Skills is required.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputLastName">Education</label>
-                  <input type="text" class="form-control" id=education placeholder="" formControlName="education">
-                  <div *ngIf="f.education.invalid && (f.education.dirty || f.education.touched)" class="alert alert-danger">
-                    <div *ngIf="f.education.errors.required">
-                      Education is required.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-group col-md-4 text-center">
-              <app-imageupload formControlName="image"></app-imageupload>
-            </div>
-          </div>
-
-
-          <div class="form-row">
-            <div class="form-group col-lg-12">
-              <label for="Item Status">Status</label>
-              <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
-                <label class="custom-control-label" for="statusID"></label>
-              </div>
-            </div>
-          </div>
-
-          <button class="btn btn-primary" type="submit">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</form> -->
-<!-- <h1 class="h3 mb-2 text-gray-800">Add Doctor</h1>
-<p class="mb-4"></p>
-
-<form [formGroup]="doctorForm" class="form" (ngSubmit)="onSubmit()">
-  <div class="row">
-
-    <div class="col-xl-12">
-      <div class="card mb-4">
-        <div class="card-header"> Doctor</div>
-        <div class="card-body">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <div class="form-group">
-                <label class="small mb-1" for="inputFullName">Name </label>
-                <input type="text" class="form-control" id=name placeholder="" formControlName="fullName">
-                <div *ngIf="f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)" class="alert alert-danger">
-                  <div *ngIf="f.fullName.errors.required">
-                    Name is required.
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputLocation">Speciality</label>
-                  <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSpecialistIds">
-                      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                          <div class="ng-value" *ngFor="let item of items">
-                              <span class="ng-value-label">{{item.name}}</span>
-                              <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                          </div>
-                      </ng-template>
-                  </ng-select>
-              </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputTimeslot">Timeslot</label>
-                  <select type="time" class="form-control" id=timeslot placeholder="" formControlName="timeslot">
-                    <option selected disabled> -- Please Select -- </option>
-                    <option>10:00 AM - 11:00 AM</option>
-                    <option>11:00 AM - 12:00 PM</option>
-                    <option>12:00 PM - 01:00 PM</option>
-                    <option>01:00 PM - 02:00 PM</option>
-                  </select>
-                  <div *ngIf="f.timeslot.invalid && (f.timeslot.dirty || f.timeslot.touched)" class="alert alert-danger">
-                    <div *ngIf="f.timeslot.errors.required">
-                      Timeslot is required.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="small mb-1" for="inputEmail">Email</label>
-                <input type="text" class="form-control" id=patientName placeholder="" formControlName="email">
-                <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger">
-                  <div *ngIf="f.email.errors.required">
-                    Email is required.
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="small mb-1" for="inputAge">Skills</label>
-                <input type="text" class="form-control" id=skills placeholder="" formControlName="skills">
-                <div *ngIf="f.skills.invalid && (f.skills.dirty || f.skills.touched)" class="alert alert-danger">
-                  <div *ngIf="f.skills.errors.required">
-                    Skill is required.
-                  </div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputappointmentStatus">Appointment Status</label>
-                  <select type="text" class="form-control" id=appointmentStatus placeholder="" formControlName="appointmentStatus">
-                    <option selected disabled> -- Please Select -- </option>
-                    <option>Pending</option>
-                    <option>Approved</option>
-                    <option>Cancelled</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <div class="form-group">
-                <label class="small mb-1" for="inputEducation">Education</label>
-                <input type="text" class="form-control" id=education placeholder="" formControlName="education">
-                <div *ngIf="f.education.invalid && (f.education.dirty || f.education.touched)" class="alert alert-danger">
-                  <div *ngIf="f.education.errors.required">
-                    Education is required.
-                  </div>
-                </div>
-              </div>
-              <div class="form-row">
-
-
-
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputLocation">Days</label>
-                  <ng-select [items]="DoctorDaysList" bindLabel="name" bindValue="daysID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedDaysID">
-                      <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                          <div class="ng-value" *ngFor="let item of items">
-                              <span class="ng-value-label">{{item.name}}</span>
-                              <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                          </div>
-                      </ng-template>
-                  </ng-select>
-              </div>
-
-
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputFees">Fees</label>
-                  <input type="text" class="form-control" id=fees placeholder="" formControlName="fees">
-                  <div *ngIf="f.fees.invalid && (f.fees.dirty || f.fees.touched)" class="alert alert-danger">
-                    <div *ngIf="f.fees.errors.required">
-                      Fees is required.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputGender">Gender</label>
-                  <select type="text" class="form-control" id=gender placeholder="" formControlName="gender">
-                    <option selected disabled> -- Please Select -- </option>
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
-                  <div *ngIf="f.gender.invalid && (f.gender.dirty || f.gender.touched)" class="alert alert-danger">
-                    <div *ngIf="f.gender.errors.required">
-                      Gender is required.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group col-md-4 text-center">
-            <app-imageupload></app-imageupload>
-        </div>
-          <div class="form-row">
-            <div class="form-group col-lg-12">
-              <label for="Item Status">Status</label>
-              <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="statusID" formControlName="statusID">
-                <label class="custom-control-label" for="statusID"></label>
-              </div>
-            </div>
-          </div>
-
-          <button class="btn btn-primary" type="submit">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
- -->
-
-
-
-
-
-
-
-
-
 
 <h1 class="h3 mb-2 text-gray-800">Add Doctor</h1>
 <p class="mb-4"></p>
 
-<form [formGroup]="doctorForm" class="form" (ngSubmit)="onSubmit()">
+<form [formGroup]="doctorForm" class="form" >
   <div class="row">
 
     <div class="col-xl-12">
@@ -297,9 +38,8 @@
                                     <label class="small mb-1" for="inputFirstName">Skills</label>
                                     <input type="text" class="form-control" id=skills placeholder="" formControlName="skills">
                                 </div>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-group col-md-12">
+                            
+                              <div class="form-group col-md-6">
                                 <label class="small mb-1" for="inputLastName">Gender</label>
                                 <select type="text" class="form-control" id=gender placeholder="" formControlName="gender">
                                   <option selected disabled> -- Please Select -- </option>
@@ -308,19 +48,58 @@
                                 </select>
                                  
                               </div>
-                            </div>
-                            <div class="form-row">
+                            
+                             
                                 <div class="form-group col-md-6">
                                     <label class="small mb-1" for="inputLastName">Education</label>
                                     <input type="text" class="form-control" id=education placeholder="" formControlName="education">
                                 </div>
-                                 
-                                <div class="form-group col-md-6">
-                                  <label class="small mb-1" for="inputLastName">Fees</label>
-                                  <input type="number" class="form-control" id=fees placeholder="" formControlName="fees">
                               </div>
-                               
+
+                              <div class="form-row">
+                                <div class="form-group col-md-4">
+                                  <label class="small mb-1" for="inputLastName">Fees</label>
+                                  <input type="number" class="form-control" id=fees placeholder="" [(ngModel)]="drProfile.fees" [ngModelOptions]="{standalone: true}" >
+                              </div>
+
+                              
+
+                              <div class="form-group col-md-4">
+                                <label class="small mb-1" for="inputLastName">Profile</label>
+                                <input type="text" class="form-control" id="profile" [ngModelOptions]="{standalone: true}" [(ngModel)]="drProfile.profile">
                             </div>
+                            <div class="form-group col-md-4">                       
+                              <br/>
+                              <button class="btn btn-primary" type="submit"  (click)="AddProfileChild(drProfile)" [disabled]="drProfile==null">Add</button>
+                          </div>
+                               </div>
+                            
+                <div class="tile-body p-0 table-responsive ">
+                  <table class="table table-striped">
+                      <thead>
+                          <tr class="table-header">
+                              <th width="20%">Fees </th>
+                              <th width="60%">Profile </th>                                                         
+                              <th width="20%">Action</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let item of  DoctorProfiles">
+                               
+                              <td>
+                                {{item.fees}}
+                                
+                            </td>                              
+                              <td> {{item.profile}} </td>
+                                                            
+                              <td>
+                                  <i (click)="RemoveProfileChild(item)" class="fas fa-fw fa-trash-alt "></i>
+                              </td>
+                          </tr>
+
+                      </tbody>
+                  </table>
+              </div>
  
                         </div>
                         <div class="form-group col-md-4 text-center">
@@ -330,9 +109,10 @@
                     </div>
  
                     <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label class="small mb-1" for="inputLocation">Attach Speciality</label>
-                            <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSpecialistIds">
+                       
+                        <div class="form-group col-md-3">
+                          <label class="small mb-1" for="inputUsername">Attach Speciality</label>
+                          <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="false" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="spec.specialistID">
                               <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                                   <div class="ng-value" *ngFor="let item of items">
                                       <span class="ng-value-label">{{item.name}}</span>
@@ -340,64 +120,34 @@
                                   </div>
                               </ng-template>
                           </ng-select>
+                      </div>
+                      
+                        <div class="form-group col-md-3">
+                          <label class="small mb-1" for="inputLocation">Attach Days</label>
+                        <select name="dayName" id="dayName" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="spec.dayName">
+                          <option *ngFor="let option of DoctorDaysList" [value]="option">{{option}}</option>
+                       </select>
                         </div>
-                    </div>
 
-          <div class="form-row">
-            <div class="form-group col-md-12">
-
-              <label class="small mb-1" for="inputLocation">Attach Days</label>
-              <ng-select [items]="DoctorDaysList" bindLabel="name" [multiple]="true" bindValue="name" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedDaysID">
-                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                  <div class="ng-value" *ngFor="let item of items">
-                    <span class="ng-value-label">{{item}}</span>
-                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                  </div>
-                </ng-template>
-              </ng-select>
-              <!-- <ng-select [items]="DoctorDaysList" bindLabel="name" bindValue="daysID" [multiple]="true" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedDaysID">
-                  <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                      <div class="ng-value" *ngFor="let item of items">
-                          <span class="ng-value-label">{{item.name}}</span>
-                          <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                      </div>
-                  </ng-template>
-              </ng-select> -->
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group col-md-12">
-              <label class="small mb-1" for="inputUsername">Timeslot</label>
-              <ng-select [items]="TimeList" bindLabel="name" [multiple]="true" bindValue="name" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedTimeslot">
-                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                  <div class="ng-value" *ngFor="let item of items">
-                    <span class="ng-value-label">{{item}}</span>
-                    <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                  </div>
-                </ng-template>
-              </ng-select>
-
-                        <!-- <select type="time" class="form-control" id=timeslot placeholder="" formControlName="timeslot">
-                          <option selected disabled> -- Please Select -- </option>
-                          <option>10:00 AM - 11:00 AM</option>
-                          <option>11:00 AM - 12:00 PM</option>
-                          <option>12:00 PM - 01:00 PM</option>
-                          <option>01:00 PM - 02:00 PM</option>
-                        </select> -->
-                        <!-- <div *ngIf="f.timeslot.invalid && (f.timeslot.dirty || f.timeslot.touched)" class="alert alert-danger">
-                          <div *ngIf="f.timeslot.errors.required">
-                            Timeslot is required.
-                          </div>
-                        </div> -->
-                      </div>
-                    </div>
+           
+                        <div class="form-group col-md-3">
+                          <label class="small mb-1" for="inputUsername">Timeslot</label>
+                          <ng-select [items]="TimeList" bindLabel="name" [multiple]="true" bindValue="name" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="spec.timeSlot">
+                            <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                              <div class="ng-value" *ngFor="let item of items">
+                                <span class="ng-value-label">{{item}}</span>
+                                <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                              </div>
+                            </ng-template>
+                          </ng-select>                       
+                        </div>
+                   
                 
-                    <div class="form-group col-md-2">
-                      <label class="small mb-1" for="inputLastName">Action</label>
+                    <div class="form-group col-md-3">                       
                       <br/>
-                      <button class="btn btn-primary" type="submit" (click)="AddChild(doctorForm)" [disabled]="doctorForm==null">Add</button>
+                      <button class="btn btn-primary" type="submit" (click)="AddChild(spec)" [disabled]="spec==null">Add</button>
                   </div>
+                </div>
                   <div class="tile-body p-0 table-responsive ">
                     <table class="table table-striped">
                         <thead>
@@ -409,25 +159,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of  selectedSpecialistIds">
+                            <tr *ngFor="let item of  DoctorSchedule">
                                  
                                 <td>
                                   {{item.name}}
-                                  <!-- <tr *ngFor="let item1 of item.doctorDetailTimes ">
-                                      <td class="badge badge-pill">Times: {{item1.TimeSlot }}  </td>
-                                  </tr> -->
+                                  
                               </td>                              
-                                <td> Days </td>
-                                <td> Timeslot </td>
+                                <td> {{item.dayName}} </td>
+                                <td> {{item.timeSlot}} </td>
                                 
                                 <td>
-                                    <i  class="fas fa-fw fa-trash-alt "></i>
+                                    <i (click)="RemoveChild(item)"  class="fas fa-fw fa-trash-alt "></i>
                                 </td>
                             </tr>
 
                         </tbody>
                     </table>
                 </div>
+
+
 
           <div class="form-row">
             <div class="form-group col-lg-12">
@@ -440,7 +190,7 @@
           </div>
 
           <!-- Save changes button-->
-          <button class="btn btn-primary" type="submit">Save changes</button>
+          <button class="btn btn-primary" (click)="onSubmit()" type="submit">Save changes</button>
 
         </div>
       </div>

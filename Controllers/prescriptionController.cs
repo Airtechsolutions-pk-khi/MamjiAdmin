@@ -18,7 +18,7 @@ namespace MamjiAdmin.Controllers
         public prescriptionController(IWebHostEnvironment env)
         {
             _service = new prescriptionService();
-            _env = env;
+            //_env = env;
         }
         [HttpGet("{all}")]
         public List<PrescriptionBLL> GetAll()
@@ -40,7 +40,7 @@ namespace MamjiAdmin.Controllers
         [Route("update")]
         public int PostUpdate([FromBody] PrescriptionBLL obj)
         {
-            return _service.Update(obj);
+            return _service.Update(obj, _env);
         }
         [HttpPost]
         [Route("delete")]

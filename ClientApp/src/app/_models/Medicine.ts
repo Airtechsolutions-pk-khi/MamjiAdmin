@@ -1,6 +1,6 @@
 export class Medicine {
   medicineID: number;
-  imagePath: string;
+  image: string;
   name: string;
   description: string;
   brandDetails: string;

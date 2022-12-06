@@ -6,6 +6,7 @@ import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 import { State } from '../_models/State';
 import { Service } from '../_models/MedicalService';
+import { MedicalServiceType } from '../_models/MedicalServiceType';
 
 interface SearchMedicalResult {
   data: Service[];
@@ -130,6 +131,7 @@ export class MedicalService {
     };
   }
   insert(data) {
+    debugger
     return this.http.post('api/medicalservice/insert', data)
       .pipe(map(res => {
 
@@ -146,5 +148,9 @@ export class MedicalService {
   }
   delete(data) {
     return this.http.post(`api/medicalservice/delete`, data);
+  }
+  loadActiveTyp() {
+    
+    return this.http.get<MedicalServiceType[]>( `api/nursing/Alltype`);
   }
 }

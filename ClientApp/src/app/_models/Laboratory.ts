@@ -1,7 +1,8 @@
 export class Laboratory {
   laboratoryID: number;
   customerID: number;
-  imagePath: string;
+  image: string;
+  fullName: string;
   labReferenceNo: string;
   statusID: number;
   customer: string;

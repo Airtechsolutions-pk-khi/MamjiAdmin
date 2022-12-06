@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MamjiAdmin.Controllers
@@ -10,10 +11,12 @@ namespace MamjiAdmin.Controllers
   
     public class customerController : ControllerBase
     {
+        private readonly IWebHostEnvironment _env;
         customerService _service;
-        public customerController()
+        public customerController(IWebHostEnvironment env)
         {
             _service = new customerService();
+            _env = env;
         }
         [HttpGet("all")]
         public List<CustomerBLL> GetAll()
@@ -29,13 +32,13 @@ namespace MamjiAdmin.Controllers
         [Route("insert")]
         public int Post([FromBody]CustomerBLL obj)
         {
-            return _service.Insert(obj);
+            return _service.Insert(obj,_env);
         }
         [HttpPost]
         [Route("update")]
         public int PostUpdate([FromBody] CustomerBLL obj)
         {
-            return _service.Update(obj);
+            return _service.Update(obj, _env);
         }
         [HttpPost]
         [Route("delete")]

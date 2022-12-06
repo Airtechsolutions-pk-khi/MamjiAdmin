@@ -22,6 +22,8 @@ export class AddServiceComponent implements OnInit {
   selectedLocationIds: string[];
   selectedgroupModifierIds: string[];
 
+  NursingTypeActive = [];
+
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
     private formBuilder: FormBuilder,
@@ -33,6 +35,7 @@ export class AddServiceComponent implements OnInit {
 
   ) {
     this.createForm();
+    this.loadActiveType();
   }
 
   ngOnInit() {
@@ -46,7 +49,7 @@ export class AddServiceComponent implements OnInit {
       name: ['', Validators.required],
       description: [''],
       requirment: [''],
-      fees: [''],
+      fees: [0],
       statusID: [true],
       medicalServiceID: 0,
       nursingTypeID: 0,
@@ -55,9 +58,10 @@ export class AddServiceComponent implements OnInit {
   }
 
   private editForm(obj) {
+    debugger
     this.f.name.setValue(obj.name);
     this.f.description.setValue(obj.description);
-    this.f.requirment.setValue(obj.requirement);
+    this.f.requirment.setValue(obj.requirment);
     this.f.fees.setValue(obj.fees);
     this.f.medicalServiceID.setValue(obj.medicalServiceID);
     this.f.nursingTypeID.setValue(obj.nursingTypeID);
@@ -65,8 +69,15 @@ export class AddServiceComponent implements OnInit {
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.image;
   }
-
+  private loadActiveType() {
+     
+    this.services.loadActiveTyp().subscribe((res: any) => {
+     
+      this.NursingTypeActive = res;
+    });
+  }
   setSelectedCustomer() {
+    debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
@@ -82,6 +93,7 @@ export class AddServiceComponent implements OnInit {
   }
 
   onSubmit() {
+    debugger
     this.servicesForm.markAllAsTouched();
     this.submitted = true;
     if (this.servicesForm.invalid) { return; }

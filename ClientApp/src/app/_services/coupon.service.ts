@@ -126,6 +126,7 @@ export class CouponService {
     };
   }
   insert(data) {
+    debugger
     return this.http.post('api/coupon/insert', data)
       .pipe(map(res => {
         console.log(res);
@@ -141,6 +142,7 @@ export class CouponService {
       }));
   }
   delete(updateData) {
+    debugger
     return this.http.post(`api/coupon/delete`, updateData);
   }
 

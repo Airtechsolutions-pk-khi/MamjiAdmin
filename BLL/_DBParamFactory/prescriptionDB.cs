@@ -78,7 +78,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@CustomerName", data.CustomerName);
                 p[1] = new SqlParameter("@Mobile", data.Mobile);
                 p[2] = new SqlParameter("@Address", data.Address);
-                p[3] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[3] = new SqlParameter("@ImagePath", data.Image);
                 p[4] = new SqlParameter("@Note", data.Note);
                 p[5] = new SqlParameter("@StatusID", data.StatusID);
                 p[6] = new SqlParameter("@CreatedBy", data.CreatedBy);
@@ -106,7 +106,7 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@CustomerName", data.CustomerName);
                 p[1] = new SqlParameter("@Mobile", data.Mobile);
                 p[2] = new SqlParameter("@Address", data.Address);
-                p[3] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[3] = new SqlParameter("@ImagePath", data.Image);
                 p[4] = new SqlParameter("@Note", data.Note);
                 p[5] = new SqlParameter("@StatusID", data.StatusID);
                 p[6] = new SqlParameter("@CreatedBy", data.CreatedBy);

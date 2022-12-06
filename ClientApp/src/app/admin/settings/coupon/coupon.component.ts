@@ -71,8 +71,9 @@ export class CouponComponent implements OnInit {
   }
 
 
-Delete(data) {
-this.service.delete(data).subscribe((res: any) => {
+Delete(item) {
+  debugger
+this.service.delete(item).subscribe((res: any) => {
   if(res!=0){
     this.ts.showSuccess("Success","Record deleted successfully.")
     this.getData();

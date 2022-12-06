@@ -43,22 +43,23 @@ export class AddmedicineComponent implements OnInit {
       name: ['', Validators.required],
       description: ['', Validators.required],
       statusID: [true],
-      branddetails: ['', Validators.required],
+      brandDetails: ['', Validators.required],
       price: ['', Validators.required],
-      quantitydescription: ['', Validators.required],
+      quantityDescription: ['', Validators.required],
       medicineID: [0],
-      imagePath: [''],
+      image: [''],
     });
   }
 
   private editForm(obj) {
+    debugger
     this.f.name.setValue(obj.name);
     this.f.description.setValue(obj.description);
     this.f.brandDetails.setValue(obj.brandDetails);
     this.f.price.setValue(obj.price);
-    this.f.quantitydescription.setValue(obj.description);
+    this.f.quantityDescription.setValue(obj.quantityDescription);
     this.f.medicineID.setValue(obj.medicineID);
-    this.f.imagePath.setValue(obj.image);
+    this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
   }
 
@@ -83,7 +84,7 @@ export class AddmedicineComponent implements OnInit {
     if (this.medicineForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    this.f.imagePath.setValue(this.imgComp.imageUrl);
+    this.f.image.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.medicineID.value) === 0) {
       //Insert medicine

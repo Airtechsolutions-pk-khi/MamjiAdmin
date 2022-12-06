@@ -38,7 +38,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        lst = _dt.DataTableToList<AppSetingBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<AppSetingBLL>>();
+                        //lst = _dt.DataTableToList<AppSetingBLL>();
                     }
                 }
                 return lst;
@@ -62,7 +63,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<AppSetingBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<AppSetingBLL>>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<AppSetingBLL>().FirstOrDefault();
                     }
                 }
                 return _obj;
@@ -104,7 +106,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[7];
 
                 p[0] = new SqlParameter("@Discount", data.Discount);
                 p[1] = new SqlParameter("@DeliveryCharges", data.DeliveryCharges);
@@ -113,7 +115,7 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@StatusID", data.StatusID);
                 p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[7] = new SqlParameter("@AppsettingID", data.AppsettingID);
+                 
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateSetting_Admin", p);
                 return rtn;

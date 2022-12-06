@@ -42,7 +42,7 @@
         <tbody>
           <tr *ngFor="let item of data$ | async ">
             <td>
-              <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
+              <img *ngIf="item.image !== ''" [src]="item.image" data-lightbox="image-1" class="table-img" alt="" />
               <div *ngIf="item.image === ''" class="image-replace"></div>
             </td>
             <td> {{item.customerName}} </td>

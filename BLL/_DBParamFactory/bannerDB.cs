@@ -86,13 +86,13 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[5] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[6] = new SqlParameter("@BannerID", data.BannerID);
+                p[6] = new SqlParameter("@Type", data.Type);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertBanner_Admin", p);
 
                 return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }
@@ -103,7 +103,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[7];
+                SqlParameter[] p = new SqlParameter[8];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -112,11 +112,12 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[5] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
                 p[6] = new SqlParameter("@BannerID", data.BannerID);
+                p[7] = new SqlParameter("@Type", data.Type);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateBanner_Admin", p);
                 return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }

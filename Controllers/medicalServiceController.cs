@@ -22,28 +22,33 @@ namespace MamjiAdmin.Controllers
         {
             return _service.GetAll();
         }
+        
         [HttpGet("service/{id}")]
         public medicalServiceBLL Get(int id)
         {
             return _service.Get(id);
         }
+        
         [HttpPost]
         [Route("insert")]
         public int Post([FromBody] medicalServiceBLL obj)
         {
             return _service.Insert(obj, _env);
         }
+ 
         [HttpPost]
         [Route("update")]
         public int PostUpdate([FromBody] medicalServiceBLL obj)
         {
             return _service.Update(obj, _env);
         }
+ 
         [HttpPost]
         [Route("delete")]
         public int PostDelete([FromBody] medicalServiceBLL obj)
         {
             return _service.Delete(obj);
         }
+         
     }
 }

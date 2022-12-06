@@ -1,7 +1,7 @@
 export class Prescription {
     prescriptionID: number;
     customerName: string;
-    imagePath: string;
+    image: string;
     mobile: string;
     address: string;
     note: string;

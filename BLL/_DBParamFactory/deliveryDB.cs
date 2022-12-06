@@ -27,13 +27,13 @@ namespace BAL.Repositories
             _ds = new DataSet();
         }
 
-        public List<DeliveryBLL> GetAll(int brandID)
+        public List<DeliveryBLL> GetAll()
         {
             try
             {
                 var lst = new List<DeliveryBLL>();
-                SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@brandid", brandID);
+                SqlParameter[] p = new SqlParameter[0];
+                
 
                 _dt = (new DBHelper().GetTableFromSP)("sp_GetDelivery", p);
                 if (_dt != null)

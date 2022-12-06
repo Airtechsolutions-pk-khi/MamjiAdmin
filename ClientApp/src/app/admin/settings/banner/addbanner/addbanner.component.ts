@@ -12,7 +12,7 @@ import { ToastService } from 'src/app/_services/toastservice';
   styleUrls: ['./addbanner.component.css']
 })
 export class AddbannerComponent implements OnInit {
-
+ 
   submitted = false;
   bannerForm: FormGroup;
   loading = false;
@@ -21,6 +21,8 @@ export class AddbannerComponent implements OnInit {
   selectedSubCategoriesIds: string[];
   selectedLocationIds: string[];
   selectedgroupModifierIds: string[];
+
+  NursingTypeActive :any= ['Header','Featured'];
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -44,6 +46,7 @@ export class AddbannerComponent implements OnInit {
   private createForm() {
     this.bannerForm = this.formBuilder.group({
       name: ['', Validators.required],
+      type: [''],
       description: [''],
       statusID: [true],
       bannerID: 0,
@@ -53,6 +56,7 @@ export class AddbannerComponent implements OnInit {
 
   private editForm(obj) {
     this.f.name.setValue(obj.name);
+    this.f.type.setValue(obj.type);
     this.f.description.setValue(obj.description);
     this.f.bannerID.setValue(obj.bannerID);
     this.f.image.setValue(obj.image);
@@ -76,12 +80,14 @@ export class AddbannerComponent implements OnInit {
   }
 
   onSubmit() {
+    debugger
     this.bannerForm.markAllAsTouched();
     this.submitted = true;
     if (this.bannerForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.image.setValue(this.imgComp.imageUrl);
+    
 
     if (parseInt(this.f.bannerID.value) === 0) {
       //Insert banner

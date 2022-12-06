@@ -5,8 +5,9 @@ export class Appointment {
   age: string;
   gender: string;
   fees: string;
-  bookingDate: string;
-  day: string;
+  appointmentType:string;
+  day:string;
+  bookingDate: string;  
   timeslot: string;
   appointmentStatus: number;
   statusID: number;

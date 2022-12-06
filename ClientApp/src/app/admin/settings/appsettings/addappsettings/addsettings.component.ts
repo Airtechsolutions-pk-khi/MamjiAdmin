@@ -33,6 +33,7 @@ export class AddsettingsComponent implements OnInit {
 
   ) {
     this.createForm();
+    
   }
 
   ngOnInit() {
@@ -43,12 +44,12 @@ export class AddsettingsComponent implements OnInit {
 
   private createForm() {
     this.settingForm = this.formBuilder.group({
-      discount: ['', Validators.required],
-      deliveryCharges: [''],
-      minimumOrderAmount: [''],
-      tax: [''],
+      discount: [0],
+      deliveryCharges: [0],
+      minimumOrderAmount: [0],
+      tax: [0],
       statusID: [true],
-      appSettingID: 0,
+      appSettingID: 1,
     });
   }
 
@@ -62,28 +63,36 @@ export class AddsettingsComponent implements OnInit {
   }
 
   setSelectedSetting() {
-    this.route.paramMap.subscribe(param => {
-      const sid = +param.get('id');
-      if (sid) {
-        this.loadingSetting = true;
-        this.f.appSettingID.setValue(sid);
-        this.settingService.getById(sid).subscribe(res => {
-          //Set Forms
-          this.editForm(res);
-          this.loadingSetting = false;
-        });
-      }
-    })
+    
+    this.loadingSetting = true;
+    this.settingService.getById(1).subscribe(res => {
+      //Set Forms
+      this.editForm(res);
+      this.loadingSetting = false;
+    });
+    // this.route.paramMap.subscribe(param => {
+    //   const sid = +param.get('id');
+    //   if (sid) {
+    //     this.loadingSetting = true;
+    //     this.f.appSettingID.setValue(sid);
+    //     this.settingService.getById(sid).subscribe(res => {
+    //       //Set Forms
+    //       this.editForm(res);
+    //       this.loadingSetting = false;
+    //     });
+    //   }
+    // })
   }
 
   onSubmit() {
+    debugger
     this.settingForm.markAllAsTouched();
     this.submitted = true;
     if (this.settingForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
 
-    if (parseInt(this.f.appSettingID.value) === 0) {
+    if (parseInt('1') === 0) {
       //Insert banner
       console.log(JSON.stringify(this.settingForm.value));
       this.settingService.insert(this.settingForm.value).subscribe(data => {
@@ -96,13 +105,15 @@ export class AddsettingsComponent implements OnInit {
         this.ts.showError("Error","Failed to insert record.")
         this.loading = false;
       });
-    } else {
-      //Update banner
+    } 
+    else {
+      //Update 
       this.settingService.update(this.settingForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success","Record updated successfully.")
-          this.router.navigate(['/admin/settings/appsettings']);
+          this.setSelectedSetting();
+          this.router.navigate(['/admin/settings/appsettings/add']);
         }
       }, error => {
         this.ts.showError("Error","Failed to update record.")

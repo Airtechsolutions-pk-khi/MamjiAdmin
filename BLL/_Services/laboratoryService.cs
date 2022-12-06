@@ -42,7 +42,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.ImagePath = UploadImage(data.ImagePath, "laboratory", _env);
+                data.Image = UploadImage(data.Image, "laboratory", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -53,10 +53,11 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-        public int Update(LaboratoryBLL data)
+        public int Update(LaboratoryBLL data, IWebHostEnvironment _env)
         {
             try
             {
+                data.Image = UploadImage(data.Image, "laboratory", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

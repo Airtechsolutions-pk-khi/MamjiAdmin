@@ -27,11 +27,23 @@ namespace MamjiAdmin.BLL._Services
                 return new List<medicalServiceBLL>();
             }
         }
+       
         public medicalServiceBLL Get(int id)
         {
             try
             {
                 return _service.Get(id);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public medicalServiceTypeBLL Getbyid(int id)
+        {
+            try
+            {
+                return _service.Getbyid(id);
             }
             catch (Exception)
             {
@@ -52,6 +64,7 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
+        
         public int Update(medicalServiceBLL data, IWebHostEnvironment _env)
         {
             try
@@ -66,6 +79,11 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
+
+
+        
+
+
         public int Delete(medicalServiceBLL data)
         {
             try
@@ -79,6 +97,8 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
+
+     
     }
 }
 

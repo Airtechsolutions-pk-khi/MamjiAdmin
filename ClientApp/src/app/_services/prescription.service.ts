@@ -133,6 +133,7 @@ export class PrescriptionService {
       }));
   }
   update(data) {
+    debugger
     return this.http.post('api/prescription/update', data)
       .pipe(map(res => {
         console.log(res);

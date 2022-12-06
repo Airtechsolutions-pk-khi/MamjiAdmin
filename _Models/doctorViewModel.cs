@@ -16,6 +16,7 @@ namespace MamjiAdmin._Models
         public string ImagePath { get; set; }
         public string Email { get; set; }
         public string Skills { get; set; }
+        public string Profile { get; set; }
         public double? Fees { get; set; }
         public string Gender { get; set; }
         public string Education { get; set; }
@@ -24,23 +25,27 @@ namespace MamjiAdmin._Models
         public string LastUpdatedBy { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
-        //public string Specialities { get; set; }
-        //public string Days { get; set; }
-        public string TimeSlot { get; set; }
-        //public string Times { get; set; }
-        public List<TimeBLL> Times { get; set; }
-        public List<DaysBLL> Days { get; set; }
-        public List<SpecialistBLL> Specialities { get; set; }
-        
+        public List<DoctorScheduleBLL> doctorSchedule { get; set; }
+        public List<DoctorProfilesBLL> DoctorProfiles { get; set; }
+       
     }
-    public class TimeBLL
+    public class DoctorProfilesBLL
     {
-        public int TimeID { get; set; }
-        public int? DaysID { get; set; }
-        public int? DoctorID { get; set; }
-        public int? SpecialistID { get; set; }
+        //public int SpecialitiesJuncID { get; set; }
+        //public int DoctorID { get; set; }
+        //public int SpecialityID { get; set; }
+        public string Profile { get; set; }
+        //public int? StatusID { get; set; }
+        public double Fees { get; set; }
+    }
 
-        public string TimeSlot { get; set; }
+    public class DoctorScheduleBLL
+    {
+        //public int DoctorID { get; set; }
+        //public int specialistID { get; set; }
+        public string Name { get; set; }
+        public string DayName { get; set; }
+        public string[] TimeSlot { get; set; }
     }
 
 }

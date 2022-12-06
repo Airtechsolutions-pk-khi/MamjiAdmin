@@ -38,11 +38,11 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(MedicineBLL data)
+        public int Insert(MedicineBLL data , IWebHostEnvironment _env)
         {
             try
             {
-                //data.ImagePath = UploadImage(data.ImagePath, "Medicine", _env);
+                data.Image = UploadImage(data.Image, "Medicine", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -53,11 +53,11 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-        public int Update(MedicineBLL data)
+        public int Update(MedicineBLL data, IWebHostEnvironment _env)
         {
             try
             {
-                //data.ImagePath = UploadImage(data.ImagePath, "Medicine", _env);
+                data.Image = UploadImage(data.Image, "Medicine", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 
@@ -68,12 +68,12 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-        public int Delete(MedicineBLL data)
+        public int Delete(int  MedicineID)
         {
             try
             {
-                data.CreatedOn = _UTCDateTime_SA();
-                var result = _service.Delete(data);
+                //data.CreatedOn = DateTime.Now;
+                var result = _service.Delete(MedicineID);
 
                 return result;
             }

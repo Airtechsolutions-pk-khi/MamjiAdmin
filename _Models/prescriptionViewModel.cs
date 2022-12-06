@@ -13,7 +13,7 @@ namespace MamjiAdmin._Models
     {
         public int PrescriptionID { get; set; }
         public string CustomerName { get; set; }
-        public string ImagePath { get; set; }
+        public string Image { get; set; }
         public string Mobile { get; set; }
         public string Address { get; set; }
         public string Note { get; set; }

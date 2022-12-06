@@ -13,7 +13,7 @@ namespace MamjiAdmin._Models
     {
         public int AppointmentID { get; set; }
         public int DoctorID { get; set; }
-        public int CustomerID { get; set; }
+        public int? CustomerID { get; set; }
         public string AppointmentNo { get; set; }
         public string PatientName { get; set; }
         public string Age { get; set; }

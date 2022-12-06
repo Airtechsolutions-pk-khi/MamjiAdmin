@@ -44,15 +44,15 @@ export class AddreportsComponent implements OnInit {
       statusID: [true],
       customerID: 0,
       laboratoryID: [0],
-      imagePath: [''],
+      image: [''],
     });
   }
   private editForm(obj) {
     this.f.customerID.setValue(obj.customerID);
-    this.f.labReference.setValue(obj.labReference);
-    this.f.imagePath.setValue(obj.imagePath);
+    this.f.labReferenceNo.setValue(obj.labReferenceNo);
+    this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.imgComp.imageUrl = obj.imagePath;
+    this.imgComp.imageUrl = obj.image;
   }
   setSelectedReport() {
     this.route.paramMap.subscribe(param => {
@@ -75,7 +75,7 @@ export class AddreportsComponent implements OnInit {
     if (this.reportForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    this.f.imagePath.setValue(this.imgComp.imageUrl);
+    this.f.image.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.laboratoryID.value) === 0) {
       //Insert customer

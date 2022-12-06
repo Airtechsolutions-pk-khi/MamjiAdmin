@@ -42,7 +42,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.ImagePath = UploadImage(data.ImagePath, "Category", _env);
+                data.Image = UploadImage(data.Image, "Prescription", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -54,10 +54,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(PrescriptionBLL data)
+        public int Update(PrescriptionBLL data, IWebHostEnvironment _env)
         {
             try
             {
+                data.Image = UploadImage(data.Image, "Prescription", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

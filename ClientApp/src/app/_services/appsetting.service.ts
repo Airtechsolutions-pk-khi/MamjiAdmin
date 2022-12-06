@@ -141,6 +141,7 @@ export class AppsettingService {
   }
 
   update(updateData) {
+    debugger
     return this.http.post(`api/appsetting/update`, updateData)
       .pipe(map(res => {
         console.log(res);

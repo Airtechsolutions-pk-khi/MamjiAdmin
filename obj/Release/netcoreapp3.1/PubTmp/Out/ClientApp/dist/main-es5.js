@@ -340,7 +340,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\r\n\r\n\r\n<!--<div class=\"row d-sm-flex align-items-center justify-content-between mb-4\">\r\n    <div class=\"col-md-6\">\r\n        <h1 class=\"h3 mb-0 text-gray-800\">Dashboard</h1>\r\n    </div>\r\n    <div class=\" col-md-6 d-flex justify-content-end\">\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n        <button class=\"btn btn-primary ml-2\" type=\"submit\"  (click)=\"GetDataDashboard()\">Search</button>\r\n\r\n    </div>\r\n</div>-->\r\n\r\n\r\n<!-- Content Row -->\r\n<div class=\"row\">\r\n\r\n    <!-- Earnings (Monthly) Card Example -->\r\n    <div class=\"col-xl-3 col-md-6 mb-4\">\r\n        <div class=\"card border-left-primary shadow h-100 py-2\">\r\n            <div class=\"card-body\">\r\n                <div class=\"row no-gutters align-items-center\">\r\n                    <div class=\"col mr-2\">\r\n                        <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n                        <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n                    </div>\r\n                    <div class=\"col-auto\">\r\n                        <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Earnings (Monthly) Card Example -->\r\n    <div class=\"col-xl-3 col-md-6 mb-4\">\r\n        <div class=\"card border-left-success shadow h-100 py-2\">\r\n            <div class=\"card-body\">\r\n                <div class=\"row no-gutters align-items-center\">\r\n                    <div class=\"col mr-2\">\r\n                        <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n                        <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n                    </div>\r\n                    <div class=\"col-auto\">\r\n                        <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-- Pending Requests Card Example -->\r\n    <div class=\"col-xl-3 col-md-6 mb-4\">\r\n        <div class=\"card border-left-warning shadow h-100 py-2\">\r\n            <div class=\"card-body\">\r\n                <div class=\"row no-gutters align-items-center\">\r\n                    <div class=\"col mr-2\">\r\n                        <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Appointments</div>\r\n                        <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalAppointments}}</div>\r\n                    </div>\r\n                    <div class=\"col-auto\">\r\n                        <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-- Earnings (Monthly) Card Example -->\r\n    <div class=\"col-xl-3 col-md-6 mb-4\">\r\n        <div class=\"card border-left-info shadow h-100 py-2\">\r\n            <div class=\"card-body\">\r\n                <div class=\"row no-gutters align-items-center\">\r\n                    <div class=\"col mr-2\">\r\n                        <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Today Appointments</div>\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col-auto\">\r\n                              <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.todayAppointments}}</div>\r\n                            </div>\r\n\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-auto\">\r\n                        <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</div>\r\n\r\n<!-- Content Row -->\r\n\r\n<div class=\"row\">\r\n\r\n    <!-- Area Chart -->\r\n    <div class=\"col-xl-8 col-lg-7\">\r\n        <div class=\"card shadow mb-4\">\r\n            <!-- Card Header - Dropdown -->\r\n            <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Earnings Overview</h6>\r\n                <div class=\"dropdown no-arrow\">\r\n                    <a class=\"dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                        <i class=\"fas fa-ellipsis-v fa-sm fa-fw text-gray-400\"></i>\r\n                    </a>\r\n                    <div class=\"dropdown-menu dropdown-menu-right shadow animated--fade-in\" aria-labelledby=\"dropdownMenuLink\">\r\n                        <div class=\"dropdown-header\">Dropdown Header:</div>\r\n                        <a class=\"dropdown-item\" href=\"#\">Action</a>\r\n                        <a class=\"dropdown-item\" href=\"#\">Another action</a>\r\n                        <div class=\"dropdown-divider\"></div>\r\n                        <a class=\"dropdown-item\" href=\"#\">Something else here</a>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <!-- Card Body -->\r\n            <!--<div class=\"card-body\">\r\n                <div class=\"chart-area\">\r\n\r\n                    <div style=\"text-align:center\">\r\n                        <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\" [xaxis]=\"chartOptions.xaxis\" [title]=\"chartOptions.title\"></apx-chart>\r\n                    </div>\r\n                </div>\r\n            </div>-->\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Pie Chart -->\r\n    <div class=\"col-xl-4 col-lg-5\">\r\n        <div class=\"card shadow mb-4 \">\r\n            <!-- Card Header - Dropdown -->\r\n            <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Revenue Periodic</h6>\r\n                <div class=\"dropdown no-arrow\">\r\n                    <a class=\"dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                        <i class=\"fas fa-ellipsis-v fa-sm fa-fw text-gray-400\"></i>\r\n                    </a>\r\n                    <div class=\"dropdown-menu dropdown-menu-right shadow animated--fade-in\" aria-labelledby=\"dropdownMenuLink\">\r\n                        <div class=\"dropdown-header\">Dropdown Header:</div>\r\n                        <a class=\"dropdown-item\" href=\"#\">Action</a>\r\n                        <a class=\"dropdown-item\" href=\"#\">Another action</a>\r\n                        <div class=\"dropdown-divider\"></div>\r\n                        <a class=\"dropdown-item\" href=\"#\">Something else here</a>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <!-- Card Body -->\r\n            <!--<div class=\"card-body\">\r\n                <div class=\"chart-pie \"   style=\"height: auto !important;\">\r\n                    <div id=\"chart\">\r\n                        <apx-chart [series]=\"chartOptionsDonut.series\" [chart]=\"chartOptionsDonut.chart\" [labels]=\"chartOptionsDonut.labels\" [responsive]=\"chartOptionsDonut.responsive\"></apx-chart>\r\n                    </div>\r\n                </div>\r\n                <div class=\"mt-4 text-center small\">\r\n\r\n                </div>\r\n            </div>-->\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "\r\n\r\n\r\n<!--<div class=\"row d-sm-flex align-items-center justify-content-between mb-4\">\r\n    <div class=\"col-md-6\">\r\n        <h1 class=\"h3 mb-0 text-gray-800\">Dashboard</h1>\r\n    </div>\r\n    <div class=\" col-md-6 d-flex justify-content-end\">\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n        <button class=\"btn btn-primary ml-2\" type=\"submit\"  (click)=\"GetDataDashboard()\">Search</button>\r\n\r\n    </div>\r\n</div>-->\r\n\r\n\r\n<!-- Content Row -->\r\n<div class=\"row\">\r\n\r\n    <!-- Earnings (Monthly) Card Example -->\r\n    <div class=\"col-xl-3 col-md-6 mb-4\">\r\n        <div class=\"card border-left-primary shadow h-100 py-2\">\r\n            <div class=\"card-body\">\r\n                <div class=\"row no-gutters align-items-center\">\r\n                    <div class=\"col mr-2\">\r\n                        <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n                        <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n                    </div>\r\n                    <div class=\"col-auto\">\r\n                        <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- Earnings (Monthly) Card Example -->\r\n    <div class=\"col-xl-3 col-md-6 mb-4\">\r\n        <div class=\"card border-left-success shadow h-100 py-2\">\r\n            <div class=\"card-body\">\r\n                <div class=\"row no-gutters align-items-center\">\r\n                    <div class=\"col mr-2\">\r\n                        <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n                        <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n                    </div>\r\n                    <div class=\"col-auto\">\r\n                        <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-- Pending Requests Card Example -->\r\n    <div class=\"col-xl-3 col-md-6 mb-4\">\r\n        <div class=\"card border-left-warning shadow h-100 py-2\">\r\n            <div class=\"card-body\">\r\n                <div class=\"row no-gutters align-items-center\">\r\n                    <div class=\"col mr-2\">\r\n                        <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n                        <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalAppointments}}</div>\r\n                    </div>\r\n                    <div class=\"col-auto\">\r\n                        <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-xl-3 col-md-6 mb-4\">\r\n        <div class=\"card border-left-warning shadow h-100 py-2\">\r\n            <div class=\"card-body\">\r\n                <div class=\"row no-gutters align-items-center\">\r\n                    <div class=\"col mr-2\">\r\n                        <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Nursing Appointments</div>\r\n                        <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalAppointments}}</div>\r\n                    </div>\r\n                    <div class=\"col-auto\">\r\n                        <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!-- Earnings (Monthly) Card Example -->\r\n    <div class=\"col-xl-3 col-md-6 mb-4\">\r\n        <div class=\"card border-left-info shadow h-100 py-2\">\r\n            <div class=\"card-body\">\r\n                <div class=\"row no-gutters align-items-center\">\r\n                    <div class=\"col mr-2\">\r\n                        <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Today Appointments</div>\r\n                        <div class=\"row no-gutters align-items-center\">\r\n                            <div class=\"col-auto\">\r\n                              \r\n                                <!-- <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\" >{{ dashboardSummary.todayAppointments}}</div> -->\r\n                                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\" >0</div>\r\n                            </div>\r\n\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-auto\">\r\n                        <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</div>\r\n\r\n \r\n\r\n \r\n";
       /***/
     },
 
@@ -360,7 +360,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputlabReferenceNo\">Lab Reference#</label>\r\n                  <input type=\"text\" class=\"form-control\" id=labReferenceNo placeholder=\"\" formControlName=\"labReferenceNo\">\r\n                  <div *ngIf=\"f.labReferenceNo.invalid && (f.labReferenceNo.dirty || f.labReferenceNo.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.labReferenceNo.errors.required\">\r\n                      Lab Reference No is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputcustomerID\">Customer Name</label>\r\n                  <ng-select [items]=\"CustomerList\" bindLabel=\"fullName\" bindValue=\"customerID\" [multiple]=\"false\" placeholder=\"\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\" [value]=\"items.customerID\">\r\n                        <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputlabReferenceNo\">Lab Reference#</label>\r\n                  <input type=\"text\" class=\"form-control\" id=labReferenceNo placeholder=\"\" formControlName=\"labReferenceNo\">\r\n                  <div *ngIf=\"f.labReferenceNo.invalid && (f.labReferenceNo.dirty || f.labReferenceNo.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.labReferenceNo.errors.required\">\r\n                      Lab Reference No is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputcustomerID\">Customer Name</label>\r\n                  <ng-select [items]=\"CustomerList\" bindLabel=\"fullName\" bindValue=\"customerID\" [multiple]=\"false\" placeholder=\"\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\" [value]=\"items.customerID\">\r\n                        <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n              </div> -->\r\n\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                    <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                    <select class=\"custom-select\" formControlName=\"customerID\"> \r\n\r\n                <option [ngValue]=\"option.customerID\"  selected=\"option.customerID == customerID\"\r\n                    *ngFor=\"let option of CustomerList\">\r\n                    {{option.fullName}}\r\n                </option>\r\n            </select>\r\n                </div>\r\n            </div>\r\n\r\n\r\n\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -380,7 +380,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"LabReference\">Lab Reference#</th>\r\n            <!--<th width=\"15%\" sortable=\"LabReference\">Customer Name</th>-->\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td>{{item.labReference}}</td>\r\n            <!--<td>{{item.customerName}}</td>-->\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <!--<strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results-->\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <!--<ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>-->\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"LabReference\">Lab Reference#</th>\r\n            <th width=\"15%\" sortable=\"LabReference\">Customer Name</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td>{{item.labReferenceNo}}</td>\r\n            <td>{{item.fullName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <!--<strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results-->\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <!--<ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>-->\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -440,7 +440,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Addons</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"addonForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Addons Details</div>\r\n                <div class=\"card-body\">\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Arabic Name</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=arabicName placeholder=\"\" formControlName=\"arabicName\">\r\n                                </div>\r\n                            </div>\r\n                            <!-- <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n                                    <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n                                </div>\r\n                            </div> -->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Price</label>\r\n                                    <input type=\"number\" class=\"form-control\" id=price placeholder=\"\" formControlName=\"price\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-12\">\r\n\r\n                            <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n                            <textarea class=\"form-control\" formControlName=\"description\" height=\"100px\"></textarea>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Addons</h1>\n<p class=\"mb-4\"></p>\n\n<form [formGroup]=\"addonForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\n    <div class=\"row\">\n\n        <div class=\"col-xl-12\">\n            <div class=\"card mb-4\">\n                <div class=\"card-header\">Addons Details</div>\n                <div class=\"card-body\">\n                    <div class=\"form-row\">\n                        <div class=\"form-group col-md-8\">\n                            <div class=\"form-group\">\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\n                                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\n                                    <div *ngIf=\"f.name.errors.required\">\n                                        Name is required.\n                                    </div>\n                                </div>\n                            </div>\n                            <!-- Form Row-->\n                            <div class=\"form-row\">\n                                <div class=\"form-group col-md-12\">\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Arabic Name</label>\n                                    <input type=\"text\" class=\"form-control\" id=arabicName placeholder=\"\" formControlName=\"arabicName\">\n                                </div>\n                            </div>\n                            <!-- <div class=\"form-row\">\n                                <div class=\"form-group col-md-12\">\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\n                                    <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\n                                </div>\n                            </div> -->\n                            <div class=\"form-row\">\n                                <div class=\"form-group col-md-12\">\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Price</label>\n                                    <input type=\"number\" class=\"form-control\" id=price placeholder=\"\" formControlName=\"price\">\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"form-group col-md-4 text-center\">\n                            <app-imageupload></app-imageupload>\n                        </div>\n                    </div>\n\n                    <div class=\"form-row\">\n                        <div class=\"form-group col-md-12\">\n\n                            <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\n                            <textarea class=\"form-control\" formControlName=\"description\" height=\"100px\"></textarea>\n                        </div>\n                    </div>\n                    <div class=\"form-row\">\n                        <div class=\"form-group col-lg-12\">\n                            <label for=\"Item Status\">Status</label>\n                            <div class=\"custom-control custom-switch custom-switch-md\">\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\n                            </div>\n                        </div>\n                    </div>\n                    <!-- Save changes button-->\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\n\n                </div>\n            </div>\n        </div>\n    </div>\n</form>";
       /***/
     },
 
@@ -460,7 +460,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Addons</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Addons List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 text-right\"> \r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Add Addon</span>\r\n                </button>\r\n                </div>\r\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Modifier\r\n            </button></div> -->\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"20%\" sortable=\"Description\" (sort)=\"onSort($event)\">Description </th>\r\n                        <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Price</th>\r\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"15%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.description}} </td>\r\n                        <td>{{item.price}}</td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.addonID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\n<h1 class=\"h3 mb-2 text-gray-800\">Addons</h1>\n<p class=\"mb-4\"></p>\n\n<!-- DataTales Example -->\n<div class=\"card shadow mb-4\">\n    <div class=\"card-header py-3\">\n        <div class=\"row\">\n            <div class=\"col-md-5\">\n                <h6 class=\"m-0 font-weight-bold text-orange\">Addons List</h6>\n            </div>\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\n                </div>\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\n            </div>\n           \n            <div class=\"col-md-3 text-right\"> \n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\n                    <span translate>Export</span>\n                </button>\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\" >\n                    <span translate>Add Addon</span>\n                </button>\n                </div>\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\n                Add Modifier\n            </button></div> -->\n        </div>\n\n\n\n    </div>\n    <div class=\"card-body\">\n        <div class=\"tile-body p-0 table-responsive \">\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr class=\"table-header\">\n                        <th width=\"10%\">IMAGE</th>\n                        <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\n                        <th width=\"20%\" sortable=\"Description\" (sort)=\"onSort($event)\">Description </th>\n                        <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Price</th>\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\n                        <th width=\"15%\"></th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor=\"let item of data$ | async \">\n                        <td>\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\n                        </td>\n                        <td> {{item.name}} </td>\n                        <td> {{item.description}} </td>\n                        <td>{{item.price}}</td>\n                        <td>\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\n                            </ngb-highlight>\n                        </td>\n                        <td>\n                            <a (click)=\"Edit(item.addonID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\n\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n\n\n        <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <p class=\"pagination-count\">\n                    Showing\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\n                    <strong>{{(total$ | async)!}}</strong> results\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\n                </ngb-pagination>\n            </div>\n        </div>\n    </div>\n</div>";
       /***/
     },
 
@@ -620,7 +620,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customer Inquiry</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customer Inquiry List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Customer Inquiry\r\n                </button>\r\n            </div>\r\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Customer\r\n            </button></div> -->\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"FullName\" > Name </th>\r\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\r\n                        <th width=\"15%\" sortable=\"Mobile\" >Mobile </th>\r\n                        <th width=\"15%\" sortable=\"Password\" >Type </th>\r\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\r\n                        <th width=\"10%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr>\r\n                        <td>\r\n                            <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" /> -->\r\n                            <div class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td>Ammad </td>\r\n                        <td> ammadraza001@gmail.com </td>\r\n                        <td>03341897997</td>\r\n                        <td>abc123</td>\r\n                        <td>\r\n                            <ngb-highlight  class=\"btn btn-sm\">\r\n                                 \r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a  ><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a  ><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <!-- <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results -->\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <!-- <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> -->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\n<h1 class=\"h3 mb-2 text-gray-800\">Customer Inquiry</h1>\n<p class=\"mb-4\"></p>\n\n<!-- DataTales Example -->\n<div class=\"card shadow mb-4\">\n    <div class=\"card-header py-3\">\n        <div class=\"row\">\n            <div class=\"col-md-5\">\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customer Inquiry List</h6>\n            </div>\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\n                </div>\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\n            </div>\n            <div class=\"col-md-3 form-group text-right\">\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\n                    <span translate>Export</span>\n                </button>\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\n                    Customer Inquiry\n                </button>\n            </div>\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\n                Add Customer\n            </button></div> -->\n        </div>\n\n\n\n    </div>\n    <div class=\"card-body\">\n        <div class=\"tile-body p-0 table-responsive \">\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr class=\"table-header\">\n                        <th width=\"10%\">IMAGE</th>\n                        <th width=\"15%\" sortable=\"FullName\" > Name </th>\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\n                        <th width=\"15%\" sortable=\"Mobile\" >Mobile </th>\n                        <th width=\"15%\" sortable=\"Password\" >Type </th>\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\n                        <th width=\"10%\"></th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>\n                            <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" /> -->\n                            <div class=\"image-replace\"></div>\n                        </td>\n                        <td>Ammad </td>\n                        <td> ammadraza001@gmail.com </td>\n                        <td>03341897997</td>\n                        <td>abc123</td>\n                        <td>\n                            <ngb-highlight  class=\"btn btn-sm\">\n                                 \n                            </ngb-highlight>\n                        </td>\n                        <td>\n                            <a  ><i class=\"fas fa-fw fa-edit\"></i> </a>\n\n                            <a  ><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n\n\n        <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <p class=\"pagination-count\">\n                    Showing\n                    <!-- <strong>{{(service.pageSize * service.page)-9}}</strong> to\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\n                    <strong>{{(total$ | async)!}}</strong> results -->\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <!-- <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\n                </ngb-pagination> -->\n            </div>\n        </div>\n    </div>\n</div>";
       /***/
     },
 
@@ -640,7 +640,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery Area</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button   class=\"btn btn-primary mt-4 mr-1\">\r\n                    Delivery Area\r\n                </button>\r\n            </div>\r\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Customer\r\n            </button></div> -->\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"FullName\" >Area Name </th>\r\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\r\n                        <th width=\"15%\" sortable=\"Mobile\" >Mobile </th>\r\n                        <th width=\"15%\" sortable=\"Password\" >Type </th>\r\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\r\n                        <th width=\"10%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr>\r\n                        <td>\r\n                            <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" /> -->\r\n                            <div class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td>Ammad </td>\r\n                        <td> ammadraza001@gmail.com </td>\r\n                        <td>03341897997</td>\r\n                        <td>abc123</td>\r\n                        <td>\r\n                            \r\n                        </td>\r\n                        <td>\r\n                            <a  ><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a  ><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <!-- <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results -->\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <!-- <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> -->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery Area</h1>\n<p class=\"mb-4\"></p>\n\n<!-- DataTales Example -->\n<div class=\"card shadow mb-4\">\n    <div class=\"card-header py-3\">\n        <div class=\"row\">\n            <div class=\"col-md-5\">\n                <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area List</h6>\n            </div>\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\n                </div>\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\n            </div>\n            <div class=\"col-md-3 form-group text-right\">\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\n                    <span translate>Export</span>\n                </button>\n                <button   class=\"btn btn-primary mt-4 mr-1\">\n                    Delivery Area\n                </button>\n            </div>\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\n                Add Customer\n            </button></div> -->\n        </div>\n\n\n\n    </div>\n    <div class=\"card-body\">\n        <div class=\"tile-body p-0 table-responsive \">\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr class=\"table-header\">\n                        <th width=\"10%\">IMAGE</th>\n                        <th width=\"15%\" sortable=\"FullName\" >Area Name </th>\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\n                        <th width=\"15%\" sortable=\"Mobile\" >Mobile </th>\n                        <th width=\"15%\" sortable=\"Password\" >Type </th>\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\n                        <th width=\"10%\"></th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>\n                            <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" /> -->\n                            <div class=\"image-replace\"></div>\n                        </td>\n                        <td>Ammad </td>\n                        <td> ammadraza001@gmail.com </td>\n                        <td>03341897997</td>\n                        <td>abc123</td>\n                        <td>\n                            \n                        </td>\n                        <td>\n                            <a  ><i class=\"fas fa-fw fa-edit\"></i> </a>\n\n                            <a  ><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n\n\n        <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <p class=\"pagination-count\">\n                    Showing\n                    <!-- <strong>{{(service.pageSize * service.page)-9}}</strong> to\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\n                    <strong>{{(total$ | async)!}}</strong> results -->\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <!-- <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\n                </ngb-pagination> -->\n            </div>\n        </div>\n    </div>\n</div>";
       /***/
     },
 
@@ -660,7 +660,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Medicine</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"medicineForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Medicine Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=description placeholder=\"\" formControlName=\"description\">\r\n                <div *ngIf=\"f.description.invalid && (f.description.dirty || f.description.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.description.errors.required\">\r\n                    Description is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Brand Details</label>\r\n                <input type=\"text\" class=\"form-control\" id=branddetails placeholder=\"\" formControlName=\"branddetails\">\r\n                <div *ngIf=\"f.branddetails.invalid && (f.branddetails.dirty || f.branddetails.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.branddetails.errors.required\">\r\n                    Brand is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Price</label>\r\n                <input type=\"number\" class=\"form-control\" id=price placeholder=\"\" formControlName=\"price\">\r\n                <div *ngIf=\"f.price.invalid && (f.price.dirty || f.price.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.price.errors.required\">\r\n                    Price is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Quantity Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=quantitydescription placeholder=\"\" formControlName=\"quantitydescription\">\r\n                <div *ngIf=\"f.quantitydescription.invalid && (f.quantitydescription.dirty || f.quantitydescription.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.quantitydescription.errors.required\">\r\n                    Quantity is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload formControlName=\"image\"></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Medicine</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"medicineForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Medicine Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=description placeholder=\"\" formControlName=\"description\">\r\n                <div *ngIf=\"f.description.invalid && (f.description.dirty || f.description.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.description.errors.required\">\r\n                    Description is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Brand Details</label>\r\n                <input type=\"text\" class=\"form-control\" id=brandDetails placeholder=\"\" formControlName=\"brandDetails\">\r\n                <div *ngIf=\"f.brandDetails.invalid && (f.brandDetails.dirty || f.brandDetails.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.brandDetails.errors.required\">\r\n                    Brand is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Price</label>\r\n                <input type=\"number\" class=\"form-control\" id=price placeholder=\"\" formControlName=\"price\">\r\n                <div *ngIf=\"f.price.invalid && (f.price.dirty || f.price.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.price.errors.required\">\r\n                    Price is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n\r\n              <!-- <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Quantity Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=quantityDescription placeholder=\"\" formControlName=\"quantityDescription\">\r\n                <div *ngIf=\"f.quantityDescription.invalid && (f.quantitydescription.dirty || f.quantityDescription.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.quantityDescription.errors.required\">\r\n                    Quantity is required.\r\n                  </div>\r\n                </div>\r\n              </div> -->\r\n\r\n\r\n                  \r\n                                <div class=\"form-group  \">\r\n                                    <label class=\"small mb-1\" for=\"inputUsername\">Quantity Description</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=quantityDescription placeholder=\"\" formControlName=\"quantityDescription\">\r\n                                </div>\r\n                             \r\n\r\n\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -680,7 +680,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Medicines</h1>\r\n<p class=\"mb-4\"></p>\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Medicine List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['addmedicines']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Medicine\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n      <div class=\"tile-body p-0 table-responsive \">\r\n        <table class=\"table table-striped\">\r\n          <thead>\r\n            <tr class=\"table-header\">\r\n              <th width=\"10%\">IMAGE</th>\r\n              <th width=\"15%\" sortable=\"FullName\"> Name </th>\r\n              <th width=\"15%\" sortable=\"Description\">Description </th>\r\n              <th width=\"15%\" sortable=\"BrandDetails\"> Brand Details </th>\r\n              <th width=\"15%\" sortable=\"Price\"> Price </th>\r\n              <th width=\"15%\" sortable=\"Quantity\"> Quantity Description </th>\r\n              <th width=\"15%\" sortable=\"Status\">Status </th>\r\n              <th width=\"10%\">Action</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr *ngFor=\"let item of data$ | async \">\r\n              <td>\r\n                <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n              </td>\r\n              <td> {{item.name}} </td>\r\n              <td> {{item.description}} </td>\r\n              <td> {{item.brandDetails}} </td>\r\n              <td> {{item.price}} </td>\r\n              <td> {{item.quantityDescription}} </td>\r\n              <td>\r\n                <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                </ngb-highlight>\r\n              </td>\r\n              <td>\r\n                <a (click)=\"Edit(item.medicineID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                <a (click)=\"Delete(item.medicineID)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              </td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <p class=\"pagination-count\">\r\n            Showing\r\n            <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n            <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n            <strong>{{(total$ | async)!}}</strong> results\r\n          </p>\r\n        </div>\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n          </ngb-pagination>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Medicines</h1>\r\n<p class=\"mb-4\"></p>\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Medicine List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <!-- <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button> -->\r\n        <button [routerLink]=\"['addmedicines']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Medicine\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n      <div class=\"tile-body p-0 table-responsive \">\r\n        <table class=\"table table-striped\">\r\n          <thead>\r\n            <tr class=\"table-header\">\r\n              <th width=\"10%\">IMAGE</th>\r\n              <th width=\"15%\" sortable=\"FullName\"> Name </th>\r\n              <th width=\"15%\" sortable=\"Description\">Description </th>\r\n              <th width=\"15%\" sortable=\"BrandDetails\"> Brand Details </th>\r\n              <th width=\"15%\" sortable=\"Price\"> Price </th>\r\n              <th width=\"15%\" sortable=\"Quantity\"> Quantity Description </th>\r\n              <th width=\"15%\" sortable=\"Status\">Status </th>\r\n              <th width=\"10%\">Action</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr *ngFor=\"let item of data$ | async \">\r\n              <td>\r\n                <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n              </td>\r\n              <td> {{item.name}} </td>\r\n              <td> {{item.description}} </td>\r\n              <td> {{item.brandDetails}} </td>\r\n              <td> {{item.price}} </td>\r\n              <td> {{item.quantityDescription}} </td>\r\n              <td>\r\n                <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                </ngb-highlight>\r\n              </td>\r\n              <td>\r\n                <a (click)=\"Edit(item.medicineID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                <a (click)=\"Delete(item.medicineID)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              </td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <p class=\"pagination-count\">\r\n            Showing\r\n            <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n            <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n            <strong>{{(total$ | async)!}}</strong> results\r\n          </p>\r\n        </div>\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n          </ngb-pagination>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -740,7 +740,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"prescriptionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Prescription Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=customerName placeholder=\"\" formControlName=\"customerName\">\r\n                <div *ngIf=\"f.customerName.invalid && (f.customerName.dirty || f.customerName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.customerName.errors.required\">\r\n                    Customer Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Mobile</label>\r\n                <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\">\r\n                <div *ngIf=\"f.mobile.invalid && (f.mobile.dirty || f.mobile.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.mobile.errors.required\">\r\n                    Mobile is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n                  <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\">\r\n                  <div *ngIf=\"f.address.invalid && (f.address.dirty || f.address.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.address.errors.required\">\r\n                      Address is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Notes</label>\r\n                  <input type=\"text\" class=\"form-control\" id=note placeholder=\"\" formControlName=\"note\">\r\n                  <div *ngIf=\"f.note.invalid && (f.note.dirty || f.note.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.note.errors.required\">\r\n                      Notes is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload formControlName=\"imagePath\"></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"prescriptionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Prescription Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=customerName placeholder=\"\" formControlName=\"customerName\">\r\n                <div *ngIf=\"f.customerName.invalid && (f.customerName.dirty || f.customerName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.customerName.errors.required\">\r\n                    Customer Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Mobile</label>\r\n                <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\">\r\n                <div *ngIf=\"f.mobile.invalid && (f.mobile.dirty || f.mobile.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.mobile.errors.required\">\r\n                    Mobile is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n                  <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\">\r\n                  <div *ngIf=\"f.address.invalid && (f.address.dirty || f.address.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.address.errors.required\">\r\n                      Address is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Notes</label>\r\n                  <input type=\"text\" class=\"form-control\" id=note placeholder=\"\" formControlName=\"note\">\r\n                  <div *ngIf=\"f.note.invalid && (f.note.dirty || f.note.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.note.errors.required\">\r\n                      Notes is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -760,7 +760,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['addprescription']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Prescription\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"FullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['addprescription']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Prescription\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"FullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -780,7 +780,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Appointment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"appointmentForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Book Appointment</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputAppointmentNo\">Appointment No</label>\r\n                <input type=\"text\" class=\"form-control\" id=appointmentNo placeholder=\"\" formControlName=\"appointmentNo\">\r\n                <div *ngIf=\"f.appointmentNo.invalid && (f.appointmentNo.dirty || f.appointmentNo.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.appointmentNo.errors.required\">\r\n                    Appointment is required.\r\n                  </div>  \r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <!-- <label class=\"small mb-1\" for=\"inputAppointmentNo\">Speciality</label>\r\n                <ng-select [items]=\"drpSpecialityList\" bindLabel=\"specialityName\" bindValue=\"specialityID\" [multiple]=\"false\" placeholder=\"\">\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                      <span class=\"ng-value-label\">{{item.specialityName}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select> -->\r\n\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedSpecialistIds\">\r\n                      <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                          <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                              <span class=\"ng-value-label\">{{item.name}}</span>\r\n                              <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                          </div>\r\n                      </ng-template>\r\n                  </ng-select>\r\n              </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputTimeslot\">Timeslot</label>\r\n                  <select type=\"time\" class=\"form-control\" id=timeslot placeholder=\"\" formControlName=\"timeslot\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>10:00 AM - 11:00 AM</option>\r\n                    <option>11:00 AM - 12:00 PM</option>\r\n                    <option>12:00 PM - 01:00 PM</option>\r\n                    <option>01:00 PM - 02:00 PM</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.timeslot.invalid && (f.timeslot.dirty || f.timeslot.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.timeslot.errors.required\">\r\n                      Timeslot is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputPatientname\">Patient Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=patientName placeholder=\"\" formControlName=\"patientName\">\r\n                <div *ngIf=\"f.patientName.invalid && (f.patientName.dirty || f.patientName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.patientName.errors.required\">\r\n                    Patient Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputAge\">Age</label>\r\n                <input type=\"text\" class=\"form-control\" id=age placeholder=\"\" formControlName=\"age\">\r\n                <div *ngIf=\"f.age.invalid && (f.age.dirty || f.age.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.age.errors.required\">\r\n                    Age is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputappointmentStatus\">Appointment Status</label>\r\n                  <select type=\"text\" class=\"form-control\" id=appointmentStatus placeholder=\"\" formControlName=\"appointmentStatus\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Pending</option>\r\n                    <option>Approved</option>\r\n                    <option>Cancelled</option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputAppointmentNo\">Doctor Name</label>\r\n                <ng-select [items]=\"DoctorList\" bindLabel=\"fullName\" bindValue=\"doctorID\" [multiple]=\"false\" placeholder=\"\" (change)=\"onChange(DoctorList)\" >\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\"  [value]=\"items.doctorID\">\r\n                      <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <!-- <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Day</label>\r\n                  <input type=\"text\" class=\"form-control\" id=day placeholder=\"\" formControlName=\"day\">\r\n                  <div *ngIf=\"f.day.invalid && (f.day.dirty || f.day.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.day.errors.required\">\r\n                      Day is required.\r\n                    </div>\r\n                  </div>\r\n                </div> -->\r\n\r\n\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Days</label>\r\n                  <ng-select [items]=\"DoctorDaysList\" bindLabel=\"name\" bindValue=\"daysID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedDaysID\">\r\n                      <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                          <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                              <span class=\"ng-value-label\">{{item.name}}</span>\r\n                              <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                          </div>\r\n                      </ng-template>\r\n                  </ng-select>\r\n              </div>\r\n\r\n\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFees\">Fees</label>\r\n                  <input type=\"text\" class=\"form-control\" id=fees placeholder=\"\" formControlName=\"fees\">\r\n                  <div *ngIf=\"f.fees.invalid && (f.fees.dirty || f.fees.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fees.errors.required\">\r\n                      Fees is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Booking Date</label>\r\n                  <input type=\"date\" class=\"form-control\" id=bookingDate placeholder=\"\" formControlName=\"bookingDate\">\r\n                  <div *ngIf=\"f.bookingDate.invalid && (f.bookingDate.dirty || f.bookingDate.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.bookingDate.errors.required\">\r\n                      Booking Date is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputGender\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.gender.invalid && (f.gender.dirty || f.gender.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.gender.errors.required\">\r\n                      Gender is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Appointment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"appointmentForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Book Appointment</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputAppointmentNo\">Appointment No</label>\r\n                <input type=\"text\" class=\"form-control\" id=appointmentNo placeholder=\"\" formControlName=\"appointmentNo\">\r\n                <div *ngIf=\"f.appointmentNo.invalid && (f.appointmentNo.dirty || f.appointmentNo.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.appointmentNo.errors.required\">\r\n                    Appointment is required.\r\n                  </div>  \r\n                </div>\r\n              </div>\r\n            \r\n                \r\n\r\n                <!-- <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedSpecialistIds\">\r\n                      <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                          <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                              <span class=\"ng-value-label\">{{item.name}}</span>\r\n                              <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                          </div>\r\n                      </ng-template>\r\n                  </ng-select>\r\n              </div> -->\r\n              \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputTimeslot\">Timeslot</label>\r\n                  <select type=\"time\" class=\"form-control\" id=timeslot placeholder=\"\" formControlName=\"timeslot\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>10:00 AM - 11:00 AM</option>\r\n                    <option>11:00 AM - 12:00 PM</option>\r\n                    <option>12:00 PM - 01:00 PM</option>\r\n                    <option>01:00 PM - 02:00 PM</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.timeslot.invalid && (f.timeslot.dirty || f.timeslot.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.timeslot.errors.required\">\r\n                      Timeslot is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputPatientname\">Patient Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=patientName placeholder=\"\" formControlName=\"patientName\">\r\n                <div *ngIf=\"f.patientName.invalid && (f.patientName.dirty || f.patientName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.patientName.errors.required\">\r\n                    Patient Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputAge\">Age</label>\r\n                <input type=\"text\" class=\"form-control\" id=age placeholder=\"\" formControlName=\"age\">\r\n                <div *ngIf=\"f.age.invalid && (f.age.dirty || f.age.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.age.errors.required\">\r\n                    Age is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputappointmentStatus\">Appointment Status</label>\r\n                  <select type=\"text\" class=\"form-control\" id=appointmentStatus placeholder=\"\" formControlName=\"appointmentStatus\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Pending</option>\r\n                    <option>Approved</option>\r\n                    <option>Cancelled</option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <!-- <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputAppointmentNo\">Doctor Name</label>\r\n                <ng-select [items]=\"DoctorList\" bindLabel=\"fullName\" bindValue=\"doctorID\" [multiple]=\"false\" placeholder=\"\" (change)=\"onChange(DoctorList)\" >\r\n                  <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                    <div class=\"ng-value\" *ngFor=\"let item of items\"  [value]=\"items.doctorID\">\r\n                      <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                    </div>\r\n                  </ng-template>\r\n                </ng-select>\r\n              </div> -->\r\n              <!-- <div class=\"form-row\">\r\n                \r\n\r\n\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Days</label>\r\n                  <ng-select [items]=\"DoctorDaysList\" bindLabel=\"name\" bindValue=\"daysID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedDaysID\">\r\n                      <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                          <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                              <span class=\"ng-value-label\">{{item.name}}</span>\r\n                              <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                          </div>\r\n                      </ng-template>\r\n                  </ng-select>\r\n              </div>\r\n\r\n\r\n              </div> -->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFees\">Fees</label>\r\n                  <input type=\"text\" class=\"form-control\" id=fees placeholder=\"\" formControlName=\"fees\">\r\n                  <div *ngIf=\"f.fees.invalid && (f.fees.dirty || f.fees.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fees.errors.required\">\r\n                      Fees is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Booking Date</label>\r\n                  <input type=\"date\" class=\"form-control\" id=bookingDate placeholder=\"\" formControlName=\"bookingDate\">\r\n                  <div *ngIf=\"f.bookingDate.invalid && (f.bookingDate.dirty || f.bookingDate.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.bookingDate.errors.required\">\r\n                      Booking Date is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputGender\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.gender.invalid && (f.gender.dirty || f.gender.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.gender.errors.required\">\r\n                      Gender is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -800,7 +800,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                 <button [routerLink]=\"['addappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Doctor Appoinment\r\n                </button> \r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\" sortable=\"AppointmentNo\" > Appoint. No.</th>\r\n                        <th width=\"15%\" sortable=\"PatientName\" > Patient Name </th>\r\n                        <th width=\"10%\" sortable=\"Age\" > Age </th>\r\n                        <th width=\"10%\" sortable=\"Gender\" > Gender </th>\r\n                        <th width=\"10%\" sortable=\"Fees\" > Fees </th>\r\n                        <th width=\"15%\" sortable=\"BookingDate\" > Booking Date </th>\r\n                        <th width=\"20%\" sortable=\"Timeslot\" > Time Slot </th>\r\n                        <th width=\"15%\" sortable=\"Status\" > Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td> {{item.appointmentNo}} </td>\r\n                    <td> {{item.patientName}} </td>\r\n                    <td> {{item.age}} </td>\r\n                    <td> {{item.gender}} </td>\r\n                    <td> {{item.fees}} </td>\r\n                    <td> {{item.bookingDate}} </td>\r\n                    <td> {{item.timeslot}} </td>\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td>\r\n                      <a><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                      <a><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                     <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results \r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                 <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                 <button [routerLink]=\"['addappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Doctor Appoinment\r\n                </button> \r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\" sortable=\"AppointmentNo\" > Appoint. No.</th>\r\n                        <th width=\"15%\" sortable=\"PatientName\" > Patient Name </th>\r\n                        <th width=\"10%\" sortable=\"Age\" > Age </th>\r\n                        <th width=\"10%\" sortable=\"Gender\" > Gender </th>\r\n                        <th width=\"10%\" sortable=\"Fees\" > Fees </th>\r\n                        <th width=\"15%\" sortable=\"BookingDate\" > Booking Date </th>\r\n                        <th width=\"20%\" sortable=\"Timeslot\" > Time Slot </th>\r\n                        <th width=\"15%\" sortable=\"Status\" > Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td> {{item.appointmentNo}} </td>\r\n                    <td> {{item.patientName}} </td>\r\n                    <td> {{item.age}} </td>\r\n                    <td> {{item.gender}} </td>\r\n                    <td> {{item.fees}} </td>\r\n                    <td> {{item.bookingDate}} </td>\r\n                    <td> {{item.timeslot}} </td>\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td>\r\n                      <a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                      <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                     <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results \r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                 <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -840,7 +840,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customers</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customers List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <!--<div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />-->\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['addcustomers']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add Customers\r\n                </button>\r\n            </div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"15%\" sortable=\"FullName\" (sort)=\"onSort($event)\"> Name </th>\r\n                    <th width=\"15%\" sortable=\"Mobile\" (sort)=\"onSort($event)\">Mobile </th>\r\n                    <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n                    <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td> {{item.fullName}} </td>\r\n                    <td>{{item.mobile}}</td>\r\n                    <td> {{item.email}} </td>\r\n                    <td>{{item.password}}</td>\r\n\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td style=\"text-align:center\">\r\n                      <a (click)=\"Edit(item.customerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                      <a (click)=\"Delete(item.customerID)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customers</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customers List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <!--<div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />-->\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['addcustomers']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add Customers\r\n                </button>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"15%\" sortable=\"FullName\" (sort)=\"onSort($event)\"> Name </th>\r\n                    <th width=\"15%\" sortable=\"Mobile\" (sort)=\"onSort($event)\">Mobile </th>\r\n                    <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n                    <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td> {{item.fullName}} </td>\r\n                    <td>{{item.mobile}}</td>\r\n                    <td> {{item.email}} </td>\r\n                    <td>{{item.password}}</td>\r\n\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td style=\"text-align:center\">\r\n                      <a (click)=\"Edit(item.customerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                      <a (click)=\"Delete(item.customerID)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -980,7 +980,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Area</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"deliveryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Delivery Area Details</div>\r\n                <div class=\"card-body\">\r\n\r\n                                <div class=\"form-row\">\r\n                                    <div class=\"form-group col-md-12\">\r\n            \r\n                                        <label class=\"small mb-1\" for=\"inputLocation\">Brands</label>\r\n                                        <ng-select [items]=\"BrandsList\" bindLabel=\"name\" bindValue=\"brandID\" [multiple]=\"true\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"selectedBrandIds\">\r\n                                            <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                                                <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                                                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                                                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                                                </div>\r\n            \r\n                                            </ng-template>\r\n                                        </ng-select>\r\n                                    </div>\r\n                                </div>\r\n                            \r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Amount</label>\r\n                                    <input type=\"number\" class=\"form-control\" id=amount placeholder=\"\" formControlName=\"amount\">\r\n                                    <div *ngIf=\"f.amount.invalid && (f.amount.dirty || f.amount.touched)\" class=\"alert alert-danger\">\r\n                                        <div *ngIf=\"f.amount.errors.required\">\r\n                                            Amount is required.\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n\r\n                        </div>\r\n                     \r\n                    </div>\r\n\r\n\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\" >Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Area</h1>\n<p class=\"mb-4\"></p>\n\n<form [formGroup]=\"deliveryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\n    <div class=\"row\">\n\n        <div class=\"col-xl-12\">\n            <div class=\"card mb-4\">\n                <div class=\"card-header\">Delivery Area Details</div>\n                <div class=\"card-body\">\n\n                                \n                            \n                    <div class=\"form-row\">\n                        <div class=\"form-group col-md-8\">\n                            <div class=\"form-group\">\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\n                                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\n                                    <div *ngIf=\"f.name.errors.required\">\n                                        Name is required.\n                                    </div>\n                                </div>\n                            </div>\n                            <!-- Form Row-->\n                            <div class=\"form-row\">\n                                <div class=\"form-group col-md-12\">\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Amount</label>\n                                    <input type=\"number\" class=\"form-control\" id=amount placeholder=\"\" formControlName=\"amount\">\n                                    <div *ngIf=\"f.amount.invalid && (f.amount.dirty || f.amount.touched)\" class=\"alert alert-danger\">\n                                        <div *ngIf=\"f.amount.errors.required\">\n                                            Amount is required.\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n\n                        </div>\n                     \n                    </div>\n\n\n                    <div class=\"form-row\">\n                        <div class=\"form-group col-lg-12\">\n                            <label for=\"Item Status\">Status</label>\n                            <div class=\"custom-control custom-switch custom-switch-md\">\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\n                            </div>\n                        </div>\n                    </div>\n                    <!-- Save changes button-->\n                    <button class=\"btn btn-primary\" type=\"submit\" >Save changes</button>\n\n                </div>\n            </div>\n        </div>\n    </div>\n</form>";
       /***/
     },
 
@@ -1000,7 +1000,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Discount</label>\r\n                <input type=\"text\" class=\"form-control\" id=discount placeholder=\"\" formControlName=\"discount\">\r\n                <div *ngIf=\"f.discount.invalid && (f.discount.dirty || f.discount.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.discount.errors.required\">\r\n                    Discount is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">DeliveryCharges</label>\r\n                  <input type=\"text\" class=\"form-control\" id=deliveryCharges placeholder=\"\" formControlName=\"deliveryCharges\">\r\n                  <div *ngIf=\"f.deliveryCharges.invalid && (f.deliveryCharges.dirty || f.deliveryCharges.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.deliveryCharges.errors.required\">\r\n                      Delivery Charges is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Tax</label>\r\n                <input type=\"text\" class=\"form-control\" id=tax placeholder=\"\" formControlName=\"tax\">\r\n                <div *ngIf=\"f.tax.invalid && (f.tax.dirty || f.tax.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.tax.errors.required\">\r\n                    Tax is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Minimum Order Amount</label>\r\n                  <input type=\"text\" class=\"form-control\" id=minimumOrderAmount placeholder=\"\" formControlName=\"minimumOrderAmount\">\r\n                  <div *ngIf=\"f.minimumOrderAmount.invalid && (f.minimumOrderAmount.dirty || f.minimumOrderAmount.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.minimumOrderAmount.errors.required\">\r\n                      Minimum Order Amount is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Update Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Discount</label>\r\n                <input type=\"text\" class=\"form-control\" id=discount placeholder=\"\" formControlName=\"discount\">\r\n                <div *ngIf=\"f.discount.invalid && (f.discount.dirty || f.discount.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.discount.errors.required\">\r\n                    Discount is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">DeliveryCharges</label>\r\n                  <input type=\"text\" class=\"form-control\" id=deliveryCharges placeholder=\"\" formControlName=\"deliveryCharges\">\r\n                  <div *ngIf=\"f.deliveryCharges.invalid && (f.deliveryCharges.dirty || f.deliveryCharges.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.deliveryCharges.errors.required\">\r\n                      Delivery Charges is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Tax</label>\r\n                <input type=\"text\" class=\"form-control\" id=tax placeholder=\"\" formControlName=\"tax\">\r\n                <div *ngIf=\"f.tax.invalid && (f.tax.dirty || f.tax.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.tax.errors.required\">\r\n                    Tax is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Minimum Order Amount</label>\r\n                  <input type=\"text\" class=\"form-control\" id=minimumOrderAmount placeholder=\"\" formControlName=\"minimumOrderAmount\">\r\n                  <div *ngIf=\"f.minimumOrderAmount.invalid && (f.minimumOrderAmount.dirty || f.minimumOrderAmount.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.minimumOrderAmount.errors.required\">\r\n                      Minimum Order Amount is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -1040,7 +1040,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add banner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"bannerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Banner Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Description</label>\r\n                  <input type=\"text\" class=\"form-control\" id=Description placeholder=\"\" formControlName=\"description\">\r\n                  <div *ngIf=\"f.description.invalid && (f.description.dirty || f.description.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.description.errors.required\">\r\n                      Description is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add banner</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"bannerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Banner Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Description</label>\r\n                  <input type=\"text\" class=\"form-control\" id=Description placeholder=\"\" formControlName=\"description\">\r\n                  <div *ngIf=\"f.description.invalid && (f.description.dirty || f.description.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.description.errors.required\">\r\n                      Description is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              \r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Banner Type</label>\r\n                  <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Header</option>\r\n                    <option>Featured</option>\r\n                  </select>\r\n                   \r\n                </div>\r\n              </div>\r\n\r\n\r\n              <!-- <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Banner Type</label>              \r\n              <select class=\"custom-select\" formControlName=\"type\" class=\"form-control\">\r\n                <option disabled>Select Type</option>                  \r\n                <option *ngFor=\"let web of NursingTypeActive\" >{{web}}</option>\r\n            </select>          \r\n              </div>\r\n            </div>          \r\n          </div> -->\r\n\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -1060,7 +1060,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Banners</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Banners List</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Banner\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.description}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.bannerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Banners</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Banners List</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Banner\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"type\" (sort)=\"onSort($event)\"> Type </th>\r\n                        <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.type}} </td>\r\n                        <td> {{item.description}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.bannerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1120,7 +1120,87 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\r\n<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\">\r\n                <div class=\"input-group-prepend\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Area\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">                      \r\n                        <th width=\"30%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"10%\" sortable=\"amount\" (sort)=\"onSort($event)\">  Amount </th>  \r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\"> Status </th>                          \r\n                        <th width=\"10%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                     \r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.amount}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.deliveryAreaID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
+      __webpack_exports__["default"] = "\n<!-- Page Heading -->\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery</h1>\n<p class=\"mb-4\"></p>\n\n<!-- DataTales Example -->\n<div class=\"card shadow mb-4\">\n    <div class=\"card-header py-3\">\n        <div class=\"row\">\n            <div class=\"col-md-6\">\n                <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area</h6>\n            </div>\n            <div class=\" col-lg-4 input-group mb-3\">\n                <div class=\"input-group-prepend\">\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\n                </div>\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\n            </div>\n            <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\n                Add Area\n            </button></div>\n        </div>\n\n\n\n    </div>\n    <div class=\"card-body\">\n        <div class=\"tile-body p-0 table-responsive \">\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr class=\"table-header\">                      \n                        <th width=\"30%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\n                        <th width=\"10%\" sortable=\"amount\" (sort)=\"onSort($event)\">  Amount </th>  \n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\"> Status </th>                          \n                        <th width=\"10%\"></th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor=\"let item of data$ | async \">\n                     \n                        <td> {{item.name}} </td>\n                        <td> {{item.amount}} </td>\n                        <td>\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\n                            </ngb-highlight>\n                        </td>\n                        <td>\n                            <a (click)=\"Edit(item.deliveryAreaID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\n\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n\n\n        <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <p class=\"pagination-count\">\n                    Showing\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\n                    <strong>{{(total$ | async)!}}</strong> results\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\n                </ngb-pagination>\n            </div>\n        </div>\n    </div>\n</div>";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservices/add/addservice.component.html":
+    /*!********************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservices/add/addservice.component.html ***!
+      \********************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsMedicalservicesAddAddserviceComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Service</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"servicesForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Medical Services Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            \r\n              <div class=\"form-group col-md-8\">\r\n                <div class=\"form-group\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Nursing Type</label>\r\n                  <select class=\"custom-select\" formControlName=\"nursingTypeID\"> \r\n                  <option [ngValue]=\"option.nursingTypeID\"  selected=\"option.nursingTypeID == nursingTypeID\"\r\n                  *ngFor=\"let option of NursingTypeActive\">\r\n                  {{option.type}}\r\n                  </option>\r\n                  </select>\r\n                </div>\r\n              </div>          \r\n\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Description</label>\r\n                  <input type=\"text\" class=\"form-control\" id=Description placeholder=\"\" formControlName=\"description\">\r\n                  <div *ngIf=\"f.description.invalid && (f.description.dirty || f.description.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.description.errors.required\">\r\n                      Description is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Requirement</label>\r\n                  <input type=\"text\" class=\"form-control\" id=requirment placeholder=\"\" formControlName=\"requirment\">\r\n                  <div *ngIf=\"f.requirment.invalid && (f.requirment.dirty || f.requirment.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.requirment.errors.required\">\r\n                      Requirement is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div> -->\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                    <label class=\"small mb-1\" for=\"inputFirstName\">Requirement</label>\r\n                    <input type=\"text\" class=\"form-control\" id=requirment placeholder=\"\" formControlName=\"requirment\">\r\n\r\n                </div>\r\n            </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Fees</label>\r\n                  <input type=\"number\" class=\"form-control\" id=fees placeholder=\"\" formControlName=\"fees\">\r\n                  <div *ngIf=\"f.fees.invalid && (f.fees.dirty || f.fees.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fees.errors.required\">\r\n                      Fees is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              \r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservices/service.component.html":
+    /*!*************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservices/service.component.html ***!
+      \*************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsMedicalservicesServiceComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medical Service</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Services List</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Services\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n                        <th width=\"15%\" sortable=\"requirement\" (sort)=\"onSort($event)\">Requirement </th>\r\n                        <th width=\"15%\" sortable=\"fees\" (sort)=\"onSort($event)\">Fees </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.description}} </td>\r\n                        <td> {{item.requirment}} </td>\r\n                        <td> {{item.fees}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.medicalServiceID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.html":
+    /*!**********************************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.html ***!
+      \**********************************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsMedicalservicetypeAddAddmedicalservicetypeComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Service Type</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"servicesForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Medical Type Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Type</label>\r\n                <input type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <div *ngIf=\"f.type.invalid && (f.type.dirty || f.type.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.type.errors.required\">\r\n                    Type is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              \r\n            </div>\r\n            \r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservicetype/medicalservicetype.component.html":
+    /*!***************************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservicetype/medicalservicetype.component.html ***!
+      \***************************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsMedicalservicetypeMedicalservicetypeComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medical Servic Type</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Service Type List</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Service Type\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                         \r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Type </th>                        \r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                       \r\n                        <td> {{item.type}} </td>                      \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.nursingTypeID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1300,7 +1380,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Manage Doctors</span>\r\n        </a>\r\n        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor</a>\r\n\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Nav Item - Pages Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n          <i class=\"fas fa-fw fa-user\"></i>\r\n          <span>Pharmacy</span>\r\n        </a>\r\n        <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/deliverydetail']\">Delivery Details</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Reception</span>\r\n        </a>\r\n        <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Customer Informations</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Laboratory</span>\r\n        </a>\r\n        <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/orders']\">Orders</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Upload Reports</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/customerinquiry']\">Customer Inquiry</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSales\" aria-expanded=\"true\" aria-controls=\"collapseSales\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Sales</span>\r\n        </a>\r\n        <div id=\"collapseSales\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/sales/orders']\">Orders</a>\r\n            <!--<a class=\"collapse-item\">Orders</a>-->\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- <hr class=\"sidebar-divider\"> -->\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n      <!-- <li class=\"nav-item\">\r\n          <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReports\" aria-expanded=\"true\" aria-controls=\"collapseReports\">\r\n              <i class=\"fas fa-fw fa-chart-area\"></i>\r\n              <span>Reports</span>\r\n          </a>\r\n          <div id=\"collapseReports\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n              <div class=\"bg-white py-2 collapse-inner rounded\">\r\n                  <a class=\"collapse-item\" [routerLink]=\"['/admin/report/summary']\">Sales Summary </a>\r\n                  <a class=\"collapse-item\" [routerLink]=\"['/admin/report/salesdetail']\"> Sales details</a>\r\n                  <a class=\"collapse-item\" [routerLink]=\"['/admin/report/salesitemwise']\">Item Sales </a>\r\n                  <a class=\"collapse-item\" [routerLink]=\"['/admin/report/salescustomerwise']\">Customer Sales </a>\r\n                  <a class=\"collapse-item\" [routerLink]=\"['/admin/report/salescategorywise']\">Category Sales </a>\r\n\r\n                  <a class=\"collapse-item\">Sales Summary </a>\r\n                  <a class=\"collapse-item\"> Sales details</a>\r\n                  <a class=\"collapse-item\">Item Sales </a>\r\n                  <a class=\"collapse-item\">Customer Sales </a>\r\n                  <a class=\"collapse-item\">Category Sales </a>\r\n\r\n              </div>\r\n          </div>\r\n      </li> -->\r\n      <!-- <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n          <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSupport\" aria-expanded=\"true\" aria-controls=\"collapseSupport\">\r\n              <i class=\"fas fa-fw fa-sign-out-alt\"></i>\r\n              <span>Support</span>\r\n          </a>\r\n          <div id=\"collapseSupport\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n              <div class=\"bg-white py-2 collapse-inner rounded\">\r\n                  <a class=\"collapse-item\" [routerLink]=\"['/tickets']\">Tickets </a>\r\n                  <a class=\"collapse-item\" [routerLink]=\"['/notifcations']\">Push Notifications</a>\r\n\r\n              </div>\r\n          </div>\r\n      </li> -->\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n             <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings']\">General Settings</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/offers']\">Offers | APP</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/appsettings']\">App Setting</a> -->\r\n\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/offers']\">Offers | APP</a>\r\n\r\n\r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n\r\n    </ul>\r\n    <!-- End of Sidebar -->\r\n    <!-- Content Wrapper -->\r\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n\r\n      <!-- Main Content -->\r\n      <div id=\"content\">\r\n\r\n        <!-- Topbar -->\r\n        <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n\r\n          <!-- Sidebar Toggle (Topbar) -->\r\n          <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n            <i class=\"fa fa-bars\"></i>\r\n          </button>\r\n\r\n          <!-- Topbar Search -->\r\n          <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n            <strong>Branch Name</strong> : {{branchname}} |\r\n            <strong>Email</strong> : {{email}}\r\n          </div>\r\n\r\n          <!-- Topbar Navbar -->\r\n          <ul class=\"navbar-nav ml-auto\">\r\n            <!--<li class=\"nav-item dropdown no-arrow\">\r\n                <div class=\"\">\r\n                    <label for=\"inputUsername\">Select Location</label>\r\n                    <select class=\"custom-select\" [(ngModel)]=\"locationID\" (change)=\"changeloc($event)\">\r\n                    <option value=\"0\">All</option>\r\n                    <option [ngValue]=\"option.locationID\"\r\n                        *ngFor=\"let option of Locations\">\r\n                        {{option.name}}\r\n                    </option>\r\n                   </select>\r\n                </div>\r\n            </li>\r\n\r\n\r\n            <div class=\"topbar-divider d-none d-sm-block\"></div>-->\r\n            <!-- Nav Item - User Information -->\r\n            <li class=\"nav-item dropdown no-arrow\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n                <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n              </a>\r\n              <!-- Dropdown - User Information -->\r\n              <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n                <!-- <a class=\"dropdown-item\" href=\"#\">\r\n                    <i class=\"fas fa-user fa-sm fa-fw mr-2 text-gray-400\"></i> Profile\r\n                </a>\r\n                <a class=\"dropdown-item\" href=\"#\">\r\n                    <i class=\"fas fa-cogs fa-sm fa-fw mr-2 text-gray-400\"></i> Settings\r\n                </a> -->\r\n\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                  <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n                </a>\r\n              </div>\r\n            </li>\r\n\r\n          </ul>\r\n\r\n        </nav>\r\n        <!-- End of Topbar -->\r\n        <!-- Begin Page Content -->\r\n        <div class=\"container-fluid\">\r\n          <router-outlet></router-outlet>\r\n        </div>\r\n      </div>\r\n      <!-- End of Main Content -->\r\n      <!-- Footer -->\r\n      <footer class=\"sticky-footer bg-white\">\r\n        <div class=\"container my-auto\">\r\n          <div class=\"copyright text-center my-auto\">\r\n            <span>Copyright &copy; Mamji 2022</span>\r\n          </div>\r\n        </div>\r\n      </footer>\r\n      <!-- End of Footer -->\r\n\r\n    </div>\r\n    <!-- End of Content Wrapper -->\r\n\r\n  </div>\r\n</body>\r\n";
+      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Manage Doctors</span>\r\n        </a>\r\n        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Nav Item - Pages Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n          <i class=\"fas fa-fw fa-user\"></i>\r\n          <span>Pharmacy</span>\r\n        </a>\r\n        <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Reception</span>\r\n        </a>\r\n        <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Customer Informations</a>\r\n            \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Laboratory</span>\r\n        </a>\r\n        <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/orders']\">Orders</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Upload Reports</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/customerinquiry']\">Customer Inquiry</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseMedicalService\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Home Nursing</span>\r\n        </a>\r\n        <div id=\"collapseMedicalService\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservicetype']\">Medical Service Type </a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservices']\">Medical Services</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Nursing Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n             <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">General Settings</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservices']\">Medical Services</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n     \r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n    <!-- End of Sidebar -->\r\n    <!-- Content Wrapper -->\r\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n      <!-- Main Content -->\r\n      <div id=\"content\">\r\n        <!-- Topbar -->\r\n        <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n          <!-- Sidebar Toggle (Topbar) -->\r\n          <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n            <i class=\"fa fa-bars\"></i>\r\n          </button>\r\n\r\n          <!-- Topbar Search -->\r\n          <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n            <strong>Welcome to Mamji Hospital</strong> \r\n            \r\n          </div>\r\n\r\n          <!-- Topbar Navbar -->\r\n          <ul class=\"navbar-nav ml-auto\">\r\n            <!-- Nav Item - User Information -->\r\n            <li class=\"nav-item dropdown no-arrow\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n                <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n              </a>\r\n              <!-- Dropdown - User Information -->\r\n              <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                  <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n                </a>\r\n              </div>\r\n            </li>\r\n\r\n          </ul>\r\n\r\n        </nav>\r\n        <!-- End of Topbar -->\r\n        <!-- Begin Page Content -->\r\n        <div class=\"container-fluid\">\r\n          <router-outlet></router-outlet>\r\n        </div>\r\n      </div>\r\n      <!-- End of Main Content -->\r\n      <!-- Footer -->\r\n      <footer class=\"sticky-footer bg-white\">\r\n        <div class=\"container my-auto\">\r\n          <div class=\"copyright text-center my-auto\">\r\n            <span>Copyright &copy; Mamji 2022</span>\r\n          </div>\r\n        </div>\r\n      </footer>\r\n      <!-- End of Footer -->\r\n\r\n    </div>\r\n    <!-- End of Content Wrapper -->\r\n\r\n  </div>\r\n</body>\r\n";
       /***/
     },
 
@@ -2475,6 +2555,7 @@
         }, {
           key: "update",
           value: function update(updateData) {
+            debugger;
             return this.http.post("api/appsetting/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
               console.log(res);
               return res;
@@ -4201,6 +4282,7 @@
         }, {
           key: "getById",
           value: function getById(id) {
+            debugger;
             return this.http.get("api/delivery/".concat(id));
           } // getBrands(brandId) {
           //   return this.http.get<Delivery[]>(`api/delivery/settings/${brandId}`);
@@ -4208,10 +4290,10 @@
 
         }, {
           key: "getAllData",
-          value: function getAllData(brandId) {
+          value: function getAllData() {
             var _this9 = this;
 
-            var url = "api/delivery/all/".concat(brandId);
+            var url = "api/delivery/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
               return _this9._loading$.next(true);
@@ -5794,6 +5876,592 @@
     },
 
     /***/
+    "./src/app/_services/medical.service.ts":
+    /*!**********************************************!*\
+      !*** ./src/app/_services/medical.service.ts ***!
+      \**********************************************/
+
+    /*! exports provided: MedicalService */
+
+    /***/
+    function srcApp_servicesMedicalServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "MedicalService", function () {
+        return MedicalService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.name.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var MedicalService = /*#__PURE__*/function () {
+        function MedicalService(http) {
+          _classCallCheck(this, MedicalService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(MedicalService, [{
+          key: "ExportList",
+          value: function ExportList(medicineID) {
+            return this.http.get("api/medicalservice/all");
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/medicalservice/service/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this14 = this;
+
+            var url = "api/medicalservice/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this14._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this14.medical = res;
+
+              _this14._data$.next(_this14.medical);
+
+              _this14._allData$.next(_this14.medical);
+
+              _this14._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this14._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this14._loading$.next(false);
+              })).subscribe(function (result) {
+                _this14._data$.next(result.data);
+
+                _this14._total$.next(result.total);
+              });
+
+              _this14._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state14 = this._state,
+                sortColumn = _this$_state14.sortColumn,
+                sortDirection = _this$_state14.sortDirection,
+                pageSize = _this$_state14.pageSize,
+                page = _this$_state14.page,
+                searchTerm = _this$_state14.searchTerm; // 1. sort
+
+            var sortedData = sort(this.medical, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            debugger;
+            return this.http.post('api/medicalservice/insert', data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/medicalservice/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(data) {
+            return this.http.post("api/medicalservice/delete", data);
+          }
+        }, {
+          key: "loadActiveTyp",
+          value: function loadActiveTyp() {
+            return this.http.get("api/nursing/Alltype");
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return MedicalService;
+      }();
+
+      MedicalService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      MedicalService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], MedicalService);
+      /***/
+    },
+
+    /***/
+    "./src/app/_services/medicalservicetype.service.ts":
+    /*!*********************************************************!*\
+      !*** ./src/app/_services/medicalservicetype.service.ts ***!
+      \*********************************************************/
+
+    /*! exports provided: MedicalServiceTypes */
+
+    /***/
+    function srcApp_servicesMedicalservicetypeServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "MedicalServiceTypes", function () {
+        return MedicalServiceTypes;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.type.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var MedicalServiceTypes = /*#__PURE__*/function () {
+        function MedicalServiceTypes(http) {
+          _classCallCheck(this, MedicalServiceTypes);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(MedicalServiceTypes, [{
+          key: "ExportList",
+          value: function ExportList(medicineID) {
+            return this.http.get("api/nursing/alltype");
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            debugger;
+            return this.http.get("api/nursing/servicetype/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this15 = this;
+
+            debugger;
+            var url = "api/nursing/Alltype";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this15._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this15.medical = res;
+
+              _this15._data$.next(_this15.medical);
+
+              _this15._allData$.next(_this15.medical);
+
+              _this15._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this15._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this15._loading$.next(false);
+              })).subscribe(function (result) {
+                _this15._data$.next(result.data);
+
+                _this15._total$.next(result.total);
+              });
+
+              _this15._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state15 = this._state,
+                sortColumn = _this$_state15.sortColumn,
+                sortDirection = _this$_state15.sortDirection,
+                pageSize = _this$_state15.pageSize,
+                page = _this$_state15.page,
+                searchTerm = _this$_state15.searchTerm; // 1. sort
+
+            var sortedData = sort(this.medical, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            return this.http.post('api/nursing/inserttype', data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/nursing/updatetype", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(data) {
+            return this.http.post("api/nursing/deletetype", data);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return MedicalServiceTypes;
+      }();
+
+      MedicalServiceTypes.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      MedicalServiceTypes = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], MedicalServiceTypes);
+      /***/
+    },
+
+    /***/
     "./src/app/_services/medicine.service.ts":
     /*!***********************************************!*\
       !*** ./src/app/_services/medicine.service.ts ***!
@@ -5902,30 +6570,31 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this14 = this;
+            var _this16 = this;
 
+            debugger;
             var url = "api/medicine/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this14._loading$.next(true);
+              return _this16._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this14.medicine = res;
+              _this16.medicine = res;
 
-              _this14._data$.next(_this14.medicine);
+              _this16._data$.next(_this16.medicine);
 
-              _this14._allData$.next(_this14.medicine);
+              _this16._allData$.next(_this16.medicine);
 
-              _this14._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this14._search();
+              _this16._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this16._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this14._loading$.next(false);
+                return _this16._loading$.next(false);
               })).subscribe(function (result) {
-                _this14._data$.next(result.data);
+                _this16._data$.next(result.data);
 
-                _this14._total$.next(result.total);
+                _this16._total$.next(result.total);
               });
 
-              _this14._search$.next();
+              _this16._search$.next();
             });
           }
         }, {
@@ -5938,12 +6607,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state14 = this._state,
-                sortColumn = _this$_state14.sortColumn,
-                sortDirection = _this$_state14.sortDirection,
-                pageSize = _this$_state14.pageSize,
-                page = _this$_state14.page,
-                searchTerm = _this$_state14.searchTerm; // 1. sort
+            var _this$_state16 = this._state,
+                sortColumn = _this$_state16.sortColumn,
+                sortDirection = _this$_state16.sortDirection,
+                pageSize = _this$_state16.pageSize,
+                page = _this$_state16.page,
+                searchTerm = _this$_state16.searchTerm; // 1. sort
 
             var sortedData = sort(this.medicine, sortColumn, sortDirection); //// 2. filter
 
@@ -5999,6 +6668,7 @@
         }, {
           key: "delete",
           value: function _delete(data) {
+            debugger;
             return this.http.post("api/medicine/delete", data);
           }
         }, {
@@ -6191,30 +6861,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(brandId) {
-            var _this15 = this;
+            var _this17 = this;
 
             var url = "api/modifier/all/".concat(brandId);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this15._loading$.next(true);
+              return _this17._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this15.modifiers = res;
+              _this17.modifiers = res;
 
-              _this15._data$.next(_this15.modifiers);
+              _this17._data$.next(_this17.modifiers);
 
-              _this15._allData$.next(_this15.modifiers);
+              _this17._allData$.next(_this17.modifiers);
 
-              _this15._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this15._search();
+              _this17._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this17._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this15._loading$.next(false);
+                return _this17._loading$.next(false);
               })).subscribe(function (result) {
-                _this15._data$.next(result.data);
+                _this17._data$.next(result.data);
 
-                _this15._total$.next(result.total);
+                _this17._total$.next(result.total);
               });
 
-              _this15._search$.next();
+              _this17._search$.next();
             });
           }
         }, {
@@ -6227,12 +6897,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state15 = this._state,
-                sortColumn = _this$_state15.sortColumn,
-                sortDirection = _this$_state15.sortDirection,
-                pageSize = _this$_state15.pageSize,
-                page = _this$_state15.page,
-                searchTerm = _this$_state15.searchTerm; // 1. sort
+            var _this$_state17 = this._state,
+                sortColumn = _this$_state17.sortColumn,
+                sortDirection = _this$_state17.sortDirection,
+                pageSize = _this$_state17.pageSize,
+                page = _this$_state17.page,
+                searchTerm = _this$_state17.searchTerm; // 1. sort
 
             var sortedData = sort(this.modifiers, sortColumn, sortDirection); //// 2. filter
 
@@ -6476,30 +7146,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(brandId) {
-            var _this16 = this;
+            var _this18 = this;
 
             var url = "api/offers/all/".concat(brandId);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this16._loading$.next(true);
+              return _this18._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this16.offerss = res;
+              _this18.offerss = res;
 
-              _this16._data$.next(_this16.offerss);
+              _this18._data$.next(_this18.offerss);
 
-              _this16._allData$.next(_this16.offerss);
+              _this18._allData$.next(_this18.offerss);
 
-              _this16._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this16._search();
+              _this18._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this18._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this16._loading$.next(false);
+                return _this18._loading$.next(false);
               })).subscribe(function (result) {
-                _this16._data$.next(result.data);
+                _this18._data$.next(result.data);
 
-                _this16._total$.next(result.total);
+                _this18._total$.next(result.total);
               });
 
-              _this16._search$.next();
+              _this18._search$.next();
             });
           }
         }, {
@@ -6512,12 +7182,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state16 = this._state,
-                sortColumn = _this$_state16.sortColumn,
-                sortDirection = _this$_state16.sortDirection,
-                pageSize = _this$_state16.pageSize,
-                page = _this$_state16.page,
-                searchTerm = _this$_state16.searchTerm; // 1. sort
+            var _this$_state18 = this._state,
+                sortColumn = _this$_state18.sortColumn,
+                sortDirection = _this$_state18.sortDirection,
+                pageSize = _this$_state18.pageSize,
+                page = _this$_state18.page,
+                searchTerm = _this$_state18.searchTerm; // 1. sort
 
             var sortedData = sort(this.offerss, sortColumn, sortDirection); //// 2. filter
 
@@ -6771,30 +7441,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(fromDate, toDate) {
-            var _this17 = this;
+            var _this19 = this;
 
             var url = "api/orders/all/0/".concat(fromDate, "/").concat(toDate);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this17._loading$.next(true);
+              return _this19._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this17.orders = res;
+              _this19.orders = res;
 
-              _this17._data$.next(_this17.orders);
+              _this19._data$.next(_this19.orders);
 
-              _this17._allData$.next(_this17.orders);
+              _this19._allData$.next(_this19.orders);
 
-              _this17._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this17._search();
+              _this19._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this19._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this17._loading$.next(false);
+                return _this19._loading$.next(false);
               })).subscribe(function (result) {
-                _this17._data$.next(result.data);
+                _this19._data$.next(result.data);
 
-                _this17._total$.next(result.total);
+                _this19._total$.next(result.total);
               });
 
-              _this17._search$.next();
+              _this19._search$.next();
             });
           }
         }, {
@@ -6807,12 +7477,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state17 = this._state,
-                sortColumn = _this$_state17.sortColumn,
-                sortDirection = _this$_state17.sortDirection,
-                pageSize = _this$_state17.pageSize,
-                page = _this$_state17.page,
-                searchTerm = _this$_state17.searchTerm; // 1. sort
+            var _this$_state19 = this._state,
+                sortColumn = _this$_state19.sortColumn,
+                sortDirection = _this$_state19.sortDirection,
+                pageSize = _this$_state19.pageSize,
+                page = _this$_state19.page,
+                searchTerm = _this$_state19.searchTerm; // 1. sort
 
             var sortedData = sort(this.orders, sortColumn, sortDirection); //// 2. filter
 
@@ -7047,30 +7717,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this18 = this;
+            var _this20 = this;
 
             var url = "api/prescription/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this18._loading$.next(true);
+              return _this20._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this18.prescription = res;
+              _this20.prescription = res;
 
-              _this18._data$.next(_this18.prescription);
+              _this20._data$.next(_this20.prescription);
 
-              _this18._allData$.next(_this18.prescription);
+              _this20._allData$.next(_this20.prescription);
 
-              _this18._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this18._search();
+              _this20._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this20._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this18._loading$.next(false);
+                return _this20._loading$.next(false);
               })).subscribe(function (result) {
-                _this18._data$.next(result.data);
+                _this20._data$.next(result.data);
 
-                _this18._total$.next(result.total);
+                _this20._total$.next(result.total);
               });
 
-              _this18._search$.next();
+              _this20._search$.next();
             });
           }
         }, {
@@ -7083,12 +7753,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state18 = this._state,
-                sortColumn = _this$_state18.sortColumn,
-                sortDirection = _this$_state18.sortDirection,
-                pageSize = _this$_state18.pageSize,
-                page = _this$_state18.page,
-                searchTerm = _this$_state18.searchTerm; // 1. sort
+            var _this$_state20 = this._state,
+                sortColumn = _this$_state20.sortColumn,
+                sortDirection = _this$_state20.sortDirection,
+                pageSize = _this$_state20.pageSize,
+                page = _this$_state20.page,
+                searchTerm = _this$_state20.searchTerm; // 1. sort
 
             var sortedData = sort(this.prescription, sortColumn, sortDirection); //// 2. filter
 
@@ -7137,6 +7807,7 @@
         }, {
           key: "update",
           value: function update(data) {
+            debugger;
             return this.http.post('api/prescription/update', data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
               console.log(res);
               return res;
@@ -7328,12 +7999,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state19 = this._state,
-                sortColumn = _this$_state19.sortColumn,
-                sortDirection = _this$_state19.sortDirection,
-                pageSize = _this$_state19.pageSize,
-                page = _this$_state19.page,
-                searchTerm = _this$_state19.searchTerm; // 1. sort
+            var _this$_state21 = this._state,
+                sortColumn = _this$_state21.sortColumn,
+                sortDirection = _this$_state21.sortDirection,
+                pageSize = _this$_state21.pageSize,
+                page = _this$_state21.page,
+                searchTerm = _this$_state21.searchTerm; // 1. sort
 
             var sortedData = sort(this.salescategorywiseReport, sortColumn, sortDirection); //// 2. filter
 
@@ -7737,21 +8408,21 @@
         }, {
           key: "setSelectedBrand",
           value: function setSelectedBrand() {
-            var _this19 = this;
+            var _this21 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this19.loadingBrand = true;
+                _this21.loadingBrand = true;
 
-                _this19.f.brandID.setValue(sid);
+                _this21.f.brandID.setValue(sid);
 
-                _this19.brandService.getById(sid, _this19.f.brandID.value).subscribe(function (res) {
+                _this21.brandService.getById(sid, _this21.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this19.editForm(res);
+                  _this21.editForm(res);
 
-                  _this19.loadingBrand = false;
+                  _this21.loadingBrand = false;
                 });
               }
             });
@@ -7759,7 +8430,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this20 = this;
+            var _this22 = this;
 
             debugger;
             this.brandForm.markAllAsTouched();
@@ -7778,38 +8449,38 @@
               console.log(JSON.stringify(this.brandForm.value));
               this.brandService.insert(this.brandForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this20.ts.showSuccess("Success", "Record added successfully.");
+                  _this22.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this20.router.navigate(['/admin/brand']);
+                  _this22.router.navigate(['/admin/brand']);
                 }
 
-                _this20.loading = false;
+                _this22.loading = false;
               }, function (error) {
-                _this20.ts.showError("Error", "Failed to insert record.");
+                _this22.ts.showError("Error", "Failed to insert record.");
 
-                _this20.loading = false;
+                _this22.loading = false;
               });
             } else {
               //Update brand
               this.brandService.update(this.brandForm.value).subscribe(function (data) {
-                _this20.loading = false;
+                _this22.loading = false;
 
                 if (data != 0) {
-                  _this20.ts.showSuccess("Success", "Record updated successfully.");
+                  _this22.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this20.router.navigate(['/admin/brand']);
+                  _this22.router.navigate(['/admin/brand']);
                 }
               }, function (error) {
-                _this20.ts.showError("Error", "Failed to update record.");
+                _this22.ts.showError("Error", "Failed to update record.");
 
-                _this20.loading = false;
+                _this22.loading = false;
               });
             }
           }
         }, {
           key: "selectFile",
           value: function selectFile(event) {
-            var _this21 = this;
+            var _this23 = this;
 
             this.fileData = event.target.files[0];
 
@@ -7820,9 +8491,9 @@
 
               reader.onload = function () {
                 debugger;
-                _this21.imageBgUrl = reader.result;
+                _this23.imageBgUrl = reader.result;
 
-                _this21.f.companyURl.setValue(_this21.imageBgUrl);
+                _this23.f.companyURl.setValue(_this23.imageBgUrl);
               };
             } else {
               alert("file type should be image");
@@ -7997,16 +8668,16 @@
         }, {
           key: "Delete",
           value: function Delete(id) {
-            var _this22 = this;
+            var _this24 = this;
 
             this.service["delete"](parseInt(id)).subscribe(function (res) {
               if (res != 0) {
-                _this22.ts.showSuccess("Success", "Record deleted successfully.");
+                _this24.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this22.getData();
-              } else _this22.ts.showError("Error", "Failed to delete record.");
+                _this24.getData();
+              } else _this24.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this22.ts.showError("Error", "Failed to delete record.");
+              _this24.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -8246,21 +8917,21 @@
         }, {
           key: "setSelectedLocations",
           value: function setSelectedLocations() {
-            var _this23 = this;
+            var _this25 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this23.loadingLocations = true;
+                _this25.loadingLocations = true;
 
-                _this23.f.locationID.setValue(sid);
+                _this25.f.locationID.setValue(sid);
 
-                _this23.locationService.getById(sid, _this23.f.brandID.value).subscribe(function (res) {
+                _this25.locationService.getById(sid, _this25.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this23.editForm(res);
+                  _this25.editForm(res);
 
-                  _this23.loadingLocations = false;
+                  _this25.loadingLocations = false;
                 });
               }
             });
@@ -8268,7 +8939,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this24 = this;
+            var _this26 = this;
 
             debugger;
             this.locationForm.markAllAsTouched();
@@ -8288,32 +8959,32 @@
             if (parseInt(this.f.locationID.value) === 0) {
               //Insert location
               this.locationService.insert(this.locationForm.value).subscribe(function (data) {
-                _this24.loading = false;
+                _this26.loading = false;
 
                 if (data != 0) {
-                  _this24.ts.showSuccess("Success", "Record added successfully.");
+                  _this26.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this24.router.navigate(['/admin/location']);
+                  _this26.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this24.ts.showError("Error", "Failed to insert record.");
+                _this26.ts.showError("Error", "Failed to insert record.");
 
-                _this24.loading = false;
+                _this26.loading = false;
               });
             } else {
               //Update location
               this.locationService.update(this.locationForm.value).subscribe(function (data) {
-                _this24.loading = false;
+                _this26.loading = false;
 
                 if (data != 0) {
-                  _this24.ts.showSuccess("Success", "Record updated successfully.");
+                  _this26.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this24.router.navigate(['/admin/location']);
+                  _this26.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this24.ts.showError("Error", "Failed to update record.");
+                _this26.ts.showError("Error", "Failed to update record.");
 
-                _this24.loading = false;
+                _this26.loading = false;
               });
             }
           }
@@ -8478,16 +9149,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this25 = this;
+            var _this27 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this25.ts.showSuccess("Success", "Record deleted successfully.");
+                _this27.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this25.getData();
-              } else _this25.ts.showError("Error", "Failed to delete record.");
+                _this27.getData();
+              } else _this27.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this25.ts.showError("Error", "Failed to delete record.");
+              _this27.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -8641,10 +9312,11 @@
         }, {
           key: "GetDashboard",
           value: function GetDashboard() {
-            var _this26 = this;
+            var _this28 = this;
 
+            debugger;
             this.service.getAllData().subscribe(function (res) {
-              _this26.dashboardSummary = res[0];
+              _this28.dashboardSummary = res[0];
             });
           }
         }]);
@@ -8789,36 +9461,36 @@
               statusID: [true],
               customerID: 0,
               laboratoryID: [0],
-              imagePath: ['']
+              image: ['']
             });
           }
         }, {
           key: "editForm",
           value: function editForm(obj) {
             this.f.customerID.setValue(obj.customerID);
-            this.f.labReference.setValue(obj.labReference);
-            this.f.imagePath.setValue(obj.imagePath);
+            this.f.labReferenceNo.setValue(obj.labReferenceNo);
+            this.f.image.setValue(obj.image);
             this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-            this.imgComp.imageUrl = obj.imagePath;
+            this.imgComp.imageUrl = obj.image;
           }
         }, {
           key: "setSelectedReport",
           value: function setSelectedReport() {
-            var _this27 = this;
+            var _this29 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this27.loadingReport = true;
+                _this29.loadingReport = true;
 
-                _this27.f.laboratoryID.setValue(sid);
+                _this29.f.laboratoryID.setValue(sid);
 
-                _this27.laboratoryService.getById(sid).subscribe(function (res) {
+                _this29.laboratoryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this27.editForm(res);
+                  _this29.editForm(res);
 
-                  _this27.loadingReport = false;
+                  _this29.loadingReport = false;
                 });
               }
             });
@@ -8826,7 +9498,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this28 = this;
+            var _this30 = this;
 
             debugger;
             this.reportForm.markAllAsTouched();
@@ -8838,48 +9510,48 @@
 
             this.loading = true;
             this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-            this.f.imagePath.setValue(this.imgComp.imageUrl);
+            this.f.image.setValue(this.imgComp.imageUrl);
 
             if (parseInt(this.f.laboratoryID.value) === 0) {
               //Insert customer
               console.log(JSON.stringify(this.reportForm.value));
               this.laboratoryService.insert(this.reportForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this28.ts.showSuccess("Success", "Record added successfully.");
+                  _this30.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this28.router.navigate(['/admin/laboratory/uploadreport']);
+                  _this30.router.navigate(['/admin/laboratory/uploadreport']);
                 }
 
-                _this28.loading = false;
+                _this30.loading = false;
               }, function (error) {
-                _this28.ts.showError("Error", "Failed to insert record.");
+                _this30.ts.showError("Error", "Failed to insert record.");
 
-                _this28.loading = false;
+                _this30.loading = false;
               });
             } else {
               //Update customer
               this.laboratoryService.update(this.reportForm.value).subscribe(function (data) {
-                _this28.loading = false;
+                _this30.loading = false;
 
                 if (data != 0) {
-                  _this28.ts.showSuccess("Success", "Record updated successfully.");
+                  _this30.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this28.router.navigate(['/admin/laboratory/uploadreport']);
+                  _this30.router.navigate(['/admin/laboratory/uploadreport']);
                 }
               }, function (error) {
-                _this28.ts.showError("Error", "Failed to update record.");
+                _this30.ts.showError("Error", "Failed to update record.");
 
-                _this28.loading = false;
+                _this30.loading = false;
               });
             }
           }
         }, {
           key: "loadCustomer",
           value: function loadCustomer() {
-            var _this29 = this;
+            var _this31 = this;
 
             this.laboratoryService.loadCustomer().subscribe(function (res) {
-              _this29.CustomerList = res;
+              _this31.CustomerList = res;
             });
           }
         }, {
@@ -8970,6 +9642,42 @@
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/_services/laboratory.service */
+      "./src/app/_services/laboratory.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -8992,31 +9700,100 @@
       };
 
       var UploadreportComponent = /*#__PURE__*/function () {
-        function UploadreportComponent() {
+        function UploadreportComponent(service, ls, excelService, ts, router) {
           _classCallCheck(this, UploadreportComponent);
+
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.loading$ = service.loading$;
+          this.submit = false;
         }
 
         _createClass(UploadreportComponent, [{
           key: "ngOnInit",
-          value: function ngOnInit() {}
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref3) {
+            var column = _ref3.column,
+                direction = _ref3.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(medicine) {
+            this.router.navigate(["admin/laboratory/uploadreport/edit", medicine]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this32 = this;
+
+            debugger;
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this32.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this32.getData();
+              } else _this32.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this32.ts.showError("Error", "Failed to delete record.");
+            });
+          }
         }]);
 
         return UploadreportComponent;
       }();
 
       UploadreportComponent.ctorParameters = function () {
-        return [];
+        return [{
+          type: src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_3__["LaboratoryService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
+        }];
       };
 
+      UploadreportComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"]]
+        }]
+      };
       UploadreportComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
         selector: 'app-uploadreport',
         template: __importDefault(__webpack_require__(
         /*! raw-loader!./uploadreport.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/uploadreport/uploadreport.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]],
         styles: [__importDefault(__webpack_require__(
         /*! ./uploadreport.component.css */
         "./src/app/admin/laboratory/uploadreport/uploadreport.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [])], UploadreportComponent);
+      }), __metadata("design:paramtypes", [src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_3__["LaboratoryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])], UploadreportComponent);
       /***/
     },
 
@@ -9182,21 +9959,21 @@
         }, {
           key: "setSelectedDoctor",
           value: function setSelectedDoctor() {
-            var _this30 = this;
+            var _this33 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this30.loadingDoctor = true;
+                _this33.loadingDoctor = true;
 
-                _this30.f.doctorID.setValue(sid);
+                _this33.f.doctorID.setValue(sid);
 
-                _this30.doctorService.getById(sid).subscribe(function (res) {
+                _this33.doctorService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this30.editForm(res);
+                  _this33.editForm(res);
 
-                  _this30.loadingDoctor = false;
+                  _this33.loadingDoctor = false;
                 });
               }
             });
@@ -9204,11 +9981,11 @@
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this31 = this;
+            var _this34 = this;
 
             debugger;
             this.appointmentService.loadSpecialities().subscribe(function (res) {
-              _this31.selectedSpecialityList = res;
+              _this34.selectedSpecialityList = res;
             });
           } // loadDay() {
           //   debugger
@@ -9220,7 +9997,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this32 = this;
+            var _this35 = this;
 
             debugger;
             this.doctorForm.markAllAsTouched();
@@ -9243,31 +10020,31 @@
               console.log(JSON.stringify(this.doctorForm.value));
               this.doctorService.insert(this.doctorForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this32.ts.showSuccess("Success", "Record added successfully.");
+                  _this35.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this32.router.navigate(['/admin/doctor']);
+                  _this35.router.navigate(['/admin/doctor']);
                 }
 
-                _this32.loading = false;
+                _this35.loading = false;
               }, function (error) {
-                _this32.ts.showError("Error", "Failed to insert record.");
+                _this35.ts.showError("Error", "Failed to insert record.");
 
-                _this32.loading = false;
+                _this35.loading = false;
               });
             } else {
               //Update doctor
               this.doctorService.update(this.doctorForm.value).subscribe(function (data) {
-                _this32.loading = false;
+                _this35.loading = false;
 
                 if (data != 0) {
-                  _this32.ts.showSuccess("Success", "Record updated successfully.");
+                  _this35.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this32.router.navigate(['/admin/managedoctor/doctor']);
+                  _this35.router.navigate(['/admin/managedoctor/doctor']);
                 }
               }, function (error) {
-                _this32.ts.showError("Error", "Failed to update record.");
+                _this35.ts.showError("Error", "Failed to update record.");
 
-                _this32.loading = false;
+                _this35.loading = false;
               });
             }
           }
@@ -9461,12 +10238,12 @@
         _createClass(DoctorComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this33 = this;
+            var _this36 = this;
 
             this.service.ExportList(this.selectedDoctor).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this33.ts.showError("Error", "Failed to export");
+              _this36.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -9484,9 +10261,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref3) {
-            var column = _ref3.column,
-                direction = _ref3.direction;
+          value: function onSort(_ref4) {
+            var column = _ref4.column,
+                direction = _ref4.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -9503,16 +10280,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this34 = this;
+            var _this37 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this34.ts.showSuccess("Success", "Record deleted successfully.");
+                _this37.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this34.getData();
-              } else _this34.ts.showError("Error", "Failed to delete record.");
+                _this37.getData();
+              } else _this37.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this34.ts.showError("Error", "Failed to delete record.");
+              _this37.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -9708,21 +10485,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this35 = this;
+            var _this38 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this35.loadingaddon = true;
+                _this38.loadingaddon = true;
 
-                _this35.f.addonID.setValue(sid);
+                _this38.f.addonID.setValue(sid);
 
-                _this35.addonsService.getById(sid, _this35.f.brandID.value).subscribe(function (res) {
+                _this38.addonsService.getById(sid, _this38.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this35.editForm(res);
+                  _this38.editForm(res);
 
-                  _this35.loadingaddon = false;
+                  _this38.loadingaddon = false;
                 });
               }
             });
@@ -9730,7 +10507,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this36 = this;
+            var _this39 = this;
 
             this.addonForm.markAllAsTouched();
             this.submitted = true;
@@ -9748,32 +10525,32 @@
               console.log(JSON.stringify(this.addonForm.value));
               this.addonsService.insert(this.addonForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this36.ts.showSuccess("Success", "Record added successfully.");
+                  _this39.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this36.router.navigate(['/admin/addons']);
+                  _this39.router.navigate(['/admin/addons']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this36.loading = false;
+                _this39.loading = false;
               }, function (error) {
-                _this36.ts.showError("Error", "Failed to insert record.");
+                _this39.ts.showError("Error", "Failed to insert record.");
 
-                _this36.loading = false;
+                _this39.loading = false;
               });
             } else {
               //Update modifier
               this.addonsService.update(this.addonForm.value).subscribe(function (data) {
-                _this36.loading = false;
+                _this39.loading = false;
 
                 if (data != 0) {
-                  _this36.ts.showSuccess("Success", "Record updated successfully.");
+                  _this39.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this36.router.navigate(['/admin/addons']);
+                  _this39.router.navigate(['/admin/addons']);
                 }
               }, function (error) {
-                _this36.ts.showError("Error", "Failed to update record.");
+                _this39.ts.showError("Error", "Failed to update record.");
 
-                _this36.loading = false;
+                _this39.loading = false;
               });
             }
           }
@@ -9927,11 +10704,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this37 = this;
+            var _this40 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this37.ts.showError("Error", "Failed to export");
+              _this40.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -9944,9 +10721,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref4) {
-            var column = _ref4.column,
-                direction = _ref4.direction;
+          value: function onSort(_ref5) {
+            var column = _ref5.column,
+                direction = _ref5.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -9963,16 +10740,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this38 = this;
+            var _this41 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this38.ts.showSuccess("Success", "Record deleted successfully.");
+                _this41.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this38.getData();
-              } else _this38.ts.showError("Error", "Failed to delete record.");
+                _this41.getData();
+              } else _this41.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this38.ts.showError("Error", "Failed to delete record.");
+              _this41.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -10173,21 +10950,21 @@
         }, {
           key: "setSelectedCategory",
           value: function setSelectedCategory() {
-            var _this39 = this;
+            var _this42 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this39.loadingCategory = true;
+                _this42.loadingCategory = true;
 
-                _this39.f.categoryID.setValue(sid);
+                _this42.f.categoryID.setValue(sid);
 
-                _this39.categoryService.getById(sid, _this39.f.brandID.value).subscribe(function (res) {
+                _this42.categoryService.getById(sid, _this42.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this39.editForm(res);
+                  _this42.editForm(res);
 
-                  _this39.loadingCategory = false;
+                  _this42.loadingCategory = false;
                 });
               }
             });
@@ -10195,7 +10972,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this40 = this;
+            var _this43 = this;
 
             this.categoryForm.markAllAsTouched();
             this.submitted = true;
@@ -10212,31 +10989,31 @@
               //Insert category
               this.categoryService.insert(this.categoryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this40.ts.showSuccess("Success", "Record added successfully.");
+                  _this43.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this40.router.navigate(['/admin/category']);
+                  _this43.router.navigate(['/admin/category']);
                 }
 
-                _this40.loading = false;
+                _this43.loading = false;
               }, function (error) {
-                _this40.ts.showError("Error", "Failed to insert record.");
+                _this43.ts.showError("Error", "Failed to insert record.");
 
-                _this40.loading = false;
+                _this43.loading = false;
               });
             } else {
               //Update category
               this.categoryService.update(this.categoryForm.value).subscribe(function (data) {
-                _this40.loading = false;
+                _this43.loading = false;
 
                 if (data != 0) {
-                  _this40.ts.showSuccess("Success", "Record updated successfully.");
+                  _this43.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this40.router.navigate(['/admin/category']);
+                  _this43.router.navigate(['/admin/category']);
                 }
               }, function (error) {
-                _this40.ts.showError("Error", "Failed to update record.");
+                _this43.ts.showError("Error", "Failed to update record.");
 
-                _this40.loading = false;
+                _this43.loading = false;
               });
             }
           }
@@ -10398,11 +11175,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this41 = this;
+            var _this44 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this41.ts.showError("Error", "Failed to export");
+              _this44.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -10415,9 +11192,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref5) {
-            var column = _ref5.column,
-                direction = _ref5.direction;
+          value: function onSort(_ref6) {
+            var column = _ref6.column,
+                direction = _ref6.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -10434,18 +11211,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this42 = this;
+            var _this45 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this42.ts.showSuccess("Success", "Record deleted successfully.");
+                _this45.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this42.getData();
+                _this45.getData();
               } else {
-                _this42.ts.showError("Error", "Failed to delete record.");
+                _this45.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this42.ts.showError("Error", "Failed to delete record.");
+              _this45.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -10683,21 +11460,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this43 = this;
+            var _this46 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this43.loadingItems = true;
+                _this46.loadingItems = true;
 
-                _this43.f.itemID.setValue(sid);
+                _this46.f.itemID.setValue(sid);
 
-                _this43.itemsService.getById(sid, _this43.f.brandID.value).subscribe(function (res) {
+                _this46.itemsService.getById(sid, _this46.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this43.editForm(res);
+                  _this46.editForm(res);
 
-                  _this43.loadingItems = false;
+                  _this46.loadingItems = false;
                 });
               }
             });
@@ -10705,7 +11482,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this44 = this;
+            var _this47 = this;
 
             this.itemsForm.markAllAsTouched();
             this.submitted = true;
@@ -10725,31 +11502,31 @@
               console.log(JSON.stringify(this.itemsForm.value));
               this.itemsService.insert(this.itemsForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this44.ts.showSuccess("Success", "Record added successfully.");
+                  _this47.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this44.router.navigate(['/admin/item']);
+                  _this47.router.navigate(['/admin/item']);
                 }
 
-                _this44.loading = false;
+                _this47.loading = false;
               }, function (error) {
-                _this44.ts.showError("Error", "Failed to insert record.");
+                _this47.ts.showError("Error", "Failed to insert record.");
 
-                _this44.loading = false;
+                _this47.loading = false;
               });
             } else {
               //Update item
               this.itemsService.update(this.itemsForm.value).subscribe(function (data) {
-                _this44.loading = false;
+                _this47.loading = false;
 
                 if (data != 0) {
-                  _this44.ts.showSuccess("Success", "Record updated successfully.");
+                  _this47.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this44.router.navigate(['/admin/item']);
+                  _this47.router.navigate(['/admin/item']);
                 }
               }, function (error) {
-                _this44.ts.showError("Error", "Failed to update record.");
+                _this47.ts.showError("Error", "Failed to update record.");
 
-                _this44.loading = false;
+                _this47.loading = false;
               });
             }
           } // private loadCategory() {
@@ -10761,28 +11538,28 @@
         }, {
           key: "loadActiveCategory",
           value: function loadActiveCategory() {
-            var _this45 = this;
+            var _this48 = this;
 
             this.itemsService.loadActiveCategories(this.f.brandID.value).subscribe(function (res) {
-              _this45.CategoriesActive = res;
+              _this48.CategoriesActive = res;
             });
           }
         }, {
           key: "loadModifiers",
           value: function loadModifiers() {
-            var _this46 = this;
+            var _this49 = this;
 
             this.itemsService.loadModifierList(this.f.brandID.value).subscribe(function (res) {
-              _this46.ModifiersList = res;
+              _this49.ModifiersList = res;
             });
           }
         }, {
           key: "loadAddons",
           value: function loadAddons() {
-            var _this47 = this;
+            var _this50 = this;
 
             this.itemsService.loadAddonList(this.f.brandID.value).subscribe(function (res) {
-              _this47.AddonsList = res;
+              _this50.AddonsList = res;
             });
           }
         }, {
@@ -10935,12 +11712,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this48 = this;
+            var _this51 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this48.ts.showError("Error", "Failed to export");
+              _this51.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -10953,9 +11730,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref6) {
-            var column = _ref6.column,
-                direction = _ref6.direction;
+          value: function onSort(_ref7) {
+            var column = _ref7.column,
+                direction = _ref7.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -10972,16 +11749,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this49 = this;
+            var _this52 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this49.ts.showSuccess("Success", "Record deleted successfully.");
+                _this52.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this49.getData();
-              } else _this49.ts.showError("Error", "Failed to delete record.");
+                _this52.getData();
+              } else _this52.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this49.ts.showError("Error", "Failed to delete record.");
+              _this52.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -11147,20 +11924,20 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this50 = this;
+            var _this53 = this;
 
             this.itemsService.getTodaysItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               debugger;
               var stringToConvert = res.items;
-              _this50.isItemSetting = res.isItemSetting;
-              _this50.itemSettingTitle = res.itemSettingTitle;
-              _this50.selectedItemIds = stringToConvert.split(',').map(Number);
+              _this53.isItemSetting = res.isItemSetting;
+              _this53.itemSettingTitle = res.itemSettingTitle;
+              _this53.selectedItemIds = stringToConvert.split(',').map(Number);
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this51 = this;
+            var _this54 = this;
 
             var obj = new Object();
             obj["Items"] = this.selectedItemIds.toString();
@@ -11169,29 +11946,29 @@
             obj["IsItemSetting"] = this.isItemSetting;
             this.loading = true;
             this.itemsService.updateSettings(obj).subscribe(function (data) {
-              _this51.loading = false;
+              _this54.loading = false;
 
               if (data != 0) {
-                _this51.ts.showSuccess("Success", "Updated successfully.");
+                _this54.ts.showSuccess("Success", "Updated successfully.");
 
-                _this51.router.navigate(['/admin/item/settings']);
+                _this54.router.navigate(['/admin/item/settings']);
               }
             }, function (error) {
-              _this51.ts.showError("Error", "Failed to update.");
+              _this54.ts.showError("Error", "Failed to update.");
 
-              _this51.loading = false;
+              _this54.loading = false;
             });
           }
         }, {
           key: "loadItems",
           value: function loadItems() {
-            var _this52 = this;
+            var _this55 = this;
 
             this.itemsService.loadItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               debugger;
-              _this52.ItemsList = res;
+              _this55.ItemsList = res;
 
-              _this52.setSelecteditem();
+              _this55.setSelecteditem();
             });
           }
         }]);
@@ -11382,21 +12159,21 @@
         }, {
           key: "setSelectedmodifier",
           value: function setSelectedmodifier() {
-            var _this53 = this;
+            var _this56 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this53.loadingmodifier = true;
+                _this56.loadingmodifier = true;
 
-                _this53.f.modifierID.setValue(sid);
+                _this56.f.modifierID.setValue(sid);
 
-                _this53.modifierService.getById(sid, _this53.f.brandID.value).subscribe(function (res) {
+                _this56.modifierService.getById(sid, _this56.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this53.editForm(res);
+                  _this56.editForm(res);
 
-                  _this53.loadingmodifier = false;
+                  _this56.loadingmodifier = false;
                 });
               }
             });
@@ -11404,7 +12181,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this54 = this;
+            var _this57 = this;
 
             this.modifierForm.markAllAsTouched();
             this.submitted = true;
@@ -11422,32 +12199,32 @@
               console.log(JSON.stringify(this.modifierForm.value));
               this.modifierService.insert(this.modifierForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this54.ts.showSuccess("Success", "Record added successfully.");
+                  _this57.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this54.router.navigate(['/admin/modifier']);
+                  _this57.router.navigate(['/admin/modifier']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this54.loading = false;
+                _this57.loading = false;
               }, function (error) {
-                _this54.ts.showError("Error", "Failed to insert record.");
+                _this57.ts.showError("Error", "Failed to insert record.");
 
-                _this54.loading = false;
+                _this57.loading = false;
               });
             } else {
               //Update modifier
               this.modifierService.update(this.modifierForm.value).subscribe(function (data) {
-                _this54.loading = false;
+                _this57.loading = false;
 
                 if (data != 0) {
-                  _this54.ts.showSuccess("Success", "Record updated successfully.");
+                  _this57.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this54.router.navigate(['/admin/modifier']);
+                  _this57.router.navigate(['/admin/modifier']);
                 }
               }, function (error) {
-                _this54.ts.showError("Error", "Failed to update record.");
+                _this57.ts.showError("Error", "Failed to update record.");
 
-                _this54.loading = false;
+                _this57.loading = false;
               });
             }
           }
@@ -11601,12 +12378,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this55 = this;
+            var _this58 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this55.ts.showError("Error", "Failed to export");
+              _this58.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -11619,9 +12396,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref7) {
-            var column = _ref7.column,
-                direction = _ref7.direction;
+          value: function onSort(_ref8) {
+            var column = _ref8.column,
+                direction = _ref8.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -11638,16 +12415,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this56 = this;
+            var _this59 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this56.ts.showSuccess("Success", "Record deleted successfully.");
+                _this59.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this56.getData();
-              } else _this56.ts.showError("Error", "Failed to delete record.");
+                _this59.getData();
+              } else _this59.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this56.ts.showError("Error", "Failed to delete record.");
+              _this59.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -11996,43 +12773,44 @@
               name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               description: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               statusID: [true],
-              branddetails: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              brandDetails: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               price: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-              quantitydescription: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              quantityDescription: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               medicineID: [0],
-              imagePath: ['']
+              image: ['']
             });
           }
         }, {
           key: "editForm",
           value: function editForm(obj) {
+            debugger;
             this.f.name.setValue(obj.name);
             this.f.description.setValue(obj.description);
             this.f.brandDetails.setValue(obj.brandDetails);
             this.f.price.setValue(obj.price);
-            this.f.quantitydescription.setValue(obj.description);
+            this.f.quantityDescription.setValue(obj.quantityDescription);
             this.f.medicineID.setValue(obj.medicineID);
-            this.f.imagePath.setValue(obj.image);
+            this.f.image.setValue(obj.image);
             this.f.statusID.setValue(obj.statusID === 1 ? true : false);
           }
         }, {
           key: "setSelectedmedicine",
           value: function setSelectedmedicine() {
-            var _this57 = this;
+            var _this60 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this57.loadingmedicine = true;
+                _this60.loadingmedicine = true;
 
-                _this57.f.medicineID.setValue(sid);
+                _this60.f.medicineID.setValue(sid);
 
-                _this57.medicineService.getById(sid).subscribe(function (res) {
+                _this60.medicineService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this57.editForm(res);
+                  _this60.editForm(res);
 
-                  _this57.loadingmedicine = false;
+                  _this60.loadingmedicine = false;
                 });
               }
             });
@@ -12040,7 +12818,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this58 = this;
+            var _this61 = this;
 
             this.medicineForm.markAllAsTouched();
             this.submitted = true;
@@ -12051,38 +12829,38 @@
 
             this.loading = true;
             this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-            this.f.imagePath.setValue(this.imgComp.imageUrl);
+            this.f.image.setValue(this.imgComp.imageUrl);
 
             if (parseInt(this.f.medicineID.value) === 0) {
               //Insert medicine
               console.log(JSON.stringify(this.medicineForm.value));
               this.medicineService.insert(this.medicineForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this58.ts.showSuccess("Success", "Record added successfully.");
+                  _this61.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this58.router.navigate(['/admin/pharmacy/medicine']);
+                  _this61.router.navigate(['/admin/pharmacy/medicine']);
                 }
 
-                _this58.loading = false;
+                _this61.loading = false;
               }, function (error) {
-                _this58.ts.showError("Error", "Failed to insert record.");
+                _this61.ts.showError("Error", "Failed to insert record.");
 
-                _this58.loading = false;
+                _this61.loading = false;
               });
             } else {
               //Update medicine
               this.medicineService.update(this.medicineForm.value).subscribe(function (data) {
-                _this58.loading = false;
+                _this61.loading = false;
 
                 if (data != 0) {
-                  _this58.ts.showSuccess("Success", "Record updated successfully.");
+                  _this61.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this58.router.navigate(['/admin/pharmacy/medicine']);
+                  _this61.router.navigate(['/admin/pharmacy/medicine']);
                 }
               }, function (error) {
-                _this58.ts.showError("Error", "Failed to update record.");
+                _this61.ts.showError("Error", "Failed to update record.");
 
-                _this58.loading = false;
+                _this61.loading = false;
               });
             }
           }
@@ -12246,9 +13024,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref8) {
-            var column = _ref8.column,
-                direction = _ref8.direction;
+          value: function onSort(_ref9) {
+            var column = _ref9.column,
+                direction = _ref9.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -12265,16 +13043,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this59 = this;
+            var _this62 = this;
 
+            debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this59.ts.showSuccess("Success", "Record deleted successfully.");
+                _this62.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this59.getData();
-              } else _this59.ts.showError("Error", "Failed to delete record.");
+                _this62.getData();
+              } else _this62.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this59.ts.showError("Error", "Failed to delete record.");
+              _this62.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -12415,15 +13194,15 @@
         }, {
           key: "setSelectedOrder",
           value: function setSelectedOrder() {
-            var _this60 = this;
+            var _this63 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this60.service.getById(sid).subscribe(function (res) {
+                _this63.service.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this60.editForm(res);
+                  _this63.editForm(res);
                 });
               }
             });
@@ -12431,18 +13210,18 @@
         }, {
           key: "updateOrder",
           value: function updateOrder(order, status) {
-            var _this61 = this;
+            var _this64 = this;
 
             order.statusID = status; //Update 
 
             this.service.update(order).subscribe(function (data) {
               if (data != 0) {
-                _this61.ts.showSuccess("Success", "Record updated successfully.");
+                _this64.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this61.router.navigate(['/admin/orders']);
+                _this64.router.navigate(['/admin/orders']);
               }
             }, function (error) {
-              _this61.ts.showError("Error", "Failed to update record.");
+              _this64.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -12613,9 +13392,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref9) {
-            var column = _ref9.column,
-                direction = _ref9.direction;
+          value: function onSort(_ref10) {
+            var column = _ref10.column,
+                direction = _ref10.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -12632,13 +13411,13 @@
         }, {
           key: "Print",
           value: function Print(sid) {
-            var _this62 = this;
+            var _this65 = this;
 
             this.service.printorder(sid, this.selectedBrand).subscribe(function (res) {
               //Set Forms
               if (res.status == 1) {
-                _this62.printout(res.html);
-              } else _this62.ts.showError("Error", "Failed to print.");
+                _this65.printout(res.html);
+              } else _this65.ts.showError("Error", "Failed to print.");
             });
           }
         }, {
@@ -12650,27 +13429,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this63 = this;
+            var _this66 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this63.Locations = res;
-              _this63.locationID = _this63.selectedLocation;
+              _this66.Locations = res;
+              _this66.locationID = _this66.selectedLocation;
 
-              _this63.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this66.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this63.Locations = res;
+                _this66.Locations = res;
                 var arr = [];
 
-                _this63.Locations.forEach(function (element) {
+                _this66.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this63.selectedLocations = arr;
+                _this66.selectedLocations = arr;
 
-                _this63.getData();
+                _this66.getData();
               });
             });
           }
@@ -12857,7 +13636,7 @@
               mobile: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               address: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               note: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-              imagePath: [''],
+              image: [''],
               statusID: [true],
               prescriptionID: 0
             });
@@ -12870,27 +13649,27 @@
             this.f.address.setValue(obj.address);
             this.f.note.setValue(obj.note);
             this.f.prescriptionID.setValue(obj.prescriptionID);
-            this.f.imagePath.setValue(obj.image);
+            this.f.image.setValue(obj.image);
             this.f.statusID.setValue(obj.statusID === 1 ? true : false);
           }
         }, {
           key: "setSelectedPrescription",
           value: function setSelectedPrescription() {
-            var _this64 = this;
+            var _this67 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this64.loadingPrescription = true;
+                _this67.loadingPrescription = true;
 
-                _this64.f.prescriptionID.setValue(sid);
+                _this67.f.prescriptionID.setValue(sid);
 
-                _this64.prescriptionService.getById(sid).subscribe(function (res) {
+                _this67.prescriptionService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this64.editForm(res);
+                  _this67.editForm(res);
 
-                  _this64.loadingPrescription = false;
+                  _this67.loadingPrescription = false;
                 });
               }
             });
@@ -12898,8 +13677,9 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this65 = this;
+            var _this68 = this;
 
+            debugger;
             this.prescriptionForm.markAllAsTouched();
             this.submitted = true;
 
@@ -12909,38 +13689,38 @@
 
             this.loading = true;
             this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-            this.f.imagePath.setValue(this.imgComp.imageUrl);
+            this.f.image.setValue(this.imgComp.imageUrl);
 
             if (parseInt(this.f.prescriptionID.value) === 0) {
               //Insert doctor
               console.log(JSON.stringify(this.prescriptionForm.value));
               this.prescriptionService.insert(this.prescriptionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this65.ts.showSuccess("Success", "Record added successfully.");
+                  _this68.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this65.router.navigate(['/admin/pharmacy/prescription']);
+                  _this68.router.navigate(['/admin/pharmacy/prescription']);
                 }
 
-                _this65.loading = false;
+                _this68.loading = false;
               }, function (error) {
-                _this65.ts.showError("Error", "Failed to insert record.");
+                _this68.ts.showError("Error", "Failed to insert record.");
 
-                _this65.loading = false;
+                _this68.loading = false;
               });
             } else {
               //Update doctor
               this.prescriptionService.update(this.prescriptionForm.value).subscribe(function (data) {
-                _this65.loading = false;
+                _this68.loading = false;
 
                 if (data != 0) {
-                  _this65.ts.showSuccess("Success", "Record updated successfully.");
+                  _this68.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this65.router.navigate(['/admin/pharmacy/prescription']);
+                  _this68.router.navigate(['/admin/pharmacy/prescription']);
                 }
               }, function (error) {
-                _this65.ts.showError("Error", "Failed to update record.");
+                _this68.ts.showError("Error", "Failed to update record.");
 
-                _this65.loading = false;
+                _this68.loading = false;
               });
             }
           }
@@ -13106,12 +13886,12 @@
         _createClass(PrescriptionComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this66 = this;
+            var _this69 = this;
 
             this.service.ExportList(this.selectedPrescription).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this66.ts.showError("Error", "Failed to export");
+              _this69.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -13129,9 +13909,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref10) {
-            var column = _ref10.column,
-                direction = _ref10.direction;
+          value: function onSort(_ref11) {
+            var column = _ref11.column,
+                direction = _ref11.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -13148,16 +13928,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this67 = this;
+            var _this70 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this67.ts.showSuccess("Success", "Record deleted successfully.");
+                _this70.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this67.getData();
-              } else _this67.ts.showError("Error", "Failed to delete record.");
+                _this70.getData();
+              } else _this70.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this67.ts.showError("Error", "Failed to delete record.");
+              _this70.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -13363,21 +14143,21 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this68 = this;
+            var _this71 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this68.loadingAppointment = true;
+                _this71.loadingAppointment = true;
 
-                _this68.f.appointmentID.setValue(sid);
+                _this71.f.appointmentID.setValue(sid);
 
-                _this68.appointmentService.getById(sid).subscribe(function (res) {
+                _this71.appointmentService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this68.editForm(res);
+                  _this71.editForm(res);
 
-                  _this68.loadingAppointment = false;
+                  _this71.loadingAppointment = false;
                 });
               }
             });
@@ -13385,7 +14165,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this69 = this;
+            var _this72 = this;
 
             this.appointmentForm.markAllAsTouched();
             this.submitted = true;
@@ -13401,71 +14181,71 @@
               console.log(JSON.stringify(this.appointmentForm.value));
               this.appointmentService.insert(this.appointmentForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this69.ts.showSuccess("Success", "Record added successfully.");
+                  _this72.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this69.router.navigate(['/admin/reception/appointment']);
+                  _this72.router.navigate(['/admin/reception/appointment']);
                 }
 
-                _this69.loading = false;
+                _this72.loading = false;
               }, function (error) {
-                _this69.ts.showError("Error", "Failed to insert record.");
+                _this72.ts.showError("Error", "Failed to insert record.");
 
-                _this69.loading = false;
+                _this72.loading = false;
               });
             } else {
               //Update doctor
               this.appointmentService.update(this.appointmentForm.value).subscribe(function (data) {
-                _this69.loading = false;
+                _this72.loading = false;
 
                 if (data != 0) {
-                  _this69.ts.showSuccess("Success", "Record updated successfully.");
+                  _this72.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this69.router.navigate(['/admin/reception/appointment']);
+                  _this72.router.navigate(['/admin/reception/appointment']);
                 }
               }, function (error) {
-                _this69.ts.showError("Error", "Failed to update record.");
+                _this72.ts.showError("Error", "Failed to update record.");
 
-                _this69.loading = false;
+                _this72.loading = false;
               });
             }
           }
         }, {
           key: "loadDoctor",
           value: function loadDoctor() {
-            var _this70 = this;
+            var _this73 = this;
 
             this.appointmentService.loadDoctor().subscribe(function (res) {
-              _this70.DoctorList = res;
+              _this73.DoctorList = res;
             });
           }
         }, {
           key: "loadSpecialities",
           value: function loadSpecialities() {
-            var _this71 = this;
+            var _this74 = this;
 
             debugger;
             this.appointmentService.loadSpecialities().subscribe(function (res) {
-              _this71.SpecialityList = res;
+              _this74.SpecialityList = res;
             });
           }
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this72 = this;
+            var _this75 = this;
 
             debugger;
             this.appointmentService.loadSpecialities().subscribe(function (res) {
-              _this72.selectedSpecialityList = res;
+              _this75.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadDay",
           value: function loadDay() {
-            var _this73 = this;
+            var _this76 = this;
 
             debugger;
             this.appointmentService.loadDay().subscribe(function (res) {
-              _this73.DoctorDaysList = res;
+              _this76.DoctorDaysList = res;
             });
           }
         }, {
@@ -13676,9 +14456,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref11) {
-            var column = _ref11.column,
-                direction = _ref11.direction;
+          value: function onSort(_ref12) {
+            var column = _ref12.column,
+                direction = _ref12.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -13695,16 +14475,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this74 = this;
+            var _this77 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this74.ts.showSuccess("Success", "Record deleted successfully.");
+                _this77.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this74.getData();
-              } else _this74.ts.showError("Error", "Failed to delete record.");
+                _this77.getData();
+              } else _this77.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this74.ts.showError("Error", "Failed to delete record.");
+              _this77.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -13899,22 +14679,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this75 = this;
+            var _this78 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this75.loadingCustomer = true;
+                _this78.loadingCustomer = true;
 
-                _this75.f.customerID.setValue(sid);
+                _this78.f.customerID.setValue(sid);
 
-                _this75.customerService.getById(sid).subscribe(function (res) {
+                _this78.customerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this75.editForm(res);
+                  _this78.editForm(res);
 
-                  _this75.loadingCustomer = false;
+                  _this78.loadingCustomer = false;
                 });
               }
             });
@@ -13922,7 +14702,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this76 = this;
+            var _this79 = this;
 
             this.customerForm.markAllAsTouched();
             this.submitted = true;
@@ -13940,31 +14720,31 @@
               console.log(JSON.stringify(this.customerForm.value));
               this.customerService.insert(this.customerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this76.ts.showSuccess("Success", "Record added successfully.");
+                  _this79.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this76.router.navigate(['/admin/reception/customers']);
+                  _this79.router.navigate(['/admin/reception/customers']);
                 }
 
-                _this76.loading = false;
+                _this79.loading = false;
               }, function (error) {
-                _this76.ts.showError("Error", "Failed to insert record.");
+                _this79.ts.showError("Error", "Failed to insert record.");
 
-                _this76.loading = false;
+                _this79.loading = false;
               });
             } else {
               //Update customer
               this.customerService.update(this.customerForm.value).subscribe(function (data) {
-                _this76.loading = false;
+                _this79.loading = false;
 
                 if (data != 0) {
-                  _this76.ts.showSuccess("Success", "Record updated successfully.");
+                  _this79.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this76.router.navigate(['/admin/reception/customers']);
+                  _this79.router.navigate(['/admin/reception/customers']);
                 }
               }, function (error) {
-                _this76.ts.showError("Error", "Failed to update record.");
+                _this79.ts.showError("Error", "Failed to update record.");
 
-                _this76.loading = false;
+                _this79.loading = false;
               });
             }
           }
@@ -14118,11 +14898,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this77 = this;
+            var _this80 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this77.ts.showError("Error", "Failed to export");
+              _this80.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -14135,9 +14915,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref12) {
-            var column = _ref12.column,
-                direction = _ref12.direction;
+          value: function onSort(_ref13) {
+            var column = _ref13.column,
+                direction = _ref13.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -14154,17 +14934,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this78 = this;
+            var _this81 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this78.ts.showSuccess("Success", "Record deleted successfully.");
+                _this81.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this78.getData();
-              } else _this78.ts.showError("Error", "Failed to delete record.");
+                _this81.getData();
+              } else _this81.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this78.ts.showError("Error", "Failed to delete record.");
+              _this81.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -14332,14 +15112,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this79 = this;
+            var _this82 = this;
 
             this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this79.salesCategoryWise = res;
-              } else _this79.ts.showError("Error", "Something went wrong");
+                _this82.salesCategoryWise = res;
+              } else _this82.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this79.ts.showError("Error", "Failed to delete record.");
+              _this82.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -14351,27 +15131,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this80 = this;
+            var _this83 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this80.Locations = res;
-              _this80.locationID = _this80.selectedLocation;
+              _this83.Locations = res;
+              _this83.locationID = _this83.selectedLocation;
 
-              _this80.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this83.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this80.Locations = res;
+                _this83.Locations = res;
                 var arr = [];
 
-                _this80.Locations.forEach(function (element) {
+                _this83.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this80.selectedLocations = arr;
+                _this83.selectedLocations = arr;
 
-                _this80.getData(_this80.selectedLocations.toString());
+                _this83.getData(_this83.selectedLocations.toString());
               });
             });
           }
@@ -14564,14 +15344,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this81 = this;
+            var _this84 = this;
 
             this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this81.orders = res;
-              } else _this81.ts.showError("Error", "Something went wrong");
+                _this84.orders = res;
+              } else _this84.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this81.ts.showError("Error", "Failed to delete record.");
+              _this84.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -14583,27 +15363,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this82 = this;
+            var _this85 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this82.Locations = res;
-              _this82.locationID = _this82.selectedLocation;
+              _this85.Locations = res;
+              _this85.locationID = _this85.selectedLocation;
 
-              _this82.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this85.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this82.Locations = res;
+                _this85.Locations = res;
                 var arr = [];
 
-                _this82.Locations.forEach(function (element) {
+                _this85.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this82.selectedLocations = arr;
+                _this85.selectedLocations = arr;
 
-                _this82.getData(_this82.selectedLocations.toString());
+                _this85.getData(_this85.selectedLocations.toString());
               });
             });
           }
@@ -14792,14 +15572,14 @@
         }, {
           key: "getData",
           value: function getData(locaionIDs) {
-            var _this83 = this;
+            var _this86 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this83.orderDetails = res;
-              } else _this83.ts.showError("Error", "Something went wrong");
+                _this86.orderDetails = res;
+              } else _this86.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this83.ts.showError("Error", "Failed to delete record.");
+              _this86.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -14816,27 +15596,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this84 = this;
+            var _this87 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this84.Locations = res;
-              _this84.locationID = _this84.selectedLocation;
+              _this87.Locations = res;
+              _this87.locationID = _this87.selectedLocation;
 
-              _this84.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this87.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this84.Locations = res;
+                _this87.Locations = res;
                 var arr = [];
 
-                _this84.Locations.forEach(function (element) {
+                _this87.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this84.selectedLocations = arr;
+                _this87.selectedLocations = arr;
 
-                _this84.getData(_this84.selectedLocations.toString());
+                _this87.getData(_this87.selectedLocations.toString());
               });
             });
           }
@@ -15032,14 +15812,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this85 = this;
+            var _this88 = this;
 
             this.service.SalesItemwiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this85.salesItemWise = res;
-              } else _this85.ts.showError("Error", "Something went wrong");
+                _this88.salesItemWise = res;
+              } else _this88.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this85.ts.showError("Error", "Failed to delete record.");
+              _this88.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15070,27 +15850,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this86 = this;
+            var _this89 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this86.Locations = res;
-              _this86.locationID = _this86.selectedLocation;
+              _this89.Locations = res;
+              _this89.locationID = _this89.selectedLocation;
 
-              _this86.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this89.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this86.Locations = res;
+                _this89.Locations = res;
                 var arr = [];
 
-                _this86.Locations.forEach(function (element) {
+                _this89.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this86.selectedLocations = arr;
+                _this89.selectedLocations = arr;
 
-                _this86.getData(_this86.selectedLocations.toString());
+                _this89.getData(_this89.selectedLocations.toString());
               });
             });
           }
@@ -15255,14 +16035,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this87 = this;
+            var _this90 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this87.data$ = res;
-              } else _this87.ts.showError("Error", "Something went wrong");
+                _this90.data$ = res;
+              } else _this90.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this87.ts.showError("Error", "Failed to delete record.");
+              _this90.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15274,11 +16054,11 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this88 = this;
+            var _this91 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this88.Locations = res;
-              _this88.locationID = _this88.selectedLocation;
+              _this91.Locations = res;
+              _this91.locationID = _this91.selectedLocation;
             });
           }
         }, {
@@ -15445,16 +16225,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this89 = this;
+            var _this92 = this;
 
             this.service.SalesSummaryRpt(this.selectedBrand, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this89._model = res[0];
+                _this92._model = res[0];
 
-                _this89["export"].push(_this89._model);
-              } else _this89.ts.showError("Error", "Something went wrong");
+                _this92["export"].push(_this92._model);
+              } else _this92.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this89.ts.showError("Error", "Failed to delete record.");
+              _this92.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15617,9 +16397,8 @@
           this.loadingCustomer = false;
           this.ButtonText = "Save";
           this.BrandsList = [];
-          this.createForm();
-          this.loadBrands();
-          this.selectedBrand = this.ls.getSelectedBrand();
+          this.createForm(); //this.loadBrands();
+          //this.selectedBrand =this.ls.getSelectedBrand();
         }
 
         _createClass(AdddeliveryComponent, [{
@@ -15636,7 +16415,7 @@
               statusID: [true],
               // brandIDs :[''],
               deliveryAreaID: 0,
-              brandID: this.ls.getSelectedBrand().brandID,
+              //brandID: this.ls.getSelectedBrand().brandID,
               brands: []
             });
           }
@@ -15650,29 +16429,29 @@
             debugger;
 
             if (obj.brands != "") {
-              var stringToConvert = obj.brands;
-              this.selectedBrandIds = stringToConvert.split(',').map(Number);
+              var stringToConvert = obj.brands; //this.selectedBrandIds = stringToConvert.split(',').map(Number);
+
               this.f.brands.setValue(obj.brands);
             }
           }
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this90 = this;
+            var _this93 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this90.loading = true;
+                _this93.loading = true;
 
-                _this90.f.deliveryAreaID.setValue(sid);
+                _this93.f.deliveryAreaID.setValue(sid);
 
-                _this90.deliveryService.getById(sid).subscribe(function (res) {
+                _this93.deliveryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this90.editForm(res);
+                  _this93.editForm(res);
 
-                  _this90.loading = false; //BrandsFill
+                  _this93.loading = false; //BrandsFill
                   // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
                   // .subscribe((res: any) => {            
                   //   var stringToConvert = res.items;
@@ -15685,7 +16464,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this91 = this;
+            var _this94 = this;
 
             this.deliveryForm.markAllAsTouched();
             this.submitted = true;
@@ -15695,48 +16474,47 @@
             }
 
             this.loading = true;
-            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-            this.f.brands.setValue(this.selectedBrandIds == undefined ? "" : this.selectedBrandIds.toString());
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2); //this.f.brands.setValue(this.selectedBrandIds == undefined ? "" : this.selectedBrandIds.toString());
 
             if (parseInt(this.f.deliveryAreaID.value) === 0) {
               //Insert delivery
               this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this91.ts.showSuccess("Success", "Record added successfully.");
+                  _this94.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this91.router.navigate(['/admin/delivery']);
+                  _this94.router.navigate(['/admin/delivery']);
                 }
 
-                _this91.loading = false;
+                _this94.loading = false;
               }, function (error) {
-                _this91.ts.showError("Error", "Failed to insert record.");
+                _this94.ts.showError("Error", "Failed to insert record.");
 
-                _this91.loading = false;
+                _this94.loading = false;
               });
             } else {
               //Update delivery
               this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this91.loading = false;
+                _this94.loading = false;
 
                 if (data != 0) {
-                  _this91.ts.showSuccess("Success", "Record updated successfully.");
+                  _this94.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this91.router.navigate(['/admin/delivery']);
+                  _this94.router.navigate(['/admin/delivery']);
                 }
               }, function (error) {
-                _this91.ts.showError("Error", "Failed to update record.");
+                _this94.ts.showError("Error", "Failed to update record.");
 
-                _this91.loading = false;
+                _this94.loading = false;
               });
             }
           }
         }, {
           key: "loadBrands",
           value: function loadBrands() {
-            var _this92 = this;
+            var _this95 = this;
 
             this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this92.BrandsList = res; // this.setSelecteditem();
+              _this95.BrandsList = res; // this.setSelecteditem();
             });
           }
         }, {
@@ -15893,12 +16671,12 @@
           key: "createForm",
           value: function createForm() {
             this.settingForm = this.formBuilder.group({
-              discount: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-              deliveryCharges: [''],
-              minimumOrderAmount: [''],
-              tax: [''],
+              discount: [0],
+              deliveryCharges: [0],
+              minimumOrderAmount: [0],
+              tax: [0],
               statusID: [true],
-              appSettingID: 0
+              appSettingID: 1
             });
           }
         }, {
@@ -15914,30 +16692,33 @@
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this93 = this;
+            var _this96 = this;
 
-            this.route.paramMap.subscribe(function (param) {
-              var sid = +param.get('id');
+            this.loadingSetting = true;
+            this.settingService.getById(1).subscribe(function (res) {
+              //Set Forms
+              _this96.editForm(res);
 
-              if (sid) {
-                _this93.loadingSetting = true;
-
-                _this93.f.appSettingID.setValue(sid);
-
-                _this93.settingService.getById(sid).subscribe(function (res) {
-                  //Set Forms
-                  _this93.editForm(res);
-
-                  _this93.loadingSetting = false;
-                });
-              }
-            });
+              _this96.loadingSetting = false;
+            }); // this.route.paramMap.subscribe(param => {
+            //   const sid = +param.get('id');
+            //   if (sid) {
+            //     this.loadingSetting = true;
+            //     this.f.appSettingID.setValue(sid);
+            //     this.settingService.getById(sid).subscribe(res => {
+            //       //Set Forms
+            //       this.editForm(res);
+            //       this.loadingSetting = false;
+            //     });
+            //   }
+            // })
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this94 = this;
+            var _this97 = this;
 
+            debugger;
             this.settingForm.markAllAsTouched();
             this.submitted = true;
 
@@ -15948,36 +16729,38 @@
             this.loading = true;
             this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
 
-            if (parseInt(this.f.appSettingID.value) === 0) {
+            if (parseInt('1') === 0) {
               //Insert banner
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this94.ts.showSuccess("Success", "Record added successfully.");
+                  _this97.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this94.router.navigate(['/admin/settings/appsettings']);
+                  _this97.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this94.loading = false;
+                _this97.loading = false;
               }, function (error) {
-                _this94.ts.showError("Error", "Failed to insert record.");
+                _this97.ts.showError("Error", "Failed to insert record.");
 
-                _this94.loading = false;
+                _this97.loading = false;
               });
             } else {
-              //Update banner
+              //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this94.loading = false;
+                _this97.loading = false;
 
                 if (data != 0) {
-                  _this94.ts.showSuccess("Success", "Record updated successfully.");
+                  _this97.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this94.router.navigate(['/admin/settings/appsettings']);
+                  _this97.setSelectedSetting();
+
+                  _this97.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this94.ts.showError("Error", "Failed to update record.");
+                _this97.ts.showError("Error", "Failed to update record.");
 
-                _this94.loading = false;
+                _this97.loading = false;
               });
             }
           }
@@ -16129,9 +16912,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref13) {
-            var column = _ref13.column,
-                direction = _ref13.direction;
+          value: function onSort(_ref14) {
+            var column = _ref14.column,
+                direction = _ref14.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -16148,16 +16931,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this95 = this;
+            var _this98 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this95.ts.showSuccess("Success", "Record deleted successfully.");
+                _this98.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this95.getData();
-              } else _this95.ts.showError("Error", "Failed to delete record.");
+                _this98.getData();
+              } else _this98.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this95.ts.showError("Error", "Failed to delete record.");
+              _this98.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -16309,6 +17092,7 @@
           this.loading = false;
           this.loadingCustomer = false;
           this.ButtonText = "Save";
+          this.NursingTypeActive = ['Header', 'Featured'];
           this.createForm();
         }
 
@@ -16322,6 +17106,7 @@
           value: function createForm() {
             this.bannerForm = this.formBuilder.group({
               name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              type: [''],
               description: [''],
               statusID: [true],
               bannerID: 0,
@@ -16332,6 +17117,7 @@
           key: "editForm",
           value: function editForm(obj) {
             this.f.name.setValue(obj.name);
+            this.f.type.setValue(obj.type);
             this.f.description.setValue(obj.description);
             this.f.bannerID.setValue(obj.bannerID);
             this.f.image.setValue(obj.image);
@@ -16341,21 +17127,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this96 = this;
+            var _this99 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this96.loadingCustomer = true;
+                _this99.loadingCustomer = true;
 
-                _this96.f.bannerID.setValue(sid);
+                _this99.f.bannerID.setValue(sid);
 
-                _this96.bannerService.getById(sid).subscribe(function (res) {
+                _this99.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this96.editForm(res);
+                  _this99.editForm(res);
 
-                  _this96.loadingCustomer = false;
+                  _this99.loadingCustomer = false;
                 });
               }
             });
@@ -16363,8 +17149,9 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this97 = this;
+            var _this100 = this;
 
+            debugger;
             this.bannerForm.markAllAsTouched();
             this.submitted = true;
 
@@ -16381,31 +17168,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this97.ts.showSuccess("Success", "Record added successfully.");
+                  _this100.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this97.router.navigate(['/admin/settings/banner']);
+                  _this100.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this97.loading = false;
+                _this100.loading = false;
               }, function (error) {
-                _this97.ts.showError("Error", "Failed to insert record.");
+                _this100.ts.showError("Error", "Failed to insert record.");
 
-                _this97.loading = false;
+                _this100.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this97.loading = false;
+                _this100.loading = false;
 
                 if (data != 0) {
-                  _this97.ts.showSuccess("Success", "Record updated successfully.");
+                  _this100.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this97.router.navigate(['/admin/settings/banner']);
+                  _this100.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this97.ts.showError("Error", "Failed to update record.");
+                _this100.ts.showError("Error", "Failed to update record.");
 
-                _this97.loading = false;
+                _this100.loading = false;
               });
             }
           }
@@ -16559,9 +17346,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref14) {
-            var column = _ref14.column,
-                direction = _ref14.direction;
+          value: function onSort(_ref15) {
+            var column = _ref15.column,
+                direction = _ref15.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -16578,16 +17365,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this98 = this;
+            var _this101 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this98.ts.showSuccess("Success", "Record deleted successfully.");
+                _this101.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this98.getData();
-              } else _this98.ts.showError("Error", "Failed to delete record.");
+                _this101.getData();
+              } else _this101.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this98.ts.showError("Error", "Failed to delete record.");
+              _this101.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -16752,21 +17539,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this99 = this;
+            var _this102 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this99.loadingCoupon = true;
+                _this102.loadingCoupon = true;
 
-                _this99.f.couponID.setValue(sid);
+                _this102.f.couponID.setValue(sid);
 
-                _this99.couponService.getById(sid).subscribe(function (res) {
+                _this102.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this99.editForm(res);
+                  _this102.editForm(res);
 
-                  _this99.loadingCoupon = false;
+                  _this102.loadingCoupon = false;
                 });
               }
             });
@@ -16774,7 +17561,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this100 = this;
+            var _this103 = this;
 
             this.couponForm.markAllAsTouched();
             this.submitted = true;
@@ -16791,31 +17578,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this100.ts.showSuccess("Success", "Record added successfully.");
+                  _this103.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this100.router.navigate(['/admin/settings/coupon']);
+                  _this103.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this100.loading = false;
+                _this103.loading = false;
               }, function (error) {
-                _this100.ts.showError("Error", "Failed to insert record.");
+                _this103.ts.showError("Error", "Failed to insert record.");
 
-                _this100.loading = false;
+                _this103.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this100.loading = false;
+                _this103.loading = false;
 
                 if (data != 0) {
-                  _this100.ts.showSuccess("Success", "Record updated successfully.");
+                  _this103.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this100.router.navigate(['/admin/settings/coupon']);
+                  _this103.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this100.ts.showError("Error", "Failed to update record.");
+                _this103.ts.showError("Error", "Failed to update record.");
 
-                _this100.loading = false;
+                _this103.loading = false;
               });
             }
           }
@@ -17000,9 +17787,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref15) {
-            var column = _ref15.column,
-                direction = _ref15.direction;
+          value: function onSort(_ref16) {
+            var column = _ref16.column,
+                direction = _ref16.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -17019,16 +17806,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this101 = this;
+            var _this104 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this101.ts.showSuccess("Success", "Record deleted successfully.");
+                _this104.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this101.getData();
-              } else _this101.ts.showError("Error", "Failed to delete record.");
+                _this104.getData();
+              } else _this104.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this101.ts.showError("Error", "Failed to delete record.");
+              _this104.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -17169,11 +17956,11 @@
         function DeliveryComponent(service, ls, ts, router) {
           _classCallCheck(this, DeliveryComponent);
 
+          //this.selectedBrand =this.ls.getSelectedBrand().brandID;
           this.service = service;
           this.ls = ls;
           this.ts = ts;
           this.router = router;
-          this.selectedBrand = this.ls.getSelectedBrand().brandID;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -17186,16 +17973,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            this.service.getAllData(this.selectedBrand);
+            this.service.getAllData();
             this.data$ = this.service.data$;
             this.total$ = this.service.total$;
             this.loading$ = this.service.loading$;
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref16) {
-            var column = _ref16.column,
-                direction = _ref16.direction;
+          value: function onSort(_ref17) {
+            var column = _ref17.column,
+                direction = _ref17.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -17212,16 +17999,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this102 = this;
+            var _this105 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this102.ts.showSuccess("Success", "Record deleted successfully.");
+                _this105.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this102.getData();
-              } else _this102.ts.showError("Error", "Failed to delete record.");
+                _this105.getData();
+              } else _this105.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this102.ts.showError("Error", "Failed to delete record.");
+              _this105.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -17256,6 +18043,836 @@
         /*! ./delivery.component.css */
         "./src/app/admin/settings/delivery/delivery.component.css"))["default"]]
       }), __metadata("design:paramtypes", [src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__["DeliveryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], DeliveryComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/medicalservices/add/addservice.component.ts":
+    /*!****************************************************************************!*\
+      !*** ./src/app/admin/settings/medicalservices/add/addservice.component.ts ***!
+      \****************************************************************************/
+
+    /*! exports provided: AddServiceComponent */
+
+    /***/
+    function srcAppAdminSettingsMedicalservicesAddAddserviceComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddServiceComponent", function () {
+        return AddServiceComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var _services_medical_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../../../_services/medical.service */
+      "./src/app/_services/medical.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddServiceComponent = /*#__PURE__*/function () {
+        function AddServiceComponent(formBuilder, router, route, ls, ts, services) {
+          _classCallCheck(this, AddServiceComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ls = ls;
+          this.ts = ts;
+          this.services = services;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingService = false;
+          this.ButtonText = "Save";
+          this.NursingTypeActive = [];
+          this.createForm();
+          this.loadActiveType();
+        }
+
+        _createClass(AddServiceComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedCustomer();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.servicesForm = this.formBuilder.group({
+              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              description: [''],
+              requirment: [''],
+              fees: [0],
+              statusID: [true],
+              medicalServiceID: 0,
+              nursingTypeID: 0,
+              image: ['']
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            debugger;
+            this.f.name.setValue(obj.name);
+            this.f.description.setValue(obj.description);
+            this.f.requirment.setValue(obj.requirment);
+            this.f.fees.setValue(obj.fees);
+            this.f.medicalServiceID.setValue(obj.medicalServiceID);
+            this.f.nursingTypeID.setValue(obj.nursingTypeID);
+            this.f.image.setValue(obj.image);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.image;
+          }
+        }, {
+          key: "loadActiveType",
+          value: function loadActiveType() {
+            var _this106 = this;
+
+            this.services.loadActiveTyp().subscribe(function (res) {
+              _this106.NursingTypeActive = res;
+            });
+          }
+        }, {
+          key: "setSelectedCustomer",
+          value: function setSelectedCustomer() {
+            var _this107 = this;
+
+            debugger;
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this107.loadingService = true;
+
+                _this107.f.medicalServiceID.setValue(sid);
+
+                _this107.services.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this107.editForm(res);
+
+                  _this107.loadingService = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this108 = this;
+
+            debugger;
+            this.servicesForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.servicesForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.image.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.medicalServiceID.value) === 0) {
+              //Insert banner
+              console.log(JSON.stringify(this.servicesForm.value));
+              this.services.insert(this.servicesForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this108.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this108.router.navigate(['/admin/settings/medicalservices']);
+                }
+
+                _this108.loading = false;
+              }, function (error) {
+                _this108.ts.showError("Error", "Failed to insert record.");
+
+                _this108.loading = false;
+              });
+            } else {
+              //Update banner
+              this.services.update(this.servicesForm.value).subscribe(function (data) {
+                _this108.loading = false;
+
+                if (data != 0) {
+                  _this108.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this108.router.navigate(['/admin/settings/medicalservices']);
+                }
+              }, function (error) {
+                _this108.ts.showError("Error", "Failed to update record.");
+
+                _this108.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.servicesForm.controls;
+          }
+        }]);
+
+        return AddServiceComponent;
+      }();
+
+      AddServiceComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: _services_medical_service__WEBPACK_IMPORTED_MODULE_6__["MedicalService"]
+        }];
+      };
+
+      AddServiceComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddServiceComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addservice',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addservice.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservices/add/addservice.component.html"))["default"]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _services_medical_service__WEBPACK_IMPORTED_MODULE_6__["MedicalService"]])], AddServiceComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/medicalservices/service.component.ts":
+    /*!*********************************************************************!*\
+      !*** ./src/app/admin/settings/medicalservices/service.component.ts ***!
+      \*********************************************************************/
+
+    /*! exports provided: ServiceComponent */
+
+    /***/
+    function srcAppAdminSettingsMedicalservicesServiceComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ServiceComponent", function () {
+        return ServiceComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var _services_medical_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ../../../_services/medical.service */
+      "./src/app/_services/medical.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var ServiceComponent = /*#__PURE__*/function () {
+        function ServiceComponent(service, ls, ts, router) {
+          _classCallCheck(this, ServiceComponent);
+
+          /*     this.selectedBrand =this.ls.getSelectedBrand().brandID;*/
+          this.service = service;
+          this.ls = ls;
+          this.ts = ts;
+          this.router = router;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(ServiceComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref18) {
+            var column = _ref18.column,
+                direction = _ref18.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(service) {
+            this.router.navigate(["admin/settings/medicalservices/edit", service]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this109 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this109.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this109.getData();
+              } else _this109.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this109.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }]);
+
+        return ServiceComponent;
+      }();
+
+      ServiceComponent.ctorParameters = function () {
+        return [{
+          type: _services_medical_service__WEBPACK_IMPORTED_MODULE_5__["MedicalService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }];
+      };
+
+      ServiceComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      ServiceComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-service',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./service.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservices/service.component.html"))["default"],
+        providers: []
+      }), __metadata("design:paramtypes", [_services_medical_service__WEBPACK_IMPORTED_MODULE_5__["MedicalService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], ServiceComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.ts":
+    /*!******************************************************************************************!*\
+      !*** ./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.ts ***!
+      \******************************************************************************************/
+
+    /*! exports provided: AddMedicalServicetypeComponent */
+
+    /***/
+    function srcAppAdminSettingsMedicalservicetypeAddAddmedicalservicetypeComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddMedicalServicetypeComponent", function () {
+        return AddMedicalServicetypeComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_medicalservicetype_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/medicalservicetype.service */
+      "./src/app/_services/medicalservicetype.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddMedicalServicetypeComponent = /*#__PURE__*/function () {
+        function AddMedicalServicetypeComponent(formBuilder, router, route, ls, ts, services) {
+          _classCallCheck(this, AddMedicalServicetypeComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ls = ls;
+          this.ts = ts;
+          this.services = services;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingService = false;
+          this.ButtonText = "Save";
+          this.createForm();
+        }
+
+        _createClass(AddMedicalServicetypeComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedType();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.servicesForm = this.formBuilder.group({
+              type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              statusID: [true],
+              nursingTypeID: 0
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.type.setValue(obj.type);
+            this.f.nursingTypeID.setValue(obj.nursingTypeID);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+          }
+        }, {
+          key: "setSelectedType",
+          value: function setSelectedType() {
+            var _this110 = this;
+
+            debugger;
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this110.loadingService = true;
+
+                _this110.f.nursingTypeID.setValue(sid);
+
+                _this110.services.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this110.editForm(res);
+
+                  _this110.loadingService = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this111 = this;
+
+            this.servicesForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.servicesForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+
+            if (parseInt(this.f.nursingTypeID.value) === 0) {
+              //Insert banner
+              console.log(JSON.stringify(this.servicesForm.value));
+              this.services.insert(this.servicesForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this111.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this111.router.navigate(['/admin/settings/medicalservicetype']);
+                }
+
+                _this111.loading = false;
+              }, function (error) {
+                _this111.ts.showError("Error", "Failed to insert record.");
+
+                _this111.loading = false;
+              });
+            } else {
+              //Update banner
+              this.services.update(this.servicesForm.value).subscribe(function (data) {
+                _this111.loading = false;
+
+                if (data != 0) {
+                  _this111.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this111.router.navigate(['/admin/settings/medicalservicetype']);
+                }
+              }, function (error) {
+                _this111.ts.showError("Error", "Failed to update record.");
+
+                _this111.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.servicesForm.controls;
+          }
+        }]);
+
+        return AddMedicalServicetypeComponent;
+      }();
+
+      AddMedicalServicetypeComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_medicalservicetype_service__WEBPACK_IMPORTED_MODULE_6__["MedicalServiceTypes"]
+        }];
+      };
+
+      AddMedicalServicetypeComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddMedicalServicetypeComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addservice',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addmedicalservicetype.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.html"))["default"]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_medicalservicetype_service__WEBPACK_IMPORTED_MODULE_6__["MedicalServiceTypes"]])], AddMedicalServicetypeComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/medicalservicetype/medicalservicetype.component.ts":
+    /*!***********************************************************************************!*\
+      !*** ./src/app/admin/settings/medicalservicetype/medicalservicetype.component.ts ***!
+      \***********************************************************************************/
+
+    /*! exports provided: MedicalServicetypeComponent */
+
+    /***/
+    function srcAppAdminSettingsMedicalservicetypeMedicalservicetypeComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "MedicalServicetypeComponent", function () {
+        return MedicalServicetypeComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_medicalservicetype_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/medicalservicetype.service */
+      "./src/app/_services/medicalservicetype.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var MedicalServicetypeComponent = /*#__PURE__*/function () {
+        function MedicalServicetypeComponent(service, ls, ts, router) {
+          _classCallCheck(this, MedicalServicetypeComponent);
+
+          /*     this.selectedBrand =this.ls.getSelectedBrand().brandID;*/
+          this.service = service;
+          this.ls = ls;
+          this.ts = ts;
+          this.router = router;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(MedicalServicetypeComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref19) {
+            var column = _ref19.column,
+                direction = _ref19.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(service) {
+            debugger;
+            this.router.navigate(["admin/settings/medicalservicetype/edit", service]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this112 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this112.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this112.getData();
+              } else _this112.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this112.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }]);
+
+        return MedicalServicetypeComponent;
+      }();
+
+      MedicalServicetypeComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_medicalservicetype_service__WEBPACK_IMPORTED_MODULE_5__["MedicalServiceTypes"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }];
+      };
+
+      MedicalServicetypeComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      MedicalServicetypeComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-service',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./medicalservicetype.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/medicalservicetype/medicalservicetype.component.html"))["default"],
+        providers: []
+      }), __metadata("design:paramtypes", [src_app_services_medicalservicetype_service__WEBPACK_IMPORTED_MODULE_5__["MedicalServiceTypes"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], MedicalServicetypeComponent);
       /***/
     },
 
@@ -17420,21 +19037,21 @@
         }, {
           key: "setSelectedOffers",
           value: function setSelectedOffers() {
-            var _this103 = this;
+            var _this113 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this103.loadingOffers = true;
+                _this113.loadingOffers = true;
 
-                _this103.f.offerID.setValue(sid);
+                _this113.f.offerID.setValue(sid);
 
-                _this103.offersService.getById(sid, _this103.f.brandID.value).subscribe(function (res) {
+                _this113.offersService.getById(sid, _this113.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this103.editForm(res);
+                  _this113.editForm(res);
 
-                  _this103.loadingOffers = false;
+                  _this113.loadingOffers = false;
                 });
               }
             });
@@ -17442,7 +19059,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this104 = this;
+            var _this114 = this;
 
             this.offersForm.markAllAsTouched();
             this.submitted = true;
@@ -17462,31 +19079,31 @@
               debugger;
               this.offersService.insert(this.offersForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this104.ts.showSuccess("Success", "Record added successfully.");
+                  _this114.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this104.router.navigate(['/admin/offers']);
+                  _this114.router.navigate(['/admin/offers']);
                 }
 
-                _this104.loading = false;
+                _this114.loading = false;
               }, function (error) {
-                _this104.ts.showError("Error", "Failed to insert record.");
+                _this114.ts.showError("Error", "Failed to insert record.");
 
-                _this104.loading = false;
+                _this114.loading = false;
               });
             } else {
               //Update offers
               this.offersService.update(this.offersForm.value).subscribe(function (data) {
-                _this104.loading = false;
+                _this114.loading = false;
 
                 if (data != 0) {
-                  _this104.ts.showSuccess("Success", "Record updated successfully.");
+                  _this114.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this104.router.navigate(['/admin/offers']);
+                  _this114.router.navigate(['/admin/offers']);
                 }
               }, function (error) {
-                _this104.ts.showError("Error", "Failed to update record.");
+                _this114.ts.showError("Error", "Failed to update record.");
 
-                _this104.loading = false;
+                _this114.loading = false;
               });
             }
           }
@@ -17652,9 +19269,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref17) {
-            var column = _ref17.column,
-                direction = _ref17.direction;
+          value: function onSort(_ref20) {
+            var column = _ref20.column,
+                direction = _ref20.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -17671,16 +19288,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this105 = this;
+            var _this115 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this105.ts.showSuccess("Success", "Record deleted successfully.");
+                _this115.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this105.getData();
-              } else _this105.ts.showError("Error", "Failed to delete record.");
+                _this115.getData();
+              } else _this115.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this105.ts.showError("Error", "Failed to delete record.");
+              _this115.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -18188,6 +19805,30 @@
       var _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(
       /*! ./admin/pharmacy/orderdetails/orderdetails.component */
       "./src/app/admin/pharmacy/orderdetails/orderdetails.component.ts");
+      /* harmony import */
+
+
+      var _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(
+      /*! ./admin/settings/medicalservices/service.component */
+      "./src/app/admin/settings/medicalservices/service.component.ts");
+      /* harmony import */
+
+
+      var _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(
+      /*! ./admin/settings/medicalservices/add/addservice.component */
+      "./src/app/admin/settings/medicalservices/add/addservice.component.ts");
+      /* harmony import */
+
+
+      var _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(
+      /*! ./admin/settings/medicalservicetype/medicalservicetype.component */
+      "./src/app/admin/settings/medicalservicetype/medicalservicetype.component.ts");
+      /* harmony import */
+
+
+      var _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(
+      /*! ./admin/settings/medicalservicetype/add/addmedicalservicetype.component */
+      "./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -18212,7 +19853,7 @@
         //NgbdModalContent,
         _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_60__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__["AddCouponComponent"], _admin_pharmacy_customerinquiry_customerinquiry_component__WEBPACK_IMPORTED_MODULE_52__["CustomerinquiryComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_53__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_54__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentComponent"], _admin_reception_appointment_addappointment_addappointment_component__WEBPACK_IMPORTED_MODULE_56__["AddappointmentComponent"],
         /*    LaboratoryinquiryComponent,*/
-        _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_57__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_58__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"]],
+        _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_57__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_58__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({
           appId: 'ng-cli-universal'
         }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_27__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_29__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_31__["BrowserAnimationsModule"],
@@ -18421,6 +20062,24 @@
           }, {
             path: 'orders/view/:id',
             component: _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__["OrderdetailsComponent"]
+          }, {
+            path: 'settings/medicalservices',
+            component: _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__["ServiceComponent"]
+          }, {
+            path: 'settings/medicalservices/add',
+            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"]
+          }, {
+            path: 'settings/medicalservices/edit/:id',
+            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"]
+          }, {
+            path: 'settings/medicalservicetype',
+            component: _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["MedicalServicetypeComponent"]
+          }, {
+            path: 'settings/medicalservicetype/add',
+            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"]
+          }, {
+            path: 'settings/medicalservicetype/edit/:id',
+            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"]
           }]
         }]), _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__["ServiceWorkerModule"].register('ngsw-worker.js', {
           enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].production
@@ -18675,12 +20334,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this106 = this;
+        var _this116 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this106.forecasts = result;
+          _this116.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -18832,7 +20491,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this107 = this;
+            var _this117 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -18842,14 +20501,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this107.imageUrl = reader.result;
+                _this117.imageUrl = reader.result;
 
-                _this107.registrationForm.patchValue({
+                _this117.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this107.editFile = false;
-                _this107.removeUpload = true;
+                _this117.editFile = false;
+                _this117.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -19144,7 +20803,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this108 = this;
+            var _this118 = this;
 
             this.loginForm.markAllAsTouched();
 
@@ -19154,12 +20813,12 @@
 
             this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this108.router.navigate(["/admin/dashboard"]);
+                _this118.router.navigate(["/admin/dashboard"]);
               } else {
-                _this108.ts.showError("Error", "Username or password is not correct.");
+                _this118.ts.showError("Error", "Username or password is not correct.");
               }
             }, function (error) {
-              _this108.ts.showError("Error", "Something went wrong.");
+              _this118.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
@@ -19425,7 +21084,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! D:\Projects\Mamji\ClientApp\src\main.ts */
+      /*! D:\Project\Mamji\MamjiAdminGit\ClientApp\src\main.ts */
       "./src/main.ts");
       /***/
     }

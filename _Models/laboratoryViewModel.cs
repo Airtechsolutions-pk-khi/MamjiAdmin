@@ -14,9 +14,10 @@ namespace MamjiAdmin._Models
 
         public int CustomerID { get; set; }
 
+        public string FullName { get; set; }
         public string LabReferenceNo { get; set; }
 
-        public string ImagePath { get; set; }
+        public string Image { get; set; }
 
         public Nullable<int> StatusID { get; set; }
 

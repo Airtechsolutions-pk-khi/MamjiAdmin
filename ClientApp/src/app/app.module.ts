@@ -80,6 +80,10 @@ import { OrderdetailsComponent } from './admin/pharmacy/orderdetails/orderdetail
 
 import { ServiceComponent } from './admin/settings/medicalservices/service.component';
 import { AddServiceComponent } from './admin/settings/medicalservices/add/addservice.component';
+import { MedicalServicetypeComponent } from './admin/settings/medicalservicetype/medicalservicetype.component';
+import { AddMedicalServicetypeComponent } from './admin/settings/medicalservicetype/add/addmedicalservicetype.component';
+import { NursingAppointmentComponent } from './admin/reception/nursingappointment/nursingappointment.component';
+import { AddnursingappointmentComponent } from './admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component';
  
  
 @NgModule({
@@ -139,6 +143,9 @@ import { AddServiceComponent } from './admin/settings/medicalservices/add/addser
     AppointmentComponent,
     AddappointmentComponent,
 
+    NursingAppointmentComponent,
+    AddnursingappointmentComponent,
+
 /*    LaboratoryinquiryComponent,*/
     UploadreportComponent,
     AddreportsComponent,
@@ -148,7 +155,9 @@ import { AddServiceComponent } from './admin/settings/medicalservices/add/addser
     OrderdetailsComponent,
     AddsettingsComponent,
     ServiceComponent,
-    AddServiceComponent
+    AddServiceComponent,
+    MedicalServicetypeComponent,
+    AddMedicalServicetypeComponent,
      
     
     
@@ -239,6 +248,11 @@ import { AddServiceComponent } from './admin/settings/medicalservices/add/addser
           { path: 'reception/appointment/addappointment', component: AddappointmentComponent },
           { path: 'reception/appointment/edit/:id', component: AddappointmentComponent },
 
+          { path: 'reception/nursingappointment', component: NursingAppointmentComponent },
+          { path: 'reception/nursingappointment/addnursingappointment', component: AddnursingappointmentComponent },
+          { path: 'reception/nursingappointment/edit/:id', component: AddnursingappointmentComponent },
+
+
 /*          { path: 'reception/laboratoryinquiry', component: LaboratoryinquiryComponent },*/
           { path: 'laboratory/customerinquiry', component: CustomerinquiryComponent },
           { path: 'laboratory/uploadreport', component: UploadreportComponent },
@@ -262,6 +276,10 @@ import { AddServiceComponent } from './admin/settings/medicalservices/add/addser
           { path: 'settings/medicalservices', component: ServiceComponent },
           { path: 'settings/medicalservices/add', component: AddServiceComponent },
           { path: 'settings/medicalservices/edit/:id', component: AddServiceComponent },
+
+          { path: 'settings/medicalservicetype', component: MedicalServicetypeComponent },
+          { path: 'settings/medicalservicetype/add', component: AddMedicalServicetypeComponent },
+          { path: 'settings/medicalservicetype/edit/:id', component: AddMedicalServicetypeComponent },
         ]
       }
     ]),

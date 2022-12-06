@@ -38,8 +38,8 @@ export class AdddeliveryComponent implements OnInit {
   
   {
     this.createForm();
-    this.loadBrands();
-     this.selectedBrand =this.ls.getSelectedBrand();
+    //this.loadBrands();
+     //this.selectedBrand =this.ls.getSelectedBrand();
   }
   
 
@@ -58,7 +58,7 @@ export class AdddeliveryComponent implements OnInit {
       statusID: [true],
       // brandIDs :[''],
       deliveryAreaID: 0,    
-      brandID: this.ls.getSelectedBrand().brandID,
+      //brandID: this.ls.getSelectedBrand().brandID,
       brands:[],
     });
   }
@@ -71,7 +71,7 @@ export class AdddeliveryComponent implements OnInit {
     debugger
     if (obj.brands != "") {
       var stringToConvert = obj.brands;
-      this.selectedBrandIds = stringToConvert.split(',').map(Number);
+      //this.selectedBrandIds = stringToConvert.split(',').map(Number);
       this.f.brands.setValue(obj.brands);
     }
   }
@@ -108,7 +108,7 @@ export class AdddeliveryComponent implements OnInit {
     if (this.deliveryForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);    
-    this.f.brands.setValue(this.selectedBrandIds == undefined ? "" : this.selectedBrandIds.toString());
+    //this.f.brands.setValue(this.selectedBrandIds == undefined ? "" : this.selectedBrandIds.toString());
 
     if (parseInt(this.f.deliveryAreaID.value) === 0) {
       //Insert delivery
