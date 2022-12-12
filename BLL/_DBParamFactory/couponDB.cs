@@ -38,7 +38,7 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        lst = _dt.DataTableToList<CouponBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CouponBLL>>();
                     }
                 }
                 return lst;
