@@ -74,7 +74,6 @@ export class MedicineService {
     return this.http.get<Medicine[]>(`api/medicine/medicine/${id}`);
   }
   getAllData() {
-    debugger
     const url = `api/medicine/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
