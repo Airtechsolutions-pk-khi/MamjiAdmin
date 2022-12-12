@@ -83,7 +83,6 @@ export class AdddoctorsComponent implements OnInit {
     });
   }
   private editForm(obj) {
-    debugger;
     this.DoctorSchedule = obj.DrSchedule;
     this.DoctorProfiles = obj.profiles;
     this.f.firstName.setValue(obj.firstName);
@@ -113,7 +112,6 @@ export class AdddoctorsComponent implements OnInit {
   }
 
   loadSpecialitiesAll() {
-    debugger
      this.appointmentService.loadSpecialities().subscribe((res: any) => {
        this.selectedSpecialityList = res;
      });
@@ -121,7 +119,6 @@ export class AdddoctorsComponent implements OnInit {
   
 
   onSubmit() {
-    debugger
     this.doctorForm.markAllAsTouched();
     this.submitted = true;
     if (this.doctorForm.invalid) { return; }
@@ -171,7 +168,6 @@ export class AdddoctorsComponent implements OnInit {
     this.DoctorProfiles.splice(index, 1);
   }
   AddChild(val) {
-   debugger
     var obj = this.selectedSpecialityList.find(element => element.specialistID == val.specialistID);
      
      if (val.specialistID != null) {
@@ -194,8 +190,7 @@ export class AdddoctorsComponent implements OnInit {
     this.spec.timeSlot = "";
 
   }
-   AddProfileChild(val) {
-    debugger          
+   AddProfileChild(val) {          
       if (val != null) {
         
           this.DoctorProfiles.push({

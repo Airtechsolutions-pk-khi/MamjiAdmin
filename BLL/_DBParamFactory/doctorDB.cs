@@ -119,8 +119,6 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                int rtn1 = 0;
-                int rtn2 = 0;
                 SqlParameter[] p = new SqlParameter[13];
 
                 p[0] = new SqlParameter("@FullName", data.FullName);
