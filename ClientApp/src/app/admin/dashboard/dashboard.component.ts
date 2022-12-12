@@ -32,7 +32,6 @@ export class DashboardComponent {
   }
 
   GetDashboard() {
-    debugger
     this.service.getAllData().subscribe((res: any) => {
       this.dashboardSummary = res[0];
     });

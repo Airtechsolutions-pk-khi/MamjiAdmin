@@ -76,10 +76,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(DoctorBLL data)
+        public int Update(DoctorBLL data, IWebHostEnvironment _env)
         {
             try
             {
+                data.ImagePath = UploadImage(data.ImagePath, "Doctor", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

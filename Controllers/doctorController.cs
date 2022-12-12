@@ -54,7 +54,7 @@ namespace MamjiAdmin.Controllers
         [Route("update")]
         public int PostUpdate([FromBody] DoctorBLL obj)
         {
-            return _service.Update(obj);
+            return _service.Update(obj, _env);
         }
 
 
