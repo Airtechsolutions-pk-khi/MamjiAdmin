@@ -76,16 +76,16 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[11];
 
                 p[0] = new SqlParameter("@CustomerName", data.CustomerName);
-                p[1] = new SqlParameter("@Mobile", data.Mobile);
-                p[2] = new SqlParameter("@Address", data.Address);
-                p[3] = new SqlParameter("@ImagePath", data.Image);
+                p[1] = new SqlParameter("@Image", data.Image);
+                p[2] = new SqlParameter("@Mobile", data.Mobile);
+                p[3] = new SqlParameter("@Address", data.Address);
                 p[4] = new SqlParameter("@Note", data.Note);
                 p[5] = new SqlParameter("@StatusID", data.StatusID);
                 p[6] = new SqlParameter("@CreatedBy", data.CreatedBy);
                 p[7] = new SqlParameter("@CreatedOn", data.CreatedOn);
                 p[8] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[9] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[10] = new SqlParameter("@prescriptionID", data.PrescriptionID);
+                p[10] = new SqlParameter("@PrescriptionID", data.PrescriptionID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertPrescription_Admin", p);
 
@@ -104,16 +104,16 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[11];
 
                 p[0] = new SqlParameter("@CustomerName", data.CustomerName);
-                p[1] = new SqlParameter("@Mobile", data.Mobile);
-                p[2] = new SqlParameter("@Address", data.Address);
-                p[3] = new SqlParameter("@ImagePath", data.Image);
+                p[1] = new SqlParameter("@Image", data.Image);
+                p[2] = new SqlParameter("@Mobile", data.Mobile);
+                p[3] = new SqlParameter("@Address", data.Address);
                 p[4] = new SqlParameter("@Note", data.Note);
                 p[5] = new SqlParameter("@StatusID", data.StatusID);
                 p[6] = new SqlParameter("@CreatedBy", data.CreatedBy);
                 p[7] = new SqlParameter("@CreatedOn", data.CreatedOn);
                 p[8] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[9] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[10] = new SqlParameter("@prescriptionID", data.PrescriptionID);
+                p[10] = new SqlParameter("@PrescriptionID", data.PrescriptionID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updatePrescription_Admin", p);
 
@@ -125,14 +125,13 @@ namespace BAL.Repositories
             }
         }
 
-        public int Delete(PrescriptionBLL data)
+        public int Delete(int PrescriptionID)
         {
             try
             {
                 int _obj = 0;
-                SqlParameter[] p = new SqlParameter[2];
-                p[0] = new SqlParameter("@id", data.PrescriptionID);
-                p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", PrescriptionID);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeletePrescription", p);
 

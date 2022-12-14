@@ -67,7 +67,6 @@ export class AddprescriptionComponent implements OnInit {
     })
   }
   onSubmit() {
-    debugger
     this.prescriptionForm.markAllAsTouched();
     this.submitted = true;
     if (this.prescriptionForm.invalid) { return; }

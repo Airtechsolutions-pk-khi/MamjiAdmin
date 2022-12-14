@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace MamjiAdmin.BLL._Services
 {
-    public class prescriptionService : baseService
+    public class prescripitonService : baseService
     {
         prescriptionDB _service;
-        public prescriptionService()
+        public prescripitonService()
         {
             _service = new prescriptionDB();
         }
@@ -22,7 +22,7 @@ namespace MamjiAdmin.BLL._Services
             {
                 return _service.GetAll();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<PrescriptionBLL>();
             }
@@ -33,7 +33,7 @@ namespace MamjiAdmin.BLL._Services
             {
                 return _service.Get(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -42,47 +42,45 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Prescription", _env);
+                data.Image = UploadImage(data.Image, "Presc", _env);
                 data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
         }
-
         public int Update(PrescriptionBLL data, IWebHostEnvironment _env)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Prescription", _env);
+                data.Image = UploadImage(data.Image, "Presc", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
         }
-        public int Delete(PrescriptionBLL data)
+        public int Delete(int PrescriptionID)
         {
             try
             {
-                data.LastUpdatedDate = _UTCDateTime_SA();
-                var result = _service.Delete(data);
+                //data.CreatedOn = DateTime.Now;
+                var result = _service.Delete(PrescriptionID);
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
         }
-
     }
 }
