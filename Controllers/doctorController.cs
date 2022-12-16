@@ -39,7 +39,7 @@ namespace MamjiAdmin.Controllers
             return _service.GetDocDays();
         }
         [HttpGet("doctor/{id}")]
-        public DoctorBLL Get(int id)
+        public List<DoctorBLL> Get(int id)
         {
             return _service.Get(id);
         }

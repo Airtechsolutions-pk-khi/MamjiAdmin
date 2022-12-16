@@ -173,7 +173,8 @@ export class AdddoctorsComponent implements OnInit {
      if (val.specialistID != null) {
        if (!this.DoctorSchedule.find(element => element.specialistID == val.specialistID)) {
          this.DoctorSchedule.push({
-           name: obj.name,
+          specialistID:val.specialistID, 
+          name: obj.name,
            dayName: val.dayName,
            timeSlot:val.timeSlot,
          });
@@ -194,6 +195,7 @@ export class AdddoctorsComponent implements OnInit {
       if (val != null) {
         
           this.DoctorProfiles.push({
+            specialistID:val.specialistID,
             fees: val.fees,
             profile: val.profile,            
           });

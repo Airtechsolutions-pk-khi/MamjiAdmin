@@ -49,7 +49,7 @@ namespace MamjiAdmin.BLL._Services
                 return new List<DaysBLL>();
             }
         }
-        public DoctorBLL Get(int id)
+        public List<DoctorBLL> Get(int id)
         {
             try
             {

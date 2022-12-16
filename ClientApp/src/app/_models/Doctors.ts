@@ -1,3 +1,5 @@
+import * as internal from "stream";
+
 export class Doctors {
     doctorID: number;
     fullName: string;
@@ -12,12 +14,13 @@ export class Doctors {
     doctorSchedule:DoctorSchedule[];
     doctorProfiles:DoctorProfiles[];
 }
-export class DoctorProfiles {     
+export class DoctorProfiles {    
+    specialistID:number; 
     fees:number;    
     profile:string;    
 }
 export class DoctorSchedule {
-     
+    specialistID:number;
     name: string;
     dayName:string;
     timeSlot:string;

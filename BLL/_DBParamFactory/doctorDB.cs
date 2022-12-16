@@ -92,24 +92,125 @@ namespace BAL.Repositories
                 return null;
             }
         }
-        public DoctorBLL Get(int id)
+        public List<DoctorBLL> Get(int id)
         {
             try
             {
-                var _obj = new DoctorBLL();
+                List<DoctorBLL>  Doctor = new List<DoctorBLL>();
+                List<DoctorScheduleBLL>  DocSchedule = new List<DoctorScheduleBLL>();
+                List<DoctorTimingBLL>  DocTiming = new List<DoctorTimingBLL>();
+                List<DoctorProfilesBLL>  DocProf = new List<DoctorProfilesBLL>();
+
                 SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@id", id);
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetDoctorbyID_Admin", p);
-                if (_dt != null)
+                p[0] = new SqlParameter("@DoctorID", id);
+                _ds = (new DBHelper().GetDatasetFromSP)("sp_GetDoctorbyID_Admin", p);
+                if (_ds != null)
                 {
-                    if (_dt.Rows.Count > 0)
+                    if (_ds.Tables.Count > 0)
                     {
-                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<DoctorBLL>>().FirstOrDefault();
+
+                        if (_ds.Tables[0] != null)
+                        {
+                            var _dsDoctor = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<DoctorBLL>>();
+                            var _dsSchedule = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[1])).ToObject<List<DoctorScheduleBLL>>();
+                            var _dsDoctorTimings = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[2])).ToObject<List<DoctorTimingBLL>>();
+                            var _dsDoctorProfile = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[3])).ToObject<List<DoctorProfilesBLL>>();
+                            
+                          
+                            foreach (var _i in _dsDoctor)
+                            {
+                                DocSchedule = new List<DoctorScheduleBLL>();
+                                foreach (var _j in _dsSchedule.ToList())
+                                {
+                                    DocSchedule.Add(new DoctorScheduleBLL
+                                    {
+                                        DoctorID = _j.DoctorID,
+                                        DayName = _j.DayName,
+                                        Name = _j.Name,
+                                        SpecialistID = _j.SpecialistID,
+                                        TimeSlot = _j.TimeSlot
+                                    });                                   
+                                }
+                                DocTiming = new List<DoctorTimingBLL>();
+                                foreach (var _j in _dsDoctorTimings.ToList())
+                                {
+                                    DocTiming.Add(new DoctorTimingBLL
+                                    {
+                                        DaysID = _j.DaysID,
+                                        DoctorID = _j.DoctorID,
+                                        DayName = _j.DayName,
+                                        Name = _j.Name,
+                                        TimeSlot = _j.TimeSlot
+                                    });
+                                }
+                                DocProf = new List<DoctorProfilesBLL>();
+                                foreach (var _j in _dsDoctorProfile.ToList())
+                                {
+                                    DocProf.Add(new DoctorProfilesBLL
+                                    {
+                                        SpecialistID = _j.SpecialistID,
+                                        Fees = _j.Fees,
+                                        Profile = _j.Profile,
+                                        Name = _j.Name,
+                                        DoctorID = _j.DoctorID
+                                        
+                                    });
+                                }
+
+                                Doctor.Add(new DoctorBLL
+                                {
+                                    DoctorID = _i.DoctorID,
+                                    FullName = _i.FullName,
+                                    Email = _i.Email,
+                                    Education = _i.Education,
+                                    Skills = _i.Skills,
+                                    Profile = _i.Profile,
+                                    Gender = _i.Gender,
+                                    StatusID = _i.StatusID,
+                                    doctorSchedule = DocSchedule,
+                                    DoctorTimings =DocTiming,
+                                    DoctorProfiles = DocProf
+                                });
+                            }
+
+                        }
+                        //Subcategory.CategoryList = Category;
                     }
                 }
-                return _obj;
+                return Doctor;
+
+
+                //SqlParameter[] p = new SqlParameter[2];
+                //var _objsch = new DoctorScheduleBLL();
+                //var _objtiming = new DoctorTimingBLL();
+                //var _objprof = new DoctorProfilesBLL();
+                //var ds = GetDoctorByID(id);
+
+                //var _dsDoctor = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<DoctorBLL>>();
+                //var _dsSchedule = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[1])).ToObject<List<DoctorScheduleBLL>>();
+                //var _dsDoctorTimings = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[2])).ToObject<List<DoctorTimingBLL>>();
+                //var _dsDoctorProfile = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[3])).ToObject<List<DoctorProfilesBLL>>();
+
+
+                 
             }
-            catch (Exception)
+               
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public DataSet GetDoctorByID(int id)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@DoctorID", id);
+                ds = (new DBHelper().GetDatasetFromSP)("sp_GetDoctorbyID_Admin", p);
+                return ds;
+            }
+            catch (Exception ex)
             {
                 return null;
             }
@@ -119,7 +220,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[13];
+                SqlParameter[] p = new SqlParameter[12];
 
                 p[0] = new SqlParameter("@FullName", data.FullName);
                 p[1] = new SqlParameter("@ImagePath", data.ImagePath);
@@ -133,60 +234,48 @@ namespace BAL.Repositories
                 p[9] = new SqlParameter("@CreatedOn", data.CreatedOn);
                 p[10] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[11] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[12] = new SqlParameter("@DoctorID", data.DoctorID);
-                //rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertDoctor_Admin", p);
+                               
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertDoctor_Admin", p).Rows[0]["DoctorID"].ToString());
 
+ 
+                if (data.doctorSchedule.Count > 0)
+                {
+                    foreach (var i in data.doctorSchedule)
+                    {
+                        SqlParameter[] p2 = new SqlParameter[3];
+                        p2[0] = new SqlParameter("@DoctorID", rtn);
+                        p2[1] = new SqlParameter("@SpecialistID", i.SpecialistID);
+                        p2[2] = new SqlParameter("@Name", i.DayName);
 
-                //if (data.Specialities != "")
-                //{
-                //    SqlParameter[] p1 = new SqlParameter[2];
+                        int rtn2 = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertDocDays_Admin", p2).Rows[0]["DaysID"].ToString());
+                        foreach (var j in i.TimeSlot)
+                        {
+                            SqlParameter[] p3 = new SqlParameter[4];
+                            p3[0] = new SqlParameter("@DaysID", rtn2);
+                            p3[1] = new SqlParameter("@DoctorID", rtn);
+                            p3[2] = new SqlParameter("@SpecialistID", i.SpecialistID);
+                            p3[3] = new SqlParameter("@TimeSlot", j);
+                            new DBHelper().GetTableFromSP("dbo.sp_insertDocTiming_Admin", p3);
+                        }
 
-                //    p1[0] = new SqlParameter("@Specialities", data.Specialities == "" ? null : data.Specialities);
-                //    p1[1] = new SqlParameter("@DoctorID", rtn);
+                        
+                    }
+                    foreach (var item in data.DoctorProfiles)
+                    {
+                        SqlParameter[] p4 = new SqlParameter[4];
+                        p4[0] = new SqlParameter("@DoctorID", rtn);
+                        p4[1] = new SqlParameter("@SpecialityID", item.SpecialistID);
+                        p4[2] = new SqlParameter("@Profile", item.Profile);
+                        p4[3] = new SqlParameter("@Fees", item.Fees);
+                        p4[3] = new SqlParameter("@StatusID", 1);
+                        new DBHelper().GetTableFromSP("dbo.sp_insertSpecialitiesJunc_Admin", p4);
+                    }
 
-                //    (new DBHelper().ExecuteNonQueryReturn)("sp_insertDocSpecialities_Admin", p1);
-                //}
-                //if (data.Days != "")
-                //{
-                //    //char[] spearator = { ',' };
-                //    var days = data.Days.Split(',');
-                //    var speciality = data.Specialities.Split(',');
-                                                    
-                //        SqlParameter[] p2 = new SqlParameter[3];
-                //        p2[0] = new SqlParameter("@Days", data.Days);
-                //        p2[1] = new SqlParameter("@DoctorID", rtn);
-                //        p2[2] = new SqlParameter("@Specialities", data.Specialities);
-
-                //        (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertDocDays_Admin", p2);
-                     
-                     
-                //}
-
-                //if (data.Times != "")
-                //{
-                //    char[] spearator = { ',' };
-                //    var times = data.Times.Split(spearator);
-                //    var speciality = data.Specialities.Split(spearator);
-                //    foreach (var time in times)
-                //    {
-                //        foreach (var specialtime in speciality)
-                //        {
-                //            SqlParameter[] p2 = new SqlParameter[4];
-
-                //            p2[0] = new SqlParameter("@DaysID", rtn1);
-                //            p2[1] = new SqlParameter("@DoctorID", rtn);
-                //            p2[2] = new SqlParameter("@SpecialistID", int.Parse(specialtime));
-                //            p2[3] = new SqlParameter("@TimeSlot", time);
-                //            (new DBHelper().ExecuteNonQueryReturn)("sp_insertDocTimeslot_Admin", p2);
-                //        }
-                //    }
-                //}
-
-                //return rtn;
-                return 0;
+                }
+ 
+                return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }

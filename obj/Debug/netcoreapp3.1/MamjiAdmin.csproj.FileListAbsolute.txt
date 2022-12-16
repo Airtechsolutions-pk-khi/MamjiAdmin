@@ -463,6 +463,7 @@ D:\Project\Mamji\MamjiAdminGit\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcorea
 D:\Project\Mamji\MamjiAdminGit\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Project\Mamji\MamjiAdminGit\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Project\Mamji\MamjiAdminGit\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Project\Mamji\MamjiAdminGit\obj\Debug\netcoreapp3.1\MamjiAdmin.csprojAssemblyReference.cache
 D:\Project\Mamji\MamjiAdminGit\obj\Debug\netcoreapp3.1\MamjiAdmin.AssemblyInfoInputs.cache
 D:\Project\Mamji\MamjiAdminGit\obj\Debug\netcoreapp3.1\MamjiAdmin.AssemblyInfo.cs
 D:\Project\Mamji\MamjiAdminGit\obj\Debug\netcoreapp3.1\MamjiAdmin.csproj.CoreCompileInputs.cache
