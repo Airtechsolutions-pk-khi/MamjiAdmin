@@ -1,24 +1,21 @@
 ﻿
+using System.Collections.Generic;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 namespace MamjiAdmin.Controllers
 {
     [Route("api/[controller]")]
-    public class prescriptionController : Controller
+    public class prescriptionController : ControllerBase
     {
         private readonly IWebHostEnvironment _env;
-        prescriptionService _service;
+        prescripitonService _service;
         public prescriptionController(IWebHostEnvironment env)
         {
-            _service = new prescriptionService();
-            //_env = env;
+            _service = new prescripitonService();
+            _env = env;
         }
         [HttpGet("{all}")]
         public List<PrescriptionBLL> GetAll()
@@ -44,9 +41,9 @@ namespace MamjiAdmin.Controllers
         }
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody] PrescriptionBLL obj)
+        public int PostDelete([FromBody] int PrescriptionID)
         {
-            return _service.Delete(obj);
+            return _service.Delete(PrescriptionID);
         }
     }
 }
