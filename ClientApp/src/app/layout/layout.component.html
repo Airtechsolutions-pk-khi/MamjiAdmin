@@ -38,10 +38,23 @@
         </div>
       </li>
       <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
+          <i class="fas fa-fw fa-user"></i>
+          <span>Users</span>
+        </a>
+        <div id="collapseUser" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> User Roles</a>
+            <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">User</a>
+          </div>
+        </div>
+      </li>
+      <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapseCustomer">
-          <i class="fas fa-fw fa-user"></i>
+          <i class="fas fa-fw fa-wrench"></i>
           <span>Pharmacy</span>
         </a>
         <div id="collapseCustomer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -95,7 +108,21 @@
           </div>
         </div>
       </li>
-
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReport" aria-expanded="true" aria-controls="collapseReport">
+          <i class="fas fa-fw fa-list"></i>
+          <span>Reports</span>
+        </a>
+        <div id="collapseReport" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Patients </a>
+            <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">Dr. Appoinment </a>            
+            <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Medical Services </a>
+            <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Nursing Appoinment</a>
+          </div>
+        </div>
+      </li>
       <hr class="sidebar-divider d-none d-md-block">
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">

@@ -17,7 +17,9 @@ export class Doctors {
 export class DoctorProfiles {    
     specialistID:number; 
     fees:number;    
-    profile:string;    
+    profile:string;   
+    dayName:string; 
+    name:string;
 }
 export class DoctorSchedule {
     specialistID:number;

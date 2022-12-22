@@ -44,7 +44,7 @@ namespace MamjiAdmin._Models
         public int DoctorID { get; set; }
         public int SpecialistID { get; set; }
         public string Name { get; set; }
-        public string DayName { get; set; }
+        public string DayName { get; set; }        
         public string[] TimeSlot { get; set; }
 
         public List<DoctorBLL> Doctors { get; set; }
