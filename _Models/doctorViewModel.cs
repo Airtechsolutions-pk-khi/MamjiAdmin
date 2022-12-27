@@ -27,22 +27,34 @@ namespace MamjiAdmin._Models
         public Nullable<System.DateTime> CreatedOn { get; set; }
         public List<DoctorScheduleBLL> doctorSchedule { get; set; }
         public List<DoctorProfilesBLL> DoctorProfiles { get; set; }
-       
+        public List<DoctorTimingBLL> DoctorTimings { get; set; }
     }
     public class DoctorProfilesBLL
-    {
-        //public int SpecialitiesJuncID { get; set; }
-        //public int DoctorID { get; set; }
-        //public int SpecialityID { get; set; }
+    {        
+        public int DoctorID { get; set; }
+        public int SpecialistID { get; set; }
         public string Profile { get; set; }
-        //public int? StatusID { get; set; }
-        public double Fees { get; set; }
+        public int? StatusID { get; set; }
+        public string Name { get; set; }
+        public double? Fees { get; set; }
     }
 
     public class DoctorScheduleBLL
     {
-        //public int DoctorID { get; set; }
-        //public int specialistID { get; set; }
+        public int DoctorID { get; set; }
+        public int SpecialistID { get; set; }
+        public string Name { get; set; }
+        public string DayName { get; set; }        
+        public string[] TimeSlot { get; set; }
+
+        public List<DoctorBLL> Doctors { get; set; }
+    }
+    public class DoctorTimingBLL
+    {
+        public int DaysID { get; set; }
+        public int DoctorID { get; set; }
+        public int SpecialistID { get; set; }
+        public string TimeSlots { get; set; }
         public string Name { get; set; }
         public string DayName { get; set; }
         public string[] TimeSlot { get; set; }
