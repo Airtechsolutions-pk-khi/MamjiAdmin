@@ -84,6 +84,9 @@ import { MedicalServicetypeComponent } from './admin/settings/medicalservicetype
 import { AddMedicalServicetypeComponent } from './admin/settings/medicalservicetype/add/addmedicalservicetype.component';
 import { NursingAppointmentComponent } from './admin/reception/nursingappointment/nursingappointment.component';
 import { AddnursingappointmentComponent } from './admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component';
+
+import { UserComponent } from './admin/user/user.component';
+import { AdduserComponent } from './admin/user/add/adduser.component';
  
  
 @NgModule({
@@ -158,7 +161,8 @@ import { AddnursingappointmentComponent } from './admin/reception/nursingappoint
     AddServiceComponent,
     MedicalServicetypeComponent,
     AddMedicalServicetypeComponent,
-     
+    UserComponent,
+    AdduserComponent
     
     
     
@@ -280,6 +284,10 @@ import { AddnursingappointmentComponent } from './admin/reception/nursingappoint
           { path: 'settings/medicalservicetype', component: MedicalServicetypeComponent },
           { path: 'settings/medicalservicetype/add', component: AddMedicalServicetypeComponent },
           { path: 'settings/medicalservicetype/edit/:id', component: AddMedicalServicetypeComponent },
+
+          { path: 'user', component: UserComponent },
+          { path: 'user/add', component: AdduserComponent },
+          { path: 'user/edit/:id', component: AdduserComponent },
         ]
       }
     ]),

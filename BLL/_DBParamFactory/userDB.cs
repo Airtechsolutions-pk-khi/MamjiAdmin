@@ -1,161 +1,137 @@
 ﻿
 using DAL.Models;
+using MamjiAdmin._Models;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using WebAPICode.Helpers;
 
 namespace BAL.Repositories
 {
 
     public class userDB : baseDB
     {
-        //public userRepository()
-        //    : base()
-        //{
-        //    DBContext = new DB_A35721_lunchboxDBEntities();
-        //}
+        public static LoginBLL repo;
+        public static DataTable _dt;
+        public static DataSet _ds;
+        public userDB()
+            : base()
+        {
+            repo = new LoginBLL();
+            _dt = new DataTable();
+            _ds = new DataSet();
+        }
+        public List<LoginBLL> GetAll()
+        {
+            try
+            {
+                var lst = new List<LoginBLL>();
+                SqlParameter[] p = new SqlParameter[0];
 
-        //public userRepository(DB_A35721_lunchboxDBEntities contextDB)
-        //    : base(contextDB)
-        //{
-        //    DBContext = contextDB;
-        //}
-        //public int DeleteSubUser(Nullable<int> subUserID, string lastUpdatedBy, Nullable<System.DateTime> lastUpdatedDate, string companyCode, Nullable<int> locationID)
-        //{
+                _dt = (new DBHelper().GetTableFromSP)("sp_getuser", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<LoginBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public LoginBLL Get(int id)
+        {
+            try
+            {
+                var _obj = new LoginBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", id);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetUserbyID_Admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<LoginBLL>>().FirstOrDefault();
+                    }
+                }
+                return _obj;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public int Insert(LoginBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[7];
 
-        //    try
-        //    {
-        //        SubUser subuser = DBContext.SubUsers.Where(x => x.SubUserID == subUserID && x.StatusID == 1 ).FirstOrDefault();
-        //        subuser.LastUpdatedBy = lastUpdatedBy;
-        //        subuser.LastUpdatedDate = Convert.ToDateTime(lastUpdatedDate);
-        //        subuser.StatusID = 3;
-        //        DBContext.SubUsers.Attach(subuser);
-        //        //DBContext.UpdateOnly<SubUser>(
-        //        //    subuser, x => x.LastUpdatedBy, x => x.LastUpdatedDate, x => x.StatusID);
+                p[0] = new SqlParameter("@UserName", data.UserName);
+                p[1] = new SqlParameter("@Email", data.Email);
+                p[2] = new SqlParameter("@Password", data.Password);
+                p[3] = new SqlParameter("@StatusID", data.StatusID);
+                p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdateBy);
+                p[5] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[6] = new SqlParameter("@ID", data.ID);
 
-        //        DBContext.SaveChanges();
-        //        return 1;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ErrorLog(ex, "UserRepository/DeleteSubUser", "Exception");
-        //        return 0;
-        //    }
-        //}
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_insertUser_Admin", p);
+                return rtn;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+        public int Update(LoginBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[7];
+                p[0] = new SqlParameter("@UserName", data.UserName);
+                p[1] = new SqlParameter("@Email", data.Email);
+                p[2] = new SqlParameter("@Password", data.Password);
+                p[3] = new SqlParameter("@StatusID", data.StatusID);
+                p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdateBy);
+                p[5] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[6] = new SqlParameter("@ID", data.ID);
 
-        //public IEnumerable<SubUserList> GetSubUsers(int LocationID)
-        //{
-        //    try
-        //    {
-        //        var modal = DBContext.SubUsers.Where(x => x.LocationID == LocationID && x.StatusID == 1
-        //        && x.StatusID == 1)
-        //           .AsEnumerable().Select(x => new SubUserList
-        //           {
-        //               RowID = x.RowID,
-        //               UserName = x.UserName,
-        //               FirstName = x.FirstName,
-        //               LastName = x.LastName,
-        //               Email = x.Email,
-        //               Passcode = x.Passcode,
-        //               UserType = x.UserType,
-        //               SubUserID = x.SubUserID,
-        //               LocationID = x.LocationID,
-        //               GroupName = ""
-        //           }).ToList();
-        //        return modal;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ErrorLog(ex, "UserRepository/GetSubUsers", "Exception");
-        //        return null;
-        //    }
-        //}
-        //public IEnumerable<Role_Group> GetRoleGroup(int UserID)
-        //{
-        //    try
-        //    {
-        //        var modal = DBContext.Role_Group.Where(x => x.UserID == UserID && x.StatusID == 1 
-        //        && x.StatusID == 1)
-        //           .AsEnumerable().Select(x => new Role_Group
-        //           {
-        //               RowID = x.RowID,
-        //               GroupID = x.GroupID,
-        //               GroupName = x.GroupName,
-        //               StatusID = x.StatusID,
-        //               UserID = x.UserID
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateUser_Admin", p);
 
-        //           }).ToList();
-        //        return modal;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ErrorLog(ex, "UserRepository/GetRoleGroup", "Exception");
-        //        return null;
-        //    }
-        //}
-    
+                return rtn;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
 
-        //public int InsertSubUser(SubUserList subuser)
-        //{
-        //    try
-        //    {
-        //        SubUser obj = new SubUser();
-        //        obj.UserName = subuser.UserName;
-        //        obj.FirstName = subuser.FirstName;
-        //        obj.LastName = subuser.LastName;
-        //        obj.UserType = subuser.UserType;
-        //        obj.Designation = subuser.Designation;
-        //        obj.RowID = subuser.RowID;
-        //        obj.SubUserID = subuser.SubUserID==null?0:int.Parse(subuser.SubUserID.ToString());
-        //        obj.UserID = subuser.UserID;
-        //        obj.ImagePath = subuser.ImagePath;
-        //        obj.Password = subuser.Password;
-        //        obj.Email = subuser.Email;
-        //        obj.Address = subuser.Address;
-        //        obj.CityID = subuser.CityID;
-        //        obj.CountryID = subuser.CountryID;
-        //        obj.GroupID = subuser.GroupID;
-        //        obj.Passcode = subuser.Passcode;
-        //        obj.TimeZoneID = subuser.TimeZoneID;
-        //        obj.LastUpdatedBy = subuser.LastUpdatedBy;
-        //        obj.LastUpdatedDate = subuser.LastUpdatedDate;
-        //        obj.StatusID = subuser.StatusID;
-        //        obj.CompanyCode = subuser.CompanyCode;
-        //        obj.DateTo = subuser.DateTo;
-        //        obj.DateFrom = subuser.DateFrom;
-        //        obj.Zipcode = subuser.Zipcode;
-        //        obj.States = subuser.States;
-        //        obj.LocationID = subuser.LocationID;
+        public int Delete(LoginBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", data.ID);
 
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteUser", p);
 
-
-        //        SubUser data = DBContext.SubUsers.Add(obj);
-
-        //        return data.SubUserID;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ErrorLog(ex, "UserRepository/InsertSubUser", "Exception");
-        //        return 0;
-        //    }
-        //}
-        //public int UpdateSubUser(SubUserList subuser)
-        //{
-        //    try
-        //    {
-
-        //        //SubUser data =
-        //        //    DBContext.Locations.Add(subuser);
-
-        //        return 0;
-        //        //data.RowID;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ErrorLog(ex, "UserRepository/UpdateSubUser", "Exception");
-        //        return 0;
-        //    }
-        //}
+                return _obj;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
     }
 }
