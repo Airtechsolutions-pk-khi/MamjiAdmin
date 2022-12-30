@@ -62,7 +62,7 @@ export class NursingAppointmentComponent implements OnInit {
     this.service.sortDirection = direction;
   }
   Edit(appointment) {
-    this.router.navigate(["admin/reception/appointment/edit", appointment]);
+    this.router.navigate(["admin/reception/nursingappointment/edit", appointment]);
   }
 
   Delete(data) {

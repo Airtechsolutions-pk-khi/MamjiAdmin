@@ -42,7 +42,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.CreatedOn = _UTCDateTime_SA();
+                //data.CreatedOn = DateTime.Now;
                 var result = _service.Insert(data);
 
                 return result;

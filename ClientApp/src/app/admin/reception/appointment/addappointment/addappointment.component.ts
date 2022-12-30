@@ -62,14 +62,14 @@ export class AddappointmentComponent implements OnInit {
       DoctorDaysList: [],
       
       timeslot: ['', Validators.required],
-      appointmentStatus: [''],
+      appointmentStatus: [101],
       statusID: [true],
       appointmentID: 0,
       doctorID: '',
       customerID: '',
       specialityID: '',
       daysID: '',
-      fullname: ['', Validators.required],
+     
     });
   }
   private editForm(obj) {
@@ -78,7 +78,7 @@ export class AddappointmentComponent implements OnInit {
     this.f.gender.setValue(obj.gender);
     this.f.fees.setValue(obj.fees);
     this.f.bookingDate.setValue(obj.bookingDate);
-    this.f.day.setValue(obj.day);
+    //this.f.day.setValue(obj.day);
     this.f.appointmentID.setValue(obj.appointmentID);
     this.f.timeslot.setValue(obj.timeslot);
     this.f.appointmentNo.setValue(obj.appointmentNo);
@@ -112,6 +112,7 @@ export class AddappointmentComponent implements OnInit {
   }
 
   onSubmit() {
+    debugger
     this.appointmentForm.markAllAsTouched();
     this.submitted = true;
     if (this.appointmentForm.invalid) { return; }

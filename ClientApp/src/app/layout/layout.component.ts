@@ -8,6 +8,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { LocationsService } from '../_services/locations.service';
 import { LocalStorageService } from '../_services/local-storage.service';
+import { UserService } from '../_services/userservice';
 
 @Component({
   selector: 'app-layout',
@@ -19,14 +20,14 @@ export class LayoutComponent implements OnInit {
   _Langname = "";
   branchname = "";
   email = "";
-  //locationID: 0;
-  //Locations: [];
+  locationID: 0;
+  Locations: [];
   private selectedBrand;
 
   ngOnInit() {
-    var data = this.ls.getSelectedBrand();
+    // var data = this.ls.getSelectedBrand();
 
-    //this.loadLocations();
+    // this.loadLocations();
 
 
     // if (data == null)
@@ -35,9 +36,9 @@ export class LayoutComponent implements OnInit {
   }
   constructor(private router: Router
     , public service: LocationsService
+    , public userService: UserService
     , public ls: LocalStorageService) {
-    //this.branchname = this.ls.getSelectedBrand().name;
-    //this.email = this.ls.getSelectedBrand().email;
+    
   }
   Logout() {
 
@@ -45,30 +46,30 @@ export class LayoutComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  private loadLocations() {
-    // var loc = this.ls.getLocation();
-    // if (loc != null) {
-    //   this.Locations = this.ls.getLocation();
-    //   this.locationID = this.ls.getSelectedLocation().locationID;
-    // }
-    // else {
-    //   this.service.getAllLocations(this.ls.getSelectedBrand().brandID).subscribe((res: any) => {
-    //     debugger
-    //     if (res.length > 0) {
-    //       this.ls.setLocation(res);
-    //       this.ls.setSelectedLocation(res[0]);
-    //       this.locationID =res[0].locationID;
-    //       this.Locations =res;
-    //     }
-    //     else {
-    //       this.router.navigate(['/']);
-    //     }
-    //   });
-    // }
-    //this.Locations = this.ls.getLocation();
-    //this.locationID = this.ls.getSelectedLocation().locationID;
+  // private loadLocations() {
+  //   var loc = this.ls.getUsers();
+  //   if (loc != null) {
+  //     this.Locations = this.ls.getUsers();
+  //     this.locationID = this.ls.getSelectedUser().locationID;
+  //   }
+  //   else {
+  //     this.userService.getAllData().subscribe((res: any) => {
+  //       debugger
+  //       if (res.length > 0) {
+  //         this.ls.setUser(res);
+  //         this.ls.setSelectedUser(res[0]);
+  //         this.locationID =res[0].locationID;
+  //         this.Locations =res;
+  //       }
+  //       else {
+  //         this.router.navigate(['/']);
+  //       }
+  //     });
+  //   }
+  //   this.Locations = this.ls.getLocation();
+  //   this.locationID = this.ls.getSelectedLocation().locationID;
 
-  }
+  // }
   changeloc(LocObj) {
 
     //this.locationID = this.ls.selectedLocation().locationID;

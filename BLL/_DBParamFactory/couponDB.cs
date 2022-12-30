@@ -62,7 +62,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<CouponBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CouponBLL>>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<CouponBLL>().FirstOrDefault();
                     }
                 }
                 return _obj;
@@ -129,7 +130,7 @@ namespace BAL.Repositories
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@id", data.CouponID);
-                //p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteCoupon", p);
 

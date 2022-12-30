@@ -20,8 +20,11 @@ namespace MamjiAdmin._Models
         public string Gender { get; set; }
         public string Fees { get; set; }
         public Nullable<DateTime> BookingDate { get; set; }
+        public string BookingDateNursing { get; set; }
         public string Day { get; set; }
+        public string Date { get; set; }
         public string Timeslot { get; set; }
+        public string TestName { get; set; }
         public int StatusID { get; set; }
         public string CreatedBy { get; set; }
         public string LastUpdatedBy { get; set; }

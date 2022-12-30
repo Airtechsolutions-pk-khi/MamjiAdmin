@@ -35,7 +35,7 @@ function matches(data: User, term: string) {
 })
 
 export class UserService {
-
+  public userModel: User;
   constructor(private http: HttpClient) {
   }
 
@@ -79,6 +79,7 @@ export class UserService {
     return this.http.get<User[]>(`api/user/user/${id}`);
   }
   getAllData() {
+    debugger
     const url = `api/user/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
@@ -136,6 +137,7 @@ export class UserService {
     };
   }
   insert(data) {
+    debugger
     return this.http.post(`api/user/insert`, data)
       .pipe(map(res => {
         

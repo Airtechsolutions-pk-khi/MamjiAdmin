@@ -95,6 +95,7 @@ export class AppointmentService {
   }
   getAllData()
   {
+    debugger
     const url = `api/appointment/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
@@ -147,6 +148,7 @@ export class AppointmentService {
   }
   insert(data)
   {
+    debugger
     return this.http.post('api/appointment/insert', data)
       .pipe(map(res => {
         console.log(res);

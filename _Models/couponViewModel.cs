@@ -8,7 +8,11 @@ namespace MamjiAdmin._Models
     public class couponViewModel
     {
     }
-
+    public class CouponBLL1
+    {
+        public int CouponID { get; set; }
+        
+    }
     public class CouponBLL
     {
         public int CouponID { get; set; }

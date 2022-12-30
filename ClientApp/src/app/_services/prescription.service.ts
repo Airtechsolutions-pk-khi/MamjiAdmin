@@ -139,6 +139,7 @@ export class PrescriptionService {
       }));
   }
   delete(data) {
+    debugger
     return this.http.post('api/prescription/delete', data);
   }
 }

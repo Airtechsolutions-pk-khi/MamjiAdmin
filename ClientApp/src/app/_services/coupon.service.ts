@@ -141,9 +141,9 @@ export class CouponService {
         return res;
       }));
   }
-  delete(updateData) {
+  delete(dltData) {
     debugger
-    return this.http.post(`api/coupon/delete`, updateData);
+    return this.http.post(`api/coupon/deleteCoupon`, dltData);
   }
 
 }

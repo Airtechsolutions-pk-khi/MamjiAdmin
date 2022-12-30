@@ -41,9 +41,9 @@ namespace MamjiAdmin.Controllers
         }
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody] int PrescriptionID)
+        public int PostDelete([FromBody] PrescriptionBLL obj)
         {
-            return _service.Delete(PrescriptionID);
+            return _service.Delete(obj.PrescriptionID);
         }
     }
 }

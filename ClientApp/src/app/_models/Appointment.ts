@@ -8,9 +8,12 @@ export class Appointment {
   appointmentType:string;
   day:string;
   bookingDate: string;  
+  bookingDateNursing: string;  
   timeslot: string;
+  testName: string;
   appointmentStatus: number;
   statusID: number;
   doctor: string;
+  
   specialities: string;
 }

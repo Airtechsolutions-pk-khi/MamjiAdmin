@@ -5,6 +5,7 @@ import { first } from 'rxjs/operators';
 import { LocalStorageService } from '../_services/local-storage.service';
 import { ToastService } from '../_services/toastservice';
 import { Router } from '@angular/router';
+import { UserService } from '../_services/userservice';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   constructor(private formBuilder: FormBuilder,
     public service: LoginService,
+    public userService: UserService,
     public ts: ToastService,
     private router: Router,
     private ls: LocalStorageService) { }
@@ -35,14 +37,13 @@ export class LoginComponent implements OnInit {
       .subscribe(
         data => {
           
-          if (data != null) {            
-            this.router.navigate(["/admin/dashboard"]);
-      
+          if (data != null) {         
+            this.userService.getAllData();   
+            this.router.navigate(["/admin/dashboard"]);      
           }
           else {
             this.ts.showError("Error", "Username or password is not correct.");
           }
-
         },
         error => {
           this.ts.showError("Error", "Something went wrong.");

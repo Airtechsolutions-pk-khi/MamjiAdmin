@@ -44,6 +44,7 @@ export class AdduserComponent implements OnInit {
       email: ['', Validators.required],
       statusID: [true],
       password: ['', Validators.required],
+      type: ['', Validators.required],
       id: 0,
     });
   }
@@ -52,6 +53,7 @@ export class AdduserComponent implements OnInit {
     this.f.userName.setValue(obj.userName);
     this.f.email.setValue(obj.email);
     this.f.password.setValue(obj.password);
+    this.f.type.setValue(obj.type);
     this.f.id.setValue(obj.id);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
   }
@@ -72,6 +74,7 @@ export class AdduserComponent implements OnInit {
     })
   }
   onSubmit() {
+    debugger
     this.userForm.markAllAsTouched();
     this.submitted = true;
     if (this.userForm.invalid) { return; }

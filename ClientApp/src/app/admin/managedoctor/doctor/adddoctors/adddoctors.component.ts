@@ -63,16 +63,14 @@ export class AdddoctorsComponent implements OnInit {
 
   private createForm() {
     this.doctorForm = this.formBuilder.group({
-      // firstName: [''],
-      // lastName: [''],
-      // fullName: ['', Validators.required],
+     
       fullName: [''],
       email: [''],      
       skills: [''],
       education: [''],
       imagePath: [''],
       profile:[''],
-      statusID: [1],
+      statusID: [true],
       fees:[0],
       gender:[''],
       timeSlot:[''],
@@ -149,7 +147,7 @@ export class AdddoctorsComponent implements OnInit {
       this.doctorService.insert(this.doctorForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/doctor']);
+          this.router.navigate(['/admin/managedoctor/doctor']);
         }
         this.loading = false;
       }, error => {

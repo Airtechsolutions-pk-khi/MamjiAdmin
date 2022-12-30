@@ -45,8 +45,8 @@ namespace MamjiAdmin.Controllers
 
 
         [HttpPost]
-        [Route("delete")]
-        public int Delete(CouponBLL obj)
+        [Route("deleteCoupon")]
+        public int Delete([FromBody] CouponBLL obj)
         {
             return _service.Delete(obj);
         }

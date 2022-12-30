@@ -78,16 +78,17 @@ namespace BAL.Repositories
 
                 p[0] = new SqlParameter("@UserName", data.UserName);
                 p[1] = new SqlParameter("@Email", data.Email);
-                p[2] = new SqlParameter("@Password", data.Password);
-                p[3] = new SqlParameter("@StatusID", data.StatusID);
-                p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdateBy);
-                p[5] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[6] = new SqlParameter("@ID", data.ID);
+                p[2] = new SqlParameter("@Type", data.Type);
+                p[3] = new SqlParameter("@Password", data.Password);
+                p[4] = new SqlParameter("@StatusID", data.StatusID);
+                p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdateBy);
+                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_insertUser_Admin", p);
                 return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }
@@ -97,20 +98,21 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[7];
+                SqlParameter[] p = new SqlParameter[8];
                 p[0] = new SqlParameter("@UserName", data.UserName);
                 p[1] = new SqlParameter("@Email", data.Email);
-                p[2] = new SqlParameter("@Password", data.Password);
-                p[3] = new SqlParameter("@StatusID", data.StatusID);
-                p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdateBy);
-                p[5] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[6] = new SqlParameter("@ID", data.ID);
+                p[2] = new SqlParameter("@Type", data.Type);
+                p[3] = new SqlParameter("@Password", data.Password);
+                p[4] = new SqlParameter("@StatusID", data.StatusID);
+                p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdateBy);
+                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[7] = new SqlParameter("@ID", data.ID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateUser_Admin", p);
 
                 return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }

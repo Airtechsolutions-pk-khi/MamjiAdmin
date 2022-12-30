@@ -87,6 +87,9 @@ import { AddnursingappointmentComponent } from './admin/reception/nursingappoint
 
 import { UserComponent } from './admin/user/user.component';
 import { AdduserComponent } from './admin/user/add/adduser.component';
+import { HasRoleGuard } from './has-role.guard';
+import { isAbsolute } from 'path';
+import { UserService } from './_services/userservice';
  
  
 @NgModule({
@@ -268,9 +271,17 @@ import { AdduserComponent } from './admin/user/add/adduser.component';
           { path: 'settings/coupon/add', component: AddCouponComponent },
           { path: 'settings/coupon/edit/:id', component: AddCouponComponent },       
           
-          
+          { path: 'pharmacy/medicine',
+          component: MedicineComponent, 
+          canActivate:[HasRoleGuard],
+           data :{
+           type:['SuperAdmin']
+         }
+         },
 
-          { path: 'pharmacy/medicine', component: MedicineComponent },
+          // { path: 'pharmacy/medicine', component: MedicineComponent },
+
+
           { path: 'pharmacy/medicine/addmedicines', component: AddmedicineComponent },
           { path: 'pharmacy/medicine/edit/:id', component: AddmedicineComponent },
 
@@ -285,7 +296,7 @@ import { AdduserComponent } from './admin/user/add/adduser.component';
           { path: 'settings/medicalservicetype/add', component: AddMedicalServicetypeComponent },
           { path: 'settings/medicalservicetype/edit/:id', component: AddMedicalServicetypeComponent },
 
-          { path: 'user', component: UserComponent },
+          { path: 'user',component: UserComponent },         
           { path: 'user/add', component: AdduserComponent },
           { path: 'user/edit/:id', component: AdduserComponent },
         ]
@@ -294,7 +305,7 @@ import { AdduserComponent } from './admin/user/add/adduser.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     NgbModule
   ],
-  providers: [],
+  providers: [HasRoleGuard],
   exports: [NgbdDatepickerRangePopup],
   bootstrap: [AppComponent,NgbdDatepickerRangePopup]
 })

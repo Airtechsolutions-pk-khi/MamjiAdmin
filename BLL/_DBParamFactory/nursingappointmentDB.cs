@@ -52,7 +52,7 @@ namespace BAL.Repositories
                 var _obj = new AppointmentBLL();
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", id);
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetAppointmentbyID_Admin", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetNursingAppointmentbyID_Admin", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
