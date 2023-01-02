@@ -11,11 +11,11 @@
 
   function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
   function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
     /***/
@@ -420,7 +420,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Doctors</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Doctors List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['adddoctors']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add Doctor\r\n                </button>\r\n            </div>\r\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Customer\r\n            </button></div> -->\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"FullName\" > Name </th>\r\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\r\n                        \r\n                        <th width=\"15%\" sortable=\"Skills\" > Skills </th>\r\n                        <th width=\"15%\" sortable=\"Education\" > Education </th>\r\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.fullName}} </td>\r\n                        <td> {{item.email}} </td>\r\n                         \r\n                        <td> {{item.skills}} </td>\r\n                        <td> {{item.education}} </td>\r\n                        <td> \r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.doctorID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Doctors</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Doctors List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <!-- <button [routerLink]=\"['adddoctors']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add Doctor\r\n                </button> -->\r\n            </div>\r\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Customer\r\n            </button></div> -->\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"FullName\" > Name </th>\r\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\r\n                        \r\n                        <th width=\"15%\" sortable=\"Skills\" > Skills </th>\r\n                        <th width=\"15%\" sortable=\"Education\" > Education </th>\r\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.fullName}} </td>\r\n                        <td> {{item.email}} </td>\r\n                         \r\n                        <td> {{item.skills}} </td>\r\n                        <td> {{item.education}} </td>\r\n                        <td> \r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <!-- <a (click)=\"Edit(item.doctorID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -840,7 +840,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customers</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customers List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <!--<div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />-->\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['addcustomers']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add Customers\r\n                </button>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"15%\" sortable=\"FullName\" (sort)=\"onSort($event)\"> Name </th>\r\n                    <th width=\"15%\" sortable=\"Mobile\" (sort)=\"onSort($event)\">Mobile </th>\r\n                    <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n                    <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td> {{item.fullName}} </td>\r\n                    <td>{{item.mobile}}</td>\r\n                    <td> {{item.email}} </td>\r\n                    <td>{{item.password}}</td>\r\n\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td style=\"text-align:center\">\r\n                      <a (click)=\"Edit(item.customerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                      <a (click)=\"Delete(item.customerID)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customers</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customers List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['addcustomers']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add Customers\r\n                </button>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"15%\" sortable=\"FullName\" (sort)=\"onSort($event)\"> Name </th>\r\n                    <th width=\"15%\" sortable=\"Mobile\" (sort)=\"onSort($event)\">Mobile </th>\r\n                    <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n                    <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td> {{item.fullName}} </td>\r\n                    <td>{{item.mobile}}</td>\r\n                    <td> {{item.email}} </td>\r\n                    <td>{{item.password}}</td>\r\n\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td style=\"text-align:center\">\r\n                      <a (click)=\"Edit(item.customerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                      <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -880,7 +880,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Nursing Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Nursing Appoinment List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                 <button [routerLink]=\"['addnursingappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Nursing Appoinment\r\n                </button> \r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\" sortable=\"AppointmentNo\" > Appoint. No.</th>\r\n                        <th width=\"15%\" sortable=\"PatientName\" > Patient Name </th>\r\n                        <th width=\"10%\" sortable=\"Age\" > Age </th>\r\n                        <th width=\"10%\" sortable=\"Gender\" > Gender </th>\r\n                        <th width=\"10%\" sortable=\"Fees\" > Fees </th>\r\n                        <th width=\"15%\" sortable=\"BookingDate\" > Booking Date </th>\r\n                        <th width=\"20%\" sortable=\"Timeslot\" > Time Slot </th>\r\n                        <th width=\"15%\" sortable=\"Status\" > Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td> {{item.appointmentNo}} </td>\r\n                    <td> {{item.patientName}} </td>\r\n                    <td> {{item.age}} </td>\r\n                    <td> {{item.gender}} </td>\r\n                    <td> {{item.fees}} </td>\r\n                    <td> {{item.bookingDate}} </td>\r\n                    <td> {{item.timeslot}} </td>\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 101, 'btn-danger':item.statusID !== 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==101?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td>\r\n                      <a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                      <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                     <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results \r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                 <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Nursing Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Nursing Appoinment List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                 <!-- <button [routerLink]=\"['addnursingappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Nursing Appoinment\r\n                </button>  -->\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\" sortable=\"AppointmentNo\" > Appoint. No.</th>\r\n                        <th width=\"10%\" sortable=\"PatientName\" > Patient Name </th>\r\n                        <th width=\"10%\" sortable=\"Age\" > Age </th>\r\n                        <th width=\"10%\" sortable=\"Gender\" > Gender </th>\r\n                        <th width=\"10%\" sortable=\"Fees\" > Fees </th>\r\n                        <th width=\"10%\" sortable=\"BookingDate\" > Booking Date </th>\r\n                        <th width=\"15%\" sortable=\"Timeslot\" > Time Slot </th>\r\n                        <th width=\"10%\" sortable=\"TestName\" > Test Name </th>\r\n                        <th width=\"10%\" sortable=\"Status\" > Status </th>\r\n                        <th width=\"5%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td> {{item.appointmentNo}} </td>\r\n                    <td> {{item.patientName}} </td>\r\n                    <td> {{item.age}} </td>\r\n                    <td> {{item.gender}} </td>\r\n                    <td> {{item.fees}} </td>\r\n                    <td> {{item.bookingDateNursing}} </td>\r\n                    <td> {{item.timeslot}} </td>\r\n                    <td> {{item.testName}} </td>\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 101, 'btn-danger':item.statusID !== 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==101?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td>\r\n                      <!-- <a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n                      <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                     <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results \r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                 <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1140,7 +1140,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Coupons</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Coupon List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <!-- <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button> -->\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Coupon\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\"> Title </th>\r\n            <th width=\"15%\" sortable=\"Type\">Type </th>\r\n            <th width=\"15%\" sortable=\"Amount\"> Amount</th>\r\n            <th width=\"15%\" sortable=\"CouponCode\"> Coupon Code</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td> {{item.amount}} </td>\r\n            <td> {{item.couponCode}} </td>\r\n            \r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n          </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.couponID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Coupons</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Coupon List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <!-- <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button> -->\r\n        <!-- <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Coupon\r\n        </button> -->\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\"> Title </th>\r\n            <th width=\"15%\" sortable=\"Type\">Type </th>\r\n            <th width=\"15%\" sortable=\"Amount\"> Amount</th>\r\n            <th width=\"15%\" sortable=\"CouponCode\"> Coupon Code</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td> {{item.amount}} </td>\r\n            <td> {{item.couponCode}} </td>\r\n            \r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n          </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.couponID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1200,7 +1200,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medical Service</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Services List</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Services\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n                        <th width=\"15%\" sortable=\"requirement\" (sort)=\"onSort($event)\">Requirement </th>\r\n                        <th width=\"15%\" sortable=\"fees\" (sort)=\"onSort($event)\">Fees </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.description}} </td>\r\n                        <td> {{item.requirment}} </td>\r\n                        <td> {{item.fees}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.medicalServiceID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medical Service</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Services List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-2 text-right\"style=\"padding-top: 25px;\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Services\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n                        <th width=\"15%\" sortable=\"requirement\" (sort)=\"onSort($event)\">Requirement </th>\r\n                        <th width=\"15%\" sortable=\"fees\" (sort)=\"onSort($event)\">Fees </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.description}} </td>\r\n                        <td> {{item.requirment}} </td>\r\n                        <td> {{item.fees}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.medicalServiceID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1240,7 +1240,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medical Servic Type</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Service Type List</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Service Type\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                         \r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Type </th>                        \r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                       \r\n                        <td> {{item.type}} </td>                      \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.nursingTypeID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medical Service Type</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Service Type List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-2 text-right\" style=\"padding-top: 25px;\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Service Type\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                         \r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Type </th>                        \r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                       \r\n                        <td> {{item.type}} </td>                      \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.nursingTypeID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1281,6 +1281,46 @@
 
 
       __webpack_exports__["default"] = "<!--  \r\n<h1 class=\"h3 mb-2 text-gray-800\">Offers</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n \r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Offers List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\">\r\n                <div class=\"input-group-prepend\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Offer\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n                        <th width=\"15%\" sortable=\"fromDate\" (sort)=\"onSort($event)\">From</th>\r\n                        <th width=\"15%\" sortable=\"toDate\" (sort)=\"onSort($event)\">To </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.descripiton}} </td>\r\n                        <td> {{item.fromDate | date}} </td>\r\n                        <td> {{item.toDate| date}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.offerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div> -->\r\n\r\n \r\n<h1 class=\"h3 mb-2 text-gray-800\">Offers</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n \r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Offers List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\">\r\n                <div class=\"input-group-prepend\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\"   />\r\n            </div>\r\n            <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Offer\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\"  > Name </th>\r\n                        <th width=\"15%\" sortable=\"descripiton\"  >Descripiton </th>\r\n                        <th width=\"15%\" sortable=\"fromDate\"  >From</th>\r\n                        <th width=\"15%\" sortable=\"toDate\"  >To </th>\r\n                        <th width=\"15%\" sortable=\"statusID\"  >Status </th>\r\n                        <th width=\"10%\">Actions</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr >\r\n                        <td>\r\n                            \r\n                        </td>\r\n                        <td> Offer Name </td>\r\n                        <td> Description </td>\r\n                        <td> 15-07-2022 </td>\r\n                        <td> 25-07-2022 </td>\r\n                        <td>\r\n                             \r\n                        </td>\r\n                        <td>\r\n                            <a  ><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a  ><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                     \r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/add/adduser.component.html":
+    /*!*********************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/add/adduser.component.html ***!
+      \*********************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminUserAddAdduserComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add User</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"userForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">User Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n               \r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">User Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=userName placeholder=\"\" formControlName=\"userName\">\r\n                  <div *ngIf=\"f.userName.invalid && (f.userName.dirty || f.userName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.userName.errors.required\">\r\n                      User Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n               \r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                  <input type=\"password\" class=\"form-control\" id=password placeholder=\"\" formControlName=\"password\">\r\n                  <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.password.errors.required\">\r\n                      Password is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n            </div>\r\n            <div class=\"form-group col-md-6 \">\r\n               \r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.email.errors.required\">\r\n                      Email is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n           \r\n            <div class=\"form-group col-md-12\">\r\n              \r\n              <label class=\"small mb-1\" for=\"inputLastName\">Role</label>\r\n              <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <option selected disabled> -- Please Select -- </option>\r\n                <option>Super Admin</option>\r\n                <option>Admin</option>\r\n                <option>Pharmacy</option>\r\n              </select>\r\n            \r\n            </div>\r\n          </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/user.component.html":
+    /*!**************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/user.component.html ***!
+      \**************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminUserUserComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-2\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n            </div>\r\n            <div class=\"col-md-3\">\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add User\r\n                </button>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n                    <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n                    <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n                    <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td> {{item.userName}} </td>\r\n                    <td> {{item.email}} </td>\r\n                    \r\n                    <td>{{item.password}}</td>\r\n                    <td> {{item.type}} </td>\r\n\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td style=\"text-align:center\">\r\n                      <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                      <a (click)=\"Delete(item.id)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1420,7 +1460,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Manage Doctors</span>\r\n        </a>\r\n        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n          <i class=\"fas fa-fw fa-user\"></i>\r\n          <span>Users</span>\r\n        </a>\r\n        <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> User Roles</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">User</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Nav Item - Pages Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Pharmacy</span>\r\n        </a>\r\n        <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Reception</span>\r\n        </a>\r\n        <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Customer Informations</a>\r\n            \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Laboratory</span>\r\n        </a>\r\n        <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/orders']\">Orders</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Upload Reports</a>\r\n            <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/customerinquiry']\">Customer Inquiry</a>-->\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseMedicalService\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Home Nursing</span>\r\n        </a>\r\n        <div id=\"collapseMedicalService\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservicetype']\">Medical Service Type </a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservices']\">Medical Services</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/nursingappointment']\">Nursing Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Reports</span>\r\n        </a>\r\n        <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Patients </a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment </a>            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Medical Services </a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Nursing Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n             <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">General Settings</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>\r\n       \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n     \r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n    <!-- End of Sidebar -->\r\n    <!-- Content Wrapper -->\r\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n      <!-- Main Content -->\r\n      <div id=\"content\">\r\n        <!-- Topbar -->\r\n        <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n          <!-- Sidebar Toggle (Topbar) -->\r\n          <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n            <i class=\"fa fa-bars\"></i>\r\n          </button>\r\n\r\n          <!-- Topbar Search -->\r\n          <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n            <strong>Welcome to Mamji Hospital</strong> \r\n            \r\n          </div>\r\n\r\n          <!-- Topbar Navbar -->\r\n          <ul class=\"navbar-nav ml-auto\">\r\n            <!-- Nav Item - User Information -->\r\n            <li class=\"nav-item dropdown no-arrow\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n                <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n              </a>\r\n              <!-- Dropdown - User Information -->\r\n              <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                  <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n                </a>\r\n              </div>\r\n            </li>\r\n\r\n          </ul>\r\n\r\n        </nav>\r\n        <!-- End of Topbar -->\r\n        <!-- Begin Page Content -->\r\n        <div class=\"container-fluid\">\r\n          <router-outlet></router-outlet>\r\n        </div>\r\n      </div>\r\n      <!-- End of Main Content -->\r\n      <!-- Footer -->\r\n      <footer class=\"sticky-footer bg-white\">\r\n        <div class=\"container my-auto\">\r\n          <div class=\"copyright text-center my-auto\">\r\n            <span>Copyright &copy; Mamji 2022</span>\r\n          </div>\r\n        </div>\r\n      </footer>\r\n      <!-- End of Footer -->\r\n\r\n    </div>\r\n    <!-- End of Content Wrapper -->\r\n\r\n  </div>\r\n</body>\r\n";
+      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Manage Doctors</span>\r\n        </a>\r\n        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n          <i class=\"fas fa-fw fa-user\"></i>\r\n          <span>Users</span>\r\n        </a>\r\n        <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> User Roles</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Nav Item - Pages Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Pharmacy</span>\r\n        </a>\r\n        <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Reception</span>\r\n        </a>\r\n        <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Customer Informations</a>\r\n            \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Laboratory</span>\r\n        </a>\r\n        <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/orders']\">Orders</a> -->\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Upload Reports</a>\r\n            <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/customerinquiry']\">Customer Inquiry</a>-->\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      \r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseMedicalService\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Home Nursing</span>\r\n        </a>\r\n        <div id=\"collapseMedicalService\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservicetype']\">Medical Service Type </a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservices']\">Medical Services</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/nursingappointment']\">Nursing Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Reports</span>\r\n        </a>\r\n        <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Patients </a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment </a>            \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Medical Services </a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Nursing Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n          <i class=\"fas fa-fw fa-wrench\"></i>\r\n          <span>Settings</span>\r\n        </a>\r\n        <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n             <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">General Settings</a> \r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>\r\n       \r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n     \r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n    <!-- End of Sidebar -->\r\n    <!-- Content Wrapper -->\r\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n      <!-- Main Content -->\r\n      <div id=\"content\">\r\n        <!-- Topbar -->\r\n        <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n          <!-- Sidebar Toggle (Topbar) -->\r\n          <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n            <i class=\"fa fa-bars\"></i>\r\n          </button>\r\n\r\n          <!-- Topbar Search -->\r\n          <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n            <strong>Welcome to Mamji Hospital</strong> \r\n            \r\n          </div>\r\n\r\n          <!-- Topbar Navbar -->\r\n          <ul class=\"navbar-nav ml-auto\">\r\n            <!-- Nav Item - User Information -->\r\n            <li class=\"nav-item dropdown no-arrow\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n                <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n              </a>\r\n              <!-- Dropdown - User Information -->\r\n              <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                  <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n                </a>\r\n              </div>\r\n            </li>\r\n\r\n          </ul>\r\n\r\n        </nav>\r\n        <!-- End of Topbar -->\r\n        <!-- Begin Page Content -->\r\n        <div class=\"container-fluid\">\r\n          <router-outlet></router-outlet>\r\n        </div>\r\n      </div>\r\n      <!-- End of Main Content -->\r\n      <!-- Footer -->\r\n      <footer class=\"sticky-footer bg-white\">\r\n        <div class=\"container my-auto\">\r\n          <div class=\"copyright text-center my-auto\">\r\n            <span>Copyright &copy; Mamji 2022</span>\r\n          </div>\r\n        </div>\r\n      </footer>\r\n      <!-- End of Footer -->\r\n\r\n    </div>\r\n    <!-- End of Content Wrapper -->\r\n\r\n  </div>\r\n</body>\r\n";
       /***/
     },
 
@@ -1519,6 +1559,26 @@
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! file-saver */
+      "./node_modules/file-saver/dist/FileSaver.min.js");
+      /* harmony import */
+
+
+      var file_saver__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_1__);
+      /* harmony import */
+
+
+      var xlsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! xlsx */
+      "./node_modules/xlsx/xlsx.js");
+      /* harmony import */
+
+
+      var xlsx__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(xlsx__WEBPACK_IMPORTED_MODULE_2__);
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -1530,14 +1590,54 @@
         return c > 3 && r && Object.defineProperty(target, key, r), r;
       };
 
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
       var EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
       var EXCEL_EXTENSION = '.xlsx';
 
-      var ExcelService = function ExcelService() {
-        _classCallCheck(this, ExcelService);
+      var ExcelService = /*#__PURE__*/function () {
+        function ExcelService() {
+          _classCallCheck(this, ExcelService);
+        }
+
+        _createClass(ExcelService, [{
+          key: "exportAsExcelFile",
+          value: function exportAsExcelFile(json, excelFileName) {
+            var worksheet = xlsx__WEBPACK_IMPORTED_MODULE_2__["utils"].json_to_sheet(json);
+            console.log('worksheet', worksheet);
+            var workbook = {
+              Sheets: {
+                'data': worksheet
+              },
+              SheetNames: ['data']
+            };
+            var excelBuffer = xlsx__WEBPACK_IMPORTED_MODULE_2__["write"](workbook, {
+              bookType: 'xlsx',
+              type: 'array'
+            }); //const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'buffer' });
+
+            this.saveAsExcelFile(excelBuffer, excelFileName);
+          }
+        }, {
+          key: "saveAsExcelFile",
+          value: function saveAsExcelFile(buffer, fileName) {
+            var data = new Blob([buffer], {
+              type: EXCEL_TYPE
+            });
+            file_saver__WEBPACK_IMPORTED_MODULE_1__["saveAs"](data, fileName + '_export_' + new Date().getTime() + EXCEL_EXTENSION);
+          }
+        }]);
+
+        return ExcelService;
+      }();
+
+      ExcelService.ctorParameters = function () {
+        return [];
       };
 
-      ExcelService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()], ExcelService);
+      ExcelService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(), __metadata("design:paramtypes", [])], ExcelService);
       /***/
     },
 
@@ -2271,6 +2371,7 @@
           value: function getAllData() {
             var _this2 = this;
 
+            debugger;
             var url = "api/appointment/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
@@ -2349,6 +2450,7 @@
         }, {
           key: "insert",
           value: function insert(data) {
+            debugger;
             return this.http.post('api/appointment/insert', data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
               console.log(res);
               return res;
@@ -3792,9 +3894,9 @@
           }
         }, {
           key: "delete",
-          value: function _delete(updateData) {
+          value: function _delete(dltData) {
             debugger;
-            return this.http.post("api/coupon/delete", updateData);
+            return this.http.post("api/coupon/deleteCoupon", dltData);
           }
         }, {
           key: "total$",
@@ -4663,8 +4765,8 @@
           }
         }, {
           key: "ExportList",
-          value: function ExportList(doctorID) {
-            return this.http.get('api/doctor/all/${doctorID}');
+          value: function ExportList() {
+            return this.http.get('api/doctor/all');
           }
         }, {
           key: "getAllData",
@@ -5527,6 +5629,11 @@
             sessionStorage.setItem('selectedLocation', JSON.stringify(location));
           }
         }, {
+          key: "setSelectedUser",
+          value: function setSelectedUser(user) {
+            sessionStorage.setItem('selectedUser', JSON.stringify(user));
+          }
+        }, {
           key: "getSelectedLocation",
           value: function getSelectedLocation() {
             return JSON.parse(sessionStorage.getItem('selectedLocation'));
@@ -5537,9 +5644,19 @@
             sessionStorage.setItem('_Locations', JSON.stringify(location));
           }
         }, {
+          key: "setUser",
+          value: function setUser(user) {
+            sessionStorage.setItem('_Users', JSON.stringify(user));
+          }
+        }, {
           key: "getLocation",
           value: function getLocation() {
             return JSON.parse(sessionStorage.getItem('_Locations'));
+          }
+        }, {
+          key: "getUsers",
+          value: function getUsers() {
+            return JSON.parse(sessionStorage.getItem('_Users'));
           }
         }, {
           key: "getSelectedBrand",
@@ -8206,6 +8323,7 @@
         }, {
           key: "delete",
           value: function _delete(data) {
+            debugger;
             return this.http.post('api/prescription/delete', data);
           }
         }, {
@@ -8640,6 +8758,297 @@
     },
 
     /***/
+    "./src/app/_services/userservice.ts":
+    /*!******************************************!*\
+      !*** ./src/app/_services/userservice.ts ***!
+      \******************************************/
+
+    /*! exports provided: UserService */
+
+    /***/
+    function srcApp_servicesUserserviceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "UserService", function () {
+        return UserService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.userName.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var UserService = /*#__PURE__*/function () {
+        function UserService(http) {
+          _classCallCheck(this, UserService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(UserService, [{
+          key: "ExportList",
+          value: function ExportList() {
+            return this.http.get("api/user/all");
+          }
+        }, {
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/user/user/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this22 = this;
+
+            debugger;
+            var url = "api/user/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this22._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this22.user = res;
+
+              _this22._data$.next(_this22.user);
+
+              _this22._allData$.next(_this22.user);
+
+              _this22._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this22._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this22._loading$.next(false);
+              })).subscribe(function (result) {
+                _this22._data$.next(result.data);
+
+                _this22._total$.next(result.total);
+              });
+
+              _this22._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state23 = this._state,
+                sortColumn = _this$_state23.sortColumn,
+                sortDirection = _this$_state23.sortDirection,
+                pageSize = _this$_state23.pageSize,
+                page = _this$_state23.page,
+                searchTerm = _this$_state23.searchTerm; // 1. sort
+
+            var sortedData = sort(this.user, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            debugger;
+            return this.http.post("api/user/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/user/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(data) {
+            return this.http.post("api/user/delete", data);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return UserService;
+      }();
+
+      UserService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      UserService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], UserService);
+      /***/
+    },
+
+    /***/
     "./src/app/admin/company/brands/addbrand/addbrand.component.css":
     /*!**********************************************************************!*\
       !*** ./src/app/admin/company/brands/addbrand/addbrand.component.css ***!
@@ -8798,21 +9207,21 @@
         }, {
           key: "setSelectedBrand",
           value: function setSelectedBrand() {
-            var _this22 = this;
+            var _this23 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this22.loadingBrand = true;
+                _this23.loadingBrand = true;
 
-                _this22.f.brandID.setValue(sid);
+                _this23.f.brandID.setValue(sid);
 
-                _this22.brandService.getById(sid, _this22.f.brandID.value).subscribe(function (res) {
+                _this23.brandService.getById(sid, _this23.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this22.editForm(res);
+                  _this23.editForm(res);
 
-                  _this22.loadingBrand = false;
+                  _this23.loadingBrand = false;
                 });
               }
             });
@@ -8820,7 +9229,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this23 = this;
+            var _this24 = this;
 
             debugger;
             this.brandForm.markAllAsTouched();
@@ -8839,38 +9248,38 @@
               console.log(JSON.stringify(this.brandForm.value));
               this.brandService.insert(this.brandForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this23.ts.showSuccess("Success", "Record added successfully.");
+                  _this24.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this23.router.navigate(['/admin/brand']);
+                  _this24.router.navigate(['/admin/brand']);
                 }
 
-                _this23.loading = false;
+                _this24.loading = false;
               }, function (error) {
-                _this23.ts.showError("Error", "Failed to insert record.");
+                _this24.ts.showError("Error", "Failed to insert record.");
 
-                _this23.loading = false;
+                _this24.loading = false;
               });
             } else {
               //Update brand
               this.brandService.update(this.brandForm.value).subscribe(function (data) {
-                _this23.loading = false;
+                _this24.loading = false;
 
                 if (data != 0) {
-                  _this23.ts.showSuccess("Success", "Record updated successfully.");
+                  _this24.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this23.router.navigate(['/admin/brand']);
+                  _this24.router.navigate(['/admin/brand']);
                 }
               }, function (error) {
-                _this23.ts.showError("Error", "Failed to update record.");
+                _this24.ts.showError("Error", "Failed to update record.");
 
-                _this23.loading = false;
+                _this24.loading = false;
               });
             }
           }
         }, {
           key: "selectFile",
           value: function selectFile(event) {
-            var _this24 = this;
+            var _this25 = this;
 
             this.fileData = event.target.files[0];
 
@@ -8881,9 +9290,9 @@
 
               reader.onload = function () {
                 debugger;
-                _this24.imageBgUrl = reader.result;
+                _this25.imageBgUrl = reader.result;
 
-                _this24.f.companyURl.setValue(_this24.imageBgUrl);
+                _this25.f.companyURl.setValue(_this25.imageBgUrl);
               };
             } else {
               alert("file type should be image");
@@ -9058,16 +9467,16 @@
         }, {
           key: "Delete",
           value: function Delete(id) {
-            var _this25 = this;
+            var _this26 = this;
 
             this.service["delete"](parseInt(id)).subscribe(function (res) {
               if (res != 0) {
-                _this25.ts.showSuccess("Success", "Record deleted successfully.");
+                _this26.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this25.getData();
-              } else _this25.ts.showError("Error", "Failed to delete record.");
+                _this26.getData();
+              } else _this26.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this25.ts.showError("Error", "Failed to delete record.");
+              _this26.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -9307,21 +9716,21 @@
         }, {
           key: "setSelectedLocations",
           value: function setSelectedLocations() {
-            var _this26 = this;
+            var _this27 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this26.loadingLocations = true;
+                _this27.loadingLocations = true;
 
-                _this26.f.locationID.setValue(sid);
+                _this27.f.locationID.setValue(sid);
 
-                _this26.locationService.getById(sid, _this26.f.brandID.value).subscribe(function (res) {
+                _this27.locationService.getById(sid, _this27.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this26.editForm(res);
+                  _this27.editForm(res);
 
-                  _this26.loadingLocations = false;
+                  _this27.loadingLocations = false;
                 });
               }
             });
@@ -9329,7 +9738,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this27 = this;
+            var _this28 = this;
 
             debugger;
             this.locationForm.markAllAsTouched();
@@ -9349,32 +9758,32 @@
             if (parseInt(this.f.locationID.value) === 0) {
               //Insert location
               this.locationService.insert(this.locationForm.value).subscribe(function (data) {
-                _this27.loading = false;
+                _this28.loading = false;
 
                 if (data != 0) {
-                  _this27.ts.showSuccess("Success", "Record added successfully.");
+                  _this28.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this27.router.navigate(['/admin/location']);
+                  _this28.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this27.ts.showError("Error", "Failed to insert record.");
+                _this28.ts.showError("Error", "Failed to insert record.");
 
-                _this27.loading = false;
+                _this28.loading = false;
               });
             } else {
               //Update location
               this.locationService.update(this.locationForm.value).subscribe(function (data) {
-                _this27.loading = false;
+                _this28.loading = false;
 
                 if (data != 0) {
-                  _this27.ts.showSuccess("Success", "Record updated successfully.");
+                  _this28.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this27.router.navigate(['/admin/location']);
+                  _this28.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this27.ts.showError("Error", "Failed to update record.");
+                _this28.ts.showError("Error", "Failed to update record.");
 
-                _this27.loading = false;
+                _this28.loading = false;
               });
             }
           }
@@ -9539,16 +9948,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this28 = this;
+            var _this29 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this28.ts.showSuccess("Success", "Record deleted successfully.");
+                _this29.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this28.getData();
-              } else _this28.ts.showError("Error", "Failed to delete record.");
+                _this29.getData();
+              } else _this29.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this28.ts.showError("Error", "Failed to delete record.");
+              _this29.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -9702,10 +10111,10 @@
         }, {
           key: "GetDashboard",
           value: function GetDashboard() {
-            var _this29 = this;
+            var _this30 = this;
 
             this.service.getAllData().subscribe(function (res) {
-              _this29.dashboardSummary = res[0];
+              _this30.dashboardSummary = res[0];
             });
           }
         }]);
@@ -9856,6 +10265,7 @@
         }, {
           key: "editForm",
           value: function editForm(obj) {
+            debugger;
             this.f.customerID.setValue(obj.customerID);
             this.f.labReferenceNo.setValue(obj.labReferenceNo);
             this.f.image.setValue(obj.image);
@@ -9865,21 +10275,21 @@
         }, {
           key: "setSelectedReport",
           value: function setSelectedReport() {
-            var _this30 = this;
+            var _this31 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this30.loadingReport = true;
+                _this31.loadingReport = true;
 
-                _this30.f.laboratoryID.setValue(sid);
+                _this31.f.laboratoryID.setValue(sid);
 
-                _this30.laboratoryService.getById(sid).subscribe(function (res) {
+                _this31.laboratoryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this30.editForm(res);
+                  _this31.editForm(res);
 
-                  _this30.loadingReport = false;
+                  _this31.loadingReport = false;
                 });
               }
             });
@@ -9887,7 +10297,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this31 = this;
+            var _this32 = this;
 
             debugger;
             this.reportForm.markAllAsTouched();
@@ -9906,41 +10316,41 @@
               console.log(JSON.stringify(this.reportForm.value));
               this.laboratoryService.insert(this.reportForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this31.ts.showSuccess("Success", "Record added successfully.");
+                  _this32.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this31.router.navigate(['/admin/laboratory/uploadreport']);
+                  _this32.router.navigate(['/admin/laboratory/uploadreport']);
                 }
 
-                _this31.loading = false;
+                _this32.loading = false;
               }, function (error) {
-                _this31.ts.showError("Error", "Failed to insert record.");
+                _this32.ts.showError("Error", "Failed to insert record.");
 
-                _this31.loading = false;
+                _this32.loading = false;
               });
             } else {
               //Update customer
               this.laboratoryService.update(this.reportForm.value).subscribe(function (data) {
-                _this31.loading = false;
+                _this32.loading = false;
 
                 if (data != 0) {
-                  _this31.ts.showSuccess("Success", "Record updated successfully.");
+                  _this32.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this31.router.navigate(['/admin/laboratory/uploadreport']);
+                  _this32.router.navigate(['/admin/laboratory/uploadreport']);
                 }
               }, function (error) {
-                _this31.ts.showError("Error", "Failed to update record.");
+                _this32.ts.showError("Error", "Failed to update record.");
 
-                _this31.loading = false;
+                _this32.loading = false;
               });
             }
           }
         }, {
           key: "loadCustomer",
           value: function loadCustomer() {
-            var _this32 = this;
+            var _this33 = this;
 
             this.laboratoryService.loadCustomer().subscribe(function (res) {
-              _this32.CustomerList = res;
+              _this33.CustomerList = res;
             });
           }
         }, {
@@ -10135,17 +10545,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this33 = this;
+            var _this34 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this33.ts.showSuccess("Success", "Record deleted successfully.");
+                _this34.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this33.getData();
-              } else _this33.ts.showError("Error", "Failed to delete record.");
+                _this34.getData();
+              } else _this34.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this33.ts.showError("Error", "Failed to delete record.");
+              _this34.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -10320,16 +10730,13 @@
           key: "createForm",
           value: function createForm() {
             this.doctorForm = this.formBuilder.group({
-              // firstName: [''],
-              // lastName: [''],
-              // fullName: ['', Validators.required],
               fullName: [''],
               email: [''],
               skills: [''],
               education: [''],
               imagePath: [''],
               profile: [''],
-              statusID: [1],
+              statusID: [true],
               fees: [0],
               gender: [''],
               timeSlot: [''],
@@ -10365,21 +10772,21 @@
         }, {
           key: "setSelectedDoctor",
           value: function setSelectedDoctor() {
-            var _this34 = this;
+            var _this35 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this34.loadingDoctor = true;
+                _this35.loadingDoctor = true;
 
-                _this34.f.doctorID.setValue(sid);
+                _this35.f.doctorID.setValue(sid);
 
-                _this34.doctorService.getById(sid).subscribe(function (res) {
+                _this35.doctorService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this34.editForm(res);
+                  _this35.editForm(res);
 
-                  _this34.loadingDoctor = false;
+                  _this35.loadingDoctor = false;
                 });
               }
             });
@@ -10387,16 +10794,16 @@
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this35 = this;
+            var _this36 = this;
 
             this.appointmentService.loadSpecialities().subscribe(function (res) {
-              _this35.selectedSpecialityList = res;
+              _this36.selectedSpecialityList = res;
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this36 = this;
+            var _this37 = this;
 
             debugger;
             this.doctorForm.markAllAsTouched();
@@ -10417,31 +10824,31 @@
               console.log(JSON.stringify(this.doctorForm.value));
               this.doctorService.insert(this.doctorForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this36.ts.showSuccess("Success", "Record added successfully.");
+                  _this37.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this36.router.navigate(['/admin/doctor']);
+                  _this37.router.navigate(['/admin/managedoctor/doctor']);
                 }
 
-                _this36.loading = false;
+                _this37.loading = false;
               }, function (error) {
-                _this36.ts.showError("Error", "Failed to insert record.");
+                _this37.ts.showError("Error", "Failed to insert record.");
 
-                _this36.loading = false;
+                _this37.loading = false;
               });
             } else {
               //Update doctor
               this.doctorService.update(this.doctorForm.value).subscribe(function (data) {
-                _this36.loading = false;
+                _this37.loading = false;
 
                 if (data != 0) {
-                  _this36.ts.showSuccess("Success", "Record updated successfully.");
+                  _this37.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this36.router.navigate(['/admin/managedoctor/doctor']);
+                  _this37.router.navigate(['/admin/managedoctor/doctor']);
                 }
               }, function (error) {
-                _this36.ts.showError("Error", "Failed to update record.");
+                _this37.ts.showError("Error", "Failed to update record.");
 
-                _this36.loading = false;
+                _this37.loading = false;
               });
             }
           }
@@ -10667,12 +11074,12 @@
         function DoctorComponent(service, ls, excelService, ts, router) {
           _classCallCheck(this, DoctorComponent);
 
-          //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
           this.service = service;
           this.ls = ls;
           this.excelService = excelService;
           this.ts = ts;
           this.router = router;
+          this.selectedDoctor = this.ls.getSelectedDoctor().doctorID;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -10680,12 +11087,12 @@
         _createClass(DoctorComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this37 = this;
+            var _this38 = this;
 
-            this.service.ExportList(this.selectedDoctor).subscribe(function (res) {
-              /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
+            this.service.ExportList().subscribe(function (res) {
+              _this38.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this37.ts.showError("Error", "Failed to export");
+              _this38.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -10722,16 +11129,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this38 = this;
+            var _this39 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this38.ts.showSuccess("Success", "Record deleted successfully.");
+                _this39.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this38.getData();
-              } else _this38.ts.showError("Error", "Failed to delete record.");
+                _this39.getData();
+              } else _this39.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this38.ts.showError("Error", "Failed to delete record.");
+              _this39.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -10927,21 +11334,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this39 = this;
+            var _this40 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this39.loadingaddon = true;
+                _this40.loadingaddon = true;
 
-                _this39.f.addonID.setValue(sid);
+                _this40.f.addonID.setValue(sid);
 
-                _this39.addonsService.getById(sid, _this39.f.brandID.value).subscribe(function (res) {
+                _this40.addonsService.getById(sid, _this40.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this39.editForm(res);
+                  _this40.editForm(res);
 
-                  _this39.loadingaddon = false;
+                  _this40.loadingaddon = false;
                 });
               }
             });
@@ -10949,7 +11356,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this40 = this;
+            var _this41 = this;
 
             this.addonForm.markAllAsTouched();
             this.submitted = true;
@@ -10967,32 +11374,32 @@
               console.log(JSON.stringify(this.addonForm.value));
               this.addonsService.insert(this.addonForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this40.ts.showSuccess("Success", "Record added successfully.");
+                  _this41.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this40.router.navigate(['/admin/addons']);
+                  _this41.router.navigate(['/admin/addons']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this40.loading = false;
+                _this41.loading = false;
               }, function (error) {
-                _this40.ts.showError("Error", "Failed to insert record.");
+                _this41.ts.showError("Error", "Failed to insert record.");
 
-                _this40.loading = false;
+                _this41.loading = false;
               });
             } else {
               //Update modifier
               this.addonsService.update(this.addonForm.value).subscribe(function (data) {
-                _this40.loading = false;
+                _this41.loading = false;
 
                 if (data != 0) {
-                  _this40.ts.showSuccess("Success", "Record updated successfully.");
+                  _this41.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this40.router.navigate(['/admin/addons']);
+                  _this41.router.navigate(['/admin/addons']);
                 }
               }, function (error) {
-                _this40.ts.showError("Error", "Failed to update record.");
+                _this41.ts.showError("Error", "Failed to update record.");
 
-                _this40.loading = false;
+                _this41.loading = false;
               });
             }
           }
@@ -11146,11 +11553,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this41 = this;
+            var _this42 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this41.ts.showError("Error", "Failed to export");
+              _this42.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -11182,16 +11589,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this42 = this;
+            var _this43 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this42.ts.showSuccess("Success", "Record deleted successfully.");
+                _this43.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this42.getData();
-              } else _this42.ts.showError("Error", "Failed to delete record.");
+                _this43.getData();
+              } else _this43.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this42.ts.showError("Error", "Failed to delete record.");
+              _this43.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -11392,21 +11799,21 @@
         }, {
           key: "setSelectedCategory",
           value: function setSelectedCategory() {
-            var _this43 = this;
+            var _this44 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this43.loadingCategory = true;
+                _this44.loadingCategory = true;
 
-                _this43.f.categoryID.setValue(sid);
+                _this44.f.categoryID.setValue(sid);
 
-                _this43.categoryService.getById(sid, _this43.f.brandID.value).subscribe(function (res) {
+                _this44.categoryService.getById(sid, _this44.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this43.editForm(res);
+                  _this44.editForm(res);
 
-                  _this43.loadingCategory = false;
+                  _this44.loadingCategory = false;
                 });
               }
             });
@@ -11414,7 +11821,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this44 = this;
+            var _this45 = this;
 
             this.categoryForm.markAllAsTouched();
             this.submitted = true;
@@ -11431,31 +11838,31 @@
               //Insert category
               this.categoryService.insert(this.categoryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this44.ts.showSuccess("Success", "Record added successfully.");
+                  _this45.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this44.router.navigate(['/admin/category']);
+                  _this45.router.navigate(['/admin/category']);
                 }
 
-                _this44.loading = false;
+                _this45.loading = false;
               }, function (error) {
-                _this44.ts.showError("Error", "Failed to insert record.");
+                _this45.ts.showError("Error", "Failed to insert record.");
 
-                _this44.loading = false;
+                _this45.loading = false;
               });
             } else {
               //Update category
               this.categoryService.update(this.categoryForm.value).subscribe(function (data) {
-                _this44.loading = false;
+                _this45.loading = false;
 
                 if (data != 0) {
-                  _this44.ts.showSuccess("Success", "Record updated successfully.");
+                  _this45.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this44.router.navigate(['/admin/category']);
+                  _this45.router.navigate(['/admin/category']);
                 }
               }, function (error) {
-                _this44.ts.showError("Error", "Failed to update record.");
+                _this45.ts.showError("Error", "Failed to update record.");
 
-                _this44.loading = false;
+                _this45.loading = false;
               });
             }
           }
@@ -11617,11 +12024,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this45 = this;
+            var _this46 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this45.ts.showError("Error", "Failed to export");
+              _this46.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -11653,18 +12060,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this46 = this;
+            var _this47 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this46.ts.showSuccess("Success", "Record deleted successfully.");
+                _this47.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this46.getData();
+                _this47.getData();
               } else {
-                _this46.ts.showError("Error", "Failed to delete record.");
+                _this47.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this46.ts.showError("Error", "Failed to delete record.");
+              _this47.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -11902,21 +12309,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this47 = this;
+            var _this48 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this47.loadingItems = true;
+                _this48.loadingItems = true;
 
-                _this47.f.itemID.setValue(sid);
+                _this48.f.itemID.setValue(sid);
 
-                _this47.itemsService.getById(sid, _this47.f.brandID.value).subscribe(function (res) {
+                _this48.itemsService.getById(sid, _this48.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this47.editForm(res);
+                  _this48.editForm(res);
 
-                  _this47.loadingItems = false;
+                  _this48.loadingItems = false;
                 });
               }
             });
@@ -11924,7 +12331,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this48 = this;
+            var _this49 = this;
 
             this.itemsForm.markAllAsTouched();
             this.submitted = true;
@@ -11944,31 +12351,31 @@
               console.log(JSON.stringify(this.itemsForm.value));
               this.itemsService.insert(this.itemsForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this48.ts.showSuccess("Success", "Record added successfully.");
+                  _this49.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this48.router.navigate(['/admin/item']);
+                  _this49.router.navigate(['/admin/item']);
                 }
 
-                _this48.loading = false;
+                _this49.loading = false;
               }, function (error) {
-                _this48.ts.showError("Error", "Failed to insert record.");
+                _this49.ts.showError("Error", "Failed to insert record.");
 
-                _this48.loading = false;
+                _this49.loading = false;
               });
             } else {
               //Update item
               this.itemsService.update(this.itemsForm.value).subscribe(function (data) {
-                _this48.loading = false;
+                _this49.loading = false;
 
                 if (data != 0) {
-                  _this48.ts.showSuccess("Success", "Record updated successfully.");
+                  _this49.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this48.router.navigate(['/admin/item']);
+                  _this49.router.navigate(['/admin/item']);
                 }
               }, function (error) {
-                _this48.ts.showError("Error", "Failed to update record.");
+                _this49.ts.showError("Error", "Failed to update record.");
 
-                _this48.loading = false;
+                _this49.loading = false;
               });
             }
           } // private loadCategory() {
@@ -11980,28 +12387,28 @@
         }, {
           key: "loadActiveCategory",
           value: function loadActiveCategory() {
-            var _this49 = this;
+            var _this50 = this;
 
             this.itemsService.loadActiveCategories(this.f.brandID.value).subscribe(function (res) {
-              _this49.CategoriesActive = res;
+              _this50.CategoriesActive = res;
             });
           }
         }, {
           key: "loadModifiers",
           value: function loadModifiers() {
-            var _this50 = this;
+            var _this51 = this;
 
             this.itemsService.loadModifierList(this.f.brandID.value).subscribe(function (res) {
-              _this50.ModifiersList = res;
+              _this51.ModifiersList = res;
             });
           }
         }, {
           key: "loadAddons",
           value: function loadAddons() {
-            var _this51 = this;
+            var _this52 = this;
 
             this.itemsService.loadAddonList(this.f.brandID.value).subscribe(function (res) {
-              _this51.AddonsList = res;
+              _this52.AddonsList = res;
             });
           }
         }, {
@@ -12154,12 +12561,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this52 = this;
+            var _this53 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this52.ts.showError("Error", "Failed to export");
+              _this53.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -12191,16 +12598,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this53 = this;
+            var _this54 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this53.ts.showSuccess("Success", "Record deleted successfully.");
+                _this54.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this53.getData();
-              } else _this53.ts.showError("Error", "Failed to delete record.");
+                _this54.getData();
+              } else _this54.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this53.ts.showError("Error", "Failed to delete record.");
+              _this54.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -12366,20 +12773,20 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this54 = this;
+            var _this55 = this;
 
             this.itemsService.getTodaysItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               debugger;
               var stringToConvert = res.items;
-              _this54.isItemSetting = res.isItemSetting;
-              _this54.itemSettingTitle = res.itemSettingTitle;
-              _this54.selectedItemIds = stringToConvert.split(',').map(Number);
+              _this55.isItemSetting = res.isItemSetting;
+              _this55.itemSettingTitle = res.itemSettingTitle;
+              _this55.selectedItemIds = stringToConvert.split(',').map(Number);
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this55 = this;
+            var _this56 = this;
 
             var obj = new Object();
             obj["Items"] = this.selectedItemIds.toString();
@@ -12388,29 +12795,29 @@
             obj["IsItemSetting"] = this.isItemSetting;
             this.loading = true;
             this.itemsService.updateSettings(obj).subscribe(function (data) {
-              _this55.loading = false;
+              _this56.loading = false;
 
               if (data != 0) {
-                _this55.ts.showSuccess("Success", "Updated successfully.");
+                _this56.ts.showSuccess("Success", "Updated successfully.");
 
-                _this55.router.navigate(['/admin/item/settings']);
+                _this56.router.navigate(['/admin/item/settings']);
               }
             }, function (error) {
-              _this55.ts.showError("Error", "Failed to update.");
+              _this56.ts.showError("Error", "Failed to update.");
 
-              _this55.loading = false;
+              _this56.loading = false;
             });
           }
         }, {
           key: "loadItems",
           value: function loadItems() {
-            var _this56 = this;
+            var _this57 = this;
 
             this.itemsService.loadItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               debugger;
-              _this56.ItemsList = res;
+              _this57.ItemsList = res;
 
-              _this56.setSelecteditem();
+              _this57.setSelecteditem();
             });
           }
         }]);
@@ -12601,21 +13008,21 @@
         }, {
           key: "setSelectedmodifier",
           value: function setSelectedmodifier() {
-            var _this57 = this;
+            var _this58 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this57.loadingmodifier = true;
+                _this58.loadingmodifier = true;
 
-                _this57.f.modifierID.setValue(sid);
+                _this58.f.modifierID.setValue(sid);
 
-                _this57.modifierService.getById(sid, _this57.f.brandID.value).subscribe(function (res) {
+                _this58.modifierService.getById(sid, _this58.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this57.editForm(res);
+                  _this58.editForm(res);
 
-                  _this57.loadingmodifier = false;
+                  _this58.loadingmodifier = false;
                 });
               }
             });
@@ -12623,7 +13030,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this58 = this;
+            var _this59 = this;
 
             this.modifierForm.markAllAsTouched();
             this.submitted = true;
@@ -12641,32 +13048,32 @@
               console.log(JSON.stringify(this.modifierForm.value));
               this.modifierService.insert(this.modifierForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this58.ts.showSuccess("Success", "Record added successfully.");
+                  _this59.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this58.router.navigate(['/admin/modifier']);
+                  _this59.router.navigate(['/admin/modifier']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this58.loading = false;
+                _this59.loading = false;
               }, function (error) {
-                _this58.ts.showError("Error", "Failed to insert record.");
+                _this59.ts.showError("Error", "Failed to insert record.");
 
-                _this58.loading = false;
+                _this59.loading = false;
               });
             } else {
               //Update modifier
               this.modifierService.update(this.modifierForm.value).subscribe(function (data) {
-                _this58.loading = false;
+                _this59.loading = false;
 
                 if (data != 0) {
-                  _this58.ts.showSuccess("Success", "Record updated successfully.");
+                  _this59.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this58.router.navigate(['/admin/modifier']);
+                  _this59.router.navigate(['/admin/modifier']);
                 }
               }, function (error) {
-                _this58.ts.showError("Error", "Failed to update record.");
+                _this59.ts.showError("Error", "Failed to update record.");
 
-                _this58.loading = false;
+                _this59.loading = false;
               });
             }
           }
@@ -12820,12 +13227,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this59 = this;
+            var _this60 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this59.ts.showError("Error", "Failed to export");
+              _this60.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -12857,16 +13264,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this60 = this;
+            var _this61 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this60.ts.showSuccess("Success", "Record deleted successfully.");
+                _this61.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this60.getData();
-              } else _this60.ts.showError("Error", "Failed to delete record.");
+                _this61.getData();
+              } else _this61.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this60.ts.showError("Error", "Failed to delete record.");
+              _this61.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -13238,21 +13645,21 @@
         }, {
           key: "setSelectedmedicine",
           value: function setSelectedmedicine() {
-            var _this61 = this;
+            var _this62 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this61.loadingmedicine = true;
+                _this62.loadingmedicine = true;
 
-                _this61.f.medicineID.setValue(sid);
+                _this62.f.medicineID.setValue(sid);
 
-                _this61.medicineService.getById(sid).subscribe(function (res) {
+                _this62.medicineService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this61.editForm(res);
+                  _this62.editForm(res);
 
-                  _this61.loadingmedicine = false;
+                  _this62.loadingmedicine = false;
                 });
               }
             });
@@ -13260,7 +13667,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this62 = this;
+            var _this63 = this;
 
             this.medicineForm.markAllAsTouched();
             this.submitted = true;
@@ -13278,31 +13685,31 @@
               console.log(JSON.stringify(this.medicineForm.value));
               this.medicineService.insert(this.medicineForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this62.ts.showSuccess("Success", "Record added successfully.");
+                  _this63.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this62.router.navigate(['/admin/pharmacy/medicine']);
+                  _this63.router.navigate(['/admin/pharmacy/medicine']);
                 }
 
-                _this62.loading = false;
+                _this63.loading = false;
               }, function (error) {
-                _this62.ts.showError("Error", "Failed to insert record.");
+                _this63.ts.showError("Error", "Failed to insert record.");
 
-                _this62.loading = false;
+                _this63.loading = false;
               });
             } else {
               //Update medicine
               this.medicineService.update(this.medicineForm.value).subscribe(function (data) {
-                _this62.loading = false;
+                _this63.loading = false;
 
                 if (data != 0) {
-                  _this62.ts.showSuccess("Success", "Record updated successfully.");
+                  _this63.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this62.router.navigate(['/admin/pharmacy/medicine']);
+                  _this63.router.navigate(['/admin/pharmacy/medicine']);
                 }
               }, function (error) {
-                _this62.ts.showError("Error", "Failed to update record.");
+                _this63.ts.showError("Error", "Failed to update record.");
 
-                _this62.loading = false;
+                _this63.loading = false;
               });
             }
           }
@@ -13485,17 +13892,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this63 = this;
+            var _this64 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this63.ts.showSuccess("Success", "Record deleted successfully.");
+                _this64.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this63.getData();
-              } else _this63.ts.showError("Error", "Failed to delete record.");
+                _this64.getData();
+              } else _this64.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this63.ts.showError("Error", "Failed to delete record.");
+              _this64.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -13636,15 +14043,15 @@
         }, {
           key: "setSelectedOrder",
           value: function setSelectedOrder() {
-            var _this64 = this;
+            var _this65 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this64.service.getById(sid).subscribe(function (res) {
+                _this65.service.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this64.editForm(res);
+                  _this65.editForm(res);
                 });
               }
             });
@@ -13652,18 +14059,18 @@
         }, {
           key: "updateOrder",
           value: function updateOrder(order, status) {
-            var _this65 = this;
+            var _this66 = this;
 
             order.statusID = status; //Update 
 
             this.service.update(order).subscribe(function (data) {
               if (data != 0) {
-                _this65.ts.showSuccess("Success", "Record updated successfully.");
+                _this66.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this65.router.navigate(['/admin/orders']);
+                _this66.router.navigate(['/admin/orders']);
               }
             }, function (error) {
-              _this65.ts.showError("Error", "Failed to update record.");
+              _this66.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -13853,13 +14260,13 @@
         }, {
           key: "Print",
           value: function Print(sid) {
-            var _this66 = this;
+            var _this67 = this;
 
             this.service.printorder(sid, this.selectedBrand).subscribe(function (res) {
               //Set Forms
               if (res.status == 1) {
-                _this66.printout(res.html);
-              } else _this66.ts.showError("Error", "Failed to print.");
+                _this67.printout(res.html);
+              } else _this67.ts.showError("Error", "Failed to print.");
             });
           }
         }, {
@@ -13871,27 +14278,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this67 = this;
+            var _this68 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this67.Locations = res;
-              _this67.locationID = _this67.selectedLocation;
+              _this68.Locations = res;
+              _this68.locationID = _this68.selectedLocation;
 
-              _this67.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this68.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this67.Locations = res;
+                _this68.Locations = res;
                 var arr = [];
 
-                _this67.Locations.forEach(function (element) {
+                _this68.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this67.selectedLocations = arr;
+                _this68.selectedLocations = arr;
 
-                _this67.getData();
+                _this68.getData();
               });
             });
           }
@@ -14097,21 +14504,21 @@
         }, {
           key: "setSelectedPrescription",
           value: function setSelectedPrescription() {
-            var _this68 = this;
+            var _this69 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this68.loadingPrescription = true;
+                _this69.loadingPrescription = true;
 
-                _this68.f.prescriptionID.setValue(sid);
+                _this69.f.prescriptionID.setValue(sid);
 
-                _this68.prescriptionService.getById(sid).subscribe(function (res) {
+                _this69.prescriptionService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this68.editForm(res);
+                  _this69.editForm(res);
 
-                  _this68.loadingPrescription = false;
+                  _this69.loadingPrescription = false;
                 });
               }
             });
@@ -14119,7 +14526,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this69 = this;
+            var _this70 = this;
 
             this.prescriptionForm.markAllAsTouched();
             this.submitted = true;
@@ -14137,31 +14544,31 @@
               console.log(JSON.stringify(this.prescriptionForm.value));
               this.prescriptionService.insert(this.prescriptionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this69.ts.showSuccess("Success", "Record added successfully.");
+                  _this70.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this69.router.navigate(['/admin/pharmacy/prescription']);
+                  _this70.router.navigate(['/admin/pharmacy/prescription']);
                 }
 
-                _this69.loading = false;
+                _this70.loading = false;
               }, function (error) {
-                _this69.ts.showError("Error", "Failed to insert record.");
+                _this70.ts.showError("Error", "Failed to insert record.");
 
-                _this69.loading = false;
+                _this70.loading = false;
               });
             } else {
               //Update doctor
               this.prescriptionService.update(this.prescriptionForm.value).subscribe(function (data) {
-                _this69.loading = false;
+                _this70.loading = false;
 
                 if (data != 0) {
-                  _this69.ts.showSuccess("Success", "Record updated successfully.");
+                  _this70.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this69.router.navigate(['/admin/pharmacy/prescription']);
+                  _this70.router.navigate(['/admin/pharmacy/prescription']);
                 }
               }, function (error) {
-                _this69.ts.showError("Error", "Failed to update record.");
+                _this70.ts.showError("Error", "Failed to update record.");
 
-                _this69.loading = false;
+                _this70.loading = false;
               });
             }
           }
@@ -14327,12 +14734,12 @@
         _createClass(PrescriptionComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this70 = this;
+            var _this71 = this;
 
             this.service.ExportList(this.selectedPrescription).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this70.ts.showError("Error", "Failed to export");
+              _this71.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -14369,16 +14776,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this71 = this;
+            var _this72 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this71.ts.showSuccess("Success", "Record deleted successfully.");
+                _this72.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this71.getData();
-              } else _this71.ts.showError("Error", "Failed to delete record.");
+                _this72.getData();
+              } else _this72.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this71.ts.showError("Error", "Failed to delete record.");
+              _this72.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -14545,14 +14952,13 @@
               bookingDate: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               DoctorDaysList: [],
               timeslot: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-              appointmentStatus: [''],
+              appointmentStatus: [101],
               statusID: [true],
               appointmentID: 0,
               doctorID: '',
               customerID: '',
               specialityID: '',
-              daysID: '',
-              fullname: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
+              daysID: ''
             });
           }
         }, {
@@ -14562,8 +14968,8 @@
             this.f.age.setValue(obj.age);
             this.f.gender.setValue(obj.gender);
             this.f.fees.setValue(obj.fees);
-            this.f.bookingDate.setValue(obj.bookingDate);
-            this.f.day.setValue(obj.day);
+            this.f.bookingDate.setValue(obj.bookingDate); //this.f.day.setValue(obj.day);
+
             this.f.appointmentID.setValue(obj.appointmentID);
             this.f.timeslot.setValue(obj.timeslot);
             this.f.appointmentNo.setValue(obj.appointmentNo);
@@ -14584,21 +14990,21 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this72 = this;
+            var _this73 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this72.loadingAppointment = true;
+                _this73.loadingAppointment = true;
 
-                _this72.f.appointmentID.setValue(sid);
+                _this73.f.appointmentID.setValue(sid);
 
-                _this72.appointmentService.getById(sid).subscribe(function (res) {
+                _this73.appointmentService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this72.editForm(res);
+                  _this73.editForm(res);
 
-                  _this72.loadingAppointment = false;
+                  _this73.loadingAppointment = false;
                 });
               }
             });
@@ -14606,8 +15012,9 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this73 = this;
+            var _this74 = this;
 
+            debugger;
             this.appointmentForm.markAllAsTouched();
             this.submitted = true;
 
@@ -14622,71 +15029,71 @@
               console.log(JSON.stringify(this.appointmentForm.value));
               this.appointmentService.insert(this.appointmentForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this73.ts.showSuccess("Success", "Record added successfully.");
+                  _this74.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this73.router.navigate(['/admin/reception/appointment']);
+                  _this74.router.navigate(['/admin/reception/appointment']);
                 }
 
-                _this73.loading = false;
+                _this74.loading = false;
               }, function (error) {
-                _this73.ts.showError("Error", "Failed to insert record.");
+                _this74.ts.showError("Error", "Failed to insert record.");
 
-                _this73.loading = false;
+                _this74.loading = false;
               });
             } else {
               //Update doctor
               this.appointmentService.update(this.appointmentForm.value).subscribe(function (data) {
-                _this73.loading = false;
+                _this74.loading = false;
 
                 if (data != 0) {
-                  _this73.ts.showSuccess("Success", "Record updated successfully.");
+                  _this74.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this73.router.navigate(['/admin/reception/appointment']);
+                  _this74.router.navigate(['/admin/reception/appointment']);
                 }
               }, function (error) {
-                _this73.ts.showError("Error", "Failed to update record.");
+                _this74.ts.showError("Error", "Failed to update record.");
 
-                _this73.loading = false;
+                _this74.loading = false;
               });
             }
           }
         }, {
           key: "loadDoctor",
           value: function loadDoctor() {
-            var _this74 = this;
+            var _this75 = this;
 
             this.appointmentService.loadDoctor().subscribe(function (res) {
-              _this74.DoctorList = res;
+              _this75.DoctorList = res;
             });
           }
         }, {
           key: "loadSpecialities",
           value: function loadSpecialities() {
-            var _this75 = this;
+            var _this76 = this;
 
             debugger;
             this.appointmentService.loadSpecialities().subscribe(function (res) {
-              _this75.SpecialityList = res;
+              _this76.SpecialityList = res;
             });
           }
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this76 = this;
+            var _this77 = this;
 
             debugger;
             this.appointmentService.loadSpecialities().subscribe(function (res) {
-              _this76.selectedSpecialityList = res;
+              _this77.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadDay",
           value: function loadDay() {
-            var _this77 = this;
+            var _this78 = this;
 
             debugger;
             this.appointmentService.loadDay().subscribe(function (res) {
-              _this77.DoctorDaysList = res;
+              _this78.DoctorDaysList = res;
             });
           }
         }, {
@@ -14916,16 +15323,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this78 = this;
+            var _this79 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this78.ts.showSuccess("Success", "Record deleted successfully.");
+                _this79.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this78.getData();
-              } else _this78.ts.showError("Error", "Failed to delete record.");
+                _this79.getData();
+              } else _this79.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this78.ts.showError("Error", "Failed to delete record.");
+              _this79.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -15120,22 +15527,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this79 = this;
+            var _this80 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this79.loadingCustomer = true;
+                _this80.loadingCustomer = true;
 
-                _this79.f.customerID.setValue(sid);
+                _this80.f.customerID.setValue(sid);
 
-                _this79.customerService.getById(sid).subscribe(function (res) {
+                _this80.customerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this79.editForm(res);
+                  _this80.editForm(res);
 
-                  _this79.loadingCustomer = false;
+                  _this80.loadingCustomer = false;
                 });
               }
             });
@@ -15143,7 +15550,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this80 = this;
+            var _this81 = this;
 
             this.customerForm.markAllAsTouched();
             this.submitted = true;
@@ -15161,31 +15568,31 @@
               console.log(JSON.stringify(this.customerForm.value));
               this.customerService.insert(this.customerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this80.ts.showSuccess("Success", "Record added successfully.");
+                  _this81.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this80.router.navigate(['/admin/reception/customers']);
+                  _this81.router.navigate(['/admin/reception/customers']);
                 }
 
-                _this80.loading = false;
+                _this81.loading = false;
               }, function (error) {
-                _this80.ts.showError("Error", "Failed to insert record.");
+                _this81.ts.showError("Error", "Failed to insert record.");
 
-                _this80.loading = false;
+                _this81.loading = false;
               });
             } else {
               //Update customer
               this.customerService.update(this.customerForm.value).subscribe(function (data) {
-                _this80.loading = false;
+                _this81.loading = false;
 
                 if (data != 0) {
-                  _this80.ts.showSuccess("Success", "Record updated successfully.");
+                  _this81.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this80.router.navigate(['/admin/reception/customers']);
+                  _this81.router.navigate(['/admin/reception/customers']);
                 }
               }, function (error) {
-                _this80.ts.showError("Error", "Failed to update record.");
+                _this81.ts.showError("Error", "Failed to update record.");
 
-                _this80.loading = false;
+                _this81.loading = false;
               });
             }
           }
@@ -15339,11 +15746,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this81 = this;
+            var _this82 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this81.ts.showError("Error", "Failed to export");
+              _this82.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -15375,17 +15782,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this82 = this;
+            var _this83 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this82.ts.showSuccess("Success", "Record deleted successfully.");
+                _this83.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this82.getData();
-              } else _this82.ts.showError("Error", "Failed to delete record.");
+                _this83.getData();
+              } else _this83.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this82.ts.showError("Error", "Failed to delete record.");
+              _this83.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15588,21 +15995,21 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this83 = this;
+            var _this84 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this83.loadingAppointment = true;
+                _this84.loadingAppointment = true;
 
-                _this83.f.appointmentID.setValue(sid);
+                _this84.f.appointmentID.setValue(sid);
 
-                _this83.nursingappointmentService.getById(sid).subscribe(function (res) {
+                _this84.nursingappointmentService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this83.editForm(res);
+                  _this84.editForm(res);
 
-                  _this83.loadingAppointment = false;
+                  _this84.loadingAppointment = false;
                 });
               }
             });
@@ -15610,7 +16017,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this84 = this;
+            var _this85 = this;
 
             this.nursingappointmentForm.markAllAsTouched();
             this.submitted = true;
@@ -15626,71 +16033,71 @@
               console.log(JSON.stringify(this.nursingappointmentForm.value));
               this.nursingappointmentService.insert(this.nursingappointmentForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this84.ts.showSuccess("Success", "Record added successfully.");
+                  _this85.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this84.router.navigate(['/admin/reception/appointment']);
+                  _this85.router.navigate(['/admin/reception/appointment']);
                 }
 
-                _this84.loading = false;
+                _this85.loading = false;
               }, function (error) {
-                _this84.ts.showError("Error", "Failed to insert record.");
+                _this85.ts.showError("Error", "Failed to insert record.");
 
-                _this84.loading = false;
+                _this85.loading = false;
               });
             } else {
               //Update doctor
               this.nursingappointmentService.update(this.nursingappointmentForm.value).subscribe(function (data) {
-                _this84.loading = false;
+                _this85.loading = false;
 
                 if (data != 0) {
-                  _this84.ts.showSuccess("Success", "Record updated successfully.");
+                  _this85.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this84.router.navigate(['/admin/reception/appointment']);
+                  _this85.router.navigate(['/admin/reception/appointment']);
                 }
               }, function (error) {
-                _this84.ts.showError("Error", "Failed to update record.");
+                _this85.ts.showError("Error", "Failed to update record.");
 
-                _this84.loading = false;
+                _this85.loading = false;
               });
             }
           }
         }, {
           key: "loadDoctor",
           value: function loadDoctor() {
-            var _this85 = this;
+            var _this86 = this;
 
             this.nursingappointmentService.loadDoctor().subscribe(function (res) {
-              _this85.DoctorList = res;
+              _this86.DoctorList = res;
             });
           }
         }, {
           key: "loadSpecialities",
           value: function loadSpecialities() {
-            var _this86 = this;
+            var _this87 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this86.SpecialityList = res;
+              _this87.SpecialityList = res;
             });
           }
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this87 = this;
+            var _this88 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this87.selectedSpecialityList = res;
+              _this88.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadDay",
           value: function loadDay() {
-            var _this88 = this;
+            var _this89 = this;
 
             debugger;
             this.nursingappointmentService.loadDay().subscribe(function (res) {
-              _this88.DoctorDaysList = res;
+              _this89.DoctorDaysList = res;
             });
           }
         }, {
@@ -15915,21 +16322,21 @@
         }, {
           key: "Edit",
           value: function Edit(appointment) {
-            this.router.navigate(["admin/reception/appointment/edit", appointment]);
+            this.router.navigate(["admin/reception/nursingappointment/edit", appointment]);
           }
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this89 = this;
+            var _this90 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this89.ts.showSuccess("Success", "Record deleted successfully.");
+                _this90.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this89.getData();
-              } else _this89.ts.showError("Error", "Failed to delete record.");
+                _this90.getData();
+              } else _this90.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this89.ts.showError("Error", "Failed to delete record.");
+              _this90.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -16097,14 +16504,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this90 = this;
+            var _this91 = this;
 
             this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this90.salesCategoryWise = res;
-              } else _this90.ts.showError("Error", "Something went wrong");
+                _this91.salesCategoryWise = res;
+              } else _this91.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this90.ts.showError("Error", "Failed to delete record.");
+              _this91.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16116,27 +16523,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this91 = this;
+            var _this92 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this91.Locations = res;
-              _this91.locationID = _this91.selectedLocation;
+              _this92.Locations = res;
+              _this92.locationID = _this92.selectedLocation;
 
-              _this91.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this92.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this91.Locations = res;
+                _this92.Locations = res;
                 var arr = [];
 
-                _this91.Locations.forEach(function (element) {
+                _this92.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this91.selectedLocations = arr;
+                _this92.selectedLocations = arr;
 
-                _this91.getData(_this91.selectedLocations.toString());
+                _this92.getData(_this92.selectedLocations.toString());
               });
             });
           }
@@ -16329,14 +16736,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this92 = this;
+            var _this93 = this;
 
             this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this92.orders = res;
-              } else _this92.ts.showError("Error", "Something went wrong");
+                _this93.orders = res;
+              } else _this93.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this92.ts.showError("Error", "Failed to delete record.");
+              _this93.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16348,27 +16755,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this93 = this;
+            var _this94 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this93.Locations = res;
-              _this93.locationID = _this93.selectedLocation;
+              _this94.Locations = res;
+              _this94.locationID = _this94.selectedLocation;
 
-              _this93.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this94.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this93.Locations = res;
+                _this94.Locations = res;
                 var arr = [];
 
-                _this93.Locations.forEach(function (element) {
+                _this94.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this93.selectedLocations = arr;
+                _this94.selectedLocations = arr;
 
-                _this93.getData(_this93.selectedLocations.toString());
+                _this94.getData(_this94.selectedLocations.toString());
               });
             });
           }
@@ -16557,14 +16964,14 @@
         }, {
           key: "getData",
           value: function getData(locaionIDs) {
-            var _this94 = this;
+            var _this95 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this94.orderDetails = res;
-              } else _this94.ts.showError("Error", "Something went wrong");
+                _this95.orderDetails = res;
+              } else _this95.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this94.ts.showError("Error", "Failed to delete record.");
+              _this95.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16581,27 +16988,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this95 = this;
+            var _this96 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this95.Locations = res;
-              _this95.locationID = _this95.selectedLocation;
+              _this96.Locations = res;
+              _this96.locationID = _this96.selectedLocation;
 
-              _this95.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this96.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this95.Locations = res;
+                _this96.Locations = res;
                 var arr = [];
 
-                _this95.Locations.forEach(function (element) {
+                _this96.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this95.selectedLocations = arr;
+                _this96.selectedLocations = arr;
 
-                _this95.getData(_this95.selectedLocations.toString());
+                _this96.getData(_this96.selectedLocations.toString());
               });
             });
           }
@@ -16797,14 +17204,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this96 = this;
+            var _this97 = this;
 
             this.service.SalesItemwiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this96.salesItemWise = res;
-              } else _this96.ts.showError("Error", "Something went wrong");
+                _this97.salesItemWise = res;
+              } else _this97.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this96.ts.showError("Error", "Failed to delete record.");
+              _this97.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16835,27 +17242,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this97 = this;
+            var _this98 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this97.Locations = res;
-              _this97.locationID = _this97.selectedLocation;
+              _this98.Locations = res;
+              _this98.locationID = _this98.selectedLocation;
 
-              _this97.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this98.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this97.Locations = res;
+                _this98.Locations = res;
                 var arr = [];
 
-                _this97.Locations.forEach(function (element) {
+                _this98.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this97.selectedLocations = arr;
+                _this98.selectedLocations = arr;
 
-                _this97.getData(_this97.selectedLocations.toString());
+                _this98.getData(_this98.selectedLocations.toString());
               });
             });
           }
@@ -17020,14 +17427,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this98 = this;
+            var _this99 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this98.data$ = res;
-              } else _this98.ts.showError("Error", "Something went wrong");
+                _this99.data$ = res;
+              } else _this99.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this98.ts.showError("Error", "Failed to delete record.");
+              _this99.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -17039,11 +17446,11 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this99 = this;
+            var _this100 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this99.Locations = res;
-              _this99.locationID = _this99.selectedLocation;
+              _this100.Locations = res;
+              _this100.locationID = _this100.selectedLocation;
             });
           }
         }, {
@@ -17210,16 +17617,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this100 = this;
+            var _this101 = this;
 
             this.service.SalesSummaryRpt(this.selectedBrand, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this100._model = res[0];
+                _this101._model = res[0];
 
-                _this100["export"].push(_this100._model);
-              } else _this100.ts.showError("Error", "Something went wrong");
+                _this101["export"].push(_this101._model);
+              } else _this101.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this100.ts.showError("Error", "Failed to delete record.");
+              _this101.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -17422,21 +17829,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this101 = this;
+            var _this102 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this101.loading = true;
+                _this102.loading = true;
 
-                _this101.f.deliveryAreaID.setValue(sid);
+                _this102.f.deliveryAreaID.setValue(sid);
 
-                _this101.deliveryService.getById(sid).subscribe(function (res) {
+                _this102.deliveryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this101.editForm(res);
+                  _this102.editForm(res);
 
-                  _this101.loading = false; //BrandsFill
+                  _this102.loading = false; //BrandsFill
                   // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
                   // .subscribe((res: any) => {            
                   //   var stringToConvert = res.items;
@@ -17449,7 +17856,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this102 = this;
+            var _this103 = this;
 
             this.deliveryForm.markAllAsTouched();
             this.submitted = true;
@@ -17465,41 +17872,41 @@
               //Insert delivery
               this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this102.ts.showSuccess("Success", "Record added successfully.");
+                  _this103.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this102.router.navigate(['/admin/delivery']);
+                  _this103.router.navigate(['/admin/delivery']);
                 }
 
-                _this102.loading = false;
+                _this103.loading = false;
               }, function (error) {
-                _this102.ts.showError("Error", "Failed to insert record.");
+                _this103.ts.showError("Error", "Failed to insert record.");
 
-                _this102.loading = false;
+                _this103.loading = false;
               });
             } else {
               //Update delivery
               this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this102.loading = false;
+                _this103.loading = false;
 
                 if (data != 0) {
-                  _this102.ts.showSuccess("Success", "Record updated successfully.");
+                  _this103.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this102.router.navigate(['/admin/delivery']);
+                  _this103.router.navigate(['/admin/delivery']);
                 }
               }, function (error) {
-                _this102.ts.showError("Error", "Failed to update record.");
+                _this103.ts.showError("Error", "Failed to update record.");
 
-                _this102.loading = false;
+                _this103.loading = false;
               });
             }
           }
         }, {
           key: "loadBrands",
           value: function loadBrands() {
-            var _this103 = this;
+            var _this104 = this;
 
             this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this103.BrandsList = res; // this.setSelecteditem();
+              _this104.BrandsList = res; // this.setSelecteditem();
             });
           }
         }, {
@@ -17677,14 +18084,14 @@
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this104 = this;
+            var _this105 = this;
 
             this.loadingSetting = true;
             this.settingService.getById(1).subscribe(function (res) {
               //Set Forms
-              _this104.editForm(res);
+              _this105.editForm(res);
 
-              _this104.loadingSetting = false;
+              _this105.loadingSetting = false;
             }); // this.route.paramMap.subscribe(param => {
             //   const sid = +param.get('id');
             //   if (sid) {
@@ -17701,7 +18108,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this105 = this;
+            var _this106 = this;
 
             debugger;
             this.settingForm.markAllAsTouched();
@@ -17719,33 +18126,33 @@
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this105.ts.showSuccess("Success", "Record added successfully.");
+                  _this106.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this105.router.navigate(['/admin/settings/appsettings']);
+                  _this106.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this105.loading = false;
+                _this106.loading = false;
               }, function (error) {
-                _this105.ts.showError("Error", "Failed to insert record.");
+                _this106.ts.showError("Error", "Failed to insert record.");
 
-                _this105.loading = false;
+                _this106.loading = false;
               });
             } else {
               //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this105.loading = false;
+                _this106.loading = false;
 
                 if (data != 0) {
-                  _this105.ts.showSuccess("Success", "Record updated successfully.");
+                  _this106.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this105.setSelectedSetting();
+                  _this106.setSelectedSetting();
 
-                  _this105.router.navigate(['/admin/settings/appsettings/add']);
+                  _this106.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this105.ts.showError("Error", "Failed to update record.");
+                _this106.ts.showError("Error", "Failed to update record.");
 
-                _this105.loading = false;
+                _this106.loading = false;
               });
             }
           }
@@ -17916,16 +18323,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this106 = this;
+            var _this107 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this106.ts.showSuccess("Success", "Record deleted successfully.");
+                _this107.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this106.getData();
-              } else _this106.ts.showError("Error", "Failed to delete record.");
+                _this107.getData();
+              } else _this107.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this106.ts.showError("Error", "Failed to delete record.");
+              _this107.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -18112,21 +18519,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this107 = this;
+            var _this108 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this107.loadingCustomer = true;
+                _this108.loadingCustomer = true;
 
-                _this107.f.bannerID.setValue(sid);
+                _this108.f.bannerID.setValue(sid);
 
-                _this107.bannerService.getById(sid).subscribe(function (res) {
+                _this108.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this107.editForm(res);
+                  _this108.editForm(res);
 
-                  _this107.loadingCustomer = false;
+                  _this108.loadingCustomer = false;
                 });
               }
             });
@@ -18134,7 +18541,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this108 = this;
+            var _this109 = this;
 
             debugger;
             this.bannerForm.markAllAsTouched();
@@ -18153,31 +18560,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this108.ts.showSuccess("Success", "Record added successfully.");
+                  _this109.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this108.router.navigate(['/admin/settings/banner']);
+                  _this109.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this108.loading = false;
+                _this109.loading = false;
               }, function (error) {
-                _this108.ts.showError("Error", "Failed to insert record.");
+                _this109.ts.showError("Error", "Failed to insert record.");
 
-                _this108.loading = false;
+                _this109.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this108.loading = false;
+                _this109.loading = false;
 
                 if (data != 0) {
-                  _this108.ts.showSuccess("Success", "Record updated successfully.");
+                  _this109.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this108.router.navigate(['/admin/settings/banner']);
+                  _this109.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this108.ts.showError("Error", "Failed to update record.");
+                _this109.ts.showError("Error", "Failed to update record.");
 
-                _this108.loading = false;
+                _this109.loading = false;
               });
             }
           }
@@ -18350,16 +18757,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this109 = this;
+            var _this110 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this109.ts.showSuccess("Success", "Record deleted successfully.");
+                _this110.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this109.getData();
-              } else _this109.ts.showError("Error", "Failed to delete record.");
+                _this110.getData();
+              } else _this110.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this109.ts.showError("Error", "Failed to delete record.");
+              _this110.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -18524,21 +18931,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this110 = this;
+            var _this111 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this110.loadingCoupon = true;
+                _this111.loadingCoupon = true;
 
-                _this110.f.couponID.setValue(sid);
+                _this111.f.couponID.setValue(sid);
 
-                _this110.couponService.getById(sid).subscribe(function (res) {
+                _this111.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this110.editForm(res);
+                  _this111.editForm(res);
 
-                  _this110.loadingCoupon = false;
+                  _this111.loadingCoupon = false;
                 });
               }
             });
@@ -18546,7 +18953,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this111 = this;
+            var _this112 = this;
 
             debugger;
             this.couponForm.markAllAsTouched();
@@ -18564,31 +18971,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this111.ts.showSuccess("Success", "Record added successfully.");
+                  _this112.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this111.router.navigate(['/admin/settings/coupon']);
+                  _this112.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this111.loading = false;
+                _this112.loading = false;
               }, function (error) {
-                _this111.ts.showError("Error", "Failed to insert record.");
+                _this112.ts.showError("Error", "Failed to insert record.");
 
-                _this111.loading = false;
+                _this112.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this111.loading = false;
+                _this112.loading = false;
 
                 if (data != 0) {
-                  _this111.ts.showSuccess("Success", "Record updated successfully.");
+                  _this112.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this111.router.navigate(['/admin/settings/coupon']);
+                  _this112.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this111.ts.showError("Error", "Failed to update record.");
+                _this112.ts.showError("Error", "Failed to update record.");
 
-                _this111.loading = false;
+                _this112.loading = false;
               });
             }
           }
@@ -18792,17 +19199,17 @@
         }, {
           key: "Delete",
           value: function Delete(item) {
-            var _this112 = this;
+            var _this113 = this;
 
             debugger;
             this.service["delete"](item).subscribe(function (res) {
               if (res != 0) {
-                _this112.ts.showSuccess("Success", "Record deleted successfully.");
+                _this113.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this112.getData();
-              } else _this112.ts.showError("Error", "Failed to delete record.");
+                _this113.getData();
+              } else _this113.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this112.ts.showError("Error", "Failed to delete record.");
+              _this113.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -18986,16 +19393,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this113 = this;
+            var _this114 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this113.ts.showSuccess("Success", "Record deleted successfully.");
+                _this114.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this113.getData();
-              } else _this113.ts.showError("Error", "Failed to delete record.");
+                _this114.getData();
+              } else _this114.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this113.ts.showError("Error", "Failed to delete record.");
+              _this114.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -19170,31 +19577,31 @@
         }, {
           key: "loadActiveType",
           value: function loadActiveType() {
-            var _this114 = this;
+            var _this115 = this;
 
             this.services.loadActiveTyp().subscribe(function (res) {
-              _this114.NursingTypeActive = res;
+              _this115.NursingTypeActive = res;
             });
           }
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this115 = this;
+            var _this116 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this115.loadingService = true;
+                _this116.loadingService = true;
 
-                _this115.f.medicalServiceID.setValue(sid);
+                _this116.f.medicalServiceID.setValue(sid);
 
-                _this115.services.getById(sid).subscribe(function (res) {
+                _this116.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this115.editForm(res);
+                  _this116.editForm(res);
 
-                  _this115.loadingService = false;
+                  _this116.loadingService = false;
                 });
               }
             });
@@ -19202,7 +19609,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this116 = this;
+            var _this117 = this;
 
             debugger;
             this.servicesForm.markAllAsTouched();
@@ -19221,31 +19628,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this116.ts.showSuccess("Success", "Record added successfully.");
+                  _this117.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this116.router.navigate(['/admin/settings/medicalservices']);
+                  _this117.router.navigate(['/admin/settings/medicalservices']);
                 }
 
-                _this116.loading = false;
+                _this117.loading = false;
               }, function (error) {
-                _this116.ts.showError("Error", "Failed to insert record.");
+                _this117.ts.showError("Error", "Failed to insert record.");
 
-                _this116.loading = false;
+                _this117.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this116.loading = false;
+                _this117.loading = false;
 
                 if (data != 0) {
-                  _this116.ts.showSuccess("Success", "Record updated successfully.");
+                  _this117.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this116.router.navigate(['/admin/settings/medicalservices']);
+                  _this117.router.navigate(['/admin/settings/medicalservices']);
                 }
               }, function (error) {
-                _this116.ts.showError("Error", "Failed to update record.");
+                _this117.ts.showError("Error", "Failed to update record.");
 
-                _this116.loading = false;
+                _this117.loading = false;
               });
             }
           }
@@ -19415,16 +19822,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this117 = this;
+            var _this118 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this117.ts.showSuccess("Success", "Record deleted successfully.");
+                _this118.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this117.getData();
-              } else _this117.ts.showError("Error", "Failed to delete record.");
+                _this118.getData();
+              } else _this118.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this117.ts.showError("Error", "Failed to delete record.");
+              _this118.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -19583,22 +19990,22 @@
         }, {
           key: "setSelectedType",
           value: function setSelectedType() {
-            var _this118 = this;
+            var _this119 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this118.loadingService = true;
+                _this119.loadingService = true;
 
-                _this118.f.nursingTypeID.setValue(sid);
+                _this119.f.nursingTypeID.setValue(sid);
 
-                _this118.services.getById(sid).subscribe(function (res) {
+                _this119.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this118.editForm(res);
+                  _this119.editForm(res);
 
-                  _this118.loadingService = false;
+                  _this119.loadingService = false;
                 });
               }
             });
@@ -19606,7 +20013,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this119 = this;
+            var _this120 = this;
 
             this.servicesForm.markAllAsTouched();
             this.submitted = true;
@@ -19623,31 +20030,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this119.ts.showSuccess("Success", "Record added successfully.");
+                  _this120.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this119.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this120.router.navigate(['/admin/settings/medicalservicetype']);
                 }
 
-                _this119.loading = false;
+                _this120.loading = false;
               }, function (error) {
-                _this119.ts.showError("Error", "Failed to insert record.");
+                _this120.ts.showError("Error", "Failed to insert record.");
 
-                _this119.loading = false;
+                _this120.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this119.loading = false;
+                _this120.loading = false;
 
                 if (data != 0) {
-                  _this119.ts.showSuccess("Success", "Record updated successfully.");
+                  _this120.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this119.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this120.router.navigate(['/admin/settings/medicalservicetype']);
                 }
               }, function (error) {
-                _this119.ts.showError("Error", "Failed to update record.");
+                _this120.ts.showError("Error", "Failed to update record.");
 
-                _this119.loading = false;
+                _this120.loading = false;
               });
             }
           }
@@ -19818,16 +20225,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this120 = this;
+            var _this121 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this120.ts.showSuccess("Success", "Record deleted successfully.");
+                _this121.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this120.getData();
-              } else _this120.ts.showError("Error", "Failed to delete record.");
+                _this121.getData();
+              } else _this121.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this120.ts.showError("Error", "Failed to delete record.");
+              _this121.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -20024,21 +20431,21 @@
         }, {
           key: "setSelectedOffers",
           value: function setSelectedOffers() {
-            var _this121 = this;
+            var _this122 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this121.loadingOffers = true;
+                _this122.loadingOffers = true;
 
-                _this121.f.offerID.setValue(sid);
+                _this122.f.offerID.setValue(sid);
 
-                _this121.offersService.getById(sid, _this121.f.brandID.value).subscribe(function (res) {
+                _this122.offersService.getById(sid, _this122.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this121.editForm(res);
+                  _this122.editForm(res);
 
-                  _this121.loadingOffers = false;
+                  _this122.loadingOffers = false;
                 });
               }
             });
@@ -20046,7 +20453,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this122 = this;
+            var _this123 = this;
 
             this.offersForm.markAllAsTouched();
             this.submitted = true;
@@ -20066,31 +20473,31 @@
               debugger;
               this.offersService.insert(this.offersForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this122.ts.showSuccess("Success", "Record added successfully.");
+                  _this123.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this122.router.navigate(['/admin/offers']);
+                  _this123.router.navigate(['/admin/offers']);
                 }
 
-                _this122.loading = false;
+                _this123.loading = false;
               }, function (error) {
-                _this122.ts.showError("Error", "Failed to insert record.");
+                _this123.ts.showError("Error", "Failed to insert record.");
 
-                _this122.loading = false;
+                _this123.loading = false;
               });
             } else {
               //Update offers
               this.offersService.update(this.offersForm.value).subscribe(function (data) {
-                _this122.loading = false;
+                _this123.loading = false;
 
                 if (data != 0) {
-                  _this122.ts.showSuccess("Success", "Record updated successfully.");
+                  _this123.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this122.router.navigate(['/admin/offers']);
+                  _this123.router.navigate(['/admin/offers']);
                 }
               }, function (error) {
-                _this122.ts.showError("Error", "Failed to update record.");
+                _this123.ts.showError("Error", "Failed to update record.");
 
-                _this122.loading = false;
+                _this123.loading = false;
               });
             }
           }
@@ -20275,16 +20682,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this123 = this;
+            var _this124 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this123.ts.showSuccess("Success", "Record deleted successfully.");
+                _this124.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this123.getData();
-              } else _this123.ts.showError("Error", "Failed to delete record.");
+                _this124.getData();
+              } else _this124.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this123.ts.showError("Error", "Failed to delete record.");
+              _this124.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -20317,6 +20724,440 @@
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/offers/offers.component.html"))["default"],
         providers: []
       }), __metadata("design:paramtypes", [src_app_services_offers_service__WEBPACK_IMPORTED_MODULE_5__["OffersService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], OffersComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/user/add/adduser.component.ts":
+    /*!*****************************************************!*\
+      !*** ./src/app/admin/user/add/adduser.component.ts ***!
+      \*****************************************************/
+
+    /*! exports provided: AdduserComponent */
+
+    /***/
+    function srcAppAdminUserAddAdduserComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AdduserComponent", function () {
+        return AdduserComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/userservice */
+      "./src/app/_services/userservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      }; //import { debug } from 'console';
+
+
+      var AdduserComponent = /*#__PURE__*/function () {
+        function AdduserComponent(formBuilder, router, route, ls, ts, userService) {
+          _classCallCheck(this, AdduserComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ls = ls;
+          this.ts = ts;
+          this.userService = userService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingCustomer = false;
+          this.ButtonText = "Save";
+          this.createForm();
+        }
+
+        _createClass(AdduserComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedCustomer();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.userForm = this.formBuilder.group({
+              userName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              statusID: [true],
+              password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              id: 0
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.userName.setValue(obj.userName);
+            this.f.email.setValue(obj.email);
+            this.f.password.setValue(obj.password);
+            this.f.type.setValue(obj.type);
+            this.f.id.setValue(obj.id);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+          }
+        }, {
+          key: "setSelectedCustomer",
+          value: function setSelectedCustomer() {
+            var _this125 = this;
+
+            debugger;
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this125.loadingCustomer = true;
+
+                _this125.f.id.setValue(sid);
+
+                _this125.userService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this125.editForm(res);
+
+                  _this125.loadingCustomer = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this126 = this;
+
+            debugger;
+            this.userForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.userForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+
+            if (parseInt(this.f.id.value) === 0) {
+              //Insert customer
+              console.log(JSON.stringify(this.userForm.value));
+              this.userService.insert(this.userForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this126.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this126.router.navigate(['/admin/user']);
+                }
+
+                _this126.loading = false;
+              }, function (error) {
+                _this126.ts.showError("Error", "Failed to insert record.");
+
+                _this126.loading = false;
+              });
+            } else {
+              //Update customer
+              this.userService.update(this.userForm.value).subscribe(function (data) {
+                _this126.loading = false;
+
+                if (data != 0) {
+                  _this126.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this126.router.navigate(['/admin/user']);
+                }
+              }, function (error) {
+                _this126.ts.showError("Error", "Failed to update record.");
+
+                _this126.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.userForm.controls;
+          }
+        }]);
+
+        return AdduserComponent;
+      }();
+
+      AdduserComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"]
+        }, {
+          type: src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__["UserService"]
+        }];
+      };
+
+      AdduserComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AdduserComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-adduser',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./adduser.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/add/adduser.component.html"))["default"]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"], src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__["UserService"]])], AdduserComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/user/user.component.ts":
+    /*!**********************************************!*\
+      !*** ./src/app/admin/user/user.component.ts ***!
+      \**********************************************/
+
+    /*! exports provided: UserComponent */
+
+    /***/
+    function srcAppAdminUserUserComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "UserComponent", function () {
+        return UserComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/userservice */
+      "./src/app/_services/userservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var UserComponent = /*#__PURE__*/function () {
+        function UserComponent(service, ls, excelService, ts, router) {
+          _classCallCheck(this, UserComponent);
+
+          //this.selectedBrand =this.ls.getSelectedBrand().brandID;
+          this.service = service;
+          this.ls = ls;
+          this.excelService = excelService;
+          this.ts = ts;
+          this.router = router;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(UserComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this127 = this;
+
+            this.service.ExportList().subscribe(function (res) {
+              _this127.excelService.exportAsExcelFile(res, 'Report_Export');
+            }, function (error) {
+              _this127.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref22) {
+            var column = _ref22.column,
+                direction = _ref22.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(customers) {
+            this.router.navigate(["admin/user/edit", customers]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this128 = this;
+
+            debugger;
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this128.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this128.getData();
+              } else _this128.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this128.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "Deactive",
+          value: function Deactive(id, rowVersion) {}
+        }]);
+
+        return UserComponent;
+      }();
+
+      UserComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+        }];
+      };
+
+      UserComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      UserComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-user',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./user.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/user.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], UserComponent);
       /***/
     },
 
@@ -20828,6 +21669,24 @@
       var _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(
       /*! ./admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component */
       "./src/app/admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component.ts");
+      /* harmony import */
+
+
+      var _admin_user_user_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(
+      /*! ./admin/user/user.component */
+      "./src/app/admin/user/user.component.ts");
+      /* harmony import */
+
+
+      var _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(
+      /*! ./admin/user/add/adduser.component */
+      "./src/app/admin/user/add/adduser.component.ts");
+      /* harmony import */
+
+
+      var _has_role_guard__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(
+      /*! ./has-role.guard */
+      "./src/app/has-role.guard.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -20852,7 +21711,7 @@
         //NgbdModalContent,
         _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_60__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__["AddCouponComponent"], _admin_pharmacy_customerinquiry_customerinquiry_component__WEBPACK_IMPORTED_MODULE_52__["CustomerinquiryComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_53__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_54__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentComponent"], _admin_reception_appointment_addappointment_addappointment_component__WEBPACK_IMPORTED_MODULE_56__["AddappointmentComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_70__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["AddnursingappointmentComponent"],
         /*    LaboratoryinquiryComponent,*/
-        _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_57__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_58__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"]],
+        _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_57__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_58__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_72__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_73__["AdduserComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({
           appId: 'ng-cli-universal'
         }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_27__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_29__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_31__["BrowserAnimationsModule"],
@@ -21057,8 +21916,13 @@
             component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__["AddCouponComponent"]
           }, {
             path: 'pharmacy/medicine',
-            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"]
-          }, {
+            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"],
+            canActivate: [_has_role_guard__WEBPACK_IMPORTED_MODULE_74__["HasRoleGuard"]],
+            data: {
+              type: ['SuperAdmin']
+            }
+          }, // { path: 'pharmacy/medicine', component: MedicineComponent },
+          {
             path: 'pharmacy/medicine/addmedicines',
             component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"]
           }, {
@@ -21088,11 +21952,20 @@
           }, {
             path: 'settings/medicalservicetype/edit/:id',
             component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"]
+          }, {
+            path: 'user',
+            component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_72__["UserComponent"]
+          }, {
+            path: 'user/add',
+            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_73__["AdduserComponent"]
+          }, {
+            path: 'user/edit/:id',
+            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_73__["AdduserComponent"]
           }]
         }]), _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__["ServiceWorkerModule"].register('ngsw-worker.js', {
           enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].production
         }), _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"]],
-        providers: [],
+        providers: [_has_role_guard__WEBPACK_IMPORTED_MODULE_74__["HasRoleGuard"]],
         exports: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"]]
       })], AppModule);
@@ -21342,12 +22215,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this124 = this;
+        var _this129 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this124.forecasts = result;
+          _this129.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -21371,6 +22244,93 @@
         /*! raw-loader!./fetch-data.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/fetch-data/fetch-data.component.html"))["default"]
       }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], String])], FetchDataComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/has-role.guard.ts":
+    /*!***********************************!*\
+      !*** ./src/app/has-role.guard.ts ***!
+      \***********************************/
+
+    /*! exports provided: HasRoleGuard */
+
+    /***/
+    function srcAppHasRoleGuardTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "HasRoleGuard", function () {
+        return HasRoleGuard;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var _services_userservice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./_services/userservice */
+      "./src/app/_services/userservice.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var HasRoleGuard = /*#__PURE__*/function () {
+        function HasRoleGuard(userService, router) {
+          _classCallCheck(this, HasRoleGuard);
+
+          this.userService = userService;
+          this.router = router;
+        }
+
+        _createClass(HasRoleGuard, [{
+          key: "canActivate",
+          value: function canActivate(route, state) {
+            debugger;
+            this.userService.getAllData(); //return this.userService.userModel.type.includes(route.data.type);
+
+            return true;
+          }
+        }]);
+
+        return HasRoleGuard;
+      }();
+
+      HasRoleGuard.ctorParameters = function () {
+        return [{
+          type: _services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
+        }];
+      };
+
+      HasRoleGuard = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])], HasRoleGuard);
       /***/
     },
 
@@ -21499,7 +22459,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this125 = this;
+            var _this130 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -21509,14 +22469,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this125.imageUrl = reader.result;
+                _this130.imageUrl = reader.result;
 
-                _this125.registrationForm.patchValue({
+                _this130.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this125.editFile = false;
-                _this125.removeUpload = true;
+                _this130.editFile = false;
+                _this130.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -21608,6 +22568,12 @@
       var _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ../_services/local-storage.service */
       "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _services_userservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ../_services/userservice */
+      "./src/app/_services/userservice.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -21630,22 +22596,22 @@
       };
 
       var LayoutComponent = /*#__PURE__*/function () {
-        function LayoutComponent(router, service, ls) {
+        function LayoutComponent(router, service, userService, ls) {
           _classCallCheck(this, LayoutComponent);
 
           this.router = router;
           this.service = service;
+          this.userService = userService;
           this.ls = ls;
           this._Langname = "";
           this.branchname = "";
-          this.email = ""; //this.branchname = this.ls.getSelectedBrand().name;
-          //this.email = this.ls.getSelectedBrand().email;
+          this.email = "";
         }
 
         _createClass(LayoutComponent, [{
           key: "ngOnInit",
-          value: function ngOnInit() {
-            var data = this.ls.getSelectedBrand(); //this.loadLocations();
+          value: function ngOnInit() {// var data = this.ls.getSelectedBrand();
+            // this.loadLocations();
             // if (data == null)
             //   this.router.navigate(["/"]);
           }
@@ -21654,31 +22620,30 @@
           value: function Logout() {
             sessionStorage.clear();
             this.router.navigate(['/']);
-          }
-        }, {
-          key: "loadLocations",
-          value: function loadLocations() {// var loc = this.ls.getLocation();
-            // if (loc != null) {
-            //   this.Locations = this.ls.getLocation();
-            //   this.locationID = this.ls.getSelectedLocation().locationID;
-            // }
-            // else {
-            //   this.service.getAllLocations(this.ls.getSelectedBrand().brandID).subscribe((res: any) => {
-            //     debugger
-            //     if (res.length > 0) {
-            //       this.ls.setLocation(res);
-            //       this.ls.setSelectedLocation(res[0]);
-            //       this.locationID =res[0].locationID;
-            //       this.Locations =res;
-            //     }
-            //     else {
-            //       this.router.navigate(['/']);
-            //     }
-            //   });
-            // }
-            //this.Locations = this.ls.getLocation();
-            //this.locationID = this.ls.getSelectedLocation().locationID;
-          }
+          } // private loadLocations() {
+          //   var loc = this.ls.getUsers();
+          //   if (loc != null) {
+          //     this.Locations = this.ls.getUsers();
+          //     this.locationID = this.ls.getSelectedUser().locationID;
+          //   }
+          //   else {
+          //     this.userService.getAllData().subscribe((res: any) => {
+          //       debugger
+          //       if (res.length > 0) {
+          //         this.ls.setUser(res);
+          //         this.ls.setSelectedUser(res[0]);
+          //         this.locationID =res[0].locationID;
+          //         this.Locations =res;
+          //       }
+          //       else {
+          //         this.router.navigate(['/']);
+          //       }
+          //     });
+          //   }
+          //   this.Locations = this.ls.getLocation();
+          //   this.locationID = this.ls.getSelectedLocation().locationID;
+          // }
+
         }, {
           key: "changeloc",
           value: function changeloc(LocObj) {//this.locationID = this.ls.selectedLocation().locationID;
@@ -21694,6 +22659,8 @@
         }, {
           type: _services_locations_service__WEBPACK_IMPORTED_MODULE_2__["LocationsService"]
         }, {
+          type: _services_userservice__WEBPACK_IMPORTED_MODULE_4__["UserService"]
+        }, {
           type: _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]
         }];
       };
@@ -21706,7 +22673,7 @@
         styles: [__importDefault(__webpack_require__(
         /*! ./layout.component.css */
         "./src/app/layout/layout.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _services_locations_service__WEBPACK_IMPORTED_MODULE_2__["LocationsService"], _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]])], LayoutComponent);
+      }), __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _services_locations_service__WEBPACK_IMPORTED_MODULE_2__["LocationsService"], _services_userservice__WEBPACK_IMPORTED_MODULE_4__["UserService"], _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]])], LayoutComponent);
       /***/
     },
 
@@ -21771,6 +22738,12 @@
       var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/router */
       "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var _services_userservice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! ../_services/userservice */
+      "./src/app/_services/userservice.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -21793,11 +22766,12 @@
       };
 
       var LoginComponent = /*#__PURE__*/function () {
-        function LoginComponent(formBuilder, service, ts, router, ls) {
+        function LoginComponent(formBuilder, service, userService, ts, router, ls) {
           _classCallCheck(this, LoginComponent);
 
           this.formBuilder = formBuilder;
           this.service = service;
+          this.userService = userService;
           this.ts = ts;
           this.router = router;
           this.ls = ls;
@@ -21811,7 +22785,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this126 = this;
+            var _this131 = this;
 
             this.loginForm.markAllAsTouched();
 
@@ -21821,12 +22795,14 @@
 
             this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this126.router.navigate(["/admin/dashboard"]);
+                _this131.userService.getAllData();
+
+                _this131.router.navigate(["/admin/dashboard"]);
               } else {
-                _this126.ts.showError("Error", "Username or password is not correct.");
+                _this131.ts.showError("Error", "Username or password is not correct.");
               }
             }, function (error) {
-              _this126.ts.showError("Error", "Something went wrong.");
+              _this131.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
@@ -21853,6 +22829,8 @@
         }, {
           type: _services_login_service__WEBPACK_IMPORTED_MODULE_2__["LoginService"]
         }, {
+          type: _services_userservice__WEBPACK_IMPORTED_MODULE_7__["UserService"]
+        }, {
           type: _services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"]
@@ -21866,7 +22844,7 @@
         template: __importDefault(__webpack_require__(
         /*! raw-loader!./login.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html"))["default"]
-      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _services_login_service__WEBPACK_IMPORTED_MODULE_2__["LoginService"], _services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]])], LoginComponent);
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _services_login_service__WEBPACK_IMPORTED_MODULE_2__["LoginService"], _services_userservice__WEBPACK_IMPORTED_MODULE_7__["UserService"], _services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"], _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]])], LoginComponent);
       /***/
     },
 
@@ -22094,6 +23072,51 @@
       module.exports = __webpack_require__(
       /*! D:\Project\Mamji\MamjiAdminGit\ClientApp\src\main.ts */
       "./src/main.ts");
+      /***/
+    },
+
+    /***/
+    1:
+    /*!********************!*\
+      !*** fs (ignored) ***!
+      \********************/
+
+    /*! no static exports found */
+
+    /***/
+    function _(module, exports) {
+      /* (ignored) */
+
+      /***/
+    },
+
+    /***/
+    2:
+    /*!************************!*\
+      !*** crypto (ignored) ***!
+      \************************/
+
+    /*! no static exports found */
+
+    /***/
+    function _(module, exports) {
+      /* (ignored) */
+
+      /***/
+    },
+
+    /***/
+    3:
+    /*!************************!*\
+      !*** stream (ignored) ***!
+      \************************/
+
+    /*! no static exports found */
+
+    /***/
+    function _(module, exports) {
+      /* (ignored) */
+
       /***/
     }
   }, [[0, "runtime", "vendor"]]]);
