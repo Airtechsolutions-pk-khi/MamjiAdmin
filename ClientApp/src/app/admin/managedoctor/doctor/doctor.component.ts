@@ -29,7 +29,7 @@ export class DoctorComponent implements OnInit {
     public excelService: ExcelService,
     public ts: ToastService,
     public router: Router) {
-    //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
+    this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
 
     this.loading$ = service.loading$;
     this.submit = false;
@@ -37,8 +37,8 @@ export class DoctorComponent implements OnInit {
   }
 
   exportAsXLSX(): void {
-    this.service.ExportList(this.selectedDoctor).subscribe((res: any) => {
-/*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
+    this.service.ExportList().subscribe((res: any) => {
+      this.excelService.exportAsExcelFile(res, 'Report_Export');
     }, error => {
       this.ts.showError("Error", "Failed to export")
     });

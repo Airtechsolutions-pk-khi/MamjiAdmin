@@ -10,10 +10,10 @@
                 <h6 class="m-0 font-weight-bold text-orange">Customers List</h6>
             </div>
             <div class=" col-lg-4 input-group mb-3"style="padding-top: 25px;">
-                <!--<div class="input-group-prepend"style="height: 39px;">
+                <div class="input-group-prepend"style="height: 39px;">
                     <span class="input-group-text"><i class="fa fa-search"></i></span>
                 </div>
-                <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />-->
+                <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
             </div>
             <div class="col-md-3 form-group text-right">
                 <button type="submit" class="btn btn-primary mt-4 mr-1" (click)="exportAsXLSX()">
@@ -58,7 +58,7 @@
                     <td style="text-align:center">
                       <a (click)="Edit(item.customerID)"><i class="fas fa-fw fa-edit"></i> </a>
 
-                      <a (click)="Delete(item.customerID)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+                      <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
                     </td>
                   </tr>
                 </tbody>

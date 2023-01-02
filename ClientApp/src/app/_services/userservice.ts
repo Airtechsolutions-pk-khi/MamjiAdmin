@@ -72,7 +72,7 @@ export class UserService {
     return this._allData$.asObservable();
   }
   
-  ExportList(brandId) {
+  ExportList() {
     return this.http.get<User[]>(`api/user/all`);
   }
   getById(id) {

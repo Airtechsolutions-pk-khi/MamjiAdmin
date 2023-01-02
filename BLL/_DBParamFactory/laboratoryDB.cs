@@ -92,20 +92,21 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[6];
+                SqlParameter[] p = new SqlParameter[7];
 
                 p[0] = new SqlParameter("@CustomerID", data.CustomerID);
                 p[1] = new SqlParameter("@ImagePath", data.Image);
-                p[2] = new SqlParameter("@LabReferenceNo", data.LabReferenceNo);
-                p[3] = new SqlParameter("@StatusID", data.StatusID);
-                p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-                p[5] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[2] = new SqlParameter("@LaboratoryID", data.LaboratoryID);
+                p[3] = new SqlParameter("@LabReferenceNo", data.LabReferenceNo);
+                p[4] = new SqlParameter("@StatusID", data.StatusID);
+                p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateReport_Admin", p);
 
                 return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }

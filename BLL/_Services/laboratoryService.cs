@@ -58,7 +58,7 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 data.Image = UploadImage(data.Image, "laboratory", _env);
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.LastUpdatedDate = DateTime.Now;
                 var result = _service.Update(data);
 
                 return result;

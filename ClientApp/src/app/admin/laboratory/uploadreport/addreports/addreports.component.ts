@@ -48,6 +48,7 @@ export class AddreportsComponent implements OnInit {
     });
   }
   private editForm(obj) {
+    debugger
     this.f.customerID.setValue(obj.customerID);
     this.f.labReferenceNo.setValue(obj.labReferenceNo);
     this.f.image.setValue(obj.image);

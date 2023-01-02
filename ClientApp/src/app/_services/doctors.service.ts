@@ -72,8 +72,8 @@ export class DoctorsService {
   getById(id) {
     return this.http.get<Doctors[]>(`api/doctor/doctor/${id}`);
   }
-  ExportList(doctorID) {
-    return this.http.get<Doctors[]>('api/doctor/all/${doctorID}');
+  ExportList() {
+    return this.http.get<Doctors[]>('api/doctor/all');
   }
   getAllData() {
 

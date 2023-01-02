@@ -74,8 +74,7 @@ namespace MamjiAdmin.BLL._Services
         public int Delete(CustomerBLL data)
         {
             try
-            {
-                data.LastUpdatedDate = _UTCDateTime_SA();
+            {                
                 var result = _service.Delete(data);
 
                 return result;

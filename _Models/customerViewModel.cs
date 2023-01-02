@@ -8,10 +8,17 @@ namespace MamjiAdmin._Models
     public class customerViewModel
     {
     }
+    public class CustomerBLL1
+    {
+        public int CustomerID { get; set; }
+        public string FullName { get; set; }
+         
+    }
     public class CustomerBLL
     {
         public int CustomerID { get; set; }
         public string FullName { get; set; }
+        public string Address { get; set; }
         public string Email { get; set; }
         public string Mobile { get; set; }
         public string Image { get; set; }

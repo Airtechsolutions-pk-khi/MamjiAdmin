@@ -9,7 +9,13 @@
             <div class="col-md-6">
                 <h6 class="m-0 font-weight-bold text-orange">Services List</h6>
             </div>
-            <div class="col-md-6 text-right"> <button [routerLink]="['add']" class="btn btn-primary ">
+            <div class=" col-lg-4 input-group mb-3"style="padding-top: 25px;">
+                <div class="input-group-prepend"style="height: 39px;">
+                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                </div>
+                <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
+            </div>
+            <div class="col-md-2 text-right"style="padding-top: 25px;"> <button [routerLink]="['add']" class="btn btn-primary ">
                 Add Services
             </button></div>
         </div>

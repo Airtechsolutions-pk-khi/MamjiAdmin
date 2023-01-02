@@ -130,14 +130,15 @@ namespace BAL.Repositories
             try
             {
                 int _obj = 0;
-                SqlParameter[] p = new SqlParameter[1];
+                SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@id", data.CustomerID);
+                p[1] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteCustomer", p);
 
                 return _obj;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }
