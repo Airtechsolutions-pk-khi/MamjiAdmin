@@ -38,7 +38,7 @@
                     <th width="10%" sortable="BookingDate"> Booking Date </th>
                     <th width="15%" sortable="Timeslot"> Time Slot </th>
                     <th width="10%" sortable="TestName"> Test Name </th>
-                    <th width="10%" sortable="AppointmentStatus"> AppointmentStatus </th>
+                    <th width="10%" sortable="AppointmentStatus"> Appointment Status </th>
                     <th width="10%" sortable="Status"> Status </th>
                     <th width="5%">Action</th>
                     <th></th>
@@ -58,7 +58,7 @@
                       {{ item.appointmentStatus == 101 ?"Pending":item.appointmentStatus == 102 ? "Approved" : item.appointmentStatus==103 ?"Cancelled" : item.appointmentStatus == 104 ?"Completed": "-"}}
                     </td>
                     <td>
-                      <ngb-highlight [ngClass]="{'btn-success': item.statusID === 101, 'btn-danger':item.statusID !== 101 }" class="btn btn-sm" [result]="item.statusID ==101?'Active':'Inactive'" [term]="service.searchTerm">
+                      <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
                       </ngb-highlight>
                     </td>
                     <td>
