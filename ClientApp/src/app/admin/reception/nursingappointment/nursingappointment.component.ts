@@ -78,4 +78,19 @@ export class NursingAppointmentComponent implements OnInit {
       this.ts.showError("Error", "Failed to delete record.")
     });
   }
+
+  Status(data) {
+    debugger
+    this.service.status(data).subscribe((res: any) => {
+      if (res != 0) {
+        this.ts.showSuccess("Success", "Status Updated successfully.")
+        this.getData();
+      }
+      else
+        this.ts.showError("Error", "Failed to Update Status")
+
+    }, error => {
+      this.ts.showError("Error", "Failed to Update Status")
+    });
+  }
 }

@@ -166,4 +166,8 @@ export class NursingAppointmentService {
   {
     return this.http.post('api/nursingappointment/delete', data);
   }
+  status(data) {
+    debugger
+    return this.http.post('api/nursingappointment/status', data);
+  }
 }

@@ -53,5 +53,11 @@ namespace MamjiAdmin.Controllers
         {
             return _service.Delete(obj);
         }
+        [HttpPost]
+        [Route("status")]
+        public int AppointmentStatus([FromBody] AppointmentBLL obj)
+        {
+            return _service.Status(obj);
+        }
     }
 }

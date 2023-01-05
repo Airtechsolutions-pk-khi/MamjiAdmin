@@ -82,6 +82,20 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
+        public int Status(AppointmentBLL data)
+        {
+            try
+            {
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.Status(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
 
     }
 }

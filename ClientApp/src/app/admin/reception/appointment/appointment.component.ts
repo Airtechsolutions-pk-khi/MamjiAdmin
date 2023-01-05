@@ -64,6 +64,22 @@ export class AppointmentComponent implements OnInit {
     this.router.navigate(["admin/reception/appointment/edit", appointment]);
   }
 
+  Status(data) {
+    debugger
+    this.service.status(data).subscribe((res: any) => {
+      if (res != 0) {
+        this.ts.showSuccess("Success", "Status Updated successfully.")
+        this.getData();
+      }
+      else
+        this.ts.showError("Error", "Failed to Update Status")
+
+    }, error => {
+      this.ts.showError("Error", "Failed to Update Status")
+    });
+  }
+
+
   Delete(data) {
     this.service.delete(data).subscribe((res: any) => {
       if (res != 0) {

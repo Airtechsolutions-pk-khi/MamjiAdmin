@@ -25,6 +25,7 @@ namespace MamjiAdmin._Models
         public string Date { get; set; }
         public string Timeslot { get; set; }
         public string TestName { get; set; }
+        public int AppointmentStatus { get; set; }
         public int StatusID { get; set; }
         public string CreatedBy { get; set; }
         public string LastUpdatedBy { get; set; }

@@ -168,4 +168,8 @@ export class AppointmentService {
   {
     return this.http.post('api/appointment/delete', data);
   }
+  status(data) {
+    debugger
+    return this.http.post('api/appointment/status', data);
+  }
 }

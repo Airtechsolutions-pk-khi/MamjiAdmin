@@ -29,18 +29,20 @@
         <div class="tile-body p-0 table-responsive ">
             <table class="table table-striped">
                 <thead>
-                    <tr class="table-header">
-                        <th width="10%" sortable="AppointmentNo" > Appoint. No.</th>
-                        <th width="10%" sortable="PatientName" > Patient Name </th>
-                        <th width="10%" sortable="Age" > Age </th>
-                        <th width="10%" sortable="Gender" > Gender </th>
-                        <th width="10%" sortable="Fees" > Fees </th>
-                        <th width="10%" sortable="BookingDate" > Booking Date </th>
-                        <th width="15%" sortable="Timeslot" > Time Slot </th>
-                        <th width="10%" sortable="TestName" > Test Name </th>
-                        <th width="10%" sortable="Status" > Status </th>
-                        <th width="5%">Action</th>
-                    </tr>
+                  <tr class="table-header">
+                    <th width="10%" sortable="AppointmentNo"> Appoint. No.</th>
+                    <th width="10%" sortable="PatientName"> Patient Name </th>
+                    <th width="10%" sortable="Age"> Age </th>
+                    <th width="10%" sortable="Gender"> Gender </th>
+                    <th width="10%" sortable="Fees"> Fees </th>
+                    <th width="10%" sortable="BookingDate"> Booking Date </th>
+                    <th width="15%" sortable="Timeslot"> Time Slot </th>
+                    <th width="10%" sortable="TestName"> Test Name </th>
+                    <th width="10%" sortable="AppointmentStatus"> AppointmentStatus </th>
+                    <th width="10%" sortable="Status"> Status </th>
+                    <th width="5%">Action</th>
+                    <th></th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let item of data$ | async ">
@@ -53,12 +55,23 @@
                     <td> {{item.timeslot}} </td>
                     <td> {{item.testName}} </td>
                     <td>
+                      {{ item.appointmentStatus == 101 ?"Pending":item.appointmentStatus == 102 ? "Approved" : item.appointmentStatus==103 ?"Cancelled" : item.appointmentStatus == 104 ?"Completed": "-"}}
+                    </td>
+                    <td>
                       <ngb-highlight [ngClass]="{'btn-success': item.statusID === 101, 'btn-danger':item.statusID !== 101 }" class="btn btn-sm" [result]="item.statusID ==101?'Active':'Inactive'" [term]="service.searchTerm">
                       </ngb-highlight>
                     </td>
                     <td>
                       <!-- <a (click)="Edit(item.appointmentID)"><i class="fas fa-fw fa-edit"></i> </a> -->
                       <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+                    </td>
+                    <td>
+                      <select class="btn btn-danger dropdown form-control" (change)="Status(item)" id="appointmentStatus" name="appointmentStatus" [(ngModel)]="item.appointmentStatus" style=" padding-left: 5px;">
+                        <option selected></option>
+                        <option [ngValue]="102">Approved</option>
+                        <option [ngValue]="103">Cancelled</option>
+                        <option [ngValue]="104">Completed</option>
+                      </select>
                     </td>
                   </tr>
                 </tbody>

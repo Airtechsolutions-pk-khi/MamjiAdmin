@@ -1,9 +1,11 @@
 ﻿using MamjiAdmin._Models;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure.Design;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -148,6 +150,25 @@ namespace BAL.Repositories
                 return _obj;
             }
             catch (Exception)
+            {
+                return 0;
+            }
+        }
+        public int Status(AppointmentBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[3];
+                p[0] = new SqlParameter("@id", data.AppointmentID);
+                p[1] = new SqlParameter("@AppointmentStatus", data.AppointmentStatus);
+                p[2] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_AppointmentStatus", p);
+
+                return _obj;
+            }
+            catch (Exception ex)
             {
                 return 0;
             }

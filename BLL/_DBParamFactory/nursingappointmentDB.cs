@@ -152,5 +152,24 @@ namespace BAL.Repositories
                 return 0;
             }
         }
+        public int Status(AppointmentBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[3];
+                p[0] = new SqlParameter("@id", data.AppointmentID);
+                p[1] = new SqlParameter("@AppointmentStatus", data.AppointmentStatus);
+                p[2] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_NursingAppointmentStatus", p);
+
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
     }
 }

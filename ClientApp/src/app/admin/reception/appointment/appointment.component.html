@@ -1,80 +1,299 @@
 <!-- Page Heading -->
+<!--<style>
+    #menu-wrap {
+      position: relative;
+      height: 25px;
+      width: 25px;
+    }
+
+      #menu-wrap .dots {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+       #menu-wrap .dots > div,
+       #menu-wrap .dots > div:after,
+       #menu-wrap .dots > div:before {
+          height: 6px;
+          width: 6px;
+          background-color: rgba(49, 49, 49, 0.8);
+          border-radius: 50%;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s;
+        }
+
+       #menu-wrap .dots > div {
+          position: relative;
+        }
+
+         #menu-wrap .dots > div:after {
+            content: "";
+            position: absolute;
+            bottom: calc((25px / 2) - (6px / 2));
+            left: 0;
+          }
+
+         #menu-wrap .dots > div:before {
+            content: "";
+            position: absolute;
+            top: calc((25px / 2) - (6px / 2));
+            left: 0;
+          }
+
+     #menu-wrap .menu {
+        position: absolute;
+        right: -10px;
+        top: calc(-12px + 50px);
+        width: 0;
+        height: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px 15px;
+        -webkit-box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);
+        box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+       #menu-wrap .menu ul {
+          list-style: none;
+        }
+
+         #menu-wrap .menu ul li {
+            margin: 15px 0;
+          }
+
+           #menu-wrap .menu ul li .link {
+              text-decoration: none;
+              color: rgba(49, 49, 49, 0.85);
+              opacity: 0;
+              visibility: hidden;
+            }
+
+     #menu-wrap .toggler {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+       #menu-wrap .toggler:hover + .dots > div,
+       #menu-wrap .toggler:hover + .dots > div:after,
+       #menu-wrap .toggler:hover + .dots > div:before {
+          background-color: rgba(49, 49, 49, 0.6);
+        }
+
+       #menu-wrap .toggler:checked + .dots > div {
+          -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812)) translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
+          -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812)) translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
+          transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812)) translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));
+        }
+
+         #menu-wrap .toggler:checked + .dots > div:after {
+            -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812)) translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
+            -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812)) translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
+            transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812)) translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));
+          }
+
+         #menu-wrap .toggler:checked + .dots > div:before {
+            -webkit-transform: translateX( calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812)) ) translateY( calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812)) );
+            -ms-transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812))) translateY( calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812)) );
+            transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812))) translateY( calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812)) );
+          }
+
+       #menu-wrap .toggler:checked:hover + .dots > div,
+       #menu-wrap .toggler:checked:hover + .dots > div:after,
+       #menu-wrap .toggler:checked:hover + .dots > div:before {
+          background-color: rgba(49, 49, 49, 0.6);
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s;
+        }
+
+       #menu-wrap .toggler:checked ~ .menu {
+          opacity: 1;
+          visibility: visible;
+          width: 150px;
+          height: 130px;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s;
+        }
+
+         #menu-wrap .toggler:checked ~ .menu ul .link {
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: 0.5s ease 0.3s;
+            -o-transition: 0.5s ease 0.3s;
+            transition: 0.5s ease 0.3s;
+          }
+
+           #menu-wrap .toggler:checked ~ .menu ul .link:hover {
+              color: #2980b9;
+              -webkit-transition: 0.2s;
+              -o-transition: 0.2s;
+              transition: 0.2s;
+            }
+
+       #menu-wrap .toggler:not(:checked) ~ .menu {
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s;
+        }
+
+         #menu-wrap .toggler:not(:checked) ~ .menu ul .link {
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: 0.1s;
+            -o-transition: 0.1s;
+            transition: 0.1s;
+          }
+
+  @media (max-width: 600px) {
+   {
+      position: absolute;
+      top: 50px;
+      width: calc(100% - 40px);
+      margin: 0;
+    }
+  }
+</style>-->
+
 <h1 class="h3 mb-2 text-gray-800">Doctor Appoinment</h1>
 <p class="mb-4"></p>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <div class="row">
-            <div class="col-md-5">
-                <h6 class="m-0 font-weight-bold text-orange">Doctor Appoinment List</h6>
-            </div>
-            <div class=" col-lg-4 input-group mb-3"style="padding-top: 25px;">
-                <div class="input-group-prepend"style="height: 39px;">
-                    <span class="input-group-text"><i class="fa fa-search"></i></span>
-                </div>
-                <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" />
-            </div>
-            <div class="col-md-3 form-group text-right">
-                <button type="submit" class="btn btn-primary mt-4 mr-1" >
-                    <span translate>Export</span>
-                </button>
-                 <button [routerLink]="['addappointment']" class="btn btn-primary mt-4 mr-1">
-                    Doctor Appoinment
-                </button> 
-            </div>
+  <div class="card-header py-3">
+    <div class="row">
+      <div class="col-md-5">
+        <h6 class="m-0 font-weight-bold text-orange">Doctor Appoinment List</h6>
+      </div>
+      <div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
+        <div class="input-group-prepend" style="height: 39px;">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
         </div>
+        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" />
+      </div>
+      <div class="col-md-3 form-group text-right">
+        <button type="submit" class="btn btn-primary mt-4 mr-1">
+          <span translate>Export</span>
+        </button>
+        <button [routerLink]="['addappointment']" class="btn btn-primary mt-4 mr-1">
+          Doctor Appoinment
+        </button>
+      </div>
     </div>
-    <div class="card-body">
-        <div class="tile-body p-0 table-responsive ">
-            <table class="table table-striped">
-                <thead>
-                    <tr class="table-header">
-                        <th width="10%" sortable="AppointmentNo" > Appoint. No.</th>
-                        <th width="15%" sortable="PatientName" > Patient Name </th>
-                        <th width="10%" sortable="Age" > Age </th>
-                        <th width="10%" sortable="Gender" > Gender </th>
-                        <th width="10%" sortable="Fees" > Fees </th>
-                        <th width="15%" sortable="BookingDate" > Booking Date </th>
-                        <th width="20%" sortable="Timeslot" > Time Slot </th>
-                        <th width="15%" sortable="Status" > Status </th>
-                        <th width="10%">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let item of data$ | async ">
-                    <td> {{item.appointmentNo}} </td>
-                    <td> {{item.patientName}} </td>
-                    <td> {{item.age}} </td>
-                    <td> {{item.gender}} </td>
-                    <td> {{item.fees}} </td>
-                    <td> {{item.bookingDate}} </td>
-                    <td> {{item.timeslot}} </td>
-                    <td>
-                      <ngb-highlight [ngClass]="{'btn-success': item.statusID === 101, 'btn-danger':item.statusID !== 101 }" class="btn btn-sm" [result]="item.statusID ==101?'Active':'Inactive'" [term]="service.searchTerm">
-                      </ngb-highlight>
-                    </td>
-                    <td>
-                      <a (click)="Edit(item.appointmentID)"><i class="fas fa-fw fa-edit"></i> </a>
-                      <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
-                    </td>
-                  </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <p class="pagination-count">
-                    Showing
-                     <strong>{{(service.pageSize * service.page)-9}}</strong> to
-                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of
-                    <strong>{{(total$ | async)!}}</strong> results 
-                </p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                 <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
-                </ngb-pagination> 
-            </div>
-        </div>
+  </div>
+  <div class="card-body">
+    <div class="tile-body p-0 table-responsive ">
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-header">
+            <th width="10%" sortable="AppointmentNo"> Appoint. No.</th>
+            <th width="15%" sortable="PatientName"> Patient Name </th>
+            <th width="10%" sortable="Age"> Age </th>
+            <th width="10%" sortable="Gender"> Gender </th>
+            <th width="10%" sortable="Fees"> Fees </th>
+            <th width="15%" sortable="BookingDate"> Booking Date </th>
+            <th width="20%" sortable="Timeslot"> Time Slot </th>
+            <th width="20%" sortable="AppointmentStatus"> Appointment Status </th>
+            <th width="15%" sortable="Status"> Status </th>
+            <th width="10%">Action</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data$ | async ">
+            <td> {{item.appointmentNo}} </td>
+            <td> {{item.patientName}} </td>
+            <td> {{item.age}} </td>
+            <td> {{item.gender}} </td>
+            <td> {{item.fees}} </td>
+            <td> {{item.bookingDate}} </td>
+            <td> {{item.timeslot}} </td>
+            <td>
+              {{ item.appointmentStatus == 101 ?"Pending":item.appointmentStatus == 102 ? "Approved" : item.appointmentStatus==103 ?"Cancelled" : item.appointmentStatus == 104 ?"Completed": "-"}}
+            </td>
+            <td>
+              <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
+              </ngb-highlight>
+            </td>
+            <td>
+              <a (click)="Edit(item.appointmentID)"><i class="fas fa-fw fa-edit"></i> </a>
+              <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+            </td>
+            <td>
+              <select class="btn btn-danger dropdown form-control" (change)="Status(item)"  id="appointmentStatus" name="appointmentStatus" [(ngModel)]="item.appointmentStatus" style=" padding-left: 5px;">
+                <option selected></option>
+                <option [ngValue]="102">Approved</option>
+                <option [ngValue]="103">Cancelled</option>
+                <option [ngValue]="104">Completed</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <p class="pagination-count">
+          Showing
+          <strong>{{(service.pageSize * service.page)-9}}</strong> to
+          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of
+          <strong>{{(total$ | async)!}}</strong> results
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
+        </ngb-pagination>
+      </div>
+    </div>
+  </div>
 </div>
+<script type="text/javascript">
+  function handleDropDownEvents(e) {
+    if (e.value == "CreditCard") {
+      showCreditCardMethod();
+    }
+    else if (e.value == "SendPayment") {
+      showSendPaymentMethod();
+    }
+  }
+</script>

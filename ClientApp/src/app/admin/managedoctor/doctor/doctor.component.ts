@@ -29,7 +29,7 @@ export class DoctorComponent implements OnInit {
     public excelService: ExcelService,
     public ts: ToastService,
     public router: Router) {
-    this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
+    //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
 
     this.loading$ = service.loading$;
     this.submit = false;
@@ -49,6 +49,7 @@ export class DoctorComponent implements OnInit {
   }
 
   getData() {
+    debugger
     this.service.getAllData();
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
