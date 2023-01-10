@@ -160,3 +160,8 @@ D:\Projects\Mamji\obj\Release\netcoreapp3.1\MamjiAdmin.csproj.CopyComplete
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\MamjiAdmin.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\MamjiAdmin.pdb
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\MamjiAdmin.genruntimeconfig.cache
+D:\Projects\Mamji\obj\Release\netcoreapp3.1\staticwebassets\MamjiAdmin.StaticWebAssets.Pack.cache
+D:\Projects\Mamji\obj\Release\netcoreapp3.1\staticwebassets\msbuild.MamjiAdmin.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Projects\Mamji\obj\Release\netcoreapp3.1\staticwebassets\msbuild.build.MamjiAdmin.props
+D:\Projects\Mamji\obj\Release\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.MamjiAdmin.props
+D:\Projects\Mamji\obj\Release\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.MamjiAdmin.props

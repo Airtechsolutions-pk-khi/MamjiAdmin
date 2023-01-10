@@ -400,7 +400,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\" >\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                                  <!-- <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.fullName.errors.required\">\r\n                                      Name is required.\r\n                                    </div>  \r\n                                  </div> -->\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-6\">\r\n                                    <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                                    <!-- <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                                        <div *ngIf=\"f.email.errors.required\">\r\n                                            Email is required.\r\n                                        </div>\r\n                                    </div> -->\r\n                                </div>\r\n                                <div class=\"form-group col-md-6\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                                </div>\r\n                            \r\n                              <div class=\"form-group col-md-6\">\r\n                                <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                                <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" formControlName=\"gender\">\r\n                                  <option selected disabled> -- Please Select -- </option>\r\n                                  <option>Male</option>\r\n                                  <option>Female</option>\r\n                                </select>\r\n                                 \r\n                              </div>\r\n                            \r\n                             \r\n                                <div class=\"form-group col-md-6\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                                </div>\r\n                              </div>\r\n\r\n                              <div class=\"form-row\">\r\n\r\n                                <div class=\"form-group col-md-3\">\r\n                                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                                      <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                                          <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                                              <span class=\"ng-value-label\">{{item.name}}</span>\r\n                                              <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                                          </div>\r\n                                      </ng-template>\r\n                                  </ng-select>\r\n                              </div>\r\n\r\n                                <div class=\"form-group col-md-3\">\r\n                                  <label class=\"small mb-1\" for=\"inputLastName\">Fees</label>\r\n                                  <input type=\"number\" class=\"form-control\" id=fees placeholder=\"\" [(ngModel)]=\"drProfile.fees\" [ngModelOptions]=\"{standalone: true}\" >\r\n                              </div>\r\n\r\n                              \r\n\r\n                              <div class=\"form-group col-md-3\">\r\n                                <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                                <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                            </div>\r\n                            <div class=\"form-group col-md-3\">                       \r\n                              <br/>\r\n                              <button class=\"btn btn-primary\" type=\"submit\"  (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                          </div>\r\n                               </div>\r\n                            \r\n                <div class=\"tile-body p-0 table-responsive \">\r\n                  <table class=\"table table-striped\">\r\n                      <thead>\r\n                          <tr class=\"table-header\">\r\n                            <th width=\"20%\">Speciality </th>\r\n                              <th width=\"20%\">Fees </th>\r\n                              <th width=\"40%\">Profile </th>                                                         \r\n                              <th width=\"20%\">Action</th>\r\n                          </tr>\r\n                      </thead>\r\n                      <tbody>\r\n                          <tr *ngFor=\"let item of  DoctorProfiles\">\r\n                              \r\n                            <td>\r\n                              {{item.name}}                                \r\n                            </td>\r\n                              <td>\r\n                                {{item.fees}}                                \r\n                              </td>                              \r\n                              <td> {{item.profile}} </td>\r\n                                                            \r\n                              <td>\r\n                                  <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                              </td>\r\n                          </tr>\r\n\r\n                      </tbody>\r\n                  </table>\r\n              </div>\r\n \r\n                        </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n \r\n                    </div>\r\n \r\n                    <div class=\"form-row\">\r\n                       \r\n                        <div class=\"form-group col-md-3\">\r\n                          <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                          <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                              <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                                      <span class=\"ng-value-label\">{{item.name}}</span>\r\n                                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                                  </div>\r\n                              </ng-template>\r\n                          </ng-select>\r\n                      </div>\r\n                      \r\n                        <div class=\"form-group col-md-3\">\r\n                          <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n                        <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                          <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n                       </select>\r\n                        </div>\r\n\r\n           \r\n                        <div class=\"form-group col-md-3\">\r\n                          <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n                          <ng-select [items]=\"TimeList\" bindLabel=\"name\" [multiple]=\"true\" bindValue=\"name\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                            <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                              <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                                <span class=\"ng-value-label\">{{item}}</span>\r\n                                <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                              </div>\r\n                            </ng-template>\r\n                          </ng-select>                       \r\n                        </div>\r\n                   \r\n                \r\n                    <div class=\"form-group col-md-3\">                       \r\n                      <br/>\r\n                      <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n                  </div>\r\n                </div>\r\n                  <div class=\"tile-body p-0 table-responsive \">\r\n                    <table class=\"table table-striped\">\r\n                        <thead>\r\n                            <tr class=\"table-header\">\r\n                              <th width=\"20%\">ID </th>\r\n                                <th width=\"20%\">Speciality </th>\r\n                                <th width=\"20%\">Days </th>\r\n                                <th width=\"20%\">Timeslot</th>                                \r\n                                <th width=\"20%\">Action</th>\r\n                            </tr>\r\n                        </thead>\r\n                        <tbody>\r\n                            <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                              <td>\r\n                                {{item.specialistID}}\r\n                                \r\n                            </td>\r\n                                <td>\r\n                                  {{item.name}}\r\n                                  \r\n                              </td>                              \r\n                                <td> {{item.dayName}} </td>\r\n                                <td> {{item.timeSlot}} </td>\r\n                                \r\n                                <td>\r\n                                    <i (click)=\"RemoveChild(item)\"  class=\"fas fa-fw fa-trash-alt \"></i>\r\n                                </td>\r\n                            </tr>\r\n\r\n                        </tbody>\r\n                    </table>\r\n                </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>";
+      __webpack_exports__["default"] = "\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\" >\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                                  <!-- <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.fullName.errors.required\">\r\n                                      Name is required.\r\n                                    </div>  \r\n                                  </div> -->\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-6\">\r\n                                    <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                                    <!-- <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                                        <div *ngIf=\"f.email.errors.required\">\r\n                                            Email is required.\r\n                                        </div>\r\n                                    </div> -->\r\n                                </div>\r\n                                <div class=\"form-group col-md-6\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                                </div>\r\n                            \r\n                              <div class=\"form-group col-md-6\">\r\n                                <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                                <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" formControlName=\"gender\">\r\n                                  <option selected disabled> -- Please Select -- </option>\r\n                                  <option>Male</option>\r\n                                  <option>Female</option>\r\n                                </select>\r\n                                 \r\n                              </div>\r\n                            \r\n                             \r\n                                <div class=\"form-group col-md-6\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                                </div>\r\n                              </div>\r\n\r\n                              <div class=\"form-row\">\r\n\r\n                                <div class=\"form-group col-md-3\">\r\n                                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                                      <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                                          <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                                              <span class=\"ng-value-label\">{{item.name}}</span>\r\n                                              <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                                          </div>\r\n                                      </ng-template>\r\n                                  </ng-select>\r\n                              </div>\r\n\r\n                                <div class=\"form-group col-md-3\">\r\n                                  <label class=\"small mb-1\" for=\"inputLastName\">Fees</label>\r\n                                  <input type=\"number\" class=\"form-control\" id=fees placeholder=\"\" [(ngModel)]=\"drProfile.fees\" [ngModelOptions]=\"{standalone: true}\" >\r\n                              </div>\r\n\r\n                              \r\n\r\n                              <div class=\"form-group col-md-3\">\r\n                                <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                                <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                            </div>\r\n                            <div class=\"form-group col-md-3\">                       \r\n                              <br/>\r\n                              <button class=\"btn btn-primary\" type=\"submit\"  (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                          </div>\r\n                               </div>\r\n                            \r\n                <div class=\"tile-body p-0 table-responsive \">\r\n                  <table class=\"table table-striped\">\r\n                      <thead>\r\n                          <tr class=\"table-header\">\r\n                            <th width=\"20%\">Speciality </th>\r\n                              <th width=\"20%\">Fees </th>\r\n                              <th width=\"40%\">Profile </th>                                                         \r\n                              <th width=\"20%\">Action</th>\r\n                          </tr>\r\n                      </thead>\r\n                      <tbody>\r\n                          <tr *ngFor=\"let item of  DoctorProfiles\">\r\n                              \r\n                            <td>\r\n                              {{item.name}}                                \r\n                            </td>\r\n                              <td>\r\n                                {{item.fees}}                                \r\n                              </td>                              \r\n                              <td> {{item.profile}} </td>\r\n                                                            \r\n                              <td>\r\n                                  <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                              </td>\r\n                          </tr>\r\n\r\n                      </tbody>\r\n                  </table>\r\n              </div>\r\n \r\n                        </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n \r\n                    </div>\r\n \r\n                    <div class=\"form-row\">\r\n                       \r\n                        <div class=\"form-group col-md-3\">\r\n                          <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                          <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                              <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                                      <span class=\"ng-value-label\">{{item.name}}</span>\r\n                                      <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                                  </div>\r\n                              </ng-template>\r\n                          </ng-select>\r\n                      </div>\r\n                      \r\n                        <div class=\"form-group col-md-3\">\r\n                          <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n                        <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                          <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n                       </select>\r\n                        </div>\r\n\r\n           \r\n                        <div class=\"form-group col-md-3\">\r\n                          <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n                          <ng-select [items]=\"TimeList\" bindLabel=\"name\" [multiple]=\"true\" bindValue=\"name\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                            <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                              <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                                <span class=\"ng-value-label\">{{item}}</span>\r\n                                <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                              </div>\r\n                            </ng-template>\r\n                          </ng-select>                       \r\n                        </div>\r\n                   \r\n                \r\n                    <div class=\"form-group col-md-3\">                       \r\n                      <br/>\r\n                      <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n                  </div>\r\n                </div>\r\n                  <div class=\"tile-body p-0 table-responsive \">\r\n                    <table class=\"table table-striped\">\r\n                        <thead>\r\n                            <tr class=\"table-header\">\r\n                              <th width=\"20%\">ID </th>\r\n                                <th width=\"20%\">Speciality </th>\r\n                                <th width=\"20%\">Days </th>\r\n                                <th width=\"20%\">Timeslot</th>                                \r\n                                <th width=\"20%\">Action</th>\r\n                            </tr>\r\n                        </thead>\r\n                        <tbody>\r\n                            <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                              <td>\r\n                                {{item.specialistID}}\r\n                                \r\n                            </td>\r\n                                <td>\r\n                                  {{item.name}}\r\n                                  \r\n                              </td>                              \r\n                                <td> {{item.dayName}} </td>\r\n                                <td> {{item.timeSlot}} </td>\r\n                                \r\n                                <td>\r\n                                    <i (click)=\"RemoveChild(item)\"  class=\"fas fa-fw fa-trash-alt \"></i>\r\n                                </td>\r\n                            </tr>\r\n\r\n                        </tbody>\r\n                    </table>\r\n                </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -420,7 +420,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Doctors</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Doctors List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <!-- <button [routerLink]=\"['adddoctors']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add Doctor\r\n                </button> -->\r\n            </div>\r\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Customer\r\n            </button></div> -->\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"FullName\" > Name </th>\r\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\r\n                        \r\n                        <th width=\"15%\" sortable=\"Skills\" > Skills </th>\r\n                        <th width=\"15%\" sortable=\"Education\" > Education </th>\r\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.fullName}} </td>\r\n                        <td> {{item.email}} </td>\r\n                         \r\n                        <td> {{item.skills}} </td>\r\n                        <td> {{item.education}} </td>\r\n                        <td> \r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <!-- <a (click)=\"Edit(item.doctorID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Doctors</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctors List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['adddoctors']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Doctor\r\n        </button>\r\n      </div>\r\n      <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Customer\r\n      </button></div> -->\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"FullName\"> Name </th>\r\n            <th width=\"15%\" sortable=\"Email\">Email </th>\r\n\r\n            <th width=\"15%\" sortable=\"Skills\"> Skills </th>\r\n            <th width=\"15%\" sortable=\"Education\"> Education </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.email}} </td>\r\n\r\n            <td> {{item.skills}} </td>\r\n            <td> {{item.education}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.doctorID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -440,7 +440,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Addons</h1>\n<p class=\"mb-4\"></p>\n\n<form [formGroup]=\"addonForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\n    <div class=\"row\">\n\n        <div class=\"col-xl-12\">\n            <div class=\"card mb-4\">\n                <div class=\"card-header\">Addons Details</div>\n                <div class=\"card-body\">\n                    <div class=\"form-row\">\n                        <div class=\"form-group col-md-8\">\n                            <div class=\"form-group\">\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\n                                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\n                                    <div *ngIf=\"f.name.errors.required\">\n                                        Name is required.\n                                    </div>\n                                </div>\n                            </div>\n                            <!-- Form Row-->\n                            <div class=\"form-row\">\n                                <div class=\"form-group col-md-12\">\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Arabic Name</label>\n                                    <input type=\"text\" class=\"form-control\" id=arabicName placeholder=\"\" formControlName=\"arabicName\">\n                                </div>\n                            </div>\n                            <!-- <div class=\"form-row\">\n                                <div class=\"form-group col-md-12\">\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\n                                    <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\n                                </div>\n                            </div> -->\n                            <div class=\"form-row\">\n                                <div class=\"form-group col-md-12\">\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Price</label>\n                                    <input type=\"number\" class=\"form-control\" id=price placeholder=\"\" formControlName=\"price\">\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"form-group col-md-4 text-center\">\n                            <app-imageupload></app-imageupload>\n                        </div>\n                    </div>\n\n                    <div class=\"form-row\">\n                        <div class=\"form-group col-md-12\">\n\n                            <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\n                            <textarea class=\"form-control\" formControlName=\"description\" height=\"100px\"></textarea>\n                        </div>\n                    </div>\n                    <div class=\"form-row\">\n                        <div class=\"form-group col-lg-12\">\n                            <label for=\"Item Status\">Status</label>\n                            <div class=\"custom-control custom-switch custom-switch-md\">\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\n                            </div>\n                        </div>\n                    </div>\n                    <!-- Save changes button-->\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\n\n                </div>\n            </div>\n        </div>\n    </div>\n</form>";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Addons</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"addonForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Addons Details</div>\r\n                <div class=\"card-body\">\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=Name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Arabic Name</label>\r\n                                    <input type=\"text\" class=\"form-control\" id=arabicName placeholder=\"\" formControlName=\"arabicName\">\r\n                                </div>\r\n                            </div>\r\n                            <!-- <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Display Order</label>\r\n                                    <input type=\"number\" class=\"form-control\" id=displayOrder placeholder=\"\" formControlName=\"displayOrder\">\r\n                                </div>\r\n                            </div> -->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputLastName\">Price</label>\r\n                                    <input type=\"number\" class=\"form-control\" id=price placeholder=\"\" formControlName=\"price\">\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-group col-md-4 text-center\">\r\n                            <app-imageupload></app-imageupload>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-12\">\r\n\r\n                            <label class=\"small mb-1\" for=\"inputLocation\">Description</label>\r\n                            <textarea class=\"form-control\" formControlName=\"description\" height=\"100px\"></textarea>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>";
       /***/
     },
 
@@ -460,7 +460,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\n<h1 class=\"h3 mb-2 text-gray-800\">Addons</h1>\n<p class=\"mb-4\"></p>\n\n<!-- DataTales Example -->\n<div class=\"card shadow mb-4\">\n    <div class=\"card-header py-3\">\n        <div class=\"row\">\n            <div class=\"col-md-5\">\n                <h6 class=\"m-0 font-weight-bold text-orange\">Addons List</h6>\n            </div>\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\n                </div>\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\n            </div>\n           \n            <div class=\"col-md-3 text-right\"> \n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\n                    <span translate>Export</span>\n                </button>\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\" >\n                    <span translate>Add Addon</span>\n                </button>\n                </div>\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\n                Add Modifier\n            </button></div> -->\n        </div>\n\n\n\n    </div>\n    <div class=\"card-body\">\n        <div class=\"tile-body p-0 table-responsive \">\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr class=\"table-header\">\n                        <th width=\"10%\">IMAGE</th>\n                        <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\n                        <th width=\"20%\" sortable=\"Description\" (sort)=\"onSort($event)\">Description </th>\n                        <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Price</th>\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\n                        <th width=\"15%\"></th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor=\"let item of data$ | async \">\n                        <td>\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\n                        </td>\n                        <td> {{item.name}} </td>\n                        <td> {{item.description}} </td>\n                        <td>{{item.price}}</td>\n                        <td>\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\n                            </ngb-highlight>\n                        </td>\n                        <td>\n                            <a (click)=\"Edit(item.addonID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\n\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n\n\n        <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <p class=\"pagination-count\">\n                    Showing\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\n                    <strong>{{(total$ | async)!}}</strong> results\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\n                </ngb-pagination>\n            </div>\n        </div>\n    </div>\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Addons</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Addons List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 text-right\"> \r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Add Addon</span>\r\n                </button>\r\n                </div>\r\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Modifier\r\n            </button></div> -->\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"20%\" sortable=\"Description\" (sort)=\"onSort($event)\">Description </th>\r\n                        <th width=\"10%\" sortable=\"Price\" (sort)=\"onSort($event)\">Price</th>\r\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"15%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.description}} </td>\r\n                        <td>{{item.price}}</td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.addonID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
       /***/
     },
 
@@ -620,7 +620,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\n<h1 class=\"h3 mb-2 text-gray-800\">Customer Inquiry</h1>\n<p class=\"mb-4\"></p>\n\n<!-- DataTales Example -->\n<div class=\"card shadow mb-4\">\n    <div class=\"card-header py-3\">\n        <div class=\"row\">\n            <div class=\"col-md-5\">\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customer Inquiry List</h6>\n            </div>\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\n                </div>\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\n            </div>\n            <div class=\"col-md-3 form-group text-right\">\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\n                    <span translate>Export</span>\n                </button>\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\n                    Customer Inquiry\n                </button>\n            </div>\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\n                Add Customer\n            </button></div> -->\n        </div>\n\n\n\n    </div>\n    <div class=\"card-body\">\n        <div class=\"tile-body p-0 table-responsive \">\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr class=\"table-header\">\n                        <th width=\"10%\">IMAGE</th>\n                        <th width=\"15%\" sortable=\"FullName\" > Name </th>\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\n                        <th width=\"15%\" sortable=\"Mobile\" >Mobile </th>\n                        <th width=\"15%\" sortable=\"Password\" >Type </th>\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\n                        <th width=\"10%\"></th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>\n                            <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" /> -->\n                            <div class=\"image-replace\"></div>\n                        </td>\n                        <td>Ammad </td>\n                        <td> ammadraza001@gmail.com </td>\n                        <td>03341897997</td>\n                        <td>abc123</td>\n                        <td>\n                            <ngb-highlight  class=\"btn btn-sm\">\n                                 \n                            </ngb-highlight>\n                        </td>\n                        <td>\n                            <a  ><i class=\"fas fa-fw fa-edit\"></i> </a>\n\n                            <a  ><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n\n\n        <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <p class=\"pagination-count\">\n                    Showing\n                    <!-- <strong>{{(service.pageSize * service.page)-9}}</strong> to\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\n                    <strong>{{(total$ | async)!}}</strong> results -->\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <!-- <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\n                </ngb-pagination> -->\n            </div>\n        </div>\n    </div>\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customer Inquiry</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customer Inquiry List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Customer Inquiry\r\n                </button>\r\n            </div>\r\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Customer\r\n            </button></div> -->\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"FullName\" > Name </th>\r\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\r\n                        <th width=\"15%\" sortable=\"Mobile\" >Mobile </th>\r\n                        <th width=\"15%\" sortable=\"Password\" >Type </th>\r\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\r\n                        <th width=\"10%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr>\r\n                        <td>\r\n                            <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" /> -->\r\n                            <div class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td>Ammad </td>\r\n                        <td> ammadraza001@gmail.com </td>\r\n                        <td>03341897997</td>\r\n                        <td>abc123</td>\r\n                        <td>\r\n                            <ngb-highlight  class=\"btn btn-sm\">\r\n                                 \r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a  ><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a  ><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <!-- <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results -->\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <!-- <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> -->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
       /***/
     },
 
@@ -640,7 +640,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery Area</h1>\n<p class=\"mb-4\"></p>\n\n<!-- DataTales Example -->\n<div class=\"card shadow mb-4\">\n    <div class=\"card-header py-3\">\n        <div class=\"row\">\n            <div class=\"col-md-5\">\n                <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area List</h6>\n            </div>\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\n                </div>\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\n            </div>\n            <div class=\"col-md-3 form-group text-right\">\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\n                    <span translate>Export</span>\n                </button>\n                <button   class=\"btn btn-primary mt-4 mr-1\">\n                    Delivery Area\n                </button>\n            </div>\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\n                Add Customer\n            </button></div> -->\n        </div>\n\n\n\n    </div>\n    <div class=\"card-body\">\n        <div class=\"tile-body p-0 table-responsive \">\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr class=\"table-header\">\n                        <th width=\"10%\">IMAGE</th>\n                        <th width=\"15%\" sortable=\"FullName\" >Area Name </th>\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\n                        <th width=\"15%\" sortable=\"Mobile\" >Mobile </th>\n                        <th width=\"15%\" sortable=\"Password\" >Type </th>\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\n                        <th width=\"10%\"></th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>\n                            <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" /> -->\n                            <div class=\"image-replace\"></div>\n                        </td>\n                        <td>Ammad </td>\n                        <td> ammadraza001@gmail.com </td>\n                        <td>03341897997</td>\n                        <td>abc123</td>\n                        <td>\n                            \n                        </td>\n                        <td>\n                            <a  ><i class=\"fas fa-fw fa-edit\"></i> </a>\n\n                            <a  ><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n\n\n        <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <p class=\"pagination-count\">\n                    Showing\n                    <!-- <strong>{{(service.pageSize * service.page)-9}}</strong> to\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\n                    <strong>{{(total$ | async)!}}</strong> results -->\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <!-- <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\n                </ngb-pagination> -->\n            </div>\n        </div>\n    </div>\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery Area</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button   class=\"btn btn-primary mt-4 mr-1\">\r\n                    Delivery Area\r\n                </button>\r\n            </div>\r\n            <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Customer\r\n            </button></div> -->\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"FullName\" >Area Name </th>\r\n                        <th width=\"15%\" sortable=\"Email\" >Email </th>\r\n                        <th width=\"15%\" sortable=\"Mobile\" >Mobile </th>\r\n                        <th width=\"15%\" sortable=\"Password\" >Type </th>\r\n                        <th width=\"15%\" sortable=\"Status\" >Status </th>\r\n                        <th width=\"10%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr>\r\n                        <td>\r\n                            <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" /> -->\r\n                            <div class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td>Ammad </td>\r\n                        <td> ammadraza001@gmail.com </td>\r\n                        <td>03341897997</td>\r\n                        <td>abc123</td>\r\n                        <td>\r\n                            \r\n                        </td>\r\n                        <td>\r\n                            <a  ><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a  ><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <!-- <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results -->\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <!-- <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> -->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
       /***/
     },
 
@@ -800,7 +800,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                 <button [routerLink]=\"['addappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Doctor Appoinment\r\n                </button> \r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\" sortable=\"AppointmentNo\" > Appoint. No.</th>\r\n                        <th width=\"15%\" sortable=\"PatientName\" > Patient Name </th>\r\n                        <th width=\"10%\" sortable=\"Age\" > Age </th>\r\n                        <th width=\"10%\" sortable=\"Gender\" > Gender </th>\r\n                        <th width=\"10%\" sortable=\"Fees\" > Fees </th>\r\n                        <th width=\"15%\" sortable=\"BookingDate\" > Booking Date </th>\r\n                        <th width=\"20%\" sortable=\"Timeslot\" > Time Slot </th>\r\n                        <th width=\"15%\" sortable=\"Status\" > Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td> {{item.appointmentNo}} </td>\r\n                    <td> {{item.patientName}} </td>\r\n                    <td> {{item.age}} </td>\r\n                    <td> {{item.gender}} </td>\r\n                    <td> {{item.fees}} </td>\r\n                    <td> {{item.bookingDate}} </td>\r\n                    <td> {{item.timeslot}} </td>\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 101, 'btn-danger':item.statusID !== 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==101?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td>\r\n                      <a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                      <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                     <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results \r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                 <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<!--<style>\r\n    #menu-wrap {\r\n      position: relative;\r\n      height: 25px;\r\n      width: 25px;\r\n    }\r\n\r\n      #menu-wrap .dots {\r\n        position: absolute;\r\n        height: 100%;\r\n        width: 100%;\r\n        top: 0;\r\n        left: 0;\r\n        display: -webkit-box;\r\n        display: -ms-flexbox;\r\n        display: flex;\r\n        -webkit-box-orient: vertical;\r\n        -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n        flex-direction: column;\r\n        -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n        align-items: center;\r\n        -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n        justify-content: center;\r\n        z-index: 1;\r\n      }\r\n\r\n       #menu-wrap .dots > div,\r\n       #menu-wrap .dots > div:after,\r\n       #menu-wrap .dots > div:before {\r\n          height: 6px;\r\n          width: 6px;\r\n          background-color: rgba(49, 49, 49, 0.8);\r\n          border-radius: 50%;\r\n          -webkit-transition: 0.5s;\r\n          -o-transition: 0.5s;\r\n          transition: 0.5s;\r\n        }\r\n\r\n       #menu-wrap .dots > div {\r\n          position: relative;\r\n        }\r\n\r\n         #menu-wrap .dots > div:after {\r\n            content: \"\";\r\n            position: absolute;\r\n            bottom: calc((25px / 2) - (6px / 2));\r\n            left: 0;\r\n          }\r\n\r\n         #menu-wrap .dots > div:before {\r\n            content: \"\";\r\n            position: absolute;\r\n            top: calc((25px / 2) - (6px / 2));\r\n            left: 0;\r\n          }\r\n\r\n     #menu-wrap .menu {\r\n        position: absolute;\r\n        right: -10px;\r\n        top: calc(-12px + 50px);\r\n        width: 0;\r\n        height: 0;\r\n        background-color: rgba(255, 255, 255, 0.8);\r\n        padding: 20px 15px;\r\n        -webkit-box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);\r\n        box-shadow: 2px 4px 6px rgba(49, 49, 49, 0.2);\r\n        display: -webkit-box;\r\n        display: -ms-flexbox;\r\n        display: flex;\r\n        -webkit-box-orient: vertical;\r\n        -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n        flex-direction: column;\r\n        -webkit-box-align: start;\r\n        -ms-flex-align: start;\r\n        align-items: flex-start;\r\n        -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n        justify-content: center;\r\n        opacity: 0;\r\n        visibility: hidden;\r\n      }\r\n\r\n       #menu-wrap .menu ul {\r\n          list-style: none;\r\n        }\r\n\r\n         #menu-wrap .menu ul li {\r\n            margin: 15px 0;\r\n          }\r\n\r\n           #menu-wrap .menu ul li .link {\r\n              text-decoration: none;\r\n              color: rgba(49, 49, 49, 0.85);\r\n              opacity: 0;\r\n              visibility: hidden;\r\n            }\r\n\r\n     #menu-wrap .toggler {\r\n        position: absolute;\r\n        height: 100%;\r\n        width: 100%;\r\n        top: 0;\r\n        left: 0;\r\n        -webkit-appearance: none;\r\n        -moz-appearance: none;\r\n        appearance: none;\r\n        cursor: pointer;\r\n        z-index: 2;\r\n      }\r\n\r\n       #menu-wrap .toggler:hover + .dots > div,\r\n       #menu-wrap .toggler:hover + .dots > div:after,\r\n       #menu-wrap .toggler:hover + .dots > div:before {\r\n          background-color: rgba(49, 49, 49, 0.6);\r\n        }\r\n\r\n       #menu-wrap .toggler:checked + .dots > div {\r\n          -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812)) translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));\r\n          -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812)) translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));\r\n          transform: translateX(calc(((25px / 2) - (6px / 2)) * -0.7071067812)) translateY(calc(((25px / 2) - (6px / 2)) * -0.7071067812));\r\n        }\r\n\r\n         #menu-wrap .toggler:checked + .dots > div:after {\r\n            -webkit-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812)) translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));\r\n            -ms-transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812)) translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));\r\n            transform: translateX(calc(((25px / 2) - (6px / 2)) * 0.7071067812)) translateY(calc((2 * (25px / 2) - (6px / 2)) * 0.7071067812));\r\n          }\r\n\r\n         #menu-wrap .toggler:checked + .dots > div:before {\r\n            -webkit-transform: translateX( calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812)) ) translateY( calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812)) );\r\n            -ms-transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812))) translateY( calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812)) );\r\n            transform: translateX(calc(2 * (((25px / 2) - (6px / 2)) * 0.7071067812))) translateY( calc(((25px / 2) - (6px / 2)) - (((25px / 2) - (6px / 2)) * 0.7071067812)) );\r\n          }\r\n\r\n       #menu-wrap .toggler:checked:hover + .dots > div,\r\n       #menu-wrap .toggler:checked:hover + .dots > div:after,\r\n       #menu-wrap .toggler:checked:hover + .dots > div:before {\r\n          background-color: rgba(49, 49, 49, 0.6);\r\n          -webkit-transition: 0.5s;\r\n          -o-transition: 0.5s;\r\n          transition: 0.5s;\r\n        }\r\n\r\n       #menu-wrap .toggler:checked ~ .menu {\r\n          opacity: 1;\r\n          visibility: visible;\r\n          width: 150px;\r\n          height: 130px;\r\n          -webkit-transition: 0.5s;\r\n          -o-transition: 0.5s;\r\n          transition: 0.5s;\r\n        }\r\n\r\n         #menu-wrap .toggler:checked ~ .menu ul .link {\r\n            opacity: 1;\r\n            visibility: visible;\r\n            -webkit-transition: 0.5s ease 0.3s;\r\n            -o-transition: 0.5s ease 0.3s;\r\n            transition: 0.5s ease 0.3s;\r\n          }\r\n\r\n           #menu-wrap .toggler:checked ~ .menu ul .link:hover {\r\n              color: #2980b9;\r\n              -webkit-transition: 0.2s;\r\n              -o-transition: 0.2s;\r\n              transition: 0.2s;\r\n            }\r\n\r\n       #menu-wrap .toggler:not(:checked) ~ .menu {\r\n          -webkit-transition: 0.5s;\r\n          -o-transition: 0.5s;\r\n          transition: 0.5s;\r\n        }\r\n\r\n         #menu-wrap .toggler:not(:checked) ~ .menu ul .link {\r\n            opacity: 0;\r\n            visibility: hidden;\r\n            -webkit-transition: 0.1s;\r\n            -o-transition: 0.1s;\r\n            transition: 0.1s;\r\n          }\r\n\r\n  @media (max-width: 600px) {\r\n   {\r\n      position: absolute;\r\n      top: 50px;\r\n      width: calc(100% - 40px);\r\n      margin: 0;\r\n    }\r\n  }\r\n</style>-->\r\n\r\n<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['addappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Doctor Appoinment\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n            <th width=\"15%\" sortable=\"PatientName\"> Patient Name </th>\r\n            <th width=\"10%\" sortable=\"Age\"> Age </th>\r\n            <th width=\"10%\" sortable=\"Gender\"> Gender </th>\r\n            <th width=\"10%\" sortable=\"Fees\"> Fees </th>\r\n            <th width=\"15%\" sortable=\"BookingDate\"> Booking Date </th>\r\n            <th width=\"20%\" sortable=\"Timeslot\"> Time Slot </th>\r\n            <th width=\"20%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n            <th width=\"15%\" sortable=\"Status\"> Status </th>\r\n            <th width=\"10%\">Action</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.appointmentNo}} </td>\r\n            <td> {{item.patientName}} </td>\r\n            <td> {{item.age}} </td>\r\n            <td> {{item.gender}} </td>\r\n            <td> {{item.fees}} </td>\r\n            <td> {{item.bookingDate}} </td>\r\n            <td> {{item.timeslot}} </td>\r\n            <td>\r\n              {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 104 ?\"Completed\": \"-\"}}\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n            <td>\r\n              <select class=\"btn btn-danger dropdown form-control\" (change)=\"Status(item)\"  id=\"appointmentStatus\" name=\"appointmentStatus\" [(ngModel)]=\"item.appointmentStatus\" style=\" padding-left: 5px;\">\r\n                <option selected></option>\r\n                <option [ngValue]=\"102\">Approved</option>\r\n                <option [ngValue]=\"103\">Cancelled</option>\r\n                <option [ngValue]=\"104\">Completed</option>\r\n              </select>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n  function handleDropDownEvents(e) {\r\n    if (e.value == \"CreditCard\") {\r\n      showCreditCardMethod();\r\n    }\r\n    else if (e.value == \"SendPayment\") {\r\n      showSendPaymentMethod();\r\n    }\r\n  }\r\n</script>\r\n";
       /***/
     },
 
@@ -880,7 +880,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Nursing Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Nursing Appoinment List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                 <!-- <button [routerLink]=\"['addnursingappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Nursing Appoinment\r\n                </button>  -->\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\" sortable=\"AppointmentNo\" > Appoint. No.</th>\r\n                        <th width=\"10%\" sortable=\"PatientName\" > Patient Name </th>\r\n                        <th width=\"10%\" sortable=\"Age\" > Age </th>\r\n                        <th width=\"10%\" sortable=\"Gender\" > Gender </th>\r\n                        <th width=\"10%\" sortable=\"Fees\" > Fees </th>\r\n                        <th width=\"10%\" sortable=\"BookingDate\" > Booking Date </th>\r\n                        <th width=\"15%\" sortable=\"Timeslot\" > Time Slot </th>\r\n                        <th width=\"10%\" sortable=\"TestName\" > Test Name </th>\r\n                        <th width=\"10%\" sortable=\"Status\" > Status </th>\r\n                        <th width=\"5%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td> {{item.appointmentNo}} </td>\r\n                    <td> {{item.patientName}} </td>\r\n                    <td> {{item.age}} </td>\r\n                    <td> {{item.gender}} </td>\r\n                    <td> {{item.fees}} </td>\r\n                    <td> {{item.bookingDateNursing}} </td>\r\n                    <td> {{item.timeslot}} </td>\r\n                    <td> {{item.testName}} </td>\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 101, 'btn-danger':item.statusID !== 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==101?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td>\r\n                      <!-- <a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n                      <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                     <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results \r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                 <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Nursing Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Nursing Appoinment List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" >\r\n                    <span translate>Export</span>\r\n                </button>\r\n                 <!-- <button [routerLink]=\"['addnursingappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Nursing Appoinment\r\n                </button>  -->\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n                    <th width=\"10%\" sortable=\"PatientName\"> Patient Name </th>\r\n                    <th width=\"10%\" sortable=\"Age\"> Age </th>\r\n                    <th width=\"10%\" sortable=\"Gender\"> Gender </th>\r\n                    <th width=\"10%\" sortable=\"Fees\"> Fees </th>\r\n                    <th width=\"10%\" sortable=\"BookingDate\"> Booking Date </th>\r\n                    <th width=\"15%\" sortable=\"Timeslot\"> Time Slot </th>\r\n                    <th width=\"10%\" sortable=\"TestName\"> Test Name </th>\r\n                    <th width=\"10%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n                    <th width=\"10%\" sortable=\"Status\"> Status </th>\r\n                    <th width=\"5%\">Action</th>\r\n                    <th></th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td> {{item.appointmentNo}} </td>\r\n                    <td> {{item.patientName}} </td>\r\n                    <td> {{item.age}} </td>\r\n                    <td> {{item.gender}} </td>\r\n                    <td> {{item.fees}} </td>\r\n                    <td> {{item.bookingDateNursing}} </td>\r\n                    <td> {{item.timeslot}} </td>\r\n                    <td> {{item.testName}} </td>\r\n                    <td>\r\n                      {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 104 ?\"Completed\": \"-\"}}\r\n                    </td>\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td>\r\n                      <!-- <a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n                      <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                    <td>\r\n                      <select class=\"btn btn-danger dropdown form-control\" (change)=\"Status(item)\" id=\"appointmentStatus\" name=\"appointmentStatus\" [(ngModel)]=\"item.appointmentStatus\" style=\" padding-left: 5px;\">\r\n                        <option selected></option>\r\n                        <option [ngValue]=\"102\">Approved</option>\r\n                        <option [ngValue]=\"103\">Cancelled</option>\r\n                        <option [ngValue]=\"104\">Completed</option>\r\n                      </select>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                     <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results \r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                 <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination> \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1020,7 +1020,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Area</h1>\n<p class=\"mb-4\"></p>\n\n<form [formGroup]=\"deliveryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\n    <div class=\"row\">\n\n        <div class=\"col-xl-12\">\n            <div class=\"card mb-4\">\n                <div class=\"card-header\">Delivery Area Details</div>\n                <div class=\"card-body\">\n\n                                \n                            \n                    <div class=\"form-row\">\n                        <div class=\"form-group col-md-8\">\n                            <div class=\"form-group\">\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\n                                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\n                                    <div *ngIf=\"f.name.errors.required\">\n                                        Name is required.\n                                    </div>\n                                </div>\n                            </div>\n                            <!-- Form Row-->\n                            <div class=\"form-row\">\n                                <div class=\"form-group col-md-12\">\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Amount</label>\n                                    <input type=\"number\" class=\"form-control\" id=amount placeholder=\"\" formControlName=\"amount\">\n                                    <div *ngIf=\"f.amount.invalid && (f.amount.dirty || f.amount.touched)\" class=\"alert alert-danger\">\n                                        <div *ngIf=\"f.amount.errors.required\">\n                                            Amount is required.\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n\n                        </div>\n                     \n                    </div>\n\n\n                    <div class=\"form-row\">\n                        <div class=\"form-group col-lg-12\">\n                            <label for=\"Item Status\">Status</label>\n                            <div class=\"custom-control custom-switch custom-switch-md\">\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\n                            </div>\n                        </div>\n                    </div>\n                    <!-- Save changes button-->\n                    <button class=\"btn btn-primary\" type=\"submit\" >Save changes</button>\n\n                </div>\n            </div>\n        </div>\n    </div>\n</form>";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Area</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"deliveryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Delivery Area Details</div>\r\n                <div class=\"card-body\">\r\n\r\n                                \r\n                            \r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Amount</label>\r\n                                    <input type=\"number\" class=\"form-control\" id=amount placeholder=\"\" formControlName=\"amount\">\r\n                                    <div *ngIf=\"f.amount.invalid && (f.amount.dirty || f.amount.touched)\" class=\"alert alert-danger\">\r\n                                        <div *ngIf=\"f.amount.errors.required\">\r\n                                            Amount is required.\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n\r\n                        </div>\r\n                     \r\n                    </div>\r\n\r\n\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\" >Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>";
       /***/
     },
 
@@ -1160,7 +1160,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\n<!-- Page Heading -->\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery</h1>\n<p class=\"mb-4\"></p>\n\n<!-- DataTales Example -->\n<div class=\"card shadow mb-4\">\n    <div class=\"card-header py-3\">\n        <div class=\"row\">\n            <div class=\"col-md-6\">\n                <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area</h6>\n            </div>\n            <div class=\" col-lg-4 input-group mb-3\">\n                <div class=\"input-group-prepend\">\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\n                </div>\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\n            </div>\n            <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\n                Add Area\n            </button></div>\n        </div>\n\n\n\n    </div>\n    <div class=\"card-body\">\n        <div class=\"tile-body p-0 table-responsive \">\n            <table class=\"table table-striped\">\n                <thead>\n                    <tr class=\"table-header\">                      \n                        <th width=\"30%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\n                        <th width=\"10%\" sortable=\"amount\" (sort)=\"onSort($event)\">  Amount </th>  \n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\"> Status </th>                          \n                        <th width=\"10%\"></th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor=\"let item of data$ | async \">\n                     \n                        <td> {{item.name}} </td>\n                        <td> {{item.amount}} </td>\n                        <td>\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\n                            </ngb-highlight>\n                        </td>\n                        <td>\n                            <a (click)=\"Edit(item.deliveryAreaID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\n\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n\n\n        <div class=\"row\">\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <p class=\"pagination-count\">\n                    Showing\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\n                    <strong>{{(total$ | async)!}}</strong> results\n                </p>\n            </div>\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\n                </ngb-pagination>\n            </div>\n        </div>\n    </div>\n</div>";
+      __webpack_exports__["default"] = "\r\n<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\">\r\n                <div class=\"input-group-prepend\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Area\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">                      \r\n                        <th width=\"30%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"10%\" sortable=\"amount\" (sort)=\"onSort($event)\">  Amount </th>  \r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\"> Status </th>                          \r\n                        <th width=\"10%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                     \r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.amount}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.deliveryAreaID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
       /***/
     },
 
@@ -2468,6 +2468,12 @@
           key: "delete",
           value: function _delete(data) {
             return this.http.post('api/appointment/delete', data);
+          }
+        }, {
+          key: "status",
+          value: function status(data) {
+            debugger;
+            return this.http.post('api/appointment/status', data);
           }
         }, {
           key: "total$",
@@ -7470,6 +7476,12 @@
             return this.http.post('api/nursingappointment/delete', data);
           }
         }, {
+          key: "status",
+          value: function status(data) {
+            debugger;
+            return this.http.post('api/nursingappointment/status', data);
+          }
+        }, {
           key: "total$",
           get: function get() {
             return this._total$.asObservable();
@@ -11074,12 +11086,12 @@
         function DoctorComponent(service, ls, excelService, ts, router) {
           _classCallCheck(this, DoctorComponent);
 
+          //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
           this.service = service;
           this.ls = ls;
           this.excelService = excelService;
           this.ts = ts;
           this.router = router;
-          this.selectedDoctor = this.ls.getSelectedDoctor().doctorID;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -11103,6 +11115,7 @@
         }, {
           key: "getData",
           value: function getData() {
+            debugger;
             this.service.getAllData();
             this.data$ = this.service.data$;
             this.total$ = this.service.total$;
@@ -15321,18 +15334,34 @@
             this.router.navigate(["admin/reception/appointment/edit", appointment]);
           }
         }, {
+          key: "Status",
+          value: function Status(data) {
+            var _this79 = this;
+
+            debugger;
+            this.service.status(data).subscribe(function (res) {
+              if (res != 0) {
+                _this79.ts.showSuccess("Success", "Status Updated successfully.");
+
+                _this79.getData();
+              } else _this79.ts.showError("Error", "Failed to Update Status");
+            }, function (error) {
+              _this79.ts.showError("Error", "Failed to Update Status");
+            });
+          }
+        }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this79 = this;
+            var _this80 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this79.ts.showSuccess("Success", "Record deleted successfully.");
+                _this80.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this79.getData();
-              } else _this79.ts.showError("Error", "Failed to delete record.");
+                _this80.getData();
+              } else _this80.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this79.ts.showError("Error", "Failed to delete record.");
+              _this80.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -15527,22 +15556,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this80 = this;
+            var _this81 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this80.loadingCustomer = true;
+                _this81.loadingCustomer = true;
 
-                _this80.f.customerID.setValue(sid);
+                _this81.f.customerID.setValue(sid);
 
-                _this80.customerService.getById(sid).subscribe(function (res) {
+                _this81.customerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this80.editForm(res);
+                  _this81.editForm(res);
 
-                  _this80.loadingCustomer = false;
+                  _this81.loadingCustomer = false;
                 });
               }
             });
@@ -15550,7 +15579,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this81 = this;
+            var _this82 = this;
 
             this.customerForm.markAllAsTouched();
             this.submitted = true;
@@ -15568,31 +15597,31 @@
               console.log(JSON.stringify(this.customerForm.value));
               this.customerService.insert(this.customerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this81.ts.showSuccess("Success", "Record added successfully.");
+                  _this82.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this81.router.navigate(['/admin/reception/customers']);
+                  _this82.router.navigate(['/admin/reception/customers']);
                 }
 
-                _this81.loading = false;
+                _this82.loading = false;
               }, function (error) {
-                _this81.ts.showError("Error", "Failed to insert record.");
+                _this82.ts.showError("Error", "Failed to insert record.");
 
-                _this81.loading = false;
+                _this82.loading = false;
               });
             } else {
               //Update customer
               this.customerService.update(this.customerForm.value).subscribe(function (data) {
-                _this81.loading = false;
+                _this82.loading = false;
 
                 if (data != 0) {
-                  _this81.ts.showSuccess("Success", "Record updated successfully.");
+                  _this82.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this81.router.navigate(['/admin/reception/customers']);
+                  _this82.router.navigate(['/admin/reception/customers']);
                 }
               }, function (error) {
-                _this81.ts.showError("Error", "Failed to update record.");
+                _this82.ts.showError("Error", "Failed to update record.");
 
-                _this81.loading = false;
+                _this82.loading = false;
               });
             }
           }
@@ -15746,11 +15775,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this82 = this;
+            var _this83 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this82.ts.showError("Error", "Failed to export");
+              _this83.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -15782,17 +15811,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this83 = this;
+            var _this84 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this83.ts.showSuccess("Success", "Record deleted successfully.");
+                _this84.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this83.getData();
-              } else _this83.ts.showError("Error", "Failed to delete record.");
+                _this84.getData();
+              } else _this84.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this83.ts.showError("Error", "Failed to delete record.");
+              _this84.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15995,21 +16024,21 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this84 = this;
+            var _this85 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this84.loadingAppointment = true;
+                _this85.loadingAppointment = true;
 
-                _this84.f.appointmentID.setValue(sid);
+                _this85.f.appointmentID.setValue(sid);
 
-                _this84.nursingappointmentService.getById(sid).subscribe(function (res) {
+                _this85.nursingappointmentService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this84.editForm(res);
+                  _this85.editForm(res);
 
-                  _this84.loadingAppointment = false;
+                  _this85.loadingAppointment = false;
                 });
               }
             });
@@ -16017,7 +16046,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this85 = this;
+            var _this86 = this;
 
             this.nursingappointmentForm.markAllAsTouched();
             this.submitted = true;
@@ -16033,71 +16062,71 @@
               console.log(JSON.stringify(this.nursingappointmentForm.value));
               this.nursingappointmentService.insert(this.nursingappointmentForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this85.ts.showSuccess("Success", "Record added successfully.");
+                  _this86.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this85.router.navigate(['/admin/reception/appointment']);
+                  _this86.router.navigate(['/admin/reception/appointment']);
                 }
 
-                _this85.loading = false;
+                _this86.loading = false;
               }, function (error) {
-                _this85.ts.showError("Error", "Failed to insert record.");
+                _this86.ts.showError("Error", "Failed to insert record.");
 
-                _this85.loading = false;
+                _this86.loading = false;
               });
             } else {
               //Update doctor
               this.nursingappointmentService.update(this.nursingappointmentForm.value).subscribe(function (data) {
-                _this85.loading = false;
+                _this86.loading = false;
 
                 if (data != 0) {
-                  _this85.ts.showSuccess("Success", "Record updated successfully.");
+                  _this86.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this85.router.navigate(['/admin/reception/appointment']);
+                  _this86.router.navigate(['/admin/reception/appointment']);
                 }
               }, function (error) {
-                _this85.ts.showError("Error", "Failed to update record.");
+                _this86.ts.showError("Error", "Failed to update record.");
 
-                _this85.loading = false;
+                _this86.loading = false;
               });
             }
           }
         }, {
           key: "loadDoctor",
           value: function loadDoctor() {
-            var _this86 = this;
+            var _this87 = this;
 
             this.nursingappointmentService.loadDoctor().subscribe(function (res) {
-              _this86.DoctorList = res;
+              _this87.DoctorList = res;
             });
           }
         }, {
           key: "loadSpecialities",
           value: function loadSpecialities() {
-            var _this87 = this;
+            var _this88 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this87.SpecialityList = res;
+              _this88.SpecialityList = res;
             });
           }
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this88 = this;
+            var _this89 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this88.selectedSpecialityList = res;
+              _this89.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadDay",
           value: function loadDay() {
-            var _this89 = this;
+            var _this90 = this;
 
             debugger;
             this.nursingappointmentService.loadDay().subscribe(function (res) {
-              _this89.DoctorDaysList = res;
+              _this90.DoctorDaysList = res;
             });
           }
         }, {
@@ -16327,16 +16356,32 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this90 = this;
+            var _this91 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this90.ts.showSuccess("Success", "Record deleted successfully.");
+                _this91.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this90.getData();
-              } else _this90.ts.showError("Error", "Failed to delete record.");
+                _this91.getData();
+              } else _this91.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this90.ts.showError("Error", "Failed to delete record.");
+              _this91.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "Status",
+          value: function Status(data) {
+            var _this92 = this;
+
+            debugger;
+            this.service.status(data).subscribe(function (res) {
+              if (res != 0) {
+                _this92.ts.showSuccess("Success", "Status Updated successfully.");
+
+                _this92.getData();
+              } else _this92.ts.showError("Error", "Failed to Update Status");
+            }, function (error) {
+              _this92.ts.showError("Error", "Failed to Update Status");
             });
           }
         }]);
@@ -16504,14 +16549,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this91 = this;
+            var _this93 = this;
 
             this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this91.salesCategoryWise = res;
-              } else _this91.ts.showError("Error", "Something went wrong");
+                _this93.salesCategoryWise = res;
+              } else _this93.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this91.ts.showError("Error", "Failed to delete record.");
+              _this93.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16523,27 +16568,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this92 = this;
+            var _this94 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this92.Locations = res;
-              _this92.locationID = _this92.selectedLocation;
+              _this94.Locations = res;
+              _this94.locationID = _this94.selectedLocation;
 
-              _this92.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this94.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this92.Locations = res;
+                _this94.Locations = res;
                 var arr = [];
 
-                _this92.Locations.forEach(function (element) {
+                _this94.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this92.selectedLocations = arr;
+                _this94.selectedLocations = arr;
 
-                _this92.getData(_this92.selectedLocations.toString());
+                _this94.getData(_this94.selectedLocations.toString());
               });
             });
           }
@@ -16736,14 +16781,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this93 = this;
+            var _this95 = this;
 
             this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this93.orders = res;
-              } else _this93.ts.showError("Error", "Something went wrong");
+                _this95.orders = res;
+              } else _this95.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this93.ts.showError("Error", "Failed to delete record.");
+              _this95.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16755,27 +16800,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this94 = this;
+            var _this96 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this94.Locations = res;
-              _this94.locationID = _this94.selectedLocation;
+              _this96.Locations = res;
+              _this96.locationID = _this96.selectedLocation;
 
-              _this94.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this96.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this94.Locations = res;
+                _this96.Locations = res;
                 var arr = [];
 
-                _this94.Locations.forEach(function (element) {
+                _this96.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this94.selectedLocations = arr;
+                _this96.selectedLocations = arr;
 
-                _this94.getData(_this94.selectedLocations.toString());
+                _this96.getData(_this96.selectedLocations.toString());
               });
             });
           }
@@ -16964,14 +17009,14 @@
         }, {
           key: "getData",
           value: function getData(locaionIDs) {
-            var _this95 = this;
+            var _this97 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this95.orderDetails = res;
-              } else _this95.ts.showError("Error", "Something went wrong");
+                _this97.orderDetails = res;
+              } else _this97.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this95.ts.showError("Error", "Failed to delete record.");
+              _this97.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16988,27 +17033,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this96 = this;
+            var _this98 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this96.Locations = res;
-              _this96.locationID = _this96.selectedLocation;
+              _this98.Locations = res;
+              _this98.locationID = _this98.selectedLocation;
 
-              _this96.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this98.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this96.Locations = res;
+                _this98.Locations = res;
                 var arr = [];
 
-                _this96.Locations.forEach(function (element) {
+                _this98.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this96.selectedLocations = arr;
+                _this98.selectedLocations = arr;
 
-                _this96.getData(_this96.selectedLocations.toString());
+                _this98.getData(_this98.selectedLocations.toString());
               });
             });
           }
@@ -17204,14 +17249,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this97 = this;
+            var _this99 = this;
 
             this.service.SalesItemwiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this97.salesItemWise = res;
-              } else _this97.ts.showError("Error", "Something went wrong");
+                _this99.salesItemWise = res;
+              } else _this99.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this97.ts.showError("Error", "Failed to delete record.");
+              _this99.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -17242,27 +17287,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this98 = this;
+            var _this100 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this98.Locations = res;
-              _this98.locationID = _this98.selectedLocation;
+              _this100.Locations = res;
+              _this100.locationID = _this100.selectedLocation;
 
-              _this98.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this100.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this98.Locations = res;
+                _this100.Locations = res;
                 var arr = [];
 
-                _this98.Locations.forEach(function (element) {
+                _this100.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this98.selectedLocations = arr;
+                _this100.selectedLocations = arr;
 
-                _this98.getData(_this98.selectedLocations.toString());
+                _this100.getData(_this100.selectedLocations.toString());
               });
             });
           }
@@ -17427,14 +17472,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this99 = this;
+            var _this101 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this99.data$ = res;
-              } else _this99.ts.showError("Error", "Something went wrong");
+                _this101.data$ = res;
+              } else _this101.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this99.ts.showError("Error", "Failed to delete record.");
+              _this101.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -17446,11 +17491,11 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this100 = this;
+            var _this102 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this100.Locations = res;
-              _this100.locationID = _this100.selectedLocation;
+              _this102.Locations = res;
+              _this102.locationID = _this102.selectedLocation;
             });
           }
         }, {
@@ -17617,16 +17662,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this101 = this;
+            var _this103 = this;
 
             this.service.SalesSummaryRpt(this.selectedBrand, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this101._model = res[0];
+                _this103._model = res[0];
 
-                _this101["export"].push(_this101._model);
-              } else _this101.ts.showError("Error", "Something went wrong");
+                _this103["export"].push(_this103._model);
+              } else _this103.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this101.ts.showError("Error", "Failed to delete record.");
+              _this103.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -17829,21 +17874,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this102 = this;
+            var _this104 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this102.loading = true;
+                _this104.loading = true;
 
-                _this102.f.deliveryAreaID.setValue(sid);
+                _this104.f.deliveryAreaID.setValue(sid);
 
-                _this102.deliveryService.getById(sid).subscribe(function (res) {
+                _this104.deliveryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this102.editForm(res);
+                  _this104.editForm(res);
 
-                  _this102.loading = false; //BrandsFill
+                  _this104.loading = false; //BrandsFill
                   // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
                   // .subscribe((res: any) => {            
                   //   var stringToConvert = res.items;
@@ -17856,7 +17901,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this103 = this;
+            var _this105 = this;
 
             this.deliveryForm.markAllAsTouched();
             this.submitted = true;
@@ -17872,41 +17917,41 @@
               //Insert delivery
               this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this103.ts.showSuccess("Success", "Record added successfully.");
+                  _this105.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this103.router.navigate(['/admin/delivery']);
+                  _this105.router.navigate(['/admin/delivery']);
                 }
 
-                _this103.loading = false;
+                _this105.loading = false;
               }, function (error) {
-                _this103.ts.showError("Error", "Failed to insert record.");
+                _this105.ts.showError("Error", "Failed to insert record.");
 
-                _this103.loading = false;
+                _this105.loading = false;
               });
             } else {
               //Update delivery
               this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this103.loading = false;
+                _this105.loading = false;
 
                 if (data != 0) {
-                  _this103.ts.showSuccess("Success", "Record updated successfully.");
+                  _this105.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this103.router.navigate(['/admin/delivery']);
+                  _this105.router.navigate(['/admin/delivery']);
                 }
               }, function (error) {
-                _this103.ts.showError("Error", "Failed to update record.");
+                _this105.ts.showError("Error", "Failed to update record.");
 
-                _this103.loading = false;
+                _this105.loading = false;
               });
             }
           }
         }, {
           key: "loadBrands",
           value: function loadBrands() {
-            var _this104 = this;
+            var _this106 = this;
 
             this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this104.BrandsList = res; // this.setSelecteditem();
+              _this106.BrandsList = res; // this.setSelecteditem();
             });
           }
         }, {
@@ -18084,14 +18129,14 @@
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this105 = this;
+            var _this107 = this;
 
             this.loadingSetting = true;
             this.settingService.getById(1).subscribe(function (res) {
               //Set Forms
-              _this105.editForm(res);
+              _this107.editForm(res);
 
-              _this105.loadingSetting = false;
+              _this107.loadingSetting = false;
             }); // this.route.paramMap.subscribe(param => {
             //   const sid = +param.get('id');
             //   if (sid) {
@@ -18108,7 +18153,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this106 = this;
+            var _this108 = this;
 
             debugger;
             this.settingForm.markAllAsTouched();
@@ -18126,33 +18171,33 @@
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this106.ts.showSuccess("Success", "Record added successfully.");
+                  _this108.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this106.router.navigate(['/admin/settings/appsettings']);
+                  _this108.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this106.loading = false;
+                _this108.loading = false;
               }, function (error) {
-                _this106.ts.showError("Error", "Failed to insert record.");
+                _this108.ts.showError("Error", "Failed to insert record.");
 
-                _this106.loading = false;
+                _this108.loading = false;
               });
             } else {
               //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this106.loading = false;
+                _this108.loading = false;
 
                 if (data != 0) {
-                  _this106.ts.showSuccess("Success", "Record updated successfully.");
+                  _this108.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this106.setSelectedSetting();
+                  _this108.setSelectedSetting();
 
-                  _this106.router.navigate(['/admin/settings/appsettings/add']);
+                  _this108.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this106.ts.showError("Error", "Failed to update record.");
+                _this108.ts.showError("Error", "Failed to update record.");
 
-                _this106.loading = false;
+                _this108.loading = false;
               });
             }
           }
@@ -18323,16 +18368,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this107 = this;
+            var _this109 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this107.ts.showSuccess("Success", "Record deleted successfully.");
+                _this109.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this107.getData();
-              } else _this107.ts.showError("Error", "Failed to delete record.");
+                _this109.getData();
+              } else _this109.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this107.ts.showError("Error", "Failed to delete record.");
+              _this109.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -18519,21 +18564,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this108 = this;
+            var _this110 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this108.loadingCustomer = true;
+                _this110.loadingCustomer = true;
 
-                _this108.f.bannerID.setValue(sid);
+                _this110.f.bannerID.setValue(sid);
 
-                _this108.bannerService.getById(sid).subscribe(function (res) {
+                _this110.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this108.editForm(res);
+                  _this110.editForm(res);
 
-                  _this108.loadingCustomer = false;
+                  _this110.loadingCustomer = false;
                 });
               }
             });
@@ -18541,7 +18586,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this109 = this;
+            var _this111 = this;
 
             debugger;
             this.bannerForm.markAllAsTouched();
@@ -18560,31 +18605,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this109.ts.showSuccess("Success", "Record added successfully.");
+                  _this111.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this109.router.navigate(['/admin/settings/banner']);
+                  _this111.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this109.loading = false;
+                _this111.loading = false;
               }, function (error) {
-                _this109.ts.showError("Error", "Failed to insert record.");
+                _this111.ts.showError("Error", "Failed to insert record.");
 
-                _this109.loading = false;
+                _this111.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this109.loading = false;
+                _this111.loading = false;
 
                 if (data != 0) {
-                  _this109.ts.showSuccess("Success", "Record updated successfully.");
+                  _this111.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this109.router.navigate(['/admin/settings/banner']);
+                  _this111.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this109.ts.showError("Error", "Failed to update record.");
+                _this111.ts.showError("Error", "Failed to update record.");
 
-                _this109.loading = false;
+                _this111.loading = false;
               });
             }
           }
@@ -18757,16 +18802,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this110 = this;
+            var _this112 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this110.ts.showSuccess("Success", "Record deleted successfully.");
+                _this112.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this110.getData();
-              } else _this110.ts.showError("Error", "Failed to delete record.");
+                _this112.getData();
+              } else _this112.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this110.ts.showError("Error", "Failed to delete record.");
+              _this112.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -18931,21 +18976,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this111 = this;
+            var _this113 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this111.loadingCoupon = true;
+                _this113.loadingCoupon = true;
 
-                _this111.f.couponID.setValue(sid);
+                _this113.f.couponID.setValue(sid);
 
-                _this111.couponService.getById(sid).subscribe(function (res) {
+                _this113.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this111.editForm(res);
+                  _this113.editForm(res);
 
-                  _this111.loadingCoupon = false;
+                  _this113.loadingCoupon = false;
                 });
               }
             });
@@ -18953,7 +18998,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this112 = this;
+            var _this114 = this;
 
             debugger;
             this.couponForm.markAllAsTouched();
@@ -18971,31 +19016,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this112.ts.showSuccess("Success", "Record added successfully.");
+                  _this114.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this112.router.navigate(['/admin/settings/coupon']);
+                  _this114.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this112.loading = false;
+                _this114.loading = false;
               }, function (error) {
-                _this112.ts.showError("Error", "Failed to insert record.");
+                _this114.ts.showError("Error", "Failed to insert record.");
 
-                _this112.loading = false;
+                _this114.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this112.loading = false;
+                _this114.loading = false;
 
                 if (data != 0) {
-                  _this112.ts.showSuccess("Success", "Record updated successfully.");
+                  _this114.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this112.router.navigate(['/admin/settings/coupon']);
+                  _this114.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this112.ts.showError("Error", "Failed to update record.");
+                _this114.ts.showError("Error", "Failed to update record.");
 
-                _this112.loading = false;
+                _this114.loading = false;
               });
             }
           }
@@ -19199,17 +19244,17 @@
         }, {
           key: "Delete",
           value: function Delete(item) {
-            var _this113 = this;
+            var _this115 = this;
 
             debugger;
             this.service["delete"](item).subscribe(function (res) {
               if (res != 0) {
-                _this113.ts.showSuccess("Success", "Record deleted successfully.");
+                _this115.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this113.getData();
-              } else _this113.ts.showError("Error", "Failed to delete record.");
+                _this115.getData();
+              } else _this115.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this113.ts.showError("Error", "Failed to delete record.");
+              _this115.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -19393,16 +19438,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this114 = this;
+            var _this116 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this114.ts.showSuccess("Success", "Record deleted successfully.");
+                _this116.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this114.getData();
-              } else _this114.ts.showError("Error", "Failed to delete record.");
+                _this116.getData();
+              } else _this116.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this114.ts.showError("Error", "Failed to delete record.");
+              _this116.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -19577,31 +19622,31 @@
         }, {
           key: "loadActiveType",
           value: function loadActiveType() {
-            var _this115 = this;
+            var _this117 = this;
 
             this.services.loadActiveTyp().subscribe(function (res) {
-              _this115.NursingTypeActive = res;
+              _this117.NursingTypeActive = res;
             });
           }
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this116 = this;
+            var _this118 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this116.loadingService = true;
+                _this118.loadingService = true;
 
-                _this116.f.medicalServiceID.setValue(sid);
+                _this118.f.medicalServiceID.setValue(sid);
 
-                _this116.services.getById(sid).subscribe(function (res) {
+                _this118.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this116.editForm(res);
+                  _this118.editForm(res);
 
-                  _this116.loadingService = false;
+                  _this118.loadingService = false;
                 });
               }
             });
@@ -19609,7 +19654,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this117 = this;
+            var _this119 = this;
 
             debugger;
             this.servicesForm.markAllAsTouched();
@@ -19628,31 +19673,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this117.ts.showSuccess("Success", "Record added successfully.");
+                  _this119.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this117.router.navigate(['/admin/settings/medicalservices']);
+                  _this119.router.navigate(['/admin/settings/medicalservices']);
                 }
 
-                _this117.loading = false;
+                _this119.loading = false;
               }, function (error) {
-                _this117.ts.showError("Error", "Failed to insert record.");
+                _this119.ts.showError("Error", "Failed to insert record.");
 
-                _this117.loading = false;
+                _this119.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this117.loading = false;
+                _this119.loading = false;
 
                 if (data != 0) {
-                  _this117.ts.showSuccess("Success", "Record updated successfully.");
+                  _this119.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this117.router.navigate(['/admin/settings/medicalservices']);
+                  _this119.router.navigate(['/admin/settings/medicalservices']);
                 }
               }, function (error) {
-                _this117.ts.showError("Error", "Failed to update record.");
+                _this119.ts.showError("Error", "Failed to update record.");
 
-                _this117.loading = false;
+                _this119.loading = false;
               });
             }
           }
@@ -19822,16 +19867,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this118 = this;
+            var _this120 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this118.ts.showSuccess("Success", "Record deleted successfully.");
+                _this120.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this118.getData();
-              } else _this118.ts.showError("Error", "Failed to delete record.");
+                _this120.getData();
+              } else _this120.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this118.ts.showError("Error", "Failed to delete record.");
+              _this120.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -19990,22 +20035,22 @@
         }, {
           key: "setSelectedType",
           value: function setSelectedType() {
-            var _this119 = this;
+            var _this121 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this119.loadingService = true;
+                _this121.loadingService = true;
 
-                _this119.f.nursingTypeID.setValue(sid);
+                _this121.f.nursingTypeID.setValue(sid);
 
-                _this119.services.getById(sid).subscribe(function (res) {
+                _this121.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this119.editForm(res);
+                  _this121.editForm(res);
 
-                  _this119.loadingService = false;
+                  _this121.loadingService = false;
                 });
               }
             });
@@ -20013,7 +20058,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this120 = this;
+            var _this122 = this;
 
             this.servicesForm.markAllAsTouched();
             this.submitted = true;
@@ -20030,31 +20075,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this120.ts.showSuccess("Success", "Record added successfully.");
+                  _this122.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this120.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this122.router.navigate(['/admin/settings/medicalservicetype']);
                 }
 
-                _this120.loading = false;
+                _this122.loading = false;
               }, function (error) {
-                _this120.ts.showError("Error", "Failed to insert record.");
+                _this122.ts.showError("Error", "Failed to insert record.");
 
-                _this120.loading = false;
+                _this122.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this120.loading = false;
+                _this122.loading = false;
 
                 if (data != 0) {
-                  _this120.ts.showSuccess("Success", "Record updated successfully.");
+                  _this122.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this120.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this122.router.navigate(['/admin/settings/medicalservicetype']);
                 }
               }, function (error) {
-                _this120.ts.showError("Error", "Failed to update record.");
+                _this122.ts.showError("Error", "Failed to update record.");
 
-                _this120.loading = false;
+                _this122.loading = false;
               });
             }
           }
@@ -20225,16 +20270,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this121 = this;
+            var _this123 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this121.ts.showSuccess("Success", "Record deleted successfully.");
+                _this123.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this121.getData();
-              } else _this121.ts.showError("Error", "Failed to delete record.");
+                _this123.getData();
+              } else _this123.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this121.ts.showError("Error", "Failed to delete record.");
+              _this123.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -20431,21 +20476,21 @@
         }, {
           key: "setSelectedOffers",
           value: function setSelectedOffers() {
-            var _this122 = this;
+            var _this124 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this122.loadingOffers = true;
+                _this124.loadingOffers = true;
 
-                _this122.f.offerID.setValue(sid);
+                _this124.f.offerID.setValue(sid);
 
-                _this122.offersService.getById(sid, _this122.f.brandID.value).subscribe(function (res) {
+                _this124.offersService.getById(sid, _this124.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this122.editForm(res);
+                  _this124.editForm(res);
 
-                  _this122.loadingOffers = false;
+                  _this124.loadingOffers = false;
                 });
               }
             });
@@ -20453,7 +20498,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this123 = this;
+            var _this125 = this;
 
             this.offersForm.markAllAsTouched();
             this.submitted = true;
@@ -20473,31 +20518,31 @@
               debugger;
               this.offersService.insert(this.offersForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this123.ts.showSuccess("Success", "Record added successfully.");
+                  _this125.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this123.router.navigate(['/admin/offers']);
+                  _this125.router.navigate(['/admin/offers']);
                 }
 
-                _this123.loading = false;
+                _this125.loading = false;
               }, function (error) {
-                _this123.ts.showError("Error", "Failed to insert record.");
+                _this125.ts.showError("Error", "Failed to insert record.");
 
-                _this123.loading = false;
+                _this125.loading = false;
               });
             } else {
               //Update offers
               this.offersService.update(this.offersForm.value).subscribe(function (data) {
-                _this123.loading = false;
+                _this125.loading = false;
 
                 if (data != 0) {
-                  _this123.ts.showSuccess("Success", "Record updated successfully.");
+                  _this125.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this123.router.navigate(['/admin/offers']);
+                  _this125.router.navigate(['/admin/offers']);
                 }
               }, function (error) {
-                _this123.ts.showError("Error", "Failed to update record.");
+                _this125.ts.showError("Error", "Failed to update record.");
 
-                _this123.loading = false;
+                _this125.loading = false;
               });
             }
           }
@@ -20682,16 +20727,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this124 = this;
+            var _this126 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this124.ts.showSuccess("Success", "Record deleted successfully.");
+                _this126.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this124.getData();
-              } else _this124.ts.showError("Error", "Failed to delete record.");
+                _this126.getData();
+              } else _this126.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this124.ts.showError("Error", "Failed to delete record.");
+              _this126.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -20857,22 +20902,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this125 = this;
+            var _this127 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this125.loadingCustomer = true;
+                _this127.loadingCustomer = true;
 
-                _this125.f.id.setValue(sid);
+                _this127.f.id.setValue(sid);
 
-                _this125.userService.getById(sid).subscribe(function (res) {
+                _this127.userService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this125.editForm(res);
+                  _this127.editForm(res);
 
-                  _this125.loadingCustomer = false;
+                  _this127.loadingCustomer = false;
                 });
               }
             });
@@ -20880,7 +20925,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this126 = this;
+            var _this128 = this;
 
             debugger;
             this.userForm.markAllAsTouched();
@@ -20898,31 +20943,31 @@
               console.log(JSON.stringify(this.userForm.value));
               this.userService.insert(this.userForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this126.ts.showSuccess("Success", "Record added successfully.");
+                  _this128.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this126.router.navigate(['/admin/user']);
+                  _this128.router.navigate(['/admin/user']);
                 }
 
-                _this126.loading = false;
+                _this128.loading = false;
               }, function (error) {
-                _this126.ts.showError("Error", "Failed to insert record.");
+                _this128.ts.showError("Error", "Failed to insert record.");
 
-                _this126.loading = false;
+                _this128.loading = false;
               });
             } else {
               //Update customer
               this.userService.update(this.userForm.value).subscribe(function (data) {
-                _this126.loading = false;
+                _this128.loading = false;
 
                 if (data != 0) {
-                  _this126.ts.showSuccess("Success", "Record updated successfully.");
+                  _this128.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this126.router.navigate(['/admin/user']);
+                  _this128.router.navigate(['/admin/user']);
                 }
               }, function (error) {
-                _this126.ts.showError("Error", "Failed to update record.");
+                _this128.ts.showError("Error", "Failed to update record.");
 
-                _this126.loading = false;
+                _this128.loading = false;
               });
             }
           }
@@ -21073,12 +21118,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this127 = this;
+            var _this129 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this127.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this129.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this127.ts.showError("Error", "Failed to export");
+              _this129.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -21110,17 +21155,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this128 = this;
+            var _this130 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this128.ts.showSuccess("Success", "Record deleted successfully.");
+                _this130.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this128.getData();
-              } else _this128.ts.showError("Error", "Failed to delete record.");
+                _this130.getData();
+              } else _this130.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this128.ts.showError("Error", "Failed to delete record.");
+              _this130.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -22215,12 +22260,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this129 = this;
+        var _this131 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this129.forecasts = result;
+          _this131.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -22459,7 +22504,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this130 = this;
+            var _this132 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -22469,14 +22514,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this130.imageUrl = reader.result;
+                _this132.imageUrl = reader.result;
 
-                _this130.registrationForm.patchValue({
+                _this132.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this130.editFile = false;
-                _this130.removeUpload = true;
+                _this132.editFile = false;
+                _this132.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -22785,7 +22830,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this131 = this;
+            var _this133 = this;
 
             this.loginForm.markAllAsTouched();
 
@@ -22795,14 +22840,14 @@
 
             this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this131.userService.getAllData();
+                _this133.userService.getAllData();
 
-                _this131.router.navigate(["/admin/dashboard"]);
+                _this133.router.navigate(["/admin/dashboard"]);
               } else {
-                _this131.ts.showError("Error", "Username or password is not correct.");
+                _this133.ts.showError("Error", "Username or password is not correct.");
               }
             }, function (error) {
-              _this131.ts.showError("Error", "Something went wrong.");
+              _this133.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
@@ -23070,7 +23115,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! D:\Project\Mamji\MamjiAdminGit\ClientApp\src\main.ts */
+      /*! D:\Projects\Mamji\ClientApp\src\main.ts */
       "./src/main.ts");
       /***/
     },
