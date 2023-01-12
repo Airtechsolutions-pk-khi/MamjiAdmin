@@ -71,7 +71,7 @@ export class AdddoctorsComponent implements OnInit {
       imagePath: [''],
       profile:[''],
       statusID: [true],
-      fees:[0],
+      fees:[],
       gender:[''],
       timeSlot:[''],
       doctorID:[0],
@@ -92,6 +92,7 @@ export class AdddoctorsComponent implements OnInit {
     this.f.doctorID.setValue(obj.doctorID);
     this.f.imagePath.setValue(obj.imagePath);
     this.f.education.setValue(obj.education);
+    this.f.fees.setValue(obj.fees);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
 
  if (obj.doctorProfiles != "") {
