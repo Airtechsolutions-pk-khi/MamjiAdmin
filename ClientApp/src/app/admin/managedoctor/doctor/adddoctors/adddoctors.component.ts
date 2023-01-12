@@ -36,7 +36,7 @@ export class AdddoctorsComponent implements OnInit {
   DoctorProfiles=[];
 
   selectedSpecialistIds=[];
-  DoctorDaysList=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturdey','Sunday'];
+  DoctorDaysList=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
   TimeList=['10:00 AM - 11:00 AM','11:00 AM - 12:00 PM','12:00 PM - 01:00 PM','01:00 PM - 02:00 PM']
   
 

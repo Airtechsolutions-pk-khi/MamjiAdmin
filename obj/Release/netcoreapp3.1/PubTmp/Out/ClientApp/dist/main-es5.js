@@ -10726,7 +10726,7 @@
           this.DoctorSchedule = [];
           this.DoctorProfiles = [];
           this.selectedSpecialistIds = [];
-          this.DoctorDaysList = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturdey', 'Sunday'];
+          this.DoctorDaysList = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
           this.TimeList = ['10:00 AM - 11:00 AM', '11:00 AM - 12:00 PM', '12:00 PM - 01:00 PM', '01:00 PM - 02:00 PM'];
           this.createForm(); // this.loadDay();
 
@@ -23116,7 +23116,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! D:\Projects\Mamji\ClientApp\src\main.ts */
+      /*! D:\Project\Mamji\MamjiAdmin_GIT\ClientApp\src\main.ts */
       "./src/main.ts");
       /***/
     },
