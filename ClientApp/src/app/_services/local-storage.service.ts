@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
@@ -8,7 +9,7 @@ export class LocalStorageService {
   selectedBrand: any;
   selectedLocation: any;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     
   }
 
@@ -53,7 +54,16 @@ export class LocalStorageService {
       return userInfo;
     }
   }
-
+  login(username, password) {
+    debugger
+    let userInfo = JSON.parse(sessionStorage.getItem(`api/login/authenticate/${username}/${password}`))
+    if(userInfo !== null)
+    {
+    userInfo = JSON.parse(userInfo.data);
+    var userName = userInfo.email;
+    return userName;
+  }
+  }
   getSelectedDoctor() {
     
     return JSON.parse(sessionStorage.getItem('_autheticatedUser'));

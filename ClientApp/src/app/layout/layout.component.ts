@@ -9,6 +9,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { LocationsService } from '../_services/locations.service';
 import { LocalStorageService } from '../_services/local-storage.service';
 import { UserService } from '../_services/userservice';
+import { LoginService } from '../_services/login.service';
 
 @Component({
   selector: 'app-layout',
@@ -18,27 +19,32 @@ import { UserService } from '../_services/userservice';
 })
 export class LayoutComponent implements OnInit {
   _Langname = "";
-  branchname = "";
+  userName = "";
+  type = "";
   email = "";
   locationID: 0;
   Locations: [];
-  private selectedBrand;
+  
 
   ngOnInit() {
-    // var data = this.ls.getSelectedBrand();
+     //var data = this.ls.getSelectedBrand();
 
     // this.loadLocations();
 
 
     // if (data == null)
     //   this.router.navigate(["/"]);
-
+    debugger
+    this.type = this.ls.getSelectedBrand().type;
   }
   constructor(private router: Router
     , public service: LocationsService
     , public userService: UserService
     , public ls: LocalStorageService) {
-    
+      debugger
+      this.userName = this.ls.getSelectedBrand().email;
+      this.type = this.ls.getSelectedBrand().type;
+      
   }
   Logout() {
 

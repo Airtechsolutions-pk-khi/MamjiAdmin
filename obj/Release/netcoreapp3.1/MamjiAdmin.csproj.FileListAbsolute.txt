@@ -245,3 +245,4 @@ D:\Project\Mamji\MamjiAdmin_GIT\obj\Release\netcoreapp3.1\MamjiAdmin.csproj.Copy
 D:\Project\Mamji\MamjiAdmin_GIT\obj\Release\netcoreapp3.1\MamjiAdmin.dll
 D:\Project\Mamji\MamjiAdmin_GIT\obj\Release\netcoreapp3.1\MamjiAdmin.pdb
 D:\Project\Mamji\MamjiAdmin_GIT\obj\Release\netcoreapp3.1\MamjiAdmin.genruntimeconfig.cache
+D:\Project\Mamji\MamjiAdmin_GIT\obj\Release\netcoreapp3.1\MamjiAdmin.csprojAssemblyReference.cache

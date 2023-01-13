@@ -52,10 +52,12 @@
       </li>
       <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu -->
+      <div  *ngIf="type === 'Pharmacy' || type === 'Admin' ">
+       
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapseCustomer">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Pharmacy</span>
+          <span >Pharmacy</span>
         </a>
         <div id="collapseCustomer" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -65,7 +67,9 @@
           </div>
         </div>
       </li>
+      
       <hr class="sidebar-divider">
+    </div>
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="true" aria-controls="collapseCompany">
@@ -163,7 +167,8 @@
 
           <!-- Topbar Search -->
           <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100">
-            <strong>Welcome to Mamji Hospital</strong> 
+            <strong>Welcome</strong> : {{userName}} 
+            <strong>to Mamji Hospital</strong> 
             
           </div>
 

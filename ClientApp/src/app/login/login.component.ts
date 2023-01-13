@@ -37,7 +37,9 @@ export class LoginComponent implements OnInit {
       .subscribe(
         data => {
           
-          if (data != null) {         
+          if (data != null) {        
+            
+            this.ls.setSelectedBrand(data);
             this.userService.getAllData();   
             this.router.navigate(["/admin/dashboard"]);      
           }
