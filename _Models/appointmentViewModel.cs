@@ -15,11 +15,15 @@ namespace MamjiAdmin._Models
         public int DoctorID { get; set; }
         public int? CustomerID { get; set; }
         public string AppointmentNo { get; set; }
+        public string FullName { get; set; }
         public string PatientName { get; set; }
-        public string Age { get; set; }
         public string Gender { get; set; }
+        public string Age { get; set; }
+        public string Address { get; set; }
+        public string Email { get; set; }
+        public string Mobile { get; set; }
         public string Fees { get; set; }
-        public Nullable<DateTime> BookingDate { get; set; }
+        public string BookingDate { get; set; }
         public string BookingDateNursing { get; set; }
         public string Day { get; set; }
         public string Date { get; set; }

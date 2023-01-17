@@ -75,9 +75,9 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[16];
 
                 p[0] = new SqlParameter("@AppointmentNo", data.AppointmentNo);
-                p[1] = new SqlParameter("@PatientName", data.PatientName);
-                p[2] = new SqlParameter("@Age", data.Age);
-                p[3] = new SqlParameter("@Gender", data.Gender);
+                p[1] = new SqlParameter("@PatientName", data.FullName);
+                p[2] = new SqlParameter("@Age", data.Address);
+                p[3] = new SqlParameter("@Gender", data.Email);
                 p[4] = new SqlParameter("@Fees", data.Fees);
                 p[5] = new SqlParameter("@BookingDate", data.BookingDate);
                 p[6] = new SqlParameter("@Day", data.Day);
