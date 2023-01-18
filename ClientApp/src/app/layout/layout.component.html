@@ -25,6 +25,7 @@
       <div class="sidebar-heading">
         Modules
       </div>
+      <div  *ngIf="type === 'Admin' ">
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-list"></i>
@@ -38,6 +39,8 @@
         </div>
       </li>
       <hr class="sidebar-divider">
+      </div>
+      <div  *ngIf="type === 'Admin' ">
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
           <i class="fas fa-fw fa-user"></i>
@@ -51,6 +54,7 @@
         </div>
       </li>
       <hr class="sidebar-divider">
+      </div>
       <!-- Nav Item - Pages Collapse Menu -->
       <div  *ngIf="type === 'Pharmacy' || type === 'Admin' ">
        
@@ -71,6 +75,7 @@
       <hr class="sidebar-divider">
     </div>
       <!-- Nav Item - Utilities Collapse Menu -->
+      <div  *ngIf="type === 'Admin' || type === 'Reception' ">
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="true" aria-controls="collapseCompany">
           <i class="fas fa-fw fa-folder"></i>
@@ -84,6 +89,8 @@
         </div>
       </li>
       <hr class="sidebar-divider">
+    </div>
+    <div  *ngIf="type === 'Admin' || type === 'Reception' || type === 'Laboratory' ">
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLab" aria-expanded="true" aria-controls="collapseLab">
           <i class="fas fa-fw fa-folder"></i>
@@ -98,7 +105,8 @@
         </div>
       </li>
       <hr class="sidebar-divider">
-      
+    </div>
+    <div  *ngIf="type === 'Admin' || type === 'Reception' ">
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMedicalService" aria-expanded="true" aria-controls="collapseSettings">
           <i class="fas fa-fw fa-wrench"></i>
@@ -113,6 +121,8 @@
         </div>
       </li>
       <hr class="sidebar-divider">
+      </div>
+      <div  *ngIf="type === 'Admin' || type === 'Reception' ">
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReport" aria-expanded="true" aria-controls="collapseReport">
           <i class="fas fa-fw fa-list"></i>
@@ -128,6 +138,8 @@
         </div>
       </li>
       <hr class="sidebar-divider d-none d-md-block">
+    </div>
+    <div  *ngIf="type === 'Admin' ">
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
           <i class="fas fa-fw fa-wrench"></i>
@@ -147,7 +159,7 @@
      
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
-
+</div>
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
