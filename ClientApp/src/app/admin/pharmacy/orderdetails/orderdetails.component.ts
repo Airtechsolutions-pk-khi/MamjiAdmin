@@ -27,10 +27,7 @@ export class OrderdetailsComponent implements OnInit {
     public ls: LocalStorageService,
     public ts: ToastService,
     public router: Router,
-    private route: ActivatedRoute) {
-    
-    //this.selectedBrand = this.ls.getSelectedBrand().brandID;
-
+    private route: ActivatedRoute) {    
   }
 
   ngOnInit() {
@@ -39,12 +36,11 @@ export class OrderdetailsComponent implements OnInit {
   }
 
   setSelectedOrder() {
+    debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
         this.service.getById(sid).subscribe(res => {
-          //Set Forms
-          
           this.editForm(res);
         });
       }
@@ -52,6 +48,7 @@ export class OrderdetailsComponent implements OnInit {
   }
 
   updateOrder(order, status) {
+    debugger
     order.statusID = status;
     //Update 
     this.service.update(order).subscribe(data => {
@@ -65,7 +62,7 @@ export class OrderdetailsComponent implements OnInit {
     });
   }
   private editForm(obj) {
-    
+    debugger
     this.order = obj.order;
     this.orderDetails = obj.orderDetails;
     this.orderCustomerInfo = obj.customerOrders;

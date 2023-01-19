@@ -21,3 +21,14 @@ export class Appointment {
   
   specialities: string;
 }
+
+export class AppointmentDetail {
+  appointmentDetailID: number;
+  appointmentID: number;
+  medicalServiceID: number;
+  fees: number;
+  bookingDate: string;
+  timeslot: string;
+  description: string;
+  statusID: number;
+}

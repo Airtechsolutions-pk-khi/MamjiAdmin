@@ -35,13 +35,6 @@ export class AppointmentComponent implements OnInit {
     this.submit = false;
   }
 
-  //exportAsXLSX(): void {
-  //  this.service.ExportList(this.selectedAppointment).subscribe((res: any) => {
-  //    this.excelService.exportAsExcelFile(res, 'Report_Export');
-  //  }, error => {
-  //    this.ts.showError("Error", "Failed to export")
-  //  });
-  //}
   ngOnInit() {
     this.getData();
   }
@@ -60,25 +53,6 @@ export class AppointmentComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
-  Edit(appointment) {
-    this.router.navigate(["admin/reception/appointment/edit", appointment]);
-  }
-
-  Status(data) {
-    debugger
-    this.service.status(data).subscribe((res: any) => {
-      if (res != 0) {
-        this.ts.showSuccess("Success", "Status Updated successfully.")
-        this.getData();
-      }
-      else
-        this.ts.showError("Error", "Failed to Update Status")
-
-    }, error => {
-      this.ts.showError("Error", "Failed to Update Status")
-    });
-  }
-
 
   Delete(data) {
     this.service.delete(data).subscribe((res: any) => {
@@ -93,4 +67,20 @@ export class AppointmentComponent implements OnInit {
       this.ts.showError("Error", "Failed to delete record.")
     });
   }
+
+
+  View(appointment) {
+    this.router.navigate(["admin/appointment/view", appointment]);
+  }
+  //Print(sid) {
+  //  this.service.printorder(sid, this.selectedBrand).subscribe((res: any) => {
+  //    //Set Forms
+
+  //    if (res.status == 1) {
+  //      this.printout(res.html);
+  //    }
+  //    else
+  //      this.ts.showError("Error", "Failed to print.")
+  //  });
+  //}
 }

@@ -28,7 +28,7 @@ import { AddcustomerComponent } from './admin/reception/customers/addcustomers/a
 
 import { LocationsComponent } from './admin/company/locations/locations.component';
 import { AddlocationComponent } from './admin/company/locations/addlocation/addlocation.component';
-import { NgSelectModule} from '@ng-select/ng-select';
+import { NgSelectModule } from '@ng-select/ng-select';
 import { AddbrandComponent } from './admin/company/brands/addbrand/addbrand.component';
 
 /*import { NgApexchartsModule } from 'ng-apexcharts';*/
@@ -46,7 +46,7 @@ import { SalescategorywiseComponent } from './admin/report/salescategorywise/sal
 import { SalesitemwiseComponent } from './admin/report/salesitemwise/salesitemwise.component';
 import { OffersComponent } from './admin/settings/offers/offers.component';
 import { AddoffersComponent } from './admin/settings/offers/addoffers/addoffers.component';
- 
+
 import { ItemsettingsComponent } from './admin/menu/items/itemsettings/itemsettings.component';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { DeliveryComponent } from './admin/settings/delivery/delivery.component';
@@ -59,15 +59,13 @@ import { AddonsComponent } from './admin/menu/addons/addons.component';
 import { AddaddonsComponent } from './admin/menu/addons/addaddons/addaddons.component';
 import { DoctorComponent } from './admin/managedoctor/doctor/doctor.component';
 import { AdddoctorsComponent } from './admin/managedoctor/doctor/adddoctors/adddoctors.component';
-import { CustomerinquiryComponent } from './admin/pharmacy/customerinquiry/customerinquiry.component';
 
 import { PrescriptionComponent } from './admin/pharmacy/prescription/prescription.component';
 import { AddprescriptionComponent } from './admin/pharmacy/prescription/add/addprescription.component'
 
 import { AppointmentComponent } from './admin/reception/appointment/appointment.component';
-import { AddappointmentComponent } from './admin/reception/appointment/addappointment/addappointment.component';
+import { AppointmentdetailsComponent } from './admin/reception/appointmentdetails/appointmentdetails.component';
 
-/*import { LaboratoryinquiryComponent } from './admin/reception/laboratoryinquiry/laboratoryinquiry.component';*/
 import { UploadreportComponent } from './admin/laboratory/uploadreport/uploadreport.component';
 import { AddreportsComponent } from './admin/laboratory/uploadreport/addreports/addreports.component';
 import { DeliverydetailComponent } from './admin/pharmacy/deliverydetail/deliverydetail.component';
@@ -90,8 +88,8 @@ import { AdduserComponent } from './admin/user/add/adduser.component';
 import { HasRoleGuard } from './has-role.guard';
 import { isAbsolute } from 'path';
 import { UserService } from './_services/userservice';
- 
- 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,10 +106,8 @@ import { UserService } from './_services/userservice';
     AdditemsComponent,
     ModifiersComponent,
     AddmodifierComponent,
-
     CustomersComponent,
     AddcustomerComponent,
-
     BrandComponent,
     AddbrandComponent,
     LocationsComponent,
@@ -128,36 +124,27 @@ import { UserService } from './_services/userservice';
     SalescustomerwiseComponent,
     SalesitemwiseComponent,
     SalesuserwiseComponent,
-    
     ItemsettingsComponent,
     DeliveryComponent,
     AdddeliveryComponent,
     AppsettingComponent,
     AddonsComponent,
     AddaddonsComponent,
-    //ModalContentComponent,
-    //NgbdModalContent,
     DoctorComponent,
     AdddoctorsComponent,
-    CouponComponent,    
+    CouponComponent,
     AddCouponComponent,
-    CustomerinquiryComponent,
-
     PrescriptionComponent,
     AddprescriptionComponent,
-
     AppointmentComponent,
-    AddappointmentComponent,
-
+    AppointmentdetailsComponent,
     NursingAppointmentComponent,
     AddnursingappointmentComponent,
-
-/*    LaboratoryinquiryComponent,*/
     UploadreportComponent,
     AddreportsComponent,
     MedicineComponent,
     AddmedicineComponent,
-     OrdersComponent,
+    OrdersComponent,
     OrderdetailsComponent,
     AddsettingsComponent,
     ServiceComponent,
@@ -166,9 +153,9 @@ import { UserService } from './_services/userservice';
     AddMedicalServicetypeComponent,
     UserComponent,
     AdduserComponent
-    
-    
-    
+
+
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -178,7 +165,7 @@ import { UserService } from './_services/userservice';
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-/*    NgApexchartsModule,*/
+    /*    NgApexchartsModule,*/
     RouterModule.forRoot([
       { path: '', component: LoginComponent, pathMatch: 'full' },
       {
@@ -198,7 +185,7 @@ import { UserService } from './_services/userservice';
           { path: 'modifier/add', component: AddmodifierComponent },
           { path: 'modifier/edit/:id', component: AddmodifierComponent },
 
-          
+
 
           { path: 'location', component: LocationsComponent },
           { path: 'location/add', component: AddlocationComponent },
@@ -223,9 +210,9 @@ import { UserService } from './_services/userservice';
           { path: 'report/salescategorywise', component: SalescategorywiseComponent },
           { path: 'report/salesitemwise', component: SalesitemwiseComponent },
 
-            { path: 'delivery', component: DeliveryComponent },
-            { path: 'delivery/add', component: AdddeliveryComponent },
-            { path: 'delivery/edit/:id', component: AdddeliveryComponent },
+          { path: 'delivery', component: DeliveryComponent },
+          { path: 'delivery/add', component: AdddeliveryComponent },
+          { path: 'delivery/edit/:id', component: AdddeliveryComponent },
 
           { path: 'settings/appsettings', component: AppsettingComponent },
           { path: 'settings/appsettings/add', component: AddsettingsComponent },
@@ -239,29 +226,21 @@ import { UserService } from './_services/userservice';
           { path: 'managedoctor/doctor/adddoctors', component: AdddoctorsComponent },
           { path: 'managedoctor/doctor/edit/:id', component: AdddoctorsComponent },
 
-          { path: 'pharmacy/customerinquiry', component: CustomerinquiryComponent },
-
           { path: 'pharmacy/prescription', component: PrescriptionComponent },
           { path: 'pharmacy/prescription/addprescription', component: AddprescriptionComponent },
           { path: 'pharmacy/prescription/edit/:id', component: AddprescriptionComponent },
-
-          { path: 'reception/customerinquiry', component: CustomerinquiryComponent },
 
           { path: 'reception/customers', component: CustomersComponent },
           { path: 'reception/customers/addcustomers', component: AddcustomerComponent },
           { path: 'reception/customers/edit/:id', component: AddcustomerComponent },
 
           { path: 'reception/appointment', component: AppointmentComponent },
-          { path: 'reception/appointment/addappointment', component: AddappointmentComponent },
-          { path: 'reception/appointment/edit/:id', component: AddappointmentComponent },
+          { path: 'appointment/view/:id', component: AppointmentdetailsComponent },
 
           { path: 'reception/nursingappointment', component: NursingAppointmentComponent },
           { path: 'reception/nursingappointment/addnursingappointment', component: AddnursingappointmentComponent },
           { path: 'reception/nursingappointment/edit/:id', component: AddnursingappointmentComponent },
 
-
-/*          { path: 'reception/laboratoryinquiry', component: LaboratoryinquiryComponent },*/
-          { path: 'laboratory/customerinquiry', component: CustomerinquiryComponent },
           { path: 'laboratory/uploadreport', component: UploadreportComponent },
           { path: 'laboratory/uploadreport/addreports', component: AddreportsComponent },
           { path: 'laboratory/uploadreport/edit/:id', component: AddreportsComponent },
@@ -269,19 +248,16 @@ import { UserService } from './_services/userservice';
 
           { path: 'settings/coupon', component: CouponComponent },
           { path: 'settings/coupon/add', component: AddCouponComponent },
-          { path: 'settings/coupon/edit/:id', component: AddCouponComponent },       
-          
-          { path: 'pharmacy/medicine',
-          component: MedicineComponent, 
-          canActivate:[HasRoleGuard],
-           data :{
-           type:['SuperAdmin']
-         }
-         },
+          { path: 'settings/coupon/edit/:id', component: AddCouponComponent },
 
-          // { path: 'pharmacy/medicine', component: MedicineComponent },
-
-
+          {
+            path: 'pharmacy/medicine',
+            component: MedicineComponent,
+            canActivate: [HasRoleGuard],
+            data: {
+              type: ['SuperAdmin']
+            }
+          },
           { path: 'pharmacy/medicine/addmedicines', component: AddmedicineComponent },
           { path: 'pharmacy/medicine/edit/:id', component: AddmedicineComponent },
 
@@ -296,7 +272,7 @@ import { UserService } from './_services/userservice';
           { path: 'settings/medicalservicetype/add', component: AddMedicalServicetypeComponent },
           { path: 'settings/medicalservicetype/edit/:id', component: AddMedicalServicetypeComponent },
 
-          { path: 'user',component: UserComponent },         
+          { path: 'user', component: UserComponent },
           { path: 'user/add', component: AdduserComponent },
           { path: 'user/edit/:id', component: AdduserComponent },
         ]
@@ -307,6 +283,6 @@ import { UserService } from './_services/userservice';
   ],
   providers: [HasRoleGuard],
   exports: [NgbdDatepickerRangePopup],
-  bootstrap: [AppComponent,NgbdDatepickerRangePopup]
+  bootstrap: [AppComponent, NgbdDatepickerRangePopup]
 })
 export class AppModule { }

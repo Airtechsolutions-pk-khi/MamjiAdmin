@@ -79,18 +79,21 @@ export class NursingAppointmentComponent implements OnInit {
     });
   }
 
-  Status(data) {
-    debugger
-    this.service.status(data).subscribe((res: any) => {
-      if (res != 0) {
-        this.ts.showSuccess("Success", "Status Updated successfully.")
-        this.getData();
-      }
-      else
-        this.ts.showError("Error", "Failed to Update Status")
+  //Status(data) {
+  //  debugger
+  //  this.service.status(data).subscribe((res: any) => {
+  //    if (res != 0) {
+  //      this.ts.showSuccess("Success", "Status Updated successfully.")
+  //      this.getData();
+  //    }
+  //    else
+  //      this.ts.showError("Error", "Failed to Update Status")
 
-    }, error => {
-      this.ts.showError("Error", "Failed to Update Status")
-    });
+  //  }, error => {
+  //    this.ts.showError("Error", "Failed to Update Status")
+  //  });
+  //}
+  View(appointment) {
+    this.router.navigate(["admin/appointment/view", appointment]);
   }
 }

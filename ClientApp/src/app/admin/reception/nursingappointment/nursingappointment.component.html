@@ -6,7 +6,7 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <h6 class="m-0 font-weight-bold text-orange">Nursing Appoinment List</h6>
             </div>
             <div class=" col-lg-4 input-group mb-3"style="padding-top: 25px;">
@@ -16,9 +16,9 @@
                 <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" />
             </div>
             <div class="col-md-3 form-group text-right">
-                <button type="submit" class="btn btn-primary mt-4 mr-1" >
+                <!--<button type="submit" class="btn btn-primary mt-4 mr-1" >
                     <span translate>Export</span>
-                </button>
+                </button>-->
                  <!-- <button [routerLink]="['addnursingappointment']" class="btn btn-primary mt-4 mr-1">
                     Nursing Appoinment
                 </button>  -->
@@ -62,17 +62,18 @@
                       </ngb-highlight>
                     </td>
                     <td>
+                      <a (click)="View(item.appointmentID)"><i class="fas fa-fw fa-eye"></i> </a>
                       <!-- <a (click)="Edit(item.appointmentID)"><i class="fas fa-fw fa-edit"></i> </a> -->
-                      <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+                      <!--<a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>-->
                     </td>
-                    <td>
+                    <!--<td>
                       <select class="btn btn-danger dropdown form-control" (change)="Status(item)" id="appointmentStatus" name="appointmentStatus" [(ngModel)]="item.appointmentStatus" style=" padding-left: 5px;">
                         <option selected></option>
                         <option [ngValue]="102">Approved</option>
                         <option [ngValue]="103">Cancelled</option>
                         <option [ngValue]="104">Completed</option>
                       </select>
-                    </td>
+                    </td>-->
                   </tr>
                 </tbody>
             </table>

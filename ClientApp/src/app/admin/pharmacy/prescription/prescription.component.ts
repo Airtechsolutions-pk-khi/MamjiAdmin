@@ -60,7 +60,7 @@ export class PrescriptionComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
-  Edit(prescription) {
+  View(prescription) {
     this.router.navigate(["admin/pharmacy/prescription/edit", prescription]);
   }
   Delete(data) {
