@@ -14,7 +14,7 @@ import { AppointmentService } from 'src/app/_services/appointment.service';
 export class AppointmentdetailsComponent implements OnInit {
   public appointment = new Appointment();
   private selectedBrand;
-
+  StatusMsg="";
   constructor(public service: AppointmentService,
     public ls: LocalStorageService,
     public ts: ToastService,
@@ -37,6 +37,7 @@ export class AppointmentdetailsComponent implements OnInit {
   }
   updateAppointment(appointment, status) {
     appointment.appointmentStatus  = status;
+    appointment.statusMsg  = this.StatusMsg;
     //Update 
     this.service.statusUpdate(appointment).subscribe(data => {
 

@@ -57,7 +57,7 @@ namespace MamjiAdmin.Controllers
         [Route("status")]
         public int AppointmentStatus([FromBody] AppointmentBLL obj)
         {
-            return _service.Status(obj);
+            return _service.Status(obj, _env);
         }
     }
 }
