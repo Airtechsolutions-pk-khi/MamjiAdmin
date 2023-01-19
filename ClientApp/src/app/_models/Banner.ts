@@ -1,8 +1,8 @@
 export class Banner {
   bannerID: number;
   name: string;
+  type: string;
   description: string;
-  image: string;
-  brandID: number;
+  image: string;  
   statusID: number;
 }

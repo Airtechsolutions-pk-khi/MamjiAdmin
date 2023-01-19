@@ -16,10 +16,10 @@ namespace MamjiAdmin._Models
     }
     public class DashboardSummary
     {
-        public double TotalOrders { get; set; }
-        public double TotalTax { get; set; }
-        public double NetSales { get; set; }
-        public double Sales { get; set; }
+        public string TotalDoctors { get; set; }
+        public string TotalPatients { get; set; }
+        public string TotalAppointments { get; set; }
+        public string TodayAppointments { get; set; }
     }
     public class DashboardToday
     {

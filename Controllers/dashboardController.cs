@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
@@ -16,16 +17,16 @@ namespace MamjiAdmin.Controllers
             _service = new dashboardService();
         }
 
-        [HttpGet("get/{LocationID}/{Date}")]
-        public RspDashboard GetDashboardSummary(int LocationID, string Date)
+        [HttpGet("all")]
+        public List<DashboardSummary> GetAll ()
         {
-            return _service.GetDashboard(LocationID, System.DateTime.Now.Date.ToString());
+            return _service.GetAll();
         }
 
-        [HttpGet("range/get/{locationID}/{FDate}/{TDate}")]
-        public RspDashboard GetDashboardSummary(int LocationID, string FDate, string TDate)
-        {
-            return _service.GetDashboardRange(LocationID,FDate, TDate);
-        }
+        //[HttpGet("range/get/{locationID}/{FDate}/{TDate}")]
+        //public RspDashboard GetDashboardSummary(int LocationID, string FDate, string TDate)
+        //{
+        //    return _service.GetDashboardRange(LocationID,FDate, TDate);
+        //}
     }
 }

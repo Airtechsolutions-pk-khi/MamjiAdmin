@@ -27,13 +27,13 @@ namespace BAL.Repositories
             _ds = new DataSet();
         }
 
-        public List<DeliveryBLL> GetAll(int brandID)
+        public List<DeliveryBLL> GetAll()
         {
             try
             {
                 var lst = new List<DeliveryBLL>();
-                SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@brandid", brandID);
+                SqlParameter[] p = new SqlParameter[0];
+                
 
                 _dt = (new DBHelper().GetTableFromSP)("sp_GetDelivery", p);
                 if (_dt != null)
@@ -45,7 +45,7 @@ namespace BAL.Repositories
                 }
                 return lst;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -68,7 +68,7 @@ namespace BAL.Repositories
                 }
                 return lst;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -92,7 +92,7 @@ namespace BAL.Repositories
                 }
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new BrandSettingsBLL();
             }
@@ -116,7 +116,7 @@ namespace BAL.Repositories
                 }
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -146,7 +146,7 @@ namespace BAL.Repositories
                 }
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -175,7 +175,7 @@ namespace BAL.Repositories
                 }
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -193,7 +193,7 @@ namespace BAL.Repositories
 
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }

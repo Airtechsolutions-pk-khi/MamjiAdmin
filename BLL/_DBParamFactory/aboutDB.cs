@@ -49,7 +49,7 @@ namespace BAL.Repositories
 
         //        return lst;
         //    }
-        //    catch (Exception ex)
+        //    catch (Exception)
         //    {
         //        return null;
         //    }
@@ -86,7 +86,7 @@ namespace BAL.Repositories
 
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -122,14 +122,14 @@ namespace BAL.Repositories
 
                     rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertAppInfo_Admin", pn);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     throw;
                 }
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -167,14 +167,14 @@ namespace BAL.Repositories
                     rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateAppInfo_Admin", pn);
                     
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     throw;
                 }
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -193,7 +193,7 @@ namespace BAL.Repositories
 
         //        return _obj;
         //    }
-        //    catch (Exception ex)
+        //    catch (Exception)
         //    {
         //        return 0;
         //    }

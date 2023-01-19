@@ -17,11 +17,11 @@ namespace MamjiAdmin.BLL._Services
             _service = new brandDB();
         }
 
-        public List<BrandBLL> GetAll(int brandID)
+        public List<BrandBLL> GetAll()
         {
             try
             {
-                return _service.GetAll(brandID);
+                return _service.GetAll();
             }
             catch (Exception ex)
             {
@@ -57,21 +57,21 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(BrandBLL data, IWebHostEnvironment _env)
-        {
-            try
-            {
-                data.CompanyURl = UploadImage(data.CompanyURl, "Brand", _env);
-                data.Image = UploadImage(data.Image, "Brand", _env);
-                data.LastUpdatedDate = _UTCDateTime_SA();
-                var result = _service.Update(data);
-                return result;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
+        //public int Update(BrandBLL data, IWebHostEnvironment _env)
+        //{
+        //    try
+        //    {
+        //        data.CompanyURl = UploadImage(data.CompanyURl, "Brand", _env);
+        //        data.Image = UploadImage(data.Image, "Brand", _env);
+        //        data.LastUpdatedDate = _UTCDateTime_SA();
+        //        var result = _service.Update(data);
+        //        return result;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return 0;
+        //    }
+        //}
 
         public int Delete(BrandBLL data)
         {

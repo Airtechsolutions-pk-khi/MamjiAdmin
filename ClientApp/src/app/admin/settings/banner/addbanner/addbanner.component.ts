@@ -12,7 +12,7 @@ import { ToastService } from 'src/app/_services/toastservice';
   styleUrls: ['./addbanner.component.css']
 })
 export class AddbannerComponent implements OnInit {
-
+ 
   submitted = false;
   bannerForm: FormGroup;
   loading = false;
@@ -21,6 +21,8 @@ export class AddbannerComponent implements OnInit {
   selectedSubCategoriesIds: string[];
   selectedLocationIds: string[];
   selectedgroupModifierIds: string[];
+
+  NursingTypeActive :any= ['Header','Featured'];
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -44,17 +46,17 @@ export class AddbannerComponent implements OnInit {
   private createForm() {
     this.bannerForm = this.formBuilder.group({
       name: ['', Validators.required],
+      type: [''],
       description: [''],
       statusID: [true],
       bannerID: 0,
       image: [''],
-      brandID: this.ls.getSelectedBrand().brandID,
-      locationID: null
     });
   }
 
   private editForm(obj) {
     this.f.name.setValue(obj.name);
+    this.f.type.setValue(obj.type);
     this.f.description.setValue(obj.description);
     this.f.bannerID.setValue(obj.bannerID);
     this.f.image.setValue(obj.image);
@@ -68,7 +70,7 @@ export class AddbannerComponent implements OnInit {
       if (sid) {
         this.loadingCustomer = true;
         this.f.bannerID.setValue(sid);
-        this.bannerService.getById(sid, this.f.brandID.value).subscribe(res => {
+        this.bannerService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
           this.loadingCustomer = false;
@@ -78,12 +80,14 @@ export class AddbannerComponent implements OnInit {
   }
 
   onSubmit() {
+    debugger
     this.bannerForm.markAllAsTouched();
     this.submitted = true;
     if (this.bannerForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.image.setValue(this.imgComp.imageUrl);
+    
 
     if (parseInt(this.f.bannerID.value) === 0) {
       //Insert banner
@@ -91,7 +95,7 @@ export class AddbannerComponent implements OnInit {
       this.bannerService.insert(this.bannerForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/banner']);
+          this.router.navigate(['/admin/settings/banner']);
         }
         this.loading = false;
       }, error => {
@@ -104,7 +108,7 @@ export class AddbannerComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success","Record updated successfully.")
-          this.router.navigate(['/admin/banner']);
+          this.router.navigate(['/admin/settings/banner']);
         }
       }, error => {
         this.ts.showError("Error","Failed to update record.")

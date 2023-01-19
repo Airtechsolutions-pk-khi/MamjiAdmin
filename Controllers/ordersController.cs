@@ -22,17 +22,17 @@ namespace MamjiAdmin.Controllers
         }
 
 
-        [HttpGet("all/{brandid}/{locationid}/{customerid}/{fromDate}/{toDate}")]
-        public List<OrdersBLL> GetAll(int brandid, string locationid, int customerid, string fromDate, string toDate)
+        [HttpGet("all/{customerid}/{fromDate}/{toDate}")]
+        public List<OrdersBLL> GetAll(int customerid, string fromDate, string toDate)
         {
-            return _service.GetAll(locationid,brandid, Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+            return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
         }
 
 
-        [HttpGet("{id}/brand/{brandid}")]
-        public RspOrderDetail Get(int id, int brandid)
+        [HttpGet("{id}")]
+        public RspOrderDetail Get(int id)
         {
-            return _service.Get(id, brandid);
+            return _service.Get(id);
         }
         [HttpGet("print/{id}")]
         public RspPrintReceipt GetPrint(int id)

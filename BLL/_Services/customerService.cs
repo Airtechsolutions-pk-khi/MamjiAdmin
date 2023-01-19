@@ -1,5 +1,6 @@
 ﻿using BAL.Repositories;
 using MamjiAdmin._Models;
+using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,34 +17,34 @@ namespace MamjiAdmin.BLL._Services
             _service = new customerDB();
         }
 
-        public List<CustomerBLL> GetAll(int brandID)
+        public List<CustomerBLL> GetAll()
         {
             try
             {
-                return _service.GetAll(brandID);
+                return _service.GetAll();
             }
             catch (Exception ex)
             {
                 return new List<CustomerBLL>();
             }
         }
-        
-        public CustomerBLL Get(int id, int brandID)
+        public CustomerBLL Get(int id)
         {
             try
             {
-                return _service.Get(id, brandID);
+                return _service.Get(id);
             }
             catch (Exception ex)
             {
                 return null;
             }
         }
-        public int Insert(CustomerBLL data)
+        public int Insert(CustomerBLL data, IWebHostEnvironment _env)
         {
             try
             {
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.Image = UploadImage(data.Image, "Customer", _env);
+                data.CreatedOn = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
                 return result;
@@ -54,10 +55,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(CustomerBLL data)
+        public int Update(CustomerBLL data, IWebHostEnvironment _env)
         {
             try
             {
+                data.Image = UploadImage(data.Image, "Customer", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 
@@ -72,8 +74,7 @@ namespace MamjiAdmin.BLL._Services
         public int Delete(CustomerBLL data)
         {
             try
-            {
-                data.LastUpdatedDate = _UTCDateTime_SA();
+            {                
                 var result = _service.Delete(data);
 
                 return result;

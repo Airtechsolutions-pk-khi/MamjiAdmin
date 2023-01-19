@@ -27,18 +27,17 @@ namespace BAL.Repositories
             _ds = new DataSet();
         }
 
-        public List<OrdersBLL> GetAll(int brandID,string locationID, DateTime FromDate, DateTime ToDate)
+        public List<OrdersBLL> GetAll(DateTime FromDate, DateTime ToDate)
         {
             try
             {
                 var lst = new List<OrdersBLL>();
-                SqlParameter[] p = new SqlParameter[4];
-                p[0] = new SqlParameter("@brandid", brandID);
-                p[1] = new SqlParameter("@locationid", locationID);
-                p[2] = new SqlParameter("@fromdate", FromDate.Date);
-                p[3] = new SqlParameter("@todate", ToDate.Date);
+                SqlParameter[] p = new SqlParameter[2];
+              
+                p[0] = new SqlParameter("@fromdate", FromDate.Date);
+                p[1] = new SqlParameter("@todate", ToDate.Date);
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_rptSalesOrders", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_rptSalesOrders_Medicine", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -49,26 +48,26 @@ namespace BAL.Repositories
            
                 return lst;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
         }
 
-        public DataSet Get(int id, int brandID)
+        public DataSet Get(int id)
         {
             try
             {
                 var _obj = new OrdersBLL();
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@OrderID", id);
-                //p[1] = new SqlParameter("@brandid", brandID);
+                
 
-                _ds = (new DBHelper().GetDatasetFromSP)("sp_GetOrdersbyID_Admin", p);
+                _ds = (new DBHelper().GetDatasetFromSP)("sp_GetOrdersbyID_Medicine", p);
               
                 return _ds;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -85,11 +84,11 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@date", data.LastUpdatedDate);
                 p[1] = new SqlParameter("@statusID", data.StatusID);
                 p[2] = new SqlParameter("@orderid", data.OrderID);
-                //rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateOrderstatus_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_UpdateOrderstatusMedicine_Admin", p);
 
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -108,7 +107,7 @@ namespace BAL.Repositories
 
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }

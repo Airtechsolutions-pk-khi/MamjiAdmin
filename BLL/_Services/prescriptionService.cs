@@ -1,0 +1,86 @@
+﻿using BAL.Repositories;
+using MamjiAdmin._Models;
+using Microsoft.AspNetCore.Hosting;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace MamjiAdmin.BLL._Services
+{
+    public class prescripitonService : baseService
+    {
+        prescriptionDB _service;
+        public prescripitonService()
+        {
+            _service = new prescriptionDB();
+        }
+        public List<PrescriptionBLL> GetAll()
+        {
+            try
+            {
+                return _service.GetAll();
+            }
+            catch (Exception)
+            {
+                return new List<PrescriptionBLL>();
+            }
+        }
+        public PrescriptionBLL Get(int id)
+        {
+            try
+            {
+                return _service.Get(id);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public int Insert(PrescriptionBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.Image = UploadImage(data.Image, "Presc", _env);
+                data.CreatedOn = _UTCDateTime_SA();
+                var result = _service.Insert(data);
+
+                return result;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+        public int Update(PrescriptionBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.Image = UploadImage(data.Image, "Presc", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.Update(data);
+
+                return result;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+        public int Delete(int PrescriptionID)
+        {
+            try
+            {
+                //data.CreatedOn = DateTime.Now;
+                var result = _service.Delete(PrescriptionID);
+
+                return result;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+    }
+}

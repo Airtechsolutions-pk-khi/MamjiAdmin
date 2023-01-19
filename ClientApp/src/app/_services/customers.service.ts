@@ -73,14 +73,13 @@ export class CustomersService {
   }
   
   ExportList(brandId) {
-    return this.http.get<Customers[]>(`api/customer/all/${brandId}`);
+    return this.http.get<Customers[]>(`api/customer/all`);
   }
-  getById(id,brandId) {
-    return this.http.get<Customers[]>(`api/customer/${id}/brand/${brandId}`);
+  getById(id) {
+    return this.http.get<Customers[]>(`api/customer/customer/${id}`);
   }
-  getAllData(brandId) {
-
-    const url = `api/customer/all/${brandId}`;
+  getAllData() {
+    const url = `api/customer/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Customers[]>(url).subscribe(res => {
@@ -137,7 +136,6 @@ export class CustomersService {
     };
   }
   insert(data) {
-    debugger;
     return this.http.post(`api/customer/insert`, data)
       .pipe(map(res => {
         
@@ -153,8 +151,9 @@ export class CustomersService {
         return res;
       }));
   }
-  delete(updateData) {
-    return this.http.post(`api/customer/delete`, updateData);
+  delete(data) {
+    debugger;
+    return this.http.post(`api/customer/delete`, data);
   }
 
 }

@@ -19,17 +19,17 @@ namespace MamjiAdmin.Controllers
             _env = env;
         }
 
-        [HttpGet("all/{brandid}")]
-        public List<BannerBLL> GetAll(int brandid)
+        [HttpGet("all")]
+        public List<BannerBLL> GetAll()
         {
-            return _service.GetAll(brandid);
+            return _service.GetAll();
         }
 
 
-        [HttpGet("{id}/brand/{brandid}")]
-        public BannerBLL Get(int id, int brandid)
+        [HttpGet("{id}")]
+        public BannerBLL Get(int id)
         {
-            return _service.Get(id, brandid);
+            return _service.Get(id);
         }
 
         [HttpPost]

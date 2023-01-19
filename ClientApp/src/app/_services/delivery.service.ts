@@ -76,15 +76,16 @@ export class DeliveryService {
     return this.http.get<Brands[]>(`api/brand/all/${brandId}`);
   }
   getById(id) {
+    debugger
     return this.http.get<Delivery[]>(`api/delivery/${id}`);
   }
   // getBrands(brandId) {
   //   return this.http.get<Delivery[]>(`api/delivery/settings/${brandId}`);
   // }
   
-  getAllData(brandId) {
+  getAllData() {
 
-    const url = `api/delivery/all/${brandId}`;
+    const url = `api/delivery/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Delivery[]>(url).subscribe(res => {

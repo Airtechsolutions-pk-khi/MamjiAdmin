@@ -27,15 +27,14 @@ namespace BAL.Repositories
             _ds = new DataSet();
         }
 
-        public List<CustomerBLL> GetAll(int brandID)
+        public List<CustomerBLL> GetAll()
         {
             try
             {
                 var lst = new List<CustomerBLL>();
-                SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@brandid", brandID);
+                SqlParameter[] p = new SqlParameter[0];
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomer", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_getcustomer", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -45,37 +44,33 @@ namespace BAL.Repositories
                 }
                 return lst;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
         }
-
-        public CustomerBLL Get(int id, int brandID)
+        public CustomerBLL Get(int id)
         {
             try
             {
                 var _obj = new CustomerBLL();
-                SqlParameter[] p = new SqlParameter[2];
+                SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", id);
-                p[1] = new SqlParameter("@brandid", brandID);
-
                 _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerbyID_Admin", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<CustomerBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>().FirstOrDefault();
                     }
                 }
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
         }
-       
         public int Insert(CustomerBLL data)
         {
             try
@@ -85,32 +80,30 @@ namespace BAL.Repositories
 
                 p[0] = new SqlParameter("@FullName", data.FullName);
                 p[1] = new SqlParameter("@Email", data.Email);
-                p[2] = new SqlParameter("@Mobile", data.Mobile);
-                p[3] = new SqlParameter("@Image", data.Image);
-                p[4] = new SqlParameter("@StatusID", data.StatusID);
-                p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[7] = new SqlParameter("@LocationID", data.LocationID);
-                p[8] = new SqlParameter("@BrandID", data.BrandID);
-                p[9] = new SqlParameter("@Password", data.Password);
+                p[2] = new SqlParameter("@Password", data.Password);
+                p[3] = new SqlParameter("@Mobile", data.Mobile);
+                p[4] = new SqlParameter("@Image", data.Image);
+                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+                p[7] = new SqlParameter("@CreatedOn", data.CreatedOn);
+                p[8] = new SqlParameter("@CreatedBy", data.CreatedBy);
+                p[9] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
                 p[10] = new SqlParameter("@CustomerID", data.CustomerID);
              
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertCustomer_Admin", p);
-              
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_insertCustomer_Admin", p);              
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
         }
-
         public int Update(CustomerBLL data)
         {
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[11];
+                SqlParameter[] p = new SqlParameter[9];
 
                 p[0] = new SqlParameter("@FullName", data.FullName);
                 p[1] = new SqlParameter("@Email", data.Email);
@@ -119,16 +112,14 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@StatusID", data.StatusID);
                 p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[7] = new SqlParameter("@LocationID", data.LocationID);
-                p[8] = new SqlParameter("@BrandID", data.BrandID);
-                p[9] = new SqlParameter("@Password", data.Password);
-                p[10] = new SqlParameter("@CustomerID", data.CustomerID);
+                p[7] = new SqlParameter("@Password", data.Password);
+                p[8] = new SqlParameter("@CustomerID", data.CustomerID);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateCustomer_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateCustomer_Admin", p);
 
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -141,7 +132,7 @@ namespace BAL.Repositories
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@id", data.CustomerID);
-                p[1] = new SqlParameter("@brandid", data.BrandID);
+                p[1] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteCustomer", p);
 

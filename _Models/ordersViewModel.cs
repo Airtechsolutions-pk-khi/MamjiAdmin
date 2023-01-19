@@ -10,7 +10,7 @@ namespace MamjiAdmin._Models
     }
     public class RspOrderDetail
     {
-        public OrderCheckoutBLL OrderCheckouts { get; set; }
+        //public OrderCheckoutBLL OrderCheckouts { get; set; }
         public OrderCustomerBLL CustomerOrders { get; set; }
         public List<OrderDetailBLL> OrderDetails { get; set; }
         public OrdersBLL Order { get; set; }
@@ -41,11 +41,12 @@ namespace MamjiAdmin._Models
         public Nullable<System.DateTime> OrderDoneDate { get; set; }
         public int OrderCheckoutID { get; set; }
         public Nullable<int> PaymentMode { get; set; }
-        public double AmountPaid { get; set; }
-        public double AmountTotal { get; set; }
-        public double GrandTotal { get; set; }
-        public double ServiceCharges { get; set; }
-        public double Tax { get; set; }
+        public double? AmountPaid { get; set; }
+        public double? AmountTotal { get; set; }
+        public double? GrandTotal { get; set; }
+        public double? ServiceCharges { get; set; }
+        public double? Tax { get; set; }
+        public double? DiscountAmount { get; set; }
         public Nullable<System.DateTime> CheckoutDate { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
 

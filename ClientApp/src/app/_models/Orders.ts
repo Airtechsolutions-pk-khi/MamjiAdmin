@@ -1,6 +1,6 @@
 export class Orders {
   customerID: number;
-  orderNo: string;
+  orderNo: number;
   transactionNo: string;
   customerMobile: string;
   customerAddress: string;
@@ -23,13 +23,14 @@ export class Orders {
 export class OrderDetails {
   orderDetailID: number;
   orderID: number;
+  medicineID: number;
   name: string;
   itemID: number;
   quantity: number;
   price: number;
   cost: number;
   statusID: number;
-  orderDetailModifier: OrderDetailModifiers[]
+  
 }
 
 export class OrderDetailModifiers {

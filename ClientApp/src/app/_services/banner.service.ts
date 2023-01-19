@@ -25,7 +25,6 @@ function sort(data: Banner[], column: SortColumn, direction: string): Banner[] {
 }
 
 function matches(data: Banner, term: string) {
-  debugger
   return data.name.toLowerCase().includes(term.toLowerCase())
 }
 
@@ -72,17 +71,16 @@ export class BannerService {
   }
 
 
-  getById(id, brandId) {
-    return this.http.get<Banner[]>(`api/banner/${id}/brand/${brandId}`);
+  getById(id) {
+    return this.http.get<Banner[]>(`api/banner/${id}`);
   }
-  getAllData(brandId) {
+  getAllData() {
 
-    const url = `api/banner/all/${brandId}`;
+    const url = `api/banner/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Banner[]>(url).subscribe(res => {
         this.Banner = res;
-        debugger
         this._data$.next(this.Banner);
         this._allData$.next(this.Banner);
 

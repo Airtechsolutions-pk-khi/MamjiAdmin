@@ -32,7 +32,7 @@ export class SummaryComponent implements OnInit {
   }
   exportAsXLSX(): void {
 
-    this.excelService.exportAsExcelFile(this.export, 'Report_Export');
+  //  this.excelService.exportAsExcelFile(this.export, 'Report_Export');
   }
   getData() {
     

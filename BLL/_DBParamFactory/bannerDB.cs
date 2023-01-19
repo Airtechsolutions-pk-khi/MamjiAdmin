@@ -27,14 +27,12 @@ namespace BAL.Repositories
             _ds = new DataSet();
         }
 
-        public List<BannerBLL> GetAll(int brandID)
+        public List<BannerBLL> GetAll()
         {
             try
             {
                 var lst = new List<BannerBLL>();
-                SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@brandid", brandID);
-
+                SqlParameter[] p = new SqlParameter[0];
                 _dt = (new DBHelper().GetTableFromSP)("sp_GetBanner", p);
                 if (_dt != null)
                 {
@@ -45,20 +43,19 @@ namespace BAL.Repositories
                 }
                 return lst;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
         }
 
-        public BannerBLL Get(int id, int brandID)
+        public BannerBLL Get(int id)
         {
             try
             {
                 var _obj = new BannerBLL();
-                SqlParameter[] p = new SqlParameter[2];
+                SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", id);
-                p[1] = new SqlParameter("@brandid", brandID);
 
                 _dt = (new DBHelper().GetTableFromSP)("sp_GetBannerbyID_Admin", p);
                 if (_dt != null)
@@ -70,18 +67,18 @@ namespace BAL.Repositories
                 }
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
         }
-       
+
         public int Insert(BannerBLL data)
         {
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[7];
 
                 p[0] = new SqlParameter("@Name", data.Name);
                 p[1] = new SqlParameter("@Description", data.Description);
@@ -89,11 +86,10 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[5] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[6] = new SqlParameter("@BrandID", data.BrandID);
-                p[7] = new SqlParameter("@BannerID", data.BannerID);
-             
+                p[6] = new SqlParameter("@Type", data.Type);
+
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertBanner_Admin", p);
-              
+
                 return rtn;
             }
             catch (Exception ex)
@@ -115,8 +111,8 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
                 p[5] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[6] = new SqlParameter("@BrandID", data.BrandID);
-                p[7] = new SqlParameter("@BannerID", data.BannerID);
+                p[6] = new SqlParameter("@BannerID", data.BannerID);
+                p[7] = new SqlParameter("@Type", data.Type);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateBanner_Admin", p);
                 return rtn;
@@ -140,7 +136,7 @@ namespace BAL.Repositories
 
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }

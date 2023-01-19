@@ -27,7 +27,7 @@ namespace BAL.Repositories
             _ds = new DataSet();
         }
 
-        public List<BrandBLL> GetAll(int brandID)
+        public List<BrandBLL> GetAll()
         {
             try
             {
@@ -43,7 +43,7 @@ namespace BAL.Repositories
                 }
                 return lst;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -68,7 +68,7 @@ namespace BAL.Repositories
                 }
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -99,42 +99,42 @@ namespace BAL.Repositories
 
                 return rtn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
         }
 
-        public int Update(BrandBLL data)
-        {
-            try
-            {
-                int rtn = 0;
-                SqlParameter[] p = new SqlParameter[13];
+        //public int Update(BrandBLL data)
+        //{
+        //    try
+        //    {
+        //        int rtn = 0;
+        //        SqlParameter[] p = new SqlParameter[13];
 
-                p[0] = new SqlParameter("@Username", data.Name);
-                p[1] = new SqlParameter("@Name", data.Name);
-                p[2] = new SqlParameter("@Image", data.Image);
-                p[3] = new SqlParameter("@Email", data.Email);
-                p[4] = new SqlParameter("@Password", data.Password);
-                p[5] = new SqlParameter("@CompanyURl", data.CompanyURl);
-                p[6] = new SqlParameter("@Address", data.Address);
-                p[7] = new SqlParameter("@StatusID", data.StatusID);
-                p[8] = new SqlParameter("@Currency", data.Currency);
-                p[9] = new SqlParameter("@BusinessKey", data.BusinessKey == null ? 0 : data.BusinessKey);
-                p[10] = new SqlParameter("@LastUpdateBy", data.LastUpdateBy == null ? "" : data.LastUpdateBy);
-                p[11] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate == null ? null: data.LastUpdatedDate);
-                p[12] = new SqlParameter("@BrandID", data.BrandID);
+        //        p[0] = new SqlParameter("@Username", data.Name);
+        //        p[1] = new SqlParameter("@Name", data.Name);
+        //        p[2] = new SqlParameter("@Image", data.Image);
+        //        p[3] = new SqlParameter("@Email", data.Email);
+        //        p[4] = new SqlParameter("@Password", data.Password);
+        //        p[5] = new SqlParameter("@CompanyURl", data.CompanyURl);
+        //        p[6] = new SqlParameter("@Address", data.Address);
+        //        p[7] = new SqlParameter("@StatusID", data.StatusID);
+        //        p[8] = new SqlParameter("@Currency", data.Currency);
+        //        p[9] = new SqlParameter("@BusinessKey", data.BusinessKey == null ? 0 : data.BusinessKey);
+        //        p[10] = new SqlParameter("@LastUpdateBy", data.LastUpdateBy == null ? "" : data.LastUpdateBy);
+        //        p[11] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate == null ? null: data.LastUpdatedDate);
+        //        p[12] = new SqlParameter("@BrandID", data.BrandID);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateBrand_Admin", p);
+        //        rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateBrand_Admin", p);
 
-                return rtn;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
+        //        return rtn;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return 0;
+        //    }
+        //}
 
         public int Delete(BrandBLL data)
         {
@@ -149,7 +149,7 @@ namespace BAL.Repositories
 
                 return _obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }

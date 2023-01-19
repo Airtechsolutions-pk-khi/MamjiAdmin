@@ -1,6 +1,6 @@
 export class DashboardSummary {
-  totalOrders: number;
-  totalTax: number;
-  netSales: number;
-  sales: number;
+  totalDoctors: string;
+  totalPatients: string;
+  totalAppointments: string;
+  todayAppointments: string;
 }
