@@ -83,6 +83,11 @@ import { AddMedicalServicetypeComponent } from './admin/settings/medicalservicet
 import { NursingAppointmentComponent } from './admin/reception/nursingappointment/nursingappointment.component';
 import { AddnursingappointmentComponent } from './admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component';
 
+import { NotificationComponent } from './admin/notification/notification.component';
+
+import { SpecialityComponent } from '././admin/settings/speciality/speciality.component'
+import { AddSpecialityComponent } from '././admin/settings/speciality/add/addspeciality.component'
+
 import { UserComponent } from './admin/user/user.component';
 import { AdduserComponent } from './admin/user/add/adduser.component';
 import { HasRoleGuard } from './has-role.guard';
@@ -152,7 +157,10 @@ import { UserService } from './_services/userservice';
     MedicalServicetypeComponent,
     AddMedicalServicetypeComponent,
     UserComponent,
-    AdduserComponent
+    AdduserComponent,
+    NotificationComponent,
+    AddSpecialityComponent,
+    SpecialityComponent
 
 
 
@@ -185,7 +193,7 @@ import { UserService } from './_services/userservice';
           { path: 'modifier/add', component: AddmodifierComponent },
           { path: 'modifier/edit/:id', component: AddmodifierComponent },
 
-
+          { path: 'notification', component: NotificationComponent },
 
           { path: 'location', component: LocationsComponent },
           { path: 'location/add', component: AddlocationComponent },
@@ -275,6 +283,10 @@ import { UserService } from './_services/userservice';
           { path: 'user', component: UserComponent },
           { path: 'user/add', component: AdduserComponent },
           { path: 'user/edit/:id', component: AdduserComponent },
+
+          { path: 'settings/speciality', component: SpecialityComponent },
+          { path: 'settings/speciality/add', component: AddSpecialityComponent },
+          { path: 'settings/speciality/edit/:id', component: AddSpecialityComponent },
         ]
       }
     ]),

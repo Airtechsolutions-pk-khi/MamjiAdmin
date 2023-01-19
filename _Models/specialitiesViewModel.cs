@@ -12,9 +12,9 @@ namespace MamjiAdmin._Models
     public class SpecialistBLL
     {
         public int SpecialistID { get; set; }
-        public int DoctorID { get; set; }
         public string Name { get; set; }
-        public int StatusID { get; set; }
+        public string Image { get; set; }
+        public int? StatusID { get; set; }
     }
 
 }
