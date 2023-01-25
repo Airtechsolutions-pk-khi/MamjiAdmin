@@ -10,6 +10,9 @@ import { delay, map } from 'rxjs/operators';
 import { Location } from 'src/app/_models/Location';
 import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-range-popup';
 import { ExcelService } from 'src/ExportExcel/excel.service';
+import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
+
+const now = new Date();
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
@@ -50,6 +53,10 @@ export class OrdersComponent implements OnInit {
   }
 
   ngOnInit() {
+    const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, 1);
+    this._datepicker.fromDate = date;
+
+    this.getData();
   }
 
   getData() {
@@ -86,7 +93,7 @@ export class OrdersComponent implements OnInit {
     });
   }
   parseDate(obj) {
-    return obj.year + "-" + obj.month + "-" + obj.day;;
+    return obj.year + "-" + obj.month + "-" + obj.day;
   }
 
   loadLocations() {

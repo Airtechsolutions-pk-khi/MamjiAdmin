@@ -30,7 +30,7 @@ function sort(data: Appointment[], column: SortColumn, direction: string): Appoi
 
 function matches(data: Appointment, term: string)
 {
-  return data.patientName.toLowerCase().includes(term.toLowerCase())
+  return data.appointmentNo.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({
@@ -168,7 +168,7 @@ export class AppointmentService {
   {
     return this.http.post('api/appointment/delete', data);
   }
-  status(data) {
+  statusUpdate(data) {
     debugger
     return this.http.post('api/appointment/status', data);
   }

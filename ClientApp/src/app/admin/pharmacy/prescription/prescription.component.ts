@@ -1,5 +1,5 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Observer, Subscription } from 'rxjs';
 import { NgbdSortableHeader, SortEvent } from 'src/app/_directives/sortable.directive';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { Router } from '@angular/router';
@@ -7,6 +7,7 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { Prescription } from 'src/app/_models/Prescription';
 import { PrescriptionService } from 'src/app/_services/prescription.service';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-prescription',
   templateUrl: './prescription.component.html',
@@ -19,11 +20,14 @@ export class PrescriptionComponent implements OnInit {
   total$: Observable<number>;
   loading$: Observable<boolean>;
   private selectedPrescription;
+  name = "Mr";
+  base64Image: any;
 
   locationSubscription: Subscription;
   submit: boolean;
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
-  constructor(public service: PrescriptionService,
+
+  constructor(public service: PrescriptionService, private httpClient: HttpClient,
     public ls :LocalStorageService,
     public excelService: ExcelService,
     public ts :ToastService,
@@ -60,7 +64,7 @@ export class PrescriptionComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
-  Edit(prescription) {
+  View(prescription) {
     this.router.navigate(["admin/pharmacy/prescription/edit", prescription]);
   }
   Delete(data) {
@@ -75,5 +79,39 @@ export class PrescriptionComponent implements OnInit {
     }, error => {
       this.ts.showError("Error","Failed to delete record.")
     });
-    }  
+  }
+  downloadImage(img) {
+    debugger
+    var a = this.service.getById(img);
+    a
+    const imgUrl = img.src;
+    const imgName = imgUrl.substr(imgUrl.lastIndexOf('/') + 1);
+    this.httpClient.get(imgUrl, { responseType: 'blob' as 'json' })
+      .subscribe((res: any) => {
+        const file = new Blob([res], { type: res.type });
+
+        // IE
+        //if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        //  window.navigator.msSaveOrOpenBlob(file);
+        //  return;
+        //}
+
+        const blob = window.URL.createObjectURL(file);
+        const link = document.createElement('a');
+        link.href = blob;
+        link.download = imgName;
+
+        // Version link.click() to work at firefox
+        link.dispatchEvent(new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+          view: window
+        }));
+
+        setTimeout(() => { // firefox
+          window.URL.revokeObjectURL(blob);
+          link.remove();
+        }, 100);
+      });
+  }
  }

@@ -38,50 +38,48 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        //public int Insert(SpecialistBLL data, IWebHostEnvironment _env)
-        //{
-        //    try
-        //    {
-        //        data.CreatedOn = _UTCDateTime_SA();
-        //        var result = _service.Insert(data);
+        public int Insert(SpecialistBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.Image = UploadImage(data.Image, "Speciality", _env);
+                var result = _service.Insert(data);
 
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
 
-        //public int Update(SpecialistBLL data)
-        //{
-        //    try
-        //    {
-        //        data.LastUpdatedDate = _UTCDateTime_SA();
-        //        var result = _service.Update(data);
+        public int Update(SpecialistBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.Image = UploadImage(data.Image, "Speciality", _env);
+                var result = _service.Update(data);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
 
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+        public int Delete(SpecialistBLL data)
+        {
+            try
+            {
+                var result = _service.Delete(data);
 
-        //public int Delete(SpecialistBLL data)
-        //{
-        //    try
-        //    {
-        //        data.LastUpdatedDate = _UTCDateTime_SA();
-        //        var result = _service.Delete(data);
-
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
 
     }
 }

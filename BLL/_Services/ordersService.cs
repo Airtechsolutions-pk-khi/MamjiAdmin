@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Mail;
 
 namespace MamjiAdmin.BLL._Services
 {
@@ -242,12 +243,34 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(OrdersBLL data, IWebHostEnvironment _env)
+        public int Update(OrdersBLL obj, IWebHostEnvironment _env)
         {
             try
             {
-                data.LastUpdatedDate = _UTCDateTime_SA();
-                var result = _service.Update(data);
+                string contentRootPath = _env.ContentRootPath;
+
+                string path = "/ClientApp/dist/assets/Upload/";
+                string filePath = contentRootPath + path;
+
+                string Body = "";
+                if (obj.StatusID == 102)
+                {
+                    Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\orderapproved.txt");
+                    UpdateApproved(obj, _env, Body);
+                }
+                else if (obj.StatusID == 100)
+                {
+                    Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\ordercompleted.txt");
+                    UpdateComplete(obj, _env, Body);
+                }
+
+                else if (obj.StatusID == 103)
+                {
+                    Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\ordercancelled.txt");
+                    UpdateCancelled(obj, _env, Body);
+                }
+                obj.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.Update(obj);
 
                 return result;
             }
@@ -256,7 +279,112 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
+        public int UpdateComplete(OrdersBLL obj, IWebHostEnvironment _env, string Body)
+        {
+            string msg = "";
+            //msg = obj.StatusMsg;
+            string contentRootPath = _env.ContentRootPath;
 
+            string path = "/ClientApp/dist/assets/Upload/";
+            string filePath = contentRootPath + path;
+
+            try
+            {
+                var data = Get(obj.OrderID);
+
+                string ToEmail, SubJect;
+                ToEmail = data.CustomerOrders.Email;
+                SubJect = "Your Order on MAMJI - " + data.Order.OrderNo;
+
+                Body = Body.Replace("#SenderName#", obj.CustomerName);
+                SendEmail("Mamji Hospital || Orders: " + data.Order.OrderNo, Body, data.CustomerOrders.Email);
+            }
+            catch { }
+            return 1;
+        }
+        public int UpdateCancelled(OrdersBLL obj, IWebHostEnvironment _env, string Body)
+        {
+            string msg = "";
+            //msg = obj.StatusMsg;
+            string contentRootPath = _env.ContentRootPath;
+
+            string path = "/ClientApp/dist/assets/Upload/";
+            string filePath = contentRootPath + path;
+
+            try
+            {
+                var data = Get(obj.OrderID);
+
+                string ToEmail, SubJect;
+                ToEmail = data.CustomerOrders.Email;
+                SubJect = "Your Order on MAMJI - " + data.Order.OrderNo;
+
+                Body = Body.Replace("#SenderName#", obj.CustomerName);
+                SendEmail("Mamji Hospital || Orders: " + data.Order.OrderNo, Body, data.CustomerOrders.Email);
+            }
+            catch { }
+            return 1;
+        }
+        public int UpdateApproved(OrdersBLL obj, IWebHostEnvironment _env, string Body)
+        {
+            string msg = "";
+            //msg = obj.StatusMsg;
+            string contentRootPath = _env.ContentRootPath;
+
+            string path = "/ClientApp/dist/assets/Upload/";
+            string filePath = contentRootPath + path;
+
+            try
+            {
+                var data = Get(obj.OrderID);
+
+                string ToEmail, SubJect;
+                ToEmail = data.CustomerOrders.Email;
+                SubJect = "Your Order on MAMJI - " + data.Order.OrderNo;
+
+                Body = Body.Replace("#SenderName#", obj.CustomerName);
+                SendEmail("Mamji Hospital || Orders: " + data.Order.OrderNo, Body, data.CustomerOrders.Email);
+            }
+            catch { }
+            return 1;
+        }
+        public void SendEmail(string _SubjectEmail, string _BodyEmail, string _To)
+        {
+            try
+            {
+
+                //MimeMessage message = new MimeMessage();
+                //MailboxAddress from = new MailboxAddress("info@karachiflora.com", "info@karachiflora.com");
+                //message.From.Add(from);
+                //message.To.Add(MailboxAddress.Parse(_To));
+                //message.Subject = _SubjectEmail;
+                //message.Body = new TextPart(TextFormat.Html) { Text = _BodyEmail };
+                //SmtpClient client = new SmtpClient();
+                //client.Connect("mail.karachiflora.com", 25, false);
+                //client.Authenticate("info@karachiflora.com", "Karachiflora@123");
+                //client.Send(message);
+                //client.Disconnect(true);
+                //client.Dispose();
+
+                MailMessage mail = new MailMessage();
+                mail.To.Add(_To);
+                mail.From = new MailAddress("ammadsiddiqui136@gmail.com");
+                mail.Subject = _SubjectEmail;
+                mail.Body = _BodyEmail;
+                mail.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.UseDefaultCredentials = false;
+                smtp.Port = Int32.Parse("587");
+                smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
+                smtp.Credentials = new System.Net.NetworkCredential
+                     ("ammadsiddiqui136@gmail.com", "vartpzivrepkaxyq");
+                smtp.EnableSsl = true;
+                smtp.Send(mail);
+            }
+            catch (Exception ex)
+            {
+            }
+        }
         public int Delete(OrdersBLL data)
         {
             try

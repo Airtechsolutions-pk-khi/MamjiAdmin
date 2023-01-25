@@ -47,6 +47,30 @@ namespace BAL.Repositories
                 return null;
             }
         }
+
+        public CustomerBLL Getcustomer(int id)
+        {
+            try
+            {
+                var _obj = new CustomerBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", id);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerbyID_Admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>().FirstOrDefault();
+                    }
+                }
+                return _obj;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public AppointmentBLL Get(int id)
         {
             try

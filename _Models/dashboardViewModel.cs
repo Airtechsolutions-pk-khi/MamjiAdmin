@@ -18,8 +18,13 @@ namespace MamjiAdmin._Models
     {
         public string TotalDoctors { get; set; }
         public string TotalPatients { get; set; }
-        public string TotalAppointments { get; set; }
+        public string TotalDoctorAppointments { get; set; }
+        public string TotalNursingAppointments { get; set; }
+        public string TotalSales { get; set; }
+
         public string TodayAppointments { get; set; }
+        public string TodaySales { get; set; }
+        //public string TodaySales { get; set; }
     }
     public class DashboardToday
     {

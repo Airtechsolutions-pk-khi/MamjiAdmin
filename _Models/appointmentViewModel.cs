@@ -13,7 +13,7 @@ namespace MamjiAdmin._Models
     {
         public int AppointmentID { get; set; }
         public int DoctorID { get; set; }
-        public int? CustomerID { get; set; }
+        public int CustomerID { get; set; }
         public string AppointmentNo { get; set; }
         public string FullName { get; set; }
         public string PatientName { get; set; }
@@ -32,6 +32,7 @@ namespace MamjiAdmin._Models
         public int AppointmentStatus { get; set; }
         public int StatusID { get; set; }
         public string CreatedBy { get; set; }
+        public string StatusMsg { get; set; }
         public string LastUpdatedBy { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
