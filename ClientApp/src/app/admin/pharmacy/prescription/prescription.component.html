@@ -15,14 +15,6 @@
         </div>
         <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
       </div>
-      <div class="col-md-3 form-group text-right">
-        <!--<button type="submit" class="btn btn-primary mt-4 mr-1" (click)="exportAsXLSX()">
-          <span translate>Export</span>
-        </button>-->
-        <!--<button [routerLink]="['addprescription']" class="btn btn-primary mt-4 mr-1">
-          Add Prescription
-        </button>-->
-      </div>
     </div>
   </div>
   <div class="card-body">
@@ -42,9 +34,8 @@
         <tbody>
           <tr *ngFor="let item of data$ | async ">
             <td>
-              <img *ngIf="item.image !== ''" [src]="item.image" data-lightbox="image-1" class="table-img" alt="" />
-              <div *ngIf="item.image === ''" class="image-replace"></div>
-            </td>
+                <img *ngIf="item.image !== ''" [src]="item.image" data-lightbox="image-1" class="table-img" alt="" href="IMAGE_URL" />
+                <div *ngIf="item.image === ''" class="image-replace"></div>
             <td> {{item.customerName}} </td>
             <td> {{item.mobile}} </td>
             <td> {{item.address}} </td>
@@ -54,7 +45,12 @@
               </ngb-highlight>
             </td>
             <td>
-              <a (click)="View(item.prescriptionID)"><i class="fas fa-fw fa-eye"></i> </a>
+
+              <a download="sd" href="{{item.image}}" target="_blank"  title="ImageName">
+                <i class="fas fa-fw fa-download" download></i>
+              </a>
+
+              <!--<a href="javascript:void(0);" (click)="downloadImage(item.prescriptionID)"><i class="fas fa-fw fa-download"></i> </a>-->
               <!--<a (click)="Edit(item.prescriptionID)"><i class="fas fa-fw fa-edit"></i> </a>-->
               <!--<a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>-->
             </td>

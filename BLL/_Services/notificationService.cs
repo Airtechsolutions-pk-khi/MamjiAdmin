@@ -40,6 +40,19 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
+        public int Status(NotificationBLL data)
+        {
+            try
+            {
+                var result = _service.Status(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
     }
 }
 

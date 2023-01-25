@@ -119,4 +119,8 @@ export class NotificationService {
       sortDirection: ''
     };
   }
+  status(data) {
+    debugger
+    return this.http.post('api/notification/status', data);
+  }
 }

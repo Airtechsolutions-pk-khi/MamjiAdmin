@@ -73,6 +73,23 @@ namespace BAL.Repositories
                 return null;
             }
         }
+        public int Status(NotificationBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[2];
+                p[0] = new SqlParameter("@id", data.NotificationID);
+                p[1] = new SqlParameter("@IsRead", data.IsRead);
 
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_NotificationStatus", p);
+
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
     }
 }

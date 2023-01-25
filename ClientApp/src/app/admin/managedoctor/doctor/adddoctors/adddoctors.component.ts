@@ -183,17 +183,17 @@ export class AdddoctorsComponent implements OnInit {
     var obj = this.selectedSpecialityList.find(element => element.specialistID == val.specialistID);
      debugger
      if (val.specialistID != null) {
-       if (!this.DoctorSchedule.find(element => element.specialistID == val.specialistID)) {
+//if (!this.DoctorSchedule.find(element => element.specialistID == val.specialistID)) {
          this.DoctorSchedule.push({
           specialistID:val.specialistID, 
           name: obj.name,
            dayName: val.dayName,
            timeSlot:val.timeSlot,
          });
-       }
-       else {
-         alert("Item already added in list")
-       }
+       /*}*/
+       //else {
+       //  alert("Item already added in list")
+       //}
        this.clearSpec();
      }    
    }

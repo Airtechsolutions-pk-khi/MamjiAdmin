@@ -4,6 +4,6 @@ export class Notification {
   title: string;
   description: string;
   notificationDate: Date;
-  isRead: boolean;
+  isRead: number;
   statusID: number;
 }

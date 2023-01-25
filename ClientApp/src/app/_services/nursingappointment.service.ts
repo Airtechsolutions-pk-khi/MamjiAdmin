@@ -168,6 +168,6 @@ export class NursingAppointmentService {
   }
   status(data) {
     debugger
-    return this.http.post('api/nursingappointment/status', data);
+    return this.http.post('api/appointment/status', data);
   }
 }

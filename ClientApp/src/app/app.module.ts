@@ -93,6 +93,7 @@ import { AdduserComponent } from './admin/user/add/adduser.component';
 import { HasRoleGuard } from './has-role.guard';
 import { isAbsolute } from 'path';
 import { UserService } from './_services/userservice';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 
 @NgModule({
@@ -160,7 +161,7 @@ import { UserService } from './_services/userservice';
     AdduserComponent,
     NotificationComponent,
     AddSpecialityComponent,
-    SpecialityComponent
+    SpecialityComponent,
 
 
 
@@ -168,6 +169,7 @@ import { UserService } from './_services/userservice';
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    NgApexchartsModule,
     FormsModule,
     NgSelectModule,
     ReactiveFormsModule,

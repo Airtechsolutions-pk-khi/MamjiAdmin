@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using WebAPICode.Helpers;
 
 namespace MamjiAdmin.BLL._Services
 {
@@ -33,6 +34,18 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 return _service.Get(id);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public CustomerBLL Getcustomer(int id)
+        {
+            try
+            {
+                return _service.Getcustomer(id);
             }
             catch (Exception ex)
             {
@@ -87,25 +100,26 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-
+                var data = Getcustomer(obj.CustomerID);
                 string contentRootPath = _env.ContentRootPath;
 
                 string path = "/ClientApp/dist/assets/Upload/";
                 string filePath = contentRootPath + path;
 
                 string Body = "";
-                if (obj.StatusID == 102)
+                if (obj.AppointmentStatus == 102)
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\appointmentapproved.txt");
+                    //Body =  Body.Replace("#BookingDate#", dt.ToString());
                     UpdateApproved(obj, _env, Body);
                 }
-                else if (obj.StatusID == 100)
+                else if (obj.AppointmentStatus == 100)
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\appointmentcompleted.txt");
                     UpdateComplete(obj, _env, Body);
                 }
-              
-                else if (obj.StatusID == 103)
+
+                else if (obj.AppointmentStatus == 103)
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\appointmentcancelled.txt");
                     UpdateCancelled(obj, _env, Body);
@@ -134,18 +148,19 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 var data = Get(obj.AppointmentID);
+                var email = Getcustomer(obj.CustomerID);
 
                 string ToEmail, SubJect;
-                ToEmail = data.Email;
+                ToEmail = email.Email;
                 SubJect = "Your Appointment on MAMJI - " + data.AppointmentNo;
 
                 Body = Body.Replace("#SenderName#", data.FullName);
-                SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, data.Email);
+                SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, email.Email);
             }
             catch { }
             return 1;
         }
-       public int UpdateCancelled(AppointmentBLL obj, IWebHostEnvironment _env, string Body)
+        public int UpdateCancelled(AppointmentBLL obj, IWebHostEnvironment _env, string Body)
         {
             string msg = "";
             //msg = obj.StatusMsg;
@@ -157,13 +172,14 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 var data = Get(obj.AppointmentID);
+                var email = Getcustomer(obj.CustomerID);
 
                 string ToEmail, SubJect;
-                ToEmail = data.Email;
+                ToEmail = email.Email;
                 SubJect = "Your Appointment on MAMJI - " + data.AppointmentNo;
 
                 Body = Body.Replace("#SenderName#", data.FullName);
-                SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, data.Email);
+                SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, email.Email);
             }
             catch { }
             return 1;
@@ -180,17 +196,18 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 var data = Get(obj.AppointmentID);
+                var email = Getcustomer(obj.CustomerID);
 
                 string ToEmail, SubJect;
-                ToEmail = data.Email;
+                ToEmail = email.Email;
                 SubJect = "Your Appointment on MAMJI - " + data.AppointmentNo;
 
                 Body = Body.Replace("#description#", "-")
-                    .Replace("#date#", Convert.ToDateTime( data.Date).ToShortDateString())
+                    .Replace("#date#", Convert.ToDateTime(data.Date).ToShortDateString())
                     .Replace("#appointmentno#", data.AppointmentNo)
                     .Replace("#name#", data.FullName)
                     .Replace("#contact#", data.Mobile);
-                SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, data.Email);
+                SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, email.Email);
             }
             catch { }
             return 1;
@@ -199,7 +216,6 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-
                 //MimeMessage message = new MimeMessage();
                 //MailboxAddress from = new MailboxAddress("info@karachiflora.com", "info@karachiflora.com");
                 //message.From.Add(from);
@@ -215,7 +231,7 @@ namespace MamjiAdmin.BLL._Services
 
                 MailMessage mail = new MailMessage();
                 mail.To.Add(_To);
-                mail.From = new MailAddress("karachifloraorders@gmail.com");
+                mail.From = new MailAddress("ammadsiddiqui136@gmail.com");
                 mail.Subject = _SubjectEmail;
                 mail.Body = _BodyEmail;
                 mail.IsBodyHtml = true;
@@ -224,9 +240,10 @@ namespace MamjiAdmin.BLL._Services
                 smtp.Port = Int32.Parse("587");
                 smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
                 smtp.Credentials = new System.Net.NetworkCredential
-                     ("karachifloraorders@gmail.com", "786iqtedar");
+                     ("ammadsiddiqui136@gmail.com", "vartpzivrepkaxyq");
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
+                //smtp.UseDefaultCredentials = true;
             }
             catch (Exception ex)
             {

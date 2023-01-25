@@ -27,5 +27,11 @@ namespace MamjiAdmin.Controllers
         {
             return _service.Getbyid(id);
         }
+        [HttpPost]
+        [Route("status")]
+        public int Status([FromBody] NotificationBLL obj)
+        {
+            return _service.Status(obj);
+        }
     }
 }

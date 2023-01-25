@@ -28,6 +28,7 @@ function matches(data: Prescription, term: string) {
   providedIn: 'root'
 })
 export class PrescriptionService {
+  httpClient: any;
   constructor(private http: HttpClient) {
   }
   private _loading$ = new BehaviorSubject<boolean>(true);
@@ -139,7 +140,6 @@ export class PrescriptionService {
       }));
   }
   delete(data) {
-    debugger
     return this.http.post('api/prescription/delete', data);
   }
 }

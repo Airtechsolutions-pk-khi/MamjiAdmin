@@ -39,6 +39,11 @@ namespace BAL.Repositories
                         lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<PrescriptionBLL>>();
                     }
                 }
+                foreach (var item in lst)
+                {
+                    item.Image = item.Image == null ? "" : "http://mamjiadmin.airtechsolutions.pk/" + item.Image;
+
+                }
                 return lst;
             }
             catch (Exception ex)

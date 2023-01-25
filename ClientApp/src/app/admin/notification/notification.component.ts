@@ -13,7 +13,7 @@ import { NotificationService } from 'src/app/_services/notification.service';
   providers: [ExcelService]
 })
 export class NotificationComponent implements OnInit {
-  data$: Observable<Notification[]>;  
+  data$: Observable<Notification[]>;
   oldData: Notification[];
   total$: Observable<number>;
   loading$: Observable<boolean>;
@@ -23,16 +23,16 @@ export class NotificationComponent implements OnInit {
   submit: boolean;
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
   constructor(public service: NotificationService,
-    public ls :LocalStorageService,
+    public ls: LocalStorageService,
     public excelService: ExcelService,
-    public ts :ToastService,
-    public router:Router) {
- 
-     this.loading$ = service.loading$;
-     this.submit = false;
-     
-   }
- 
+    public ts: ToastService,
+    public router: Router) {
+
+    this.loading$ = service.loading$;
+    this.submit = false;
+
+  }
+
   ngOnInit() {
     this.getData();
   }
@@ -52,4 +52,18 @@ export class NotificationComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
- }
+  updateStatus(item, status) {
+    debugger
+    item.isRead = status;
+    //Update 
+    this.service.status(item).subscribe(data => {
+
+      if (data != 0) {
+        this.ts.showSuccess("Success", "Record updated successfully.")
+        this.router.navigate(['/admin/notification']);
+      }
+    }, error => {
+      this.ts.showError("Error", "Failed to update record.")
+    });
+  }
+}
