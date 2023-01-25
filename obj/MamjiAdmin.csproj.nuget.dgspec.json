@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\Mamji\\MamjiAdmin_GIT\\MamjiAdmin.csproj": {}
+    "D:\\Project\\Mamji\\MamjiAdmin\\MamjiAdmin.csproj": {}
   },
   "projects": {
-    "D:\\Project\\Mamji\\MamjiAdmin_GIT\\MamjiAdmin.csproj": {
+    "D:\\Project\\Mamji\\MamjiAdmin\\MamjiAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\Mamji\\MamjiAdmin_GIT\\MamjiAdmin.csproj",
+        "projectUniqueName": "D:\\Project\\Mamji\\MamjiAdmin\\MamjiAdmin.csproj",
         "projectName": "MamjiAdmin",
-        "projectPath": "D:\\Project\\Mamji\\MamjiAdmin_GIT\\MamjiAdmin.csproj",
+        "projectPath": "D:\\Project\\Mamji\\MamjiAdmin\\MamjiAdmin.csproj",
         "packagesPath": "C:\\Users\\Ammad Raza\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\Mamji\\MamjiAdmin_GIT\\obj\\",
+        "outputPath": "D:\\Project\\Mamji\\MamjiAdmin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ammad Raza\\AppData\\Roaming\\NuGet\\NuGet.Config",
