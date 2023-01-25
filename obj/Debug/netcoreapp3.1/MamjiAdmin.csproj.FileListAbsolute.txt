@@ -575,3 +575,4 @@ D:\Projects\Mamji\obj\Debug\netcoreapp3.1\MamjiAdmin.csproj.CopyComplete
 D:\Projects\Mamji\obj\Debug\netcoreapp3.1\MamjiAdmin.dll
 D:\Projects\Mamji\obj\Debug\netcoreapp3.1\MamjiAdmin.pdb
 D:\Projects\Mamji\obj\Debug\netcoreapp3.1\MamjiAdmin.genruntimeconfig.cache
+D:\Project\Mamji\MamjiAdmin\obj\Debug\netcoreapp3.1\MamjiAdmin.csprojAssemblyReference.cache
