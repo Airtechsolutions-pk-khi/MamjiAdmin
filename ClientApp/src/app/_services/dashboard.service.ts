@@ -37,4 +37,7 @@ export class DashboardService {
   getAllData() {
     return this.http.get<any[]>(`api/dashboard/all`);
   }
+  getChart() {
+    return this.http.get<any[]>(`api/dashboard/getcharts`);
+  }
 }

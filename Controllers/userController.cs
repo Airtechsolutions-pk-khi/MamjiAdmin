@@ -54,5 +54,16 @@ namespace MamjiAdmin.Controllers
                 return 0;
             }
         }
+        [HttpPost]
+        [Route("update/permission")]
+        public int Post([FromBody] PermissionBLL obj)
+        {
+            return _service.UpdatePermission(obj);
+        }
+        [HttpGet("userpermission/{Id}")]
+        public PermissionFormBLL GetPermission(string Id)
+        {
+            return _service.GetPermission(Id);
+        }
     }
 }

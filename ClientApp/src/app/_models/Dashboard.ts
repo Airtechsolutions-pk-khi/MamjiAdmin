@@ -4,6 +4,7 @@ export class DashboardSummary {
   totalDoctorAppointments: string;
   totalNursingAppointments: string;
   totalSales: string;
-  todayAppointments: string;
+  todayDoctorAppointments: string;
+  todayNursingAppointments: string;
   todaySales: string;
 }

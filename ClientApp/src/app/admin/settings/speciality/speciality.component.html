@@ -30,6 +30,7 @@
                     <tr class="table-header">
                         <th width="10%">IMAGE</th>
                         <th width="15%" sortable="name" (sort)="onSort($event)"> Name </th>
+                        <th width="15%" sortable="urduName" (sort)="onSort($event)"> Urdu Name </th>
                         <th width="15%" sortable="statusID" (sort)="onSort($event)">Status </th>
                         <th width="10%">Action</th>
                     </tr>
@@ -41,6 +42,7 @@
                             <div *ngIf="item.image === ''" class="image-replace"></div>
                         </td>
                         <td> {{item.name}} </td>
+                        <td> {{item.urduName}} </td>
                         <td>
                             <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
                             </ngb-highlight>

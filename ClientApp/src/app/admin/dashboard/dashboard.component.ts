@@ -68,6 +68,7 @@ export class DashboardComponent {
   dashboardSummary = new DashboardSummary();
   ngOnInit() {
     this.GetDashboard();
+    this.GetChart();
   }
 
   constructor(public service: DashboardService,
@@ -75,73 +76,73 @@ export class DashboardComponent {
     public router: Router) {
     this.loading$ = service.loading$;
 
-    this.chartOptions = {
-      series: [
-        {
-          name: "Appointment",
-          data: [5, 3, 7, 9, 2, 8, 11]
-        },
-      ],
-      chart: {
-        height: 350,
-        type: "bar",
-        events: {
-          click: function (chart, w, e) {
-            // console.log(chart, w, e)
-          }
-        }
+    //this.chartOptions = {
+    //  series: [
+    //    {
+    //      name: "Appointment",
+    //      data: [5, 3, 7, 9, 2, 8, 11]
+    //    },
+    //  ],
+    //  chart: {
+    //    height: 350,
+    //    type: "bar",
+    //    events: {
+    //      click: function (chart, w, e) {
+    //        // console.log(chart, w, e)
+    //      }
+    //    }
 
-      },
-      colors: [
-        "#008FFB",
-        "#00E396",
-        "#FEB019",
-        "#FF4560",
-        "#775DD0",
-        "#546E7A",
-        "#26a69a"
-      ],
-      plotOptions: {
-        bar: {
-          columnWidth: "45%",
-          distributed: true
-        }
-      },
-      dataLabels: {
-        enabled: false
-      },
-      legend: {
-        show: false
-      },
-      grid: {
-        show: false
-      },
-      xaxis: {
-        categories: [
-          ["16/Jan/2023"],
-          ["17/Jan/2023"],
-          ["18/Jan/2023"],
-          ["19/Jan/2023"],
-          ["20/Jan/2023"],
-          ["21/Jan/2023"],
-          ["22/Jan/2023"]
-        ],
-        labels: {
-          style: {
-            colors: [
-              "#008FFB",
-              "#00E396",
-              "#FEB019",
-              "#FF4560",
-              "#775DD0",
-              "#546E7A",
-              "#26a69a"
-            ],
-            fontSize: "12px"
-          }
-        }
-      }
-    };
+    //  },
+    //  colors: [
+    //    "#008FFB",
+    //    "#00E396",
+    //    "#FEB019",
+    //    "#FF4560",
+    //    "#775DD0",
+    //    "#546E7A",
+    //    "#26a69a"
+    //  ],
+    //  plotOptions: {
+    //    bar: {
+    //      columnWidth: "45%",
+    //      distributed: true
+    //    }
+    //  },
+    //  dataLabels: {
+    //    enabled: false
+    //  },
+    //  legend: {
+    //    show: false
+    //  },
+    //  grid: {
+    //    show: false
+    //  },
+    //  xaxis: {
+    //    categories: [
+    //      ["16/Jan/2023"],
+    //      ["17/Jan/2023"],
+    //      ["18/Jan/2023"],
+    //      ["19/Jan/2023"],
+    //      ["20/Jan/2023"],
+    //      ["21/Jan/2023"],
+    //      ["22/Jan/2023"]
+    //    ],
+    //    labels: {
+    //      style: {
+    //        colors: [
+    //          "#008FFB",
+    //          "#00E396",
+    //          "#FEB019",
+    //          "#FF4560",
+    //          "#775DD0",
+    //          "#546E7A",
+    //          "#26a69a"
+    //        ],
+    //        fontSize: "12px"
+    //      }
+    //    }
+    //  }
+    //};
 
     this.lineChartOptions = {
       series: [
@@ -188,10 +189,33 @@ export class DashboardComponent {
       }
     };
   }
+  BindTodaysSales(sales, timeSlot) {
+    this.chartOptions = {
+      series: [
+        {
+          name: "Sales",
+          data: sales
+        }
+      ],
+      chart: {
+        height: 300,
+        type: "bar"
+      },
+      xaxis: {
+        categories: timeSlot
+      }
+    };
+
+  }
 
   GetDashboard() {
     this.service.getAllData().subscribe((res: any) => {
       this.dashboardSummary = res[0];
+    });
+  }
+  GetChart() {
+    this.service.getChart().subscribe((res: any) => {
+      this.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
     });
   }
 }

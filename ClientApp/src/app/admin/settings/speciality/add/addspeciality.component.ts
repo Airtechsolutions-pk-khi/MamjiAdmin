@@ -45,6 +45,7 @@ export class AddSpecialityComponent implements OnInit {
   private createForm() {
     this.specialityForm = this.formBuilder.group({
       name: ['', Validators.required],
+      urduName: [''],
       statusID: [true],
       specialistID: 0,
       image: [''],
@@ -54,6 +55,7 @@ export class AddSpecialityComponent implements OnInit {
   private editForm(obj) {
     debugger
     this.f.name.setValue(obj.name);
+    this.f.urduName.setValue(obj.urduName);
     this.f.specialistID.setValue(obj.specialistID);
     this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);

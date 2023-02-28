@@ -1,7 +1,7 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { NgbdSortableHeader, SortEvent } from 'src/app/_directives/sortable.directive';
-import { UserService } from 'src/app/_services/userservice';
+import { UserService } from 'src/app/_services/user.service';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/_models/User';

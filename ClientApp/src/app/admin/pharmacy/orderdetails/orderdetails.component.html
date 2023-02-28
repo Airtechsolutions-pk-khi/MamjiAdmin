@@ -5,7 +5,7 @@
     <div class="card-header py-3">
         <div class="row">
             <div class="col-md-6">
-                <h6 class="m-0 font-weight-bold text-orange">Order Details - <span class="badge badge-info"> {{ order.statusID == 100 ? "Delivered" : order.statusID==101 ?"Order confirmed" : order.statusID == 102? "Order prepared" : order.statusID == 103? " Order out for delivery" : order.statusID == 104? "Order Cancelled" : "-" }}</span></h6>
+                <h6 class="m-0 font-weight-bold text-orange">Order Details - <span class="badge badge-info"> {{ order.statusID == 100 ? "Delivered" : order.statusID==101 ?"Order confirmed" : order.statusID == 102? "Order prepared" : order.statusID == 103? " Order Cancelled" : order.statusID == 104? "Order out for delivery" : "-" }}</span></h6>
             </div>
             <div class="col-md-6 text-right">
 
@@ -18,16 +18,16 @@
                     <div class="card-header border-bottom-0">Order Status</div>
                     <div class="card-body">
                       <div class="">
-                        <!-- <button class="btn btn-warning mr-1" (click)="updateOrder(order,102)" *ngIf="order.statusID!=102">
-                          <i class="fas fa-check-circle"></i> Prepared
-                        </button> -->
-                        <button class="btn btn-info mr-1" (click)="updateOrder(order,103)" *ngIf="order.statusID!=103">
+                         <button class="btn btn-warning mr-1" (click)="updateOrder(order,102)" *ngIf="order.statusID!=102">
+                          <i class="fas fa-check-circle"></i> Approved
+                        </button> 
+                        <button class="btn btn-info mr-1" (click)="updateOrder(order,104)" *ngIf="order.statusID!=104">
                           <i class="fas fa-truck"></i> Out For Delivery
                         </button>
                         <button class="btn btn-success mr-1" (click)="updateOrder(order,100)" *ngIf="order.statusID!=100">
                           <i class="fas fa-people-carry"></i> Delivered
                         </button>
-                        <button class="btn btn-danger mr-1" (click)="updateOrder(order,104)">
+                        <button class="btn btn-danger mr-1" (click)="updateOrder(order,103)">
                           <i class="fas fa-people-carry"></i> Cancelled
                         </button>
                       </div>

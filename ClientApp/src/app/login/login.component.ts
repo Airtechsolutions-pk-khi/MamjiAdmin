@@ -5,7 +5,7 @@ import { first } from 'rxjs/operators';
 import { LocalStorageService } from '../_services/local-storage.service';
 import { ToastService } from '../_services/toastservice';
 import { Router } from '@angular/router';
-import { UserService } from '../_services/userservice';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-login',

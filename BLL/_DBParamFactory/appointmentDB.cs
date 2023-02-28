@@ -188,8 +188,7 @@ namespace BAL.Repositories
                 p[1] = new SqlParameter("@AppointmentStatus", data.AppointmentStatus);
                 p[2] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_AppointmentStatus", p);
-
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_AppointmentStatus", p);          
                 return _obj;
             }
             catch (Exception ex)

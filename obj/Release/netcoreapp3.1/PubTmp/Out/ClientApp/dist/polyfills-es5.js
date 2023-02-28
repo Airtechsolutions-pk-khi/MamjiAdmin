@@ -20514,7 +20514,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! D:\Project\Mamji\MamjiAdmin\ClientApp\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */
+      /*! D:\Projects\Mamji\ClientApp\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */
       "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
       __webpack_require__(
@@ -20522,15 +20522,15 @@
       "./node_modules/zone.js/dist/zone-legacy.js");
 
       __webpack_require__(
-      /*! D:\Project\Mamji\MamjiAdmin\ClientApp\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */
+      /*! D:\Projects\Mamji\ClientApp\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\jit-polyfills.js */
       "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
       __webpack_require__(
-      /*! D:\Project\Mamji\MamjiAdmin\ClientApp\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-jit-polyfills.js */
+      /*! D:\Projects\Mamji\ClientApp\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-jit-polyfills.js */
       "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js");
 
       module.exports = __webpack_require__(
-      /*! D:\Project\Mamji\MamjiAdmin\ClientApp\src\polyfills.ts */
+      /*! D:\Projects\Mamji\ClientApp\src\polyfills.ts */
       "./src/polyfills.ts");
       /***/
     }

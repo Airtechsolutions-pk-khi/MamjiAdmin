@@ -23,6 +23,8 @@ namespace MamjiAdmin._Models
         public string TotalSales { get; set; }
 
         public string TodayAppointments { get; set; }
+        public string TodayNursingAppointments { get; set; }
+        public string TodayDoctorAppointments { get; set; }
         public string TodaySales { get; set; }
         //public string TodaySales { get; set; }
     }

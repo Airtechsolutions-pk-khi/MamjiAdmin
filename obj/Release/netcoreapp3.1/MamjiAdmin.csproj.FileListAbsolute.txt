@@ -327,3 +327,7 @@ D:\Project\Mamji\MamjiAdmin\obj\Release\netcoreapp3.1\MamjiAdmin.csproj.CopyComp
 D:\Project\Mamji\MamjiAdmin\obj\Release\netcoreapp3.1\MamjiAdmin.dll
 D:\Project\Mamji\MamjiAdmin\obj\Release\netcoreapp3.1\MamjiAdmin.pdb
 D:\Project\Mamji\MamjiAdmin\obj\Release\netcoreapp3.1\MamjiAdmin.genruntimeconfig.cache
+D:\Projects\Mamji\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Projects\Mamji\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\Projects\Mamji\bin\Release\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+D:\Projects\Mamji\bin\Release\netcoreapp3.1\Nancy.dll

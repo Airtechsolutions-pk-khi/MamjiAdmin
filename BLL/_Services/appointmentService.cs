@@ -1,11 +1,16 @@
 ﻿using BAL.Repositories;
 using MamjiAdmin._Models;
 using Microsoft.AspNetCore.Hosting;
+using Nancy.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Mail;
+using System.Text;
 using System.Threading.Tasks;
 using WebAPICode.Helpers;
 
@@ -112,17 +117,65 @@ namespace MamjiAdmin.BLL._Services
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\appointmentapproved.txt");
                     //Body =  Body.Replace("#BookingDate#", dt.ToString());
                     UpdateApproved(obj, _env, Body);
+                    try
+                    {
+                        var ds = _service.GetToken(obj.CustomerID);
+                        var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
+                        foreach (var item in getTokens)
+                        {
+                            var token = new PushNotificationBLL();
+                            token.Title = "Mamji Hospital" + " | Appointment Update";
+                            token.Message = "Your appointment has been confirmed";
+                            token.DeviceID = item.Token;
+                            _service.PushNotificationAndroid(token);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
                 else if (obj.AppointmentStatus == 100)
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\appointmentcompleted.txt");
                     UpdateComplete(obj, _env, Body);
+                    try
+                    {
+                        var ds = _service.GetToken(obj.CustomerID);
+                        var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
+                        foreach (var item in getTokens)
+                        {
+                            var token = new PushNotificationBLL();
+                            token.Title = "Mamji Hospital" + " | Appointment Update";
+                            token.Message = "Your appointment has been completed";
+                            token.DeviceID = item.Token;
+                            _service.PushNotificationAndroid(token);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
 
                 else if (obj.AppointmentStatus == 103)
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\appointmentcancelled.txt");
                     UpdateCancelled(obj, _env, Body);
+                    try
+                    {
+                        var ds = _service.GetToken(obj.CustomerID);
+                        var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
+                        foreach (var item in getTokens)
+                        {
+                            var token = new PushNotificationBLL();
+                            token.Title = "Mamji Hospital" + " | Appointment Update";
+                            token.Message = "Your appointment has been cancelled";
+                            token.DeviceID = item.Token;
+                            _service.PushNotificationAndroid(token);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
 
                 obj.LastUpdatedDate = _UTCDateTime_SA();
@@ -154,7 +207,9 @@ namespace MamjiAdmin.BLL._Services
                 ToEmail = email.Email;
                 SubJect = "Your Appointment on MAMJI - " + data.AppointmentNo;
 
-                Body = Body.Replace("#SenderName#", data.FullName);
+                Body = Body.Replace("#SenderName#", email.FullName);
+                Body = Body.Replace("#Mobile#", email.Mobile);
+                Body = Body.Replace("#Date#", data.BookingDate);
                 SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, email.Email);
             }
             catch { }
@@ -178,7 +233,9 @@ namespace MamjiAdmin.BLL._Services
                 ToEmail = email.Email;
                 SubJect = "Your Appointment on MAMJI - " + data.AppointmentNo;
 
-                Body = Body.Replace("#SenderName#", data.FullName);
+                Body = Body.Replace("#SenderName#", email.FullName);
+                Body = Body.Replace("#Mobile#", email.Mobile);
+                Body = Body.Replace("#Date#", data.BookingDate);
                 SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, email.Email);
             }
             catch { }
@@ -203,10 +260,10 @@ namespace MamjiAdmin.BLL._Services
                 SubJect = "Your Appointment on MAMJI - " + data.AppointmentNo;
 
                 Body = Body.Replace("#description#", "-")
-                    .Replace("#date#", Convert.ToDateTime(data.Date).ToShortDateString())
+                    .Replace("#date#", data.BookingDate)
                     .Replace("#appointmentno#", data.AppointmentNo)
-                    .Replace("#name#", data.FullName)
-                    .Replace("#contact#", data.Mobile);
+                    .Replace("#name#", email.FullName)
+                    .Replace("#contact#", email.Mobile);
                 SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, email.Email);
             }
             catch { }
@@ -249,5 +306,6 @@ namespace MamjiAdmin.BLL._Services
             {
             }
         }
+
     }
 }

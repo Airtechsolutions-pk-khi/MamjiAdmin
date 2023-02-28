@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mail;
+using WebAPICode.Helpers;
 
 namespace MamjiAdmin.BLL._Services
 {
@@ -257,17 +258,66 @@ namespace MamjiAdmin.BLL._Services
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\orderapproved.txt");
                     UpdateApproved(obj, _env, Body);
+                    try
+                    {
+                        var ds = _service.GetToken(obj.CustomerID);
+                        var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
+                        foreach (var item in getTokens)
+                        {
+                            var token = new PushNotificationBLL();
+                            token.Title = "Mamji Hospital" + " | Order Update";
+                            token.Message = "Your order has been approved and delivered soon";
+                            token.DeviceID = item.Token;
+                            _service.PushNotificationAndroid(token);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                    }
+
                 }
                 else if (obj.StatusID == 100)
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\ordercompleted.txt");
                     UpdateComplete(obj, _env, Body);
+                    try
+                    {
+                        var ds = _service.GetToken(obj.CustomerID);
+                        var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
+                        foreach (var item in getTokens)
+                        {
+                            var token = new PushNotificationBLL();
+                            token.Title = "Mamji Hospital" + " | Order Update";
+                            token.Message = "Your order has been delivered";
+                            token.DeviceID = item.Token;
+                            _service.PushNotificationAndroid(token);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
 
                 else if (obj.StatusID == 103)
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\ordercancelled.txt");
                     UpdateCancelled(obj, _env, Body);
+                    try
+                    {
+                        var ds = _service.GetToken(obj.CustomerID);
+                        var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
+                        foreach (var item in getTokens)
+                        {
+                            var token = new PushNotificationBLL();
+                            token.Title = "Mamji Hospital" + " | Order Update";
+                            token.Message = "Your order has been cancelled";
+                            token.DeviceID = item.Token;
+                            _service.PushNotificationAndroid(token);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
                 obj.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(obj);

@@ -1,8 +1,11 @@
 ﻿
 using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MamjiAdmin.Controllers
@@ -11,11 +14,13 @@ namespace MamjiAdmin.Controllers
     public class laboratoryController : ControllerBase
     {
         private readonly IWebHostEnvironment _env;
+        private IHostingEnvironment _hostingEnvironment;
         laboratoryService _service;
-        public laboratoryController(IWebHostEnvironment env)
+        public laboratoryController(IWebHostEnvironment env, IHostingEnvironment environment)
         {
             _service = new laboratoryService();
             _env = env;
+            _hostingEnvironment = environment;
         }
         [HttpGet("all")]
         public List<LaboratoryBLL> GetAll()

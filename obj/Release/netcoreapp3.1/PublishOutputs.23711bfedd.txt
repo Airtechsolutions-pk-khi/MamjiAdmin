@@ -14,6 +14,7 @@ D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.SpaS
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Bcl.HashCode.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Data.SqlClient.dll
+D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.DotNet.PlatformAbstractions.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
@@ -25,6 +26,7 @@ D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Conf
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Configuration.Binder.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.FileProviders.Physical.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.FileSystemGlobbing.dll
@@ -34,8 +36,10 @@ D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Logg
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Logging.Console.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Options.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.PlatformAbstractions.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Primitives.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Identity.Client.dll
+D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Nancy.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\System.CodeDom.dll
 D:\Projects\Mamji\obj\Release\netcoreapp3.1\PubTmp\Out\System.Collections.Immutable.dll

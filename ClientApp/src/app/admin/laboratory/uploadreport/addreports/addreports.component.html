@@ -8,52 +8,42 @@
         <div class="card-header">Report Details</div>
         <div class="card-body">
           <div class="form-row">
-            <div class="form-group col-md-8">
+            <div class="form-group col-md-6">
+
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputlabReferenceNo">Lab Reference#</label>
-                  <input type="text" class="form-control" id=labReferenceNo placeholder="" formControlName="labReferenceNo">
-                  <div *ngIf="f.labReferenceNo.invalid && (f.labReferenceNo.dirty || f.labReferenceNo.touched)" class="alert alert-danger">
-                    <div *ngIf="f.labReferenceNo.errors.required">
-                      Lab Reference No is required.
-                    </div>
-                  </div>
+                  <label class="small mb-1" for="inputUsername">Customer Name</label>
+                  <select class="custom-select" formControlName="customerID">
+
+                    <option [ngValue]="option.customerID" selected="option.customerID == customerID"
+                            *ngFor="let option of CustomerList">
+                      {{option.fullName}}
+                    </option>
+                  </select>
                 </div>
               </div>
-              <!-- <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputcustomerID">Customer Name</label>
-                  <ng-select [items]="CustomerList" bindLabel="fullName" bindValue="customerID" [multiple]="false" placeholder="">
-                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                      <div class="ng-value" *ngFor="let item of items" [value]="items.customerID">
-                        <span class="ng-value-label">{{item.fullName}}</span>
-                        <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                      </div>
-                    </ng-template>
-                  </ng-select>
-                </div>
-              </div> -->
 
+              <label>
+                <input type="file" (change)="pdfOnload($event)" name="image" id='pdf-upload' accept=".pdf" multiple="false" />
+              </label>
+            </div>
 
+            <div class="form-group col-md-6">
               <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label class="small mb-1" for="inputUsername">Customer Name</label>
-                    <select class="custom-select" formControlName="customerID"> 
+                  <label class="small mb-1" for="inputUsername">Diagnostic Catgeory</label>
+                  <select class="custom-select" formControlName="diagnosticCatID">
 
-                <option [ngValue]="option.customerID"  selected="option.customerID == customerID"
-                    *ngFor="let option of CustomerList">
-                    {{option.fullName}}
-                </option>
-            </select>
+                    <option [ngValue]="option.diagnosticCatID" selected="option.diagnosticCatID == diagnosticCatID"
+                            *ngFor="let option of CategoryList">
+                      {{option.categoryName}}
+                    </option>
+                  </select>
                 </div>
-            </div>
+              </div>
 
 
 
-            </div>
-
-            <div class="form-group col-md-4 text-center">
-              <app-imageupload></app-imageupload>
             </div>
           </div>
           <div class="form-row">

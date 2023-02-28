@@ -83,7 +83,7 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@StatusID", data.StatusID);
                 p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdateBy);
                 p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                
+
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_insertUser_Admin", p);
                 return rtn;
@@ -134,6 +134,54 @@ namespace BAL.Repositories
             {
                 return 0;
             }
+        }
+        public int UpdatePermission(PermissionBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[6];
+
+                p[0] = new SqlParameter("@FormName", data.FormName);
+                p[1] = new SqlParameter("@ForAccess", data.FormAccess);
+                p[2] = new SqlParameter("@RoleName", data.RoleName);
+                p[3] = new SqlParameter("@UpdatedBy", data.UpdatedBy);
+                p[4] = new SqlParameter("@UpdatedDate", data.UpdatedDate);
+                p[5] = new SqlParameter("@PermissionID", data.PermissionID);
+
+
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updatepermission_Admin", p);
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public PermissionFormBLL GetPermission(string rn)
+        {
+            try
+            {
+                var _obj = new PermissionBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", rn);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetUserPermissionbyID_Admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<PermissionBLL>>().FirstOrDefault();
+                    }
+                }
+
+                return new PermissionFormBLL();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
         }
     }
 }

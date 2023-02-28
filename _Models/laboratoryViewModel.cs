@@ -13,6 +13,7 @@ namespace MamjiAdmin._Models
         public int LaboratoryID { get; set; }
 
         public int CustomerID { get; set; }
+        public int DiagnoseCatID { get; set; }
 
         public string FullName { get; set; }
         public string LabReferenceNo { get; set; }

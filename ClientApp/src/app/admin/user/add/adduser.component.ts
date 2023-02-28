@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
-import { UserService } from 'src/app/_services/userservice';
+import { UserService } from 'src/app/_services/user.service';
 import { ToastService } from 'src/app/_services/toastservice';
 //import { debug } from 'console';
 

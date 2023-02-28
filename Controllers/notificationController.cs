@@ -1,9 +1,14 @@
 ﻿
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Text;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Nancy.Json;
 
 namespace MamjiAdmin.Controllers
 {

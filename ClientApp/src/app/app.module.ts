@@ -44,8 +44,8 @@ import { SalesuserwiseComponent } from './admin/report/salesuserwise/salesuserwi
 import { SalescustomerwiseComponent } from './admin/report/salescustomerwise/salescustomerwise.component';
 import { SalescategorywiseComponent } from './admin/report/salescategorywise/salescategorywise.component';
 import { SalesitemwiseComponent } from './admin/report/salesitemwise/salesitemwise.component';
-import { OffersComponent } from './admin/settings/offers/offers.component';
-import { AddoffersComponent } from './admin/settings/offers/addoffers/addoffers.component';
+import { PromotionComponent } from './admin/settings/promotion/promotion.component';
+import { AddpromotionComponent } from './admin/settings/promotion/addpromotion/addpromotion.component';
 
 import { ItemsettingsComponent } from './admin/menu/items/itemsettings/itemsettings.component';
 import { ExcelService } from 'src/ExportExcel/excel.service';
@@ -68,6 +68,10 @@ import { AppointmentdetailsComponent } from './admin/reception/appointmentdetail
 
 import { UploadreportComponent } from './admin/laboratory/uploadreport/uploadreport.component';
 import { AddreportsComponent } from './admin/laboratory/uploadreport/addreports/addreports.component';
+
+import { DiagnosticCategoriesComponent } from './admin/laboratory/diagnosticcategories/diagnosticcategories.component';
+import { AddCategoryComponent } from './admin/laboratory/diagnosticcategories/add/addcategory.component';
+
 import { DeliverydetailComponent } from './admin/pharmacy/deliverydetail/deliverydetail.component';
 import { CouponComponent } from './admin/settings/coupon/coupon.component';
 import { AddCouponComponent } from './admin/settings/coupon/addcoupon/addcoupon.component';
@@ -92,8 +96,16 @@ import { UserComponent } from './admin/user/user.component';
 import { AdduserComponent } from './admin/user/add/adduser.component';
 import { HasRoleGuard } from './has-role.guard';
 import { isAbsolute } from 'path';
-import { UserService } from './_services/userservice';
+import { UserService } from './_services/user.service';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { PermissionComponent } from './admin/user/permission/permission.component';
+import { AddComponent } from './admin/user/permission/add/add.component';
+//import { DiagnosticCategoriesComponent } from './admin/laboratory/diagnosticcategories/diagnosticcategories.component';
+
+import { TimeSlotComponent } from './admin/settings/timeslot/timeslot.component';
+import { AddTimeSlotComponent } from './admin/settings/timeslot/add/addtimeslot.component';
+
+import { FormPermissionComponent } from './admin/permission/formpermission.component';
 
 
 @NgModule({
@@ -123,8 +135,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     NgbdDatepickerRangePopup,
     BannerComponent,
     AddbannerComponent,
-    OffersComponent,
-    AddoffersComponent,
+    PromotionComponent,
+    AddpromotionComponent,
     SalesdetailComponent,
     SalescategorywiseComponent,
     SalescustomerwiseComponent,
@@ -162,8 +174,13 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     NotificationComponent,
     AddSpecialityComponent,
     SpecialityComponent,
-
-
+    PermissionComponent,
+    AddComponent,
+    DiagnosticCategoriesComponent,
+    AddCategoryComponent,
+    TimeSlotComponent,
+    AddTimeSlotComponent,
+    FormPermissionComponent
 
   ],
   imports: [
@@ -209,9 +226,9 @@ import { NgApexchartsModule } from 'ng-apexcharts';
           { path: 'settings/banner/add', component: AddbannerComponent },
           { path: 'settings/banner/edit/:id', component: AddbannerComponent },
 
-          { path: 'offers', component: OffersComponent },
-          { path: 'offers/add', component: AddoffersComponent },
-          { path: 'offers/edit/:id', component: AddoffersComponent },
+          { path: 'promotion', component: PromotionComponent },
+          { path: 'promotion/add', component: AddpromotionComponent },
+          { path: 'promotion/edit/:id', component: AddpromotionComponent },
 
           { path: 'report/summary', component: SummaryComponent },
           { path: 'report/salesdetail', component: SalesdetailComponent },
@@ -254,6 +271,11 @@ import { NgApexchartsModule } from 'ng-apexcharts';
           { path: 'laboratory/uploadreport', component: UploadreportComponent },
           { path: 'laboratory/uploadreport/addreports', component: AddreportsComponent },
           { path: 'laboratory/uploadreport/edit/:id', component: AddreportsComponent },
+
+          { path: 'laboratory/diagnosticcategory', component: DiagnosticCategoriesComponent },
+          { path: 'laboratory/diagnosticcategory/add', component: AddCategoryComponent },
+          { path: 'laboratory/diagnosticcategory/edit/:id', component: AddCategoryComponent },
+
           { path: 'pharmacy/deliverydetail', component: DeliverydetailComponent },
 
           { path: 'settings/coupon', component: CouponComponent },
@@ -286,9 +308,19 @@ import { NgApexchartsModule } from 'ng-apexcharts';
           { path: 'user/add', component: AdduserComponent },
           { path: 'user/edit/:id', component: AdduserComponent },
 
+          { path: 'permission', component: PermissionComponent },
+          { path: 'permission/add', component: AddComponent },
+          { path: 'permission/edit/:id', component: AddComponent },
+
           { path: 'settings/speciality', component: SpecialityComponent },
           { path: 'settings/speciality/add', component: AddSpecialityComponent },
           { path: 'settings/speciality/edit/:id', component: AddSpecialityComponent },
+
+          { path: 'settings/timeslot', component: TimeSlotComponent },
+          { path: 'settings/timeslot/add', component: AddTimeSlotComponent },
+          { path: 'settings/timeslot/edit/:id', component: AddTimeSlotComponent },
+
+          { path: 'formpermission', component: FormPermissionComponent }
         ]
       }
     ]),

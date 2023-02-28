@@ -1,13 +1,16 @@
 ﻿
 
 using MamjiAdmin._Models;
+using Nancy.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using WebAPICode.Helpers;
 
@@ -72,8 +75,9 @@ namespace BAL.Repositories
                 return null;
             }
         }
-       
-       
+
+
+
         public int Update(OrdersBLL data)
         {
             try

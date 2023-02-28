@@ -270,7 +270,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--<div class=\"row d-sm-flex align-items-center justify-content-between mb-4\">\r\n    <div class=\"col-md-6\">\r\n        <h1 class=\"h3 mb-0 text-gray-800\">Dashboard</h1>\r\n    </div>\r\n    <div class=\" col-md-6 d-flex justify-content-end\">\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n        <button class=\"btn btn-primary ml-2\" type=\"submit\"  (click)=\"GetDataDashboard()\">Search</button>\r\n\r\n    </div>\r\n</div>-->\r\n<!-- Content Row -->\r\n<div class=\"row\">\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}</div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalSales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Customers</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <!--div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalAppointments}}</div>-->\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Todays Doctor Appointments</div>\r\n            <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalAppointments}}</div>-->\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\"\r\n                         [chart]=\"chartOptions.chart\"\r\n                         [dataLabels]=\"chartOptions.dataLabels\"\r\n                         [plotOptions]=\"chartOptions.plotOptions\"\r\n                         [yaxis]=\"chartOptions.yaxis\"\r\n                         [xaxis]=\"chartOptions.xaxis\"\r\n                         [legend]=\"chartOptions.legend\"\r\n                         [colors]=\"chartOptions.colors\"\r\n                         [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\"\r\n                     [chart]=\"lineChartOptions.chart\"\r\n                     [xaxis]=\"lineChartOptions.xaxis\"\r\n                     [stroke]=\"lineChartOptions.stroke\"\r\n                     [tooltip]=\"lineChartOptions.tooltip\"\r\n                     [dataLabels]=\"lineChartOptions.dataLabels\"\r\n                     [fill]=\"lineChartOptions.fill\"\r\n                     [yaxis]=\"lineChartOptions.yaxis\"\r\n                     [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<!-- Content Row -->\r\n<div class=\"row\">\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}</div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalSales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayNursingAppointments}}</div>\r\n            <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Today Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>\r\n            <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\"\r\n                         [chart]=\"chartOptions.chart\"\r\n                         [dataLabels]=\"chartOptions.dataLabels\"\r\n                         [plotOptions]=\"chartOptions.plotOptions\"\r\n                         [yaxis]=\"chartOptions.yaxis\"\r\n                         [xaxis]=\"chartOptions.xaxis\"\r\n                         [legend]=\"chartOptions.legend\"\r\n                         [colors]=\"chartOptions.colors\"\r\n                         [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\"\r\n                     [chart]=\"lineChartOptions.chart\"\r\n                     [xaxis]=\"lineChartOptions.xaxis\"\r\n                     [stroke]=\"lineChartOptions.stroke\"\r\n                     [tooltip]=\"lineChartOptions.tooltip\"\r\n                     [dataLabels]=\"lineChartOptions.dataLabels\"\r\n                     [fill]=\"lineChartOptions.fill\"\r\n                     [yaxis]=\"lineChartOptions.yaxis\"\r\n                     [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.html":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.html ***!
+  \****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Diagnostic Category</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"categoryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Diagnostic Category Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputcategoryName\">Category Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=categoryName placeholder=\"\" formControlName=\"categoryName\">\r\n                  <div *ngIf=\"f.categoryName.invalid && (f.categoryName.dirty || f.categoryName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.categoryName.errors.required\">\r\n                      Category Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.html":
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.html ***!
+  \*********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Diagnostic Categories</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Categories List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Category\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"CategoryName\">Category Name</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td>{{item.categoryName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.diagnosticCatID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -283,7 +309,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputlabReferenceNo\">Lab Reference#</label>\r\n                  <input type=\"text\" class=\"form-control\" id=labReferenceNo placeholder=\"\" formControlName=\"labReferenceNo\">\r\n                  <div *ngIf=\"f.labReferenceNo.invalid && (f.labReferenceNo.dirty || f.labReferenceNo.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.labReferenceNo.errors.required\">\r\n                      Lab Reference No is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputcustomerID\">Customer Name</label>\r\n                  <ng-select [items]=\"CustomerList\" bindLabel=\"fullName\" bindValue=\"customerID\" [multiple]=\"false\" placeholder=\"\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\" [value]=\"items.customerID\">\r\n                        <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n              </div> -->\r\n\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                    <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                    <select class=\"custom-select\" formControlName=\"customerID\"> \r\n\r\n                <option [ngValue]=\"option.customerID\"  selected=\"option.customerID == customerID\"\r\n                    *ngFor=\"let option of CustomerList\">\r\n                    {{option.fullName}}\r\n                </option>\r\n            </select>\r\n                </div>\r\n            </div>\r\n\r\n\r\n\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                  <select class=\"custom-select\" formControlName=\"customerID\">\r\n\r\n                    <option [ngValue]=\"option.customerID\" selected=\"option.customerID == customerID\"\r\n                            *ngFor=\"let option of CustomerList\">\r\n                      {{option.fullName}}\r\n                    </option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n\r\n              <label>\r\n                <input type=\"file\" (change)=\"pdfOnload($event)\" name=\"image\" id='pdf-upload' accept=\".pdf\" multiple=\"false\" />\r\n              </label>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Catgeory</label>\r\n                  <select class=\"custom-select\" formControlName=\"diagnosticCatID\">\r\n\r\n                    <option [ngValue]=\"option.diagnosticCatID\" selected=\"option.diagnosticCatID == diagnosticCatID\"\r\n                            *ngFor=\"let option of CategoryList\">\r\n                      {{option.categoryName}}\r\n                    </option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n\r\n\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -309,7 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <!-- <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Name is required.\r\n                    </div>\r\n                  </div> -->\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <!-- <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.email.errors.required\">\r\n                          Email is required.\r\n                      </div>\r\n                  </div> -->\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                  <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                </div>\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                  <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Fees</label>\r\n                  <input type=\"number\" class=\"form-control\" id=fees placeholder=\"\" formControlName=\"fees\" [(ngModel)]=\"drProfile.fees\" [ngModelOptions]=\"{standalone: true}\">\r\n                </div>\r\n\r\n\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <br />\r\n                  <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"tile-body p-0 table-responsive \">\r\n                <table class=\"table table-striped\">\r\n                  <thead>\r\n                    <tr class=\"table-header\">\r\n                      <th width=\"20%\">Speciality </th>\r\n                      <th width=\"20%\">Fees </th>\r\n                      <th width=\"40%\">Profile </th>\r\n                      <th width=\"20%\">Action</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let item of  DoctorProfiles\">\r\n\r\n                      <td>\r\n                        {{item.name}}\r\n                      </td>\r\n                      <td>\r\n                        {{item.fees}}\r\n                      </td>\r\n                      <td> {{item.profile}} </td>\r\n\r\n                      <td>\r\n                        <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                      </td>\r\n                    </tr>\r\n\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n              <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n              <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n              <ng-select [items]=\"TimeList\" bindLabel=\"name\" [multiple]=\"true\" bindValue=\"name\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <br />\r\n              <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n              <thead>\r\n                <tr class=\"table-header\">\r\n                  <th width=\"20%\">ID </th>\r\n                  <th width=\"20%\">Speciality </th>\r\n                  <th width=\"20%\">Days </th>\r\n                  <th width=\"20%\">Timeslot</th>\r\n                  <th width=\"20%\">Action</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                  <td>\r\n                    {{item.specialistID}}\r\n\r\n                  </td>\r\n                  <td>\r\n                    {{item.name}}\r\n\r\n                  </td>\r\n                  <td> {{item.dayName}} </td>\r\n                  <td> {{item.timeSlot}} </td>\r\n\r\n                  <td>\r\n                    <i (click)=\"RemoveChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                  </td>\r\n                </tr>\r\n\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <!-- <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Name is required.\r\n                    </div>\r\n                  </div> -->\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <!-- <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.email.errors.required\">\r\n                          Email is required.\r\n                      </div>\r\n                  </div> -->\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                  <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                </div>\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                  <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n\r\n                <!--<div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Fees</label>\r\n                  <input type=\"number\" class=\"form-control\" id=fees placeholder=\"\" formControlName=\"fees\" [(ngModel)]=\"drProfile.fees\" [ngModelOptions]=\"{standalone: true}\">\r\n                </div>-->\r\n\r\n\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <br />\r\n                  <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"tile-body p-0 table-responsive \">\r\n                <table class=\"table table-striped\">\r\n                  <thead>\r\n                    <tr class=\"table-header\">\r\n                      <th width=\"20%\">Speciality </th>\r\n                      <!--<th width=\"20%\">Fees </th>-->\r\n                      <th width=\"40%\">Profile </th>\r\n                      <th width=\"20%\">Action</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let item of  DoctorProfiles\">\r\n\r\n                      <td>\r\n                        {{item.name}}\r\n                      </td>\r\n                      <!--<td>\r\n                        {{item.fees}}\r\n                      </td>-->\r\n                      <td> {{item.profile}} </td>\r\n\r\n                      <td>\r\n                        <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                      </td>\r\n                    </tr>\r\n\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n              <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n              <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n              <ng-select [items]=\"TimeList\" bindLabel=\"name\" [multiple]=\"true\" bindValue=\"name\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <br />\r\n              <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n              <thead>\r\n                <tr class=\"table-header\">\r\n                  <th width=\"20%\">ID </th>\r\n                  <th width=\"20%\">Speciality </th>\r\n                  <th width=\"20%\">Days </th>\r\n                  <th width=\"20%\">Timeslot</th>\r\n                  <th width=\"20%\">Action</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                  <td>\r\n                    {{item.specialistID}}\r\n\r\n                  </td>\r\n                  <td>\r\n                    {{item.name}}\r\n\r\n                  </td>\r\n                  <td> {{item.dayName}} </td>\r\n                  <td> {{item.timeSlot}} </td>\r\n\r\n                  <td>\r\n                    <i (click)=\"RemoveChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                  </td>\r\n                </tr>\r\n\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -452,7 +478,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <!--<div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />-->\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Notification Date </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status</th>\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.isRead === 0, 'btn-danger':item.isRead !== 0 }\" class=\"btn btn-sm\" [result]=\"item.isRead ==0?'UnRead':'Read'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item, 1)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <!--<div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />-->\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Date </th>\r\n            <th width=\"10%\" sortable=\"Status\">Status</th>\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.isRead === 0, 'btn-danger':item.isRead !== 0 }\" class=\"btn btn-sm\" [result]=\"item.isRead ==0?'UnRead':'Read'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item, 1)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -504,7 +530,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Order Details - <span class=\"badge badge-info\"> {{ order.statusID == 100 ? \"Delivered\" : order.statusID==101 ?\"Order confirmed\" : order.statusID == 102? \"Order prepared\" : order.statusID == 103? \" Order out for delivery\" : order.statusID == 104? \"Order Cancelled\" : \"-\" }}</span></h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\">\r\n\r\n            </div>\r\n        </div>\r\n        <hr/>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12 mb-4\" *ngIf=\"order.statusID!=100\">\r\n                <div class=\"card border-left-info shadow mb-4\">\r\n                    <div class=\"card-header border-bottom-0\">Order Status</div>\r\n                    <div class=\"card-body\">\r\n                      <div class=\"\">\r\n                        <!-- <button class=\"btn btn-warning mr-1\" (click)=\"updateOrder(order,102)\" *ngIf=\"order.statusID!=102\">\r\n                          <i class=\"fas fa-check-circle\"></i> Prepared\r\n                        </button> -->\r\n                        <button class=\"btn btn-info mr-1\" (click)=\"updateOrder(order,103)\" *ngIf=\"order.statusID!=103\">\r\n                          <i class=\"fas fa-truck\"></i> Out For Delivery\r\n                        </button>\r\n                        <button class=\"btn btn-success mr-1\" (click)=\"updateOrder(order,100)\" *ngIf=\"order.statusID!=100\">\r\n                          <i class=\"fas fa-people-carry\"></i> Delivered\r\n                        </button>\r\n                        <button class=\"btn btn-danger mr-1\" (click)=\"updateOrder(order,104)\">\r\n                          <i class=\"fas fa-people-carry\"></i> Cancelled\r\n                        </button>\r\n                      </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6 mb-4\">\r\n\r\n                <div class=\"card border-left-success shadow mb-4\">\r\n                    <div class=\"card-body\">\r\n                        <div class=\"card\">\r\n                            <div class=\"card-header border-bottom-0\">Customer Information</div>\r\n\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                      Customer Name\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.name }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                     Email\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.email }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                      Address\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.addressNickName }}</div>\r\n\r\n\r\n\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                    Google Address\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.address }} | Latitude: {{ orderCustomerInfo.latitude }}| Longitude: {{ orderCustomerInfo.longitude }}</div>\r\n\r\n\r\n\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                       Contact Number\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.mobile }}</div>\r\n                            </div>\r\n                            <!-- <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                     Location URL\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">19th Oct 2020</div>\r\n                            </div> -->\r\n\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"card border-left-warning shadow \">\r\n\r\n                    <div class=\"card-body\">\r\n\r\n                        <!-- Report summary card example-->\r\n                        <div class=\"card\">\r\n                            <div class=\"card-header border-bottom-0\">Order Information</div>\r\n\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                           Order No\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderNo }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                           Transaction No\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.transactionNo }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                           Order Type\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderType=='1'?'Home': order.orderType=='2'?'Work':'Other' }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                          Order Date\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderDate | date }}</div>\r\n                            </div>\r\n                            <!-- <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                          Prepared Date\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderPreparedDate | date }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                          Out for Delivery Date\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderOFDDate | date }}</div>\r\n                            </div> -->\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                         Status\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"mr-2\">\r\n                                    {{ order.statusID == 100 ? \"Delivered\" : order.statusID==101 ?\"Order confirmed\" : order.statusID == 102? \"Order prepared\" : order.statusID == 103? \" Order out for delivery\" : order.statusID == 104? \"Order Cancelled\" : \"-\" }}\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6 mb-4\">\r\n                <div class=\"card border-left-danger shadow mb-4\">\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"card\">\r\n                            <div class=\"card-header border-bottom-0\">Billing Information</div>\r\n\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                  Amount Total\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ (order.amountTotal | number : '1.2-2')}}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                  Discount\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.discountAmount | number : '1.2-2'}}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                  Tax\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.tax | number : '1.2-2'}}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                  Service Charges\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.serviceCharges | number : '1.2-2'}}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                           Grand Total\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.grandTotal | number : '1.2-2'}}</div>\r\n                            </div>\r\n\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"card border-left-primary shadow\">\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"tile-body p-0 table-responsive \">\r\n                            <table class=\"table table-striped\">\r\n                                <thead>\r\n                                    <tr class=\"table-header\">\r\n                                        <th width=\"50%\">Name </th>\r\n                                        <th width=\"25\">Quantity</th>\r\n                                        <th width=\"25\">Price</th>\r\n                                    </tr>\r\n                                </thead>\r\n                                <tbody>\r\n                                    <tr *ngFor=\"let item of orderDetails \">\r\n                                        <td> {{item.name}}</td>\r\n                                        <td> {{item.quantity}} </td>\r\n                                        <td> {{item.price}} </td>\r\n                                    </tr>\r\n                                </tbody>\r\n                            </table>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n            </div>\r\n\r\n\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Order Details - <span class=\"badge badge-info\"> {{ order.statusID == 100 ? \"Delivered\" : order.statusID==101 ?\"Order confirmed\" : order.statusID == 102? \"Order prepared\" : order.statusID == 103? \" Order Cancelled\" : order.statusID == 104? \"Order out for delivery\" : \"-\" }}</span></h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\">\r\n\r\n            </div>\r\n        </div>\r\n        <hr/>\r\n        <div class=\"row\">\r\n            <div class=\"col-md-12 mb-4\" *ngIf=\"order.statusID!=100\">\r\n                <div class=\"card border-left-info shadow mb-4\">\r\n                    <div class=\"card-header border-bottom-0\">Order Status</div>\r\n                    <div class=\"card-body\">\r\n                      <div class=\"\">\r\n                         <button class=\"btn btn-warning mr-1\" (click)=\"updateOrder(order,102)\" *ngIf=\"order.statusID!=102\">\r\n                          <i class=\"fas fa-check-circle\"></i> Approved\r\n                        </button> \r\n                        <button class=\"btn btn-info mr-1\" (click)=\"updateOrder(order,104)\" *ngIf=\"order.statusID!=104\">\r\n                          <i class=\"fas fa-truck\"></i> Out For Delivery\r\n                        </button>\r\n                        <button class=\"btn btn-success mr-1\" (click)=\"updateOrder(order,100)\" *ngIf=\"order.statusID!=100\">\r\n                          <i class=\"fas fa-people-carry\"></i> Delivered\r\n                        </button>\r\n                        <button class=\"btn btn-danger mr-1\" (click)=\"updateOrder(order,103)\">\r\n                          <i class=\"fas fa-people-carry\"></i> Cancelled\r\n                        </button>\r\n                      </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6 mb-4\">\r\n\r\n                <div class=\"card border-left-success shadow mb-4\">\r\n                    <div class=\"card-body\">\r\n                        <div class=\"card\">\r\n                            <div class=\"card-header border-bottom-0\">Customer Information</div>\r\n\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                      Customer Name\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.name }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                     Email\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.email }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                      Address\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.addressNickName }}</div>\r\n\r\n\r\n\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                    Google Address\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.address }} | Latitude: {{ orderCustomerInfo.latitude }}| Longitude: {{ orderCustomerInfo.longitude }}</div>\r\n\r\n\r\n\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                       Contact Number\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ orderCustomerInfo.mobile }}</div>\r\n                            </div>\r\n                            <!-- <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                     Location URL\r\n                                    </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">19th Oct 2020</div>\r\n                            </div> -->\r\n\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"card border-left-warning shadow \">\r\n\r\n                    <div class=\"card-body\">\r\n\r\n                        <!-- Report summary card example-->\r\n                        <div class=\"card\">\r\n                            <div class=\"card-header border-bottom-0\">Order Information</div>\r\n\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                           Order No\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderNo }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                           Transaction No\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.transactionNo }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                           Order Type\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderType=='1'?'Home': order.orderType=='2'?'Work':'Other' }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                          Order Date\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderDate | date }}</div>\r\n                            </div>\r\n                            <!-- <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                          Prepared Date\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderPreparedDate | date }}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                          Out for Delivery Date\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.orderOFDDate | date }}</div>\r\n                            </div> -->\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                         Status\r\n                                        </a>\r\n                                    </div>\r\n                                </div>\r\n\r\n                                <div class=\"mr-2\">\r\n                                    {{ order.statusID == 100 ? \"Delivered\" : order.statusID==101 ?\"Order confirmed\" : order.statusID == 102? \"Order prepared\" : order.statusID == 103? \" Order out for delivery\" : order.statusID == 104? \"Order Cancelled\" : \"-\" }}\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6 mb-4\">\r\n                <div class=\"card border-left-danger shadow mb-4\">\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"card\">\r\n                            <div class=\"card-header border-bottom-0\">Billing Information</div>\r\n\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                  Amount Total\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ (order.amountTotal | number : '1.2-2')}}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                  Discount\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.discountAmount | number : '1.2-2'}}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                  Tax\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.tax | number : '1.2-2'}}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                                  Service Charges\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.serviceCharges | number : '1.2-2'}}</div>\r\n                            </div>\r\n                            <div class=\"d-flex align-items-center\">\r\n                                <div class=\"flex-grow-1\">\r\n                                    <div class=\"list-group list-group-flush small\">\r\n                                        <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                           Grand Total\r\n                                </a>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"mr-2\">{{ order.grandTotal | number : '1.2-2'}}</div>\r\n                            </div>\r\n\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"card border-left-primary shadow\">\r\n\r\n                    <div class=\"card-body\">\r\n                        <div class=\"tile-body p-0 table-responsive \">\r\n                            <table class=\"table table-striped\">\r\n                                <thead>\r\n                                    <tr class=\"table-header\">\r\n                                        <th width=\"50%\">Name </th>\r\n                                        <th width=\"25\">Quantity</th>\r\n                                        <th width=\"25\">Price</th>\r\n                                    </tr>\r\n                                </thead>\r\n                                <tbody>\r\n                                    <tr *ngFor=\"let item of orderDetails \">\r\n                                        <td> {{item.name}}</td>\r\n                                        <td> {{item.quantity}} </td>\r\n                                        <td> {{item.price}} </td>\r\n                                    </tr>\r\n                                </tbody>\r\n                            </table>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n            </div>\r\n\r\n\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -556,7 +582,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <!--<div class=\"col-md-3 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n      <!--<button [routerLink]=\"['addappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n        Doctor Appoinment\r\n      </button>-->\r\n      <!--</div>-->\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n            <th width=\"15%\" sortable=\"FullName\"> Patient Name </th>\r\n            <th width=\"10%\" sortable=\"Address\"> Address </th>\r\n            <th width=\"10%\" sortable=\"Email\"> Email </th>\r\n            <th width=\"10%\" sortable=\"Mobile\"> Mobile </th>\r\n            <th width=\"10%\" sortable=\"Fees\"> Fees </th>\r\n            <th width=\"15%\" sortable=\"BookingDate\"> Booking Date </th>\r\n            <th width=\"20%\" sortable=\"Timeslot\"> Time Slot </th>\r\n            <th width=\"20%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n            <th width=\"15%\" sortable=\"Status\"> Status </th>\r\n            <th width=\"10%\">Action</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.appointmentNo}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.email}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.fees}} </td>\r\n            <td> {{item.bookingDate}} </td>\r\n            <td> {{item.timeslot}} </td>\r\n            <td>\r\n              {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 100 ?\"Completed\": \"-\"}}\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.appointmentID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Print(item.appointmentID)\"><i class=\"fas fa-fw fa-print\"></i> </a>-->\r\n              <!--<a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n            </td>\r\n            <!--<td>\r\n              <select class=\"btn btn-danger dropdown form-control\" (change)=\"Status(item)\" id=\"appointmentStatus\" name=\"appointmentStatus\" [(ngModel)]=\"item.appointmentStatus\" style=\" padding-left: 5px;\">\r\n                <option selected></option>\r\n                <option [ngValue]=\"102\">Approved</option>\r\n                <option [ngValue]=\"103\">Cancelled</option>\r\n                <option [ngValue]=\"104\">Completed</option>\r\n              </select>\r\n            </td>-->\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n  function handleDropDownEvents(e) {\r\n    if (e.value == \"CreditCard\") {\r\n      showCreditCardMethod();\r\n    }\r\n    else if (e.value == \"SendPayment\") {\r\n      showSendPaymentMethod();\r\n    }\r\n  }\r\n</script>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <!--<div class=\"col-md-3 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n      <!--<button [routerLink]=\"['addappointment']\" class=\"btn btn-primary mt-4 mr-1\">\r\n        Doctor Appoinment\r\n      </button>-->\r\n      <!--</div>-->\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n            <th width=\"15%\" sortable=\"FullName\"> Patient Name </th>\r\n            <th width=\"10%\" sortable=\"Address\"> Address </th>\r\n            <th width=\"10%\" sortable=\"Email\"> Email </th>\r\n            <th width=\"10%\" sortable=\"Mobile\"> Mobile </th>\r\n            <!--<th width=\"10%\" sortable=\"Fees\"> Fees </th>-->\r\n            <th width=\"15%\" sortable=\"BookingDate\"> Booking Date </th>\r\n            <th width=\"20%\" sortable=\"Timeslot\"> Time Slot </th>\r\n            <th width=\"20%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n            <th width=\"15%\" sortable=\"Status\"> Status </th>\r\n            <th width=\"10%\">Action</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.appointmentNo}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.email}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <!--<td> {{item.fees}} </td>-->\r\n            <td> {{item.bookingDate}} </td>\r\n            <td> {{item.timeslot}} </td>\r\n            <td>\r\n              {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 100 ?\"Completed\": \"-\"}}\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.appointmentID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Print(item.appointmentID)\"><i class=\"fas fa-fw fa-print\"></i> </a>-->\r\n              <!--<a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n            </td>\r\n            <!--<td>\r\n              <select class=\"btn btn-danger dropdown form-control\" (change)=\"Status(item)\" id=\"appointmentStatus\" name=\"appointmentStatus\" [(ngModel)]=\"item.appointmentStatus\" style=\" padding-left: 5px;\">\r\n                <option selected></option>\r\n                <option [ngValue]=\"102\">Approved</option>\r\n                <option [ngValue]=\"103\">Cancelled</option>\r\n                <option [ngValue]=\"104\">Completed</option>\r\n              </select>\r\n            </td>-->\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n  function handleDropDownEvents(e) {\r\n    if (e.value == \"CreditCard\") {\r\n      showCreditCardMethod();\r\n    }\r\n    else if (e.value == \"SendPayment\") {\r\n      showSendPaymentMethod();\r\n    }\r\n  }\r\n</script>\r\n");
 
 /***/ }),
 
@@ -725,7 +751,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Update Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Discount</label>\r\n                <input type=\"text\" class=\"form-control\" id=discount placeholder=\"\" formControlName=\"discount\">\r\n                <div *ngIf=\"f.discount.invalid && (f.discount.dirty || f.discount.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.discount.errors.required\">\r\n                    Discount is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">DeliveryCharges</label>\r\n                  <input type=\"text\" class=\"form-control\" id=deliveryCharges placeholder=\"\" formControlName=\"deliveryCharges\">\r\n                  <div *ngIf=\"f.deliveryCharges.invalid && (f.deliveryCharges.dirty || f.deliveryCharges.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.deliveryCharges.errors.required\">\r\n                      Delivery Charges is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Tax</label>\r\n                <input type=\"text\" class=\"form-control\" id=tax placeholder=\"\" formControlName=\"tax\">\r\n                <div *ngIf=\"f.tax.invalid && (f.tax.dirty || f.tax.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.tax.errors.required\">\r\n                    Tax is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Minimum Order Amount</label>\r\n                  <input type=\"text\" class=\"form-control\" id=minimumOrderAmount placeholder=\"\" formControlName=\"minimumOrderAmount\">\r\n                  <div *ngIf=\"f.minimumOrderAmount.invalid && (f.minimumOrderAmount.dirty || f.minimumOrderAmount.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.minimumOrderAmount.errors.required\">\r\n                      Minimum Order Amount is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Update Pharmacy Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Pharmacy Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Discount</label>\r\n                <input type=\"text\" class=\"form-control\" id=discount placeholder=\"\" formControlName=\"discount\">\r\n                <div *ngIf=\"f.discount.invalid && (f.discount.dirty || f.discount.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.discount.errors.required\">\r\n                    Discount is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">DeliveryCharges</label>\r\n                  <input type=\"text\" class=\"form-control\" id=deliveryCharges placeholder=\"\" formControlName=\"deliveryCharges\">\r\n                  <div *ngIf=\"f.deliveryCharges.invalid && (f.deliveryCharges.dirty || f.deliveryCharges.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.deliveryCharges.errors.required\">\r\n                      Delivery Charges is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Tax</label>\r\n                <input type=\"text\" class=\"form-control\" id=tax placeholder=\"\" formControlName=\"tax\">\r\n                <div *ngIf=\"f.tax.invalid && (f.tax.dirty || f.tax.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.tax.errors.required\">\r\n                    Tax is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Minimum Order Amount</label>\r\n                  <input type=\"text\" class=\"form-control\" id=minimumOrderAmount placeholder=\"\" formControlName=\"minimumOrderAmount\">\r\n                  <div *ngIf=\"f.minimumOrderAmount.invalid && (f.minimumOrderAmount.dirty || f.minimumOrderAmount.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.minimumOrderAmount.errors.required\">\r\n                      Minimum Order Amount is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -859,10 +885,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/offers/addoffers/addoffers.component.html":
-/*!****************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/offers/addoffers/addoffers.component.html ***!
-  \****************************************************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/promotion/addpromotion/addpromotion.component.html":
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/promotion/addpromotion/addpromotion.component.html ***!
+  \*************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -872,10 +898,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/offers/offers.component.html":
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/offers/offers.component.html ***!
-  \***************************************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/promotion/promotion.component.html":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/promotion/promotion.component.html ***!
+  \*********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -894,7 +920,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Speciality</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"specialityForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Speciality Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Speciality Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Speciality Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Speciality</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"specialityForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Speciality Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Speciality Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Speciality Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Speciality Urdu Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=urduName placeholder=\"\" formControlName=\"urduName\">\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -907,7 +933,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Doctor Specialities</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Specialities List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-4 text-right\"style=\"padding-top: 25px;\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Speciality\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.specialistID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Doctor Specialities</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Specialities List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-4 text-right\"style=\"padding-top: 25px;\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Speciality\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"urduName\" (sort)=\"onSort($event)\"> Urdu Name </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.urduName}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.specialistID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/timeslot/add/addtimeslot.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/timeslot/add/addtimeslot.component.html ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add TimeSlot</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"timeslotForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Add TimeSlot</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Time Slot</label>\r\n                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                <label style=\"color:red\">Note: Time should be type in this format e.g: 10:00 AM - 11:00 AM</label>\r\n                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.name.errors.required\">\r\n                    Time Slot is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/timeslot/timeslot.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/timeslot/timeslot.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Time Slots</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Time Slot's List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-4 text-right\"style=\"padding-top: 25px;\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add TimeSlot\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> TimeSlot </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">  \r\n                        <td> {{item.timeSlot}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.timeSlotID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -921,6 +973,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add User</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"userForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">User Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n               \r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">User Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=userName placeholder=\"\" formControlName=\"userName\">\r\n                  <div *ngIf=\"f.userName.invalid && (f.userName.dirty || f.userName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.userName.errors.required\">\r\n                      User Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n               \r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                  <input type=\"password\" class=\"form-control\" id=password placeholder=\"\" formControlName=\"password\">\r\n                  <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.password.errors.required\">\r\n                      Password is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n            </div>\r\n            <div class=\"form-group col-md-6 \">\r\n               \r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.email.errors.required\">\r\n                      Email is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n           \r\n            <div class=\"form-group col-md-12\">\r\n              \r\n              <label class=\"small mb-1\" for=\"inputLastName\">Role</label>\r\n              <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <option selected disabled> -- Please Select -- </option>\r\n                <option>Super Admin</option>\r\n                <option>Admin</option>\r\n                <option>Pharmacy</option>\r\n              </select>\r\n            \r\n            </div>\r\n          </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/permission/add/add.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/permission/add/add.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Permission</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"permissionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Permission Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Role Name</label>\r\n                <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                  <option selected disabled> -- Please Select -- </option>\r\n                  <option value=\"SuperAdmin\">Super Admin</option>\r\n                  <option value=\"Admin\">Admin</option>\r\n                  <option value=\"Reception\">Reception</option>\r\n                  <option value=\"Laboratory\">Laboratory</option>\r\n                  <option value=\"Pharmacy\">Pharmacy</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6 \">\r\n              <button class=\"btn btn-primary\" type=\"submit\" style=\"margin: 25px;\">Load</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Notification</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"notification\" formControlName=\"notification\">\r\n                <label class=\"custom-control-label\" for=\"notification\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Manage Doctor</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"manageDoctor\" formControlName=\"manageDoctor\">\r\n                <label class=\"custom-control-label\" for=\"manageDoctor\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">User</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"user\" formControlName=\"user\">\r\n                <label class=\"custom-control-label\" for=\"user\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Pharmacy</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" formControlName=\"pharmacy\">\r\n                <label class=\"custom-control-label\" for=\"pharmacy\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reception</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reception\" formControlName=\"reception\">\r\n                <label class=\"custom-control-label\" for=\"reception\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Diagnostic</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"diagnostic\" formControlName=\"diagnostic\">\r\n                <label class=\"custom-control-label\" for=\"diagnostic\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reports</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reports\" formControlName=\"reports\">\r\n                <label class=\"custom-control-label\" for=\"reports\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Settings</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"settings\" formControlName=\"settings\">\r\n                <label class=\"custom-control-label\" for=\"settings\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/permission/permission.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/permission/permission.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Permission</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Permission List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 form-group text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Permission\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> Role Name </th>\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <td>{{item.password}}</td>\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item.id)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1024,7 +1102,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"type === 'Admin' \">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Manage Doctors</span>\r\n        </a>\r\n        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n</div>\r\n  <div *ngIf=\"type === 'Admin' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> User Roles</a> -->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"type === 'Pharmacy' || type === 'Admin' \">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Customer Informations</a>\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' || type === 'Laboratory' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Laboratory</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/orders']\">Orders</a> -->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Lab Reports</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/customerinquiry']\">Customer Inquiry</a>-->\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseMedicalService\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Home Nursing</span>\r\n      </a>\r\n      <div id=\"collapseMedicalService\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservicetype']\">Medical Service Type </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservices']\">Medical Services</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/nursingappointment']\">Nursing Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Patients </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Medical Services </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Nursing Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"type === 'Admin' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">General Settings</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"type === 'Admin' \">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Manage Doctors</span>\r\n        </a>\r\n        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n</div>\r\n  <div *ngIf=\"type === 'Admin' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> User Roles</a> -->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/permission']\">Permissions</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"type === 'Pharmacy' || type === 'Admin' \">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Customer Informations</a>\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' || type === 'Laboratory' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!--<div *ngIf=\"type === 'Admin' || type === 'Reception' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseMedicalService\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Home Nursing</span>\r\n      </a>\r\n      <div id=\"collapseMedicalService\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservicetype']\">Medical Service Type </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservices']\">Medical Services</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/nursingappointment']\">Nursing Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>-->\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Patients </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Medical Services </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Nursing Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"type === 'Admin' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
 
 /***/ }),
 
@@ -2607,7 +2685,12 @@ let DashboardService = class DashboardService {
         return this._allData$.asObservable();
     }
     getAllData() {
+        debugger;
         return this.http.get(`api/dashboard/all`);
+    }
+    getChart() {
+        debugger;
+        return this.http.get(`api/dashboard/getcharts`);
     }
 };
 DashboardService.ctorParameters = () => [
@@ -2780,6 +2863,164 @@ DeliveryService = __decorate([
     }),
     __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
 ], DeliveryService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/_services/diagnosticcategories.service.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/_services/diagnosticcategories.service.ts ***!
+  \***********************************************************/
+/*! exports provided: DiagnosticCategoryService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DiagnosticCategoryService", function() { return DiagnosticCategoryService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.categoryName.toLowerCase().includes(term.toLowerCase());
+}
+let DiagnosticCategoryService = class DiagnosticCategoryService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    getById(id) {
+        return this.http.get(`api/diagnostic/diagnostic/${id}`);
+    }
+    getAllData() {
+        const url = `api/diagnostic/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.diagnostic = res;
+                this._data$.next(this.diagnostic);
+                this._allData$.next(this.diagnostic);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.diagnostic, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        return this.http.post('api/diagnostic/insert', data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/diagnostic/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(data) {
+        debugger;
+        return this.http.post(`api/diagnostic/delete`, data);
+    }
+    loadCategory() {
+        return this.http.get(`api/diagnostic/all`);
+    }
+};
+DiagnosticCategoryService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+DiagnosticCategoryService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], DiagnosticCategoryService);
 
 
 
@@ -4535,162 +4776,6 @@ NursingAppointmentService = __decorate([
 
 /***/ }),
 
-/***/ "./src/app/_services/offers.service.ts":
-/*!*********************************************!*\
-  !*** ./src/app/_services/offers.service.ts ***!
-  \*********************************************/
-/*! exports provided: OffersService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OffersService", function() { return OffersService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
-function sort(data, column, direction) {
-    if (direction === '' || column === '') {
-        return data;
-    }
-    else {
-        return [...data].sort((a, b) => {
-            const res = compare(`${a[column]}`, `${b[column]}`);
-            return direction === 'asc' ? res : -res;
-        });
-    }
-}
-function matches(data, term) {
-    debugger;
-    return data.fullName.toLowerCase().includes(term.toLowerCase());
-}
-let OffersService = class OffersService {
-    constructor(http) {
-        this.http = http;
-        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
-        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
-        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
-        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
-        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
-        this._state = {
-            page: 1,
-            pageSize: 10,
-            searchTerm: '',
-            sortColumn: '',
-            sortDirection: ''
-        };
-    }
-    get total$() { return this._total$.asObservable(); }
-    get loading$() { return this._loading$.asObservable(); }
-    get page() { return this._state.page; }
-    get pageSize() { return this._state.pageSize; }
-    get searchTerm() { return this._state.searchTerm; }
-    set page(page) { this._set({ page }); }
-    set pageSize(pageSize) { this._set({ pageSize }); }
-    set searchTerm(searchTerm) { this._set({ searchTerm }); }
-    set sortColumn(sortColumn) { this._set({ sortColumn }); }
-    set sortDirection(sortDirection) { this._set({ sortDirection }); }
-    get data$() {
-        return this._data$.asObservable();
-    }
-    get allData$() {
-        return this._allData$.asObservable();
-    }
-    getById(id, brandId) {
-        return this.http.get(`api/offers/${id}/brand/${brandId}`);
-    }
-    getAllData(brandId) {
-        const url = `api/offers/all/${brandId}`;
-        console.log(url);
-        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
-            this.http.get(url).subscribe(res => {
-                this.offerss = res;
-                this._data$.next(this.offerss);
-                this._allData$.next(this.offerss);
-                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
-                    this._data$.next(result.data);
-                    this._total$.next(result.total);
-                });
-                this._search$.next();
-            });
-    }
-    _set(patch) {
-        Object.assign(this._state, patch);
-        this._search$.next();
-    }
-    _search() {
-        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
-        // 1. sort
-        let sortedData = sort(this.offerss, sortColumn, sortDirection);
-        //// 2. filter
-        sortedData = sortedData.filter(data => matches(data, searchTerm));
-        const total = sortedData.length;
-        // 3. paginate
-        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
-    }
-    clear() {
-        // clear by calling subject.next() without parameters
-        this._search$.next();
-        this._data$.next(null);
-        this._allData$.next(null);
-        this._total$.next(null);
-        this._loading$.next(null);
-        this._state = {
-            page: 1,
-            pageSize: 10,
-            searchTerm: '',
-            sortColumn: '',
-            sortDirection: ''
-        };
-    }
-    insert(data) {
-        debugger;
-        return this.http.post(`api/offers/insert`, data)
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
-            console.log(res);
-            return res;
-        }));
-    }
-    update(updateData) {
-        return this.http.post(`api/offers/update`, updateData)
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
-            console.log(res);
-            return res;
-        }));
-    }
-    delete(updateData) {
-        return this.http.post(`api/offers/delete`, updateData);
-    }
-};
-OffersService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
-];
-OffersService = __decorate([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-        providedIn: 'root'
-    }),
-    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
-], OffersService);
-
-
-
-/***/ }),
-
 /***/ "./src/app/_services/orders.service.ts":
 /*!*********************************************!*\
   !*** ./src/app/_services/orders.service.ts ***!
@@ -4998,6 +5083,163 @@ PrescriptionService = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/_services/promotion.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/_services/promotion.service.ts ***!
+  \************************************************/
+/*! exports provided: PromotionService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PromotionService", function() { return PromotionService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.name.toLowerCase().includes(term.toLowerCase());
+}
+let PromotionService = class PromotionService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    getById(id) {
+        return this.http.get(`api/promotion/promotion/${id}`);
+    }
+    ExportList(promotionID) {
+        return this.http.get('api/promotion/all/${promotionID}');
+    }
+    getAllData() {
+        const url = `api/promotion/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.promotions = res;
+                this._data$.next(this.promotions);
+                this._allData$.next(this.promotions);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.promotions, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        return this.http.post('api/promotion/insert', data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(data) {
+        return this.http.post('api/promotion/update', data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(data) {
+        return this.http.post('api/promotion/delete', data);
+    }
+};
+PromotionService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+PromotionService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], PromotionService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/_services/report.service.ts":
 /*!*********************************************!*\
   !*** ./src/app/_services/report.service.ts ***!
@@ -5287,6 +5529,161 @@ SpecialityService = __decorate([
     }),
     __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
 ], SpecialityService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/_services/timeslot.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/_services/timeslot.service.ts ***!
+  \***********************************************/
+/*! exports provided: TimeSlotService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimeSlotService", function() { return TimeSlotService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.timeSlot.toLowerCase().includes(term.toLowerCase());
+}
+let TimeSlotService = class TimeSlotService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    getById(id) {
+        return this.http.get(`api/timeslot/timeslot/${id}`);
+    }
+    getAllData() {
+        const url = `api/timeslot/all`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.timeslot = res;
+                this._data$.next(this.timeslot);
+                this._allData$.next(this.timeslot);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.timeslot, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        return this.http.post('api/timeslot/insert', data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/timeslot/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(data) {
+        debugger;
+        return this.http.post(`api/timeslot/delete`, data);
+    }
+};
+TimeSlotService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+TimeSlotService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], TimeSlotService);
 
 
 
@@ -6181,72 +6578,72 @@ let DashboardComponent = class DashboardComponent {
         this.router = router;
         this.dashboardSummary = new src_app_models_Dashboard__WEBPACK_IMPORTED_MODULE_2__["DashboardSummary"]();
         this.loading$ = service.loading$;
-        this.chartOptions = {
-            series: [
-                {
-                    name: "Appointment",
-                    data: [5, 3, 7, 9, 2, 8, 11]
-                },
-            ],
-            chart: {
-                height: 350,
-                type: "bar",
-                events: {
-                    click: function (chart, w, e) {
-                        // console.log(chart, w, e)
-                    }
-                }
-            },
-            colors: [
-                "#008FFB",
-                "#00E396",
-                "#FEB019",
-                "#FF4560",
-                "#775DD0",
-                "#546E7A",
-                "#26a69a"
-            ],
-            plotOptions: {
-                bar: {
-                    columnWidth: "45%",
-                    distributed: true
-                }
-            },
-            dataLabels: {
-                enabled: false
-            },
-            legend: {
-                show: false
-            },
-            grid: {
-                show: false
-            },
-            xaxis: {
-                categories: [
-                    ["16/Jan/2023"],
-                    ["17/Jan/2023"],
-                    ["18/Jan/2023"],
-                    ["19/Jan/2023"],
-                    ["20/Jan/2023"],
-                    ["21/Jan/2023"],
-                    ["22/Jan/2023"]
-                ],
-                labels: {
-                    style: {
-                        colors: [
-                            "#008FFB",
-                            "#00E396",
-                            "#FEB019",
-                            "#FF4560",
-                            "#775DD0",
-                            "#546E7A",
-                            "#26a69a"
-                        ],
-                        fontSize: "12px"
-                    }
-                }
-            }
-        };
+        //this.chartOptions = {
+        //  series: [
+        //    {
+        //      name: "Appointment",
+        //      data: [5, 3, 7, 9, 2, 8, 11]
+        //    },
+        //  ],
+        //  chart: {
+        //    height: 350,
+        //    type: "bar",
+        //    events: {
+        //      click: function (chart, w, e) {
+        //        // console.log(chart, w, e)
+        //      }
+        //    }
+        //  },
+        //  colors: [
+        //    "#008FFB",
+        //    "#00E396",
+        //    "#FEB019",
+        //    "#FF4560",
+        //    "#775DD0",
+        //    "#546E7A",
+        //    "#26a69a"
+        //  ],
+        //  plotOptions: {
+        //    bar: {
+        //      columnWidth: "45%",
+        //      distributed: true
+        //    }
+        //  },
+        //  dataLabels: {
+        //    enabled: false
+        //  },
+        //  legend: {
+        //    show: false
+        //  },
+        //  grid: {
+        //    show: false
+        //  },
+        //  xaxis: {
+        //    categories: [
+        //      ["16/Jan/2023"],
+        //      ["17/Jan/2023"],
+        //      ["18/Jan/2023"],
+        //      ["19/Jan/2023"],
+        //      ["20/Jan/2023"],
+        //      ["21/Jan/2023"],
+        //      ["22/Jan/2023"]
+        //    ],
+        //    labels: {
+        //      style: {
+        //        colors: [
+        //          "#008FFB",
+        //          "#00E396",
+        //          "#FEB019",
+        //          "#FF4560",
+        //          "#775DD0",
+        //          "#546E7A",
+        //          "#26a69a"
+        //        ],
+        //        fontSize: "12px"
+        //      }
+        //    }
+        //  }
+        //};
         this.lineChartOptions = {
             series: [
                 {
@@ -6294,10 +6691,36 @@ let DashboardComponent = class DashboardComponent {
     }
     ngOnInit() {
         this.GetDashboard();
+        this.GetChart();
+    }
+    BindTodaysSales(sales, timeSlot) {
+        debugger;
+        this.chartOptions = {
+            series: [
+                {
+                    name: "Sales",
+                    data: sales
+                }
+            ],
+            chart: {
+                height: 300,
+                type: "bar"
+            },
+            xaxis: {
+                categories: timeSlot
+            }
+        };
     }
     GetDashboard() {
+        debugger;
         this.service.getAllData().subscribe((res) => {
             this.dashboardSummary = res[0];
+        });
+    }
+    GetChart() {
+        debugger;
+        this.service.getChart().subscribe((res) => {
+            this.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
         });
     }
 };
@@ -6324,22 +6747,22 @@ DashboardComponent = __decorate([
 
 /***/ }),
 
-/***/ "./src/app/admin/laboratory/uploadreport/addreports/addreports.component.ts":
-/*!**********************************************************************************!*\
-  !*** ./src/app/admin/laboratory/uploadreport/addreports/addreports.component.ts ***!
-  \**********************************************************************************/
-/*! exports provided: AddreportsComponent */
+/***/ "./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.ts":
+/*!************************************************************************************!*\
+  !*** ./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.ts ***!
+  \************************************************************************************/
+/*! exports provided: AddCategoryComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddreportsComponent", function() { return AddreportsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddCategoryComponent", function() { return AddCategoryComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 /* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
-/* harmony import */ var src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/laboratory.service */ "./src/app/_services/laboratory.service.ts");
+/* harmony import */ var src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/diagnosticcategories.service */ "./src/app/_services/diagnosticcategories.service.ts");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6360,14 +6783,14 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-let AddreportsComponent = class AddreportsComponent {
-    constructor(formBuilder, router, route, ls, ts, laboratoryService) {
+let AddCategoryComponent = class AddCategoryComponent {
+    constructor(formBuilder, router, route, ls, ts, categoryService) {
         this.formBuilder = formBuilder;
         this.router = router;
         this.route = route;
         this.ls = ls;
         this.ts = ts;
-        this.laboratoryService = laboratoryService;
+        this.categoryService = categoryService;
         this.submitted = false;
         this.loading = false;
         this.loadingReport = false;
@@ -6375,28 +6798,327 @@ let AddreportsComponent = class AddreportsComponent {
         this.CustomerList = [];
         this.selectedCustomerIds = [];
         this.createForm();
-        this.loadCustomer();
+        //this.loadCustomer();
     }
     ngOnInit() {
         this.setSelectedReport();
     }
-    get f() { return this.reportForm.controls; }
+    get f() { return this.categoryForm.controls; }
     createForm() {
-        this.reportForm = this.formBuilder.group({
-            labReferenceNo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+        this.categoryForm = this.formBuilder.group({
+            categoryName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             statusID: [true],
-            customerID: 0,
-            laboratoryID: [0],
+            diagnosticCatID: [0],
             image: [''],
         });
     }
     editForm(obj) {
         debugger;
-        this.f.customerID.setValue(obj.customerID);
-        this.f.labReferenceNo.setValue(obj.labReferenceNo);
+        this.f.categoryName.setValue(obj.categoryName);
         this.f.image.setValue(obj.image);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
         this.imgComp.imageUrl = obj.image;
+    }
+    setSelectedReport() {
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingReport = true;
+                this.f.diagnosticCatID.setValue(sid);
+                this.categoryService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingReport = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        debugger;
+        this.categoryForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.categoryForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        this.f.image.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.diagnosticCatID.value) === 0) {
+            //Insert customer
+            console.log(JSON.stringify(this.categoryForm.value));
+            this.categoryService.insert(this.categoryForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/laboratory/diagnosticcategory']);
+                }
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update customer
+            this.categoryService.update(this.categoryForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/laboratory/diagnosticcategory']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddCategoryComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"] },
+    { type: src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_5__["DiagnosticCategoryService"] }
+];
+AddCategoryComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddCategoryComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addcategory',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addcategory.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.html")).default,
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"],
+        src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_5__["DiagnosticCategoryService"]])
+], AddCategoryComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.css":
+/*!******************************************************************************************!*\
+  !*** ./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.css ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xhYm9yYXRvcnkvZGlhZ25vc3RpY2NhdGVnb3JpZXMvZGlhZ25vc3RpY2NhdGVnb3JpZXMuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.ts":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.ts ***!
+  \*****************************************************************************************/
+/*! exports provided: DiagnosticCategoriesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DiagnosticCategoriesComponent", function() { return DiagnosticCategoriesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/diagnosticcategories.service */ "./src/app/_services/diagnosticcategories.service.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let DiagnosticCategoriesComponent = class DiagnosticCategoriesComponent {
+    constructor(service, ls, excelService, ts, router) {
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(medicine) {
+        this.router.navigate(["admin/laboratory/diagnosticcategory/edit", medicine]);
+    }
+    Delete(obj) {
+        debugger;
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+};
+DiagnosticCategoriesComponent.ctorParameters = () => [
+    { type: src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_3__["DiagnosticCategoryService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }
+];
+DiagnosticCategoriesComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"],] }]
+};
+DiagnosticCategoriesComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-diagnosticcategories',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./diagnosticcategories.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]],
+        styles: [__importDefault(__webpack_require__(/*! ./diagnosticcategories.component.css */ "./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.css")).default]
+    }),
+    __metadata("design:paramtypes", [src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_3__["DiagnosticCategoryService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+], DiagnosticCategoriesComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/laboratory/uploadreport/addreports/addreports.component.ts":
+/*!**********************************************************************************!*\
+  !*** ./src/app/admin/laboratory/uploadreport/addreports/addreports.component.ts ***!
+  \**********************************************************************************/
+/*! exports provided: AddreportsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddreportsComponent", function() { return AddreportsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/laboratory.service */ "./src/app/_services/laboratory.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var _services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../_services/diagnosticcategories.service */ "./src/app/_services/diagnosticcategories.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+let AddreportsComponent = class AddreportsComponent {
+    constructor(http, formBuilder, router, route, ls, ts, laboratoryService, diagnosticcategoriesService) {
+        this.http = http;
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ls = ls;
+        this.ts = ts;
+        this.laboratoryService = laboratoryService;
+        this.diagnosticcategoriesService = diagnosticcategoriesService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingReport = false;
+        this.ButtonText = "Save";
+        this.CustomerList = [];
+        this.CategoryList = [];
+        this.selectedCustomerIds = [];
+        this.selectedCategoryIds = [];
+        this.Images = [];
+        this.createForm();
+        this.loadCustomer();
+        this.loadCategories();
+    }
+    ngOnInit() {
+        this.setSelectedReport();
+    }
+    pdfOnload(event) {
+        debugger;
+        console;
+        const pdfTatget = event.target;
+        if (typeof FileReader !== 'undefined') {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                this.pdfSrc = e.target.result;
+                this.localPDF = this.pdfSrc;
+            };
+            this.pdfBufferRender = pdfTatget.files[0];
+            reader.readAsArrayBuffer(pdfTatget.files[0]);
+        }
+    }
+    get f() { return this.reportForm.controls; }
+    createForm() {
+        debugger;
+        this.reportForm = this.formBuilder.group({
+            statusID: [true],
+            customerID: 0,
+            diagnosticCatID: 0,
+            laboratoryID: [0],
+            image: this.pdfFile,
+        });
+    }
+    editForm(obj) {
+        debugger;
+        this.f.customerID.setValue(obj.customerID);
+        this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
+        this.f.image.setValue(obj.image);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     }
     setSelectedReport() {
         this.route.paramMap.subscribe(param => {
@@ -6421,7 +7143,7 @@ let AddreportsComponent = class AddreportsComponent {
         }
         this.loading = true;
         this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-        this.f.image.setValue(this.imgComp.imageUrl);
+        //this.f.image.setValue(this.imgComp.imageUrl);
         if (parseInt(this.f.laboratoryID.value) === 0) {
             //Insert customer
             console.log(JSON.stringify(this.reportForm.value));
@@ -6451,18 +7173,32 @@ let AddreportsComponent = class AddreportsComponent {
         }
     }
     loadCustomer() {
+        debugger;
         this.laboratoryService.loadCustomer().subscribe((res) => {
             this.CustomerList = res;
         });
     }
+    loadCategories() {
+        debugger;
+        this.diagnosticcategoriesService.loadCategory().subscribe((res) => {
+            this.CategoryList = res;
+        });
+    }
+    removeImage(obj) {
+        const index = this.Images.indexOf(obj);
+        this.Images.splice(index, 1);
+        this.f.imagesSource.setValue(this.Images);
+    }
 };
 AddreportsComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClient"] },
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"] },
-    { type: src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_5__["LaboratoryService"] }
+    { type: src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_5__["LaboratoryService"] },
+    { type: _services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_7__["DiagnosticCategoryService"] }
 ];
 AddreportsComponent.propDecorators = {
     imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
@@ -6472,12 +7208,14 @@ AddreportsComponent = __decorate([
         selector: 'app-addreports',
         template: __importDefault(__webpack_require__(/*! raw-loader!./addreports.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/uploadreport/addreports/addreports.component.html")).default,
     }),
-    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClient"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"],
-        src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_5__["LaboratoryService"]])
+        src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_5__["LaboratoryService"],
+        _services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_7__["DiagnosticCategoryService"]])
 ], AddreportsComponent);
 
 
@@ -12641,37 +13379,36 @@ MedicalServicetypeComponent = __decorate([
 
 /***/ }),
 
-/***/ "./src/app/admin/settings/offers/addoffers/addoffers.component.css":
-/*!*************************************************************************!*\
-  !*** ./src/app/admin/settings/offers/addoffers/addoffers.component.css ***!
-  \*************************************************************************/
+/***/ "./src/app/admin/settings/promotion/addpromotion/addpromotion.component.css":
+/*!**********************************************************************************!*\
+  !*** ./src/app/admin/settings/promotion/addpromotion/addpromotion.component.css ***!
+  \**********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3NldHRpbmdzL29mZmVycy9hZGRvZmZlcnMvYWRkb2ZmZXJzLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3NldHRpbmdzL3Byb21vdGlvbi9hZGRwcm9tb3Rpb24vYWRkcHJvbW90aW9uLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
-/***/ "./src/app/admin/settings/offers/addoffers/addoffers.component.ts":
-/*!************************************************************************!*\
-  !*** ./src/app/admin/settings/offers/addoffers/addoffers.component.ts ***!
-  \************************************************************************/
-/*! exports provided: AddoffersComponent */
+/***/ "./src/app/admin/settings/promotion/addpromotion/addpromotion.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/app/admin/settings/promotion/addpromotion/addpromotion.component.ts ***!
+  \*********************************************************************************/
+/*! exports provided: AddpromotionComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddoffersComponent", function() { return AddoffersComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddpromotionComponent", function() { return AddpromotionComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 /* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
-/* harmony import */ var src_app_services_offers_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/offers.service */ "./src/app/_services/offers.service.ts");
-/* harmony import */ var src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
+/* harmony import */ var src_app_services_promotion_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/promotion.service */ "./src/app/_services/promotion.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -12691,15 +13428,14 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-
-let AddoffersComponent = class AddoffersComponent {
-    constructor(formBuilder, router, route, ls, ts, offersService) {
+let AddpromotionComponent = class AddpromotionComponent {
+    constructor(formBuilder, router, route, ls, ts, promotion) {
         this.formBuilder = formBuilder;
         this.router = router;
         this.route = route;
         this.ls = ls;
         this.ts = ts;
-        this.offersService = offersService;
+        this.promotion = promotion;
         this.submitted = false;
         this.loading = false;
         this.loadingOffers = false;
@@ -12709,27 +13445,23 @@ let AddoffersComponent = class AddoffersComponent {
     ngOnInit() {
         this.setSelectedOffers();
     }
-    get f() { return this.offersForm.controls; }
+    get f() { return this.promotionForm.controls; }
     createForm() {
-        this.offersForm = this.formBuilder.group({
+        this.promotionForm = this.formBuilder.group({
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             description: [''],
+            discount: [''],
             statusID: [true],
-            offerID: 0,
+            promotionID: 0,
             image: [''],
-            fromDate: [''],
-            toDate: [''],
-            brandID: this.ls.getSelectedBrand().brandID,
-            locationID: null
         });
     }
     editForm(obj) {
         debugger;
         this.f.name.setValue(obj.name);
         this.f.description.setValue(obj.description);
-        this.f.offerID.setValue(obj.offerID);
-        this.f.fromDate.setValue(obj.fromDate);
-        this.f.toDate.setValue(obj.toDate);
+        this.f.discount.setValue(obj.discount);
+        this.f.promotionID.setValue(obj.offerID);
         this.f.image.setValue(obj.image);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
         this.imgComp.imageUrl = obj.image;
@@ -12739,8 +13471,8 @@ let AddoffersComponent = class AddoffersComponent {
             const sid = +param.get('id');
             if (sid) {
                 this.loadingOffers = true;
-                this.f.offerID.setValue(sid);
-                this.offersService.getById(sid, this.f.brandID.value).subscribe(res => {
+                this.f.promotionID.setValue(sid);
+                this.promotion.getById(sid).subscribe(res => {
                     //Set Forms
                     this.editForm(res);
                     this.loadingOffers = false;
@@ -12749,20 +13481,18 @@ let AddoffersComponent = class AddoffersComponent {
         });
     }
     onSubmit() {
-        this.offersForm.markAllAsTouched();
+        this.promotionForm.markAllAsTouched();
         this.submitted = true;
-        if (this.offersForm.invalid) {
+        if (this.promotionForm.invalid) {
             return;
         }
         this.loading = true;
         this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
         this.f.image.setValue(this.imgComp.imageUrl);
-        this.f.fromDate.setValue(this.parseDate(this._datepicker.fromDate));
-        this.f.toDate.setValue(this.parseDate(this._datepicker.toDate));
-        if (parseInt(this.f.offerID.value) === 0) {
+        if (parseInt(this.f.promotionID.value) === 0) {
             //Insert offers
             debugger;
-            this.offersService.insert(this.offersForm.value).subscribe(data => {
+            this.promotion.insert(this.promotionForm.value).subscribe(data => {
                 if (data != 0) {
                     this.ts.showSuccess("Success", "Record added successfully.");
                     this.router.navigate(['/admin/offers']);
@@ -12775,7 +13505,7 @@ let AddoffersComponent = class AddoffersComponent {
         }
         else {
             //Update offers
-            this.offersService.update(this.offersForm.value).subscribe(data => {
+            this.promotion.update(this.promotionForm.value).subscribe(data => {
                 this.loading = false;
                 if (data != 0) {
                     this.ts.showSuccess("Success", "Record updated successfully.");
@@ -12787,57 +13517,52 @@ let AddoffersComponent = class AddoffersComponent {
             });
         }
     }
-    parseDate(obj) {
-        return obj.year + "-" + obj.month + "-" + obj.day;
-        ;
-    }
 };
-AddoffersComponent.ctorParameters = () => [
+AddpromotionComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
-    { type: src_app_services_offers_service__WEBPACK_IMPORTED_MODULE_6__["OffersService"] }
+    { type: src_app_services_promotion_service__WEBPACK_IMPORTED_MODULE_6__["PromotionService"] }
 ];
-AddoffersComponent.propDecorators = {
-    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_7__["NgbdDatepickerRangePopup"], { static: true },] }],
+AddpromotionComponent.propDecorators = {
     imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
 };
-AddoffersComponent = __decorate([
+AddpromotionComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-        selector: 'app-addoffers',
-        template: __importDefault(__webpack_require__(/*! raw-loader!./addoffers.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/offers/addoffers/addoffers.component.html")).default,
-        styles: [__importDefault(__webpack_require__(/*! ./addoffers.component.css */ "./src/app/admin/settings/offers/addoffers/addoffers.component.css")).default]
+        selector: 'app-addpromotion',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addpromotion.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/promotion/addpromotion/addpromotion.component.html")).default,
+        styles: [__importDefault(__webpack_require__(/*! ./addpromotion.component.css */ "./src/app/admin/settings/promotion/addpromotion/addpromotion.component.css")).default]
     }),
     __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
-        src_app_services_offers_service__WEBPACK_IMPORTED_MODULE_6__["OffersService"]])
-], AddoffersComponent);
+        src_app_services_promotion_service__WEBPACK_IMPORTED_MODULE_6__["PromotionService"]])
+], AddpromotionComponent);
 
 
 
 /***/ }),
 
-/***/ "./src/app/admin/settings/offers/offers.component.ts":
-/*!***********************************************************!*\
-  !*** ./src/app/admin/settings/offers/offers.component.ts ***!
-  \***********************************************************/
-/*! exports provided: OffersComponent */
+/***/ "./src/app/admin/settings/promotion/promotion.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/admin/settings/promotion/promotion.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: PromotionComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OffersComponent", function() { return OffersComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PromotionComponent", function() { return PromotionComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
-/* harmony import */ var src_app_services_offers_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/offers.service */ "./src/app/_services/offers.service.ts");
+/* harmony import */ var src_app_services_promotion_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/promotion.service */ "./src/app/_services/promotion.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -12856,9 +13581,8 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-let OffersComponent = class OffersComponent {
+let PromotionComponent = class PromotionComponent {
     constructor(service, ls, ts, router) {
-        //this.selectedBrand = this.ls.getSelectedBrand().brandID;
         this.service = service;
         this.ls = ls;
         this.ts = ts;
@@ -12870,7 +13594,7 @@ let OffersComponent = class OffersComponent {
         this.getData();
     }
     getData() {
-        this.service.getAllData(this.selectedBrand);
+        this.service.getAllData();
         this.data$ = this.service.data$;
         this.total$ = this.service.total$;
         this.loading$ = this.service.loading$;
@@ -12885,7 +13609,7 @@ let OffersComponent = class OffersComponent {
         this.service.sortDirection = direction;
     }
     Edit(offers) {
-        this.router.navigate(["admin/offers/edit", offers]);
+        this.router.navigate(["admin/promotion/edit", offers]);
     }
     Delete(obj) {
         this.service.delete(obj).subscribe((res) => {
@@ -12900,26 +13624,26 @@ let OffersComponent = class OffersComponent {
         });
     }
 };
-OffersComponent.ctorParameters = () => [
-    { type: src_app_services_offers_service__WEBPACK_IMPORTED_MODULE_5__["OffersService"] },
+PromotionComponent.ctorParameters = () => [
+    { type: src_app_services_promotion_service__WEBPACK_IMPORTED_MODULE_5__["PromotionService"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
-OffersComponent.propDecorators = {
+PromotionComponent.propDecorators = {
     headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
 };
-OffersComponent = __decorate([
+PromotionComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-        selector: 'app-offers',
-        template: __importDefault(__webpack_require__(/*! raw-loader!./offers.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/offers/offers.component.html")).default,
+        selector: 'app-promotion',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./promotion.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/promotion/promotion.component.html")).default,
         providers: []
     }),
-    __metadata("design:paramtypes", [src_app_services_offers_service__WEBPACK_IMPORTED_MODULE_5__["OffersService"],
+    __metadata("design:paramtypes", [src_app_services_promotion_service__WEBPACK_IMPORTED_MODULE_5__["PromotionService"],
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
-], OffersComponent);
+], PromotionComponent);
 
 
 
@@ -12983,6 +13707,7 @@ let AddSpecialityComponent = class AddSpecialityComponent {
     createForm() {
         this.specialityForm = this.formBuilder.group({
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            urduName: [''],
             statusID: [true],
             specialistID: 0,
             image: [''],
@@ -12991,6 +13716,7 @@ let AddSpecialityComponent = class AddSpecialityComponent {
     editForm(obj) {
         debugger;
         this.f.name.setValue(obj.name);
+        this.f.urduName.setValue(obj.urduName);
         this.f.specialistID.setValue(obj.specialistID);
         this.f.image.setValue(obj.image);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
@@ -13181,6 +13907,258 @@ SpecialityComponent = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/admin/settings/timeslot/add/addtimeslot.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/admin/settings/timeslot/add/addtimeslot.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: AddTimeSlotComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddTimeSlotComponent", function() { return AddTimeSlotComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var _services_timeslot_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../_services/timeslot.service */ "./src/app/_services/timeslot.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let AddTimeSlotComponent = class AddTimeSlotComponent {
+    constructor(formBuilder, router, route, ls, ts, services) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ls = ls;
+        this.ts = ts;
+        this.services = services;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingService = false;
+        this.ButtonText = "Save";
+        this.NursingTypeActive = [];
+        this.createForm();
+    }
+    ngOnInit() {
+        this.setSelectedCustomer();
+    }
+    get f() { return this.timeslotForm.controls; }
+    createForm() {
+        this.timeslotForm = this.formBuilder.group({
+            timeSlot: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            statusID: [true],
+            timeSlotID: 0,
+        });
+    }
+    editForm(obj) {
+        debugger;
+        this.f.timeSlot.setValue(obj.timeSlot);
+        this.f.timeSlotID.setValue(obj.timeSlotID);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    }
+    setSelectedCustomer() {
+        debugger;
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingService = true;
+                this.f.timeSlotID.setValue(sid);
+                this.services.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingService = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        debugger;
+        this.timeslotForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.timeslotForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        if (parseInt(this.f.timeSlotID.value) === 0) {
+            //Insert banner
+            console.log(JSON.stringify(this.timeslotForm.value));
+            this.services.insert(this.timeslotForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/settings/speciality']);
+                }
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update banner
+            this.services.update(this.timeslotForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/settings/speciality']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddTimeSlotComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: _services_timeslot_service__WEBPACK_IMPORTED_MODULE_6__["TimeSlotService"] }
+];
+AddTimeSlotComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddTimeSlotComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addtimeslot',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addtimeslot.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/timeslot/add/addtimeslot.component.html")).default,
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        _services_timeslot_service__WEBPACK_IMPORTED_MODULE_6__["TimeSlotService"]])
+], AddTimeSlotComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/settings/timeslot/timeslot.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/admin/settings/timeslot/timeslot.component.ts ***!
+  \***************************************************************/
+/*! exports provided: TimeSlotComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimeSlotComponent", function() { return TimeSlotComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var _services_timeslot_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../_services/timeslot.service */ "./src/app/_services/timeslot.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+let TimeSlotComponent = class TimeSlotComponent {
+    constructor(service, ls, ts, router) {
+        /*     this.selectedBrand =this.ls.getSelectedBrand().brandID;*/
+        this.service = service;
+        this.ls = ls;
+        this.ts = ts;
+        this.router = router;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(service) {
+        this.router.navigate(["admin/settings/timeslot/edit", service]);
+    }
+    Delete(obj) {
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+};
+TimeSlotComponent.ctorParameters = () => [
+    { type: _services_timeslot_service__WEBPACK_IMPORTED_MODULE_5__["TimeSlotService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
+TimeSlotComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+TimeSlotComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-timeslot',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./timeslot.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/timeslot/timeslot.component.html")).default,
+        providers: []
+    }),
+    __metadata("design:paramtypes", [_services_timeslot_service__WEBPACK_IMPORTED_MODULE_5__["TimeSlotService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+], TimeSlotComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/admin/user/add/adduser.component.ts":
 /*!*****************************************************!*\
   !*** ./src/app/admin/user/add/adduser.component.ts ***!
@@ -13330,6 +14308,278 @@ AdduserComponent = __decorate([
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"],
         src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
 ], AdduserComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/user/permission/add/add.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/admin/user/permission/add/add.component.ts ***!
+  \************************************************************/
+/*! exports provided: AddComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddComponent", function() { return AddComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/userservice */ "./src/app/_services/userservice.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+//import { debug } from 'console';
+let AddComponent = class AddComponent {
+    constructor(formBuilder, router, route, ls, ts, userService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ls = ls;
+        this.ts = ts;
+        this.userService = userService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingCustomer = false;
+        this.ButtonText = "Save";
+        this.createForm();
+    }
+    ngOnInit() {
+        this.setSelectedCustomer();
+    }
+    get f() { return this.userForm.controls; }
+    createForm() {
+        this.userForm = this.formBuilder.group({
+            userName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            statusID: [true],
+            password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            id: 0,
+        });
+    }
+    editForm(obj) {
+        this.f.userName.setValue(obj.userName);
+        this.f.email.setValue(obj.email);
+        this.f.password.setValue(obj.password);
+        this.f.type.setValue(obj.type);
+        this.f.id.setValue(obj.id);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    }
+    setSelectedCustomer() {
+        debugger;
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingCustomer = true;
+                this.f.id.setValue(sid);
+                this.userService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingCustomer = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        debugger;
+        this.userForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.userForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        if (parseInt(this.f.id.value) === 0) {
+            //Insert customer
+            console.log(JSON.stringify(this.userForm.value));
+            this.userService.insert(this.userForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/user']);
+                }
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update customer
+            this.userService.update(this.userForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/user']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"] },
+    { type: src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
+];
+AddComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-add',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./add.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/permission/add/add.component.html")).default,
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"],
+        src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
+], AddComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/user/permission/permission.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/admin/user/permission/permission.component.ts ***!
+  \***************************************************************/
+/*! exports provided: PermissionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PermissionComponent", function() { return PermissionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/userservice */ "./src/app/_services/userservice.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let PermissionComponent = class PermissionComponent {
+    constructor(service, ls, excelService, ts, router) {
+        //this.selectedBrand =this.ls.getSelectedBrand().brandID;
+        this.service = service;
+        this.ls = ls;
+        this.excelService = excelService;
+        this.ts = ts;
+        this.router = router;
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList().subscribe((res) => {
+            this.excelService.exportAsExcelFile(res, 'Report_Export');
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(customers) {
+        this.router.navigate(["admin/user/edit", customers]);
+    }
+    Delete(obj) {
+        debugger;
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    Deactive(id, rowVersion) {
+    }
+};
+PermissionComponent.ctorParameters = () => [
+    { type: src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+PermissionComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+PermissionComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-permission',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./permission.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/permission/permission.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+], PermissionComponent);
 
 
 
@@ -13541,8 +14791,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./admin/report/salescustomerwise/salescustomerwise.component */ "./src/app/admin/report/salescustomerwise/salescustomerwise.component.ts");
 /* harmony import */ var _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./admin/report/salescategorywise/salescategorywise.component */ "./src/app/admin/report/salescategorywise/salescategorywise.component.ts");
 /* harmony import */ var _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./admin/report/salesitemwise/salesitemwise.component */ "./src/app/admin/report/salesitemwise/salesitemwise.component.ts");
-/* harmony import */ var _admin_settings_offers_offers_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./admin/settings/offers/offers.component */ "./src/app/admin/settings/offers/offers.component.ts");
-/* harmony import */ var _admin_settings_offers_addoffers_addoffers_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./admin/settings/offers/addoffers/addoffers.component */ "./src/app/admin/settings/offers/addoffers/addoffers.component.ts");
+/* harmony import */ var _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./admin/settings/promotion/promotion.component */ "./src/app/admin/settings/promotion/promotion.component.ts");
+/* harmony import */ var _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./admin/settings/promotion/addpromotion/addpromotion.component */ "./src/app/admin/settings/promotion/addpromotion/addpromotion.component.ts");
 /* harmony import */ var _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./admin/menu/items/itemsettings/itemsettings.component */ "./src/app/admin/menu/items/itemsettings/itemsettings.component.ts");
 /* harmony import */ var _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./admin/settings/delivery/delivery.component */ "./src/app/admin/settings/delivery/delivery.component.ts");
 /* harmony import */ var _admin_settings_Delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./admin/settings/Delivery/adddelivery/adddelivery.component */ "./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.ts");
@@ -13558,26 +14808,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./admin/reception/appointmentdetails/appointmentdetails.component */ "./src/app/admin/reception/appointmentdetails/appointmentdetails.component.ts");
 /* harmony import */ var _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./admin/laboratory/uploadreport/uploadreport.component */ "./src/app/admin/laboratory/uploadreport/uploadreport.component.ts");
 /* harmony import */ var _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./admin/laboratory/uploadreport/addreports/addreports.component */ "./src/app/admin/laboratory/uploadreport/addreports/addreports.component.ts");
-/* harmony import */ var _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./admin/pharmacy/deliverydetail/deliverydetail.component */ "./src/app/admin/pharmacy/deliverydetail/deliverydetail.component.ts");
-/* harmony import */ var _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./admin/settings/coupon/coupon.component */ "./src/app/admin/settings/coupon/coupon.component.ts");
-/* harmony import */ var _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./admin/settings/coupon/addcoupon/addcoupon.component */ "./src/app/admin/settings/coupon/addcoupon/addcoupon.component.ts");
-/* harmony import */ var _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./admin/pharmacy/medicine/medicine.component */ "./src/app/admin/pharmacy/medicine/medicine.component.ts");
-/* harmony import */ var _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./admin/pharmacy/medicine/addmedicines/addmedicine.component */ "./src/app/admin/pharmacy/medicine/addmedicines/addmedicine.component.ts");
-/* harmony import */ var _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./admin/pharmacy/orders/orders.component */ "./src/app/admin/pharmacy/orders/orders.component.ts");
-/* harmony import */ var _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./admin/pharmacy/orderdetails/orderdetails.component */ "./src/app/admin/pharmacy/orderdetails/orderdetails.component.ts");
-/* harmony import */ var _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./admin/settings/medicalservices/service.component */ "./src/app/admin/settings/medicalservices/service.component.ts");
-/* harmony import */ var _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./admin/settings/medicalservices/add/addservice.component */ "./src/app/admin/settings/medicalservices/add/addservice.component.ts");
-/* harmony import */ var _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./admin/settings/medicalservicetype/medicalservicetype.component */ "./src/app/admin/settings/medicalservicetype/medicalservicetype.component.ts");
-/* harmony import */ var _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./admin/settings/medicalservicetype/add/addmedicalservicetype.component */ "./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.ts");
-/* harmony import */ var _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./admin/reception/nursingappointment/nursingappointment.component */ "./src/app/admin/reception/nursingappointment/nursingappointment.component.ts");
-/* harmony import */ var _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component */ "./src/app/admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component.ts");
-/* harmony import */ var _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./admin/notification/notification.component */ "./src/app/admin/notification/notification.component.ts");
-/* harmony import */ var _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ././admin/settings/speciality/speciality.component */ "./src/app/admin/settings/speciality/speciality.component.ts");
-/* harmony import */ var _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ././admin/settings/speciality/add/addspeciality.component */ "./src/app/admin/settings/speciality/add/addspeciality.component.ts");
-/* harmony import */ var _admin_user_user_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./admin/user/user.component */ "./src/app/admin/user/user.component.ts");
-/* harmony import */ var _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./admin/user/add/adduser.component */ "./src/app/admin/user/add/adduser.component.ts");
-/* harmony import */ var _has_role_guard__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./has-role.guard */ "./src/app/has-role.guard.ts");
-/* harmony import */ var ng_apexcharts__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ng-apexcharts */ "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
+/* harmony import */ var _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./admin/laboratory/diagnosticcategories/diagnosticcategories.component */ "./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.ts");
+/* harmony import */ var _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./admin/laboratory/diagnosticcategories/add/addcategory.component */ "./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.ts");
+/* harmony import */ var _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./admin/pharmacy/deliverydetail/deliverydetail.component */ "./src/app/admin/pharmacy/deliverydetail/deliverydetail.component.ts");
+/* harmony import */ var _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./admin/settings/coupon/coupon.component */ "./src/app/admin/settings/coupon/coupon.component.ts");
+/* harmony import */ var _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./admin/settings/coupon/addcoupon/addcoupon.component */ "./src/app/admin/settings/coupon/addcoupon/addcoupon.component.ts");
+/* harmony import */ var _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./admin/pharmacy/medicine/medicine.component */ "./src/app/admin/pharmacy/medicine/medicine.component.ts");
+/* harmony import */ var _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./admin/pharmacy/medicine/addmedicines/addmedicine.component */ "./src/app/admin/pharmacy/medicine/addmedicines/addmedicine.component.ts");
+/* harmony import */ var _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./admin/pharmacy/orders/orders.component */ "./src/app/admin/pharmacy/orders/orders.component.ts");
+/* harmony import */ var _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./admin/pharmacy/orderdetails/orderdetails.component */ "./src/app/admin/pharmacy/orderdetails/orderdetails.component.ts");
+/* harmony import */ var _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./admin/settings/medicalservices/service.component */ "./src/app/admin/settings/medicalservices/service.component.ts");
+/* harmony import */ var _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./admin/settings/medicalservices/add/addservice.component */ "./src/app/admin/settings/medicalservices/add/addservice.component.ts");
+/* harmony import */ var _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./admin/settings/medicalservicetype/medicalservicetype.component */ "./src/app/admin/settings/medicalservicetype/medicalservicetype.component.ts");
+/* harmony import */ var _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./admin/settings/medicalservicetype/add/addmedicalservicetype.component */ "./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.ts");
+/* harmony import */ var _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./admin/reception/nursingappointment/nursingappointment.component */ "./src/app/admin/reception/nursingappointment/nursingappointment.component.ts");
+/* harmony import */ var _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component */ "./src/app/admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component.ts");
+/* harmony import */ var _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./admin/notification/notification.component */ "./src/app/admin/notification/notification.component.ts");
+/* harmony import */ var _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ././admin/settings/speciality/speciality.component */ "./src/app/admin/settings/speciality/speciality.component.ts");
+/* harmony import */ var _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ././admin/settings/speciality/add/addspeciality.component */ "./src/app/admin/settings/speciality/add/addspeciality.component.ts");
+/* harmony import */ var _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./admin/user/user.component */ "./src/app/admin/user/user.component.ts");
+/* harmony import */ var _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./admin/user/add/adduser.component */ "./src/app/admin/user/add/adduser.component.ts");
+/* harmony import */ var _has_role_guard__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./has-role.guard */ "./src/app/has-role.guard.ts");
+/* harmony import */ var ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ng-apexcharts */ "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
+/* harmony import */ var _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./admin/user/permission/permission.component */ "./src/app/admin/user/permission/permission.component.ts");
+/* harmony import */ var _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./admin/user/permission/add/add.component */ "./src/app/admin/user/permission/add/add.component.ts");
+/* harmony import */ var _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./admin/settings/timeslot/timeslot.component */ "./src/app/admin/settings/timeslot/timeslot.component.ts");
+/* harmony import */ var _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./admin/settings/timeslot/add/addtimeslot.component */ "./src/app/admin/settings/timeslot/add/addtimeslot.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13663,6 +14919,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+
+//import { DiagnosticCategoriesComponent } from './admin/laboratory/diagnosticcategories/diagnosticcategories.component';
+
+
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -13693,8 +14956,8 @@ AppModule = __decorate([
             _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"],
             _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_34__["BannerComponent"],
             _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__["AddbannerComponent"],
-            _admin_settings_offers_offers_component__WEBPACK_IMPORTED_MODULE_41__["OffersComponent"],
-            _admin_settings_offers_addoffers_addoffers_component__WEBPACK_IMPORTED_MODULE_42__["AddoffersComponent"],
+            _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_41__["PromotionComponent"],
+            _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__["AddpromotionComponent"],
             _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_36__["SalesdetailComponent"],
             _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_39__["SalescategorywiseComponent"],
             _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_38__["SalescustomerwiseComponent"],
@@ -13708,35 +14971,41 @@ AppModule = __decorate([
             _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"],
             _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"],
             _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"],
-            _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_59__["CouponComponent"],
-            _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_60__["AddCouponComponent"],
+            _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"],
+            _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"],
             _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"],
             _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"],
             _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"],
             _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"],
-            _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_69__["NursingAppointmentComponent"],
-            _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_70__["AddnursingappointmentComponent"],
+            _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"],
+            _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"],
             _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"],
             _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"],
-            _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_61__["MedicineComponent"],
-            _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_62__["AddmedicineComponent"],
-            _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_63__["OrdersComponent"],
-            _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_64__["OrderdetailsComponent"],
+            _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"],
+            _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"],
+            _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"],
+            _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"],
             _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"],
-            _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_65__["ServiceComponent"],
-            _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_66__["AddServiceComponent"],
-            _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_67__["MedicalServicetypeComponent"],
-            _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["AddMedicalServicetypeComponent"],
-            _admin_user_user_component__WEBPACK_IMPORTED_MODULE_74__["UserComponent"],
-            _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_75__["AdduserComponent"],
-            _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_71__["NotificationComponent"],
-            _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_73__["AddSpecialityComponent"],
-            _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_72__["SpecialityComponent"],
+            _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"],
+            _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"],
+            _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"],
+            _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"],
+            _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"],
+            _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"],
+            _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"],
+            _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"],
+            _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"],
+            _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"],
+            _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"],
+            _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"],
+            _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"],
+            _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"],
+            _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'ng-cli-universal' }),
             _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-            ng_apexcharts__WEBPACK_IMPORTED_MODULE_77__["NgApexchartsModule"],
+            ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
             _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_27__["NgSelectModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
@@ -13759,7 +15028,7 @@ AppModule = __decorate([
                         { path: 'modifier', component: _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_21__["ModifiersComponent"] },
                         { path: 'modifier/add', component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__["AddmodifierComponent"] },
                         { path: 'modifier/edit/:id', component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__["AddmodifierComponent"] },
-                        { path: 'notification', component: _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_71__["NotificationComponent"] },
+                        { path: 'notification', component: _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"] },
                         { path: 'location', component: _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_25__["LocationsComponent"] },
                         { path: 'location/add', component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__["AddlocationComponent"] },
                         { path: 'location/edit/:id', component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__["AddlocationComponent"] },
@@ -13769,9 +15038,9 @@ AppModule = __decorate([
                         { path: 'settings/banner', component: _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_34__["BannerComponent"] },
                         { path: 'settings/banner/add', component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__["AddbannerComponent"] },
                         { path: 'settings/banner/edit/:id', component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__["AddbannerComponent"] },
-                        { path: 'offers', component: _admin_settings_offers_offers_component__WEBPACK_IMPORTED_MODULE_41__["OffersComponent"] },
-                        { path: 'offers/add', component: _admin_settings_offers_addoffers_addoffers_component__WEBPACK_IMPORTED_MODULE_42__["AddoffersComponent"] },
-                        { path: 'offers/edit/:id', component: _admin_settings_offers_addoffers_addoffers_component__WEBPACK_IMPORTED_MODULE_42__["AddoffersComponent"] },
+                        { path: 'promotion', component: _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_41__["PromotionComponent"] },
+                        { path: 'promotion/add', component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__["AddpromotionComponent"] },
+                        { path: 'promotion/edit/:id', component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__["AddpromotionComponent"] },
                         { path: 'report/summary', component: _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_32__["SummaryComponent"] },
                         { path: 'report/salesdetail', component: _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_36__["SalesdetailComponent"] },
                         { path: 'report/salesuserwise', component: _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_37__["SalesuserwiseComponent"] },
@@ -13798,47 +15067,56 @@ AppModule = __decorate([
                         { path: 'reception/customers/edit/:id', component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_24__["AddcustomerComponent"] },
                         { path: 'reception/appointment', component: _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"] },
                         { path: 'appointment/view/:id', component: _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"] },
-                        { path: 'reception/nursingappointment', component: _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_69__["NursingAppointmentComponent"] },
-                        { path: 'reception/nursingappointment/addnursingappointment', component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_70__["AddnursingappointmentComponent"] },
-                        { path: 'reception/nursingappointment/edit/:id', component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_70__["AddnursingappointmentComponent"] },
+                        { path: 'reception/nursingappointment', component: _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"] },
+                        { path: 'reception/nursingappointment/addnursingappointment', component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"] },
+                        { path: 'reception/nursingappointment/edit/:id', component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"] },
                         { path: 'laboratory/uploadreport', component: _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"] },
                         { path: 'laboratory/uploadreport/addreports', component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"] },
                         { path: 'laboratory/uploadreport/edit/:id', component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"] },
-                        { path: 'pharmacy/deliverydetail', component: _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_58__["DeliverydetailComponent"] },
-                        { path: 'settings/coupon', component: _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_59__["CouponComponent"] },
-                        { path: 'settings/coupon/add', component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_60__["AddCouponComponent"] },
-                        { path: 'settings/coupon/edit/:id', component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_60__["AddCouponComponent"] },
+                        { path: 'laboratory/diagnosticcategory', component: _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"] },
+                        { path: 'laboratory/diagnosticcategory/add', component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"] },
+                        { path: 'laboratory/diagnosticcategory/edit/:id', component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"] },
+                        { path: 'pharmacy/deliverydetail', component: _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_60__["DeliverydetailComponent"] },
+                        { path: 'settings/coupon', component: _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"] },
+                        { path: 'settings/coupon/add', component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"] },
+                        { path: 'settings/coupon/edit/:id', component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"] },
                         {
                             path: 'pharmacy/medicine',
-                            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_61__["MedicineComponent"],
-                            canActivate: [_has_role_guard__WEBPACK_IMPORTED_MODULE_76__["HasRoleGuard"]],
+                            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"],
+                            canActivate: [_has_role_guard__WEBPACK_IMPORTED_MODULE_78__["HasRoleGuard"]],
                             data: {
                                 type: ['SuperAdmin']
                             }
                         },
-                        { path: 'pharmacy/medicine/addmedicines', component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_62__["AddmedicineComponent"] },
-                        { path: 'pharmacy/medicine/edit/:id', component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_62__["AddmedicineComponent"] },
-                        { path: 'pharmacy/orders', component: _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_63__["OrdersComponent"] },
-                        { path: 'orders/view/:id', component: _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_64__["OrderdetailsComponent"] },
-                        { path: 'settings/medicalservices', component: _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_65__["ServiceComponent"] },
-                        { path: 'settings/medicalservices/add', component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_66__["AddServiceComponent"] },
-                        { path: 'settings/medicalservices/edit/:id', component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_66__["AddServiceComponent"] },
-                        { path: 'settings/medicalservicetype', component: _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_67__["MedicalServicetypeComponent"] },
-                        { path: 'settings/medicalservicetype/add', component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["AddMedicalServicetypeComponent"] },
-                        { path: 'settings/medicalservicetype/edit/:id', component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["AddMedicalServicetypeComponent"] },
-                        { path: 'user', component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_74__["UserComponent"] },
-                        { path: 'user/add', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_75__["AdduserComponent"] },
-                        { path: 'user/edit/:id', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_75__["AdduserComponent"] },
-                        { path: 'settings/speciality', component: _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_72__["SpecialityComponent"] },
-                        { path: 'settings/speciality/add', component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_73__["AddSpecialityComponent"] },
-                        { path: 'settings/speciality/edit/:id', component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_73__["AddSpecialityComponent"] },
+                        { path: 'pharmacy/medicine/addmedicines', component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"] },
+                        { path: 'pharmacy/medicine/edit/:id', component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"] },
+                        { path: 'pharmacy/orders', component: _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"] },
+                        { path: 'orders/view/:id', component: _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"] },
+                        { path: 'settings/medicalservices', component: _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"] },
+                        { path: 'settings/medicalservices/add', component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"] },
+                        { path: 'settings/medicalservices/edit/:id', component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"] },
+                        { path: 'settings/medicalservicetype', component: _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"] },
+                        { path: 'settings/medicalservicetype/add', component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"] },
+                        { path: 'settings/medicalservicetype/edit/:id', component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"] },
+                        { path: 'user', component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"] },
+                        { path: 'user/add', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"] },
+                        { path: 'user/edit/:id', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"] },
+                        { path: 'permission', component: _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"] },
+                        { path: 'permission/add', component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"] },
+                        { path: 'permission/edit/:id', component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"] },
+                        { path: 'settings/speciality', component: _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"] },
+                        { path: 'settings/speciality/add', component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"] },
+                        { path: 'settings/speciality/edit/:id', component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"] },
+                        { path: 'settings/timeslot', component: _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"] },
+                        { path: 'settings/timeslot/add', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"] },
+                        { path: 'settings/timeslot/edit/:id', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"] },
                     ]
                 }
             ]),
             _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__["ServiceWorkerModule"].register('ngsw-worker.js', { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].production }),
             _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"]
         ],
-        providers: [_has_role_guard__WEBPACK_IMPORTED_MODULE_76__["HasRoleGuard"]],
+        providers: [_has_role_guard__WEBPACK_IMPORTED_MODULE_78__["HasRoleGuard"]],
         exports: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"]]
     })
@@ -14530,7 +15808,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Project\Mamji\MamjiAdmin\ClientApp\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\Projects\Mamji\ClientApp\src\main.ts */"./src/main.ts");
 
 
 /***/ }),

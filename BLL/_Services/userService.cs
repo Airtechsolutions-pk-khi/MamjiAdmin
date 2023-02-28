@@ -83,6 +83,34 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
+        public int UpdatePermission(PermissionBLL data)
+        {
+            try
+            {
+                //for (int i = 0; i < length; i++)
+                //{
 
+                //}
+                data.CreatedDate = _UTCDateTime_SA();
+                var result = _service.UpdatePermission(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public PermissionFormBLL GetPermission(string rn)
+        {
+            try
+            {
+                return _service.GetPermission(rn);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

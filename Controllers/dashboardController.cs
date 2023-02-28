@@ -23,10 +23,10 @@ namespace MamjiAdmin.Controllers
             return _service.GetAll();
         }
 
-        //[HttpGet("range/get/{locationID}/{FDate}/{TDate}")]
-        //public RspDashboard GetDashboardSummary(int LocationID, string FDate, string TDate)
-        //{
-        //    return _service.GetDashboardRange(LocationID,FDate, TDate);
-        //}
+        [HttpGet("getcharts")]
+        public RspDashboard GetChart()
+        {
+            return _service.GetChart();
+        }
     }
 }

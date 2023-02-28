@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MamjiAdmin._Models
@@ -47,5 +50,6 @@ namespace MamjiAdmin._Models
             public int SpecialistID { get; set; }
             public string SpecialityName { get; set; }
         }
+
     }
 }
