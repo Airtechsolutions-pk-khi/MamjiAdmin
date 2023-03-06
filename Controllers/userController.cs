@@ -65,5 +65,10 @@ namespace MamjiAdmin.Controllers
         {
             return _service.GetPermission(Id);
         }
+        [HttpGet("allpermission")]
+        public List<PermissionFormBLL> GetAllPermission()
+        {
+            return _service.GetAllPermissions();
+        }
     }
 }

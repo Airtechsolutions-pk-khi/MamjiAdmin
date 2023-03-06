@@ -10,6 +10,7 @@ import { LocationsService } from '../_services/locations.service';
 import { LocalStorageService } from '../_services/local-storage.service';
 import { UserService } from '../_services/user.service';
 import { LoginService } from '../_services/login.service';
+import { PermissionForms } from '../_models/Permission';
 
 @Component({
   selector: 'app-layout',
@@ -24,7 +25,7 @@ export class LayoutComponent implements OnInit {
   email = "";
   locationID: 0;
   Locations: [];
-  
+  public permission =new PermissionForms();
 
   ngOnInit() {
     this.type = this.ls.getSelectedBrand().type;
@@ -35,7 +36,9 @@ export class LayoutComponent implements OnInit {
     , public ls: LocalStorageService) {
       this.userName = this.ls.getSelectedBrand().email;
       this.type = this.ls.getSelectedBrand().type;
-      
+      debugger
+      var permission=environment.rootScope; 
+      this.permission.roleName = permission.admin                              
   }
   Logout() {
 

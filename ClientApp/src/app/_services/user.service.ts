@@ -46,6 +46,7 @@ export class UserService {
   private _allData$ = new BehaviorSubject<User[]>([]);
   private _data$ = new BehaviorSubject<User[]>([]);
   private _obj$ = new BehaviorSubject<PermissionForms[]>([]);
+  private _allObj$ = new BehaviorSubject<PermissionForms[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
   public user: User[];
   public permission: PermissionForms[];
@@ -77,6 +78,9 @@ export class UserService {
   }
   get allData$() {
     return this._allData$.asObservable();
+  }
+  get allObj$() {
+    return this._allObj$.asObservable();
   }
 
   loadUser() {
@@ -150,8 +154,7 @@ export class UserService {
   insert(data) {
     debugger
     return this.http.post(`api/user/insert`, data)
-      .pipe(map(res => {
-        
+      .pipe(map(res => { 
         console.log(res);
         return res;
       }));
@@ -186,5 +189,27 @@ export class UserService {
   }
   getPermissionId(id) {
     return this.http.get<PermissionForms>(`api/user/userpermission/${id}`);
+  }
+  getpermission() {
+    debugger
+    const url = `api/user/allpermission`;
+    console.log(url);
+    tap(() => this._loading$.next(true)),
+      this.http.get<PermissionForms[]>(url).subscribe(res => {
+        this.permission = res;
+          
+        this._obj$.next(this.permission);
+        this._allObj$.next(this.permission);
+
+        //this._search$.pipe(
+        //  switchMap(() => this._search()),
+        //  tap(() => this._loading$.next(false))
+        //).subscribe(result => {
+        //  this._data$.next(result.data);
+        //  this._total$.next(result.total);
+        //});
+
+        this._search$.next();
+      });
   }
 }

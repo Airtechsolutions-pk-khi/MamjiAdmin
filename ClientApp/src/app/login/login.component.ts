@@ -6,6 +6,7 @@ import { LocalStorageService } from '../_services/local-storage.service';
 import { ToastService } from '../_services/toastservice';
 import { Router } from '@angular/router';
 import { UserService } from '../_services/user.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-login',
@@ -13,12 +14,23 @@ import { UserService } from '../_services/user.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  notification;
+  doctor;
+  mamjiUser;
+  pharmacy;
+  reception;
+  diagnostic;
+  reports;
+  settings;
+
   constructor(private formBuilder: FormBuilder,
     public service: LoginService,
     public userService: UserService,
     public ts: ToastService,
     private router: Router,
-    private ls: LocalStorageService) { }
+    private ls: LocalStorageService) { 
+    }
+
 
   ngOnInit() {
     this.createForm();
@@ -32,16 +44,17 @@ export class LoginComponent implements OnInit {
 
     
     this.service.login(this.f.username.value, this.f.password.value)
-    
       .pipe(first())
       .subscribe(
         data => {
           
           if (data != null) {        
-            
+
             this.ls.setSelectedBrand(data);
-            this.userService.getAllData();   
-            this.router.navigate(["/admin/dashboard"]);      
+            this.userService.getAllData();
+            environment.rootScope = data;
+            this.router.navigate(["/admin/dashboard"]);     
+            
           }
           else {
             this.ts.showError("Error", "Username or password is not correct.");
@@ -62,7 +75,5 @@ export class LoginComponent implements OnInit {
 
     });
   }
-   
-
  
 }

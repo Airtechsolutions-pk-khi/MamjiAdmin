@@ -54,7 +54,7 @@
       </li>
       <hr class="sidebar-divider">
 </div>
-  <div *ngIf="type === 'Admin' ">
+  <div *ngIf="type === 'Admin'  ">
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
         <i class="fas fa-fw fa-user"></i>
@@ -62,7 +62,6 @@
       </a>
       <div id="collapseUser" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <!-- <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> User Roles</a> -->
           <a class="collapse-item" [routerLink]="['/admin/user']">Users & Roles</a>
           <a class="collapse-item" [routerLink]="['/admin/permission/add']">Permissions</a>
           <a class="collapse-item" [routerLink]="['/admin/formpermission']">Forms Permission</a>
@@ -87,7 +86,6 @@
         </div>
       </div>
     </li>
-
     <hr class="sidebar-divider">
   </div>
   <!-- Nav Item - Utilities Collapse Menu -->
@@ -100,7 +98,6 @@
       <div id="collapseCompany" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <a class="collapse-item" [routerLink]="['/admin/reception/customers']">Customer Informations</a>
-
         </div>
       </div>
     </li>

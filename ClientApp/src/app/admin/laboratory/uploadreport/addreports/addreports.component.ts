@@ -29,6 +29,7 @@ export class AddreportsComponent implements OnInit {
   pdfBufferRender;
   localPDF;
 
+  fileName = '';
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -51,18 +52,39 @@ export class AddreportsComponent implements OnInit {
     this.setSelectedReport();
   }
 
+  onFileSelected(event) {
+debugger
+    const file:File = event.target.files[0];
+
+    if (file) {
+
+        this.fileName = file.name;
+
+        const formData = new FormData();
+
+        formData.append("thumbnail", file);
+
+        const upload$ = this.http.post("/api/thumbnail-upload", formData);
+
+        upload$.subscribe();
+    }
+}
+
   pdfOnload(event) {
+
     debugger
     console
     const pdfTatget: any = event.target;
     if (typeof FileReader !== 'undefined') {
       const reader = new FileReader();
+      debugger
       reader.onload = (e: any) => {
         this.pdfSrc = e.target.result;
         this.localPDF = this.pdfSrc;
       };
       this.pdfBufferRender = pdfTatget.files[0];
       reader.readAsArrayBuffer(pdfTatget.files[0]);
+      var a = pdfTatget.files[0].name;
     }
   }
   get f() { return this.reportForm.controls; }

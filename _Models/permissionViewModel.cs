@@ -25,6 +25,8 @@ namespace MamjiAdmin._Models
     {
         public int PermissionID { get; set; }
         public string RoleName { get; set; }
+        public string FormName { get; set; }
+        public bool FormAccess { get; set; }
         public bool? Notification { get; set; }
         public bool? Doctor { get; set; }
         public bool? User { get; set; }

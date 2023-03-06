@@ -112,5 +112,16 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
+        public List<PermissionFormBLL> GetAllPermissions()
+        {
+            try
+            {
+                return _service.GetAllPermission();
+            }
+            catch (Exception ex)
+            {
+                return new List<PermissionFormBLL>();
+            }
+        }
     }
 }
