@@ -131,7 +131,7 @@ namespace BAL.Repositories
                                         TimeSlot = _j.TimeSlot
                                     });
                                 }
-                                 
+
                                 DocTiming = new List<DoctorTimingBLL>();
                                 foreach (var _j in _dsDoctorTimings.ToList())
                                 {
@@ -140,13 +140,13 @@ namespace BAL.Repositories
                                         DaysID = _j.DaysID,
                                         DoctorID = _j.DoctorID,
                                         DayName = _j.DayName,
-                                        Name = _j.Name,                                        
+                                        Name = _j.Name,
                                         SpecialistID = _j.SpecialistID,
-                                        TimeSlot = _j.TimeSlots.Split(",") 
-                                    }); 
-                                    
+                                        TimeSlot = _j.TimeSlots.Split(",")
+                                    });
+
                                 }
-                                 
+
                                 DocProf = new List<DoctorProfilesBLL>();
                                 foreach (var _j in _dsDoctorProfile.ToList())
                                 {
@@ -303,31 +303,55 @@ namespace BAL.Repositories
                 p[9] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
                 p[10] = new SqlParameter("@DoctorID", data.DoctorID);
 
-                //rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateDoctor_Admin", p);
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_updateDoctor_Admin", p).Rows[0]["DoctorID"].ToString());
 
-                if (data.doctorSchedule.Count > 0)
+                if (data.DoctorID != 0)
                 {
-                    foreach (var i in data.doctorSchedule)
+                    SqlParameter[] p6 = new SqlParameter[1];
+                    p6[0] = new SqlParameter("@DoctorID", data.DoctorID);
+                    new DBHelper().GetTableFromSP("sp_DeleteSpecialitiesJunc", p6);
+                }
+
+                try
+                {
+                    if (data.DoctorID != 0)
                     {
-                        SqlParameter[] p2 = new SqlParameter[3];
-                        p2[0] = new SqlParameter("@DoctorID", rtn);
-                        p2[1] = new SqlParameter("@SpecialistID", i.SpecialistID);
-                        p2[2] = new SqlParameter("@Name", i.DayName);
-
-                        int rtn2 = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_UpdateDocDays_Admin", p2).Rows[0]["DaysID"].ToString());
-                        foreach (var j in i.TimeSlot)
-                        {
-                            SqlParameter[] p3 = new SqlParameter[4];
-                            p3[0] = new SqlParameter("@DaysID", rtn2);
-                            p3[1] = new SqlParameter("@DoctorID", rtn);
-                            p3[2] = new SqlParameter("@SpecialistID", i.SpecialistID);
-                            p3[3] = new SqlParameter("@TimeSlot", j);
-                            new DBHelper().GetTableFromSP("dbo.sp_insertDocTiming_Admin", p3);
-                        }
-
-
+                        SqlParameter[] p5 = new SqlParameter[1];
+                        p5[0] = new SqlParameter("@DoctorID", data.DoctorID);
+                        new DBHelper().GetTableFromSP("sp_DeleteDocTimings", p5);
                     }
+                    if (data.DoctorID != 0)
+                    {
+                        SqlParameter[] p4 = new SqlParameter[1];
+                        p4[0] = new SqlParameter("@DoctorID", data.DoctorID);
+                        new DBHelper().GetTableFromSP("sp_DeleteDocDays", p4);
+                    }
+
+
+                    if (data.doctorSchedule.Count > 0)
+                    {
+
+                        foreach (var i in data.doctorSchedule)
+                        {
+                            SqlParameter[] p2 = new SqlParameter[3];
+                            p2[0] = new SqlParameter("@DoctorID", rtn);
+                            p2[1] = new SqlParameter("@SpecialistID", i.SpecialistID);
+                            p2[2] = new SqlParameter("@Name", i.DayName);
+
+                            int rtn2 = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_UpdateDocDays_Admin", p2).Rows[0]["DaysID"].ToString());
+
+                            foreach (var j in i.TimeSlot)
+                            {
+                                SqlParameter[] p3 = new SqlParameter[4];
+                                p3[0] = new SqlParameter("@DaysID", rtn2);
+                                p3[1] = new SqlParameter("@DoctorID", rtn);
+                                p3[2] = new SqlParameter("@SpecialistID", i.SpecialistID);
+                                p3[3] = new SqlParameter("@TimeSlot", j);
+                                new DBHelper().GetTableFromSP("dbo.sp_updateDocTiming_Admin", p3);
+                            }
+                        }
+                    }
+
                     foreach (var item in data.DoctorProfiles)
                     {
                         SqlParameter[] p4 = new SqlParameter[5];
@@ -336,11 +360,10 @@ namespace BAL.Repositories
                         p4[2] = new SqlParameter("@Profile", item.Profile);
                         p4[3] = new SqlParameter("@Fees", item.Fees);
                         p4[4] = new SqlParameter("@StatusID", 1);
-                        new DBHelper().GetTableFromSP("dbo.sp_insertSpecialitiesJunc_Admin", p4);
+                        new DBHelper().GetTableFromSP("dbo.sp_updateSpecialitiesJunc_Admin", p4);
                     }
-
-
                 }
+                catch { }
                 return rtn;
             }
             catch (Exception ex)
@@ -348,6 +371,68 @@ namespace BAL.Repositories
                 return 0;
             }
         }
+
+
+        //public int Update(DoctorBLL data)
+        //{
+        //    try
+        //    {
+        //        int rtn = 0;
+        //        SqlParameter[] p = new SqlParameter[11];
+        //        p[0] = new SqlParameter("@FullName", data.FullName);
+        //        p[1] = new SqlParameter("@ImagePath", data.ImagePath);
+        //        p[2] = new SqlParameter("@Email", data.Email);
+        //        p[3] = new SqlParameter("@Skills", data.Skills);
+        //        p[4] = new SqlParameter("@Education", data.Education);
+        //        p[5] = new SqlParameter("@StatusID", data.StatusID);
+        //        p[6] = new SqlParameter("@CreatedBy", data.CreatedBy);
+        //        p[7] = new SqlParameter("@CreatedOn", data.CreatedOn);
+        //        p[8] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+        //        p[9] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+        //        p[10] = new SqlParameter("@DoctorID", data.DoctorID);
+
+        //        rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_updateDoctor_Admin", p).Rows[0]["DoctorID"].ToString());
+
+        //        if (data.doctorSchedule.Count > 0)
+        //        {
+        //            foreach (var i in data.doctorSchedule)
+        //            {
+        //                SqlParameter[] p2 = new SqlParameter[3];
+        //                p2[0] = new SqlParameter("@DoctorID", rtn);
+        //                p2[1] = new SqlParameter("@SpecialistID", i.SpecialistID);
+        //                p2[2] = new SqlParameter("@Name", i.DayName);
+
+        //                int rtn2 = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_UpdateDocDays_Admin", p2).Rows[0]["DaysID"].ToString());
+        //                foreach (var j in i.TimeSlot)
+        //                {
+        //                    SqlParameter[] p3 = new SqlParameter[4];
+        //                    p3[0] = new SqlParameter("@DaysID", rtn2);
+        //                    p3[1] = new SqlParameter("@DoctorID", rtn);
+        //                    p3[2] = new SqlParameter("@SpecialistID", i.SpecialistID);
+        //                    p3[3] = new SqlParameter("@TimeSlot", j);
+        //                    new DBHelper().GetTableFromSP("dbo.sp_updateDocTiming_Admin", p3);
+        //                }
+        //            }
+        //            foreach (var item in data.DoctorProfiles)
+        //            {
+        //                SqlParameter[] p4 = new SqlParameter[5];
+        //                p4[0] = new SqlParameter("@DoctorID", rtn);
+        //                p4[1] = new SqlParameter("@SpecialityID", item.SpecialistID);
+        //                p4[2] = new SqlParameter("@Profile", item.Profile);
+        //                p4[3] = new SqlParameter("@Fees", item.Fees);
+        //                p4[4] = new SqlParameter("@StatusID", 1);
+        //                new DBHelper().GetTableFromSP("dbo.sp_updateSpecialitiesJunc_Admin", p4);
+        //            }
+
+
+        //        }
+        //        return rtn;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return 0;
+        //    }
+        //}
 
         public int Delete(DoctorBLL data)
         {

@@ -43,7 +43,7 @@ namespace BAL.Repositories
                 if (_ds != null)
                 {
                     repo = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<LoginBLL>>().FirstOrDefault();
-                    repo.PermissionForm = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[1])).ToObject<List<PermissionFormBLL>>();
+                    //repo.PermissionForm = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[1])).ToObject<List<PermissionFormBLL>>();
                 }
             }
             catch (Exception ex)
