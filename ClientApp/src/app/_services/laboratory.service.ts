@@ -75,6 +75,14 @@ export class LaboratoryService {
   getById(id) {
     return this.http.get<Laboratory[]>(`api/Laboratory/Laboratory/${id}`);
   }
+  uploadPDF(file: File): Observable<any> {
+    debugger
+    const formData: FormData = new FormData();
+    formData.append('pdfFile', file, file.name);
+
+    const url = 'http://mamjiadmin.airtechsolutions.pk/ClientApp/dist/assets/Upload/laboratory';
+    return this.http.post(url, formData);
+  }
   getAllData() {
     const url = `api/Laboratory/all`;
     console.log(url);

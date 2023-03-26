@@ -8,6 +8,7 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { DiagnosticCategories } from '../../../../_models/DiagnosticCategories';
 import { DiagnosticCategoryService } from '../../../../_services/diagnosticcategories.service';
 import { HttpClient, HttpErrorResponse, HttpEventType } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-addreports',
@@ -52,41 +53,58 @@ export class AddreportsComponent implements OnInit {
     this.setSelectedReport();
   }
 
-  onFileSelected(event) {
-debugger
-    const file:File = event.target.files[0];
+//   onFileSelected(event) {
+// debugger
+//     const file:File = event.target.files[0];
 
-    if (file) {
+//     if (file) {
 
-        this.fileName = file.name;
+//         this.fileName = file.name;
 
-        const formData = new FormData();
+//         const formData = new FormData();
 
-        formData.append("thumbnail", file);
+//         formData.append("thumbnail", file);
 
-        const upload$ = this.http.post("/api/thumbnail-upload", formData);
+//         const upload$ = this.http.post("/api/thumbnail-upload", formData);
 
-        upload$.subscribe();
-    }
+//         upload$.subscribe();
+//     }
+// }
+onFileSelected(event: any) {
+  debugger
+  const file: File = event.target.files[0];
+  this.uploadPDF(file);
 }
-
-  pdfOnload(event) {
-
-    debugger
-    console
-    const pdfTatget: any = event.target;
-    if (typeof FileReader !== 'undefined') {
-      const reader = new FileReader();
-      debugger
-      reader.onload = (e: any) => {
-        this.pdfSrc = e.target.result;
-        this.localPDF = this.pdfSrc;
-      };
-      this.pdfBufferRender = pdfTatget.files[0];
-      reader.readAsArrayBuffer(pdfTatget.files[0]);
-      var a = pdfTatget.files[0].name;
+uploadPDF(file: File) {
+  debugger
+  this.laboratoryService.uploadPDF(file).subscribe(
+    res => {
+      console.log(res);
+      alert('File uploaded successfully!');
+    },
+    err => {
+      console.error(err);
+      alert('File upload failed!');
     }
-  }
+  );
+}
+  // pdfOnload(event) {
+
+  //   debugger
+  //   console
+  //   const pdfTatget: any = event.target;
+  //   if (typeof FileReader !== 'undefined') {
+  //     const reader = new FileReader();
+  //     debugger
+  //     reader.onload = (e: any) => {
+  //       this.pdfSrc = e.target.result;
+  //       this.localPDF = this.pdfSrc;
+  //     };
+  //     this.pdfBufferRender = pdfTatget.files[0];
+  //     reader.readAsArrayBuffer(pdfTatget.files[0]);
+  //     var a = pdfTatget.files[0].name;
+  //   }
+  // }
   get f() { return this.reportForm.controls; }
 
   private createForm() {
