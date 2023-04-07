@@ -309,7 +309,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                  <select class=\"custom-select\" formControlName=\"customerID\">\r\n\r\n                    <option [ngValue]=\"option.customerID\" selected=\"option.customerID == customerID\"\r\n                            *ngFor=\"let option of CustomerList\">\r\n                      {{option.fullName}}\r\n                    </option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n\r\n              <label>\r\n                <input type=\"file\" (change)=\"pdfOnload($event)\" name=\"image\" id='pdf-upload' accept=\".pdf\" multiple=\"false\" />\r\n              </label>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Catgeory</label>\r\n                  <select class=\"custom-select\" formControlName=\"diagnosticCatID\">\r\n\r\n                    <option [ngValue]=\"option.diagnosticCatID\" selected=\"option.diagnosticCatID == diagnosticCatID\"\r\n                            *ngFor=\"let option of CategoryList\">\r\n                      {{option.categoryName}}\r\n                    </option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n\r\n\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- <form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\"> -->\r\n  <form class=\"form\" (ngSubmit)=\"onSubmit()\" #myForm=\"ngForm\" >\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                  <select class=\"custom-select\"  id=\"customerID\" [(ngModel)]=\"formData.customerID\">\r\n\r\n                    <option [ngValue]=\"option.customerID\" selected=\"option.customerID == customerID\"\r\n                            *ngFor=\"let option of CustomerList\">\r\n                      {{option.fullName}}\r\n                    </option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n               \r\n              <input type=\"file\" id=\"pdfFile\" name=\"pdfFile\" (change)=\"onFileChange($event)\" accept=\".pdf\" required>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Catgeory</label>\r\n                  <select class=\"custom-select\"  id=\"diagnosticCatID\" [(ngModel)]=\"formData.diagnosticCatID\">\r\n\r\n                    <option [ngValue]=\"option.diagnosticCatID\" selected=\"option.diagnosticCatID == diagnosticCatID\"\r\n                            *ngFor=\"let option of CategoryList\">\r\n                      {{option.categoryName}}\r\n                    </option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -482,6 +482,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/permission/formpermission.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/permission/formpermission.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Permission</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"permissionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Permission Details</div>\r\n        <div class=\"card-body\">\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Role Name</label>\r\n              <!-- <select class=\"custom-select\" [(ngModel)]=\"formName.roleName\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelect($event.target.value)\"> -->\r\n                <select class=\"custom-select\" formControlName=\"roleName\" (change)=\"onSelect($event.target.value)\">\r\n                <option *ngFor=\"let option of UserList\">\r\n                  {{option.type}}\r\n                </option>\r\n              </select>\r\n            </div> \r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Notification</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"notification\" formControlName=\"notification\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"notification\" [(ngModel)]=\"formName.notification\" [ngModelOptions]=\"{standalone: true}\" > -->\r\n                <label class=\"custom-control-label\" for=\"notification\"></label>       \r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Doctor</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"doctor\" formControlName=\"doctor\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"doctor\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.doctor\"> -->\r\n                <label class=\"custom-control-label\" for=\"doctor\"></label>       \r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">User</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"mamjiUser\" formControlName=\"mamjiUser\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"user\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.user\"> -->\r\n                <label class=\"custom-control-label\" for=\"user\"></label>       \r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Pharmacy</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" formControlName=\"pharmacy\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"pharmacy\"></label>       \r\n              </div>\r\n            </div>  \r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reception</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reception\" formControlName=\"reception\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"reception\"></label>       \r\n              </div>\r\n            </div> \r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Diagnostic</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"diagnostic\" formControlName=\"diagnostic\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"diagnostic\"></label>       \r\n              </div>\r\n            </div>  \r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reports</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reports\" formControlName=\"reports\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"reports\"></label>       \r\n              </div>\r\n            </div>   \r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Settings</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"setting\" formControlName=\"setting\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"setting\"></label>       \r\n              </div>\r\n            </div>      \r\n          </div>\r\n          <div class=\"form-row\">\r\n     \r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/pharmacy/deliverydetail/deliverydetail.component.html":
 /*!*******************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/pharmacy/deliverydetail/deliverydetail.component.html ***!
@@ -621,7 +634,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customers</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customers List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>-->\r\n                <button [routerLink]=\"['addcustomers']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add Customers\r\n                </button>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"15%\" sortable=\"FullName\" (sort)=\"onSort($event)\"> Name </th>\r\n                    <th width=\"15%\" sortable=\"Mobile\" (sort)=\"onSort($event)\">Mobile </th>\r\n                    <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n                    <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td> {{item.fullName}} </td>\r\n                    <td>{{item.mobile}}</td>\r\n                    <td> {{item.email}} </td>\r\n                    <td>{{item.password}}</td>\r\n\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <td style=\"text-align:center\">\r\n                      <a (click)=\"Edit(item.customerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                      <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customers</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customers List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>-->\r\n                <button [routerLink]=\"['addcustomers']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add Customers\r\n                </button>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"15%\" sortable=\"FullName\" (sort)=\"onSort($event)\"> Name </th>\r\n                    <th width=\"15%\" sortable=\"Mobile\" (sort)=\"onSort($event)\">Mobile </th>\r\n                    <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n                    <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <!--<th width=\"10%\" style=\"text-align:center\">Action</th>-->\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td> {{item.fullName}} </td>\r\n                    <td>{{item.mobile}}</td>\r\n                    <td> {{item.email}} </td>\r\n                    <td>{{item.password}}</td>\r\n\r\n                    <td>\r\n                      <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                      </ngb-highlight>\r\n                    </td>\r\n                    <!--<td style=\"text-align:center\">\r\n                      <a (click)=\"Edit(item.customerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                      <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                    </td>-->\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -985,7 +998,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Permission</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"permissionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Permission Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Role Name</label>\r\n                <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                  <option selected disabled> -- Please Select -- </option>\r\n                  <option value=\"SuperAdmin\">Super Admin</option>\r\n                  <option value=\"Admin\">Admin</option>\r\n                  <option value=\"Reception\">Reception</option>\r\n                  <option value=\"Laboratory\">Laboratory</option>\r\n                  <option value=\"Pharmacy\">Pharmacy</option>\r\n                </select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6 \">\r\n              <button class=\"btn btn-primary\" type=\"submit\" style=\"margin: 25px;\">Load</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Notification</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"notification\" formControlName=\"notification\">\r\n                <label class=\"custom-control-label\" for=\"notification\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Manage Doctor</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"manageDoctor\" formControlName=\"manageDoctor\">\r\n                <label class=\"custom-control-label\" for=\"manageDoctor\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">User</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"user\" formControlName=\"user\">\r\n                <label class=\"custom-control-label\" for=\"user\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Pharmacy</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" formControlName=\"pharmacy\">\r\n                <label class=\"custom-control-label\" for=\"pharmacy\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reception</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reception\" formControlName=\"reception\">\r\n                <label class=\"custom-control-label\" for=\"reception\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Diagnostic</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"diagnostic\" formControlName=\"diagnostic\">\r\n                <label class=\"custom-control-label\" for=\"diagnostic\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reports</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reports\" formControlName=\"reports\">\r\n                <label class=\"custom-control-label\" for=\"reports\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Settings</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"settings\" formControlName=\"settings\">\r\n                <label class=\"custom-control-label\" for=\"settings\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Permission</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Permission Details</div>\r\n        <div class=\"card-body\">\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Role Name</label>\r\n              <select class=\"custom-select\" [(ngModel)]=\"formName.roleName\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelect($event.target.value)\">\r\n                <option *ngFor=\"let option of UserList\">\r\n                  {{option.type}}\r\n                </option>\r\n              </select>\r\n            </div> \r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Notification</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"notification\" [(ngModel)]=\"formName.notification\" [ngModelOptions]=\"{standalone: true}\" >\r\n                <label class=\"custom-control-label\" for=\"notification\"></label>       \r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Doctor</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"doctor\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.doctor\">\r\n                <label class=\"custom-control-label\" for=\"doctor\"></label>       \r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">User</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"user\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.user\">\r\n                <label class=\"custom-control-label\" for=\"user\"></label>       \r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Pharmacy</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\">\r\n                <label class=\"custom-control-label\" for=\"pharmacy\"></label>       \r\n              </div>\r\n            </div>            \r\n          </div>\r\n          <div class=\"form-row\">\r\n            <!-- <div class=\"form-group col-lg-3\" id=\"Reception\">\r\n              <label for=\"Item Status\">Reception</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reception\" value=\"\" [(ngModel)]=\"formAccess\">\r\n                <label class=\"custom-control-label\" for=\"reception\"></label>\r\n                <input type=\"text\" class=\"hidden\" value=\"reception\" [(ngModel)]=\"formName\" hidden>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\" id=\"Laboratory\">\r\n              <label for=\"Item Status\">Diagnostic</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"diagnostic\" value=\"\" [(ngModel)]=\"formAccess\">\r\n                <label class=\"custom-control-label\" for=\"diagnostic\"></label>\r\n                <input type=\"text\" class=\"hidden\" value=\"diagnostic\" [(ngModel)]=\"formName\" hidden>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reports</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reports\" value=\"\" [(ngModel)]=\"formAccess\">\r\n                <label class=\"custom-control-label\" for=\"reports\"></label>\r\n                <input type=\"text\" class=\"hidden\" value=\"reports\" [(ngModel)]=\"formName\" hidden>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\" id=\"Admin\">\r\n              <label for=\"Item Status\">Settings</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"settings\" value=\"\" [(ngModel)]=\"formAccess\">\r\n                <label class=\"custom-control-label\" for=\"settings\"></label>\r\n                <input type=\"text\" class=\"hidden\" value=\"settings\" [(ngModel)]=\"formName\" hidden>\r\n              </div>\r\n            </div> -->\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -998,7 +1011,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Permission</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Permission List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 form-group text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Permission\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> Role Name </th>\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <td>{{item.password}}</td>\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item.id)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Permission</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Permission List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 form-group text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Permission\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> Role Name </th>\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Password </th>\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Type </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <td>{{item.password}}</td>\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item.id)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1102,7 +1115,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"type === 'Admin' \">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Manage Doctors</span>\r\n        </a>\r\n        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n</div>\r\n  <div *ngIf=\"type === 'Admin' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> User Roles</a> -->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/permission']\">Permissions</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"type === 'Pharmacy' || type === 'Admin' \">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Customer Informations</a>\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' || type === 'Laboratory' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!--<div *ngIf=\"type === 'Admin' || type === 'Reception' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseMedicalService\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Home Nursing</span>\r\n      </a>\r\n      <div id=\"collapseMedicalService\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservicetype']\">Medical Service Type </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/medicalservices']\">Medical Services</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/nursingappointment']\">Nursing Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>-->\r\n  <div *ngIf=\"type === 'Admin' || type === 'Reception' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Patients </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Medical Services </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Nursing Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"type === 'Admin' \">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      </div>\r\n      <!-- Divider -->\r\n      <div *ngIf=\"isDoctor\">\r\n      <hr class=\"sidebar-divider\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n          <i class=\"fas fa-fw fa-list\"></i>\r\n          <span>Manage Doctors</span>\r\n        </a>\r\n        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n    </div>\r\n\r\n      <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/permission/add']\">Permissions</a> -->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf= \"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Customer Informations</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Patients </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Dr. Appoinment </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Medical Services </a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Nursing Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
 
 /***/ }),
 
@@ -1318,6 +1331,22 @@ class DoctorSchedule {
 
 /***/ }),
 
+/***/ "./src/app/_models/FormPermission.ts":
+/*!*******************************************!*\
+  !*** ./src/app/_models/FormPermission.ts ***!
+  \*******************************************/
+/*! exports provided: FormPermission */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormPermission", function() { return FormPermission; });
+class FormPermission {
+}
+
+
+/***/ }),
+
 /***/ "./src/app/_models/Orders.ts":
 /*!***********************************!*\
   !*** ./src/app/_models/Orders.ts ***!
@@ -1341,6 +1370,25 @@ class OrderDetailModifiers {
 class OrderCheckout {
 }
 class CustomerOrders {
+}
+
+
+/***/ }),
+
+/***/ "./src/app/_models/Permission.ts":
+/*!***************************************!*\
+  !*** ./src/app/_models/Permission.ts ***!
+  \***************************************/
+/*! exports provided: Permission, PermissionForms */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Permission", function() { return Permission; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PermissionForms", function() { return PermissionForms; });
+class Permission {
+}
+class PermissionForms {
 }
 
 
@@ -2685,11 +2733,9 @@ let DashboardService = class DashboardService {
         return this._allData$.asObservable();
     }
     getAllData() {
-        debugger;
         return this.http.get(`api/dashboard/all`);
     }
     getChart() {
-        debugger;
         return this.http.get(`api/dashboard/getcharts`);
     }
 };
@@ -3184,6 +3230,102 @@ DoctorsService = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/_services/formpermission.service.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/_services/formpermission.service.ts ***!
+  \*****************************************************/
+/*! exports provided: FormPermissionService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormPermissionService", function() { return FormPermissionService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.roleName.toLowerCase().includes(term.toLowerCase());
+}
+let FormPermissionService = class FormPermissionService {
+    constructor(http) {
+        this.http = http;
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+    }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    getById(rolename) {
+        debugger;
+        return this.http.get(`api/formpermission/permission/${rolename}`);
+    }
+    getAllData() {
+        const url = `api/formpermission/all`;
+        console.log(url);
+    }
+    insert(data) {
+        return this.http.post('api/formpermission/insert', data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        debugger;
+        return this.http.post(`api/formpermission/update`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(data) {
+        debugger;
+        return this.http.post(`api/formpermission/delete`, data);
+    }
+};
+FormPermissionService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+FormPermissionService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], FormPermissionService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/_services/items.service.ts":
 /*!********************************************!*\
   !*** ./src/app/_services/items.service.ts ***!
@@ -3441,13 +3583,21 @@ let LaboratoryService = class LaboratoryService {
         return this._allData$.asObservable();
     }
     loadCustomer() {
-        return this.http.get(`api/customer/all`);
+        debugger;
+        return this.http.get(`api/customer/alldropdown`);
     }
     ExportList(LaboratoryID) {
         return this.http.get(`api/Laboratory/all`);
     }
     getById(id) {
         return this.http.get(`api/Laboratory/Laboratory/${id}`);
+    }
+    uploadPDF(file) {
+        debugger;
+        const formData = new FormData();
+        formData.append('pdfFile', file, file.name);
+        const url = 'http://mamjiadmin.airtechsolutions.pk/ClientApp/dist/assets/Upload/laboratory';
+        return this.http.post(url, formData);
     }
     getAllData() {
         const url = `api/Laboratory/all`;
@@ -3495,6 +3645,7 @@ let LaboratoryService = class LaboratoryService {
         };
     }
     insert(data) {
+        debugger;
         return this.http.post('api/laboratory/insert', data)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             console.log(res);
@@ -5746,10 +5897,10 @@ ToastService = __decorate([
 
 /***/ }),
 
-/***/ "./src/app/_services/userservice.ts":
-/*!******************************************!*\
-  !*** ./src/app/_services/userservice.ts ***!
-  \******************************************/
+/***/ "./src/app/_services/user.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/_services/user.service.ts ***!
+  \*******************************************/
 /*! exports provided: UserService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5795,6 +5946,8 @@ let UserService = class UserService {
         this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
         this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
         this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._obj$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._allObj$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
         this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
         this._state = {
             page: 1,
@@ -5817,8 +5970,17 @@ let UserService = class UserService {
     get data$() {
         return this._data$.asObservable();
     }
+    get obj$() {
+        return this._obj$.asObservable();
+    }
     get allData$() {
         return this._allData$.asObservable();
+    }
+    get allObj$() {
+        return this._allObj$.asObservable();
+    }
+    loadUser() {
+        return this.http.get(`api/user/all`);
     }
     ExportList() {
         return this.http.get(`api/user/all`);
@@ -5827,7 +5989,6 @@ let UserService = class UserService {
         return this.http.get(`api/user/user/${id}`);
     }
     getAllData() {
-        debugger;
         const url = `api/user/all`;
         console.log(url);
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
@@ -5835,10 +5996,13 @@ let UserService = class UserService {
                 this.user = res;
                 this._data$.next(this.user);
                 this._allData$.next(this.user);
-                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
-                    this._data$.next(result.data);
-                    this._total$.next(result.total);
-                });
+                //this._search$.pipe(
+                //  switchMap(() => this._search()),
+                //  tap(() => this._loading$.next(false))
+                //).subscribe(result => {
+                //  this._data$.next(result.data);
+                //  this._total$.next(result.total);
+                //});
                 this._search$.next();
             });
     }
@@ -5846,17 +6010,18 @@ let UserService = class UserService {
         Object.assign(this._state, patch);
         this._search$.next();
     }
-    _search() {
-        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
-        // 1. sort
-        let sortedData = sort(this.user, sortColumn, sortDirection);
-        //// 2. filter
-        sortedData = sortedData.filter(data => matches(data, searchTerm));
-        const total = sortedData.length;
-        // 3. paginate
-        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
-    }
+    //private _search(): Observable<SearchCustomersResult> {
+    //  const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+    //  // 1. sort
+    //  let sortedData = sort(this.user, sortColumn, sortDirection);
+    //  //// 2. filter
+    //  sortedData = sortedData.filter(data => matches(data, searchTerm));
+    //  const total = sortedData.length;
+    //  // 3. paginate
+    //  //const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+    //  //const obj = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+    //  return of({ total });
+    //}
     clear() {
         // clear by calling subject.next() without parameters
         this._search$.next();
@@ -5889,6 +6054,44 @@ let UserService = class UserService {
     }
     delete(data) {
         return this.http.post(`api/user/delete`, data);
+    }
+    insertpermission(obj) {
+        debugger;
+        return this.http.post(`api/user/insert/permission`, obj)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(obj => {
+            console.log(obj);
+            return obj;
+        }));
+    }
+    permissionupdate(updateobj) {
+        debugger;
+        return this.http.post(`api/user/update/permission`, updateobj)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(updateobj => {
+            console.log(updateobj);
+            return updateobj;
+        }));
+    }
+    getPermissionId(id) {
+        return this.http.get(`api/user/userpermission/${id}`);
+    }
+    getpermission() {
+        debugger;
+        const url = `api/user/allpermission`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.permission = res;
+                this._obj$.next(this.permission);
+                this._allObj$.next(this.permission);
+                //this._search$.pipe(
+                //  switchMap(() => this._search()),
+                //  tap(() => this._loading$.next(false))
+                //).subscribe(result => {
+                //  this._data$.next(result.data);
+                //  this._total$.next(result.total);
+                //});
+                this._search$.next();
+            });
     }
 };
 UserService.ctorParameters = () => [
@@ -6694,7 +6897,6 @@ let DashboardComponent = class DashboardComponent {
         this.GetChart();
     }
     BindTodaysSales(sales, timeSlot) {
-        debugger;
         this.chartOptions = {
             series: [
                 {
@@ -6712,13 +6914,11 @@ let DashboardComponent = class DashboardComponent {
         };
     }
     GetDashboard() {
-        debugger;
         this.service.getAllData().subscribe((res) => {
             this.dashboardSummary = res[0];
         });
     }
     GetChart() {
-        debugger;
         this.service.getChart().subscribe((res) => {
             this.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
         });
@@ -7072,6 +7272,10 @@ let AddreportsComponent = class AddreportsComponent {
         this.ts = ts;
         this.laboratoryService = laboratoryService;
         this.diagnosticcategoriesService = diagnosticcategoriesService;
+        this.formData = {
+            customerID: '',
+            diagnosticCatID: ''
+        };
         this.submitted = false;
         this.loading = false;
         this.loadingReport = false;
@@ -7081,26 +7285,20 @@ let AddreportsComponent = class AddreportsComponent {
         this.selectedCustomerIds = [];
         this.selectedCategoryIds = [];
         this.Images = [];
+        this.fileName = '';
         this.createForm();
         this.loadCustomer();
         this.loadCategories();
     }
+    onFileChange(event) {
+        this.selectedFile = event.target.files[0];
+    }
     ngOnInit() {
         this.setSelectedReport();
     }
-    pdfOnload(event) {
+    onFileSelect(files) {
         debugger;
-        console;
-        const pdfTatget = event.target;
-        if (typeof FileReader !== 'undefined') {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                this.pdfSrc = e.target.result;
-                this.localPDF = this.pdfSrc;
-            };
-            this.pdfBufferRender = pdfTatget.files[0];
-            reader.readAsArrayBuffer(pdfTatget.files[0]);
-        }
+        this.selectedFile = files.item(0);
     }
     get f() { return this.reportForm.controls; }
     createForm() {
@@ -7110,14 +7308,14 @@ let AddreportsComponent = class AddreportsComponent {
             customerID: 0,
             diagnosticCatID: 0,
             laboratoryID: [0],
-            image: this.pdfFile,
+            selectedFile: File = null,
         });
     }
     editForm(obj) {
         debugger;
         this.f.customerID.setValue(obj.customerID);
         this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
-        this.f.image.setValue(obj.image);
+        //this.f.image.setValue(obj.image);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     }
     setSelectedReport() {
@@ -7136,42 +7334,51 @@ let AddreportsComponent = class AddreportsComponent {
     }
     onSubmit() {
         debugger;
-        this.reportForm.markAllAsTouched();
-        this.submitted = true;
-        if (this.reportForm.invalid) {
-            return;
-        }
-        this.loading = true;
-        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-        //this.f.image.setValue(this.imgComp.imageUrl);
-        if (parseInt(this.f.laboratoryID.value) === 0) {
-            //Insert customer
-            console.log(JSON.stringify(this.reportForm.value));
-            this.laboratoryService.insert(this.reportForm.value).subscribe(data => {
-                if (data != 0) {
-                    this.ts.showSuccess("Success", "Record added successfully.");
-                    this.router.navigate(['/admin/laboratory/uploadreport']);
-                }
-                this.loading = false;
-            }, error => {
-                this.ts.showError("Error", "Failed to insert record.");
-                this.loading = false;
-            });
-        }
-        else {
-            //Update customer
-            this.laboratoryService.update(this.reportForm.value).subscribe(data => {
-                this.loading = false;
-                if (data != 0) {
-                    this.ts.showSuccess("Success", "Record updated successfully.");
-                    this.router.navigate(['/admin/laboratory/uploadreport']);
-                }
-            }, error => {
-                this.ts.showError("Error", "Failed to update record.");
-                this.loading = false;
-            });
-        }
+        const formData = new FormData();
+        formData.append('customerID', this.formData.customerID);
+        formData.append('diagnosticCatID', this.formData.diagnosticCatID);
+        formData.append('pdfFile', this.selectedFile, this.selectedFile.name);
+        this.http.post('api/laboratory/insert', formData).subscribe(response => {
+            console.log(response);
+        }, error => {
+            console.error(error);
+        });
     }
+    // onSubmit() {
+    //   debugger
+    //   this.reportForm.markAllAsTouched();
+    //   this.submitted = true;
+    //   if (this.reportForm.invalid) { return; }
+    //   this.loading = true;
+    //   this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+    //   this.f.pdfFile.setValue(this.selectedFile.name);
+    //   if (parseInt(this.f.laboratoryID.value) === 0) {
+    //     //Insert customer
+    //     console.log(JSON.stringify(this.reportForm.value));
+    //    this.laboratoryService.insert(this.reportForm.value).subscribe(data => {
+    //       if (data != 0) {
+    //         this.ts.showSuccess("Success", "Record added successfully.")
+    //         this.router.navigate(['/admin/laboratory/uploadreport']);
+    //       }
+    //       this.loading = false;
+    //     }, error => {
+    //       this.ts.showError("Error", "Failed to insert record.")
+    //       this.loading = false;
+    //     });
+    //   } else {
+    //     //Update customer
+    //     this.laboratoryService.update(this.reportForm.value).subscribe(data => {
+    //       this.loading = false;
+    //       if (data != 0) {
+    //         this.ts.showSuccess("Success", "Record updated successfully.")
+    //         this.router.navigate(['/admin/laboratory/uploadreport']);
+    //       }
+    //     }, error => {
+    //       this.ts.showError("Error", "Failed to update record.")
+    //       this.loading = false;
+    //     });
+    //   }
+    // }
     loadCustomer() {
         debugger;
         this.laboratoryService.loadCustomer().subscribe((res) => {
@@ -9190,6 +9397,183 @@ NotificationComponent = __decorate([
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
 ], NotificationComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/permission/formpermission.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/admin/permission/formpermission.component.ts ***!
+  \**************************************************************/
+/*! exports provided: FormPermissionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormPermissionComponent", function() { return FormPermissionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_formpermission_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/formpermission.service */ "./src/app/_services/formpermission.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var _models_FormPermission__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../_models/FormPermission */ "./src/app/_models/FormPermission.ts");
+/* harmony import */ var src_app_services_user_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/_services/user.service */ "./src/app/_services/user.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+
+//import { debug } from 'console';
+let FormPermissionComponent = class FormPermissionComponent {
+    constructor(formBuilder, router, route, ls, ts, userService, permissionService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ls = ls;
+        this.ts = ts;
+        this.userService = userService;
+        this.permissionService = permissionService;
+        this.formName = new _models_FormPermission__WEBPACK_IMPORTED_MODULE_7__["FormPermission"]();
+        this.submitted = false;
+        this.loadingPermission = false;
+        this.loading = false;
+        this.loadingformpermission = false;
+        this.ButtonText = "Save";
+        this.UserList = [];
+        this.createForm();
+        this.loadUser();
+    }
+    get f() { return this.permissionForm.controls; }
+    createForm() {
+        this.permissionForm = this.formBuilder.group({
+            notification: [true],
+            doctor: [true],
+            mamjiUser: [true],
+            pharmacy: [true],
+            reception: [true],
+            diagnostic: [true],
+            reports: [true],
+            setting: [true],
+            roleName: [''],
+            formPermissionID: [0],
+        });
+    }
+    editForm(obj) {
+        debugger;
+        this.f.notification.setValue(obj.notification == 1 ? true : false);
+        this.f.doctor.setValue(obj.doctor == 1 ? true : false);
+        this.f.mamjiUser.setValue(obj.mamjiUser == 1 ? true : false);
+        this.f.pharmacy.setValue(obj.pharmacy == 1 ? true : false);
+        this.f.reception.setValue(obj.reception == 1 ? true : false);
+        this.f.diagnostic.setValue(obj.diagnostic == 1 ? true : false);
+        this.f.reports.setValue(obj.reports == 1 ? true : false);
+        this.f.setting.setValue(obj.setting == 1 ? true : false);
+        //this.f.formPermissionID.setValue(obj.formPermissionID);
+        this.f.roleName.setValue(obj.roleName);
+    }
+    ngOnInit() {
+        //this.setSelectedPermission();
+    }
+    onSelect(formName) {
+        debugger;
+        this.permissionService.getById(formName).subscribe(res => {
+            //Set Forms
+            if (res != null) {
+                this.editForm(res);
+                this.formName = res[0];
+            }
+            debugger;
+        });
+    }
+    onSubmit() {
+        debugger;
+        {
+            this.permissionForm.markAllAsTouched();
+            this.submitted = true;
+            if (this.permissionForm.invalid) {
+                return;
+            }
+            this.loading = true;
+            this.f.notification.setValue(this.f.notification.value == true ? 1 : 0);
+            this.f.doctor.setValue(this.f.doctor.value == true ? 1 : 0);
+            this.f.mamjiUser.setValue(this.f.mamjiUser.value == true ? 1 : 0);
+            this.f.pharmacy.setValue(this.f.pharmacy.value == true ? 1 : 0);
+            this.f.reception.setValue(this.f.reception.value == true ? 1 : 0);
+            this.f.diagnostic.setValue(this.f.diagnostic.value == true ? 1 : 0);
+            this.f.reports.setValue(this.f.reports.value == true ? 1 : 0);
+            this.f.setting.setValue(this.f.setting.value == true ? 1 : 0);
+            //this.f.permissionID.setValue(this.f.permissionID.value);
+            this.f.roleName.setValue(this.f.roleName.value);
+            this.permissionService.update(this.permissionForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/permission']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+    loadUser() {
+        debugger;
+        this.userService.loadUser().subscribe((res) => {
+            this.UserList = res;
+        });
+        // this.UserList = [
+        //   { "type": "Super Admin" },
+        //   { "type": "Admin" },
+        //   { "type": "Pharmacy" },
+        //   { "type": "Reception" },
+        //   { "type": "Laboratory" },
+        // ];
+    }
+};
+FormPermissionComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"] },
+    { type: src_app_services_user_service__WEBPACK_IMPORTED_MODULE_8__["UserService"] },
+    { type: src_app_services_formpermission_service__WEBPACK_IMPORTED_MODULE_5__["FormPermissionService"] }
+];
+FormPermissionComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+FormPermissionComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-formpermission',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./formpermission.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/permission/formpermission.component.html")).default
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"],
+        src_app_services_user_service__WEBPACK_IMPORTED_MODULE_8__["UserService"],
+        src_app_services_formpermission_service__WEBPACK_IMPORTED_MODULE_5__["FormPermissionService"]])
+], FormPermissionComponent);
 
 
 
@@ -14174,7 +14558,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
-/* harmony import */ var src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/userservice */ "./src/app/_services/userservice.ts");
+/* harmony import */ var src_app_services_user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/user.service */ "./src/app/_services/user.service.ts");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -14291,7 +14675,7 @@ AdduserComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"] },
-    { type: src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
+    { type: src_app_services_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
 ];
 AdduserComponent.propDecorators = {
     imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
@@ -14306,7 +14690,7 @@ AdduserComponent = __decorate([
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"],
-        src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
+        src_app_services_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
 ], AdduserComponent);
 
 
@@ -14328,8 +14712,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
-/* harmony import */ var src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/userservice */ "./src/app/_services/userservice.ts");
+/* harmony import */ var src_app_services_user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/user.service */ "./src/app/_services/user.service.ts");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var _models_Permission__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../_models/Permission */ "./src/app/_models/Permission.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -14349,7 +14734,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-//import { debug } from 'console';
+
 let AddComponent = class AddComponent {
     constructor(formBuilder, router, route, ls, ts, userService) {
         this.formBuilder = formBuilder;
@@ -14358,85 +14743,77 @@ let AddComponent = class AddComponent {
         this.ls = ls;
         this.ts = ts;
         this.userService = userService;
+        //public permission = new Permission();
+        this.formName = new _models_Permission__WEBPACK_IMPORTED_MODULE_7__["PermissionForms"]();
         this.submitted = false;
         this.loading = false;
-        this.loadingCustomer = false;
         this.ButtonText = "Save";
-        this.createForm();
+        this.UserList = [];
+        // this.createForm();
+        this.loadUser();
     }
     ngOnInit() {
-        this.setSelectedCustomer();
+        //this.setSelectedCustomer();
     }
-    get f() { return this.userForm.controls; }
-    createForm() {
-        this.userForm = this.formBuilder.group({
-            userName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            statusID: [true],
-            password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            id: 0,
-        });
-    }
-    editForm(obj) {
-        this.f.userName.setValue(obj.userName);
-        this.f.email.setValue(obj.email);
-        this.f.password.setValue(obj.password);
-        this.f.type.setValue(obj.type);
-        this.f.id.setValue(obj.id);
-        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    }
-    setSelectedCustomer() {
+    // get f() { return this.permissionForm.controls; }
+    // private createForm() {
+    //   this.permissionForm = this.formBuilder.group({
+    //     formName: ['', Validators.required],
+    //     formAccess: true,
+    //     roleName: [''],
+    //     permissionID: [0],
+    //   });
+    // }
+    //setSelectedCustomer() {
+    //  this.route.paramMap.subscribe(param => {
+    //    const sid = +param.get('id');
+    //    if (sid) {
+    //      this.loadingCustomer = true;
+    //      this.f.id.setValue(sid);
+    //      this.userService.getPermissionId(sid).subscribe(res => {
+    //        //Set Forms
+    //        this.editForm(res);
+    //        this.loadingCustomer = false;
+    //      });
+    //    }
+    //  })
+    //}
+    onSelect(rolename) {
         debugger;
-        this.route.paramMap.subscribe(param => {
-            const sid = +param.get('id');
-            if (sid) {
-                this.loadingCustomer = true;
-                this.f.id.setValue(sid);
-                this.userService.getById(sid).subscribe(res => {
-                    //Set Forms
-                    this.editForm(res);
-                    this.loadingCustomer = false;
-                });
+        this.userService.getPermissionId(rolename).subscribe(res => {
+            //Set Forms
+            if (res != null) {
+                this.formName = res[0];
             }
+            debugger;
         });
     }
     onSubmit() {
         debugger;
-        this.userForm.markAllAsTouched();
-        this.submitted = true;
-        if (this.userForm.invalid) {
-            return;
-        }
-        this.loading = true;
-        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-        if (parseInt(this.f.id.value) === 0) {
-            //Insert customer
-            console.log(JSON.stringify(this.userForm.value));
-            this.userService.insert(this.userForm.value).subscribe(data => {
-                if (data != 0) {
-                    this.ts.showSuccess("Success", "Record added successfully.");
-                    this.router.navigate(['/admin/user']);
-                }
-                this.loading = false;
-            }, error => {
-                this.ts.showError("Error", "Failed to insert record.");
-                this.loading = false;
-            });
-        }
-        else {
-            //Update customer
-            this.userService.update(this.userForm.value).subscribe(data => {
-                this.loading = false;
-                if (data != 0) {
-                    this.ts.showSuccess("Success", "Record updated successfully.");
-                    this.router.navigate(['/admin/user']);
-                }
-            }, error => {
-                this.ts.showError("Error", "Failed to update record.");
-                this.loading = false;
-            });
-        }
+        //Update customer
+        this.userService.permissionupdate(this.formName).subscribe(obj => {
+            this.loading = false;
+            if (obj != 0) {
+                this.ts.showSuccess("Success", "Record updated successfully.");
+                this.router.navigate(['/admin/permission']);
+            }
+        }, error => {
+            this.ts.showError("Error", "Failed to update record.");
+            this.loading = false;
+        });
+    }
+    loadUser() {
+        //this.userService.loadUser().subscribe((res: any) => {
+        //  this.UserList = res;
+        //});
+        debugger;
+        this.UserList = [
+            { "type": "Super Admin" },
+            { "type": "Admin" },
+            { "type": "Pharmacy" },
+            { "type": "Reception" },
+            { "type": "Laboratory" },
+        ];
     }
 };
 AddComponent.ctorParameters = () => [
@@ -14445,7 +14822,7 @@ AddComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"] },
-    { type: src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
+    { type: src_app_services_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"] }
 ];
 AddComponent.propDecorators = {
     imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
@@ -14460,7 +14837,7 @@ AddComponent = __decorate([
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"],
-        src_app_services_userservice__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
+        src_app_services_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]])
 ], AddComponent);
 
 
@@ -14479,7 +14856,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PermissionComponent", function() { return PermissionComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
-/* harmony import */ var src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/userservice */ "./src/app/_services/userservice.ts");
+/* harmony import */ var src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/user.service */ "./src/app/_services/user.service.ts");
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
@@ -14559,7 +14936,7 @@ let PermissionComponent = class PermissionComponent {
     }
 };
 PermissionComponent.ctorParameters = () => [
-    { type: src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
+    { type: src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"] },
     { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
@@ -14574,7 +14951,7 @@ PermissionComponent = __decorate([
         template: __importDefault(__webpack_require__(/*! raw-loader!./permission.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/permission/permission.component.html")).default,
         providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
     }),
-    __metadata("design:paramtypes", [src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"],
+    __metadata("design:paramtypes", [src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"],
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"],
         src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
@@ -14597,7 +14974,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserComponent", function() { return UserComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
-/* harmony import */ var src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/userservice */ "./src/app/_services/userservice.ts");
+/* harmony import */ var src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/user.service */ "./src/app/_services/user.service.ts");
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
@@ -14677,7 +15054,7 @@ let UserComponent = class UserComponent {
     }
 };
 UserComponent.ctorParameters = () => [
-    { type: src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
+    { type: src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"] },
     { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
@@ -14692,7 +15069,7 @@ UserComponent = __decorate([
         template: __importDefault(__webpack_require__(/*! raw-loader!./user.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/user.component.html")).default,
         providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
     }),
-    __metadata("design:paramtypes", [src_app_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"],
+    __metadata("design:paramtypes", [src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"],
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"],
         src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
@@ -14834,6 +15211,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./admin/user/permission/add/add.component */ "./src/app/admin/user/permission/add/add.component.ts");
 /* harmony import */ var _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./admin/settings/timeslot/timeslot.component */ "./src/app/admin/settings/timeslot/timeslot.component.ts");
 /* harmony import */ var _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./admin/settings/timeslot/add/addtimeslot.component */ "./src/app/admin/settings/timeslot/add/addtimeslot.component.ts");
+/* harmony import */ var _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./admin/permission/formpermission.component */ "./src/app/admin/permission/formpermission.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -14926,6 +15304,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 //import { DiagnosticCategoriesComponent } from './admin/laboratory/diagnosticcategories/diagnosticcategories.component';
 
 
+
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -15000,7 +15379,8 @@ AppModule = __decorate([
             _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"],
             _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"],
             _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"],
-            _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"]
+            _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"],
+            _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'ng-cli-universal' }),
@@ -15110,6 +15490,7 @@ AppModule = __decorate([
                         { path: 'settings/timeslot', component: _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"] },
                         { path: 'settings/timeslot/add', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"] },
                         { path: 'settings/timeslot/edit/:id', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"] },
+                        { path: 'formpermission', component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"] }
                     ]
                 }
             ]),
@@ -15307,7 +15688,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HasRoleGuard", function() { return HasRoleGuard; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _services_userservice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_services/userservice */ "./src/app/_services/userservice.ts");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_services/user.service */ "./src/app/_services/user.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -15333,14 +15714,14 @@ let HasRoleGuard = class HasRoleGuard {
     }
 };
 HasRoleGuard.ctorParameters = () => [
-    { type: _services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
+    { type: _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }
 ];
 HasRoleGuard = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
         providedIn: 'root'
     }),
-    __metadata("design:paramtypes", [_services_userservice__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
 ], HasRoleGuard);
 
 
@@ -15480,9 +15861,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutComponent", function() { return LayoutComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _services_locations_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../_services/locations.service */ "./src/app/_services/locations.service.ts");
-/* harmony import */ var _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
-/* harmony import */ var _services_userservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../_services/userservice */ "./src/app/_services/userservice.ts");
+/* harmony import */ var src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/environments/environment.prod */ "./src/environments/environment.prod.ts");
+/* harmony import */ var _services_locations_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../_services/locations.service */ "./src/app/_services/locations.service.ts");
+/* harmony import */ var _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../_services/user.service */ "./src/app/_services/user.service.ts");
+/* harmony import */ var _models_Permission__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../_models/Permission */ "./src/app/_models/Permission.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -15495,6 +15878,9 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
+
+// import { TranslateService } from '@ngx-translate/core';
 
 
 
@@ -15510,16 +15896,31 @@ let LayoutComponent = class LayoutComponent {
         this.userName = "";
         this.type = "";
         this.email = "";
-        debugger;
+        this.isDiagnostic = true;
+        this.isDoctor = true;
+        this.isUser = true;
+        this.isNoti = true;
+        this.isPharmacy = true;
+        this.isReception = true;
+        this.isReport = true;
+        this.isSetting = true;
+        this.permission = new _models_Permission__WEBPACK_IMPORTED_MODULE_6__["Permission"]();
         this.userName = this.ls.getSelectedBrand().email;
         this.type = this.ls.getSelectedBrand().type;
+        debugger;
+        this.permission = src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_2__["environment"].rootScope;
+        var role = this.permission.permissionForm.find(element => element.roleName == this.type);
+        var roleNameType = role.roleName;
+        this.isDiagnostic = role.diagnostic === 1 ? true : false;
+        this.isDoctor = role.doctor === 1 ? true : false;
+        this.isUser = role.mamjiUser === 1 ? true : false;
+        this.isNoti = role.notification === 1 ? true : false;
+        this.isPharmacy = role.pharmacy === 1 ? true : false;
+        this.isReception = role.reception === 1 ? true : false;
+        this.isReport = role.reports === 1 ? true : false;
+        this.isSetting = role.setting === 1 ? true : false;
     }
     ngOnInit() {
-        //var data = this.ls.getSelectedBrand();
-        // this.loadLocations();
-        // if (data == null)
-        //   this.router.navigate(["/"]);
-        debugger;
         this.type = this.ls.getSelectedBrand().type;
     }
     Logout() {
@@ -15555,9 +15956,9 @@ let LayoutComponent = class LayoutComponent {
 };
 LayoutComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
-    { type: _services_locations_service__WEBPACK_IMPORTED_MODULE_2__["LocationsService"] },
-    { type: _services_userservice__WEBPACK_IMPORTED_MODULE_4__["UserService"] },
-    { type: _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"] }
+    { type: _services_locations_service__WEBPACK_IMPORTED_MODULE_3__["LocationsService"] },
+    { type: _services_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"] },
+    { type: _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] }
 ];
 LayoutComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -15566,9 +15967,9 @@ LayoutComponent = __decorate([
         styles: [__importDefault(__webpack_require__(/*! ./layout.component.css */ "./src/app/layout/layout.component.css")).default]
     }),
     __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-        _services_locations_service__WEBPACK_IMPORTED_MODULE_2__["LocationsService"],
-        _services_userservice__WEBPACK_IMPORTED_MODULE_4__["UserService"],
-        _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]])
+        _services_locations_service__WEBPACK_IMPORTED_MODULE_3__["LocationsService"],
+        _services_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"],
+        _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]])
 ], LayoutComponent);
 
 
@@ -15592,7 +15993,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var _services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../_services/toastservice */ "./src/app/_services/toastservice.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _services_userservice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../_services/userservice */ "./src/app/_services/userservice.ts");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../_services/user.service */ "./src/app/_services/user.service.ts");
+/* harmony import */ var src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/environments/environment.prod */ "./src/environments/environment.prod.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -15605,6 +16007,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -15636,6 +16039,8 @@ let LoginComponent = class LoginComponent {
             if (data != null) {
                 this.ls.setSelectedBrand(data);
                 this.userService.getAllData();
+                //this.userService.getpermission();
+                src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].rootScope = data;
                 this.router.navigate(["/admin/dashboard"]);
             }
             else {
@@ -15656,7 +16061,7 @@ let LoginComponent = class LoginComponent {
 LoginComponent.ctorParameters = () => [
     { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
     { type: _services_login_service__WEBPACK_IMPORTED_MODULE_2__["LoginService"] },
-    { type: _services_userservice__WEBPACK_IMPORTED_MODULE_7__["UserService"] },
+    { type: _services_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"] },
     { type: _services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
     { type: _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] }
@@ -15668,7 +16073,7 @@ LoginComponent = __decorate([
     }),
     __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
         _services_login_service__WEBPACK_IMPORTED_MODULE_2__["LoginService"],
-        _services_userservice__WEBPACK_IMPORTED_MODULE_7__["UserService"],
+        _services_user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"],
         _services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
         _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"],
         _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]])
@@ -15731,6 +16136,24 @@ NavMenuComponent = __decorate([
     })
 ], NavMenuComponent);
 
+
+
+/***/ }),
+
+/***/ "./src/environments/environment.prod.ts":
+/*!**********************************************!*\
+  !*** ./src/environments/environment.prod.ts ***!
+  \**********************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+const environment = {
+    production: true,
+    rootScope: null,
+};
 
 
 /***/ }),
@@ -15808,7 +16231,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Projects\Mamji\ClientApp\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! E:\Project\Mamji\MamjiAdmin_Git\ClientApp\src\main.ts */"./src/main.ts");
 
 
 /***/ }),
