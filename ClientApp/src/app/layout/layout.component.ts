@@ -10,7 +10,8 @@ import { LocationsService } from '../_services/locations.service';
 import { LocalStorageService } from '../_services/local-storage.service';
 import { UserService } from '../_services/user.service';
 import { LoginService } from '../_services/login.service';
-import { PermissionForms } from '../_models/Permission';
+import { Permission, PermissionForms } from '../_models/Permission';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-layout',
@@ -25,7 +26,19 @@ export class LayoutComponent implements OnInit {
   email = "";
   locationID: 0;
   Locations: [];
-  public permission =new PermissionForms();
+
+  roleName;
+  isDiagnostic: boolean = true;
+  isDoctor: boolean = true;
+  isUser: boolean = true;
+  isNoti: boolean = true;
+  isPharmacy: boolean = true;
+  isReception: boolean = true;
+  isReport: boolean = true;
+  isSetting: boolean = true;
+
+  public permission = new Permission();
+  
 
   ngOnInit() {
     this.type = this.ls.getSelectedBrand().type;
@@ -37,8 +50,20 @@ export class LayoutComponent implements OnInit {
       this.userName = this.ls.getSelectedBrand().email;
       this.type = this.ls.getSelectedBrand().type;
       debugger
-      var permission=environment.rootScope; 
-      this.permission.roleName = permission.admin                              
+       this.permission=environment.rootScope; 
+       var role = this.permission.permissionForm.find(element => element.roleName == this.type); 
+       var roleNameType= role.roleName;
+       this.isDiagnostic = role.diagnostic === 1 ? true : false;
+       this.isDoctor = role.doctor === 1 ? true : false;
+       this.isUser = role.mamjiUser === 1 ? true : false;
+       this.isNoti = role.notification === 1 ? true : false;
+       this.isPharmacy = role.pharmacy === 1 ? true : false;
+       this.isReception = role.reception === 1 ? true : false;
+       this.isReport = role.reports === 1 ? true : false;
+       this.isSetting = role.setting === 1 ? true : false;
+       
+
+                                 
   }
   Logout() {
 

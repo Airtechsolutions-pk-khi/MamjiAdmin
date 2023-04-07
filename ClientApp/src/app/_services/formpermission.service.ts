@@ -49,6 +49,7 @@ export class FormPermissionService {
     return this.http.get<FormPermission[]>(`api/formpermission/permission/${rolename}`);
     
   }
+
   getAllData() {
     const url = `api/formpermission/all`;
     console.log(url);

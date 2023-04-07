@@ -29,4 +29,10 @@ namespace MamjiAdmin._Models
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
         public string Password { get; set; }
     }
+    public class CustomerDropdownBLL
+    {
+        public string CustomerID { get; set; }
+        public string FullName { get; set; }
+        
+    }
 }

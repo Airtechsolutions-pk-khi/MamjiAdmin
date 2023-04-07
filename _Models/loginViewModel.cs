@@ -24,7 +24,8 @@ namespace MamjiAdmin._Models
         public Nullable<int> StatusID { get; set; }                
         public string LastUpdateBy { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; }
-        public List<PermissionFormBLL> PermissionForm { get; set;}
+        //public List<PermissionFormBLL> PermissionForm { get; set;}
+        public List<FormPermissionBLL> PermissionForm { get; set; }
     }
-
+    
 }

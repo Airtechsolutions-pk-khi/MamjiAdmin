@@ -39,6 +39,7 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
+       
         //public int Insert(FormPermissionBLL data)
         //{
         //    try
@@ -73,7 +74,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.CreatedDate = _UTCDateTime_SA();
+                //data.CreatedDate = _UTCDateTime_SA();
                 var result = _service.Delete(data);
 
                 return result;

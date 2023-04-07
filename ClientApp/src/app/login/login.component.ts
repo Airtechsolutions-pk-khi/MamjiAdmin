@@ -49,10 +49,12 @@ export class LoginComponent implements OnInit {
         data => {
           
           if (data != null) {        
-
+            
             this.ls.setSelectedBrand(data);
             this.userService.getAllData();
+            //this.userService.getpermission();
             environment.rootScope = data;
+            
             this.router.navigate(["/admin/dashboard"]);     
             
           }

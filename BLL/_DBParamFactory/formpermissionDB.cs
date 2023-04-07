@@ -69,6 +69,7 @@ namespace BAL.Repositories
                 return null;
             }
         }
+       
         //public int Insert(FormPermissionBLL data)
         //{
         //    try
@@ -106,10 +107,11 @@ namespace BAL.Repositories
                 p[4] = new SqlParameter("@Reception", data.Reception);
                 p[5] = new SqlParameter("@Diagnostic", data.Diagnostic);
                 p[6] = new SqlParameter("@Reports", data.Reports);
-                p[7] = new SqlParameter("@Settings", data.Settings);
-                p[8] = new SqlParameter("@CreatedBy", data.CreatedBy);
-                p[9] = new SqlParameter("@CreatedDate", data.CreatedDate);
-                p[10] = new SqlParameter("@PermissionID", data.PermissionID);
+                p[7] = new SqlParameter("@Setting", data.Setting);
+                p[8] = new SqlParameter("@RoleName", data.RoleName);
+                p[9] = new SqlParameter("@CreatedBy", data.CreatedBy);
+                p[10] = new SqlParameter("@CreatedDate", data.CreatedDate);
+                //p[10] = new SqlParameter("@PermissionID", data.FormPermissionID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateformpermission_Admin", p);
 
@@ -127,7 +129,7 @@ namespace BAL.Repositories
             {
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@id", data.PermissionID);
+                p[0] = new SqlParameter("@id", data.FormPermissionID);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteUser", p);
 

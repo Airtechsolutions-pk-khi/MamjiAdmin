@@ -67,7 +67,8 @@ export class LaboratoryService {
     return this._allData$.asObservable();
   }
   loadCustomer() {
-    return this.http.get<Customers[]>(`api/customer/all`);
+    debugger
+    return this.http.get<Customers[]>(`api/customer/alldropdown`);
   }
   ExportList(LaboratoryID) {
     return this.http.get<Laboratory[]>(`api/Laboratory/all`);
@@ -141,6 +142,7 @@ export class LaboratoryService {
     };
   }
   insert(data) {
+    debugger
     return this.http.post('api/laboratory/insert', data)
       .pipe(map(res => {
 

@@ -1,7 +1,8 @@
 <h1 class="h3 mb-2 text-gray-800">Upload Reports</h1>
 <p class="mb-4"></p>
 
-<form [formGroup]="reportForm" class="form" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="reportForm" class="form" (ngSubmit)="onSubmit()"> -->
+  <form class="form" (ngSubmit)="onSubmit()" #myForm="ngForm" >
   <div class="row">
     <div class="col-xl-12">
       <div class="card mb-4">
@@ -13,7 +14,7 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Customer Name</label>
-                  <select class="custom-select" formControlName="customerID">
+                  <select class="custom-select"  id="customerID" [(ngModel)]="formData.customerID">
 
                     <option [ngValue]="option.customerID" selected="option.customerID == customerID"
                             *ngFor="let option of CustomerList">
@@ -22,15 +23,15 @@
                   </select>
                 </div>
               </div>
-                <!-- <input type="file" (change)="onFileSelected($event)" name="image" id='pdf-upload' accept=".pdf" multiple="false" /> -->
-                <input type="file" (change)="onFileSelected($event)" accept="application/pdf">
+               
+              <input type="file" id="pdfFile" name="pdfFile" (change)="onFileChange($event)" accept=".pdf" required>
             </div>
 
             <div class="form-group col-md-6">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Diagnostic Catgeory</label>
-                  <select class="custom-select" formControlName="diagnosticCatID">
+                  <select class="custom-select"  id="diagnosticCatID" [(ngModel)]="formData.diagnosticCatID">
 
                     <option [ngValue]="option.diagnosticCatID" selected="option.diagnosticCatID == diagnosticCatID"
                             *ngFor="let option of CategoryList">
@@ -39,8 +40,6 @@
                   </select>
                 </div>
               </div>
-
-
 
             </div>
           </div>

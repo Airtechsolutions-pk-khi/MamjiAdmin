@@ -28,6 +28,7 @@ namespace MamjiAdmin.Controllers
         {
             return _service.Get(rolename);
         }
+      
         //[HttpPost]
         //[Route("insert")]
         //public int Post([FromBody] FormPermissionBLL obj)

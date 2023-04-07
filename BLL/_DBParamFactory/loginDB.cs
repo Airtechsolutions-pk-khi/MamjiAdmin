@@ -31,7 +31,7 @@ namespace BAL.Repositories
 
         public LoginBLL GetAuthenticateUser(string username, string password)
         {
-            var bll = new List<PermissionFormBLL>();
+            //var bll = new List<PermissionFormBLL>();
             var repo = new LoginBLL();
             try
             {
@@ -44,6 +44,7 @@ namespace BAL.Repositories
                 {
                     repo = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[0])).ToObject<List<LoginBLL>>().FirstOrDefault();
                     //repo.PermissionForm = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[1])).ToObject<List<PermissionFormBLL>>();
+                    repo.PermissionForm = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_ds.Tables[1])).ToObject<List<FormPermissionBLL>>();
                 }
             }
             catch (Exception ex)

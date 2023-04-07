@@ -5,16 +5,27 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { LaboratoryService } from 'src/app/_services/laboratory.service';
 import { ToastService } from 'src/app/_services/toastservice';
-import { DiagnosticCategories } from '../../../../_models/DiagnosticCategories';
 import { DiagnosticCategoryService } from '../../../../_services/diagnosticcategories.service';
 import { HttpClient, HttpErrorResponse, HttpEventType } from '@angular/common/http';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-addreports',
   templateUrl: './addreports.component.html',
 })
 export class AddreportsComponent implements OnInit {
+
+  formData = {
+    customerID: '',
+    diagnosticCatID: ''
+  };
+
+  selectedFile: File;
+
+  onFileChange(event) {
+    this.selectedFile = event.target.files[0];
+  }
+
   submitted = false;
   reportForm: FormGroup;
   loading = false;
@@ -25,12 +36,14 @@ export class AddreportsComponent implements OnInit {
   selectedCustomerIds = [];
   selectedCategoryIds = [];
   Images = [];
-  pdfFile;
+  pdfFile: [''];
   pdfSrc;
   pdfBufferRender;
   localPDF;
 
   fileName = '';
+
+  // selectedFile: File = null;
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -53,58 +66,12 @@ export class AddreportsComponent implements OnInit {
     this.setSelectedReport();
   }
 
-//   onFileSelected(event) {
-// debugger
-//     const file:File = event.target.files[0];
 
-//     if (file) {
-
-//         this.fileName = file.name;
-
-//         const formData = new FormData();
-
-//         formData.append("thumbnail", file);
-
-//         const upload$ = this.http.post("/api/thumbnail-upload", formData);
-
-//         upload$.subscribe();
-//     }
-// }
-onFileSelected(event: any) {
+onFileSelect(files: FileList): void {
   debugger
-  const file: File = event.target.files[0];
-  this.uploadPDF(file);
+  this.selectedFile = files.item(0);
 }
-uploadPDF(file: File) {
-  debugger
-  this.laboratoryService.uploadPDF(file).subscribe(
-    res => {
-      console.log(res);
-      alert('File uploaded successfully!');
-    },
-    err => {
-      console.error(err);
-      alert('File upload failed!');
-    }
-  );
-}
-  // pdfOnload(event) {
 
-  //   debugger
-  //   console
-  //   const pdfTatget: any = event.target;
-  //   if (typeof FileReader !== 'undefined') {
-  //     const reader = new FileReader();
-  //     debugger
-  //     reader.onload = (e: any) => {
-  //       this.pdfSrc = e.target.result;
-  //       this.localPDF = this.pdfSrc;
-  //     };
-  //     this.pdfBufferRender = pdfTatget.files[0];
-  //     reader.readAsArrayBuffer(pdfTatget.files[0]);
-  //     var a = pdfTatget.files[0].name;
-  //   }
-  // }
   get f() { return this.reportForm.controls; }
 
   private createForm() {
@@ -114,14 +81,14 @@ uploadPDF(file: File) {
       customerID: 0,
       diagnosticCatID: 0,
       laboratoryID: [0],
-      image: this.pdfFile,
+      selectedFile: File = null,
     });
   }
   private editForm(obj) {
     debugger
     this.f.customerID.setValue(obj.customerID);
     this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
-    this.f.image.setValue(obj.image);
+    //this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
   }
   setSelectedReport() {
@@ -139,42 +106,74 @@ uploadPDF(file: File) {
     })
   }
   
+
+
+
+
   onSubmit() {
     debugger
-    this.reportForm.markAllAsTouched();
-    this.submitted = true;
-    if (this.reportForm.invalid) { return; }
-    this.loading = true;
-    this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    //this.f.image.setValue(this.imgComp.imageUrl);
+    
+    const formData = new FormData();
+    
+    formData.append('customerID', this.formData.customerID);
+    formData.append('diagnosticCatID', this.formData.diagnosticCatID);
+    formData.append('pdfFile', this.selectedFile, this.selectedFile.name);
 
-    if (parseInt(this.f.laboratoryID.value) === 0) {
-      //Insert customer
-      console.log(JSON.stringify(this.reportForm.value));
-      this.laboratoryService.insert(this.reportForm.value).subscribe(data => {
-        if (data != 0) {
-          this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/laboratory/uploadreport']);
-        }
-        this.loading = false;
-      }, error => {
-        this.ts.showError("Error", "Failed to insert record.")
-        this.loading = false;
-      });
-    } else {
-      //Update customer
-      this.laboratoryService.update(this.reportForm.value).subscribe(data => {
-        this.loading = false;
-        if (data != 0) {
-          this.ts.showSuccess("Success", "Record updated successfully.")
-          this.router.navigate(['/admin/laboratory/uploadreport']);
-        }
-      }, error => {
-        this.ts.showError("Error", "Failed to update record.")
-        this.loading = false;
-      });
-    }
+    
+    this.http.post('api/laboratory/insert', formData).subscribe(
+      response => {
+        console.log(response);
+      },
+      error => {
+        console.error(error);
+      }
+    );
   }
+
+
+
+  
+  // onSubmit() {
+  //   debugger
+
+    
+
+  //   this.reportForm.markAllAsTouched();
+  //   this.submitted = true;
+
+  //   if (this.reportForm.invalid) { return; }
+  //   this.loading = true;
+  //   this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+
+  //   this.f.pdfFile.setValue(this.selectedFile.name);
+    
+  //   if (parseInt(this.f.laboratoryID.value) === 0) {
+  //     //Insert customer
+  //     console.log(JSON.stringify(this.reportForm.value));
+   //    this.laboratoryService.insert(this.reportForm.value).subscribe(data => {
+  //       if (data != 0) {
+  //         this.ts.showSuccess("Success", "Record added successfully.")
+  //         this.router.navigate(['/admin/laboratory/uploadreport']);
+  //       }
+  //       this.loading = false;
+  //     }, error => {
+  //       this.ts.showError("Error", "Failed to insert record.")
+  //       this.loading = false;
+  //     });
+  //   } else {
+  //     //Update customer
+  //     this.laboratoryService.update(this.reportForm.value).subscribe(data => {
+  //       this.loading = false;
+  //       if (data != 0) {
+  //         this.ts.showSuccess("Success", "Record updated successfully.")
+  //         this.router.navigate(['/admin/laboratory/uploadreport']);
+  //       }
+  //     }, error => {
+  //       this.ts.showError("Error", "Failed to update record.")
+  //       this.loading = false;
+  //     });
+  //   }
+  // }
 
   private loadCustomer() {
     debugger

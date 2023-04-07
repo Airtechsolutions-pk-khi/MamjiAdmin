@@ -10,7 +10,7 @@ namespace MamjiAdmin._Models
     }
     public class FormPermissionBLL
     {
-        public int PermissionID { get; set; }
+        public int FormPermissionID { get; set; }
         public string RoleName { get; set; }
         public int? Notification { get; set; }
         public int? Doctor { get; set; }
@@ -19,7 +19,7 @@ namespace MamjiAdmin._Models
         public int? Reception { get; set; }
         public int? Diagnostic { get; set; }
         public int? Reports { get; set; }
-        public int? Settings { get; set; }
+        public int? Setting { get; set; }
         public DateTime? CreatedDate { get; set; }
         public string CreatedBy { get; set; }
     }

@@ -42,7 +42,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.Image = UploadImage(data.Image, "laboratory", _env);
+                //data.Image = UploadImage(data.Image, "laboratory", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
@@ -57,7 +57,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.Image = uploadFiles(data.Image, "laboratory", _env);
+                //data.Image = uploadFiles(data.Image, "laboratory", _env);
                 data.LastUpdatedDate = DateTime.Now;
                 var result = _service.Update(data);
 

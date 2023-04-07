@@ -16,11 +16,11 @@ namespace MamjiAdmin.Controllers
         private readonly IWebHostEnvironment _env;
         private IHostingEnvironment _hostingEnvironment;
         laboratoryService _service;
-        public laboratoryController(IWebHostEnvironment env, IHostingEnvironment environment)
+        public laboratoryController(IWebHostEnvironment env)
         {
             _service = new laboratoryService();
             _env = env;
-            _hostingEnvironment = environment;
+            //_hostingEnvironment = environment;
         }
         [HttpGet("all")]
         public List<LaboratoryBLL> GetAll()
@@ -34,9 +34,9 @@ namespace MamjiAdmin.Controllers
         }
         [HttpPost]
         [Route("insert")]
-        public int Post([FromBody] LaboratoryBLL obj)
+        public int Post(IFormFile pdfFile,string CustomerID,string diagnosticCatID)
         {
-            return _service.Insert(obj, _env);
+            return 0;//  _service.Insert(obj, _env);
         }
         [HttpPost]
         [Route("update")]

@@ -12,7 +12,7 @@
             <div class="form-group col-md-6">
               <label class="small mb-1" for="inputUsername">Role Name</label>
               <!-- <select class="custom-select" [(ngModel)]="formName.roleName" [ngModelOptions]="{standalone: true}" (change)="onSelect($event.target.value)"> -->
-                <select class="custom-select" formControlName="roleName" (change)="onSelect($event.target.value)" (click)="edit(formname.roleName)">
+                <select class="custom-select" formControlName="roleName" (change)="onSelect($event.target.value)">
                 <option *ngFor="let option of UserList">
                   {{option.type}}
                 </option>
@@ -51,41 +51,42 @@
                 <!-- <input type="checkbox" class="custom-control-input" checked id="pharmacy" [ngModelOptions]="{standalone: true}" [(ngModel)]="formName.pharmacy"> -->
                 <label class="custom-control-label" for="pharmacy"></label>       
               </div>
-            </div>            
-          </div>
-          <div class="form-row">
-            <!-- <div class="form-group col-lg-3" id="Reception">
+            </div>  
+            <div class="form-group col-lg-3">
               <label for="Item Status">Reception</label>
               <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="reception" value="" [(ngModel)]="formAccess">
-                <label class="custom-control-label" for="reception"></label>
-                <input type="text" class="hidden" value="reception" [(ngModel)]="formName" hidden>
+                <input type="checkbox" class="custom-control-input" checked id="reception" formControlName="reception">
+                <!-- <input type="checkbox" class="custom-control-input" checked id="pharmacy" [ngModelOptions]="{standalone: true}" [(ngModel)]="formName.pharmacy"> -->
+                <label class="custom-control-label" for="reception"></label>       
               </div>
-            </div>
-            <div class="form-group col-lg-3" id="Laboratory">
+            </div> 
+            <div class="form-group col-lg-3">
               <label for="Item Status">Diagnostic</label>
               <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="diagnostic" value="" [(ngModel)]="formAccess">
-                <label class="custom-control-label" for="diagnostic"></label>
-                <input type="text" class="hidden" value="diagnostic" [(ngModel)]="formName" hidden>
+                <input type="checkbox" class="custom-control-input" checked id="diagnostic" formControlName="diagnostic">
+                <!-- <input type="checkbox" class="custom-control-input" checked id="pharmacy" [ngModelOptions]="{standalone: true}" [(ngModel)]="formName.pharmacy"> -->
+                <label class="custom-control-label" for="diagnostic"></label>       
               </div>
-            </div>
+            </div>  
             <div class="form-group col-lg-3">
               <label for="Item Status">Reports</label>
               <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="reports" value="" [(ngModel)]="formAccess">
-                <label class="custom-control-label" for="reports"></label>
-                <input type="text" class="hidden" value="reports" [(ngModel)]="formName" hidden>
+                <input type="checkbox" class="custom-control-input" checked id="reports" formControlName="reports">
+                <!-- <input type="checkbox" class="custom-control-input" checked id="pharmacy" [ngModelOptions]="{standalone: true}" [(ngModel)]="formName.pharmacy"> -->
+                <label class="custom-control-label" for="reports"></label>       
               </div>
-            </div>
-            <div class="form-group col-lg-3" id="Admin">
+            </div>   
+            <div class="form-group col-lg-3">
               <label for="Item Status">Settings</label>
               <div class="custom-control custom-switch custom-switch-md">
-                <input type="checkbox" class="custom-control-input" checked id="settings" value="" [(ngModel)]="formAccess">
-                <label class="custom-control-label" for="settings"></label>
-                <input type="text" class="hidden" value="settings" [(ngModel)]="formName" hidden>
+                <input type="checkbox" class="custom-control-input" checked id="setting" formControlName="setting">
+                <!-- <input type="checkbox" class="custom-control-input" checked id="pharmacy" [ngModelOptions]="{standalone: true}" [(ngModel)]="formName.pharmacy"> -->
+                <label class="custom-control-label" for="setting"></label>       
               </div>
-            </div> -->
+            </div>      
+          </div>
+          <div class="form-row">
+     
           </div>
 
           <!-- Save changes button-->

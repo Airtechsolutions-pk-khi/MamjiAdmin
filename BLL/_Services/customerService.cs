@@ -28,6 +28,17 @@ namespace MamjiAdmin.BLL._Services
                 return new List<CustomerBLL>();
             }
         }
+        public List<CustomerDropdownBLL> GetAlldropdown()
+        {
+            try
+            {
+                return _service.GetAlldropdown();
+            }
+            catch (Exception ex)
+            {
+                return new List<CustomerDropdownBLL>();
+            }
+        }
         public CustomerBLL Get(int id)
         {
             try

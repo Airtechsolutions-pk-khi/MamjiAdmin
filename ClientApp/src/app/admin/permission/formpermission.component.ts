@@ -6,6 +6,7 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { FormPermissionService } from 'src/app/_services/formpermission.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { FormPermission } from '../../_models/FormPermission';
+import { UserService } from 'src/app/_services/user.service';
 //import { debug } from 'console';
 
 @Component({
@@ -15,6 +16,7 @@ import { FormPermission } from '../../_models/FormPermission';
 export class FormPermissionComponent implements OnInit {
   public formName = new FormPermission();
   submitted = false;
+  loadingPermission = false;
   permissionForm: FormGroup;
   loading = false;
   loadingformpermission = false;
@@ -28,6 +30,7 @@ export class FormPermissionComponent implements OnInit {
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
+    public userService: UserService,
     private permissionService: FormPermissionService
 
   ) {
@@ -48,24 +51,25 @@ export class FormPermissionComponent implements OnInit {
       reports: [true],
       setting: [true],
       roleName: [''],
-      permissionID: [0],
+      formPermissionID: [0],
     });
   }
 
   private editForm(obj) {
     debugger
-    this.f.notification.setValue(obj.notification ===1 ? true : false);
-    this.f.doctor.setValue(obj.doctor ===1 ? true : false);
-    this.f.mamjiUser.setValue(obj.mamjiUser ===1 ? true : false);
-    this.f.pharmacy.setValue(obj.pharmacy ===1 ? true : false);
-    this.f.reception.setValue(obj.reception ===1 ? true : false);
-    this.f.diagnostic.setValue(obj.diagnostic ===1 ? true : false);
-    this.f.reports.setValue(obj.reports ===1 ? true : false);
-    this.f.settings.setValue(obj.settings ===1 ? true : false);
-    this.f.permissionID.setValue(obj.permissionID);
+    this.f.notification.setValue(obj.notification ==1 ? true : false);
+    this.f.doctor.setValue(obj.doctor ==1 ? true : false);
+    this.f.mamjiUser.setValue(obj.mamjiUser ==1 ? true : false);
+    this.f.pharmacy.setValue(obj.pharmacy ==1 ? true : false);
+    this.f.reception.setValue(obj.reception ==1 ? true : false);
+    this.f.diagnostic.setValue(obj.diagnostic ==1 ? true : false);
+    this.f.reports.setValue(obj.reports ==1 ? true : false);
+    this.f.setting.setValue(obj.setting ==1 ? true : false);
+    //this.f.formPermissionID.setValue(obj.formPermissionID);
+    this.f.roleName.setValue(obj.roleName);
   }
   ngOnInit() {
-    //this.setSelectedOrder();
+    //this.setSelectedPermission();
 
   }
 
@@ -74,6 +78,7 @@ export class FormPermissionComponent implements OnInit {
     this.permissionService.getById(formName).subscribe(res => {
       //Set Forms
       if (res != null) {
+        this.editForm(res);
         this.formName = res[0];
       }
       debugger
@@ -83,6 +88,21 @@ export class FormPermissionComponent implements OnInit {
   onSubmit() {
     debugger
     {
+      this.permissionForm.markAllAsTouched();
+      this.submitted = true;
+      if (this.permissionForm.invalid) { return; }
+      this.loading = true;
+      this.f.notification.setValue(this.f.notification.value == true ? 1 : 0);
+      this.f.doctor.setValue(this.f.doctor.value == true ? 1 : 0);
+      this.f.mamjiUser.setValue(this.f.mamjiUser.value == true ? 1 : 0);
+      this.f.pharmacy.setValue(this.f.pharmacy.value == true ? 1 : 0);
+      this.f.reception.setValue(this.f.reception.value == true ? 1 : 0);
+      this.f.diagnostic.setValue(this.f.diagnostic.value == true ? 1 : 0);
+      this.f.reports.setValue(this.f.reports.value == true ? 1 : 0);
+      this.f.setting.setValue(this.f.setting.value == true ? 1 : 0);
+      //this.f.permissionID.setValue(this.f.permissionID.value);
+      this.f.roleName.setValue(this.f.roleName.value);
+
       this.permissionService.update(this.permissionForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
@@ -96,16 +116,19 @@ export class FormPermissionComponent implements OnInit {
     }
   }
   private loadUser() {
-    //this.userService.loadUser().subscribe((res: any) => {
-    //  this.UserList = res;
-    //});
     debugger
-    this.UserList = [
-      { "type": "Super Admin" },
-      { "type": "Admin" },
-      { "type": "Pharmacy" },
-      { "type": "Reception" },
-      { "type": "Laboratory" },
-    ];
+    this.userService.loadUser().subscribe((res: any) => {
+     this.UserList = res;
+    });
+   
+    // this.UserList = [
+    //   { "type": "Super Admin" },
+    //   { "type": "Admin" },
+    //   { "type": "Pharmacy" },
+    //   { "type": "Reception" },
+    //   { "type": "Laboratory" },
+    // ];
   }
+
+
 }

@@ -1,8 +1,8 @@
 export class Laboratory {
   laboratoryID: number;
-  customerID: number;
-  diagnosticCatID: number;
-  image: string;
+  customerID: string;
+  diagnosticCatID: string;
+  selectedFile: File;
   fullName: string;
   labReferenceNo: string;
   statusID: number;
