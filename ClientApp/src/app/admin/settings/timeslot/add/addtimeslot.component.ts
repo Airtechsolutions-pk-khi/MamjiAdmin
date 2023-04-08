@@ -86,7 +86,7 @@ export class AddTimeSlotComponent implements OnInit {
       this.services.insert(this.timeslotForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/settings/speciality']);
+          this.router.navigate(['/admin/settings/timeslot']);
         }
         this.loading = false;
       }, error => {
@@ -99,7 +99,7 @@ export class AddTimeSlotComponent implements OnInit {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success","Record updated successfully.")
-          this.router.navigate(['/admin/settings/speciality']);
+          this.router.navigate(['/admin/settings/timeslot']);
         }
       }, error => {
         this.ts.showError("Error","Failed to update record.")

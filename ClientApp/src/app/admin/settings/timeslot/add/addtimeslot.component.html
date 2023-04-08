@@ -13,10 +13,10 @@
             <div class="form-group col-md-6">
               <div class="form-group">
                 <label class="small mb-1" for="inputUsername">Time Slot</label>
-                <input type="text" class="form-control" id=name placeholder="" formControlName="name">
+                <input type="text" class="form-control" id=timeSlot placeholder="" formControlName="timeSlot">
                 <label style="color:red">Note: Time should be type in this format e.g: 10:00 AM - 11:00 AM</label>
-                <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
-                  <div *ngIf="f.name.errors.required">
+                <div *ngIf="f.timeSlot.invalid && (f.timeSlot.dirty || f.timeSlot.touched)" class="alert alert-danger">
+                  <div *ngIf="f.timeSlot.errors.required">
                     Time Slot is required.
                   </div>
                 </div>

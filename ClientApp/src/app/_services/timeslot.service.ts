@@ -66,7 +66,7 @@ export class TimeSlotService {
   }
 
   getById(id) {
-    return this.http.get<TimeSlot[]>(`api/timeslot/timeslot/${id}`);
+    return this.http.get<TimeSlot[]>(`api/timeslot/${id}`);
   }
   getAllData() {
     const url = `api/timeslot/all`;
@@ -126,6 +126,7 @@ export class TimeSlotService {
     };
   }
   insert(data) {
+    debugger
     return this.http.post('api/timeslot/insert', data)
       .pipe(map(res => {
 
@@ -143,6 +144,7 @@ export class TimeSlotService {
   delete(data) {
     debugger
     return this.http.post(`api/timeslot/delete`, data);
+    
   }
  
 }
