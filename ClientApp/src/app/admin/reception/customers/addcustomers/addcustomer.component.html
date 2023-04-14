@@ -46,7 +46,7 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputLastName">Contact No.</label>
-                  <input type="text" class="form-control" id=mobile placeholder="" formControlName="mobile">
+                  <input type="text" class="form-control" id=mobile placeholder="" formControlName="mobile" maxlength="11">
                   <div *ngIf="f.mobile.invalid && (f.mobile.dirty || f.mobile.touched)" class="alert alert-danger">
                     <div *ngIf="f.mobile.errors.required">
                       Phone is required.
