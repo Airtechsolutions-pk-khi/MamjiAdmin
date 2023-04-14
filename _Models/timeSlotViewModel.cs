@@ -8,7 +8,7 @@ namespace MamjiAdmin._Models
     public class timeSlotViewModel
     {
     }
-
+    
     public class TimeSlotBLL 
     { 
         public int TimeSlotID { get; set; }

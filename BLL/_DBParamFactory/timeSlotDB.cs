@@ -100,7 +100,7 @@ namespace BAL.Repositories
             {
                 int rtn = 0;
 
-                SqlParameter[] p = new SqlParameter[3];
+                SqlParameter[] p = new SqlParameter[4];
 
                 p[0] = new SqlParameter("@TimeSlot", data.TimeSlot);
                 p[1] = new SqlParameter("@StatusID", data.StatusID);
@@ -111,7 +111,7 @@ namespace BAL.Repositories
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateTimeSlot_Admin", p);
                 return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }
@@ -130,7 +130,7 @@ namespace BAL.Repositories
 
                 return _obj;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }
