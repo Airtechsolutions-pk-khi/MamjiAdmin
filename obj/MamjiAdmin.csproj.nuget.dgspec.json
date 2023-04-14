@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj": {}
+    "D:\\Projects\\Mamji\\MamjiAdmin.csproj": {}
   },
   "projects": {
-    "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj": {
+    "D:\\Projects\\Mamji\\MamjiAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj",
+        "projectUniqueName": "D:\\Projects\\Mamji\\MamjiAdmin.csproj",
         "projectName": "MamjiAdmin",
-        "projectPath": "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj",
-        "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\Mamji\\MamjiAdmin_Git\\obj\\",
+        "projectPath": "D:\\Projects\\Mamji\\MamjiAdmin.csproj",
+        "packagesPath": "C:\\Users\\ammad\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Mamji\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ammad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,24 +84,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.32, 3.1.32]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -110,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
