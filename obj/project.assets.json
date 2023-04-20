@@ -8115,19 +8115,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ammad\\.nuget\\packages\\": {}
+    "C:\\Users\\toshiba\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Mamji\\MamjiAdmin.csproj",
+      "projectUniqueName": "D:\\MoizWork\\MamjiAdmin\\MamjiAdmin.csproj",
       "projectName": "MamjiAdmin",
-      "projectPath": "D:\\Projects\\Mamji\\MamjiAdmin.csproj",
-      "packagesPath": "C:\\Users\\ammad\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Mamji\\obj\\",
+      "projectPath": "D:\\MoizWork\\MamjiAdmin\\MamjiAdmin.csproj",
+      "packagesPath": "C:\\Users\\toshiba\\.nuget\\packages\\",
+      "outputPath": "D:\\MoizWork\\MamjiAdmin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ammad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\toshiba\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8205,7 +8205,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

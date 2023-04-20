@@ -7,6 +7,7 @@ import { ToastService } from '../_services/toastservice';
 import { Router } from '@angular/router';
 import { UserService } from '../_services/user.service';
 import { environment } from 'src/environments/environment.prod';
+import { SignalrService } from '../_services/SignalrService';
 
 @Component({
   selector: 'app-login',

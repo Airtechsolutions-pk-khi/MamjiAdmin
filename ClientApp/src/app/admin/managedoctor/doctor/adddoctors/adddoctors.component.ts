@@ -8,15 +8,13 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { AppointmentService } from 'src/app/_services/appointment.service';
 import { DoctorProfiles, DoctorSchedule } from 'src/app/_models/Doctors';
 
-
-
-
 @Component({
   selector: 'app-adddoctors',
   templateUrl: './adddoctors.component.html',
 
 })
 export class AdddoctorsComponent implements OnInit {
+  
   submitted = false;
   public spec = new DoctorSchedule(); 
   public drProfile = new DoctorProfiles(); 

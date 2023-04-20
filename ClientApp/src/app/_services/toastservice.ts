@@ -22,5 +22,4 @@ import { Injectable } from '@angular/core';
       timeOut: 3000,
     });
   }
-
 }

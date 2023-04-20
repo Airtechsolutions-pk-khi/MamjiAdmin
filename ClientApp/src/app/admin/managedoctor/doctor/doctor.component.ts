@@ -7,6 +7,8 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { Doctors } from 'src/app/_models/Doctors';
 import { DoctorsService } from 'src/app/_services/doctors.service';
+import { SignalrService } from 'src/app/_services/SignalrService';
+
 @Component({
   selector: 'app-doctor',
   templateUrl: './doctor.component.html',
@@ -28,9 +30,9 @@ export class DoctorComponent implements OnInit {
     public ls: LocalStorageService,
     public excelService: ExcelService,
     public ts: ToastService,
-    public router: Router) {
+    public router: Router
+    ) {
     //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
-
     this.loading$ = service.loading$;
     this.submit = false;
 
