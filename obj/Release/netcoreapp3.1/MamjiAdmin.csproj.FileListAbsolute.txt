@@ -421,3 +421,4 @@ E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\MamjiAdmin.csproj.Copy
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\MamjiAdmin.dll
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\MamjiAdmin.pdb
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\MamjiAdmin.genruntimeconfig.cache
+E:\Project\Mamji\MamjiAdmin_Git\bin\Release\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll
