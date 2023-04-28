@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as signalR from "@microsoft/signalr"
 import { ToastService } from 'src/app/_services/toastservice';
 import { Notification } from '../_models/Notifications';
+import { async } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root'
@@ -9,13 +10,16 @@ import { Notification } from '../_models/Notifications';
 export class SignalrService{
 
   private hubConnection: signalR.HubConnection;
+  private _toastSer: ToastService;
   constructor(public ts: ToastService) {
+    this._toastSer = ts;
   }
 
   public async startConnection() {
     debugger;
+    var domain = "http://localhost:59660";
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://localhost:59660/Notify').build();
+      .withUrl(`${domain}/Notify`).build();
 
     await this.hubConnection.start();
 
@@ -26,8 +30,8 @@ export class SignalrService{
 
     this.hubConnection.on('publicMessageMethodName', (data: Notification) => {
       debugger;
-      // console.log('public Message:' + data.message);
-      this.ts.showWarning(data.title, data.message);
+      console.log('public Message:' + data.message);
+      this._toastSer.showWarning(data.title, data.message);
       // alert(data.message);
     });
 

@@ -67,8 +67,9 @@ export class DashboardComponent {
   public lineChartOptions: Partial<lineChartOptions>;
 
   dashboardSummary = new DashboardSummary();
-  ngOnInit() {
-    this.singlarService.startConnection();
+  async ngOnInit() {
+    debugger;
+    await this.singlarService.startConnection();
     this.GetDashboard();
     this.GetChart();
   }
