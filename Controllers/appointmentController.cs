@@ -15,6 +15,7 @@ namespace MamjiAdmin.Controllers
     {
         private readonly IWebHostEnvironment _env;
         appointmentService _service;
+
         public appointmentController(IWebHostEnvironment env)
         {
             _service = new appointmentService();

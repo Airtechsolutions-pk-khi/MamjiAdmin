@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using MohsinFoodAdmin.BLL._Services;
 
 namespace MamjiAdmin
 {
@@ -30,7 +31,9 @@ namespace MamjiAdmin
             {
                 configuration.RootPath = "ClientApp/dist";
             });
-        }
+			services.AddSignalR(); // Add SignalR services to the service collection
+			services.AddSingleton<InMemoryProductService>(); // Add the in-memory product service
+		}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -43,23 +46,36 @@ namespace MamjiAdmin
             {
                 app.UseExceptionHandler("/Error");
             }
-
-            app.UseStaticFiles();
+			app.UseStaticFiles();
             if (!env.IsDevelopment())
             {
                 app.UseSpaStaticFiles();
             }
 
             app.UseRouting();
+            
+            //app.UseSignalR(routes =>
+            //    routes.MapHub<ProductNotificationHub>("/Notify"));
 
-            app.UseEndpoints(endpoints =>
+			app.UseCors(builder =>
+			{
+				builder.AllowAnyOrigin()
+					.AllowAnyHeader()
+					.AllowAnyMethod();
+			});
+
+			app.UseAuthorization();
+
+			app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
+                endpoints.MapHub<ProductNotificationHub>("/Notify");
+
             });
 
-            app.UseSpa(spa =>
+			app.UseSpa(spa =>
             {
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,
                 // see https://go.microsoft.com/fwlink/?linkid=864501

@@ -18,6 +18,7 @@ import {
   ApexStroke,
   ApexTitleSubtitle
 } from "ng-apexcharts";
+import { SignalrService } from 'src/app/_services/SignalrService';
 
 type ApexXAxis = {
   type?: "category" | "datetime" | "numeric";
@@ -66,14 +67,17 @@ export class DashboardComponent {
   public lineChartOptions: Partial<lineChartOptions>;
 
   dashboardSummary = new DashboardSummary();
-  ngOnInit() {
+  async ngOnInit() {
+    debugger;
+    await this.singlarService.startConnection();
     this.GetDashboard();
     this.GetChart();
   }
 
   constructor(public service: DashboardService,
     public ls: LocalStorageService,
-    public router: Router) {
+    public router: Router,
+    private singlarService:SignalrService) {
     this.loading$ = service.loading$;
 
     //this.chartOptions = {
