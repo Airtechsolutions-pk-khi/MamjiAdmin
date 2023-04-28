@@ -1482,7 +1482,7 @@ let SignalrService = class SignalrService {
                 debugger;
                 console.log('public Message:' + data.message);
                 this._toastSer.showWarning(data.title, data.message);
-                // alert(data.message);
+                alert(data.message);
             });
             this.hubConnection.on('clientMethodName', (data) => {
                 debugger;

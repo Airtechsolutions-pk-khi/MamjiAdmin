@@ -2355,8 +2355,9 @@
                         debugger;
                         console.log('public Message:' + data.message);
 
-                        _this._toastSer.showWarning(data.title, data.message); // alert(data.message);
+                        _this._toastSer.showWarning(data.title, data.message);
 
+                        alert(data.message);
                       });
                       this.hubConnection.on('clientMethodName', function (data) {
                         debugger;
