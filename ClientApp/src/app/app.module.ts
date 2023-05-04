@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { AlertModule } from './_alert/alert.module'
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -190,6 +191,7 @@ import { FormPermissionComponent } from './admin/permission/formpermission.compo
     FormsModule,
     NgSelectModule,
     ReactiveFormsModule,
+    AlertModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     /*    NgApexchartsModule,*/

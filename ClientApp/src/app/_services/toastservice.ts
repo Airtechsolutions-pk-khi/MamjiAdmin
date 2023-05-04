@@ -23,10 +23,8 @@ import { Injectable } from '@angular/core';
       timeOut: 5000,
     });
   }
-  public async showToast(_title, _message) {
-    const toast: ActiveToast<any> = this.toastr.show(_title, _message);
-    await toast.onHidden.toPromise();
-    console.log('Toast shown');
+  public showToast(_title, _message) {
+    this.toastr.warning(_title, _message, { disableTimeOut: true, closeButton:true });
   }
   
 }

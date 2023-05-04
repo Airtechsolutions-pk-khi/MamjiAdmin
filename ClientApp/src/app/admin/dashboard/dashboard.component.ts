@@ -6,6 +6,8 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-range-popup';
 import { Router } from '@angular/router';
+import { AlertService } from '../../_alert/alert.service';
+
 import {
   ApexChart,
   ApexAxisChartSeries,
@@ -57,6 +59,10 @@ export type ChartOptions = {
 })
 
 export class DashboardComponent {
+  // options = {
+  //   autoClose: false,
+  //   keepAfterRouteChange: false
+  // };
   data$: Observable<DashboardSummary[]>;
   oldData: DashboardSummary[];
   total$: Observable<number>;
@@ -77,7 +83,9 @@ export class DashboardComponent {
   constructor(public service: DashboardService,
     public ls: LocalStorageService,
     public router: Router,
-    private singlarService:SignalrService) {
+    private singlarService: SignalrService,
+    // public alertService: AlertService
+    ) {
     this.loading$ = service.loading$;
 
     //this.chartOptions = {
