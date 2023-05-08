@@ -51,10 +51,13 @@ namespace MamjiAdmin.Controllers
 				{
 					await Data.PdfFile.CopyToAsync(fileSteam);
 				}
-				//your logic to save filePath to database, for example
+                LaboratoryBLL data = new LaboratoryBLL();
+                data.CustomerID = int.Parse(Data.CustomerID);
+                data.FilePath = filePath;
+                data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
+                data.StatusID = 1;
 
-                //_context.Engineers.Add(engineer);
-                //await _context.SaveChangesAsync();
+                _service.Insert(data, _env);
                 return 1;
 			}
 			return 0;

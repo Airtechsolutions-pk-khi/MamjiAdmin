@@ -14,7 +14,7 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Customer Name</label>
-                  <select class="custom-select"  id="customerID" [(ngModel)]="formData.customerID">
+                  <select class="custom-select"  id="customerID" [(ngModel)]="formData.customerID" (change)="onCustomerSelect($event.target.value)">
 
                     <option [ngValue]="option.customerID" selected="option.customerID == customerID"
                             *ngFor="let option of CustomerList">
@@ -31,7 +31,7 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Diagnostic Catgeory</label>
-                  <select class="custom-select"  id="diagnosticCatID" [(ngModel)]="formData.diagnosticCatID">
+                  <select class="custom-select"  id="diagnosticCatID" [(ngModel)]="formData.diagnosticCatID"(change)="onDiagnosticSelect($event.target.value)">
 
                     <option [ngValue]="option.diagnosticCatID" selected="option.diagnosticCatID == diagnosticCatID"
                             *ngFor="let option of CategoryList">

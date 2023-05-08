@@ -46,6 +46,7 @@ E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\PubTmp\Out\System.Coll
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\PubTmp\Out\System.Configuration.ConfigurationManager.dll
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\PubTmp\Out\System.Data.SqlClient.dll
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
+E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\PubTmp\Out\System.Net.WebSockets.WebSocketProtocol.dll
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\PubTmp\Out\System.Runtime.Caching.dll
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
