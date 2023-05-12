@@ -12,16 +12,8 @@
         <div class="input-group-prepend" style="height: 39px;">
           <span class="input-group-text"><i class="fa fa-search"></i></span>
         </div>
-        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" />
+        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
       </div>
-      <!--<div class="col-md-3 form-group text-right">
-        <button type="submit" class="btn btn-primary mt-4 mr-1">
-          <span translate>Export</span>
-        </button>-->
-      <!--<button [routerLink]="['addappointment']" class="btn btn-primary mt-4 mr-1">
-        Doctor Appoinment
-      </button>-->
-      <!--</div>-->
     </div>
   </div>
   <div class="card-body">

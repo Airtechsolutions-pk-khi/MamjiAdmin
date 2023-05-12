@@ -9,9 +9,9 @@ import { User } from '../_models/User';
 import { PermissionForms } from '../_models/Permission';
 
 
-interface SearchCustomersResult {
+interface SearchUsersResult {
   data: User[];
-  obj: PermissionForms[];
+  //obj: PermissionForms[];
   total: number;
 }
 const compare = (v1: string, v2: string) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
@@ -28,8 +28,8 @@ function sort(data: User[], column: SortColumn, direction: string): User[] {
 }
 
 function matches(data: User, term: string) {
-
-  return data.userName.toLowerCase().includes(term.toLowerCase())
+  debugger
+  return data.type.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({
@@ -57,13 +57,11 @@ export class UserService {
     sortColumn: '',
     sortDirection: ''
   };
-
   get total$() { return this._total$.asObservable(); }
   get loading$() { return this._loading$.asObservable(); }
   get page() { return this._state.page; }
   get pageSize() { return this._state.pageSize; }
   get searchTerm() { return this._state.searchTerm; }
-
   set page(page: number) { this._set({ page }); }
   set pageSize(pageSize: number) { this._set({ pageSize }); }
   set searchTerm(searchTerm: any) { this._set({ searchTerm }); }
@@ -102,15 +100,13 @@ export class UserService {
           
         this._data$.next(this.user);
         this._allData$.next(this.user);
-
-        //this._search$.pipe(
-        //  switchMap(() => this._search()),
-        //  tap(() => this._loading$.next(false))
-        //).subscribe(result => {
-        //  this._data$.next(result.data);
-        //  this._total$.next(result.total);
-        //});
-
+        this._search$.pipe(
+          switchMap(() => this._search()),
+          tap(() => this._loading$.next(false))
+        ).subscribe(result => {
+          this._data$.next(result.data);
+          this._total$.next(result.total);
+        });
         this._search$.next();
       });
   }
@@ -119,21 +115,18 @@ export class UserService {
     this._search$.next();
   }
 
-  //private _search(): Observable<SearchCustomersResult> {
-  //  const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
-
-  //  // 1. sort
-  //  let sortedData = sort(this.user, sortColumn, sortDirection);
-
-  //  //// 2. filter
-  //  sortedData = sortedData.filter(data => matches(data, searchTerm));
-  //  const total = sortedData.length;
-
-  //  // 3. paginate
-  //  //const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
-  //  //const obj = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
-  //  return of({ total });
-  //}
+  private _search(): Observable<SearchUsersResult> {
+    debugger
+    const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+    // 1. sort
+    let sortedData = sort(this.user, sortColumn, sortDirection);
+    //// 2. filter
+    sortedData = sortedData.filter(data => matches(data, searchTerm));
+    const total = sortedData.length;
+    // 3. paginate
+    const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+    return of({ data, total });
+  }
 
   
   clear() {

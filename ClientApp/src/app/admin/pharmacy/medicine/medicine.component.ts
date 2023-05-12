@@ -8,7 +8,7 @@ import { Medicine } from 'src/app/_models/Medicine';
 import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 @Component({
-  selector: 'app-customers',
+  selector: 'app-medicine',
   templateUrl: './medicine.component.html',
   providers: [ExcelService]
 })
