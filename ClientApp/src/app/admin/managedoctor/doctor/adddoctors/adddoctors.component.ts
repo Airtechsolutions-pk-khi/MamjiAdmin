@@ -62,7 +62,7 @@ export class AdddoctorsComponent implements OnInit {
   private createForm() {
     this.doctorForm = this.formBuilder.group({
      
-      fullName: [''],
+      fullName: ['', Validators.required],
       email: [''],      
       skills: [''],
       education: [''],

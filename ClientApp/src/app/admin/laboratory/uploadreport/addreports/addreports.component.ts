@@ -26,6 +26,17 @@ export class AddreportsComponent implements OnInit {
     this.selectedFile = event.target.files[0];
   }
 
+  onCustomerSelect(customerID: string) {
+    debugger;
+    this.formData.customerID = customerID.split(' ')[1];
+  }
+
+  onDiagnosticSelect(diagnosticCatID: string) {
+    debugger;
+    this.formData.diagnosticCatID = diagnosticCatID.split(' ')[1];
+  }
+  
+
   submitted = false;
   reportForm: FormGroup;
   loading = false;
@@ -178,6 +189,7 @@ onFileSelect(files: FileList): void {
   private loadCustomer() {
     debugger
     this.laboratoryService.loadCustomer().subscribe((res: any) => {
+      debugger;
       this.CustomerList = res;
     });
   }

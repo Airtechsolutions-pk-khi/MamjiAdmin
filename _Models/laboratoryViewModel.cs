@@ -21,9 +21,11 @@ namespace MamjiAdmin._Models
 
         public Nullable<int> StatusID { get; set; }
 
-        public Nullable<int> LastUpdatedBy { get; set; }
+        public Nullable<int> LastUpdatedBy { get; set; } = 1;
 
         public Nullable<DateTime> LastUpdatedDate { get; set; }
+        public string FilePath { get; set; } = "";
+        public string FullName { get; set; }
 
     }
 }

@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "g45Z0vTOvAv4aZQHD5YG3O4u3XUssmW9P64nPktYvT8=",
+  "Source": "MamjiAdmin",
+  "BasePath": "_content/MamjiAdmin",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MamjiAdmin\\wwwroot",
+      "Source": "MamjiAdmin",
+      "ContentRoot": "D:\\Projects\\Mamji\\wwwroot\\",
+      "BasePath": "_content/MamjiAdmin",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Projects\\Mamji\\wwwroot\\favicon.ico",
+      "SourceId": "MamjiAdmin",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Mamji\\wwwroot\\",
+      "BasePath": "_content/MamjiAdmin",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Projects\\Mamji\\wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf",
+      "SourceId": "MamjiAdmin",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Mamji\\wwwroot\\",
+      "BasePath": "_content/MamjiAdmin",
+      "RelativePath": "pdffiles/Dec 2022 AC Schedule BBA-V to VIII.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf"
+    },
+    {
+      "Identity": "D:\\Projects\\Mamji\\wwwroot\\pdffiles\\MyDocument.pdf",
+      "SourceId": "MamjiAdmin",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Mamji\\wwwroot\\",
+      "BasePath": "_content/MamjiAdmin",
+      "RelativePath": "pdffiles/MyDocument.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdffiles\\MyDocument.pdf"
+    }
+  ]
+}

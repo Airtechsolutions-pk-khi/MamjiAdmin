@@ -7,6 +7,7 @@ using MamjiAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MohsinFoodAdmin._Models;
 
 namespace MamjiAdmin.Controllers
 {
@@ -14,13 +15,11 @@ namespace MamjiAdmin.Controllers
     public class laboratoryController : ControllerBase
     {
         private readonly IWebHostEnvironment _env;
-        private IHostingEnvironment _hostingEnvironment;
         laboratoryService _service;
         public laboratoryController(IWebHostEnvironment env)
         {
             _service = new laboratoryService();
             _env = env;
-            //_hostingEnvironment = environment;
         }
         [HttpGet("all")]
         public List<LaboratoryBLL> GetAll()
@@ -34,11 +33,37 @@ namespace MamjiAdmin.Controllers
         }
         [HttpPost]
         [Route("insert")]
-        public int Post(IFormFile pdfFile,string CustomerID,string diagnosticCatID)
+        public async Task<int> Post(UploadViewModel Data)
         {
-            return 0;//  _service.Insert(obj, _env);
-        }
-        [HttpPost]
+			if (Data.PdfFile != null)
+			{
+				//upload files to wwwroot
+				var fileName = Path.GetFileName(Data.PdfFile.FileName);
+				//judge if it is pdf file
+				string ext = Path.GetExtension(Data.PdfFile.FileName);
+				if (ext.ToLower() != ".pdf")
+				{
+                    return 0;
+				}
+				var filePath = Path.Combine(_env.WebRootPath, "pdffiles", fileName);
+
+				using (var fileSteam = new FileStream(filePath, FileMode.Create))
+				{
+					await Data.PdfFile.CopyToAsync(fileSteam);
+				}
+                LaboratoryBLL data = new LaboratoryBLL();
+                data.CustomerID = int.Parse(Data.CustomerID);
+                data.FilePath = filePath;
+                data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
+                data.StatusID = 1;
+
+                _service.Insert(data, _env);
+                return 1;
+			}
+			return 0;
+		}
+
+	[HttpPost]
         [Route("update")]
         public int PostUpdate([FromBody] LaboratoryBLL obj)
         {

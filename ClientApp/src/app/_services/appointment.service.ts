@@ -30,7 +30,7 @@ function sort(data: Appointment[], column: SortColumn, direction: string): Appoi
 
 function matches(data: Appointment, term: string)
 {
-  return data.appointmentNo.toLowerCase().includes(term.toLowerCase())
+  return data.fullName.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({

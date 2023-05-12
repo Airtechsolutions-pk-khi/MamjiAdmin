@@ -3,16 +3,20 @@ import * as signalR from "@microsoft/signalr"
 import { ToastService } from 'src/app/_services/toastservice';
 import { Notification } from '../_models/Notifications';
 import { async } from '@angular/core/testing';
+import { AlertService } from '../_alert/alert.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SignalrService{
-
+export class SignalrService {
+  options = {
+    autoClose: false,
+    keepAfterRouteChange: false
+  };
   private hubConnection: signalR.HubConnection;
-  private _toastSer: ToastService;
-  constructor(public ts: ToastService) {
-    this._toastSer = ts;
+  constructor(
+    public ts: ToastService,
+    public alertService: AlertService) {
   }
 
   public async startConnection() {
@@ -31,8 +35,10 @@ export class SignalrService{
     this.hubConnection.on('publicMessageMethodName', (data: Notification) => {
       debugger;
       console.log('public Message:' + data.message);
-      this._toastSer.showWarning(data.title, data.message);
-       alert(data.message);
+      this.ts.showToast(data.title, data.message);
+      // this.ts.showWarning(data.title, data.message);
+      // this.alertService.success('Success!!', this.options)
+      // alert(data.message);
     });
 
     this.hubConnection.on('clientMethodName', (data) => {
