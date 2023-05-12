@@ -63,14 +63,14 @@ export class AdddoctorsComponent implements OnInit {
     this.doctorForm = this.formBuilder.group({
      
       fullName: ['', Validators.required],
-      email: [''],      
-      skills: [''],
-      education: [''],
+      email: ['', Validators.required],      
+      skills: ['', Validators.required],
+      education: ['', Validators.required],
       imagePath: [''],
-      profile:[''],
+      profile:['', Validators.required],
       statusID: [true],
       fees:[],
-      gender:[''],
+      gender:['', Validators.required],
       timeSlot:[''],
       doctorID:[0],
  

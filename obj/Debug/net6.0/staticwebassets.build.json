@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g45Z0vTOvAv4aZQHD5YG3O4u3XUssmW9P64nPktYvT8=",
+  "Hash": "ekXE7YzWh1uJi+XLda5WpplOIrGvYJev3ZcWka49Vn4=",
   "Source": "MamjiAdmin",
   "BasePath": "_content/MamjiAdmin",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MamjiAdmin\\wwwroot",
       "Source": "MamjiAdmin",
-      "ContentRoot": "D:\\Projects\\Mamji\\wwwroot\\",
+      "ContentRoot": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\",
       "BasePath": "_content/MamjiAdmin",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Projects\\Mamji\\wwwroot\\favicon.ico",
+      "Identity": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\favicon.ico",
       "SourceId": "MamjiAdmin",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Mamji\\wwwroot\\",
+      "ContentRoot": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\",
       "BasePath": "_content/MamjiAdmin",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Projects\\Mamji\\wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf",
+      "Identity": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf",
       "SourceId": "MamjiAdmin",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Mamji\\wwwroot\\",
+      "ContentRoot": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\",
       "BasePath": "_content/MamjiAdmin",
       "RelativePath": "pdffiles/Dec 2022 AC Schedule BBA-V to VIII.pdf",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf"
     },
     {
-      "Identity": "D:\\Projects\\Mamji\\wwwroot\\pdffiles\\MyDocument.pdf",
+      "Identity": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\pdffiles\\MyDocument.pdf",
       "SourceId": "MamjiAdmin",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Mamji\\wwwroot\\",
+      "ContentRoot": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\",
       "BasePath": "_content/MamjiAdmin",
       "RelativePath": "pdffiles/MyDocument.pdf",
       "AssetKind": "All",

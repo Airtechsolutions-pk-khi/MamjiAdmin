@@ -16,11 +16,11 @@
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Name </label>
                   <input type="text" class="form-control" id=fullName placeholder="" formControlName="fullName">
-                  <!-- <div *ngIf="f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)" class="alert alert-danger">
+                  <div *ngIf="f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)" class="alert alert-danger">
                     <div *ngIf="f.fullName.errors.required">
                       Name is required.
                     </div>
-                  </div> -->
+                  </div>
                 </div>
               </div>
               <!-- Form Row-->
@@ -28,31 +28,45 @@
                 <div class="form-group col-md-6">
                   <label class="small mb-1" for="inputUsername">Email</label>
                   <input type="text" class="form-control" id=email placeholder="" formControlName="email">
-                  <!-- <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger">
+                  <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger">
                       <div *ngIf="f.email.errors.required">
                           Email is required.
                       </div>
-                  </div> -->
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label class="small mb-1" for="inputFirstName">Skills</label>
                   <input type="text" class="form-control" id=skills placeholder="" formControlName="skills">
+                   <div *ngIf="f.skills.invalid && (f.skills.dirty || f.skills.touched)" class="alert alert-danger">
+                      <div *ngIf="f.skills.errors.required">
+                          Skill is required.
+                      </div>
+                  </div>
                 </div>
 
                 <div class="form-group col-md-6">
                   <label class="small mb-1" for="inputLastName">Gender</label>
-                  <select type="text" class="form-control" id=gender placeholder="" formControlName="gender">
+                  <select type="text" class="form-control" id=gender placeholder="" required formControlName="gender">
                     <option selected disabled> -- Please Select -- </option>
                     <option>Male</option>
                     <option>Female</option>
                   </select>
-
+                  <div *ngIf="f.gender.invalid && (f.gender.dirty || f.gender.touched)" class="alert alert-danger">
+                    <div *ngIf="f.gender.errors.required">
+                      Gender is required.
+                    </div>
+                </div>
                 </div>
 
 
                 <div class="form-group col-md-6">
                   <label class="small mb-1" for="inputLastName">Education</label>
                   <input type="text" class="form-control" id=education placeholder="" formControlName="education">
+                   <div *ngIf="f.education.invalid && (f.education.dirty || f.education.touched)" class="alert alert-danger">
+                      <div *ngIf="f.education.errors.required">
+                          Education is required.
+                      </div>
+                  </div>
                 </div>
               </div>
 
@@ -60,7 +74,7 @@
 
                 <div class="form-group col-md-3">
                   <label class="small mb-1" for="inputUsername">Attach Speciality</label>
-                  <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="false" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="drProfile.specialistID">
+                  <ng-select [items]="selectedSpecialityList" bindLabel="name" bindValue="specialistID" [multiple]="false" placeholder=""  [ngModelOptions]="{standalone: true}" [(ngModel)]="drProfile.specialistID">
                     <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                       <div class="ng-value" *ngFor="let item of items">
                         <span class="ng-value-label">{{item.name}}</span>
@@ -68,6 +82,7 @@
                       </div>
                     </ng-template>
                   </ng-select>
+                 
                 </div>
 
                 <!--<div class="form-group col-md-3">
