@@ -38,6 +38,7 @@
 
             <th width="15%" sortable="Skills"> Skills </th>
             <th width="15%" sortable="Education"> Education </th>
+            <th width="15%" sortable="Gender"> Gender </th>
             <th width="15%" sortable="Status">Status </th>
             <th width="10%">Action</th>
           </tr>
@@ -53,6 +54,7 @@
 
             <td> {{item.skills}} </td>
             <td> {{item.education}} </td>
+            <td> {{item.gender}} </td>
             <td>
               <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
               </ngb-highlight>

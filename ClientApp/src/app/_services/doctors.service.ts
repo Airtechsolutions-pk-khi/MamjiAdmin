@@ -76,7 +76,7 @@ export class DoctorsService {
     return this.http.get<Doctors[]>('api/doctor/all');
   }
   getAllData() {
-
+    debugger
     const url = `api/doctor/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
