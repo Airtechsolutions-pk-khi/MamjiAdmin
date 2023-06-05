@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\favicon.ico",
+      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf",
+      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf",
       "PackagePath": "staticwebassets\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf"
     },
     {
-      "Id": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\pdffiles\\MyDocument.pdf",
+      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\pdffiles\\MyDocument.pdf",
       "PackagePath": "staticwebassets\\pdffiles\\MyDocument.pdf"
     },
     {

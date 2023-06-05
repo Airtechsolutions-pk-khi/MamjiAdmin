@@ -63,6 +63,7 @@ export class AdddoctorsComponent implements OnInit {
     this.doctorForm = this.formBuilder.group({
      
       fullName: ['', Validators.required],
+      urduName: [''],
       email: ['', Validators.required],      
       skills: ['', Validators.required],
       education: ['', Validators.required],
@@ -83,6 +84,7 @@ export class AdddoctorsComponent implements OnInit {
     var obj = obj1[0];
     debugger
     this.f.fullName.setValue(obj.fullName);    
+    this.f.urduName.setValue(obj.urduName);    
     this.f.email.setValue(obj.email);
     this.f.profile.setValue(obj.profile);
     this.f.skills.setValue(obj.skills);
