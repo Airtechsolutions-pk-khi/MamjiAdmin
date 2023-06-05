@@ -55,7 +55,8 @@ export class AdduserComponent implements OnInit {
     this.f.password.setValue(obj.password);
     this.f.type.setValue(obj.type);
     this.f.id.setValue(obj.id);
-    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    //this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.f.statusID.setValue(obj.statusID.value === true ? 1 : 2);
   }
 
   setSelectedCustomer() {
