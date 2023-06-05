@@ -9,8 +9,20 @@
       "PackagePath": "staticwebassets\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf"
     },
     {
+      "Id": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\pdffiles\\Hira Farm House.pdf",
+      "PackagePath": "staticwebassets\\pdffiles\\Hira Farm House.pdf"
+    },
+    {
       "Id": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\pdffiles\\MyDocument.pdf",
       "PackagePath": "staticwebassets\\pdffiles\\MyDocument.pdf"
+    },
+    {
+      "Id": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\pdffiles\\Olive Album-1.pdf",
+      "PackagePath": "staticwebassets\\pdffiles\\Olive Album-1.pdf"
+    },
+    {
+      "Id": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\pdffiles\\SARDAR-1.pdf",
+      "PackagePath": "staticwebassets\\pdffiles\\SARDAR-1.pdf"
     },
     {
       "Id": "E:\\Project\\Mamji\\MamjiAdmin_Git\\wwwroot\\pdffiles\\retail.premium-pos.com_#_app_OrderPunch_list.pdf",

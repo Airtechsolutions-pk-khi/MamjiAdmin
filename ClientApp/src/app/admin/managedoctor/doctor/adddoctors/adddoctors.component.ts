@@ -93,7 +93,7 @@ export class AdddoctorsComponent implements OnInit {
     this.f.imagePath.setValue(obj.imagePath);
     this.f.education.setValue(obj.education);
     this.f.fees.setValue(obj.fees);
-    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
 
  if (obj.doctorProfiles != "") {
   debugger
