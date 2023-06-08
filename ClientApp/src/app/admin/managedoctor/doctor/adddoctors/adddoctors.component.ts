@@ -130,6 +130,7 @@ export class AdddoctorsComponent implements OnInit {
      });
    }
   loadTimeSlotsAll() {
+    debugger;
     this.appointmentService.loadTimeLists().subscribe((res: any) => {
       this.TimeList = res;
      });

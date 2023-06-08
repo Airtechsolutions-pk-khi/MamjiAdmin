@@ -168,7 +168,7 @@
 
             <div class="form-group col-md-3">
               <label class="small mb-1" for="inputUsername">Timeslot</label>
-              <ng-select [items]="TimeList" bindLabel="name" [multiple]="true" bindValue="timeSlot" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="spec.timeSlot">
+              <ng-select [items]="TimeList" bindLabel="timeSlot" [multiple]="true" bindValue="timeSlot" placeholder="" [ngModelOptions]="{standalone: true}" [(ngModel)]="spec.timeSlot">
                 <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                   <div class="ng-value" *ngFor="let item of items">
                     <span class="ng-value-label">{{item.timeSlot}}</span>
