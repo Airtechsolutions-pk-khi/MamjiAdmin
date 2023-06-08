@@ -21,7 +21,7 @@ export class SignalrService {
 
   public async startConnection() {
     debugger;
-    var domain = "http://admin.mamjihospital.online";
+    var domain = "http://localhost:59660";
     this.hubConnection = new signalR.HubConnectionBuilder()
       .withUrl(`${domain}/Notify`).build();
 

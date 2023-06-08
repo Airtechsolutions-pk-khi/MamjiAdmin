@@ -35,7 +35,7 @@ export class AdddoctorsComponent implements OnInit {
 
   selectedSpecialistIds=[];
   DoctorDaysList=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-  TimeList=['10:00 AM - 11:00 AM','11:00 AM - 12:00 PM','12:00 PM - 01:00 PM','01:00 PM - 02:00 PM']
+  TimeList = [];
   
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
@@ -52,6 +52,7 @@ export class AdddoctorsComponent implements OnInit {
     this.createForm();
     // this.loadDay();
     this.loadSpecialitiesAll();
+    this.loadTimeSlotsAll();
   }
   ngOnInit() {
     this.setSelectedDoctor();
@@ -126,6 +127,11 @@ export class AdddoctorsComponent implements OnInit {
   loadSpecialitiesAll() {
      this.appointmentService.loadSpecialities().subscribe((res: any) => {
        this.selectedSpecialityList = res;
+     });
+   }
+  loadTimeSlotsAll() {
+    this.appointmentService.loadTimeLists().subscribe((res: any) => {
+      this.TimeList = res;
      });
    }
    

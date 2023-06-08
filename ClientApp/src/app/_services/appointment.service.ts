@@ -8,6 +8,7 @@ import { Appointment } from '../_models/Appointment';
 import { Specialities } from '../_models/Specialities';
 import { Doctors } from '../_models/Doctors';
 import { Days } from '../_models/Days';
+import { TimeSlot } from '../_models/TimeSlot';
 
 interface SearchAppointmentResult
 {
@@ -81,6 +82,9 @@ export class AppointmentService {
 
   loadSpecialities() {
     return this.http.get<Specialities[]>(`api/doctor/speciality`);
+  }
+  loadTimeLists() {
+    return this.http.get<TimeSlot[]>(`api/timeslot/all`);
   }
   loadDay() {
     return this.http.get<Days[]>(`api/doctor/days`);

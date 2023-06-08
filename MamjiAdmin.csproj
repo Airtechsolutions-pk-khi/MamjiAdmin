@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\app\admin\reception\laboratoryinquiry\addlabreport\" />
+    <Folder Include="pdfFiles\" />
     <Folder Include="Upload\Offers\" />
   </ItemGroup>
 
