@@ -42,21 +42,6 @@ namespace MamjiAdmin.Controllers
         {
 			if (Data.PdfFile != null)
 			{
-				////upload files to wwwroot
-				//var fileName = Path.GetFileName(Data.PdfFile.FileName);
-				////judge if it is pdf file
-				//string ext = Path.GetExtension(Data.PdfFile.FileName);
-				//if (ext.ToLower() != ".pdf")
-				//{
-				//                return 0;
-				//}
-				//var filePath = Path.Combine(_env.WebRootPath, "pdffiles", fileName);
-
-				//using (var fileSteam = new FileStream(filePath, FileMode.Create))
-				//{
-				//	await Data.PdfFile.CopyToAsync(fileSteam);
-				//}
-
 				var filePath = await CopyPdfToPath(Data.PdfFile, FolderName);
 
 				LaboratoryBLL data = new LaboratoryBLL();
@@ -69,16 +54,7 @@ namespace MamjiAdmin.Controllers
 
                 if(res >= 1)
                 {
-					{
-						using (var client = new HttpClient())
-						{
-							const string title = "Success!";
-							const string body = "Your reports has been uploaded!";
-							var URL = string.Format("https://localhost:44359/api/push/androidData/{0}/{1}", title, body);
-							var response = await client.GetAsync(URL);
-							response.EnsureSuccessStatusCode();
-						}
-					}
+					await PushAndriod.PushNotify("Success!", "Your report has been uploaded!");
 				}
 
                 return 1;
