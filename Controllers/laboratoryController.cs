@@ -1,6 +1,9 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
@@ -8,13 +11,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MohsinFoodAdmin._Models;
+using Newtonsoft.Json;
 
 namespace MamjiAdmin.Controllers
 {
     [Route("api/[controller]")]
     public class laboratoryController : ControllerBase
     {
-        private readonly IWebHostEnvironment _env;
+		private const string FolderName = "pdfFiles";
+		private readonly IWebHostEnvironment _env;
         laboratoryService _service;
         public laboratoryController(IWebHostEnvironment env)
         {
@@ -37,33 +42,44 @@ namespace MamjiAdmin.Controllers
         {
 			if (Data.PdfFile != null)
 			{
-				//upload files to wwwroot
-				var fileName = Path.GetFileName(Data.PdfFile.FileName);
-				//judge if it is pdf file
-				string ext = Path.GetExtension(Data.PdfFile.FileName);
-				if (ext.ToLower() != ".pdf")
-				{
-                    return 0;
-				}
-				var filePath = Path.Combine(_env.WebRootPath, "pdffiles", fileName);
+				var filePath = await CopyPdfToPath(Data.PdfFile, FolderName);
 
-				using (var fileSteam = new FileStream(filePath, FileMode.Create))
-				{
-					await Data.PdfFile.CopyToAsync(fileSteam);
-				}
-                LaboratoryBLL data = new LaboratoryBLL();
+				LaboratoryBLL data = new LaboratoryBLL();
                 data.CustomerID = int.Parse(Data.CustomerID);
                 data.FilePath = filePath;
                 data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
                 data.StatusID = 1;
 
-                _service.Insert(data, _env);
+                var res = _service.Insert(data, _env);
+
+                if(res >= 1)
+                {
+					await PushAndriod.PushNotify("Success!", "Your report has been uploaded!");
+				}
+
                 return 1;
 			}
 			return 0;
 		}
+		internal async Task<string> CopyPdfToPath(IFormFile file, string folderName)
+		{
+			var fileName = Path.GetFileName(file.FileName);
+			string ext = Path.GetExtension(file.FileName);
 
-	[HttpPost]
+			if (ext.ToLower() != ".pdf")
+			{
+				return "";
+			}
+			var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
+
+			using (var fileSteam = new FileStream(filePath, FileMode.Create))
+			{
+				await file.CopyToAsync(fileSteam);
+			}
+			return filePath;
+		}
+
+		[HttpPost]
         [Route("update")]
         public int PostUpdate([FromBody] LaboratoryBLL obj)
         {

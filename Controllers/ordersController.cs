@@ -1,6 +1,6 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
@@ -42,24 +42,30 @@ namespace MamjiAdmin.Controllers
 
         [HttpPost]
         [Route("insert")]   
-        public int Post([FromBody]OrdersBLL obj)
+        public async Task<int> Post([FromBody]OrdersBLL obj)
         {
-            return _service.Insert(obj, _env);
+            var result = _service.Insert(obj, _env);
+            await PushAndriod.PushNotify("Success!", "Your order has been posted!");
+            return result;
         }
 
         [HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody]OrdersBLL obj)
+        public async Task<int> PostUpdate([FromBody]OrdersBLL obj)
         {
-            return _service.Update(obj, _env);
+            var result = _service.Update(obj, _env);
+            await PushAndriod.PushNotify("Success!", "Your order has been updated!");
+            return result;
         }
 
 
         [HttpPost]
         [Route("delete")]
-        public int PostDelete([FromBody]OrdersBLL obj)
+        public async Task<int> PostDelete([FromBody]OrdersBLL obj)
         {
-            return _service.Delete(obj);
+            var result = _service.Delete(obj);
+            await PushAndriod.PushNotify("Success!", "Order Deleted!");
+            return result;
         }
     }
 }
