@@ -56,6 +56,7 @@ export class UploadreportComponent implements OnInit {
     this.service.sortDirection = direction;
   }
   Edit(medicine) {
+    debugger
     this.router.navigate(["admin/laboratory/uploadreport/edit", medicine]);
   }
   Delete(obj) {
