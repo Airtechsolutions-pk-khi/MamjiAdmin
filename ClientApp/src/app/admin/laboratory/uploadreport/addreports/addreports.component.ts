@@ -100,7 +100,7 @@ onFileSelect(files: FileList): void {
     this.f.customerID.setValue(obj.customerID);
     this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
     //this.f.image.setValue(obj.image);
-    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
   }
   setSelectedReport() {
     this.route.paramMap.subscribe(param => {
@@ -128,15 +128,15 @@ onFileSelect(files: FileList): void {
     
     formData.append('customerID', this.formData.customerID);
     formData.append('diagnosticCatID', this.formData.diagnosticCatID);
-    formData.append('pdfFile', this.selectedFile, this.selectedFile.name);
-
-    
+    formData.append('pdfFile', this.selectedFile, this.selectedFile.name);    
     this.http.post('api/laboratory/insert', formData).subscribe(
       response => {
+        this.ts.showSuccess("Success", "Record added successfully.")
+        this.router.navigate(['/admin/laboratory/uploadreport']);
         console.log(response);
       },
       error => {
-        console.error(error);
+         
       }
     );
   }
@@ -146,22 +146,25 @@ onFileSelect(files: FileList): void {
   
   // onSubmit() {
   //   debugger
-
+ 
+  //   const formData = new FormData();
     
+  //   formData.append('customerID', this.formData.customerID);
+  //   formData.append('diagnosticCatID', this.formData.diagnosticCatID);
+  //   formData.append('pdfFile', this.selectedFile, this.selectedFile.name);  
+  //   // this.reportForm.markAllAsTouched();
+  //   // this.submitted = true;
 
-  //   this.reportForm.markAllAsTouched();
-  //   this.submitted = true;
-
-  //   if (this.reportForm.invalid) { return; }
+  //   // if (this.formData.invalid) { return; }
   //   this.loading = true;
   //   this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
 
-  //   this.f.pdfFile.setValue(this.selectedFile.name);
+  //   //this.f.pdfFile.setValue(this.selectedFile.name);
     
   //   if (parseInt(this.f.laboratoryID.value) === 0) {
   //     //Insert customer
   //     console.log(JSON.stringify(this.reportForm.value));
-   //    this.laboratoryService.insert(this.reportForm.value).subscribe(data => {
+  //     this.laboratoryService.insert(this.formData.value).subscribe(data => {
   //       if (data != 0) {
   //         this.ts.showSuccess("Success", "Record added successfully.")
   //         this.router.navigate(['/admin/laboratory/uploadreport']);
