@@ -35,7 +35,7 @@ export class AdddoctorsComponent implements OnInit {
 
   selectedSpecialistIds=[];
   DoctorDaysList=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-  TimeList = [];
+  selectedTimeList = [];
   
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
@@ -62,17 +62,15 @@ export class AdddoctorsComponent implements OnInit {
 
   private createForm() {
     this.doctorForm = this.formBuilder.group({
-     
       fullName: ['', Validators.required],
       urduName: [''],
       email: ['', Validators.required],      
       skills: ['', Validators.required],
       education: ['', Validators.required],
       imagePath: [''],
-      profile:['', Validators.required],
+      profile:[''],
       statusID: [true],
-      fees:[],
-      gender:['', Validators.required],
+      gender:[''],
       timeSlot:[''],
       doctorID:[0],
  
@@ -93,17 +91,13 @@ export class AdddoctorsComponent implements OnInit {
     this.f.doctorID.setValue(obj.doctorID);
     this.f.imagePath.setValue(obj.imagePath);
     this.f.education.setValue(obj.education);
-    this.f.fees.setValue(obj.fees);
     this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
 
  if (obj.doctorProfiles != "") {
   debugger
-      
       this.DoctorProfiles = obj.doctorProfiles;
     }
-
-    if (obj.doctorTimings != "") {
-     
+    if (obj.doctorTimings != "") {    
           this.DoctorSchedule = obj.doctorTimings;
         }
   }
@@ -116,7 +110,6 @@ export class AdddoctorsComponent implements OnInit {
         this.f.doctorID.setValue(sid);
         this.doctorService.getById(sid).subscribe(res => {
           //Set Forms
-          
           this.editForm(res);
           this.loadingDoctor = false;
         });
@@ -132,7 +125,7 @@ export class AdddoctorsComponent implements OnInit {
   loadTimeSlotsAll() {
     debugger;
     this.appointmentService.loadTimeLists().subscribe((res: any) => {
-      this.TimeList = res;
+      this.selectedTimeList = res;
      });
    }
    

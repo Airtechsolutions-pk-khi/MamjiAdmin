@@ -8,7 +8,6 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { DiagnosticCategoryService } from '../../../../_services/diagnosticcategories.service';
 import { HttpClient, HttpErrorResponse, HttpEventType } from '@angular/common/http';
 
-
 @Component({
   selector: 'app-addreports',
   templateUrl: './addreports.component.html',
@@ -36,7 +35,6 @@ export class AddreportsComponent implements OnInit {
     this.formData.diagnosticCatID = diagnosticCatID.split(' ')[1];
   }
   
-
   submitted = false;
   reportForm: FormGroup;
   loading = false;
@@ -117,13 +115,8 @@ onFileSelect(files: FileList): void {
     })
   }
   
-
-
-
-
   onSubmit() {
     debugger
-    
     const formData = new FormData();
     
     formData.append('customerID', this.formData.customerID);
@@ -141,9 +134,6 @@ onFileSelect(files: FileList): void {
     );
   }
 
-
-
-  
   // onSubmit() {
   //   debugger
  
