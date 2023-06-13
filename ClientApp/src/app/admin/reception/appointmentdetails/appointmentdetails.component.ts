@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Appointment, AppointmentDetail } from 'src/app/_models/Appointment';
+import { Appointment, AppointmentDetail, Doctors } from 'src/app/_models/Appointment';
 import { ToastService } from 'src/app/_services/toastservice';
 import { Location } from 'src/app/_models/Location';
 import { AppointmentService } from 'src/app/_services/appointment.service';
@@ -13,6 +13,7 @@ import { AppointmentService } from 'src/app/_services/appointment.service';
 })
 export class AppointmentdetailsComponent implements OnInit {
   public appointment = new Appointment();
+  public doctor = new Doctors();
   private selectedBrand;
   StatusMsg="";
   constructor(public service: AppointmentService,
@@ -51,5 +52,6 @@ export class AppointmentdetailsComponent implements OnInit {
   }
   private editForm(obj) {
     this.appointment = obj;
+    this.doctor = obj.doctor
   }
 }

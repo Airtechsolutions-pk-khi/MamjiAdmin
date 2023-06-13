@@ -32,3 +32,16 @@ export class AppointmentDetail {
   description: string;
   statusID: number;
 }
+
+export class Doctors {
+  doctorID: number;
+  fullName: string;
+  urduName: string;
+  imagePath: string;
+  gender: string;
+  email: string;
+  skills: string;
+  education: string;
+  profile: string;
+  statusID: number;
+}

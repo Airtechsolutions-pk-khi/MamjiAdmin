@@ -52,10 +52,10 @@ namespace MamjiAdmin.Controllers
 
                 var res = _service.Insert(data, _env);
 
-                if(res >= 1)
-                {
-					await PushAndriod.PushNotify("Success!", "Your report has been uploaded!");
-				}
+    //            if(res == 1)
+    //            {
+				//	await PushAndriod.PushNotify("Success!", "Your report has been uploaded!");
+				//}
 
                 return 1;
 			}
