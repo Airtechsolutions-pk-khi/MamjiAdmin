@@ -12,7 +12,7 @@
       </a>
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
-      <!-- Nav Item - Dashboard --> 
+      <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" [routerLink]="['dashboard']">
           <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -37,26 +37,26 @@
           </div>
         </div>
       </li>
-      </div>
-      <!-- Divider -->
-      <div *ngIf="isDoctor">
-      <hr class="sidebar-divider">
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-list"></i>
-          <span>Manage Doctors</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" [routerLink]="['/admin/settings/speciality']">Doctor's Specialities</a>
-            <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Doctor's</a>
-            <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">Doctor's Appoinment</a>
-          </div>
+  </div>
+  <!-- Divider -->
+  <div *ngIf="isDoctor">
+    <hr class="sidebar-divider">
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <i class="fas fa-fw fa-list"></i>
+        <span>Manage Doctors</span>
+      </a>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" [routerLink]="['/admin/settings/speciality']">Doctor's Specialities</a>
+          <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Doctor's</a>
+          <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">Doctor's Appoinment</a>
         </div>
-      </li>
-    </div>
+      </div>
+    </li>
+  </div>
 
-      <hr class="sidebar-divider">
+  <hr class="sidebar-divider">
 
   <div *ngIf="isUser">
     <li class="nav-item">
@@ -75,7 +75,7 @@
     <hr class="sidebar-divider">
   </div>
   <!-- Nav Item - Pages Collapse Menu -->
-  <div *ngIf= "isPharmacy">
+  <div *ngIf="isPharmacy">
 
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="true" aria-controls="collapseCustomer">
@@ -131,10 +131,7 @@
       </a>
       <div id="collapseReport" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Patients </a>
-          <a class="collapse-item" [routerLink]="['/admin/reception/appointment']">Dr. Appoinment </a>
-          <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Medical Services </a>
-          <a class="collapse-item" [routerLink]="['/admin/managedoctor/doctor']"> Nursing Appoinment</a>
+          <a class="collapse-item">Coming Soon</a>
         </div>
       </div>
     </li>
@@ -152,7 +149,7 @@
           <a class="collapse-item" [routerLink]="['/admin/delivery']">Delivery</a>
           <a class="collapse-item" [routerLink]="['/admin/settings/appsettings/add']">Pharmacy Settings</a>
           <a class="collapse-item" [routerLink]="['/admin/settings/banner']">Discount Banners | APP</a>
-          <a class="collapse-item" [routerLink]="['/admin/settings/coupon']">Coupons</a>
+          <!--<a class="collapse-item" [routerLink]="['/admin/settings/coupon']">Coupons</a>-->
 
         </div>
       </div>

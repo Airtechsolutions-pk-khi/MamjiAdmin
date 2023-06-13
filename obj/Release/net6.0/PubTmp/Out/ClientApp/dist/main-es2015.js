@@ -1736,7 +1736,7 @@ let SignalrService = class SignalrService {
     startConnection() {
         return __awaiter(this, void 0, void 0, function* () {
             debugger;
-            var domain = "http://admin.mamjihospital.online";
+            var domain = "http://localhost:59660";
             this.hubConnection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__["HubConnectionBuilder"]()
                 .withUrl(`${domain}/Notify`).build();
             yield this.hubConnection.start();
@@ -7997,10 +7997,11 @@ let AdddoctorsComponent = class AdddoctorsComponent {
         this.DoctorProfiles = [];
         this.selectedSpecialistIds = [];
         this.DoctorDaysList = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-        this.TimeList = ['10:00 AM - 11:00 AM', '11:00 AM - 12:00 PM', '12:00 PM - 01:00 PM', '01:00 PM - 02:00 PM'];
+        this.TimeList = [];
         this.createForm();
         // this.loadDay();
         this.loadSpecialitiesAll();
+        this.loadTimeSlotsAll();
     }
     ngOnInit() {
         this.setSelectedDoctor();

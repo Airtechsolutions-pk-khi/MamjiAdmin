@@ -462,7 +462,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Urdu Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=urduName placeholder=\"\" formControlName=\"urduName\">\r\n                  \r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.email.errors.required\">\r\n                          Email is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                  <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                   <div *ngIf=\"f.skills.invalid && (f.skills.dirty || f.skills.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.skills.errors.required\">\r\n                          Skill is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" required formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.gender.invalid && (f.gender.dirty || f.gender.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.gender.errors.required\">\r\n                      Gender is required.\r\n                    </div>\r\n                </div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                  <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                   <div *ngIf=\"f.education.invalid && (f.education.dirty || f.education.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.education.errors.required\">\r\n                          Education is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                 \r\n                </div>\r\n\r\n                <!--<div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Fees</label>\r\n                  <input type=\"number\" class=\"form-control\" id=fees placeholder=\"\" formControlName=\"fees\" [(ngModel)]=\"drProfile.fees\" [ngModelOptions]=\"{standalone: true}\">\r\n                </div>-->\r\n\r\n\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <br />\r\n                  <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"tile-body p-0 table-responsive \">\r\n                <table class=\"table table-striped\">\r\n                  <thead>\r\n                    <tr class=\"table-header\">\r\n                      <th width=\"20%\">Speciality </th>\r\n                      <!--<th width=\"20%\">Fees </th>-->\r\n                      <th width=\"40%\">Profile </th>\r\n                      <th width=\"20%\">Action</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let item of  DoctorProfiles\">\r\n\r\n                      <td>\r\n                        {{item.name}}\r\n                      </td>\r\n                      <!--<td>\r\n                        {{item.fees}}\r\n                      </td>-->\r\n                      <td> {{item.profile}} </td>\r\n\r\n                      <td>\r\n                        <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                      </td>\r\n                    </tr>\r\n\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n              <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n              <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n              <ng-select [items]=\"TimeList\" bindLabel=\"name\" [multiple]=\"true\" bindValue=\"name\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <br />\r\n              <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n              <thead>\r\n                <tr class=\"table-header\">\r\n                  <th width=\"20%\">ID </th>\r\n                  <th width=\"20%\">Speciality </th>\r\n                  <th width=\"20%\">Days </th>\r\n                  <th width=\"20%\">Timeslot</th>\r\n                  <th width=\"20%\">Action</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                  <td>\r\n                    {{item.specialistID}}\r\n\r\n                  </td>\r\n                  <td>\r\n                    {{item.name}}\r\n\r\n                  </td>\r\n                  <td> {{item.dayName}} </td>\r\n                  <td> {{item.timeSlot}} </td>\r\n\r\n                  <td>\r\n                    <i (click)=\"RemoveChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                  </td>\r\n                </tr>\r\n\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Urdu Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=urduName placeholder=\"\" formControlName=\"urduName\">\r\n                  \r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.email.errors.required\">\r\n                          Email is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                  <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                   <div *ngIf=\"f.skills.invalid && (f.skills.dirty || f.skills.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.skills.errors.required\">\r\n                          Skill is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" required formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.gender.invalid && (f.gender.dirty || f.gender.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.gender.errors.required\">\r\n                      Gender is required.\r\n                    </div>\r\n                </div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                  <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                   <div *ngIf=\"f.education.invalid && (f.education.dirty || f.education.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.education.errors.required\">\r\n                          Education is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                 \r\n                </div>\r\n\r\n                <!--<div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Fees</label>\r\n                  <input type=\"number\" class=\"form-control\" id=fees placeholder=\"\" formControlName=\"fees\" [(ngModel)]=\"drProfile.fees\" [ngModelOptions]=\"{standalone: true}\">\r\n                </div>-->\r\n\r\n\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <br />\r\n                  <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"tile-body p-0 table-responsive \">\r\n                <table class=\"table table-striped\">\r\n                  <thead>\r\n                    <tr class=\"table-header\">\r\n                      <th width=\"20%\">Speciality </th>\r\n                      <!--<th width=\"20%\">Fees </th>-->\r\n                      <th width=\"40%\">Profile </th>\r\n                      <th width=\"20%\">Action</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let item of  DoctorProfiles\">\r\n\r\n                      <td>\r\n                        {{item.name}}\r\n                      </td>\r\n                      <!--<td>\r\n                        {{item.fees}}\r\n                      </td>-->\r\n                      <td> {{item.profile}} </td>\r\n\r\n                      <td>\r\n                        <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                      </td>\r\n                    </tr>\r\n\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n              <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n              <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n              <ng-select [items]=\"TimeList\" bindLabel=\"name\" [multiple]=\"true\" bindValue=\"timeSlot\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.timeSlot}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <br />\r\n              <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n              <thead>\r\n                <tr class=\"table-header\">\r\n                  <th width=\"20%\">ID </th>\r\n                  <th width=\"20%\">Speciality </th>\r\n                  <th width=\"20%\">Days </th>\r\n                  <th width=\"20%\">Timeslot</th>\r\n                  <th width=\"20%\">Action</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                  <td>\r\n                    {{item.specialistID}}\r\n\r\n                  </td>\r\n                  <td>\r\n                    {{item.name}}\r\n\r\n                  </td>\r\n                  <td> {{item.dayName}} </td>\r\n                  <td> {{item.timeSlot}} </td>\r\n\r\n                  <td>\r\n                    <i (click)=\"RemoveChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                  </td>\r\n                </tr>\r\n\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -2810,7 +2810,7 @@
                   switch (_context.prev = _context.next) {
                     case 0:
                       debugger;
-                      domain = "http://admin.mamjihospital.online";
+                      domain = "http://localhost:59660";
                       this.hubConnection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__["HubConnectionBuilder"]().withUrl("".concat(domain, "/Notify")).build();
                       _context.next = 5;
                       return this.hubConnection.start();
@@ -3263,6 +3263,11 @@
           key: "loadSpecialities",
           value: function loadSpecialities() {
             return this.http.get("api/doctor/speciality");
+          }
+        }, {
+          key: "loadTimeLists",
+          value: function loadTimeLists() {
+            return this.http.get("api/timeslot/all");
           }
         }, {
           key: "loadDay",
@@ -13740,10 +13745,11 @@
           this.DoctorProfiles = [];
           this.selectedSpecialistIds = [];
           this.DoctorDaysList = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-          this.TimeList = ['10:00 AM - 11:00 AM', '11:00 AM - 12:00 PM', '12:00 PM - 01:00 PM', '01:00 PM - 02:00 PM'];
+          this.TimeList = [];
           this.createForm(); // this.loadDay();
 
           this.loadSpecialitiesAll();
+          this.loadTimeSlotsAll();
         }
 
         _createClass(AdddoctorsComponent, [{
@@ -13829,9 +13835,18 @@
             });
           }
         }, {
+          key: "loadTimeSlotsAll",
+          value: function loadTimeSlotsAll() {
+            var _this49 = this;
+
+            this.appointmentService.loadTimeLists().subscribe(function (res) {
+              _this49.TimeList = res;
+            });
+          }
+        }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this49 = this;
+            var _this50 = this;
 
             debugger;
             this.doctorForm.markAllAsTouched();
@@ -13852,31 +13867,31 @@
               console.log(JSON.stringify(this.doctorForm.value));
               this.doctorService.insert(this.doctorForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this49.ts.showSuccess("Success", "Record added successfully.");
+                  _this50.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this49.router.navigate(['/admin/managedoctor/doctor']);
+                  _this50.router.navigate(['/admin/managedoctor/doctor']);
                 }
 
-                _this49.loading = false;
+                _this50.loading = false;
               }, function (error) {
-                _this49.ts.showError("Error", "Failed to insert record.");
+                _this50.ts.showError("Error", "Failed to insert record.");
 
-                _this49.loading = false;
+                _this50.loading = false;
               });
             } else {
               //Update doctor
               this.doctorService.update(this.doctorForm.value).subscribe(function (data) {
-                _this49.loading = false;
+                _this50.loading = false;
 
                 if (data != 0) {
-                  _this49.ts.showSuccess("Success", "Record updated successfully.");
+                  _this50.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this49.router.navigate(['/admin/managedoctor/doctor']);
+                  _this50.router.navigate(['/admin/managedoctor/doctor']);
                 }
               }, function (error) {
-                _this49.ts.showError("Error", "Failed to update record.");
+                _this50.ts.showError("Error", "Failed to update record.");
 
-                _this49.loading = false;
+                _this50.loading = false;
               });
             }
           }
@@ -14114,12 +14129,12 @@
         _createClass(DoctorComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this50 = this;
+            var _this51 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this50.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this51.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this50.ts.showError("Error", "Failed to export");
+              _this51.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -14157,16 +14172,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this51 = this;
+            var _this52 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this51.ts.showSuccess("Success", "Record deleted successfully.");
+                _this52.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this51.getData();
-              } else _this51.ts.showError("Error", "Failed to delete record.");
+                _this52.getData();
+              } else _this52.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this51.ts.showError("Error", "Failed to delete record.");
+              _this52.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -14362,21 +14377,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this52 = this;
+            var _this53 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this52.loadingaddon = true;
+                _this53.loadingaddon = true;
 
-                _this52.f.addonID.setValue(sid);
+                _this53.f.addonID.setValue(sid);
 
-                _this52.addonsService.getById(sid, _this52.f.brandID.value).subscribe(function (res) {
+                _this53.addonsService.getById(sid, _this53.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this52.editForm(res);
+                  _this53.editForm(res);
 
-                  _this52.loadingaddon = false;
+                  _this53.loadingaddon = false;
                 });
               }
             });
@@ -14384,7 +14399,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this53 = this;
+            var _this54 = this;
 
             this.addonForm.markAllAsTouched();
             this.submitted = true;
@@ -14402,32 +14417,32 @@
               console.log(JSON.stringify(this.addonForm.value));
               this.addonsService.insert(this.addonForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this53.ts.showSuccess("Success", "Record added successfully.");
+                  _this54.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this53.router.navigate(['/admin/addons']);
+                  _this54.router.navigate(['/admin/addons']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this53.loading = false;
+                _this54.loading = false;
               }, function (error) {
-                _this53.ts.showError("Error", "Failed to insert record.");
+                _this54.ts.showError("Error", "Failed to insert record.");
 
-                _this53.loading = false;
+                _this54.loading = false;
               });
             } else {
               //Update modifier
               this.addonsService.update(this.addonForm.value).subscribe(function (data) {
-                _this53.loading = false;
+                _this54.loading = false;
 
                 if (data != 0) {
-                  _this53.ts.showSuccess("Success", "Record updated successfully.");
+                  _this54.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this53.router.navigate(['/admin/addons']);
+                  _this54.router.navigate(['/admin/addons']);
                 }
               }, function (error) {
-                _this53.ts.showError("Error", "Failed to update record.");
+                _this54.ts.showError("Error", "Failed to update record.");
 
-                _this53.loading = false;
+                _this54.loading = false;
               });
             }
           }
@@ -14581,11 +14596,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this54 = this;
+            var _this55 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this54.ts.showError("Error", "Failed to export");
+              _this55.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -14617,16 +14632,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this55 = this;
+            var _this56 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this55.ts.showSuccess("Success", "Record deleted successfully.");
+                _this56.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this55.getData();
-              } else _this55.ts.showError("Error", "Failed to delete record.");
+                _this56.getData();
+              } else _this56.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this55.ts.showError("Error", "Failed to delete record.");
+              _this56.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -14827,21 +14842,21 @@
         }, {
           key: "setSelectedCategory",
           value: function setSelectedCategory() {
-            var _this56 = this;
+            var _this57 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this56.loadingCategory = true;
+                _this57.loadingCategory = true;
 
-                _this56.f.categoryID.setValue(sid);
+                _this57.f.categoryID.setValue(sid);
 
-                _this56.categoryService.getById(sid, _this56.f.brandID.value).subscribe(function (res) {
+                _this57.categoryService.getById(sid, _this57.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this56.editForm(res);
+                  _this57.editForm(res);
 
-                  _this56.loadingCategory = false;
+                  _this57.loadingCategory = false;
                 });
               }
             });
@@ -14849,7 +14864,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this57 = this;
+            var _this58 = this;
 
             this.categoryForm.markAllAsTouched();
             this.submitted = true;
@@ -14866,31 +14881,31 @@
               //Insert category
               this.categoryService.insert(this.categoryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this57.ts.showSuccess("Success", "Record added successfully.");
+                  _this58.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this57.router.navigate(['/admin/category']);
+                  _this58.router.navigate(['/admin/category']);
                 }
 
-                _this57.loading = false;
+                _this58.loading = false;
               }, function (error) {
-                _this57.ts.showError("Error", "Failed to insert record.");
+                _this58.ts.showError("Error", "Failed to insert record.");
 
-                _this57.loading = false;
+                _this58.loading = false;
               });
             } else {
               //Update category
               this.categoryService.update(this.categoryForm.value).subscribe(function (data) {
-                _this57.loading = false;
+                _this58.loading = false;
 
                 if (data != 0) {
-                  _this57.ts.showSuccess("Success", "Record updated successfully.");
+                  _this58.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this57.router.navigate(['/admin/category']);
+                  _this58.router.navigate(['/admin/category']);
                 }
               }, function (error) {
-                _this57.ts.showError("Error", "Failed to update record.");
+                _this58.ts.showError("Error", "Failed to update record.");
 
-                _this57.loading = false;
+                _this58.loading = false;
               });
             }
           }
@@ -15052,11 +15067,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this58 = this;
+            var _this59 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this58.ts.showError("Error", "Failed to export");
+              _this59.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -15088,18 +15103,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this59 = this;
+            var _this60 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this59.ts.showSuccess("Success", "Record deleted successfully.");
+                _this60.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this59.getData();
+                _this60.getData();
               } else {
-                _this59.ts.showError("Error", "Failed to delete record.");
+                _this60.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this59.ts.showError("Error", "Failed to delete record.");
+              _this60.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15337,21 +15352,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this60 = this;
+            var _this61 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this60.loadingItems = true;
+                _this61.loadingItems = true;
 
-                _this60.f.itemID.setValue(sid);
+                _this61.f.itemID.setValue(sid);
 
-                _this60.itemsService.getById(sid, _this60.f.brandID.value).subscribe(function (res) {
+                _this61.itemsService.getById(sid, _this61.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this60.editForm(res);
+                  _this61.editForm(res);
 
-                  _this60.loadingItems = false;
+                  _this61.loadingItems = false;
                 });
               }
             });
@@ -15359,7 +15374,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this61 = this;
+            var _this62 = this;
 
             this.itemsForm.markAllAsTouched();
             this.submitted = true;
@@ -15379,31 +15394,31 @@
               console.log(JSON.stringify(this.itemsForm.value));
               this.itemsService.insert(this.itemsForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this61.ts.showSuccess("Success", "Record added successfully.");
+                  _this62.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this61.router.navigate(['/admin/item']);
+                  _this62.router.navigate(['/admin/item']);
                 }
 
-                _this61.loading = false;
+                _this62.loading = false;
               }, function (error) {
-                _this61.ts.showError("Error", "Failed to insert record.");
+                _this62.ts.showError("Error", "Failed to insert record.");
 
-                _this61.loading = false;
+                _this62.loading = false;
               });
             } else {
               //Update item
               this.itemsService.update(this.itemsForm.value).subscribe(function (data) {
-                _this61.loading = false;
+                _this62.loading = false;
 
                 if (data != 0) {
-                  _this61.ts.showSuccess("Success", "Record updated successfully.");
+                  _this62.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this61.router.navigate(['/admin/item']);
+                  _this62.router.navigate(['/admin/item']);
                 }
               }, function (error) {
-                _this61.ts.showError("Error", "Failed to update record.");
+                _this62.ts.showError("Error", "Failed to update record.");
 
-                _this61.loading = false;
+                _this62.loading = false;
               });
             }
           } // private loadCategory() {
@@ -15415,28 +15430,28 @@
         }, {
           key: "loadActiveCategory",
           value: function loadActiveCategory() {
-            var _this62 = this;
+            var _this63 = this;
 
             this.itemsService.loadActiveCategories(this.f.brandID.value).subscribe(function (res) {
-              _this62.CategoriesActive = res;
+              _this63.CategoriesActive = res;
             });
           }
         }, {
           key: "loadModifiers",
           value: function loadModifiers() {
-            var _this63 = this;
+            var _this64 = this;
 
             this.itemsService.loadModifierList(this.f.brandID.value).subscribe(function (res) {
-              _this63.ModifiersList = res;
+              _this64.ModifiersList = res;
             });
           }
         }, {
           key: "loadAddons",
           value: function loadAddons() {
-            var _this64 = this;
+            var _this65 = this;
 
             this.itemsService.loadAddonList(this.f.brandID.value).subscribe(function (res) {
-              _this64.AddonsList = res;
+              _this65.AddonsList = res;
             });
           }
         }, {
@@ -15589,12 +15604,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this65 = this;
+            var _this66 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this65.ts.showError("Error", "Failed to export");
+              _this66.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -15626,16 +15641,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this66 = this;
+            var _this67 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this66.ts.showSuccess("Success", "Record deleted successfully.");
+                _this67.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this66.getData();
-              } else _this66.ts.showError("Error", "Failed to delete record.");
+                _this67.getData();
+              } else _this67.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this66.ts.showError("Error", "Failed to delete record.");
+              _this67.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15801,20 +15816,20 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this67 = this;
+            var _this68 = this;
 
             this.itemsService.getTodaysItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               debugger;
               var stringToConvert = res.items;
-              _this67.isItemSetting = res.isItemSetting;
-              _this67.itemSettingTitle = res.itemSettingTitle;
-              _this67.selectedItemIds = stringToConvert.split(',').map(Number);
+              _this68.isItemSetting = res.isItemSetting;
+              _this68.itemSettingTitle = res.itemSettingTitle;
+              _this68.selectedItemIds = stringToConvert.split(',').map(Number);
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this68 = this;
+            var _this69 = this;
 
             var obj = new Object();
             obj["Items"] = this.selectedItemIds.toString();
@@ -15823,29 +15838,29 @@
             obj["IsItemSetting"] = this.isItemSetting;
             this.loading = true;
             this.itemsService.updateSettings(obj).subscribe(function (data) {
-              _this68.loading = false;
+              _this69.loading = false;
 
               if (data != 0) {
-                _this68.ts.showSuccess("Success", "Updated successfully.");
+                _this69.ts.showSuccess("Success", "Updated successfully.");
 
-                _this68.router.navigate(['/admin/item/settings']);
+                _this69.router.navigate(['/admin/item/settings']);
               }
             }, function (error) {
-              _this68.ts.showError("Error", "Failed to update.");
+              _this69.ts.showError("Error", "Failed to update.");
 
-              _this68.loading = false;
+              _this69.loading = false;
             });
           }
         }, {
           key: "loadItems",
           value: function loadItems() {
-            var _this69 = this;
+            var _this70 = this;
 
             this.itemsService.loadItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               debugger;
-              _this69.ItemsList = res;
+              _this70.ItemsList = res;
 
-              _this69.setSelecteditem();
+              _this70.setSelecteditem();
             });
           }
         }]);
@@ -16036,21 +16051,21 @@
         }, {
           key: "setSelectedmodifier",
           value: function setSelectedmodifier() {
-            var _this70 = this;
+            var _this71 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this70.loadingmodifier = true;
+                _this71.loadingmodifier = true;
 
-                _this70.f.modifierID.setValue(sid);
+                _this71.f.modifierID.setValue(sid);
 
-                _this70.modifierService.getById(sid, _this70.f.brandID.value).subscribe(function (res) {
+                _this71.modifierService.getById(sid, _this71.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this70.editForm(res);
+                  _this71.editForm(res);
 
-                  _this70.loadingmodifier = false;
+                  _this71.loadingmodifier = false;
                 });
               }
             });
@@ -16058,7 +16073,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this71 = this;
+            var _this72 = this;
 
             this.modifierForm.markAllAsTouched();
             this.submitted = true;
@@ -16076,32 +16091,32 @@
               console.log(JSON.stringify(this.modifierForm.value));
               this.modifierService.insert(this.modifierForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this71.ts.showSuccess("Success", "Record added successfully.");
+                  _this72.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this71.router.navigate(['/admin/modifier']);
+                  _this72.router.navigate(['/admin/modifier']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this71.loading = false;
+                _this72.loading = false;
               }, function (error) {
-                _this71.ts.showError("Error", "Failed to insert record.");
+                _this72.ts.showError("Error", "Failed to insert record.");
 
-                _this71.loading = false;
+                _this72.loading = false;
               });
             } else {
               //Update modifier
               this.modifierService.update(this.modifierForm.value).subscribe(function (data) {
-                _this71.loading = false;
+                _this72.loading = false;
 
                 if (data != 0) {
-                  _this71.ts.showSuccess("Success", "Record updated successfully.");
+                  _this72.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this71.router.navigate(['/admin/modifier']);
+                  _this72.router.navigate(['/admin/modifier']);
                 }
               }, function (error) {
-                _this71.ts.showError("Error", "Failed to update record.");
+                _this72.ts.showError("Error", "Failed to update record.");
 
-                _this71.loading = false;
+                _this72.loading = false;
               });
             }
           }
@@ -16255,12 +16270,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this72 = this;
+            var _this73 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this72.ts.showError("Error", "Failed to export");
+              _this73.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -16292,16 +16307,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this73 = this;
+            var _this74 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this73.ts.showSuccess("Success", "Record deleted successfully.");
+                _this74.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this73.getData();
-              } else _this73.ts.showError("Error", "Failed to delete record.");
+                _this74.getData();
+              } else _this74.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this73.ts.showError("Error", "Failed to delete record.");
+              _this74.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16472,19 +16487,19 @@
         }, {
           key: "updateStatus",
           value: function updateStatus(item, status) {
-            var _this74 = this;
+            var _this75 = this;
 
             debugger;
             item.isRead = status; //Update 
 
             this.service.status(item).subscribe(function (data) {
               if (data != 0) {
-                _this74.ts.showSuccess("Success", "Record updated successfully.");
+                _this75.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this74.router.navigate(['/admin/notification']);
+                _this75.router.navigate(['/admin/notification']);
               }
             }, function (error) {
-              _this74.ts.showError("Error", "Failed to update record.");
+              _this75.ts.showError("Error", "Failed to update record.");
             });
           }
         }]);
@@ -16677,15 +16692,15 @@
         }, {
           key: "onSelect",
           value: function onSelect(formName) {
-            var _this75 = this;
+            var _this76 = this;
 
             debugger;
             this.permissionService.getById(formName).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this75.editForm(res);
+                _this76.editForm(res);
 
-                _this75.formName = res[0];
+                _this76.formName = res[0];
               }
 
               debugger;
@@ -16694,7 +16709,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this76 = this;
+            var _this77 = this;
 
             debugger;
             {
@@ -16717,28 +16732,28 @@
 
               this.f.roleName.setValue(this.f.roleName.value);
               this.permissionService.update(this.permissionForm.value).subscribe(function (data) {
-                _this76.loading = false;
+                _this77.loading = false;
 
                 if (data != 0) {
-                  _this76.ts.showSuccess("Success", "Record updated successfully.");
+                  _this77.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this76.router.navigate(['/admin/permission']);
+                  _this77.router.navigate(['/admin/permission']);
                 }
               }, function (error) {
-                _this76.ts.showError("Error", "Failed to update record.");
+                _this77.ts.showError("Error", "Failed to update record.");
 
-                _this76.loading = false;
+                _this77.loading = false;
               });
             }
           }
         }, {
           key: "loadUser",
           value: function loadUser() {
-            var _this77 = this;
+            var _this78 = this;
 
             debugger;
             this.userService.loadUser().subscribe(function (res) {
-              _this77.UserList = res;
+              _this78.UserList = res;
             }); // this.UserList = [
             //   { "type": "Super Admin" },
             //   { "type": "Admin" },
@@ -17022,21 +17037,21 @@
         }, {
           key: "setSelectedmedicine",
           value: function setSelectedmedicine() {
-            var _this78 = this;
+            var _this79 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this78.loadingmedicine = true;
+                _this79.loadingmedicine = true;
 
-                _this78.f.medicineID.setValue(sid);
+                _this79.f.medicineID.setValue(sid);
 
-                _this78.medicineService.getById(sid).subscribe(function (res) {
+                _this79.medicineService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this78.editForm(res);
+                  _this79.editForm(res);
 
-                  _this78.loadingmedicine = false;
+                  _this79.loadingmedicine = false;
                 });
               }
             });
@@ -17044,7 +17059,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this79 = this;
+            var _this80 = this;
 
             this.medicineForm.markAllAsTouched();
             this.submitted = true;
@@ -17062,31 +17077,31 @@
               console.log(JSON.stringify(this.medicineForm.value));
               this.medicineService.insert(this.medicineForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this79.ts.showSuccess("Success", "Record added successfully.");
+                  _this80.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this79.router.navigate(['/admin/pharmacy/medicine']);
+                  _this80.router.navigate(['/admin/pharmacy/medicine']);
                 }
 
-                _this79.loading = false;
+                _this80.loading = false;
               }, function (error) {
-                _this79.ts.showError("Error", "Failed to insert record.");
+                _this80.ts.showError("Error", "Failed to insert record.");
 
-                _this79.loading = false;
+                _this80.loading = false;
               });
             } else {
               //Update medicine
               this.medicineService.update(this.medicineForm.value).subscribe(function (data) {
-                _this79.loading = false;
+                _this80.loading = false;
 
                 if (data != 0) {
-                  _this79.ts.showSuccess("Success", "Record updated successfully.");
+                  _this80.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this79.router.navigate(['/admin/pharmacy/medicine']);
+                  _this80.router.navigate(['/admin/pharmacy/medicine']);
                 }
               }, function (error) {
-                _this79.ts.showError("Error", "Failed to update record.");
+                _this80.ts.showError("Error", "Failed to update record.");
 
-                _this79.loading = false;
+                _this80.loading = false;
               });
             }
           }
@@ -17269,17 +17284,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this80 = this;
+            var _this81 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this80.ts.showSuccess("Success", "Record deleted successfully.");
+                _this81.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this80.getData();
-              } else _this80.ts.showError("Error", "Failed to delete record.");
+                _this81.getData();
+              } else _this81.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this80.ts.showError("Error", "Failed to delete record.");
+              _this81.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -17419,15 +17434,15 @@
         }, {
           key: "setSelectedOrder",
           value: function setSelectedOrder() {
-            var _this81 = this;
+            var _this82 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this81.service.getById(sid).subscribe(function (res) {
-                  _this81.editForm(res);
+                _this82.service.getById(sid).subscribe(function (res) {
+                  _this82.editForm(res);
                 });
               }
             });
@@ -17435,19 +17450,19 @@
         }, {
           key: "updateOrder",
           value: function updateOrder(order, status) {
-            var _this82 = this;
+            var _this83 = this;
 
             debugger;
             order.statusID = status; //Update 
 
             this.service.update(order).subscribe(function (data) {
               if (data != 0) {
-                _this82.ts.showSuccess("Success", "Record updated successfully.");
+                _this83.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this82.router.navigate(['/admin/orders']);
+                _this83.router.navigate(['/admin/orders']);
               }
             }, function (error) {
-              _this82.ts.showError("Error", "Failed to update record.");
+              _this83.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -17650,13 +17665,13 @@
         }, {
           key: "Print",
           value: function Print(sid) {
-            var _this83 = this;
+            var _this84 = this;
 
             this.service.printorder(sid, this.selectedBrand).subscribe(function (res) {
               //Set Forms
               if (res.status == 1) {
-                _this83.printout(res.html);
-              } else _this83.ts.showError("Error", "Failed to print.");
+                _this84.printout(res.html);
+              } else _this84.ts.showError("Error", "Failed to print.");
             });
           }
         }, {
@@ -17667,27 +17682,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this84 = this;
+            var _this85 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this84.Locations = res;
-              _this84.locationID = _this84.selectedLocation;
+              _this85.Locations = res;
+              _this85.locationID = _this85.selectedLocation;
 
-              _this84.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this85.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this84.Locations = res;
+                _this85.Locations = res;
                 var arr = [];
 
-                _this84.Locations.forEach(function (element) {
+                _this85.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this84.selectedLocations = arr;
+                _this85.selectedLocations = arr;
 
-                _this84.getData();
+                _this85.getData();
               });
             });
           }
@@ -17893,21 +17908,21 @@
         }, {
           key: "setSelectedPrescription",
           value: function setSelectedPrescription() {
-            var _this85 = this;
+            var _this86 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this85.loadingPrescription = true;
+                _this86.loadingPrescription = true;
 
-                _this85.f.prescriptionID.setValue(sid);
+                _this86.f.prescriptionID.setValue(sid);
 
-                _this85.prescriptionService.getById(sid).subscribe(function (res) {
+                _this86.prescriptionService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this85.editForm(res);
+                  _this86.editForm(res);
 
-                  _this85.loadingPrescription = false;
+                  _this86.loadingPrescription = false;
                 });
               }
             });
@@ -17915,7 +17930,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this86 = this;
+            var _this87 = this;
 
             this.prescriptionForm.markAllAsTouched();
             this.submitted = true;
@@ -17933,31 +17948,31 @@
               console.log(JSON.stringify(this.prescriptionForm.value));
               this.prescriptionService.insert(this.prescriptionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this86.ts.showSuccess("Success", "Record added successfully.");
+                  _this87.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this86.router.navigate(['/admin/pharmacy/prescription']);
+                  _this87.router.navigate(['/admin/pharmacy/prescription']);
                 }
 
-                _this86.loading = false;
+                _this87.loading = false;
               }, function (error) {
-                _this86.ts.showError("Error", "Failed to insert record.");
+                _this87.ts.showError("Error", "Failed to insert record.");
 
-                _this86.loading = false;
+                _this87.loading = false;
               });
             } else {
               //Update doctor
               this.prescriptionService.update(this.prescriptionForm.value).subscribe(function (data) {
-                _this86.loading = false;
+                _this87.loading = false;
 
                 if (data != 0) {
-                  _this86.ts.showSuccess("Success", "Record updated successfully.");
+                  _this87.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this86.router.navigate(['/admin/pharmacy/prescription']);
+                  _this87.router.navigate(['/admin/pharmacy/prescription']);
                 }
               }, function (error) {
-                _this86.ts.showError("Error", "Failed to update record.");
+                _this87.ts.showError("Error", "Failed to update record.");
 
-                _this86.loading = false;
+                _this87.loading = false;
               });
             }
           }
@@ -18131,12 +18146,12 @@
         _createClass(PrescriptionComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this87 = this;
+            var _this88 = this;
 
             this.service.ExportList(this.selectedPrescription).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this87.ts.showError("Error", "Failed to export");
+              _this88.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -18173,16 +18188,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this88 = this;
+            var _this89 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this88.ts.showSuccess("Success", "Record deleted successfully.");
+                _this89.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this88.getData();
-              } else _this88.ts.showError("Error", "Failed to delete record.");
+                _this89.getData();
+              } else _this89.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this88.ts.showError("Error", "Failed to delete record.");
+              _this89.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -18405,16 +18420,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this89 = this;
+            var _this90 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this89.ts.showSuccess("Success", "Record deleted successfully.");
+                _this90.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this89.getData();
-              } else _this89.ts.showError("Error", "Failed to delete record.");
+                _this90.getData();
+              } else _this90.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this89.ts.showError("Error", "Failed to delete record.");
+              _this90.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -18557,14 +18572,14 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this90 = this;
+            var _this91 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this90.service.getById(sid).subscribe(function (res) {
-                  _this90.editForm(res);
+                _this91.service.getById(sid).subscribe(function (res) {
+                  _this91.editForm(res);
                 });
               }
             });
@@ -18572,19 +18587,19 @@
         }, {
           key: "updateAppointment",
           value: function updateAppointment(appointment, status) {
-            var _this91 = this;
+            var _this92 = this;
 
             appointment.appointmentStatus = status;
             appointment.statusMsg = this.StatusMsg; //Update 
 
             this.service.statusUpdate(appointment).subscribe(function (data) {
               if (data != 0) {
-                _this91.ts.showSuccess("Success", "Record updated successfully.");
+                _this92.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this91.router.navigate(['reception/appointment']);
+                _this92.router.navigate(['reception/appointment']);
               }
             }, function (error) {
-              _this91.ts.showError("Error", "Failed to update record.");
+              _this92.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -18775,22 +18790,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this92 = this;
+            var _this93 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this92.loadingCustomer = true;
+                _this93.loadingCustomer = true;
 
-                _this92.f.customerID.setValue(sid);
+                _this93.f.customerID.setValue(sid);
 
-                _this92.customerService.getById(sid).subscribe(function (res) {
+                _this93.customerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this92.editForm(res);
+                  _this93.editForm(res);
 
-                  _this92.loadingCustomer = false;
+                  _this93.loadingCustomer = false;
                 });
               }
             });
@@ -18798,7 +18813,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this93 = this;
+            var _this94 = this;
 
             this.customerForm.markAllAsTouched();
             this.submitted = true;
@@ -18816,31 +18831,31 @@
               console.log(JSON.stringify(this.customerForm.value));
               this.customerService.insert(this.customerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this93.ts.showSuccess("Success", "Record added successfully.");
+                  _this94.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this93.router.navigate(['/admin/reception/customers']);
+                  _this94.router.navigate(['/admin/reception/customers']);
                 }
 
-                _this93.loading = false;
+                _this94.loading = false;
               }, function (error) {
-                _this93.ts.showError("Error", "Failed to insert record.");
+                _this94.ts.showError("Error", "Failed to insert record.");
 
-                _this93.loading = false;
+                _this94.loading = false;
               });
             } else {
               //Update customer
               this.customerService.update(this.customerForm.value).subscribe(function (data) {
-                _this93.loading = false;
+                _this94.loading = false;
 
                 if (data != 0) {
-                  _this93.ts.showSuccess("Success", "Record updated successfully.");
+                  _this94.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this93.router.navigate(['/admin/reception/customers']);
+                  _this94.router.navigate(['/admin/reception/customers']);
                 }
               }, function (error) {
-                _this93.ts.showError("Error", "Failed to update record.");
+                _this94.ts.showError("Error", "Failed to update record.");
 
-                _this93.loading = false;
+                _this94.loading = false;
               });
             }
           }
@@ -18994,11 +19009,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this94 = this;
+            var _this95 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this94.ts.showError("Error", "Failed to export");
+              _this95.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -19030,17 +19045,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this95 = this;
+            var _this96 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this95.ts.showSuccess("Success", "Record deleted successfully.");
+                _this96.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this95.getData();
-              } else _this95.ts.showError("Error", "Failed to delete record.");
+                _this96.getData();
+              } else _this96.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this95.ts.showError("Error", "Failed to delete record.");
+              _this96.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -19243,21 +19258,21 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this96 = this;
+            var _this97 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this96.loadingAppointment = true;
+                _this97.loadingAppointment = true;
 
-                _this96.f.appointmentID.setValue(sid);
+                _this97.f.appointmentID.setValue(sid);
 
-                _this96.nursingappointmentService.getById(sid).subscribe(function (res) {
+                _this97.nursingappointmentService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this96.editForm(res);
+                  _this97.editForm(res);
 
-                  _this96.loadingAppointment = false;
+                  _this97.loadingAppointment = false;
                 });
               }
             });
@@ -19265,7 +19280,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this97 = this;
+            var _this98 = this;
 
             this.nursingappointmentForm.markAllAsTouched();
             this.submitted = true;
@@ -19281,71 +19296,71 @@
               console.log(JSON.stringify(this.nursingappointmentForm.value));
               this.nursingappointmentService.insert(this.nursingappointmentForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this97.ts.showSuccess("Success", "Record added successfully.");
+                  _this98.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this97.router.navigate(['/admin/reception/appointment']);
+                  _this98.router.navigate(['/admin/reception/appointment']);
                 }
 
-                _this97.loading = false;
+                _this98.loading = false;
               }, function (error) {
-                _this97.ts.showError("Error", "Failed to insert record.");
+                _this98.ts.showError("Error", "Failed to insert record.");
 
-                _this97.loading = false;
+                _this98.loading = false;
               });
             } else {
               //Update doctor
               this.nursingappointmentService.update(this.nursingappointmentForm.value).subscribe(function (data) {
-                _this97.loading = false;
+                _this98.loading = false;
 
                 if (data != 0) {
-                  _this97.ts.showSuccess("Success", "Record updated successfully.");
+                  _this98.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this97.router.navigate(['/admin/reception/appointment']);
+                  _this98.router.navigate(['/admin/reception/appointment']);
                 }
               }, function (error) {
-                _this97.ts.showError("Error", "Failed to update record.");
+                _this98.ts.showError("Error", "Failed to update record.");
 
-                _this97.loading = false;
+                _this98.loading = false;
               });
             }
           }
         }, {
           key: "loadDoctor",
           value: function loadDoctor() {
-            var _this98 = this;
+            var _this99 = this;
 
             this.nursingappointmentService.loadDoctor().subscribe(function (res) {
-              _this98.DoctorList = res;
+              _this99.DoctorList = res;
             });
           }
         }, {
           key: "loadSpecialities",
           value: function loadSpecialities() {
-            var _this99 = this;
+            var _this100 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this99.SpecialityList = res;
+              _this100.SpecialityList = res;
             });
           }
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this100 = this;
+            var _this101 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this100.selectedSpecialityList = res;
+              _this101.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadDay",
           value: function loadDay() {
-            var _this101 = this;
+            var _this102 = this;
 
             debugger;
             this.nursingappointmentService.loadDay().subscribe(function (res) {
-              _this101.DoctorDaysList = res;
+              _this102.DoctorDaysList = res;
             });
           }
         }, {
@@ -19575,16 +19590,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this102 = this;
+            var _this103 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this102.ts.showSuccess("Success", "Record deleted successfully.");
+                _this103.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this102.getData();
-              } else _this102.ts.showError("Error", "Failed to delete record.");
+                _this103.getData();
+              } else _this103.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this102.ts.showError("Error", "Failed to delete record.");
+              _this103.ts.showError("Error", "Failed to delete record.");
             });
           } //Status(data) {
           //  debugger
@@ -19770,14 +19785,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this103 = this;
+            var _this104 = this;
 
             this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this103.salesCategoryWise = res;
-              } else _this103.ts.showError("Error", "Something went wrong");
+                _this104.salesCategoryWise = res;
+              } else _this104.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this103.ts.showError("Error", "Failed to delete record.");
+              _this104.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -19789,27 +19804,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this104 = this;
+            var _this105 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this104.Locations = res;
-              _this104.locationID = _this104.selectedLocation;
+              _this105.Locations = res;
+              _this105.locationID = _this105.selectedLocation;
 
-              _this104.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this105.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this104.Locations = res;
+                _this105.Locations = res;
                 var arr = [];
 
-                _this104.Locations.forEach(function (element) {
+                _this105.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this104.selectedLocations = arr;
+                _this105.selectedLocations = arr;
 
-                _this104.getData(_this104.selectedLocations.toString());
+                _this105.getData(_this105.selectedLocations.toString());
               });
             });
           }
@@ -20002,14 +20017,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this105 = this;
+            var _this106 = this;
 
             this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this105.orders = res;
-              } else _this105.ts.showError("Error", "Something went wrong");
+                _this106.orders = res;
+              } else _this106.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this105.ts.showError("Error", "Failed to delete record.");
+              _this106.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20021,27 +20036,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this106 = this;
+            var _this107 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this106.Locations = res;
-              _this106.locationID = _this106.selectedLocation;
+              _this107.Locations = res;
+              _this107.locationID = _this107.selectedLocation;
 
-              _this106.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this107.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this106.Locations = res;
+                _this107.Locations = res;
                 var arr = [];
 
-                _this106.Locations.forEach(function (element) {
+                _this107.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this106.selectedLocations = arr;
+                _this107.selectedLocations = arr;
 
-                _this106.getData(_this106.selectedLocations.toString());
+                _this107.getData(_this107.selectedLocations.toString());
               });
             });
           }
@@ -20230,14 +20245,14 @@
         }, {
           key: "getData",
           value: function getData(locaionIDs) {
-            var _this107 = this;
+            var _this108 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this107.orderDetails = res;
-              } else _this107.ts.showError("Error", "Something went wrong");
+                _this108.orderDetails = res;
+              } else _this108.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this107.ts.showError("Error", "Failed to delete record.");
+              _this108.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20254,27 +20269,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this108 = this;
+            var _this109 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this108.Locations = res;
-              _this108.locationID = _this108.selectedLocation;
+              _this109.Locations = res;
+              _this109.locationID = _this109.selectedLocation;
 
-              _this108.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this109.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this108.Locations = res;
+                _this109.Locations = res;
                 var arr = [];
 
-                _this108.Locations.forEach(function (element) {
+                _this109.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this108.selectedLocations = arr;
+                _this109.selectedLocations = arr;
 
-                _this108.getData(_this108.selectedLocations.toString());
+                _this109.getData(_this109.selectedLocations.toString());
               });
             });
           }
@@ -20470,14 +20485,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this109 = this;
+            var _this110 = this;
 
             this.service.SalesItemwiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this109.salesItemWise = res;
-              } else _this109.ts.showError("Error", "Something went wrong");
+                _this110.salesItemWise = res;
+              } else _this110.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this109.ts.showError("Error", "Failed to delete record.");
+              _this110.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20508,27 +20523,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this110 = this;
+            var _this111 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this110.Locations = res;
-              _this110.locationID = _this110.selectedLocation;
+              _this111.Locations = res;
+              _this111.locationID = _this111.selectedLocation;
 
-              _this110.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this111.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this110.Locations = res;
+                _this111.Locations = res;
                 var arr = [];
 
-                _this110.Locations.forEach(function (element) {
+                _this111.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this110.selectedLocations = arr;
+                _this111.selectedLocations = arr;
 
-                _this110.getData(_this110.selectedLocations.toString());
+                _this111.getData(_this111.selectedLocations.toString());
               });
             });
           }
@@ -20693,14 +20708,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this111 = this;
+            var _this112 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this111.data$ = res;
-              } else _this111.ts.showError("Error", "Something went wrong");
+                _this112.data$ = res;
+              } else _this112.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this111.ts.showError("Error", "Failed to delete record.");
+              _this112.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20712,11 +20727,11 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this112 = this;
+            var _this113 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this112.Locations = res;
-              _this112.locationID = _this112.selectedLocation;
+              _this113.Locations = res;
+              _this113.locationID = _this113.selectedLocation;
             });
           }
         }, {
@@ -20883,16 +20898,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this113 = this;
+            var _this114 = this;
 
             this.service.SalesSummaryRpt(this.selectedBrand, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this113._model = res[0];
+                _this114._model = res[0];
 
-                _this113["export"].push(_this113._model);
-              } else _this113.ts.showError("Error", "Something went wrong");
+                _this114["export"].push(_this114._model);
+              } else _this114.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this113.ts.showError("Error", "Failed to delete record.");
+              _this114.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21095,21 +21110,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this114 = this;
+            var _this115 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this114.loading = true;
+                _this115.loading = true;
 
-                _this114.f.deliveryAreaID.setValue(sid);
+                _this115.f.deliveryAreaID.setValue(sid);
 
-                _this114.deliveryService.getById(sid).subscribe(function (res) {
+                _this115.deliveryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this114.editForm(res);
+                  _this115.editForm(res);
 
-                  _this114.loading = false; //BrandsFill
+                  _this115.loading = false; //BrandsFill
                   // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
                   // .subscribe((res: any) => {            
                   //   var stringToConvert = res.items;
@@ -21122,7 +21137,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this115 = this;
+            var _this116 = this;
 
             debugger;
             this.deliveryForm.markAllAsTouched();
@@ -21139,41 +21154,41 @@
               //Insert delivery
               this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this115.ts.showSuccess("Success", "Record added successfully.");
+                  _this116.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this115.router.navigate(['/admin/delivery']);
+                  _this116.router.navigate(['/admin/delivery']);
                 }
 
-                _this115.loading = false;
+                _this116.loading = false;
               }, function (error) {
-                _this115.ts.showError("Error", "Failed to insert record.");
+                _this116.ts.showError("Error", "Failed to insert record.");
 
-                _this115.loading = false;
+                _this116.loading = false;
               });
             } else {
               //Update delivery
               this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this115.loading = false;
+                _this116.loading = false;
 
                 if (data != 0) {
-                  _this115.ts.showSuccess("Success", "Record updated successfully.");
+                  _this116.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this115.router.navigate(['/admin/delivery']);
+                  _this116.router.navigate(['/admin/delivery']);
                 }
               }, function (error) {
-                _this115.ts.showError("Error", "Failed to update record.");
+                _this116.ts.showError("Error", "Failed to update record.");
 
-                _this115.loading = false;
+                _this116.loading = false;
               });
             }
           }
         }, {
           key: "loadBrands",
           value: function loadBrands() {
-            var _this116 = this;
+            var _this117 = this;
 
             this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this116.BrandsList = res; // this.setSelecteditem();
+              _this117.BrandsList = res; // this.setSelecteditem();
             });
           }
         }, {
@@ -21351,14 +21366,14 @@
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this117 = this;
+            var _this118 = this;
 
             this.loadingSetting = true;
             this.settingService.getById(1).subscribe(function (res) {
               //Set Forms
-              _this117.editForm(res);
+              _this118.editForm(res);
 
-              _this117.loadingSetting = false;
+              _this118.loadingSetting = false;
             }); // this.route.paramMap.subscribe(param => {
             //   const sid = +param.get('id');
             //   if (sid) {
@@ -21375,7 +21390,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this118 = this;
+            var _this119 = this;
 
             debugger;
             this.settingForm.markAllAsTouched();
@@ -21393,33 +21408,33 @@
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this118.ts.showSuccess("Success", "Record added successfully.");
+                  _this119.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this118.router.navigate(['/admin/settings/appsettings']);
+                  _this119.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this118.loading = false;
+                _this119.loading = false;
               }, function (error) {
-                _this118.ts.showError("Error", "Failed to insert record.");
+                _this119.ts.showError("Error", "Failed to insert record.");
 
-                _this118.loading = false;
+                _this119.loading = false;
               });
             } else {
               //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this118.loading = false;
+                _this119.loading = false;
 
                 if (data != 0) {
-                  _this118.ts.showSuccess("Success", "Record updated successfully.");
+                  _this119.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this118.setSelectedSetting();
+                  _this119.setSelectedSetting();
 
-                  _this118.router.navigate(['/admin/settings/appsettings/add']);
+                  _this119.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this118.ts.showError("Error", "Failed to update record.");
+                _this119.ts.showError("Error", "Failed to update record.");
 
-                _this118.loading = false;
+                _this119.loading = false;
               });
             }
           }
@@ -21590,16 +21605,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this119 = this;
+            var _this120 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this119.ts.showSuccess("Success", "Record deleted successfully.");
+                _this120.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this119.getData();
-              } else _this119.ts.showError("Error", "Failed to delete record.");
+                _this120.getData();
+              } else _this120.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this119.ts.showError("Error", "Failed to delete record.");
+              _this120.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -21786,21 +21801,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this120 = this;
+            var _this121 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this120.loadingCustomer = true;
+                _this121.loadingCustomer = true;
 
-                _this120.f.bannerID.setValue(sid);
+                _this121.f.bannerID.setValue(sid);
 
-                _this120.bannerService.getById(sid).subscribe(function (res) {
+                _this121.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this120.editForm(res);
+                  _this121.editForm(res);
 
-                  _this120.loadingCustomer = false;
+                  _this121.loadingCustomer = false;
                 });
               }
             });
@@ -21808,7 +21823,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this121 = this;
+            var _this122 = this;
 
             debugger;
             this.bannerForm.markAllAsTouched();
@@ -21827,31 +21842,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this121.ts.showSuccess("Success", "Record added successfully.");
+                  _this122.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this121.router.navigate(['/admin/settings/banner']);
+                  _this122.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this121.loading = false;
+                _this122.loading = false;
               }, function (error) {
-                _this121.ts.showError("Error", "Failed to insert record.");
+                _this122.ts.showError("Error", "Failed to insert record.");
 
-                _this121.loading = false;
+                _this122.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this121.loading = false;
+                _this122.loading = false;
 
                 if (data != 0) {
-                  _this121.ts.showSuccess("Success", "Record updated successfully.");
+                  _this122.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this121.router.navigate(['/admin/settings/banner']);
+                  _this122.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this121.ts.showError("Error", "Failed to update record.");
+                _this122.ts.showError("Error", "Failed to update record.");
 
-                _this121.loading = false;
+                _this122.loading = false;
               });
             }
           }
@@ -22024,16 +22039,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this122 = this;
+            var _this123 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this122.ts.showSuccess("Success", "Record deleted successfully.");
+                _this123.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this122.getData();
-              } else _this122.ts.showError("Error", "Failed to delete record.");
+                _this123.getData();
+              } else _this123.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this122.ts.showError("Error", "Failed to delete record.");
+              _this123.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -22198,21 +22213,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this123 = this;
+            var _this124 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this123.loadingCoupon = true;
+                _this124.loadingCoupon = true;
 
-                _this123.f.couponID.setValue(sid);
+                _this124.f.couponID.setValue(sid);
 
-                _this123.couponService.getById(sid).subscribe(function (res) {
+                _this124.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this123.editForm(res);
+                  _this124.editForm(res);
 
-                  _this123.loadingCoupon = false;
+                  _this124.loadingCoupon = false;
                 });
               }
             });
@@ -22220,7 +22235,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this124 = this;
+            var _this125 = this;
 
             debugger;
             this.couponForm.markAllAsTouched();
@@ -22238,31 +22253,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this124.ts.showSuccess("Success", "Record added successfully.");
+                  _this125.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this124.router.navigate(['/admin/settings/coupon']);
+                  _this125.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this124.loading = false;
+                _this125.loading = false;
               }, function (error) {
-                _this124.ts.showError("Error", "Failed to insert record.");
+                _this125.ts.showError("Error", "Failed to insert record.");
 
-                _this124.loading = false;
+                _this125.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this124.loading = false;
+                _this125.loading = false;
 
                 if (data != 0) {
-                  _this124.ts.showSuccess("Success", "Record updated successfully.");
+                  _this125.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this124.router.navigate(['/admin/settings/coupon']);
+                  _this125.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this124.ts.showError("Error", "Failed to update record.");
+                _this125.ts.showError("Error", "Failed to update record.");
 
-                _this124.loading = false;
+                _this125.loading = false;
               });
             }
           }
@@ -22466,17 +22481,17 @@
         }, {
           key: "Delete",
           value: function Delete(item) {
-            var _this125 = this;
+            var _this126 = this;
 
             debugger;
             this.service["delete"](item).subscribe(function (res) {
               if (res != 0) {
-                _this125.ts.showSuccess("Success", "Record deleted successfully.");
+                _this126.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this125.getData();
-              } else _this125.ts.showError("Error", "Failed to delete record.");
+                _this126.getData();
+              } else _this126.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this125.ts.showError("Error", "Failed to delete record.");
+              _this126.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -22660,16 +22675,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this126 = this;
+            var _this127 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this126.ts.showSuccess("Success", "Record deleted successfully.");
+                _this127.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this126.getData();
-              } else _this126.ts.showError("Error", "Failed to delete record.");
+                _this127.getData();
+              } else _this127.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this126.ts.showError("Error", "Failed to delete record.");
+              _this127.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -22844,31 +22859,31 @@
         }, {
           key: "loadActiveType",
           value: function loadActiveType() {
-            var _this127 = this;
+            var _this128 = this;
 
             this.services.loadActiveTyp().subscribe(function (res) {
-              _this127.NursingTypeActive = res;
+              _this128.NursingTypeActive = res;
             });
           }
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this128 = this;
+            var _this129 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this128.loadingService = true;
+                _this129.loadingService = true;
 
-                _this128.f.medicalServiceID.setValue(sid);
+                _this129.f.medicalServiceID.setValue(sid);
 
-                _this128.services.getById(sid).subscribe(function (res) {
+                _this129.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this128.editForm(res);
+                  _this129.editForm(res);
 
-                  _this128.loadingService = false;
+                  _this129.loadingService = false;
                 });
               }
             });
@@ -22876,7 +22891,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this129 = this;
+            var _this130 = this;
 
             debugger;
             this.servicesForm.markAllAsTouched();
@@ -22895,31 +22910,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this129.ts.showSuccess("Success", "Record added successfully.");
+                  _this130.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this129.router.navigate(['/admin/settings/medicalservices']);
+                  _this130.router.navigate(['/admin/settings/medicalservices']);
                 }
 
-                _this129.loading = false;
+                _this130.loading = false;
               }, function (error) {
-                _this129.ts.showError("Error", "Failed to insert record.");
+                _this130.ts.showError("Error", "Failed to insert record.");
 
-                _this129.loading = false;
+                _this130.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this129.loading = false;
+                _this130.loading = false;
 
                 if (data != 0) {
-                  _this129.ts.showSuccess("Success", "Record updated successfully.");
+                  _this130.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this129.router.navigate(['/admin/settings/medicalservices']);
+                  _this130.router.navigate(['/admin/settings/medicalservices']);
                 }
               }, function (error) {
-                _this129.ts.showError("Error", "Failed to update record.");
+                _this130.ts.showError("Error", "Failed to update record.");
 
-                _this129.loading = false;
+                _this130.loading = false;
               });
             }
           }
@@ -23089,16 +23104,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this130 = this;
+            var _this131 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this130.ts.showSuccess("Success", "Record deleted successfully.");
+                _this131.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this130.getData();
-              } else _this130.ts.showError("Error", "Failed to delete record.");
+                _this131.getData();
+              } else _this131.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this130.ts.showError("Error", "Failed to delete record.");
+              _this131.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -23257,22 +23272,22 @@
         }, {
           key: "setSelectedType",
           value: function setSelectedType() {
-            var _this131 = this;
+            var _this132 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this131.loadingService = true;
+                _this132.loadingService = true;
 
-                _this131.f.nursingTypeID.setValue(sid);
+                _this132.f.nursingTypeID.setValue(sid);
 
-                _this131.services.getById(sid).subscribe(function (res) {
+                _this132.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this131.editForm(res);
+                  _this132.editForm(res);
 
-                  _this131.loadingService = false;
+                  _this132.loadingService = false;
                 });
               }
             });
@@ -23280,7 +23295,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this132 = this;
+            var _this133 = this;
 
             this.servicesForm.markAllAsTouched();
             this.submitted = true;
@@ -23297,31 +23312,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this132.ts.showSuccess("Success", "Record added successfully.");
+                  _this133.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this132.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this133.router.navigate(['/admin/settings/medicalservicetype']);
                 }
 
-                _this132.loading = false;
+                _this133.loading = false;
               }, function (error) {
-                _this132.ts.showError("Error", "Failed to insert record.");
+                _this133.ts.showError("Error", "Failed to insert record.");
 
-                _this132.loading = false;
+                _this133.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this132.loading = false;
+                _this133.loading = false;
 
                 if (data != 0) {
-                  _this132.ts.showSuccess("Success", "Record updated successfully.");
+                  _this133.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this132.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this133.router.navigate(['/admin/settings/medicalservicetype']);
                 }
               }, function (error) {
-                _this132.ts.showError("Error", "Failed to update record.");
+                _this133.ts.showError("Error", "Failed to update record.");
 
-                _this132.loading = false;
+                _this133.loading = false;
               });
             }
           }
@@ -23492,16 +23507,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this133 = this;
+            var _this134 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this133.ts.showSuccess("Success", "Record deleted successfully.");
+                _this134.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this133.getData();
-              } else _this133.ts.showError("Error", "Failed to delete record.");
+                _this134.getData();
+              } else _this134.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this133.ts.showError("Error", "Failed to delete record.");
+              _this134.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -23688,21 +23703,21 @@
         }, {
           key: "setSelectedOffers",
           value: function setSelectedOffers() {
-            var _this134 = this;
+            var _this135 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this134.loadingOffers = true;
+                _this135.loadingOffers = true;
 
-                _this134.f.promotionID.setValue(sid);
+                _this135.f.promotionID.setValue(sid);
 
-                _this134.promotion.getById(sid).subscribe(function (res) {
+                _this135.promotion.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this134.editForm(res);
+                  _this135.editForm(res);
 
-                  _this134.loadingOffers = false;
+                  _this135.loadingOffers = false;
                 });
               }
             });
@@ -23710,7 +23725,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this135 = this;
+            var _this136 = this;
 
             this.promotionForm.markAllAsTouched();
             this.submitted = true;
@@ -23728,31 +23743,31 @@
               debugger;
               this.promotion.insert(this.promotionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this135.ts.showSuccess("Success", "Record added successfully.");
+                  _this136.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this135.router.navigate(['/admin/offers']);
+                  _this136.router.navigate(['/admin/offers']);
                 }
 
-                _this135.loading = false;
+                _this136.loading = false;
               }, function (error) {
-                _this135.ts.showError("Error", "Failed to insert record.");
+                _this136.ts.showError("Error", "Failed to insert record.");
 
-                _this135.loading = false;
+                _this136.loading = false;
               });
             } else {
               //Update offers
               this.promotion.update(this.promotionForm.value).subscribe(function (data) {
-                _this135.loading = false;
+                _this136.loading = false;
 
                 if (data != 0) {
-                  _this135.ts.showSuccess("Success", "Record updated successfully.");
+                  _this136.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this135.router.navigate(['/admin/offers']);
+                  _this136.router.navigate(['/admin/offers']);
                 }
               }, function (error) {
-                _this135.ts.showError("Error", "Failed to update record.");
+                _this136.ts.showError("Error", "Failed to update record.");
 
-                _this135.loading = false;
+                _this136.loading = false;
               });
             }
           }
@@ -23924,16 +23939,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this136 = this;
+            var _this137 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this136.ts.showSuccess("Success", "Record deleted successfully.");
+                _this137.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this136.getData();
-              } else _this136.ts.showError("Error", "Failed to delete record.");
+                _this137.getData();
+              } else _this137.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this136.ts.showError("Error", "Failed to delete record.");
+              _this137.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -24099,22 +24114,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this137 = this;
+            var _this138 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this137.loadingService = true;
+                _this138.loadingService = true;
 
-                _this137.f.specialistID.setValue(sid);
+                _this138.f.specialistID.setValue(sid);
 
-                _this137.services.getById(sid).subscribe(function (res) {
+                _this138.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this137.editForm(res);
+                  _this138.editForm(res);
 
-                  _this137.loadingService = false;
+                  _this138.loadingService = false;
                 });
               }
             });
@@ -24122,7 +24137,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this138 = this;
+            var _this139 = this;
 
             debugger;
             this.specialityForm.markAllAsTouched();
@@ -24141,31 +24156,31 @@
               console.log(JSON.stringify(this.specialityForm.value));
               this.services.insert(this.specialityForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this138.ts.showSuccess("Success", "Record added successfully.");
+                  _this139.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this138.router.navigate(['/admin/settings/speciality']);
+                  _this139.router.navigate(['/admin/settings/speciality']);
                 }
 
-                _this138.loading = false;
+                _this139.loading = false;
               }, function (error) {
-                _this138.ts.showError("Error", "Failed to insert record.");
+                _this139.ts.showError("Error", "Failed to insert record.");
 
-                _this138.loading = false;
+                _this139.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.specialityForm.value).subscribe(function (data) {
-                _this138.loading = false;
+                _this139.loading = false;
 
                 if (data != 0) {
-                  _this138.ts.showSuccess("Success", "Record updated successfully.");
+                  _this139.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this138.router.navigate(['/admin/settings/speciality']);
+                  _this139.router.navigate(['/admin/settings/speciality']);
                 }
               }, function (error) {
-                _this138.ts.showError("Error", "Failed to update record.");
+                _this139.ts.showError("Error", "Failed to update record.");
 
-                _this138.loading = false;
+                _this139.loading = false;
               });
             }
           }
@@ -24335,16 +24350,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this139 = this;
+            var _this140 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this139.ts.showSuccess("Success", "Record deleted successfully.");
+                _this140.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this139.getData();
-              } else _this139.ts.showError("Error", "Failed to delete record.");
+                _this140.getData();
+              } else _this140.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this139.ts.showError("Error", "Failed to delete record.");
+              _this140.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -24505,22 +24520,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this140 = this;
+            var _this141 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this140.loadingService = true;
+                _this141.loadingService = true;
 
-                _this140.f.timeSlotID.setValue(sid);
+                _this141.f.timeSlotID.setValue(sid);
 
-                _this140.services.getById(sid).subscribe(function (res) {
+                _this141.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this140.editForm(res);
+                  _this141.editForm(res);
 
-                  _this140.loadingService = false;
+                  _this141.loadingService = false;
                 });
               }
             });
@@ -24528,7 +24543,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this141 = this;
+            var _this142 = this;
 
             debugger;
             this.timeslotForm.markAllAsTouched();
@@ -24546,31 +24561,31 @@
               console.log(JSON.stringify(this.timeslotForm.value));
               this.services.insert(this.timeslotForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this141.ts.showSuccess("Success", "Record added successfully.");
+                  _this142.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this141.router.navigate(['/admin/settings/timeslot']);
+                  _this142.router.navigate(['/admin/settings/timeslot']);
                 }
 
-                _this141.loading = false;
+                _this142.loading = false;
               }, function (error) {
-                _this141.ts.showError("Error", "Failed to insert record.");
+                _this142.ts.showError("Error", "Failed to insert record.");
 
-                _this141.loading = false;
+                _this142.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.timeslotForm.value).subscribe(function (data) {
-                _this141.loading = false;
+                _this142.loading = false;
 
                 if (data != 0) {
-                  _this141.ts.showSuccess("Success", "Record updated successfully.");
+                  _this142.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this141.router.navigate(['/admin/settings/timeslot']);
+                  _this142.router.navigate(['/admin/settings/timeslot']);
                 }
               }, function (error) {
-                _this141.ts.showError("Error", "Failed to update record.");
+                _this142.ts.showError("Error", "Failed to update record.");
 
-                _this141.loading = false;
+                _this142.loading = false;
               });
             }
           }
@@ -24740,17 +24755,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this142 = this;
+            var _this143 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this142.ts.showSuccess("Success", "Record deleted successfully.");
+                _this143.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this142.getData();
-              } else _this142.ts.showError("Error", "Failed to delete record.");
+                _this143.getData();
+              } else _this143.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this142.ts.showError("Error", "Failed to delete record.");
+              _this143.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -24917,22 +24932,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this143 = this;
+            var _this144 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this143.loadingCustomer = true;
+                _this144.loadingCustomer = true;
 
-                _this143.f.id.setValue(sid);
+                _this144.f.id.setValue(sid);
 
-                _this143.userService.getById(sid).subscribe(function (res) {
+                _this144.userService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this143.editForm(res);
+                  _this144.editForm(res);
 
-                  _this143.loadingCustomer = false;
+                  _this144.loadingCustomer = false;
                 });
               }
             });
@@ -24940,7 +24955,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this144 = this;
+            var _this145 = this;
 
             debugger;
             this.userForm.markAllAsTouched();
@@ -24958,31 +24973,31 @@
               console.log(JSON.stringify(this.userForm.value));
               this.userService.insert(this.userForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this144.ts.showSuccess("Success", "Record added successfully.");
+                  _this145.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this144.router.navigate(['/admin/user']);
+                  _this145.router.navigate(['/admin/user']);
                 }
 
-                _this144.loading = false;
+                _this145.loading = false;
               }, function (error) {
-                _this144.ts.showError("Error", "Failed to insert record.");
+                _this145.ts.showError("Error", "Failed to insert record.");
 
-                _this144.loading = false;
+                _this145.loading = false;
               });
             } else {
               //Update customer
               this.userService.update(this.userForm.value).subscribe(function (data) {
-                _this144.loading = false;
+                _this145.loading = false;
 
                 if (data != 0) {
-                  _this144.ts.showSuccess("Success", "Record updated successfully.");
+                  _this145.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this144.router.navigate(['/admin/user']);
+                  _this145.router.navigate(['/admin/user']);
                 }
               }, function (error) {
-                _this144.ts.showError("Error", "Failed to update record.");
+                _this145.ts.showError("Error", "Failed to update record.");
 
-                _this144.loading = false;
+                _this145.loading = false;
               });
             }
           }
@@ -25167,13 +25182,13 @@
         }, {
           key: "onSelect",
           value: function onSelect(rolename) {
-            var _this145 = this;
+            var _this146 = this;
 
             debugger;
             this.userService.getPermissionId(rolename).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this145.formName = res[0];
+                _this146.formName = res[0];
               }
 
               debugger;
@@ -25182,22 +25197,22 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this146 = this;
+            var _this147 = this;
 
             debugger; //Update customer
 
             this.userService.permissionupdate(this.formName).subscribe(function (obj) {
-              _this146.loading = false;
+              _this147.loading = false;
 
               if (obj != 0) {
-                _this146.ts.showSuccess("Success", "Record updated successfully.");
+                _this147.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this146.router.navigate(['/admin/permission']);
+                _this147.router.navigate(['/admin/permission']);
               }
             }, function (error) {
-              _this146.ts.showError("Error", "Failed to update record.");
+              _this147.ts.showError("Error", "Failed to update record.");
 
-              _this146.loading = false;
+              _this147.loading = false;
             });
           }
         }, {
@@ -25361,12 +25376,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this147 = this;
+            var _this148 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this147.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this148.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this147.ts.showError("Error", "Failed to export");
+              _this148.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -25398,17 +25413,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this148 = this;
+            var _this149 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this148.ts.showSuccess("Success", "Record deleted successfully.");
+                _this149.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this148.getData();
-              } else _this148.ts.showError("Error", "Failed to delete record.");
+                _this149.getData();
+              } else _this149.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this148.ts.showError("Error", "Failed to delete record.");
+              _this149.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -25553,12 +25568,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this149 = this;
+            var _this150 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this149.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this150.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this149.ts.showError("Error", "Failed to export");
+              _this150.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -25590,17 +25605,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this150 = this;
+            var _this151 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this150.ts.showSuccess("Success", "Record deleted successfully.");
+                _this151.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this150.getData();
-              } else _this150.ts.showError("Error", "Failed to delete record.");
+                _this151.getData();
+              } else _this151.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this150.ts.showError("Error", "Failed to delete record.");
+              _this151.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -26783,12 +26798,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this151 = this;
+        var _this152 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this151.forecasts = result;
+          _this152.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -27027,7 +27042,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this152 = this;
+            var _this153 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -27037,14 +27052,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this152.imageUrl = reader.result;
+                _this153.imageUrl = reader.result;
 
-                _this152.registrationForm.patchValue({
+                _this153.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this152.editFile = false;
-                _this152.removeUpload = true;
+                _this153.editFile = false;
+                _this153.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -27178,7 +27193,7 @@
 
       var LayoutComponent = /*#__PURE__*/function () {
         function LayoutComponent(router, service, userService, ls) {
-          var _this153 = this;
+          var _this154 = this;
 
           _classCallCheck(this, LayoutComponent);
 
@@ -27204,7 +27219,7 @@
           debugger;
           this.permission = src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_2__["environment"].rootScope;
           var role = this.permission.permissionForm.find(function (element) {
-            return element.roleName == _this153.type;
+            return element.roleName == _this154.type;
           });
           var roleNameType = role.roleName;
           this.isDiagnostic = role.diagnostic === 1 ? true : false;
@@ -27398,7 +27413,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this154 = this;
+            var _this155 = this;
 
             this.loginForm.markAllAsTouched();
 
@@ -27408,19 +27423,19 @@
 
             this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this154.ls.setSelectedBrand(data);
+                _this155.ls.setSelectedBrand(data);
 
-                _this154.userService.getAllData(); //this.userService.getpermission();
+                _this155.userService.getAllData(); //this.userService.getpermission();
 
 
                 src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].rootScope = data;
 
-                _this154.router.navigate(["/admin/dashboard"]);
+                _this155.router.navigate(["/admin/dashboard"]);
               } else {
-                _this154.ts.showError("Error", "Username or password is not correct.");
+                _this155.ts.showError("Error", "Username or password is not correct.");
               }
             }, function (error) {
-              _this154.ts.showError("Error", "Something went wrong.");
+              _this155.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
@@ -27715,7 +27730,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! E:\Project\Mamji\MamjiAdmin_Git\ClientApp\src\main.ts */
+      /*! D:\MoizWork\MamjiAdmin\ClientApp\src\main.ts */
       "./src/main.ts");
       /***/
     },

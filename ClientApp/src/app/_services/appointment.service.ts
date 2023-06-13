@@ -84,7 +84,8 @@ export class AppointmentService {
     return this.http.get<Specialities[]>(`api/doctor/speciality`);
   }
   loadTimeLists() {
-    return this.http.get<TimeSlot[]>(`api/timeslot/all`);
+    debugger
+    return this.http.get<TimeSlot[]>('api/timeslot/all');
   }
   loadDay() {
     return this.http.get<Days[]>(`api/doctor/days`);

@@ -75,6 +75,7 @@ export class OrdersService {
   }  
   
   getById(id) {
+    debugger
     return this.http.get<any[]>(`api/orders/${id}`);
   }
   printorder(id,brandId) {
