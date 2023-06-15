@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using WebAPICode.Helpers;
+using static MamjiAdmin._Models.AppointmentBLL;
 
 namespace BAL.Repositories
 {
@@ -38,6 +39,30 @@ namespace BAL.Repositories
                     if (_dt.Rows.Count > 0)
                     {
                         lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<AppointmentBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public List<DoctorSpeciality> GetSpecalitiesByDoctorId(int DoctorID)
+        {
+            try
+            {
+                var lst = new List<DoctorSpeciality>();
+                SqlParameter[] p = new SqlParameter[1];
+				p[0] = new SqlParameter("@id", DoctorID);
+
+
+				_dt = (new DBHelper().GetTableFromSP)("sp_GetSpecalitiesByDoctorId", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<DoctorSpeciality>>();
                     }
                 }
                 return lst;

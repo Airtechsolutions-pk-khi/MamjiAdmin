@@ -1,31 +1,31 @@
 {
   "Files": [
     {
-      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\favicon.ico",
+      "Id": "D:\\MoizWork\\MamjiAdmin\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf",
+      "Id": "D:\\MoizWork\\MamjiAdmin\\wwwroot\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf",
       "PackagePath": "staticwebassets\\pdffiles\\Dec 2022 AC Schedule BBA-V to VIII.pdf"
     },
     {
-      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\pdffiles\\Hira Farm House.pdf",
+      "Id": "D:\\MoizWork\\MamjiAdmin\\wwwroot\\pdffiles\\Hira Farm House.pdf",
       "PackagePath": "staticwebassets\\pdffiles\\Hira Farm House.pdf"
     },
     {
-      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\pdffiles\\MyDocument.pdf",
+      "Id": "D:\\MoizWork\\MamjiAdmin\\wwwroot\\pdffiles\\MyDocument.pdf",
       "PackagePath": "staticwebassets\\pdffiles\\MyDocument.pdf"
     },
     {
-      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\pdffiles\\Olive Album-1.pdf",
+      "Id": "D:\\MoizWork\\MamjiAdmin\\wwwroot\\pdffiles\\Olive Album-1.pdf",
       "PackagePath": "staticwebassets\\pdffiles\\Olive Album-1.pdf"
     },
     {
-      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\pdffiles\\SARDAR-1.pdf",
+      "Id": "D:\\MoizWork\\MamjiAdmin\\wwwroot\\pdffiles\\SARDAR-1.pdf",
       "PackagePath": "staticwebassets\\pdffiles\\SARDAR-1.pdf"
     },
     {
-      "Id": "D:\\Projects\\Mamji_Admin\\wwwroot\\pdffiles\\retail.premium-pos.com_#_app_OrderPunch_list.pdf",
+      "Id": "D:\\MoizWork\\MamjiAdmin\\wwwroot\\pdffiles\\retail.premium-pos.com_#_app_OrderPunch_list.pdf",
       "PackagePath": "staticwebassets\\pdffiles\\retail.premium-pos.com_#_app_OrderPunch_list.pdf"
     },
     {

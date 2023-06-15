@@ -57,7 +57,7 @@ namespace MamjiAdmin.Controllers
 				//	await PushAndriod.PushNotify("Success!", "Your report has been uploaded!");
 				//}
 
-                return 1;
+                return res;
 			}
 			return 0;
 		}

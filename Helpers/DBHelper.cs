@@ -5,6 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.Threading.Tasks;
 
 namespace WebAPICode.Helpers
 {
@@ -50,7 +51,42 @@ namespace WebAPICode.Helpers
             }
         }
 
-        public DataTable GetTableFromSP(string sp, SqlParameter[] prms)
+		public async Task<DataTable> GetTableFromSPAsync(string sp, SqlParameter[] prms)
+		{
+			using SqlConnection connection = new SqlConnection(connectionString);
+			try
+			{
+				SqlCommand command = new SqlCommand(sp, connection)
+				{
+					CommandType = CommandType.StoredProcedure,
+					CommandTimeout = connection.ConnectionTimeout
+				};
+				connection.Open();
+
+				command.Parameters.AddRange(prms);
+
+				DataSet dataSet = new DataSet();
+				SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+				await Task.Run(() => dataAdapter.Fill(dataSet));
+				command.Parameters.Clear();
+
+				if (dataSet.Tables.Count > 0)
+				{
+					return dataSet.Tables[0];
+				}
+				else
+				{
+					return null;
+				}
+			}
+			catch (Exception ex)
+			{
+				throw ex;
+				//return null;
+			}
+		}
+
+		public DataTable GetTableFromSP(string sp, SqlParameter[] prms)
         {
 
 

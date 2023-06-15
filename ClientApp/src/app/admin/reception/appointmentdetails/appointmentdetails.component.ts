@@ -31,6 +31,7 @@ export class AppointmentdetailsComponent implements OnInit {
       const sid = +param.get('id');
       if (sid) {
         this.service.getById(sid).subscribe(res => {
+          debugger;
           this.editForm(res);
         });
       }
