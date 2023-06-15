@@ -48,7 +48,7 @@ namespace MamjiAdmin.Controllers
 
         [HttpPost]
         [Route("delete")]
-        public int Delete(TimeSlotBLL obj)
+        public int Delete([FromBody]  TimeSlotBLL obj)
         {
             return _service.Delete(obj);
         }

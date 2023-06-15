@@ -122,10 +122,10 @@ namespace BAL.Repositories
             try
             {
                 int _obj = 0;
-                SqlParameter[] p = new SqlParameter[2];
+                SqlParameter[] p = new SqlParameter[3];
                 p[0] = new SqlParameter("@id", data.TimeSlotID);
                 p[1] = new SqlParameter("@CreatedDate", data.CreatedDate);
-
+                p[2] = new SqlParameter("@StatusID", data.StatusID);
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteTimeslot", p);
 
                 return _obj;

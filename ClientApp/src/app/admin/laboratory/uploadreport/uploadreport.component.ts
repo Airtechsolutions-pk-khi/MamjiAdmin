@@ -73,4 +73,9 @@ export class UploadreportComponent implements OnInit {
       this.ts.showError("Error", "Failed to delete record.")
     });
   }
+
+  DownloadRpt(data) {
+    debugger
+   window.open('http://admin.mamjihospital.online/'+data);
+  }
 }
