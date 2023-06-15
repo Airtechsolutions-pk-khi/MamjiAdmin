@@ -38,7 +38,10 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                return _service.Get(id);
+                var res = _service.Get(id);
+                var spList = _service.GetSpecalitiesByDoctorId(res.DoctorID);
+                res.Specialities = spList;
+                return res;
             }
             catch (Exception ex)
             {

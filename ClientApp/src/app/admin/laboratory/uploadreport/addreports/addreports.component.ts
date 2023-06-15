@@ -109,6 +109,7 @@ onFileSelect(files: FileList): void {
         this.laboratoryService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
+          debugger;
           this.loadingReport = false;
         });
       }

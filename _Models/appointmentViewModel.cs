@@ -19,6 +19,8 @@ namespace MamjiAdmin._Models
         public int CustomerID { get; set; }
         public string AppointmentNo { get; set; }
         public string FullName { get; set; }
+        public string DoctorName { get; set; }
+        public List<DoctorSpeciality> Specialities { get; set; } = new();
         public string PatientName { get; set; }
         public string Gender { get; set; }
         public string Age { get; set; }

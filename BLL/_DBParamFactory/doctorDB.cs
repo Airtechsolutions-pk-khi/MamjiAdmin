@@ -5,10 +5,9 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
 using WebAPICode.Helpers;
 
 namespace BAL.Repositories
@@ -241,7 +240,10 @@ namespace BAL.Repositories
                 p[12] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertDoctor_Admin", p).Rows[0]["DoctorID"].ToString());
+                //DBHelper dBHelper = new DBHelper();
+                //var idResult = await dBHelper.GetTableFromSPAsync("dbo.sp_insertDoctor_Admin", p);
 
+                //rtn = int.Parse(idResult.Rows[0]["DoctorID"].ToString());
 
                 if (data.doctorSchedule.Count > 0)
                 {
@@ -253,6 +255,9 @@ namespace BAL.Repositories
                         p2[2] = new SqlParameter("@Name", i.DayName);
 
                         int rtn2 = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_insertDocDays_Admin", p2).Rows[0]["DaysID"].ToString());
+                        //var idaResult = await dBHelper.GetTableFromSPAsync("dbo.sp_insertDocDays_Admin", p2);
+                        //int rtn2 = int.Parse(idResult.Rows[0]["DaysID"].ToString());
+
                         foreach (var j in i.TimeSlot)
                         {
                             SqlParameter[] p3 = new SqlParameter[4];
@@ -261,10 +266,9 @@ namespace BAL.Repositories
                             p3[2] = new SqlParameter("@SpecialistID", i.SpecialistID);
                             p3[3] = new SqlParameter("@TimeSlot", j);
                             new DBHelper().GetTableFromSP("dbo.sp_insertDocTiming_Admin", p3);
+                            //await dBHelper.GetTableFromSPAsync("dbo.sp_insertDocTiming_Admin", p3);
                         }
-
-
-                    }
+					}
                     foreach (var item in data.DoctorProfiles)
                     {
                         SqlParameter[] p4 = new SqlParameter[5];
@@ -274,9 +278,9 @@ namespace BAL.Repositories
                         p4[3] = new SqlParameter("@Fees", item.Fees);
                         p4[4] = new SqlParameter("@StatusID", 1);
                         new DBHelper().GetTableFromSP("dbo.sp_insertSpecialitiesJunc_Admin", p4);
+                        //await dBHelper.GetTableFromSPAsync("dbo.sp_insertSpecialitiesJunc_Admin", p4);
                     }
-
-                }
+				}
 
                 return rtn;
             }

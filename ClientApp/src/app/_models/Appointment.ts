@@ -3,6 +3,7 @@ export class Appointment {
   appointmentNo: string;
   patientName: string;
   fullName:string;
+  doctorName:string;
   address:string;
   email:string;
   mobile:string;
@@ -19,7 +20,13 @@ export class Appointment {
   statusID: number;
   doctor: string;
   
-  specialities: string;
+  specialities: DoctorSpeciality[];
+}
+
+export class DoctorSpeciality
+{
+    specialistID: number
+    specialityName: string
 }
 
 export class AppointmentDetail {
