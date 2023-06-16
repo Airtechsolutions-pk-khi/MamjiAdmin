@@ -33,6 +33,7 @@
       <table class="table table-striped">
         <thead>
           <tr class="table-header">
+                        
             <th width="10%">Report</th>             
             <th width="15%" sortable="LabReference">Customer Name</th>
             <th width="15%" sortable="Status">Status </th>
@@ -42,9 +43,12 @@
         <tbody>
           <tr *ngFor="let item of data$ | async ">
             <td>
-              {{item.image}}
+             
+              <button (click)="DownloadRpt()">PDF Download</button>
+               
+              <!-- <a href="http://localhost:59660/assets/pdf/zzz.pdf" Download="ABC.pdf">Download the PDF</a> -->
               <!-- <a (click)="DownloadRpt(item.image)"><i class="fas fa-fw fa-edit"></i></a> -->
-              <!-- <a href ='http://admin.mamjihospital.online/${item.image}' download="item.image"> Link Text </a>   -->
+              
               <!-- <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
               <div *ngIf="item.image === ''" class="image-replace"></div> -->
             </td>

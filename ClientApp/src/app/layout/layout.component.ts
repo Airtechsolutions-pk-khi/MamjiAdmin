@@ -50,7 +50,8 @@ export class LayoutComponent implements OnInit {
       this.userName = this.ls.getSelectedBrand().email;
       this.type = this.ls.getSelectedBrand().type;
       debugger
-       this.permission=environment.rootScope; 
+      //  this.permission=environment.rootScope;
+      this.permission=this.ls.getSelectedBrand(); 
        var role = this.permission.permissionForm.find(element => element.roleName == this.type); 
        var roleNameType= role.roleName;
        this.isDiagnostic = role.diagnostic === 1 ? true : false;

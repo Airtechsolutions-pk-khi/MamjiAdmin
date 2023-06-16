@@ -51,7 +51,7 @@ import { AddpromotionComponent } from './admin/settings/promotion/addpromotion/a
 import { ItemsettingsComponent } from './admin/menu/items/itemsettings/itemsettings.component';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { DeliveryComponent } from './admin/settings/delivery/delivery.component';
-import { AdddeliveryComponent } from './admin/settings/Delivery/adddelivery/adddelivery.component';
+
 
 import { AppsettingComponent } from './admin/settings/appsettings/appsettings.component';
 import { AddsettingsComponent } from './admin/settings/appsettings/addappsettings/addsettings.component';
@@ -107,6 +107,7 @@ import { TimeSlotComponent } from './admin/settings/timeslot/timeslot.component'
 import { AddTimeSlotComponent } from './admin/settings/timeslot/add/addtimeslot.component';
 
 import { FormPermissionComponent } from './admin/permission/formpermission.component';
+import { AdddeliveryComponent } from './admin/settings/delivery/adddelivery/adddelivery.component';
 
 
 @NgModule({
