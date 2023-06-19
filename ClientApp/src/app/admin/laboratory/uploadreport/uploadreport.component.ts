@@ -7,6 +7,8 @@ import { LaboratoryService } from 'src/app/_services/laboratory.service';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
+import { HttpClient } from '@angular/common/http';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-uploadreport',
@@ -15,6 +17,7 @@ import { ExcelService } from 'src/ExportExcel/excel.service';
   providers: [ExcelService]
 })
 export class UploadreportComponent implements OnInit {
+ 
   data$: Observable<Laboratory[]>;
   oldData: Laboratory[];
   total$: Observable<number>;
@@ -29,7 +32,8 @@ export class UploadreportComponent implements OnInit {
     public ls: LocalStorageService,
     public excelService: ExcelService,
     public ts: ToastService,
-    public router: Router) {  
+    public router: Router,
+    private http: HttpClient) {  
       
       this.loading$ = service.loading$;
       this.submit = false;
@@ -71,6 +75,18 @@ export class UploadreportComponent implements OnInit {
 
     }, error => {
       this.ts.showError("Error", "Failed to delete record.")
+    });
+  }
+
+  DownloadRpt() {
+    debugger
+    const fileUrl = 'http://admin.mamjihospital.online/pdfFiles/Holidays.pdf'; // Replace with your actual file URL
+
+    this.http.get(fileUrl, { responseType: 'arraybuffer' }).subscribe((response: ArrayBuffer) => {
+      const blob = new Blob([response], { type: 'application/pdf' });
+
+      saveAs(blob, 'downloaded_file.pdf'); // Specify the desired filename here
+      console.log(blob);
     });
   }
 }

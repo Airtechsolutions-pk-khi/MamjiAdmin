@@ -180,6 +180,11 @@ onFileSelect(files: FileList): void {
   //   }
   // }
 
+
+
+
+
+  
   private loadCustomer() {
     debugger
     this.laboratoryService.loadCustomer().subscribe((res: any) => {
