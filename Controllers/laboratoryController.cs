@@ -1,7 +1,9 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MohsinFoodAdmin._Models;
 using Newtonsoft.Json;
+
 
 namespace MamjiAdmin.Controllers
 {
@@ -66,17 +69,27 @@ namespace MamjiAdmin.Controllers
 			var fileName = Path.GetFileName(file.FileName);
 			string ext = Path.GetExtension(file.FileName);
 
-			if (ext.ToLower() != ".pdf")
+			if (!ext.ToLower().Equals(".pdf"))
 			{
 				return "";
 			}
-			var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
+          
+            var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
+            //string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
+            try
+            {
+                using (FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+                {
+                    await file.CopyToAsync(fileStream);
+                }
 
-			using (var fileSteam = new FileStream(filePath, FileMode.Create))
-			{
-				await file.CopyToAsync(fileSteam);
-			}
-			return filePath;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            return filePath;
 		}
 
 		[HttpPost]
