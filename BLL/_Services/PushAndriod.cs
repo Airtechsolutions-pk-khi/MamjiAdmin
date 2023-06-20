@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using MamjiAdmin.GlobalAndCommons;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace MamjiAdmin.BLL._Services
@@ -10,7 +11,7 @@ namespace MamjiAdmin.BLL._Services
 			{
 				using (var client = new HttpClient())
 				{
-					var URL = string.Format("https://mamjihospital.online/api/push/androidData/{0}/{1}", title, body);
+					var URL = string.Format("{0}/api/push/androidData/{1}/{2}", AppGlobals.PublishedURL, title, body);
 					var response = await client.GetAsync(URL);
 					response.EnsureSuccessStatusCode();
 				}
