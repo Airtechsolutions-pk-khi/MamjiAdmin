@@ -442,7 +442,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <!-- <th width=\"15%\" sortable=\"LabReference\">Lab Reference#</th> -->\r\n            <th width=\"15%\" sortable=\"LabReference\">Customer Name</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <!-- <td>{{item.labReferenceNo}}</td> -->\r\n            <td>{{item.fullName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <!--<strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results-->\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <!--<ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>-->\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n                        \r\n            <th width=\"10%\">Report</th>             \r\n            <th width=\"15%\" sortable=\"LabReference\">Customer Name</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n             \r\n              <button (click)=\"DownloadRpt()\">PDF Download</button>\r\n               \r\n              <!-- <a href=\"http://localhost:59660/assets/pdf/zzz.pdf\" Download=\"ABC.pdf\">Download the PDF</a> -->\r\n              <!-- <a (click)=\"DownloadRpt(item.image)\"><i class=\"fas fa-fw fa-edit\"></i></a> -->\r\n              \r\n              <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> -->\r\n            </td>\r\n            \r\n            <td>{{item.fullName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <!-- <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <!--<strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results-->\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <!--<ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>-->\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -882,7 +882,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Details - <span class=\"badge badge-info\"> {{ appointment.appointmentStatus == 100 ? \"Completed\" : appointment.appointmentStatus==101 ?\"Pending\" : appointment.appointmentStatus == 102? \"Approved\" : appointment.appointmentStatus == 103? \"Cancelled\" : \"-\" }}</span></h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n\r\n      </div>\r\n    </div>\r\n    <hr />\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 form-group \">\r\n        <p>Email message to be sent to customer (Optional)</p>\r\n        <input type=\"text\" class=\"form-control\" id=msg placeholder=\"\" [(ngModel)]=\"StatusMsg\">\r\n      </div>\r\n      <div class=\"col-md-12 mb-4\" *ngIf=\"appointment.appointmentStatus!=100\">\r\n        <div class=\"card border-left-info shadow mb-4\">\r\n          <div class=\"card-header border-bottom-0\">Appointment Status</div>\r\n          <div class=\"card-body\">\r\n            <div class=\"\">\r\n              <!--<button class=\"btn btn-primary mr-1\" (click)=\"updateAppointment(appointment,101)\">\r\n            <i class=\"fas fa-truck\"></i> Pending\r\n          </button>-->\r\n              <button class=\"btn btn-info mr-1\" (click)=\"updateAppointment(appointment,100)\">\r\n                <i class=\"fas fa-truck\"></i> Completed\r\n              </button>\r\n              <button class=\"btn btn-success mr-1\" (click)=\"updateAppointment(appointment,102)\">\r\n                <i class=\"fas fa-people-carry\"></i> Approved\r\n              </button>\r\n              <button class=\"btn btn-danger mr-1\" (click)=\"updateAppointment(appointment,103)\">\r\n                <i class=\"fas fa-people-carry\"></i> Cancelled\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-danger shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Appointment Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.patientName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Booking Date\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.bookingDate }}</div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-Success shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Doctor Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.patientName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Booking Date\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.bookingDate }}</div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Details - <span class=\"badge badge-info\"> {{\r\n            appointment.appointmentStatus == 100 ? \"Completed\" : appointment.appointmentStatus==101 ?\"Pending\" :\r\n            appointment.appointmentStatus == 102? \"Approved\" : appointment.appointmentStatus == 103? \"Cancelled\" : \"-\"\r\n            }}</span></h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n\r\n      </div>\r\n    </div>\r\n    <hr />\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 form-group \">\r\n        <p>Email message to be sent to customer (Optional)</p>\r\n        <input type=\"text\" class=\"form-control\" id=msg placeholder=\"\" [(ngModel)]=\"StatusMsg\">\r\n      </div>\r\n      <div class=\"col-md-12 mb-4\" *ngIf=\"appointment.appointmentStatus!=100\">\r\n        <div class=\"card border-left-info shadow mb-4\">\r\n          <div class=\"card-header border-bottom-0\">Appointment Status</div>\r\n          <div class=\"card-body\">\r\n            <div class=\"\">\r\n              <!--<button class=\"btn btn-primary mr-1\" (click)=\"updateAppointment(appointment,101)\">\r\n            <i class=\"fas fa-truck\"></i> Pending\r\n          </button>-->\r\n              <button class=\"btn btn-info mr-1\" (click)=\"updateAppointment(appointment,100)\">\r\n                <i class=\"fas fa-truck\"></i> Completed\r\n              </button>\r\n              <button class=\"btn btn-success mr-1\" (click)=\"updateAppointment(appointment,102)\">\r\n                <i class=\"fas fa-people-carry\"></i> Approved\r\n              </button>\r\n              <button class=\"btn btn-danger mr-1\" (click)=\"updateAppointment(appointment,103)\">\r\n                <i class=\"fas fa-people-carry\"></i> Cancelled\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-danger shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Appointment Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.patientName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Mobile\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.mobile }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Email\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.email }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Address\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.address }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Age & Gender\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.age + \" \" + appointment.gender }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Booking Date\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.bookingDate }}</div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-Success shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Doctor Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.doctorName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Time Slot\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.timeslot }}</div>\r\n              </div>\r\n              <!-- <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Fee\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.fees }}</div>\r\n              </div> -->\r\n              <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th>Specialities</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let specialty of appointment.specialities\">\r\n                    <td>{{ specialty.specialityName }}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
       /***/
     },
 
@@ -1087,26 +1087,6 @@
     },
 
     /***/
-    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.html":
-    /*!**********************************************************************************************************************!*\
-      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.html ***!
-      \**********************************************************************************************************************/
-
-    /*! exports provided: default */
-
-    /***/
-    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsDeliveryAdddeliveryAdddeliveryComponentHtml(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Area</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"deliveryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Delivery Area Details</div>\r\n                <div class=\"card-body\">\r\n\r\n                                \r\n                            \r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Amount</label>\r\n                                    <input type=\"number\" class=\"form-control\" id=amount placeholder=\"\" formControlName=\"amount\">\r\n                                    <div *ngIf=\"f.amount.invalid && (f.amount.dirty || f.amount.touched)\" class=\"alert alert-danger\">\r\n                                        <div *ngIf=\"f.amount.errors.required\">\r\n                                            Amount is required.\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n\r\n                        </div>\r\n                     \r\n                    </div>\r\n\r\n\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\" >Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>";
-      /***/
-    },
-
-    /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/appsettings/addappsettings/Addsettings.component.html":
     /*!****************************************************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/appsettings/addappsettings/Addsettings.component.html ***!
@@ -1122,7 +1102,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Update Pharmacy Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Pharmacy Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Discount</label>\r\n                <input type=\"text\" class=\"form-control\" id=discount placeholder=\"\" formControlName=\"discount\">\r\n                <div *ngIf=\"f.discount.invalid && (f.discount.dirty || f.discount.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.discount.errors.required\">\r\n                    Discount is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">DeliveryCharges</label>\r\n                  <input type=\"text\" class=\"form-control\" id=deliveryCharges placeholder=\"\" formControlName=\"deliveryCharges\">\r\n                  <div *ngIf=\"f.deliveryCharges.invalid && (f.deliveryCharges.dirty || f.deliveryCharges.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.deliveryCharges.errors.required\">\r\n                      Delivery Charges is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Tax</label>\r\n                <input type=\"text\" class=\"form-control\" id=tax placeholder=\"\" formControlName=\"tax\">\r\n                <div *ngIf=\"f.tax.invalid && (f.tax.dirty || f.tax.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.tax.errors.required\">\r\n                    Tax is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Minimum Order Amount</label>\r\n                  <input type=\"text\" class=\"form-control\" id=minimumOrderAmount placeholder=\"\" formControlName=\"minimumOrderAmount\">\r\n                  <div *ngIf=\"f.minimumOrderAmount.invalid && (f.minimumOrderAmount.dirty || f.minimumOrderAmount.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.minimumOrderAmount.errors.required\">\r\n                      Minimum Order Amount is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Update Pharmacy Setting</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"settingForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Pharmacy Setting Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Discount</label>\r\n                <input type=\"text\" class=\"form-control\" id=discount placeholder=\"\" formControlName=\"discount\">\r\n                <div *ngIf=\"f.discount.invalid && (f.discount.dirty || f.discount.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.discount.errors.required\">\r\n                    Discount is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n             \r\n            </div>\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Tax</label>\r\n                <input type=\"text\" class=\"form-control\" id=tax placeholder=\"\" formControlName=\"tax\">\r\n                <div *ngIf=\"f.tax.invalid && (f.tax.dirty || f.tax.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.tax.errors.required\">\r\n                    Tax is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n              <!-- Form Row-->\r\n               \r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Minimum Order Amount</label>\r\n                  <input type=\"text\" class=\"form-control\" id=minimumOrderAmount placeholder=\"\" formControlName=\"minimumOrderAmount\">\r\n                  <div *ngIf=\"f.minimumOrderAmount.invalid && (f.minimumOrderAmount.dirty || f.minimumOrderAmount.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.minimumOrderAmount.errors.required\">\r\n                      Minimum Order Amount is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n            \r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -1223,6 +1203,26 @@
 
 
       __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Coupons</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Coupon List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <!-- <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button> -->\r\n         <!-- <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Coupon\r\n        </button>  -->\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\"> Title </th>\r\n            <th width=\"15%\" sortable=\"Type\">Type </th>\r\n            <th width=\"15%\" sortable=\"Amount\"> Amount</th>\r\n            <th width=\"15%\" sortable=\"CouponCode\"> Coupon Code</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td> {{item.amount}} </td>\r\n            <td> {{item.couponCode}} </td>\r\n            \r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n          </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.couponID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/delivery/adddelivery/adddelivery.component.html":
+    /*!**********************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/delivery/adddelivery/adddelivery.component.html ***!
+      \**********************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsDeliveryAdddeliveryAdddeliveryComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Area</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"deliveryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <div class=\"row\">\r\n\r\n        <div class=\"col-xl-12\">\r\n            <div class=\"card mb-4\">\r\n                <div class=\"card-header\">Delivery Area Details</div>\r\n                <div class=\"card-body\">\r\n\r\n                                \r\n                            \r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-md-8\">\r\n                            <div class=\"form-group\">\r\n                                <label class=\"small mb-1\" for=\"inputUsername\">Name</label>\r\n                                <input type=\"text\" class=\"form-control\" id=name placeholder=\"\" formControlName=\"name\">\r\n                                <div *ngIf=\"f.name.invalid && (f.name.dirty || f.name.touched)\" class=\"alert alert-danger\">\r\n                                    <div *ngIf=\"f.name.errors.required\">\r\n                                        Name is required.\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <!-- Form Row-->\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-12\">\r\n                                    <label class=\"small mb-1\" for=\"inputFirstName\">Amount</label>\r\n                                    <input type=\"number\" class=\"form-control\" id=amount placeholder=\"\" formControlName=\"amount\">\r\n                                    <div *ngIf=\"f.amount.invalid && (f.amount.dirty || f.amount.touched)\" class=\"alert alert-danger\">\r\n                                        <div *ngIf=\"f.amount.errors.required\">\r\n                                            Amount is required.\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n\r\n                        </div>\r\n                     \r\n                    </div>\r\n\r\n\r\n                    <div class=\"form-row\">\r\n                        <div class=\"form-group col-lg-12\">\r\n                            <label for=\"Item Status\">Status</label>\r\n                            <div class=\"custom-control custom-switch custom-switch-md\">\r\n                                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- Save changes button-->\r\n                    <button class=\"btn btn-primary\" type=\"submit\" >Save changes</button>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>";
       /***/
     },
 
@@ -2373,7 +2373,7 @@
       !*** ./src/app/_models/Appointment.ts ***!
       \****************************************/
 
-    /*! exports provided: Appointment, AppointmentDetail, Doctors */
+    /*! exports provided: Appointment, DoctorSpeciality, AppointmentDetail, Doctors */
 
     /***/
     function srcApp_modelsAppointmentTs(module, __webpack_exports__, __webpack_require__) {
@@ -2385,6 +2385,12 @@
 
       __webpack_require__.d(__webpack_exports__, "Appointment", function () {
         return Appointment;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "DoctorSpeciality", function () {
+        return DoctorSpeciality;
       });
       /* harmony export (binding) */
 
@@ -2401,6 +2407,10 @@
 
       var Appointment = function Appointment() {
         _classCallCheck(this, Appointment);
+      };
+
+      var DoctorSpeciality = function DoctorSpeciality() {
+        _classCallCheck(this, DoctorSpeciality);
       };
 
       var AppointmentDetail = function AppointmentDetail() {
@@ -13309,6 +13319,7 @@
                   //Set Forms
                   _this43.editForm(res);
 
+                  debugger;
                   _this43.loadingReport = false;
                 });
               }
@@ -13527,6 +13538,22 @@
       var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/ExportExcel/excel.service */
       "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var file_saver__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! file-saver */
+      "./node_modules/file-saver/dist/FileSaver.min.js");
+      /* harmony import */
+
+
+      var file_saver__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_8__);
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -13549,7 +13576,7 @@
       };
 
       var UploadreportComponent = /*#__PURE__*/function () {
-        function UploadreportComponent(service, ls, excelService, ts, router) {
+        function UploadreportComponent(service, ls, excelService, ts, router, http) {
           _classCallCheck(this, UploadreportComponent);
 
           this.service = service;
@@ -13557,6 +13584,7 @@
           this.excelService = excelService;
           this.ts = ts;
           this.router = router;
+          this.http = http;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -13609,6 +13637,23 @@
               _this47.ts.showError("Error", "Failed to delete record.");
             });
           }
+        }, {
+          key: "DownloadRpt",
+          value: function DownloadRpt() {
+            debugger;
+            var fileUrl = 'http://mamjihospital.online/pdfFiles/Holidays.pdf'; // Replace with your actual file URL
+
+            this.http.get(fileUrl, {
+              responseType: 'arraybuffer'
+            }).subscribe(function (response) {
+              var blob = new Blob([response], {
+                type: 'application/pdf'
+              });
+              Object(file_saver__WEBPACK_IMPORTED_MODULE_8__["saveAs"])(blob, 'downloaded_file.pdf'); // Specify the desired filename here
+
+              console.log(blob);
+            });
+          }
         }]);
 
         return UploadreportComponent;
@@ -13625,6 +13670,8 @@
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
+        }, {
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"]
         }];
       };
 
@@ -13643,7 +13690,7 @@
         styles: [__importDefault(__webpack_require__(
         /*! ./uploadreport.component.css */
         "./src/app/admin/laboratory/uploadreport/uploadreport.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_3__["LaboratoryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])], UploadreportComponent);
+      }), __metadata("design:paramtypes", [src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_3__["LaboratoryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"]])], UploadreportComponent);
       /***/
     },
 
@@ -13811,7 +13858,7 @@
             this.f.doctorID.setValue(obj.doctorID);
             this.f.imagePath.setValue(obj.imagePath);
             this.f.education.setValue(obj.education);
-            this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
 
             if (obj.doctorProfiles != "") {
               debugger;
@@ -18600,6 +18647,8 @@
 
               if (sid) {
                 _this92.service.getById(sid).subscribe(function (res) {
+                  debugger;
+
                   _this92.editForm(res);
                 });
               }
@@ -20976,290 +21025,6 @@
     },
 
     /***/
-    "./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.css":
-    /*!*******************************************************************************!*\
-      !*** ./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.css ***!
-      \*******************************************************************************/
-
-    /*! exports provided: default */
-
-    /***/
-    function srcAppAdminSettingsDeliveryAdddeliveryAdddeliveryComponentCss(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3NldHRpbmdzL0RlbGl2ZXJ5L2FkZGRlbGl2ZXJ5L2FkZGRlbGl2ZXJ5LmNvbXBvbmVudC5jc3MifQ== */";
-      /***/
-    },
-
-    /***/
-    "./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.ts":
-    /*!******************************************************************************!*\
-      !*** ./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.ts ***!
-      \******************************************************************************/
-
-    /*! exports provided: AdddeliveryComponent */
-
-    /***/
-    function srcAppAdminSettingsDeliveryAdddeliveryAdddeliveryComponentTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "AdddeliveryComponent", function () {
-        return AdddeliveryComponent;
-      });
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-      /* harmony import */
-
-
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/forms */
-      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-      /* harmony import */
-
-
-      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! src/app/imageupload/imageupload.component */
-      "./src/app/imageupload/imageupload.component.ts");
-      /* harmony import */
-
-
-      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/router */
-      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-      /* harmony import */
-
-
-      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! src/app/_services/local-storage.service */
-      "./src/app/_services/local-storage.service.ts");
-      /* harmony import */
-
-
-      var src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! src/app/_services/delivery.service */
-      "./src/app/_services/delivery.service.ts");
-      /* harmony import */
-
-
-      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! src/app/_services/toastservice */
-      "./src/app/_services/toastservice.ts");
-
-      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
-        var c = arguments.length,
-            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-            d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        }
-        return c > 3 && r && Object.defineProperty(target, key, r), r;
-      };
-
-      var __metadata = undefined && undefined.__metadata || function (k, v) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-      };
-
-      var __importDefault = undefined && undefined.__importDefault || function (mod) {
-        return mod && mod.__esModule ? mod : {
-          "default": mod
-        };
-      };
-
-      var AdddeliveryComponent = /*#__PURE__*/function () {
-        function AdddeliveryComponent(formBuilder, router, route, ls, ts, deliveryService) {
-          _classCallCheck(this, AdddeliveryComponent);
-
-          this.formBuilder = formBuilder;
-          this.router = router;
-          this.route = route;
-          this.ls = ls;
-          this.ts = ts;
-          this.deliveryService = deliveryService;
-          this.submitted = false;
-          this.loading = false;
-          this.loadingCustomer = false;
-          this.ButtonText = "Save";
-          this.BrandsList = [];
-          this.createForm(); //this.loadBrands();
-          //this.selectedBrand =this.ls.getSelectedBrand();
-        }
-
-        _createClass(AdddeliveryComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {
-            this.setSelecteditem();
-          }
-        }, {
-          key: "createForm",
-          value: function createForm() {
-            this.deliveryForm = this.formBuilder.group({
-              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-              amount: [0],
-              statusID: [true],
-              // brandIDs :[''],
-              deliveryAreaID: 0,
-              //brandID: this.ls.getSelectedBrand().brandID,
-              brands: []
-            });
-          }
-        }, {
-          key: "editForm",
-          value: function editForm(obj) {
-            this.f.name.setValue(obj.name);
-            this.f.amount.setValue(obj.amount);
-            this.f.deliveryAreaID.setValue(obj.deliveryAreaID);
-            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-            debugger;
-
-            if (obj.brands != "") {
-              var stringToConvert = obj.brands; //this.selectedBrandIds = stringToConvert.split(',').map(Number);
-
-              this.f.brands.setValue(obj.brands);
-            }
-          }
-        }, {
-          key: "setSelecteditem",
-          value: function setSelecteditem() {
-            var _this116 = this;
-
-            this.route.paramMap.subscribe(function (param) {
-              var sid = +param.get('id');
-
-              if (sid) {
-                _this116.loading = true;
-
-                _this116.f.deliveryAreaID.setValue(sid);
-
-                _this116.deliveryService.getById(sid).subscribe(function (res) {
-                  //Set Forms
-                  _this116.editForm(res);
-
-                  _this116.loading = false; //BrandsFill
-                  // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
-                  // .subscribe((res: any) => {            
-                  //   var stringToConvert = res.items;
-                  //   this.selectedBrandIds = stringToConvert.split(',').map(Number);              
-                  // });
-                });
-              }
-            });
-          }
-        }, {
-          key: "onSubmit",
-          value: function onSubmit() {
-            var _this117 = this;
-
-            debugger;
-            this.deliveryForm.markAllAsTouched();
-            this.submitted = true;
-
-            if (this.deliveryForm.invalid) {
-              return;
-            }
-
-            this.loading = true;
-            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2); //this.f.brands.setValue(this.selectedBrandIds == undefined ? "" : this.selectedBrandIds.toString());
-
-            if (parseInt(this.f.deliveryAreaID.value) === 0) {
-              //Insert delivery
-              this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
-                if (data != 0) {
-                  _this117.ts.showSuccess("Success", "Record added successfully.");
-
-                  _this117.router.navigate(['/admin/delivery']);
-                }
-
-                _this117.loading = false;
-              }, function (error) {
-                _this117.ts.showError("Error", "Failed to insert record.");
-
-                _this117.loading = false;
-              });
-            } else {
-              //Update delivery
-              this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this117.loading = false;
-
-                if (data != 0) {
-                  _this117.ts.showSuccess("Success", "Record updated successfully.");
-
-                  _this117.router.navigate(['/admin/delivery']);
-                }
-              }, function (error) {
-                _this117.ts.showError("Error", "Failed to update record.");
-
-                _this117.loading = false;
-              });
-            }
-          }
-        }, {
-          key: "loadBrands",
-          value: function loadBrands() {
-            var _this118 = this;
-
-            this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this118.BrandsList = res; // this.setSelecteditem();
-            });
-          }
-        }, {
-          key: "f",
-          get: function get() {
-            return this.deliveryForm.controls;
-          }
-        }]);
-
-        return AdddeliveryComponent;
-      }();
-
-      AdddeliveryComponent.ctorParameters = function () {
-        return [{
-          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
-        }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
-        }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
-        }, {
-          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
-        }, {
-          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"]
-        }, {
-          type: src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__["DeliveryService"]
-        }];
-      };
-
-      AdddeliveryComponent.propDecorators = {
-        imgComp: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
-          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
-            "static": true
-          }]
-        }]
-      };
-      AdddeliveryComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-        selector: 'app-adddelivery',
-        template: __importDefault(__webpack_require__(
-        /*! raw-loader!./adddelivery.component.html */
-        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.html"))["default"],
-        styles: [__importDefault(__webpack_require__(
-        /*! ./adddelivery.component.css */
-        "./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"], src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__["DeliveryService"]])], AdddeliveryComponent);
-      /***/
-    },
-
-    /***/
     "./src/app/admin/settings/appsettings/addappsettings/addsettings.component.ts":
     /*!************************************************************************************!*\
       !*** ./src/app/admin/settings/appsettings/addappsettings/addsettings.component.ts ***!
@@ -21388,14 +21153,14 @@
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this119 = this;
+            var _this116 = this;
 
             this.loadingSetting = true;
             this.settingService.getById(1).subscribe(function (res) {
               //Set Forms
-              _this119.editForm(res);
+              _this116.editForm(res);
 
-              _this119.loadingSetting = false;
+              _this116.loadingSetting = false;
             }); // this.route.paramMap.subscribe(param => {
             //   const sid = +param.get('id');
             //   if (sid) {
@@ -21412,7 +21177,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this120 = this;
+            var _this117 = this;
 
             debugger;
             this.settingForm.markAllAsTouched();
@@ -21430,33 +21195,33 @@
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this120.ts.showSuccess("Success", "Record added successfully.");
+                  _this117.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this120.router.navigate(['/admin/settings/appsettings']);
+                  _this117.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this120.loading = false;
+                _this117.loading = false;
               }, function (error) {
-                _this120.ts.showError("Error", "Failed to insert record.");
+                _this117.ts.showError("Error", "Failed to insert record.");
 
-                _this120.loading = false;
+                _this117.loading = false;
               });
             } else {
               //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this120.loading = false;
+                _this117.loading = false;
 
                 if (data != 0) {
-                  _this120.ts.showSuccess("Success", "Record updated successfully.");
+                  _this117.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this120.setSelectedSetting();
+                  _this117.setSelectedSetting();
 
-                  _this120.router.navigate(['/admin/settings/appsettings/add']);
+                  _this117.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this120.ts.showError("Error", "Failed to update record.");
+                _this117.ts.showError("Error", "Failed to update record.");
 
-                _this120.loading = false;
+                _this117.loading = false;
               });
             }
           }
@@ -21627,16 +21392,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this121 = this;
+            var _this118 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this121.ts.showSuccess("Success", "Record deleted successfully.");
+                _this118.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this121.getData();
-              } else _this121.ts.showError("Error", "Failed to delete record.");
+                _this118.getData();
+              } else _this118.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this121.ts.showError("Error", "Failed to delete record.");
+              _this118.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -21823,21 +21588,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this122 = this;
+            var _this119 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this122.loadingCustomer = true;
+                _this119.loadingCustomer = true;
 
-                _this122.f.bannerID.setValue(sid);
+                _this119.f.bannerID.setValue(sid);
 
-                _this122.bannerService.getById(sid).subscribe(function (res) {
+                _this119.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this122.editForm(res);
+                  _this119.editForm(res);
 
-                  _this122.loadingCustomer = false;
+                  _this119.loadingCustomer = false;
                 });
               }
             });
@@ -21845,7 +21610,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this123 = this;
+            var _this120 = this;
 
             debugger;
             this.bannerForm.markAllAsTouched();
@@ -21864,31 +21629,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this123.ts.showSuccess("Success", "Record added successfully.");
+                  _this120.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this123.router.navigate(['/admin/settings/banner']);
+                  _this120.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this123.loading = false;
+                _this120.loading = false;
               }, function (error) {
-                _this123.ts.showError("Error", "Failed to insert record.");
+                _this120.ts.showError("Error", "Failed to insert record.");
 
-                _this123.loading = false;
+                _this120.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this123.loading = false;
+                _this120.loading = false;
 
                 if (data != 0) {
-                  _this123.ts.showSuccess("Success", "Record updated successfully.");
+                  _this120.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this123.router.navigate(['/admin/settings/banner']);
+                  _this120.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this123.ts.showError("Error", "Failed to update record.");
+                _this120.ts.showError("Error", "Failed to update record.");
 
-                _this123.loading = false;
+                _this120.loading = false;
               });
             }
           }
@@ -22061,16 +21826,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this124 = this;
+            var _this121 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this124.ts.showSuccess("Success", "Record deleted successfully.");
+                _this121.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this124.getData();
-              } else _this124.ts.showError("Error", "Failed to delete record.");
+                _this121.getData();
+              } else _this121.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this124.ts.showError("Error", "Failed to delete record.");
+              _this121.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -22235,21 +22000,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this125 = this;
+            var _this122 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this125.loadingCoupon = true;
+                _this122.loadingCoupon = true;
 
-                _this125.f.couponID.setValue(sid);
+                _this122.f.couponID.setValue(sid);
 
-                _this125.couponService.getById(sid).subscribe(function (res) {
+                _this122.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this125.editForm(res);
+                  _this122.editForm(res);
 
-                  _this125.loadingCoupon = false;
+                  _this122.loadingCoupon = false;
                 });
               }
             });
@@ -22257,7 +22022,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this126 = this;
+            var _this123 = this;
 
             debugger;
             this.couponForm.markAllAsTouched();
@@ -22275,31 +22040,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this126.ts.showSuccess("Success", "Record added successfully.");
+                  _this123.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this126.router.navigate(['/admin/settings/coupon']);
+                  _this123.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this126.loading = false;
+                _this123.loading = false;
               }, function (error) {
-                _this126.ts.showError("Error", "Failed to insert record.");
+                _this123.ts.showError("Error", "Failed to insert record.");
 
-                _this126.loading = false;
+                _this123.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this126.loading = false;
+                _this123.loading = false;
 
                 if (data != 0) {
-                  _this126.ts.showSuccess("Success", "Record updated successfully.");
+                  _this123.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this126.router.navigate(['/admin/settings/coupon']);
+                  _this123.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this126.ts.showError("Error", "Failed to update record.");
+                _this123.ts.showError("Error", "Failed to update record.");
 
-                _this126.loading = false;
+                _this123.loading = false;
               });
             }
           }
@@ -22503,17 +22268,17 @@
         }, {
           key: "Delete",
           value: function Delete(item) {
-            var _this127 = this;
+            var _this124 = this;
 
             debugger;
             this.service["delete"](item).subscribe(function (res) {
               if (res != 0) {
-                _this127.ts.showSuccess("Success", "Record deleted successfully.");
+                _this124.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this127.getData();
-              } else _this127.ts.showError("Error", "Failed to delete record.");
+                _this124.getData();
+              } else _this124.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this127.ts.showError("Error", "Failed to delete record.");
+              _this124.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -22551,6 +22316,290 @@
         /*! ./coupon.component.css */
         "./src/app/admin/settings/coupon/coupon.component.css"))["default"]]
       }), __metadata("design:paramtypes", [src_app_services_coupon_service__WEBPACK_IMPORTED_MODULE_6__["CouponService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], CouponComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/delivery/adddelivery/adddelivery.component.css":
+    /*!*******************************************************************************!*\
+      !*** ./src/app/admin/settings/delivery/adddelivery/adddelivery.component.css ***!
+      \*******************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminSettingsDeliveryAdddeliveryAdddeliveryComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3NldHRpbmdzL2RlbGl2ZXJ5L2FkZGRlbGl2ZXJ5L2FkZGRlbGl2ZXJ5LmNvbXBvbmVudC5jc3MifQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/delivery/adddelivery/adddelivery.component.ts":
+    /*!******************************************************************************!*\
+      !*** ./src/app/admin/settings/delivery/adddelivery/adddelivery.component.ts ***!
+      \******************************************************************************/
+
+    /*! exports provided: AdddeliveryComponent */
+
+    /***/
+    function srcAppAdminSettingsDeliveryAdddeliveryAdddeliveryComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AdddeliveryComponent", function () {
+        return AdddeliveryComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/delivery.service */
+      "./src/app/_services/delivery.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AdddeliveryComponent = /*#__PURE__*/function () {
+        function AdddeliveryComponent(formBuilder, router, route, ls, ts, deliveryService) {
+          _classCallCheck(this, AdddeliveryComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ls = ls;
+          this.ts = ts;
+          this.deliveryService = deliveryService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingCustomer = false;
+          this.ButtonText = "Save";
+          this.BrandsList = [];
+          this.createForm(); //this.loadBrands();
+          //this.selectedBrand =this.ls.getSelectedBrand();
+        }
+
+        _createClass(AdddeliveryComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelecteditem();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.deliveryForm = this.formBuilder.group({
+              name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              amount: [0],
+              statusID: [true],
+              // brandIDs :[''],
+              deliveryAreaID: 0,
+              //brandID: this.ls.getSelectedBrand().brandID,
+              brands: []
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.name.setValue(obj.name);
+            this.f.amount.setValue(obj.amount);
+            this.f.deliveryAreaID.setValue(obj.deliveryAreaID);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            debugger;
+
+            if (obj.brands != "") {
+              var stringToConvert = obj.brands; //this.selectedBrandIds = stringToConvert.split(',').map(Number);
+
+              this.f.brands.setValue(obj.brands);
+            }
+          }
+        }, {
+          key: "setSelecteditem",
+          value: function setSelecteditem() {
+            var _this125 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this125.loading = true;
+
+                _this125.f.deliveryAreaID.setValue(sid);
+
+                _this125.deliveryService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this125.editForm(res);
+
+                  _this125.loading = false; //BrandsFill
+                  // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
+                  // .subscribe((res: any) => {            
+                  //   var stringToConvert = res.items;
+                  //   this.selectedBrandIds = stringToConvert.split(',').map(Number);              
+                  // });
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this126 = this;
+
+            debugger;
+            this.deliveryForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.deliveryForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2); //this.f.brands.setValue(this.selectedBrandIds == undefined ? "" : this.selectedBrandIds.toString());
+
+            if (parseInt(this.f.deliveryAreaID.value) === 0) {
+              //Insert delivery
+              this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this126.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this126.router.navigate(['/admin/delivery']);
+                }
+
+                _this126.loading = false;
+              }, function (error) {
+                _this126.ts.showError("Error", "Failed to insert record.");
+
+                _this126.loading = false;
+              });
+            } else {
+              //Update delivery
+              this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
+                _this126.loading = false;
+
+                if (data != 0) {
+                  _this126.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this126.router.navigate(['/admin/delivery']);
+                }
+              }, function (error) {
+                _this126.ts.showError("Error", "Failed to update record.");
+
+                _this126.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "loadBrands",
+          value: function loadBrands() {
+            var _this127 = this;
+
+            this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
+              _this127.BrandsList = res; // this.setSelecteditem();
+            });
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.deliveryForm.controls;
+          }
+        }]);
+
+        return AdddeliveryComponent;
+      }();
+
+      AdddeliveryComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"]
+        }, {
+          type: src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__["DeliveryService"]
+        }];
+      };
+
+      AdddeliveryComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AdddeliveryComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-adddelivery',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./adddelivery.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/delivery/adddelivery/adddelivery.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./adddelivery.component.css */
+        "./src/app/admin/settings/delivery/adddelivery/adddelivery.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"], src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__["DeliveryService"]])], AdddeliveryComponent);
       /***/
     },
 
@@ -26032,243 +26081,243 @@
       /* harmony import */
 
 
-      var _admin_settings_Delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
-      /*! ./admin/settings/Delivery/adddelivery/adddelivery.component */
-      "./src/app/admin/settings/Delivery/adddelivery/adddelivery.component.ts");
-      /* harmony import */
-
-
-      var _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
+      var _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
       /*! ./admin/settings/appsettings/appsettings.component */
       "./src/app/admin/settings/appsettings/appsettings.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
+      var _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
       /*! ./admin/settings/appsettings/addappsettings/addsettings.component */
       "./src/app/admin/settings/appsettings/addappsettings/addsettings.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
+      var _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
       /*! ./admin/menu/addons/addons.component */
       "./src/app/admin/menu/addons/addons.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
+      var _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
       /*! ./admin/menu/addons/addaddons/addaddons.component */
       "./src/app/admin/menu/addons/addaddons/addaddons.component.ts");
       /* harmony import */
 
 
-      var _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
+      var _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
       /*! ./admin/managedoctor/doctor/doctor.component */
       "./src/app/admin/managedoctor/doctor/doctor.component.ts");
       /* harmony import */
 
 
-      var _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
+      var _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
       /*! ./admin/managedoctor/doctor/adddoctors/adddoctors.component */
       "./src/app/admin/managedoctor/doctor/adddoctors/adddoctors.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(
+      var _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
       /*! ./admin/pharmacy/prescription/prescription.component */
       "./src/app/admin/pharmacy/prescription/prescription.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(
+      var _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(
       /*! ./admin/pharmacy/prescription/add/addprescription.component */
       "./src/app/admin/pharmacy/prescription/add/addprescription.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(
+      var _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(
       /*! ./admin/reception/appointment/appointment.component */
       "./src/app/admin/reception/appointment/appointment.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(
+      var _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(
       /*! ./admin/reception/appointmentdetails/appointmentdetails.component */
       "./src/app/admin/reception/appointmentdetails/appointmentdetails.component.ts");
       /* harmony import */
 
 
-      var _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(
+      var _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(
       /*! ./admin/laboratory/uploadreport/uploadreport.component */
       "./src/app/admin/laboratory/uploadreport/uploadreport.component.ts");
       /* harmony import */
 
 
-      var _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(
+      var _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(
       /*! ./admin/laboratory/uploadreport/addreports/addreports.component */
       "./src/app/admin/laboratory/uploadreport/addreports/addreports.component.ts");
       /* harmony import */
 
 
-      var _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(
+      var _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(
       /*! ./admin/laboratory/diagnosticcategories/diagnosticcategories.component */
       "./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.ts");
       /* harmony import */
 
 
-      var _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(
+      var _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(
       /*! ./admin/laboratory/diagnosticcategories/add/addcategory.component */
       "./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(
+      var _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(
       /*! ./admin/pharmacy/deliverydetail/deliverydetail.component */
       "./src/app/admin/pharmacy/deliverydetail/deliverydetail.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(
+      var _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(
       /*! ./admin/settings/coupon/coupon.component */
       "./src/app/admin/settings/coupon/coupon.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(
+      var _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(
       /*! ./admin/settings/coupon/addcoupon/addcoupon.component */
       "./src/app/admin/settings/coupon/addcoupon/addcoupon.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(
+      var _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(
       /*! ./admin/pharmacy/medicine/medicine.component */
       "./src/app/admin/pharmacy/medicine/medicine.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(
+      var _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(
       /*! ./admin/pharmacy/medicine/addmedicines/addmedicine.component */
       "./src/app/admin/pharmacy/medicine/addmedicines/addmedicine.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(
+      var _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(
       /*! ./admin/pharmacy/orders/orders.component */
       "./src/app/admin/pharmacy/orders/orders.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(
+      var _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(
       /*! ./admin/pharmacy/orderdetails/orderdetails.component */
       "./src/app/admin/pharmacy/orderdetails/orderdetails.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(
+      var _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(
       /*! ./admin/settings/medicalservices/service.component */
       "./src/app/admin/settings/medicalservices/service.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(
+      var _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(
       /*! ./admin/settings/medicalservices/add/addservice.component */
       "./src/app/admin/settings/medicalservices/add/addservice.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(
+      var _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(
       /*! ./admin/settings/medicalservicetype/medicalservicetype.component */
       "./src/app/admin/settings/medicalservicetype/medicalservicetype.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(
+      var _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(
       /*! ./admin/settings/medicalservicetype/add/addmedicalservicetype.component */
       "./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(
+      var _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(
       /*! ./admin/reception/nursingappointment/nursingappointment.component */
       "./src/app/admin/reception/nursingappointment/nursingappointment.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(
+      var _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(
       /*! ./admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component */
       "./src/app/admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component.ts");
       /* harmony import */
 
 
-      var _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(
+      var _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(
       /*! ./admin/notification/notification.component */
       "./src/app/admin/notification/notification.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(
+      var _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(
       /*! ././admin/settings/speciality/speciality.component */
       "./src/app/admin/settings/speciality/speciality.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(
+      var _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(
       /*! ././admin/settings/speciality/add/addspeciality.component */
       "./src/app/admin/settings/speciality/add/addspeciality.component.ts");
       /* harmony import */
 
 
-      var _admin_user_user_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(
+      var _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(
       /*! ./admin/user/user.component */
       "./src/app/admin/user/user.component.ts");
       /* harmony import */
 
 
-      var _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(
+      var _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(
       /*! ./admin/user/add/adduser.component */
       "./src/app/admin/user/add/adduser.component.ts");
       /* harmony import */
 
 
-      var _has_role_guard__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
+      var _has_role_guard__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(
       /*! ./has-role.guard */
       "./src/app/has-role.guard.ts");
       /* harmony import */
 
 
-      var ng_apexcharts__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
+      var ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
       /*! ng-apexcharts */
       "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
       /* harmony import */
 
 
-      var _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
+      var _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
       /*! ./admin/user/permission/permission.component */
       "./src/app/admin/user/permission/permission.component.ts");
       /* harmony import */
 
 
-      var _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
+      var _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
       /*! ./admin/user/permission/add/add.component */
       "./src/app/admin/user/permission/add/add.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
+      var _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
       /*! ./admin/settings/timeslot/timeslot.component */
       "./src/app/admin/settings/timeslot/timeslot.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
+      var _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
       /*! ./admin/settings/timeslot/add/addtimeslot.component */
       "./src/app/admin/settings/timeslot/add/addtimeslot.component.ts");
       /* harmony import */
 
 
-      var _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
+      var _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
       /*! ./admin/permission/formpermission.component */
       "./src/app/admin/permission/formpermission.component.ts");
+      /* harmony import */
+
+
+      var _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
+      /*! ./admin/settings/delivery/adddelivery/adddelivery.component */
+      "./src/app/admin/settings/delivery/adddelivery/adddelivery.component.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -26288,10 +26337,10 @@
       };
 
       AppModule = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_12__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_13__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_9__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_10__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_17__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_18__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_19__["ImageuploadComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"], _admin_settings_Delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_46__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_47__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_49__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_50__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_51__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_52__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_62__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_63__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_53__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_54__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_56__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_73__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_57__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_58__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_64__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_65__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_66__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_67__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_48__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_68__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_69__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_71__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_77__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_78__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_74__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_76__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_75__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_81__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_82__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_59__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_60__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_83__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_84__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_85__["FormPermissionComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_12__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_13__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_9__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_10__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_17__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_18__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_19__["ImageuploadComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"], _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({
           appId: 'ng-cli-universal'
-        }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_80__["NgApexchartsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_30__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"],
+        }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_30__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"],
         /*    NgApexchartsModule,*/
         _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([{
           path: '',
@@ -26335,7 +26384,7 @@
             component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"]
           }, {
             path: 'notification',
-            component: _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_74__["NotificationComponent"]
+            component: _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"]
           }, {
             path: 'location',
             component: _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"]
@@ -26395,46 +26444,46 @@
             component: _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"]
           }, {
             path: 'delivery/add',
-            component: _admin_settings_Delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_46__["AdddeliveryComponent"]
+            component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"]
           }, {
             path: 'delivery/edit/:id',
-            component: _admin_settings_Delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_46__["AdddeliveryComponent"]
+            component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"]
           }, {
             path: 'settings/appsettings',
-            component: _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_47__["AppsettingComponent"]
+            component: _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"]
           }, {
             path: 'settings/appsettings/add',
-            component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_48__["AddsettingsComponent"]
+            component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"]
           }, {
             path: 'settings/appsettings/edit/:id',
-            component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_48__["AddsettingsComponent"]
+            component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"]
           }, {
             path: 'addons',
-            component: _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_49__["AddonsComponent"]
+            component: _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"]
           }, {
             path: 'addons/add',
-            component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_50__["AddaddonsComponent"]
+            component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"]
           }, {
             path: 'addons/edit/:id',
-            component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_50__["AddaddonsComponent"]
+            component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"]
           }, {
             path: 'managedoctor/doctor',
-            component: _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_51__["DoctorComponent"]
+            component: _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"]
           }, {
             path: 'managedoctor/doctor/adddoctors',
-            component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_52__["AdddoctorsComponent"]
+            component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"]
           }, {
             path: 'managedoctor/doctor/edit/:id',
-            component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_52__["AdddoctorsComponent"]
+            component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"]
           }, {
             path: 'pharmacy/prescription',
-            component: _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_53__["PrescriptionComponent"]
+            component: _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"]
           }, {
             path: 'pharmacy/prescription/addprescription',
-            component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_54__["AddprescriptionComponent"]
+            component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"]
           }, {
             path: 'pharmacy/prescription/edit/:id',
-            component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_54__["AddprescriptionComponent"]
+            component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"]
           }, {
             path: 'reception/customers',
             component: _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"]
@@ -26446,130 +26495,130 @@
             component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"]
           }, {
             path: 'reception/appointment',
-            component: _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentComponent"]
+            component: _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"]
           }, {
             path: 'appointment/view/:id',
-            component: _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_56__["AppointmentdetailsComponent"]
+            component: _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"]
           }, {
             path: 'reception/nursingappointment',
-            component: _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["NursingAppointmentComponent"]
+            component: _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"]
           }, {
             path: 'reception/nursingappointment/addnursingappointment',
-            component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_73__["AddnursingappointmentComponent"]
+            component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"]
           }, {
             path: 'reception/nursingappointment/edit/:id',
-            component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_73__["AddnursingappointmentComponent"]
+            component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"]
           }, {
             path: 'laboratory/uploadreport',
-            component: _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_57__["UploadreportComponent"]
+            component: _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"]
           }, {
             path: 'laboratory/uploadreport/addreports',
-            component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_58__["AddreportsComponent"]
+            component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"]
           }, {
             path: 'laboratory/uploadreport/edit/:id',
-            component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_58__["AddreportsComponent"]
+            component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"]
           }, {
             path: 'laboratory/diagnosticcategory',
-            component: _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_59__["DiagnosticCategoriesComponent"]
+            component: _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"]
           }, {
             path: 'laboratory/diagnosticcategory/add',
-            component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_60__["AddCategoryComponent"]
+            component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"]
           }, {
             path: 'laboratory/diagnosticcategory/edit/:id',
-            component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_60__["AddCategoryComponent"]
+            component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"]
           }, {
             path: 'pharmacy/deliverydetail',
-            component: _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_61__["DeliverydetailComponent"]
+            component: _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_60__["DeliverydetailComponent"]
           }, {
             path: 'settings/coupon',
-            component: _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_62__["CouponComponent"]
+            component: _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"]
           }, {
             path: 'settings/coupon/add',
-            component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_63__["AddCouponComponent"]
+            component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"]
           }, {
             path: 'settings/coupon/edit/:id',
-            component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_63__["AddCouponComponent"]
+            component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"]
           }, {
             path: 'pharmacy/medicine',
-            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_64__["MedicineComponent"],
-            canActivate: [_has_role_guard__WEBPACK_IMPORTED_MODULE_79__["HasRoleGuard"]],
+            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"],
+            canActivate: [_has_role_guard__WEBPACK_IMPORTED_MODULE_78__["HasRoleGuard"]],
             data: {
               type: ['SuperAdmin']
             }
           }, {
             path: 'pharmacy/medicine/addmedicines',
-            component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_65__["AddmedicineComponent"]
+            component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"]
           }, {
             path: 'pharmacy/medicine/edit/:id',
-            component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_65__["AddmedicineComponent"]
+            component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"]
           }, {
             path: 'pharmacy/orders',
-            component: _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_66__["OrdersComponent"]
+            component: _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"]
           }, {
             path: 'orders/view/:id',
-            component: _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_67__["OrderdetailsComponent"]
+            component: _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"]
           }, {
             path: 'settings/medicalservices',
-            component: _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_68__["ServiceComponent"]
+            component: _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"]
           }, {
             path: 'settings/medicalservices/add',
-            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_69__["AddServiceComponent"]
+            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"]
           }, {
             path: 'settings/medicalservices/edit/:id',
-            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_69__["AddServiceComponent"]
+            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"]
           }, {
             path: 'settings/medicalservicetype',
-            component: _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["MedicalServicetypeComponent"]
+            component: _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"]
           }, {
             path: 'settings/medicalservicetype/add',
-            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_71__["AddMedicalServicetypeComponent"]
+            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"]
           }, {
             path: 'settings/medicalservicetype/edit/:id',
-            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_71__["AddMedicalServicetypeComponent"]
+            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"]
           }, {
             path: 'user',
-            component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_77__["UserComponent"]
+            component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"]
           }, {
             path: 'user/add',
-            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_78__["AdduserComponent"]
+            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"]
           }, {
             path: 'user/edit/:id',
-            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_78__["AdduserComponent"]
+            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"]
           }, {
             path: 'permission',
-            component: _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_81__["PermissionComponent"]
+            component: _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"]
           }, {
             path: 'permission/add',
-            component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_82__["AddComponent"]
+            component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"]
           }, {
             path: 'permission/edit/:id',
-            component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_82__["AddComponent"]
+            component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"]
           }, {
             path: 'settings/speciality',
-            component: _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_75__["SpecialityComponent"]
+            component: _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"]
           }, {
             path: 'settings/speciality/add',
-            component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_76__["AddSpecialityComponent"]
+            component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"]
           }, {
             path: 'settings/speciality/edit/:id',
-            component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_76__["AddSpecialityComponent"]
+            component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"]
           }, {
             path: 'settings/timeslot',
-            component: _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_83__["TimeSlotComponent"]
+            component: _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"]
           }, {
             path: 'settings/timeslot/add',
-            component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_84__["AddTimeSlotComponent"]
+            component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"]
           }, {
             path: 'settings/timeslot/edit/:id',
-            component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_84__["AddTimeSlotComponent"]
+            component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"]
           }, {
             path: 'formpermission',
-            component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_85__["FormPermissionComponent"]
+            component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"]
           }]
         }]), _angular_service_worker__WEBPACK_IMPORTED_MODULE_14__["ServiceWorkerModule"].register('ngsw-worker.js', {
           enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_15__["environment"].production
         }), _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__["NgbModule"]],
-        providers: [_has_role_guard__WEBPACK_IMPORTED_MODULE_79__["HasRoleGuard"]],
+        providers: [_has_role_guard__WEBPACK_IMPORTED_MODULE_78__["HasRoleGuard"]],
         exports: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"]]
       })], AppModule);
@@ -27163,31 +27212,25 @@
       /* harmony import */
 
 
-      var src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! src/environments/environment.prod */
-      "./src/environments/environment.prod.ts");
-      /* harmony import */
-
-
-      var _services_locations_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _services_locations_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ../_services/locations.service */
       "./src/app/_services/locations.service.ts");
       /* harmony import */
 
 
-      var _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ../_services/local-storage.service */
       "./src/app/_services/local-storage.service.ts");
       /* harmony import */
 
 
-      var _services_user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _services_user_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ../_services/user.service */
       "./src/app/_services/user.service.ts");
       /* harmony import */
 
 
-      var _models_Permission__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _models_Permission__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../_models/Permission */
       "./src/app/_models/Permission.ts");
 
@@ -27209,8 +27252,7 @@
         return mod && mod.__esModule ? mod : {
           "default": mod
         };
-      }; // import { TranslateService } from '@ngx-translate/core';
-
+      };
 
       var LayoutComponent = /*#__PURE__*/function () {
         function LayoutComponent(router, service, userService, ls) {
@@ -27234,11 +27276,12 @@
           this.isReception = true;
           this.isReport = true;
           this.isSetting = true;
-          this.permission = new _models_Permission__WEBPACK_IMPORTED_MODULE_6__["Permission"]();
+          this.permission = new _models_Permission__WEBPACK_IMPORTED_MODULE_5__["Permission"]();
           this.userName = this.ls.getSelectedBrand().email;
           this.type = this.ls.getSelectedBrand().type;
-          debugger;
-          this.permission = src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_2__["environment"].rootScope;
+          debugger; //  this.permission=environment.rootScope;
+
+          this.permission = this.ls.getSelectedBrand();
           var role = this.permission.permissionForm.find(function (element) {
             return element.roleName == _this155.type;
           });
@@ -27300,11 +27343,11 @@
         return [{
           type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
         }, {
-          type: _services_locations_service__WEBPACK_IMPORTED_MODULE_3__["LocationsService"]
+          type: _services_locations_service__WEBPACK_IMPORTED_MODULE_2__["LocationsService"]
         }, {
-          type: _services_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]
+          type: _services_user_service__WEBPACK_IMPORTED_MODULE_4__["UserService"]
         }, {
-          type: _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+          type: _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]
         }];
       };
 
@@ -27316,7 +27359,7 @@
         styles: [__importDefault(__webpack_require__(
         /*! ./layout.component.css */
         "./src/app/layout/layout.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _services_locations_service__WEBPACK_IMPORTED_MODULE_3__["LocationsService"], _services_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"], _services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]])], LayoutComponent);
+      }), __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _services_locations_service__WEBPACK_IMPORTED_MODULE_2__["LocationsService"], _services_user_service__WEBPACK_IMPORTED_MODULE_4__["UserService"], _services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"]])], LayoutComponent);
       /***/
     },
 
