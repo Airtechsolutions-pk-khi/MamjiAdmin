@@ -27,12 +27,14 @@ export class AddreportsComponent implements OnInit {
 
   onCustomerSelect(customerID: string) {
     debugger;
-    this.formData.customerID = customerID.split(' ')[1];
+    // this.formData.customerID = customerID.split(' ')[1];
+    this.formData.customerID = customerID;
   }
 
   onDiagnosticSelect(diagnosticCatID: string) {
     debugger;
-    this.formData.diagnosticCatID = diagnosticCatID.split(' ')[1];
+    // this.formData.diagnosticCatID = diagnosticCatID.split(' ')[1];
+    this.formData.diagnosticCatID = diagnosticCatID;
   }
   
   submitted = false;
@@ -95,9 +97,14 @@ onFileSelect(files: FileList): void {
   }
   private editForm(obj) {
     debugger
-    this.f.customerID.setValue(obj.customerID);
-    this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
-    //this.f.image.setValue(obj.image);
+    // this.f.customerID.setValue(obj.customerID);
+    // this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
+    console.log(this.CategoryList);
+    console.log(this.CustomerList);
+
+    this.formData.customerID = obj.customerID;
+    this.formData.diagnosticCatID = obj.diagnoseCatID;
+
     this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
   }
   setSelectedReport() {
@@ -134,6 +141,28 @@ onFileSelect(files: FileList): void {
       }
     );
   }
+
+  private loadCustomer() {
+    debugger
+    this.laboratoryService.loadCustomer().subscribe((res: any) => {
+      debugger;
+      this.CustomerList = res;
+    });
+  }
+
+  private loadCategories() {
+    debugger
+    this.diagnosticcategoriesService.loadCategory().subscribe((res: any) => {
+      this.CategoryList = res;
+    });
+  }
+  
+  removeImage(obj) {
+    const index = this.Images.indexOf(obj);
+    this.Images.splice(index, 1);
+    this.f.imagesSource.setValue(this.Images);
+  }
+}
 
   // onSubmit() {
   //   debugger
@@ -185,23 +214,3 @@ onFileSelect(files: FileList): void {
 
 
   
-  private loadCustomer() {
-    debugger
-    this.laboratoryService.loadCustomer().subscribe((res: any) => {
-      debugger;
-      this.CustomerList = res;
-    });
-  }
-
-  private loadCategories() {
-    debugger
-    this.diagnosticcategoriesService.loadCategory().subscribe((res: any) => {
-      this.CategoryList = res;
-    });
-  }
-  removeImage(obj) {
-    const index = this.Images.indexOf(obj);
-    this.Images.splice(index, 1);
-    this.f.imagesSource.setValue(this.Images);
-  }
-}

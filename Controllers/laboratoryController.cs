@@ -1,11 +1,6 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
@@ -13,7 +8,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MohsinFoodAdmin._Models;
-using Newtonsoft.Json;
 
 
 namespace MamjiAdmin.Controllers
