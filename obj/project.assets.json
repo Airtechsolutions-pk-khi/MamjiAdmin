@@ -9114,19 +9114,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Airtech Soutions\\.nuget\\packages\\": {}
+    "C:\\Users\\toshiba\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj",
+      "projectUniqueName": "D:\\MoizWork\\MamjiAdmin\\MamjiAdmin.csproj",
       "projectName": "MamjiAdmin",
-      "projectPath": "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj",
-      "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
-      "outputPath": "E:\\Project\\Mamji\\MamjiAdmin_Git\\obj\\",
+      "projectPath": "D:\\MoizWork\\MamjiAdmin\\MamjiAdmin.csproj",
+      "packagesPath": "C:\\Users\\toshiba\\.nuget\\packages\\",
+      "outputPath": "D:\\MoizWork\\MamjiAdmin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\toshiba\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9212,7 +9212,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
