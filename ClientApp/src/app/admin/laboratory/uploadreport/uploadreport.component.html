@@ -44,7 +44,7 @@
           <tr *ngFor="let item of data$ | async ">
             <td>
              
-              <button (click)="DownloadRpt()">PDF Download</button>
+              <button (click)="DownloadRpt(item.image)">PDF Download</button>
                
               <!-- <a href="http://localhost:59660/assets/pdf/zzz.pdf" Download="ABC.pdf">Download the PDF</a> -->
               <!-- <a (click)="DownloadRpt(item.image)"><i class="fas fa-fw fa-edit"></i></a> -->

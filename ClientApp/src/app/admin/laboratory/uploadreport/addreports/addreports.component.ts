@@ -48,6 +48,7 @@ export class AddreportsComponent implements OnInit {
   selectedCategoryIds = [];
   Images = [];
   pdfFile: [''];
+  pdfFilePath: string = '';
   pdfSrc;
   pdfBufferRender;
   localPDF;
@@ -104,6 +105,7 @@ onFileSelect(files: FileList): void {
 
     this.formData.customerID = obj.customerID;
     this.formData.diagnosticCatID = obj.diagnoseCatID;
+    this.pdfFilePath = obj.image;
 
     this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
   }

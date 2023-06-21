@@ -89,6 +89,7 @@ export class LaboratoryService {
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Laboratory[]>(url).subscribe(res => {
+        debugger;
         this.laboratory = res;
 
         this._data$.next(this.laboratory);

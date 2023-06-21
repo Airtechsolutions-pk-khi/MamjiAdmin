@@ -8,4 +8,5 @@ export class Laboratory {
   statusID: number;
   customer: string;
   category: string;
+  image: string;
 }
