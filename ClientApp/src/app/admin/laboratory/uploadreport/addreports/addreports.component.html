@@ -14,24 +14,7 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Customer Name</label>
-                  <!-- <select class="custom-select"  id="customerID" [(ngModel)]="formData.customerID" (change)="onCustomerSelect($event.target.value)">
-
-                    <option [ngValue]="option.customerID" selected="option.customerID == formData.customerID"
-                            *ngFor="let option of CustomerList">
-                      {{option.fullName}}
-                    </option>
-                  </select> -->
-                  <!-- <ng-select [items]="CustomerList" bindValue="customerID" bindLabel="fullName"
-                    placeholder="--Select Customer--" [ngModelOptions]="{standalone: true}"
-                    [(ngModel)]="formData.customerID" (change)="onCustomerSelect(formData.customerID)">
-                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                      <div class="ng-value" *ngFor="let item of items">
-                        <span class="ng-value-label">{{item.fullName}}</span>
-                        <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)"
-                          aria-hidden="true">×</span>
-                      </div>
-                    </ng-template>
-                  </ng-select> -->
+ 
                   <ng-select [items]="CustomerList" bindLabel="fullName" bindValue="customerID" [multiple]="false" placeholder="--Select Customer--" (change)="onCustomerSelect(formData.customerID)" [ngModelOptions]="{standalone: true}" [(ngModel)]="formData.customerID">
                     <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                       <div class="ng-value" *ngFor="let item of items">
@@ -45,24 +28,13 @@
               </div>
 
               <input type="file" id="pdfFile" name="pdfFile" [(ngModel)]="pdfFilePath" (change)="onFileChange($event)" accept=".pdf" required>
+              <input type="text" id="pdfFilePath" name="pdfFilePath" [ngModelOptions]="{standalone: true}" [(ngModel)]="pdfFilePath" style="border: none; width: 100% !important;" readonly>
             </div>
-
+            
             <div class="form-group col-md-6">
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputUsername">Diagnostic Catgeory</label>
-                  <!-- <select class="custom-select" id="diagnosticCatID" [(ngModel)]="formData.diagnosticCatID"
-                    (change)="onDiagnosticSelect($event.target.value)">
-
-                    <option [ngValue]="option.diagnosticCatID"
-                      selected="option.diagnosticCatID == fromData.diagnosticCatID" *ngFor="let option of CategoryList">
-                      {{option.categoryName}}
-                    </option>
-                  </select> -->
-                  <!-- <ng-select [items]="CategoryList" bindValue="diagnosticCatID" bindLabel="categoryName"
-                    placeholder="--Select Diagnostic Category--" [ngModelOptions]="{standalone: true}"
-                    [(ngModel)]="formData.diagnosticCatID" (change)="onDiagnosticSelect(formData.diagnosticCatID)">
-                  </ng-select> -->
+                  <label class="small mb-1" for="inputUsername">Diagnostic Catgeory</label>                  
                   <ng-select [items]="CategoryList" bindLabel="categoryName" bindValue="diagnosticCatID" [multiple]="false" placeholder="--Select Diagnostic Category--" (change)="onDiagnosticSelect(formData.diagnosticCatID)" [ngModelOptions]="{standalone: true}" [(ngModel)]="formData.diagnosticCatID">
                     <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
                       <div class="ng-value" *ngFor="let item of items">

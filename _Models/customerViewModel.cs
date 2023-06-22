@@ -31,7 +31,7 @@ namespace MamjiAdmin._Models
     }
     public class CustomerDropdownBLL
     {
-        public string CustomerID { get; set; }
+        public int? CustomerID { get; set; }
         public string FullName { get; set; }
         
     }

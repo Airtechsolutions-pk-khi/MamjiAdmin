@@ -104,7 +104,7 @@ onFileSelect(files: FileList): void {
     console.log(this.CustomerList);
 
     this.formData.customerID = obj.customerID;
-    this.formData.diagnosticCatID = obj.diagnoseCatID;
+    this.formData.diagnosticCatID = obj.diagnoseCatID;    
     this.pdfFilePath = obj.image;
 
     this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
@@ -136,7 +136,7 @@ onFileSelect(files: FileList): void {
       response => {
         this.ts.showSuccess("Success", "Record added successfully.")
         this.router.navigate(['/admin/laboratory/uploadreport']);
-        console.log(response);
+        
       },
       error => {
          
@@ -149,6 +149,7 @@ onFileSelect(files: FileList): void {
     this.laboratoryService.loadCustomer().subscribe((res: any) => {
       debugger;
       this.CustomerList = res;
+       
     });
   }
 

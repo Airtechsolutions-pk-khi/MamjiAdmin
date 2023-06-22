@@ -322,7 +322,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- <form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\"> -->\r\n  <form class=\"form\" (ngSubmit)=\"onSubmit()\" #myForm=\"ngForm\" >\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                  <select class=\"custom-select\"  id=\"customerID\" [(ngModel)]=\"formData.customerID\" (change)=\"onCustomerSelect($event.target.value)\">\r\n\r\n                    <option [ngValue]=\"option.customerID\" selected=\"option.customerID == customerID\"\r\n                            *ngFor=\"let option of CustomerList\">\r\n                      {{option.fullName}}\r\n                    </option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n               \r\n              <input type=\"file\" id=\"pdfFile\" name=\"pdfFile\" (change)=\"onFileChange($event)\" accept=\".pdf\" required>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Catgeory</label>\r\n                  <select class=\"custom-select\"  id=\"diagnosticCatID\" [(ngModel)]=\"formData.diagnosticCatID\"(change)=\"onDiagnosticSelect($event.target.value)\">\r\n\r\n                    <option [ngValue]=\"option.diagnosticCatID\" selected=\"option.diagnosticCatID == diagnosticCatID\"\r\n                            *ngFor=\"let option of CategoryList\">\r\n                      {{option.categoryName}}\r\n                    </option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- <form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\"> -->\r\n<form class=\"form\" (ngSubmit)=\"onSubmit()\" #myForm=\"ngForm\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n \r\n                  <ng-select [items]=\"CustomerList\" bindLabel=\"fullName\" bindValue=\"customerID\" [multiple]=\"false\" placeholder=\"--Select Customer--\" (change)=\"onCustomerSelect(formData.customerID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.customerID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n\r\n                </div>\r\n              </div>\r\n\r\n              <input type=\"file\" id=\"pdfFile\" name=\"pdfFile\" [(ngModel)]=\"pdfFilePath\" (change)=\"onFileChange($event)\" accept=\".pdf\" required>\r\n              <input type=\"text\" id=\"pdfFilePath\" name=\"pdfFilePath\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"pdfFilePath\" style=\"border: none; width: 100% !important;\" readonly>\r\n            </div>\r\n            \r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Catgeory</label>                  \r\n                  <ng-select [items]=\"CategoryList\" bindLabel=\"categoryName\" bindValue=\"diagnosticCatID\" [multiple]=\"false\" placeholder=\"--Select Diagnostic Category--\" (change)=\"onDiagnosticSelect(formData.diagnosticCatID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.diagnosticCatID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.categoryName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>");
 
 /***/ }),
 
@@ -335,7 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n                        \r\n            <th width=\"10%\">Report</th>             \r\n            <th width=\"15%\" sortable=\"LabReference\">Customer Name</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n             \r\n              <button (click)=\"DownloadRpt()\">PDF Download</button>\r\n               \r\n              <!-- <a href=\"http://localhost:59660/assets/pdf/zzz.pdf\" Download=\"ABC.pdf\">Download the PDF</a> -->\r\n              <!-- <a (click)=\"DownloadRpt(item.image)\"><i class=\"fas fa-fw fa-edit\"></i></a> -->\r\n              \r\n              <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> -->\r\n            </td>\r\n            \r\n            <td>{{item.fullName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <!-- <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <!--<strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results-->\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <!--<ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>-->\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n                        \r\n            <th width=\"10%\">Report</th>             \r\n            <th width=\"15%\" sortable=\"LabReference\">Customer Name</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n             \r\n              <button class=\"btnDownload\" (click)=\"DownloadRpt(item.image)\"><i class=\"fa fa-download\"></i> Download Report</button>\r\n               \r\n              <!-- <a href=\"http://localhost:59660/assets/pdf/zzz.pdf\" Download=\"ABC.pdf\">Download the PDF</a> -->\r\n              <!-- <a (click)=\"DownloadRpt(item.image)\"><i class=\"fas fa-fw fa-edit\"></i></a> -->\r\n              \r\n              <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> -->\r\n            </td>\r\n            \r\n            <td>{{item.fullName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <!-- <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <!--<strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results-->\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <!--<ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>-->\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1742,7 +1742,8 @@ let SignalrService = class SignalrService {
     startConnection() {
         return __awaiter(this, void 0, void 0, function* () {
             debugger;
-            var domain = "http://localhost:59660";
+            //var domain = "http://localhost:59660";
+            var domain = "http://admin.mamjihospital.online";
             this.hubConnection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__["HubConnectionBuilder"]()
                 .withUrl(`${domain}/Notify`).build();
             yield this.hubConnection.start();
@@ -3967,6 +3968,7 @@ let LaboratoryService = class LaboratoryService {
         console.log(url);
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
             this.http.get(url).subscribe(res => {
+                debugger;
                 this.laboratory = res;
                 this._data$.next(this.laboratory);
                 this._allData$.next(this.laboratory);
@@ -7670,6 +7672,7 @@ let AddreportsComponent = class AddreportsComponent {
         this.selectedCustomerIds = [];
         this.selectedCategoryIds = [];
         this.Images = [];
+        this.pdfFilePath = '';
         this.fileName = '';
         this.createForm();
         this.loadCustomer();
@@ -7680,11 +7683,13 @@ let AddreportsComponent = class AddreportsComponent {
     }
     onCustomerSelect(customerID) {
         debugger;
-        this.formData.customerID = customerID.split(' ')[1];
+        // this.formData.customerID = customerID.split(' ')[1];
+        this.formData.customerID = customerID;
     }
     onDiagnosticSelect(diagnosticCatID) {
         debugger;
-        this.formData.diagnosticCatID = diagnosticCatID.split(' ')[1];
+        // this.formData.diagnosticCatID = diagnosticCatID.split(' ')[1];
+        this.formData.diagnosticCatID = diagnosticCatID;
     }
     ngOnInit() {
         this.setSelectedReport();
@@ -7706,9 +7711,13 @@ let AddreportsComponent = class AddreportsComponent {
     }
     editForm(obj) {
         debugger;
-        this.f.customerID.setValue(obj.customerID);
-        this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
-        //this.f.image.setValue(obj.image);
+        // this.f.customerID.setValue(obj.customerID);
+        // this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
+        console.log(this.CategoryList);
+        console.log(this.CustomerList);
+        this.formData.customerID = obj.customerID;
+        this.formData.diagnosticCatID = obj.diagnoseCatID;
+        this.pdfFilePath = obj.image;
         this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
     }
     setSelectedReport() {
@@ -7735,49 +7744,9 @@ let AddreportsComponent = class AddreportsComponent {
         this.http.post('api/laboratory/insert', formData).subscribe(response => {
             this.ts.showSuccess("Success", "Record added successfully.");
             this.router.navigate(['/admin/laboratory/uploadreport']);
-            console.log(response);
         }, error => {
         });
     }
-    // onSubmit() {
-    //   debugger
-    //   const formData = new FormData();
-    //   formData.append('customerID', this.formData.customerID);
-    //   formData.append('diagnosticCatID', this.formData.diagnosticCatID);
-    //   formData.append('pdfFile', this.selectedFile, this.selectedFile.name);  
-    //   // this.reportForm.markAllAsTouched();
-    //   // this.submitted = true;
-    //   // if (this.formData.invalid) { return; }
-    //   this.loading = true;
-    //   this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-    //   //this.f.pdfFile.setValue(this.selectedFile.name);
-    //   if (parseInt(this.f.laboratoryID.value) === 0) {
-    //     //Insert customer
-    //     console.log(JSON.stringify(this.reportForm.value));
-    //     this.laboratoryService.insert(this.formData.value).subscribe(data => {
-    //       if (data != 0) {
-    //         this.ts.showSuccess("Success", "Record added successfully.")
-    //         this.router.navigate(['/admin/laboratory/uploadreport']);
-    //       }
-    //       this.loading = false;
-    //     }, error => {
-    //       this.ts.showError("Error", "Failed to insert record.")
-    //       this.loading = false;
-    //     });
-    //   } else {
-    //     //Update customer
-    //     this.laboratoryService.update(this.reportForm.value).subscribe(data => {
-    //       this.loading = false;
-    //       if (data != 0) {
-    //         this.ts.showSuccess("Success", "Record updated successfully.")
-    //         this.router.navigate(['/admin/laboratory/uploadreport']);
-    //       }
-    //     }, error => {
-    //       this.ts.showError("Error", "Failed to update record.")
-    //       this.loading = false;
-    //     });
-    //   }
-    // }
     loadCustomer() {
         debugger;
         this.laboratoryService.loadCustomer().subscribe((res) => {
@@ -7825,6 +7794,45 @@ AddreportsComponent = __decorate([
         _services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_7__["DiagnosticCategoryService"]])
 ], AddreportsComponent);
 
+// onSubmit() {
+//   debugger
+//   const formData = new FormData();
+//   formData.append('customerID', this.formData.customerID);
+//   formData.append('diagnosticCatID', this.formData.diagnosticCatID);
+//   formData.append('pdfFile', this.selectedFile, this.selectedFile.name);  
+//   // this.reportForm.markAllAsTouched();
+//   // this.submitted = true;
+//   // if (this.formData.invalid) { return; }
+//   this.loading = true;
+//   this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+//   //this.f.pdfFile.setValue(this.selectedFile.name);
+//   if (parseInt(this.f.laboratoryID.value) === 0) {
+//     //Insert customer
+//     console.log(JSON.stringify(this.reportForm.value));
+//     this.laboratoryService.insert(this.formData.value).subscribe(data => {
+//       if (data != 0) {
+//         this.ts.showSuccess("Success", "Record added successfully.")
+//         this.router.navigate(['/admin/laboratory/uploadreport']);
+//       }
+//       this.loading = false;
+//     }, error => {
+//       this.ts.showError("Error", "Failed to insert record.")
+//       this.loading = false;
+//     });
+//   } else {
+//     //Update customer
+//     this.laboratoryService.update(this.reportForm.value).subscribe(data => {
+//       this.loading = false;
+//       if (data != 0) {
+//         this.ts.showSuccess("Success", "Record updated successfully.")
+//         this.router.navigate(['/admin/laboratory/uploadreport']);
+//       }
+//     }, error => {
+//       this.ts.showError("Error", "Failed to update record.")
+//       this.loading = false;
+//     });
+//   }
+// }
 
 
 /***/ }),
@@ -7838,7 +7846,7 @@ AddreportsComponent = __decorate([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xhYm9yYXRvcnkvdXBsb2FkcmVwb3J0L3VwbG9hZHJlcG9ydC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (" \r\n.btnDownload {\r\n    background-color: #cf2e2e;\r\n    border: none;\r\n    color: white;\r\n    padding: 5px 13px;\r\n    cursor: pointer;\r\n    font-size: 18px;\r\n    border-radius: 5px;\r\n}\r\n\r\n/* Darker background on mouse-over */\r\n\r\n.btnDownload:hover {\r\n  background-color: #149063;\r\n  border: none;\r\n  border-radius: 5px;\r\n}\r\n \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vbGFib3JhdG9yeS91cGxvYWRyZXBvcnQvdXBsb2FkcmVwb3J0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixZQUFZO0lBQ1osaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixlQUFlO0lBQ2Ysa0JBQWtCO0FBQ3RCOztBQUVBLG9DQUFvQzs7QUFDcEM7RUFDRSx5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGtCQUFrQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xhYm9yYXRvcnkvdXBsb2FkcmVwb3J0L3VwbG9hZHJlcG9ydC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiIFxyXG4uYnRuRG93bmxvYWQge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2NmMmUyZTtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHBhZGRpbmc6IDVweCAxM3B4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcblxyXG4vKiBEYXJrZXIgYmFja2dyb3VuZCBvbiBtb3VzZS1vdmVyICovXHJcbi5idG5Eb3dubG9hZDpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzE0OTA2MztcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcbiAiXX0= */");
 
 /***/ }),
 
@@ -7913,11 +7921,9 @@ let UploadreportComponent = class UploadreportComponent {
         this.service.sortDirection = direction;
     }
     Edit(medicine) {
-        debugger;
         this.router.navigate(["admin/laboratory/uploadreport/edit", medicine]);
     }
     Delete(obj) {
-        debugger;
         this.service.delete(obj).subscribe((res) => {
             if (res != 0) {
                 this.ts.showSuccess("Success", "Record deleted successfully.");
@@ -7929,13 +7935,19 @@ let UploadreportComponent = class UploadreportComponent {
             this.ts.showError("Error", "Failed to delete record.");
         });
     }
-    DownloadRpt() {
+    DownloadRpt(URL) {
         debugger;
-        const fileUrl = 'http://mamjihospital.online/pdfFiles/Holidays.pdf'; // Replace with your actual file URL
-        this.http.get(fileUrl, { responseType: 'arraybuffer' }).subscribe((response) => {
-            const blob = new Blob([response], { type: 'application/pdf' });
-            Object(file_saver__WEBPACK_IMPORTED_MODULE_8__["saveAs"])(blob, 'downloaded_file.pdf'); // Specify the desired filename here
-            console.log(blob);
+        var pth = URL.replace("D:\\Inetpub\\mamjihospital.online\\admin.mamjihospital.online\\", "");
+        var a = pth.replace("pdfFiles/", "pdfFiles\\");
+        //local
+        //const apiUrl = 'http://localhost:59660/api/laboratory/loadpdf?path=' + URL;  
+        //live
+        const apiUrl = 'http://admin.mamjihospital.online/api/laboratory/loadpdf?path=' + URL;
+        //const apiUrl = Global.DomainName + '/api/laboratory/loadpdf?path=' + URL;  
+        //const apiUrl = 'http:\\admin.mamjihospital.online\\api\\laboratory\\loadpdf?path=' + a;  
+        var rptName = pth.replace("pdfFiles/", "");
+        this.http.get(apiUrl, { responseType: 'blob' }).subscribe((response) => {
+            Object(file_saver__WEBPACK_IMPORTED_MODULE_8__["saveAs"])(response, 'Report_' + rptName);
         });
     }
 };

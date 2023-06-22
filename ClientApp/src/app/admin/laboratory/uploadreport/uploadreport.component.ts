@@ -61,11 +61,11 @@ export class UploadreportComponent implements OnInit {
     this.service.sortDirection = direction;
   }
   Edit(medicine) {
-    debugger
+     
     this.router.navigate(["admin/laboratory/uploadreport/edit", medicine]);
   }
   Delete(obj) {
-    debugger
+    
     this.service.delete(obj).subscribe((res: any) => {
       if (res != 0) {
         this.ts.showSuccess("Success", "Record deleted successfully.")
@@ -80,10 +80,19 @@ export class UploadreportComponent implements OnInit {
   }
 
   DownloadRpt(URL: string) {
-    const apiUrl = Global.DomainName + '/api/laboratory/loadpdf?path=' + URL; // Replace with your API URL
-    debugger;
+    debugger       
+    var pth = URL.replace("D:\\Inetpub\\mamjihospital.online\\admin.mamjihospital.online\\","");
+    var a = pth.replace("pdfFiles/","pdfFiles\\");
+
+     //local
+    //const apiUrl = 'http://localhost:59660/api/laboratory/loadpdf?path=' + URL;  
+    //live
+    const apiUrl = 'http://admin.mamjihospital.online/api/laboratory/loadpdf?path=' + URL;  
+    //const apiUrl = Global.DomainName + '/api/laboratory/loadpdf?path=' + URL;  
+    //const apiUrl = 'http:\\admin.mamjihospital.online\\api\\laboratory\\loadpdf?path=' + a;  
+    var rptName = pth.replace("pdfFiles/","");
     this.http.get(apiUrl, { responseType: 'blob' }).subscribe((response: Blob) => {
-      saveAs(response, 'downloaded_file.pdf');
+      saveAs(response, 'Report_'+rptName);
     });
   }
   
