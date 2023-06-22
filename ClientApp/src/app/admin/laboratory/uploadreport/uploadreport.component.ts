@@ -9,6 +9,7 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { HttpClient } from '@angular/common/http';
 import { saveAs } from 'file-saver';
+import { Global } from 'src/app/GlobalAndCommons/Global';
 
 @Component({
   selector: 'app-uploadreport',
@@ -78,15 +79,12 @@ export class UploadreportComponent implements OnInit {
     });
   }
 
-  DownloadRpt() {
-    debugger
-    const fileUrl = 'http://admin.mamjihospital.online/pdfFiles/Holidays.pdf'; // Replace with your actual file URL
-
-    this.http.get(fileUrl, { responseType: 'arraybuffer' }).subscribe((response: ArrayBuffer) => {
-      const blob = new Blob([response], { type: 'application/pdf' });
-
-      saveAs(blob, 'downloaded_file.pdf'); // Specify the desired filename here
-      console.log(blob);
+  DownloadRpt(URL: string) {
+    const apiUrl = Global.DomainName + '/api/laboratory/loadpdf?path=' + URL; // Replace with your API URL
+    debugger;
+    this.http.get(apiUrl, { responseType: 'blob' }).subscribe((response: Blob) => {
+      saveAs(response, 'downloaded_file.pdf');
     });
   }
+  
 }

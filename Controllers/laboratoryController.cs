@@ -1,11 +1,6 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
@@ -13,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MohsinFoodAdmin._Models;
-using Newtonsoft.Json;
+using Nancy;
 
 
 namespace MamjiAdmin.Controllers
@@ -39,7 +34,17 @@ namespace MamjiAdmin.Controllers
         {
             return _service.Get(id);
         }
-        [HttpPost]
+
+		[HttpGet]
+		[Route("loadpdf")]
+		public FileStreamResult DownloadPdf(string path)
+		{
+			byte[] pdfBytes = System.IO.File.ReadAllBytes(path);
+			MemoryStream ms = new MemoryStream(pdfBytes);
+			return new FileStreamResult(ms, "application/pdf");
+		}
+
+		[HttpPost]
         [Route("insert")]
         public async Task<int> Post(UploadViewModel Data)
         {
@@ -72,24 +77,21 @@ namespace MamjiAdmin.Controllers
 			if (!ext.ToLower().Equals(".pdf"))
 			{
 				return "";
-			}
-          
-            var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
-            //string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
-            try
-            {
-                using (FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
-                {
-                    await file.CopyToAsync(fileStream);
-                }
-
             }
+			string path = folderName + "/" + fileName;
+			//var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
+			//string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
+			try
+            {
+				using FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
+				await file.CopyToAsync(fileStream);
+			}
             catch (Exception ex)
             {
 
                 throw;
             }
-            return filePath;
+            return path;
 		}
 
 		[HttpPost]
