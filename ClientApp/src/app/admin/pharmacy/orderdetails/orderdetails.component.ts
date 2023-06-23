@@ -15,6 +15,7 @@ import { OrdersService } from 'src/app/_services/orders.service';
 export class OrderdetailsComponent implements OnInit {
   public order = new Orders();
   private selectedBrand;
+  StatusMsg="";
   Locations: Location[] = [];
   selectedLocations = [];
   locationID = 0;
@@ -50,6 +51,7 @@ export class OrderdetailsComponent implements OnInit {
   updateOrder(order, status) {
     debugger
     order.statusID = status;
+    order.statusMsg = this.StatusMsg;
     //Update 
     this.service.update(order).subscribe(data => {
 

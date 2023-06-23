@@ -208,10 +208,11 @@ namespace BAL.Repositories
             try
             {
                 int _obj = 0;
-                SqlParameter[] p = new SqlParameter[3];
+                SqlParameter[] p = new SqlParameter[4];
                 p[0] = new SqlParameter("@id", data.AppointmentID);
                 p[1] = new SqlParameter("@AppointmentStatus", data.AppointmentStatus);
-                p[2] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[2] = new SqlParameter("@StatusMsg", data.StatusMsg);
+                p[3] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_AppointmentStatus", p);          
                 return _obj;

@@ -83,11 +83,12 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[3];
+                SqlParameter[] p = new SqlParameter[4];
 
                 p[0] = new SqlParameter("@date", data.LastUpdatedDate);
                 p[1] = new SqlParameter("@statusID", data.StatusID);
                 p[2] = new SqlParameter("@orderid", data.OrderID);
+                p[3] = new SqlParameter("@StatusMsg", data.StatusMsg);
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_UpdateOrderstatusMedicine_Admin", p);
 
                 return rtn;

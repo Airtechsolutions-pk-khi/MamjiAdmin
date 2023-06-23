@@ -38,6 +38,7 @@ export class AppointmentdetailsComponent implements OnInit {
     })
   }
   updateAppointment(appointment, status) {
+    debugger
     appointment.appointmentStatus  = status;
     appointment.statusMsg  = this.StatusMsg;
     //Update 

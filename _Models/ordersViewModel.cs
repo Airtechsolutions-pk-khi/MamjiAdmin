@@ -31,6 +31,7 @@ namespace MamjiAdmin._Models
         public DateTime OrderDate { get; set; }
         public int StatusID { get; set; }
         public string SessionID { get; set; }
+        public string StatusMsg { get; set; }
         public Nullable<int> OrderTakerID { get; set; }
         public Nullable<int> DeliverUserID { get; set; }
         public string LastUpdateBy { get; set; }

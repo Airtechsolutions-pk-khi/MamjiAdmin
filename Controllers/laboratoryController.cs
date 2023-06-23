@@ -58,12 +58,13 @@ namespace MamjiAdmin.Controllers
                 data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
                 data.StatusID = 1;
 
-                var res = _service.Insert(data, _env);
+                int res = _service.Insert(data, _env);
 
-                if (res == 1)
-                {
-                    await PushAndriod.PushNotify("Success!", "Your report has been uploaded!");
-                }
+                
+                //if (res != 0)
+                //{
+                //    await PushAndriod.PushNotify("Success!", "Your report has been uploaded!");
+                //}
 
                 return res;
 			}
