@@ -295,18 +295,19 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[11];
+                SqlParameter[] p = new SqlParameter[12];
                 p[0] = new SqlParameter("@FullName", data.FullName);
-                p[1] = new SqlParameter("@ImagePath", data.ImagePath);
-                p[2] = new SqlParameter("@Email", data.Email);
-                p[3] = new SqlParameter("@Skills", data.Skills);
-                p[4] = new SqlParameter("@Education", data.Education);
-                p[5] = new SqlParameter("@StatusID", data.StatusID);
-                p[6] = new SqlParameter("@CreatedBy", data.CreatedBy);
-                p[7] = new SqlParameter("@CreatedOn", data.CreatedOn);
-                p[8] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-                p[9] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[10] = new SqlParameter("@DoctorID", data.DoctorID);
+                p[1] = new SqlParameter("@UrduName", data.UrduName);
+                p[2] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[3] = new SqlParameter("@Email", data.Email);
+                p[4] = new SqlParameter("@Skills", data.Skills);
+                p[5] = new SqlParameter("@Education", data.Education);
+                p[6] = new SqlParameter("@StatusID", data.StatusID);
+                p[7] = new SqlParameter("@CreatedBy", data.CreatedBy);
+                p[8] = new SqlParameter("@CreatedOn", data.CreatedOn);
+                p[9] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+                p[10] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[11] = new SqlParameter("@DoctorID", data.DoctorID);
 
                 rtn = int.Parse(new DBHelper().GetTableFromSP("dbo.sp_updateDoctor_Admin", p).Rows[0]["DoctorID"].ToString());
 
