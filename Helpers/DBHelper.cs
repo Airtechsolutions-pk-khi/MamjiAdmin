@@ -11,7 +11,7 @@ namespace WebAPICode.Helpers
 {
     public class DBHelper
     {
-        private static readonly string connectionString = "data source=sql8002.site4now.net;initial catalog=db_a88f5b_mamji;persist security info=True;user id=db_a88f5b_mamji_admin;password=Tech@123;";
+        private static readonly string connectionString = "data source=95.217.141.238;initial catalog=mamjihos_db;persist security info=True;user id=mamjihos;password=Tech@123;";
 
         public static IEnumerable<object> PushTokens { get; internal set; }
 
