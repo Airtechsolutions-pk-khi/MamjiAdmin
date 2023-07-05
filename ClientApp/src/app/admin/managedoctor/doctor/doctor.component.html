@@ -32,22 +32,23 @@
       <table class="table table-striped">
         <thead>
           <tr class="table-header">
-            <th width="10%">IMAGE</th>
+            <th width="15%">Urdu Name</th>
             <th width="15%" sortable="FullName"> Name </th>
             <th width="15%" sortable="Email">Email </th>
             <th width="15%" sortable="Skills"> Skills </th>
-            <th width="15%" sortable="Education"> Education </th>
-            <th width="15%" sortable="Gender"> Gender </th>
-            <th width="15%" sortable="Status">Status </th>
+            <th width="20%" sortable="Education"> Education </th>
+            <th width="10%" sortable="Gender"> Gender </th>
+            <th width="5%" sortable="Status">Status </th>
             <th width="10%">Action</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let item of data$ | async ">
-            <td>
+            <!-- <td>
               <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
               <div *ngIf="item.image === ''" class="image-replace"></div>
-            </td>
+            </td> -->
+            <td> {{item.urduName}} </td>
             <td> {{item.fullName}} </td>
             <td> {{item.email}} </td>
 

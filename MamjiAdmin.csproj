@@ -48,6 +48,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\dist\assets\Upload\Medicine\" />
     <Folder Include="ClientApp\src\app\admin\reception\laboratoryinquiry\addlabreport\" />
     <Folder Include="pdfFiles\" />
     <Folder Include="Upload\Offers\" />
