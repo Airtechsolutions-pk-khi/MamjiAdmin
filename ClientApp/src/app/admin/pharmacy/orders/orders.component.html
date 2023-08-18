@@ -62,8 +62,9 @@
             <td>{{item.orderDate | date}}</td>
             <td><span class="badge badge-yellow">{{item.orderType}}</span></td>
             <td>
-              <ngb-highlight [ngClass]="{'btn-info': item.statusID === 103,'btn-warning': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }" class="btn btn-sm" [result]="item.statusID ==100 ? 'Completed' :
+              <ngb-highlight [ngClass]="{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-success': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }" class="btn btn-sm" [result]="item.statusID ==100 ? 'Completed' :
                              item.statusID ==101 ? 'Pending' :
+                             item.statusID ==104 ? 'Out For Delivery' :
                              item.statusID ==102 ? 'Approved' :
                              item.statusID ==103 ? 'Cancelled' :
                              item.statusID ==100 ? 'Completed' :'-'" [term]="service.searchTerm">

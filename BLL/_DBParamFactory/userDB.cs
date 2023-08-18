@@ -123,8 +123,11 @@ namespace BAL.Repositories
             try
             {
                 int _obj = 0;
-                SqlParameter[] p = new SqlParameter[1];
+                data.LastUpdatedDate = DateTime.UtcNow;
+                SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@id", data.ID);
+                p[1] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteUser", p);
 

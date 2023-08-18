@@ -73,7 +73,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.LastUpdatedDate = DateTime.Now;
+                
                 var result = _service.Delete(data);
 
                 return result;
