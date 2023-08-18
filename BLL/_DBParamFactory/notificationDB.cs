@@ -78,9 +78,10 @@ namespace BAL.Repositories
             try
             {
                 int _obj = 0;
+                int isread = data.IsRead == false ? 0 : 1;  
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@id", data.NotificationID);
-                p[1] = new SqlParameter("@IsRead", data.IsRead);
+                p[1] = new SqlParameter("@IsRead", isread);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_NotificationStatus", p);
 
