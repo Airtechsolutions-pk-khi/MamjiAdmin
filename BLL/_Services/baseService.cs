@@ -16,7 +16,7 @@ namespace MamjiAdmin.BLL._Services
         }
         public DateTime _UTCDateTime_SA()
         {
-            return DateTime.UtcNow.AddMinutes(180);
+            return DateTime.UtcNow;
         }
 
 

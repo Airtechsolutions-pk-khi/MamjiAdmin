@@ -14,6 +14,7 @@
           <span class="input-group-text"><i class="fa fa-search"></i></span>
         </div>
         <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
+        
       </div>
       <div class="col-md-4 form-group text-right">
         <!--<button type="submit" class="btn btn-primary mt-4 mr-1">
@@ -69,6 +70,21 @@
       </table>
     </div>
 
+    <!-- <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <p class="pagination-count">
+          Showing
+          <strong>{{(service.pageSize * service.page)-9}}</strong> to
+          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of
+          <strong>{{(total$ | async)!}}</strong> results
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
+        </ngb-pagination>
+      </div>
+    </div> -->
+
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <p class="pagination-count">
@@ -83,5 +99,6 @@
         </ngb-pagination>
       </div>
     </div>
+
   </div>
 </div>

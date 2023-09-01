@@ -403,22 +403,9 @@ namespace MamjiAdmin.BLL._Services
             try
             {
 
-                //MimeMessage message = new MimeMessage();
-                //MailboxAddress from = new MailboxAddress("info@karachiflora.com", "info@karachiflora.com");
-                //message.From.Add(from);
-                //message.To.Add(MailboxAddress.Parse(_To));
-                //message.Subject = _SubjectEmail;
-                //message.Body = new TextPart(TextFormat.Html) { Text = _BodyEmail };
-                //SmtpClient client = new SmtpClient();
-                //client.Connect("mail.karachiflora.com", 25, false);
-                //client.Authenticate("info@karachiflora.com", "Karachiflora@123");
-                //client.Send(message);
-                //client.Disconnect(true);
-                //client.Dispose();
-
                 MailMessage mail = new MailMessage();
                 mail.To.Add(_To);
-                mail.From = new MailAddress("ammadsiddiqui136@gmail.com");
+                mail.From = new MailAddress("mamjihospital5@gmail.com");
                 mail.Subject = _SubjectEmail;
                 mail.Body = _BodyEmail;
                 mail.IsBodyHtml = true;
@@ -427,8 +414,8 @@ namespace MamjiAdmin.BLL._Services
                 smtp.Port = Int32.Parse("587");
                 smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
                 smtp.Credentials = new System.Net.NetworkCredential
-                     ("ammadsiddiqui136@gmail.com", "vartpzivrepkaxyq");
-                smtp.EnableSsl = true;
+                     ("mamjihospital5@gmail.com", "npdcdyiamrbqmyud");
+                smtp.EnableSsl = false;
                 smtp.Send(mail);
             }
             catch (Exception ex)

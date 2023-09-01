@@ -49,7 +49,7 @@ export class LayoutComponent implements OnInit {
     , public ls: LocalStorageService) {
       this.userName = this.ls.getSelectedBrand().email;
       this.type = this.ls.getSelectedBrand().type;
-      debugger
+       
       //  this.permission=environment.rootScope;
       this.permission=this.ls.getSelectedBrand(); 
        var role = this.permission.permissionForm.find(element => element.roleName == this.type); 

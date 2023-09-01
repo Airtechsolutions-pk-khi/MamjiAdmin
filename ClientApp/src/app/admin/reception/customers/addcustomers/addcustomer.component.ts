@@ -42,7 +42,7 @@ export class AddcustomerComponent implements OnInit {
   private createForm() {
     this.customerForm = this.formBuilder.group({
       fullName: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', Validators.required, Validators.email],
       statusID: [true],
       mobile: ['', Validators.required],
       password: ['', Validators.required],

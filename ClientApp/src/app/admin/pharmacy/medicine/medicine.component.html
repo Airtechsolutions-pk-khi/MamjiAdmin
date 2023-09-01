@@ -27,11 +27,11 @@
           <thead>
             <tr class="table-header">
               <th width="10%">IMAGE</th>
-              <th width="15%" sortable="FullName"> Name </th>
-              <th width="15%" sortable="Description">Description </th>
-              <th width="15%" sortable="BrandDetails"> Brand Details </th>
+              <th width="20%" sortable="FullName"> Name </th>
+              <!-- <th width="15%" sortable="Description">Description </th> -->
+              <th width="20%" sortable="BrandDetails"> Brand Details </th>
               <th width="15%" sortable="Price"> Price </th>
-              <th width="15%" sortable="Quantity"> Quantity Description </th>
+              <th width="20%" sortable="Quantity"> Quantity Description </th>
               <th width="15%" sortable="Status">Status </th>
               <th width="10%">Action</th>
             </tr>
@@ -43,7 +43,7 @@
                 <div *ngIf="item.image === ''" class="image-replace"></div>
               </td>
               <td> {{item.name}} </td>
-              <td> {{item.description}} </td>
+              <!-- <td> {{item.description}} </td> -->
               <td> {{item.brandDetails}} </td>
               <td> {{item.price}} </td>
               <td> {{item.quantityDescription}} </td>

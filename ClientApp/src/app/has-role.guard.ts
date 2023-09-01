@@ -13,7 +13,7 @@ constructor(private userService: UserService, private router: Router){}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      debugger
+       
      this.userService.getAllData();
      //return this.userService.userModel.type.includes(route.data.type);
      return true;

@@ -20,7 +20,7 @@ export class SignalrService {
   }
 
   public async startConnection() {
-    debugger;
+    
     //var domain = "http://localhost:59660";
      var domain = "http://admin.mamjihospital.online";
     this.hubConnection = new signalR.HubConnectionBuilder()

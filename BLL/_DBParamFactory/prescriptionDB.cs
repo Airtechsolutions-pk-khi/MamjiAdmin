@@ -41,7 +41,7 @@ namespace BAL.Repositories
                 }
                 foreach (var item in lst)
                 {
-                    item.Image = item.Image == null ? "" : "http://mamjiadmin.airtechsolutions.pk/" + item.Image;
+                    item.Image = item.Image == null ? "" : "http://mamjihospital.online" + item.Image;
 
                 }
                 return lst;

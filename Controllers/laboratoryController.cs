@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using BAL.Repositories;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
@@ -60,16 +61,16 @@ namespace MamjiAdmin.Controllers
 
                 int res = _service.Insert(data, _env);
 
-                
-                //if (res != 0)
-                //{
-                //    await PushAndriod.PushNotify("Success!", "Your report has been uploaded!");
-                //}
 
+                if (res != 0)
+                {
+                    _service.SendEmailtoCustLab(Data, _env);
+                    //await PushAndriod.PushNotify("Success!", "Your report has been uploaded!");
+                }
                 return res;
-			}
-			return 0;
-		}
+            }
+            return 0;
+        }
 		internal async Task<string> CopyPdfToPath(IFormFile file, string folderName)
 		{
 			var fileName = Path.GetFileName(file.FileName);

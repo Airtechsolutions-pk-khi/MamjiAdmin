@@ -1,4 +1,7 @@
 ﻿using MamjiAdmin._Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using MohsinFoodAdmin._Models;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -6,6 +9,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using WebAPICode.Helpers;
 
@@ -64,10 +68,33 @@ namespace BAL.Repositories
                 return null;
             }
         }
+        public CustomerBLL Getcustomer(int id)
+        {
+            try
+            {
+                var _obj = new CustomerBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", id);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerbyID_Admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>().FirstOrDefault();
+                    }
+                }
+                return _obj;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
         public int Insert(LaboratoryBLL data)
         {
             try
             {
+                
                 int rtn = 0;
                 SqlParameter[] p = new SqlParameter[6];
 
@@ -88,6 +115,7 @@ namespace BAL.Repositories
                 return 0;
             }
         }
+        
         public int Update(LaboratoryBLL data)
         {
             try

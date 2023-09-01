@@ -28,7 +28,7 @@ function sort(data: User[], column: SortColumn, direction: string): User[] {
 }
 
 function matches(data: User, term: string) {
-  debugger
+   
   return data.type.toLowerCase().includes(term.toLowerCase())
 }
 
@@ -116,7 +116,7 @@ export class UserService {
   }
 
   private _search(): Observable<SearchUsersResult> {
-    debugger
+     
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
     // 1. sort
     let sortedData = sort(this.user, sortColumn, sortDirection);

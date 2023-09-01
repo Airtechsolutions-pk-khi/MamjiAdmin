@@ -74,7 +74,7 @@ export class DashboardComponent {
 
   dashboardSummary = new DashboardSummary();
   async ngOnInit() {
-    debugger;
+    
     await this.singlarService.startConnection();
     this.GetDashboard();
     this.GetChart();

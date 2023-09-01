@@ -62,7 +62,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<BannerBLL>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<BannerBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<BannerBLL>>().FirstOrDefault();
                     }
                 }
                 return _obj;

@@ -213,6 +213,8 @@ namespace MamjiAdmin.BLL._Services
                 Body = Body.Replace("#SenderName#", email.FullName);
                 Body = Body.Replace("#Mobile#", email.Mobile);
                 Body = Body.Replace("#Date#", data.BookingDate);
+                Body = Body.Replace("#StatusMsg#", data.StatusMsg == null || data.StatusMsg == "" ? "N/A" : data.StatusMsg);
+                
                 SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, email.Email);
             }
             catch { }

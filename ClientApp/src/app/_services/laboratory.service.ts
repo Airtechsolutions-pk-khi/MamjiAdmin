@@ -24,7 +24,7 @@ function sort(data: Laboratory[], column: SortColumn, direction: string): Labora
   }
 }
 function matches(data: Laboratory, term: string) {
-  return data.labReferenceNo.toLowerCase().includes(term.toLowerCase())
+  return data.fullName.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({
