@@ -13,7 +13,7 @@
         <div class="input-group-prepend" style="height: 39px;">
           <span class="input-group-text"><i class="fa fa-search"></i></span>
         </div>
-        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
+        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
       </div>
       <div class="col-md-4 form-group text-right">
         <button [routerLink]="['add']" class="btn btn-primary mt-4 mr-1">
@@ -50,7 +50,7 @@
             <td>
               <a (click)="Edit(item.diagnosticCatID)"><i class="fas fa-fw fa-edit"></i> </a>
 
-              <a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+              <a (click)="open(content,item)"><i class="fas fa-fw fa-trash-alt"></i> </a>
             </td>
           </tr>
         </tbody>
@@ -73,3 +73,18 @@
     </div>
   </div>
 </div>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure to delete this?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">No</button>
+    <button type="button" class="btn btn-outline-dark" (click)="c('yes')">Yes</button>
+  </div>
+</ng-template>  

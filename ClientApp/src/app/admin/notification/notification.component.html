@@ -10,10 +10,6 @@
         <h6 class="m-0 font-weight-bold text-orange">Notification's List</h6>
       </div>
       <div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
-        <!--<div class="input-group-prepend" style="height: 39px;">
-          <span class="input-group-text"><i class="fa fa-search"></i></span>
-        </div>
-        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />-->
       </div>
       <div class="col-md-3 form-group text-right">
       </div>
@@ -38,7 +34,7 @@
             <td> {{item.title}} </td>
             <td> {{item.description}} </td>
             <td> {{item.notificationType}} </td>
-            <td> {{item.notificationDate}} </td>
+            <td> {{item.notificationDate | date:'dd-MM-yyyy' }} </td>
             <td>
               <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
               </ngb-highlight>

@@ -10,6 +10,7 @@ import { ExcelService } from 'src/ExportExcel/excel.service';
 import { HttpClient } from '@angular/common/http';
 import { saveAs } from 'file-saver';
 import { Global } from 'src/app/GlobalAndCommons/Global';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-uploadreport',
@@ -22,6 +23,7 @@ export class UploadreportComponent implements OnInit {
   data$: Observable<Laboratory[]>;
   oldData: Laboratory[];
   total$: Observable<number>;
+  closeResult: string;  
   loading$: Observable<boolean>;
 
   locationSubscription: Subscription;
@@ -34,11 +36,12 @@ export class UploadreportComponent implements OnInit {
     public excelService: ExcelService,
     public ts: ToastService,
     public router: Router,
-    private http: HttpClient) {  
+    private http: HttpClient,
+    private modalService: NgbModal) {  
       
       this.loading$ = service.loading$;
       this.submit = false;
-    }
+  }
 
   ngOnInit() {
     this.getData();
@@ -65,7 +68,6 @@ export class UploadreportComponent implements OnInit {
     this.router.navigate(["admin/laboratory/uploadreport/edit", medicine]);
   }
   Delete(obj) {
-    
     this.service.delete(obj).subscribe((res: any) => {
       if (res != 0) {
         this.ts.showSuccess("Success", "Record deleted successfully.")
@@ -95,5 +97,24 @@ export class UploadreportComponent implements OnInit {
       saveAs(response, 'Report_'+rptName);
     });
   }
-  
+  open(content, obj) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+      if (result === 'yes') {
+        this.Delete(obj);
+      }
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
 }

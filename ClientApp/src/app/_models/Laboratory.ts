@@ -7,6 +7,6 @@ export class Laboratory {
   labReferenceNo: string;
   statusID: number;
   customer: string;
-  category: string;
+  categoryName: string;
   image: string;
 }
