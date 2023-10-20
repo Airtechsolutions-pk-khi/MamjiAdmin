@@ -45,7 +45,7 @@ namespace MamjiAdmin.Controllers
 
 		[HttpPost]
         [Route("insert")]
-        public async Task<int> Post(UploadViewModel Data)
+        public async Task<int> Post(UploadViewModel Data , IWebHostEnvironment _env)
         {
 			if (Data.PdfFile != null)
 			{
@@ -71,21 +71,21 @@ namespace MamjiAdmin.Controllers
         }
 		internal async Task<string> CopyPdfToPath(IFormFile file, string folderName)
 		{
-			var fileName = Path.GetFileName(file.FileName);
-			string ext = Path.GetExtension(file.FileName);
+            var fileName = Path.GetFileName(file.FileName);
+            string ext = Path.GetExtension(file.FileName);
 
-			if (!ext.ToLower().Equals(".pdf"))
-			{
-				return "";
-            }
-			string path = folderName + "/" + fileName;
-			//var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
-			//string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
-			try
+            if (!ext.ToLower().Equals(".pdf"))
             {
-				using FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
-				await file.CopyToAsync(fileStream);
-			}
+                return "";
+            }
+            string path = folderName + "/" + fileName;
+            //var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
+            //string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
+            try
+            {
+                using FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
+                await file.CopyToAsync(fileStream);
+            }
             catch (Exception ex)
             {
 

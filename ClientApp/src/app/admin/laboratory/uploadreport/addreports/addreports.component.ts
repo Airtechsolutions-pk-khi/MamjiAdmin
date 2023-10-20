@@ -132,7 +132,7 @@ onFileSelect(files: FileList): void {
     formData.append('customerID', this.formData.customerID);
     formData.append('diagnosticCatID', this.formData.diagnosticCatID);
     formData.append('pdfFile', this.selectedFile, this.selectedFile.name);    
-    this.http.post('api/laboratory/insert', formData).subscribe(
+    this.http.post('api/laboratory/insert', this.formData).subscribe(
       response => {
         this.ts.showSuccess("Success", "Record added successfully.")
         this.router.navigate(['/admin/laboratory/uploadreport']);
