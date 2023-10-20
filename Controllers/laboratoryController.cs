@@ -86,7 +86,7 @@ namespace MamjiAdmin.Controllers
             {
                 using FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
                 //await file.CopyToAsync(fileStream);
-                 file.CopyToAsync(fileStream);
+                 await file.CopyToAsync(fileStream);
             }
             catch (Exception ex)
             {
