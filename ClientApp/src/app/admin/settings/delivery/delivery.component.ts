@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { Delivery } from 'src/app/_models/Delivery';
 import { ToastService } from 'src/app/_services/toastservice';
 import { DeliveryService } from 'src/app/_services/delivery.service';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-delivery',
@@ -23,11 +24,13 @@ export class DeliveryComponent implements OnInit {
   locationSubscription: Subscription;
   submit: boolean;
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
+    closeResult: string;
 
   constructor(public service: DeliveryService,
     public ls :LocalStorageService,
     public ts :ToastService,
-    public router:Router) {
+    public router: Router,
+    private modalService: NgbModal) {
      //this.selectedBrand =this.ls.getSelectedBrand().brandID;
 
     this.loading$ = service.loading$;
@@ -73,5 +76,25 @@ export class DeliveryComponent implements OnInit {
     }, error => {
       this.ts.showError("Error","Failed to delete record.")
     });
+  }
+  open(content, obj) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+      if (result === 'yes') {
+        this.Delete(obj);
+      }
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 }
