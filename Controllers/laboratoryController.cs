@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using BAL.Repositories;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MohsinFoodAdmin._Models;
-using Nancy;
 
 
 namespace MamjiAdmin.Controllers
