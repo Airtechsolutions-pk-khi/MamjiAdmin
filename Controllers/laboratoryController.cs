@@ -45,13 +45,12 @@ namespace MamjiAdmin.Controllers
 
 		[HttpPost]
         [Route("insert")]
-        //public async Task<int> Post(UploadViewModel Data , IWebHostEnvironment _env)
-            public int Post(UploadViewModel Data, IWebHostEnvironment _env)
+        public async Task<int> Post(UploadViewModel Data)
         {
 			if (Data.PdfFile != null)
 			{
 				//var filePath = await CopyPdfToPath(Data.PdfFile, FolderName);
-                var filePath =  CopyPdfToPath(Data.PdfFile, FolderName);
+				var filePath = await CopyPdfToPath(Data.PdfFile);
 
                 LaboratoryBLL data = new LaboratoryBLL();
                 data.CustomerID = int.Parse(Data.CustomerID);
@@ -71,9 +70,7 @@ namespace MamjiAdmin.Controllers
             }
             return 0;
         }
-
-		//internal async Task<string> CopyPdfToPath(IFormFile file, string folderName)
-        		internal string CopyPdfToPath(IFormFile file, string folderName)
+		internal async Task<string> CopyPdfToPath(IFormFile file)
 		{
             var fileName = Path.GetFileName(file.FileName);
             string ext = Path.GetExtension(file.FileName);
@@ -82,10 +79,10 @@ namespace MamjiAdmin.Controllers
             {
                 return "";
             }
-            string path = folderName + "/" + fileName;
-            //var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
-            //string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
-            try
+			string path = fileName;
+			//var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
+			//string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
+			try
             {
                 using FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
                 //await file.CopyToAsync(fileStream);

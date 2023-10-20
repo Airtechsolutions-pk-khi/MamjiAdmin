@@ -141,7 +141,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                //data.Image = UploadImage(data.Image, "laboratory", _env);
+                data.FilePath = UploadFile(data.FilePath, "pdfFiles", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
