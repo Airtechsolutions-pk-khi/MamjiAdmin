@@ -45,13 +45,15 @@ namespace MamjiAdmin.Controllers
 
 		[HttpPost]
         [Route("insert")]
-        public async Task<int> Post(UploadViewModel Data , IWebHostEnvironment _env)
+        //public async Task<int> Post(UploadViewModel Data , IWebHostEnvironment _env)
+            public int Post(UploadViewModel Data, IWebHostEnvironment _env)
         {
 			if (Data.PdfFile != null)
 			{
-				var filePath = await CopyPdfToPath(Data.PdfFile, FolderName);
+				//var filePath = await CopyPdfToPath(Data.PdfFile, FolderName);
+                var filePath =  CopyPdfToPath(Data.PdfFile, FolderName);
 
-				LaboratoryBLL data = new LaboratoryBLL();
+                LaboratoryBLL data = new LaboratoryBLL();
                 data.CustomerID = int.Parse(Data.CustomerID);
                 data.FilePath = filePath;
                 data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
@@ -69,7 +71,9 @@ namespace MamjiAdmin.Controllers
             }
             return 0;
         }
-		internal async Task<string> CopyPdfToPath(IFormFile file, string folderName)
+
+		//internal async Task<string> CopyPdfToPath(IFormFile file, string folderName)
+        		internal string CopyPdfToPath(IFormFile file, string folderName)
 		{
             var fileName = Path.GetFileName(file.FileName);
             string ext = Path.GetExtension(file.FileName);
@@ -84,7 +88,8 @@ namespace MamjiAdmin.Controllers
             try
             {
                 using FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
-                await file.CopyToAsync(fileStream);
+                //await file.CopyToAsync(fileStream);
+                 file.CopyToAsync(fileStream);
             }
             catch (Exception ex)
             {
