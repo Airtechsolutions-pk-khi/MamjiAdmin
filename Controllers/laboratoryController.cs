@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using BAL.Repositories;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MohsinFoodAdmin._Models;
-using Nancy;
 
 
 namespace MamjiAdmin.Controllers
@@ -54,7 +52,7 @@ namespace MamjiAdmin.Controllers
 				//var filePath = await CopyPdfToPath(Data.PdfFile, FolderName);
 				var filePath = await CopyPdfToPath(Data.PdfFile);
 
-				LaboratoryBLL data = new LaboratoryBLL();
+                LaboratoryBLL data = new LaboratoryBLL();
                 data.CustomerID = int.Parse(Data.CustomerID);
                 data.FilePath = filePath;
                 data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
@@ -74,12 +72,12 @@ namespace MamjiAdmin.Controllers
         }
 		internal async Task<string> CopyPdfToPath(IFormFile file)
 		{
-			var fileName = Path.GetFileName(file.FileName);
-			string ext = Path.GetExtension(file.FileName);
+            var fileName = Path.GetFileName(file.FileName);
+            string ext = Path.GetExtension(file.FileName);
 
-			if (!ext.ToLower().Equals(".pdf"))
-			{
-				return "";
+            if (!ext.ToLower().Equals(".pdf"))
+            {
+                return "";
             }
 
 			string path = fileName;
@@ -87,9 +85,10 @@ namespace MamjiAdmin.Controllers
 			//string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
 			try
             {
-				using FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
-				await file.CopyToAsync(fileStream);
-			}
+                using FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
+                //await file.CopyToAsync(fileStream);
+                 await file.CopyToAsync(fileStream);
+            }
             catch (Exception ex)
             {
 
