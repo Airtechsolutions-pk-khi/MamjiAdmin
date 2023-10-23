@@ -79,6 +79,7 @@ namespace MamjiAdmin.Controllers
             {
                 return "";
             }
+
 			string path = fileName;
 			//var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
 			//string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
