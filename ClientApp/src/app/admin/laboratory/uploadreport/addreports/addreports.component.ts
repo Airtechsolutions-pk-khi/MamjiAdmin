@@ -130,7 +130,7 @@ onFileSelect(files: FileList): void {
     const formData = new FormData();
     
     formData.append('customerID', this.formData.customerID);
-    formData.append('diagnosticCatID', this.formData.diagnosticCatID);
+    formData.append('diagnosticCatID', this.formData.diagnosticCatID);    
     formData.append('pdfFile', this.selectedFile, this.selectedFile.name);    
     this.http.post('api/laboratory/insert', this.formData).subscribe(
       response => {
