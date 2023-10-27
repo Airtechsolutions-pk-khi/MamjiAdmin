@@ -6,4 +6,5 @@ export class Customers {
   password: string;
   image: string;
   statusID: number;
+  registrationNo:string;
 }

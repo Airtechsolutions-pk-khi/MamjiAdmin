@@ -124,13 +124,13 @@ namespace BAL.Repositories
                 SqlParameter[] p = new SqlParameter[7];
 
                 p[0] = new SqlParameter("@CustomerID", data.CustomerID);
-                //p[1] = new SqlParameter("@ImagePath", data.Image);
-                p[2] = new SqlParameter("@LaboratoryID", data.LaboratoryID);
-                //p[3] = new SqlParameter("@LabReferenceNo", data.LabReferenceNo);
-                p[4] = new SqlParameter("@StatusID", data.StatusID);
-                p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-
+                p[1] = new SqlParameter("@ImagePath", data.FilePath);
+                //p[2] = new SqlParameter("@LabReferenceNo", data.LabReferenceNo);
+                p[2] = new SqlParameter("@StatusID", data.StatusID);
+                p[3] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+                p[4] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[5] = new SqlParameter("@DiagnoseCatID", data.DiagnoseCatID);
+                p[6] = new SqlParameter("@LaboratoryID", data.LaboratoryID);
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateReport_Admin", p);
 
                 return rtn;

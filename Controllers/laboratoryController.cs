@@ -36,25 +36,34 @@ namespace MamjiAdmin.Controllers
 
 		[HttpGet]
 		[Route("loadpdf")]
-		public FileStreamResult DownloadPdf(string path)
-		{
-			byte[] pdfBytes = System.IO.File.ReadAllBytes(path);
-			MemoryStream ms = new MemoryStream(pdfBytes);
-			return new FileStreamResult(ms, "application/pdf");
-		}
+       
+        public ActionResult DownloadPdf(string path)
+        {
+            if (System.IO.File.Exists(path))
+            {
+                byte[] pdfBytes = System.IO.File.ReadAllBytes(path);
+                return File(pdfBytes, "application/pdf");
+            }
+            else
+            {
+                // Handle the case where the file doesn't exist or there is an error
+                return Content("File not found");
+            }
+        }
 
-		[HttpPost]
+        [HttpPost]
         [Route("insert")]
         public async Task<int> Post(UploadViewModel Data)
         {
-			if (Data.PdfFile != null)
-			{
-				//var filePath = await CopyPdfToPath(Data.PdfFile, FolderName);
-				var filePath = await CopyPdfToPath(Data.PdfFile);
+            if (Data.File != null)
+            {
+                var filePath = await CopyPdfToPath(Data.File, FolderName);                
+
+               
 
                 LaboratoryBLL data = new LaboratoryBLL();
                 data.CustomerID = int.Parse(Data.CustomerID);
-                data.FilePath = filePath;
+                data.FilePath = filePath;                
                 data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
                 data.StatusID = 1;
 
@@ -70,7 +79,7 @@ namespace MamjiAdmin.Controllers
             }
             return 0;
         }
-		internal async Task<string> CopyPdfToPath(IFormFile file)
+        internal async Task<string> CopyPdfToPath(IFormFile file, string FolderName)
 		{
             var fileName = Path.GetFileName(file.FileName);
             string ext = Path.GetExtension(file.FileName);
@@ -80,14 +89,14 @@ namespace MamjiAdmin.Controllers
                 return "";
             }
 
-			string path = fileName;
-			//var filePath = Path.Combine(_env.ContentRootPath, folderName, fileName);
-			//string filePath = string.Format(@"http:\mamjihospital.online\pdfFiles\{0}", fileName);
-			try
-            {
-                using FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write);
-                //await file.CopyToAsync(fileStream);
-                 await file.CopyToAsync(fileStream);
+            string contentRootPath = _env.ContentRootPath;
+            string path = "/ClientApp/dist/assets/Upload/" + FolderName + "/" + Path.GetFileName(Guid.NewGuid() + ".pdf");            
+            string filePath = contentRootPath + path;
+            
+            try
+            {                
+                using FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write);                
+                await file.CopyToAsync(fileStream);
             }
             catch (Exception ex)
             {
@@ -99,9 +108,17 @@ namespace MamjiAdmin.Controllers
 
 		[HttpPost]
         [Route("update")]
-        public int PostUpdate([FromBody] LaboratoryBLL obj)
+        public async Task<int> PostUpdate(UploadViewModel Data)
         {
-            return _service.Update(obj, _env);
+            var filePath = await CopyPdfToPath(Data.File, FolderName);
+            LaboratoryBLL data = new LaboratoryBLL();
+            data.CustomerID = int.Parse(Data.CustomerID);
+            data.FilePath = filePath;            
+            data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
+            data.LaboratoryID = int.Parse(Data.LaboratoryID);
+            data.StatusID = 1;
+            
+            return _service.Update(data, _env);
         }
         [HttpPost]
         [Route("delete")]

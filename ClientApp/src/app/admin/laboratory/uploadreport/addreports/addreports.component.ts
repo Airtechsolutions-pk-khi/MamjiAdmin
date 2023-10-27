@@ -6,7 +6,8 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { LaboratoryService } from 'src/app/_services/laboratory.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { DiagnosticCategoryService } from '../../../../_services/diagnosticcategories.service';
-import { HttpClient, HttpErrorResponse, HttpEventType } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpEventType, HttpResponse } from '@angular/common/http';
+import { FileUploadService } from 'src/app/_services/file-upload.service';
 
 @Component({
   selector: 'app-addreports',
@@ -16,24 +17,31 @@ export class AddreportsComponent implements OnInit {
 
   formData = {
     customerID: '',
-    diagnosticCatID: ''
+    diagnosticCatID: '',
+    laboratoryID:'',
+    pdfFile: File = null
   };
 
-  selectedFile: File;
+  selectedFile: File = null;
+  percentDone: number;
+  uploadSuccess: boolean;
 
-  onFileChange(event) {
-    this.selectedFile = event.target.files[0];
+  onFileChange(files: File[]) {
+  debugger
+    this.selectedFile = files[0];
   }
 
   onCustomerSelect(customerID: string) {
-    debugger;
-    // this.formData.customerID = customerID.split(' ')[1];
+    debugger;    
+    this.formData.customerID = customerID;
+  }
+  onCustomerSelectR(customerID: string) {
+    debugger;    
     this.formData.customerID = customerID;
   }
 
   onDiagnosticSelect(diagnosticCatID: string) {
-    debugger;
-    // this.formData.diagnosticCatID = diagnosticCatID.split(' ')[1];
+    debugger;   
     this.formData.diagnosticCatID = diagnosticCatID;
   }
   
@@ -43,6 +51,7 @@ export class AddreportsComponent implements OnInit {
   loadingReport = false;
   ButtonText = "Save";
   CustomerList = [];
+  RegistrationList = [];
   CategoryList = [];
   selectedCustomerIds = [];
   selectedCategoryIds = [];
@@ -66,24 +75,20 @@ export class AddreportsComponent implements OnInit {
     private ls: LocalStorageService,
     public ts: ToastService,
     private laboratoryService: LaboratoryService,
-    private diagnosticcategoriesService: DiagnosticCategoryService
+    private diagnosticcategoriesService: DiagnosticCategoryService,
+    private fileUploadService: FileUploadService
 
   ) {
     this.createForm();
     this.loadCustomer();
+    this.loadRNo();
     this.loadCategories();
   }
 
   ngOnInit() {
     this.setSelectedReport();
   }
-
-
-onFileSelect(files: FileList): void {
-  debugger
-  this.selectedFile = files.item(0);
-}
-
+ 
   get f() { return this.reportForm.controls; }
 
   private createForm() {
@@ -98,14 +103,11 @@ onFileSelect(files: FileList): void {
   }
   private editForm(obj) {
     debugger
-    // this.f.customerID.setValue(obj.customerID);
-    // this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
-    console.log(this.CategoryList);
-    console.log(this.CustomerList);
-
+     
     this.formData.customerID = obj.customerID;
     this.formData.diagnosticCatID = obj.diagnoseCatID;    
     this.pdfFilePath = obj.image;
+    this.formData.laboratoryID = obj.laboratoryID;
 
     this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
   }
@@ -127,21 +129,43 @@ onFileSelect(files: FileList): void {
   
   onSubmit() {
     debugger
-    const formData = new FormData();
+    if(parseInt(this.f.laboratoryID.value) === 0)
+    {
+      const formData1 = new FormData();    
+      formData1.append('customerID',  this.formData.customerID);
+      formData1.append('diagnosticCatID', this.formData.diagnosticCatID);          
+      formData1.append('file', this.selectedFile);   
+   
+      this.http.post('api/laboratory/insert', formData1).subscribe(
+        response => {
+          this.ts.showSuccess("Success", "Record added successfully.")
+          this.router.navigate(['/admin/laboratory/uploadreport']);
+          
+        },
+        error => {
+           
+        }
+      );
+    }
+    else{
+      const formData1 = new FormData();    
+      formData1.append('customerID',  this.formData.customerID);
+      formData1.append('diagnosticCatID', this.formData.diagnosticCatID);   
+      formData1.append('laboratoryID', this.formData.laboratoryID);   
+      formData1.append('file', this.selectedFile);   
+   
+      this.http.post('api/laboratory/update', formData1).subscribe(
+        response => {
+          this.ts.showSuccess("Success", "Record added successfully.")
+          this.router.navigate(['/admin/laboratory/uploadreport']);
+          
+        },
+        error => {
+           
+        }
+      );
+    }
     
-    formData.append('customerID', this.formData.customerID);
-    formData.append('diagnosticCatID', this.formData.diagnosticCatID);    
-    formData.append('pdfFile', this.selectedFile, this.selectedFile.name);    
-    this.http.post('api/laboratory/insert', this.formData).subscribe(
-      response => {
-        this.ts.showSuccess("Success", "Record added successfully.")
-        this.router.navigate(['/admin/laboratory/uploadreport']);
-        
-      },
-      error => {
-         
-      }
-    );
   }
 
   private loadCustomer() {
@@ -149,6 +173,14 @@ onFileSelect(files: FileList): void {
     this.laboratoryService.loadCustomer().subscribe((res: any) => {
       debugger;
       this.CustomerList = res;
+       
+    });
+  }
+  private loadRNo() {
+    debugger
+    this.laboratoryService.loadRNo().subscribe((res: any) => {
+      debugger;
+      this.RegistrationList = res;
        
     });
   }
@@ -165,52 +197,11 @@ onFileSelect(files: FileList): void {
     this.Images.splice(index, 1);
     this.f.imagesSource.setValue(this.Images);
   }
+
+ 
 }
 
-  // onSubmit() {
-  //   debugger
  
-  //   const formData = new FormData();
-    
-  //   formData.append('customerID', this.formData.customerID);
-  //   formData.append('diagnosticCatID', this.formData.diagnosticCatID);
-  //   formData.append('pdfFile', this.selectedFile, this.selectedFile.name);  
-  //   // this.reportForm.markAllAsTouched();
-  //   // this.submitted = true;
-
-  //   // if (this.formData.invalid) { return; }
-  //   this.loading = true;
-  //   this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-
-  //   //this.f.pdfFile.setValue(this.selectedFile.name);
-    
-  //   if (parseInt(this.f.laboratoryID.value) === 0) {
-  //     //Insert customer
-  //     console.log(JSON.stringify(this.reportForm.value));
-  //     this.laboratoryService.insert(this.formData.value).subscribe(data => {
-  //       if (data != 0) {
-  //         this.ts.showSuccess("Success", "Record added successfully.")
-  //         this.router.navigate(['/admin/laboratory/uploadreport']);
-  //       }
-  //       this.loading = false;
-  //     }, error => {
-  //       this.ts.showError("Error", "Failed to insert record.")
-  //       this.loading = false;
-  //     });
-  //   } else {
-  //     //Update customer
-  //     this.laboratoryService.update(this.reportForm.value).subscribe(data => {
-  //       this.loading = false;
-  //       if (data != 0) {
-  //         this.ts.showSuccess("Success", "Record updated successfully.")
-  //         this.router.navigate(['/admin/laboratory/uploadreport']);
-  //       }
-  //     }, error => {
-  //       this.ts.showError("Error", "Failed to update record.")
-  //       this.loading = false;
-  //     });
-  //   }
-  // }
 
 
 

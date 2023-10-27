@@ -1,19 +1,20 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
+import { CorporateClient } from '../_models/CorporateClient';
 import { State } from '../_models/State';
-import { Laboratory } from '../_models/Laboratory';
-import { Customers } from '../_models/Customers';
+ 
 
-interface SearchLaboratoryResult {
-  data: Laboratory[];
+
+interface SearchCorporateClientResult {
+  data: CorporateClient[];
   total: number;
 }
 const compare = (v1: string, v2: string) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
-function sort(data: Laboratory[], column: SortColumn, direction: string): Laboratory[] {
+
+function sort(data: CorporateClient[], column: SortColumn, direction: string): CorporateClient[] {
   if (direction === '' || column === '') {
     return data;
   } else {
@@ -23,24 +24,26 @@ function sort(data: Laboratory[], column: SortColumn, direction: string): Labora
     });
   }
 }
-function matches(data: Laboratory, term: string) {
-  return data.fullName.toLowerCase().includes(term.toLowerCase())
+
+function matches(data: CorporateClient, term: string) {
+  return data.clientName.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({
   providedIn: 'root'
 })
-export class LaboratoryService {
+
+export class CorporateClientService {
 
   constructor(private http: HttpClient) {
   }
 
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _allData$ = new BehaviorSubject<Laboratory[]>([]);
-  private _data$ = new BehaviorSubject<Laboratory[]>([]);
+  private _allData$ = new BehaviorSubject<CorporateClient[]>([]);
+  private _data$ = new BehaviorSubject<CorporateClient[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
-  public laboratory: Laboratory[];
+  public CorporateClient: CorporateClient[];
   private _state: State = {
     page: 1,
     pageSize: 10,
@@ -48,6 +51,7 @@ export class LaboratoryService {
     sortColumn: '',
     sortDirection: ''
   };
+
   get total$() { return this._total$.asObservable(); }
   get loading$() { return this._loading$.asObservable(); }
   get page() { return this._state.page; }
@@ -66,38 +70,20 @@ export class LaboratoryService {
   get allData$() {
     return this._allData$.asObservable();
   }
-  loadCustomer() {
-    debugger
-    return this.http.get<Customers[]>(`api/customer/alldropdown`);
-  }
-  loadRNo() {
-    debugger
-    return this.http.get<Customers[]>(`api/customer/alldropdownRNo`);
-  }
-  ExportList(LaboratoryID) {
-    return this.http.get<Laboratory[]>(`api/Laboratory/all`);
-  }
-  getById(id) {
-    return this.http.get<Laboratory[]>(`api/Laboratory/Laboratory/${id}`);
-  }
-  uploadPDF(file: File): Observable<any> {
-    debugger
-    const formData: FormData = new FormData();
-    formData.append('pdfFile', file, file.name);
 
-    const url = 'http://mamjiadmin.airtechsolutions.pk/ClientApp/dist/assets/Upload/laboratory';
-    return this.http.post(url, formData);
+
+  getById(id) {
+    return this.http.get<CorporateClient[]>(`api/corporateclient/${id}`);
   }
   getAllData() {
-    const url = `api/Laboratory/all`;
+
+    const url = `api/corporateclient/all`;
     console.log(url);
     tap(() => this._loading$.next(true)),
-      this.http.get<Laboratory[]>(url).subscribe(res => {
-        debugger;
-        this.laboratory = res;
-
-        this._data$.next(this.laboratory);
-        this._allData$.next(this.laboratory);
+      this.http.get<CorporateClient[]>(url).subscribe(res => {
+        this.CorporateClient = res;
+        this._data$.next(this.CorporateClient);
+        this._allData$.next(this.CorporateClient);
 
         this._search$.pipe(
           switchMap(() => this._search()),
@@ -115,11 +101,11 @@ export class LaboratoryService {
     this._search$.next();
   }
 
-  private _search(): Observable<SearchLaboratoryResult> {
+  private _search(): Observable<SearchCorporateClientResult> {
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
 
     // 1. sort
-    let sortedData = sort(this.laboratory, sortColumn, sortDirection);
+    let sortedData = sort(this.CorporateClient, sortColumn, sortDirection);
 
     //// 2. filter
     sortedData = sortedData.filter(data => matches(data, searchTerm));
@@ -148,21 +134,23 @@ export class LaboratoryService {
   }
   insert(data) {
     debugger
-    return this.http.post('api/laboratory/insert', data)
+    return this.http.post(`api/corporateclient/insert`, data)
       .pipe(map(res => {
 
         console.log(res);
         return res;
       }));
   }
+
   update(updateData) {
-    return this.http.post(`api/laboratory/update`, updateData)
+    return this.http.post(`api/corporateclient/update`, updateData)
       .pipe(map(res => {
         console.log(res);
         return res;
       }));
   }
-  delete(data) {
-    return this.http.post(`api/laboratory/delete`, data);
+  delete(updateData) {
+    return this.http.post(`api/corporateclient/delete`, updateData);
   }
+
 }

@@ -5,6 +5,7 @@ export class Laboratory {
   selectedFile: File;
   fullName: string;
   labReferenceNo: string;
+  registrationNo:string;
   statusID: number;
   customer: string;
   categoryName: string;

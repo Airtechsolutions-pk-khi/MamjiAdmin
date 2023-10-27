@@ -16,6 +16,22 @@
 
               <div class="form-row">
                 <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputUsername">Registration #</label>
+ 
+                  <ng-select [items]="RegistrationList" bindLabel="registrationNo" bindValue="customerID" [multiple]="false" placeholder="--Select Registration #--" (change)="onCustomerSelectR(formData.customerID)" [ngModelOptions]="{standalone: true}" [(ngModel)]="formData.customerID">
+                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                      <div class="ng-value" *ngFor="let item of items">
+                        <span class="ng-value-label">{{item.registrationNo}}</span>
+                        <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
+                      </div>
+                    </ng-template>
+                  </ng-select>
+
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Customer Name</label>
  
                   <ng-select [items]="CustomerList" bindLabel="fullName" bindValue="customerID" [multiple]="false" placeholder="--Select Customer--" (change)="onCustomerSelect(formData.customerID)" [ngModelOptions]="{standalone: true}" [(ngModel)]="formData.customerID">
@@ -30,8 +46,9 @@
                 </div>
               </div>
 
-              <input type="file" id="pdfFile" name="pdfFile" [(ngModel)]="pdfFilePath" (change)="onFileChange($event)" accept=".pdf" required>
-              <input type="text" id="pdfFilePath" name="pdfFilePath" [ngModelOptions]="{standalone: true}" [(ngModel)]="pdfFilePath" style="border: none; width: 100% !important;" readonly>
+              
+             <input type="file" (change)="onFileChange($event.target.files)" />  
+
             </div>
             
             <div class="form-group col-md-6">

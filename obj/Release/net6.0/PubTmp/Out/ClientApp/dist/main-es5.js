@@ -402,7 +402,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Diagnostic Categories</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Categories List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\"/>\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Category\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"CategoryName\">Category Name</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td>{{item.categoryName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.diagnosticCatID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Diagnostic Categories</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Categories List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Category\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"CategoryName\">Category Name</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td>{{item.categoryName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.diagnosticCatID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>  \r\n";
       /***/
     },
 
@@ -422,7 +422,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- <form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\"> -->\r\n<form class=\"form\" (ngSubmit)=\"onSubmit()\" #myForm=\"ngForm\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n \r\n                  <ng-select [items]=\"CustomerList\" bindLabel=\"fullName\" bindValue=\"customerID\" [multiple]=\"false\" placeholder=\"--Select Customer--\" (change)=\"onCustomerSelect(formData.customerID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.customerID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n\r\n                </div>\r\n              </div>\r\n\r\n              <input type=\"file\" id=\"pdfFile\" name=\"pdfFile\" [(ngModel)]=\"pdfFilePath\" (change)=\"onFileChange($event)\" accept=\".pdf\" required>\r\n              <input type=\"text\" id=\"pdfFilePath\" name=\"pdfFilePath\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"pdfFilePath\" style=\"border: none; width: 100% !important;\" readonly>\r\n            </div>\r\n            \r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Catgeory</label>                  \r\n                  <ng-select [items]=\"CategoryList\" bindLabel=\"categoryName\" bindValue=\"diagnosticCatID\" [multiple]=\"false\" placeholder=\"--Select Diagnostic Category--\" (change)=\"onDiagnosticSelect(formData.diagnosticCatID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.diagnosticCatID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.categoryName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- <form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\"> -->\r\n<form class=\"form\" (ngSubmit)=\"onSubmit()\" #myForm=\"ngForm\">\r\n\r\n  \r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Registration #</label>\r\n \r\n                  <ng-select [items]=\"RegistrationList\" bindLabel=\"registrationNo\" bindValue=\"customerID\" [multiple]=\"false\" placeholder=\"--Select Registration #--\" (change)=\"onCustomerSelectR(formData.customerID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.customerID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.registrationNo}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n \r\n                  <ng-select [items]=\"CustomerList\" bindLabel=\"fullName\" bindValue=\"customerID\" [multiple]=\"false\" placeholder=\"--Select Customer--\" (change)=\"onCustomerSelect(formData.customerID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.customerID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n\r\n                </div>\r\n              </div>\r\n\r\n              \r\n             <input type=\"file\" (change)=\"onFileChange($event.target.files)\" />  \r\n\r\n            </div>\r\n            \r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Catgeory</label>                  \r\n                  <ng-select [items]=\"CategoryList\" bindLabel=\"categoryName\" bindValue=\"diagnosticCatID\" [multiple]=\"false\" placeholder=\"--Select Diagnostic Category--\" (change)=\"onDiagnosticSelect(formData.diagnosticCatID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.diagnosticCatID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.categoryName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>";
       /***/
     },
 
@@ -442,7 +442,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\"/>\r\n        \r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n                        \r\n            <th width=\"10%\">Report</th>             \r\n            <th width=\"15%\" sortable=\"LabReference\">Customer Name</th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n             \r\n              <button class=\"btnDownload\" (click)=\"DownloadRpt(item.image)\"><i class=\"fa fa-download\"></i> Download Report</button>\r\n               \r\n              <!-- <a href=\"http://localhost:59660/assets/pdf/zzz.pdf\" Download=\"ABC.pdf\">Download the PDF</a> -->\r\n              <!-- <a (click)=\"DownloadRpt(item.image)\"><i class=\"fas fa-fw fa-edit\"></i></a> -->\r\n              \r\n              <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> -->\r\n            </td>\r\n            \r\n            <td>{{item.fullName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <!-- <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <!-- <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div> -->\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n\r\n            <th width=\"20%\">Report</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Registration #</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Customer Name</th>\r\n            <th width=\"15%\" sortable=\"LabReference\">Category</th>\r\n            <th width=\"10%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n\r\n              <button class=\"btnDownload\" (click)=\"DownloadRpt(item.image)\"><i class=\"fa fa-download\"></i> Download Report</button>\r\n\r\n              <!-- <a href=\"http://localhost:59660/assets/pdf/zzz.pdf\" Download=\"ABC.pdf\">Download the PDF</a> -->\r\n              <!-- <a (click)=\"DownloadRpt(item.image)\"><i class=\"fas fa-fw fa-edit\"></i></a> -->\r\n              <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> -->\r\n            </td>\r\n\r\n            <td>{{item.registrationNo}}</td>\r\n            <td>{{item.fullName}}</td>\r\n            <td>{{item.categoryName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <!-- <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              <!--<a title=\"Delete\" (click)=\"open(content,item.laboratoryID)\" href=\"javascript:void(0);\">Delete</a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n";
       /***/
     },
 
@@ -482,7 +482,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Doctors</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctors List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['adddoctors']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Doctor\r\n        </button>\r\n      </div>\r\n      <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Customer\r\n      </button></div> -->\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\">Urdu Name</th>\r\n            <th width=\"15%\" sortable=\"FullName\"> Name </th>\r\n            <th width=\"15%\" sortable=\"Email\">Email </th>\r\n            <th width=\"15%\" sortable=\"Skills\"> Skills </th>\r\n            <th width=\"20%\" sortable=\"Education\"> Education </th>\r\n            <th width=\"10%\" sortable=\"Gender\"> Gender </th>\r\n            <th width=\"5%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <!-- <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td> -->\r\n            <td> {{item.urduName}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.email}} </td>\r\n\r\n            <td> {{item.skills}} </td>\r\n            <td> {{item.education}} </td>\r\n            <td> {{item.gender}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.doctorID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Doctors</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctors List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['adddoctors']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Doctor\r\n        </button>\r\n      </div>\r\n      <!-- <div class=\"col-md-2 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Customer\r\n      </button></div> -->\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\">Urdu Name</th>\r\n            <th width=\"15%\" sortable=\"FullName\"> Name </th>\r\n            <th width=\"15%\" sortable=\"Email\">Email </th>\r\n            <th width=\"15%\" sortable=\"Skills\"> Skills </th>\r\n            <th width=\"20%\" sortable=\"Education\"> Education </th>\r\n            <th width=\"10%\" sortable=\"Gender\"> Gender </th>\r\n            <th width=\"5%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <!-- <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td> -->\r\n            <td> {{item.urduName}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.email}} </td>\r\n\r\n            <td> {{item.skills}} </td>\r\n            <td> {{item.education}} </td>\r\n            <td> {{item.gender}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.doctorID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
       /***/
     },
 
@@ -682,7 +682,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <!--<div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />-->\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Date </th>\r\n            <th width=\"10%\" sortable=\"Status\">Status</th>\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.isRead === 0, 'btn-danger':item.isRead !== 0 }\" class=\"btn btn-sm\" [result]=\"item.isRead ==0?'UnRead':'Read'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Date </th>\r\n            <th width=\"10%\" sortable=\"Status\">Status</th>\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate | date:'dd-MM-yyyy' }} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.isRead === 0, 'btn-danger':item.isRead !== 0 }\" class=\"btn btn-sm\" [result]=\"item.isRead ==0?'UnRead':'Read'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -762,7 +762,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Medicines</h1>\r\n<p class=\"mb-4\"></p>\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Medicine List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <!-- <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button> -->\r\n        <button [routerLink]=\"['addmedicines']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Medicine\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n      <div class=\"tile-body p-0 table-responsive \">\r\n        <table class=\"table table-striped\">\r\n          <thead>\r\n            <tr class=\"table-header\">\r\n              <th width=\"10%\">IMAGE</th>\r\n              <th width=\"20%\" sortable=\"FullName\"> Name </th>\r\n              <!-- <th width=\"15%\" sortable=\"Description\">Description </th> -->\r\n              <th width=\"20%\" sortable=\"BrandDetails\"> Brand Details </th>\r\n              <th width=\"15%\" sortable=\"Price\"> Price </th>\r\n              <th width=\"20%\" sortable=\"Quantity\"> Quantity Description </th>\r\n              <th width=\"15%\" sortable=\"Status\">Status </th>\r\n              <th width=\"10%\">Action</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr *ngFor=\"let item of data$ | async \">\r\n              <td>\r\n                <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n              </td>\r\n              <td> {{item.name}} </td>\r\n              <!-- <td> {{item.description}} </td> -->\r\n              <td> {{item.brandDetails}} </td>\r\n              <td> {{item.price}} </td>\r\n              <td> {{item.quantityDescription}} </td>\r\n              <td>\r\n                <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                </ngb-highlight>\r\n              </td>\r\n              <td>\r\n                <a (click)=\"Edit(item.medicineID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                <a (click)=\"Delete(item.medicineID)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              </td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <p class=\"pagination-count\">\r\n            Showing\r\n            <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n            <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n            <strong>{{(total$ | async)!}}</strong> results\r\n          </p>\r\n        </div>\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n          </ngb-pagination>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Medicines</h1>\r\n<p class=\"mb-4\"></p>\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Medicine List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button [routerLink]=\"['addmedicines']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Medicine\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n      <div class=\"tile-body p-0 table-responsive \">\r\n        <table class=\"table table-striped\">\r\n          <thead>\r\n            <tr class=\"table-header\">\r\n              <th width=\"10%\">IMAGE</th>\r\n              <th width=\"20%\" sortable=\"FullName\"> Name </th>\r\n              <!-- <th width=\"15%\" sortable=\"Description\">Description </th> -->\r\n              <th width=\"20%\" sortable=\"BrandDetails\"> Brand Details </th>\r\n              <th width=\"15%\" sortable=\"Price\"> Price </th>\r\n              <th width=\"20%\" sortable=\"Quantity\"> Quantity Description </th>\r\n              <th width=\"15%\" sortable=\"Status\">Status </th>\r\n              <th width=\"10%\">Action</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr *ngFor=\"let item of data$ | async \">\r\n              <td>\r\n                <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n              </td>\r\n              <td> {{item.name}} </td>\r\n              <!-- <td> {{item.description}} </td> -->\r\n              <td> {{item.brandDetails}} </td>\r\n              <td> {{item.price}} </td>\r\n              <td> {{item.quantityDescription}} </td>\r\n              <td>\r\n                <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                </ngb-highlight>\r\n              </td>\r\n              <td>\r\n                <a (click)=\"Edit(item.medicineID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                <a (click)=\"open(content,item.medicineID)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              </td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <p class=\"pagination-count\">\r\n            Showing\r\n            <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n            <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n            <strong>{{(total$ | async)!}}</strong> results\r\n          </p>\r\n        </div>\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n          </ngb-pagination>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n";
       /***/
     },
 
@@ -842,7 +842,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"FullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n                <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n                <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n\r\n              <a download=\"sd\" href=\"{{item.image}}\" target=\"_blank\"  title=\"ImageName\">\r\n                <i class=\"fas fa-fw fa-download\" download></i>\r\n              </a>\r\n\r\n              <!--<a href=\"javascript:void(0);\" (click)=\"downloadImage(item.prescriptionID)\"><i class=\"fas fa-fw fa-download\"></i> </a>-->\r\n              <!--<a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>-->\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"FullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <!--<div class=\"btn-group\">\r\n                <button type=\"button\" class=\"btn btn-warning\">Action</button>\r\n                <button type=\"button\" class=\"btn btn-warning dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                  <span class=\"sr-only\">Toggle Dropdown</span>\r\n                </button>\r\n                <div class=\"dropdown-menu\">\r\n                  <a class=\"dropdown-item badge-info\">Accept</a>\r\n                  <a class=\"dropdown-item badge-danger\" href=\"#\">Reject</a>\r\n                  <div class=\"dropdown-divider\"></div>\r\n                  <a class=\"dropdown-item\" href=\"{{item.image}}\" target=\"_blank\"  title=\"ImageName\">Download Image</a>\r\n                </div>\r\n              </div>-->\r\n\r\n              <a download=\"sd\" href=\"{{item.image}}\" target=\"_blank\" title=\"ImageName\">\r\n                <i class=\"fas fa-fw fa-download\" download></i>\r\n              </a>\r\n              <!--<a href=\"javascript:void(0);\" (click)=\"downloadImage(item.prescriptionID)\"><i class=\"fas fa-fw fa-download\"></i> </a>-->\r\n              <!--<a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>-->\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -902,7 +902,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Customer</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"customerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Customer Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Full Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Full Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                  <input type=\"email\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.email.errors.required\">\r\n                      Email is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                  <input type=\"password\" class=\"form-control\" id=password placeholder=\"\" formControlName=\"password\">\r\n                  <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.password.errors.required\">\r\n                      Password is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Contact No.</label>\r\n                  <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\" maxlength=\"11\">\r\n                  <div *ngIf=\"f.mobile.invalid && (f.mobile.dirty || f.mobile.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.mobile.errors.required\">\r\n                      Phone is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Customer</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"customerForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Customer Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Full Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Full Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                  <input type=\"email\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.email.errors.required\">\r\n                      Email is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                  <input type=\"password\" class=\"form-control\" id=password placeholder=\"\" formControlName=\"password\">\r\n                  <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.password.errors.required\">\r\n                      Password is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Contact No.</label>\r\n                  <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\" maxlength=\"11\">\r\n                  <div *ngIf=\"f.mobile.invalid && (f.mobile.dirty || f.mobile.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.mobile.errors.required\">\r\n                      Phone is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              \r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -1162,7 +1162,47 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Banners</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Banners List</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Banner\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"type\" (sort)=\"onSort($event)\"> Type </th>\r\n                        <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.type}} </td>\r\n                        <td> {{item.description}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.bannerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Banners</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Banners List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Banner\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"type\" (sort)=\"onSort($event)\"> Type </th>\r\n            <th width=\"15%\" sortable=\"descripiton\" (sort)=\"onSort($event)\">Descripiton </th>\r\n            <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.type}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.bannerID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.html":
+    /*!*******************************************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.html ***!
+      \*******************************************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsCorporateclientAddcorporateclientAddcorporateclientComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Corporate Client</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"corporateclientForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Corporate Client Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Client Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=clientName placeholder=\"\" formControlName=\"clientName\">\r\n                \r\n              </div>\r\n            \r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/corporateclient/corporateclient.component.html":
+    /*!*********************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/corporateclient/corporateclient.component.html ***!
+      \*********************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminSettingsCorporateclientCorporateclientComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Corporate Clients</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Corporate Clients List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Corporate Client\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"25%\">IMAGE</th>\r\n            <th width=\"35%\" sortable=\"clientName\" (sort)=\"onSort($event)\">Client Name </th>\r\n            \r\n            <th width=\"25%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"15%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.clientName}} </td>\r\n             \r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.corporateClientID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n";
       /***/
     },
 
@@ -1242,7 +1282,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\r\n<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\">\r\n                <div class=\"input-group-prepend\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-4 text-right\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Area\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">                      \r\n                        <th width=\"30%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"10%\" sortable=\"amount\" (sort)=\"onSort($event)\">  Amount </th>  \r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\"> Status </th>                          \r\n                        <th width=\"10%\"></th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                     \r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.amount}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.deliveryAreaID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Delivery</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Delivery Area</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\">\r\n        <div class=\"input-group-prepend\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 text-right\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Area\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"30%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"10%\" sortable=\"amount\" (sort)=\"onSort($event)\">  Amount </th>\r\n            <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\"> Status </th>\r\n            <th width=\"10%\"></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.amount}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.deliveryAreaID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n";
       /***/
     },
 
@@ -1402,7 +1442,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Doctor Specialities</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Specialities List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-4 text-right\"style=\"padding-top: 25px;\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add Speciality\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n                        <th width=\"15%\" sortable=\"urduName\" (sort)=\"onSort($event)\"> Urdu Name </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.name}} </td>\r\n                        <td> {{item.urduName}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.specialistID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Doctor Specialities</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Specialities List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 text-right\" style=\"padding-top: 25px;\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add Speciality\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> Name </th>\r\n            <th width=\"15%\" sortable=\"urduName\" (sort)=\"onSort($event)\"> Urdu Name </th>\r\n            <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            </td>\r\n            <td> {{item.name}} </td>\r\n            <td> {{item.urduName}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.specialistID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n";
       /***/
     },
 
@@ -1442,7 +1482,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Time Slots</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Time Slot's List</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\"style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\"style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n            <div class=\"col-md-4 text-right\"style=\"padding-top: 25px;\"> <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n                Add TimeSlot\r\n            </button></div>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> TimeSlot </th>\r\n                        <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">  \r\n                        <td> {{item.timeSlot}} </td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.timeSlotID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Time Slots</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Time Slot's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 text-right\" style=\"padding-top: 25px;\">\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary \">\r\n          Add TimeSlot\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"name\" (sort)=\"onSort($event)\"> TimeSlot </th>\r\n            <th width=\"15%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.timeSlot}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.timeSlotID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
       /***/
     },
 
@@ -1522,7 +1562,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n\r\n            <td>{{item.password}}</td>\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n\r\n            <td>{{item.password}}</td>\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n";
       /***/
     },
 
@@ -1607,26 +1647,6 @@
     },
 
     /***/
-    "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html":
-    /*!********************************************************************************!*\
-      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html ***!
-      \********************************************************************************/
-
-    /*! exports provided: default */
-
-    /***/
-    function node_modulesRawLoaderDistCjsJsSrcAppHomeHomeComponentHtml(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "";
-      /***/
-    },
-
-    /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/imageupload/imageupload.component.html":
     /*!**********************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/imageupload/imageupload.component.html ***!
@@ -1662,7 +1682,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/permission/add']\">Permissions</a> -->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Customer Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\">Coming Soon</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>-->\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
+      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/permission/add']\">Permissions</a> -->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\">Coming Soon</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>-->\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
       /***/
     },
 
@@ -4640,6 +4660,291 @@
     },
 
     /***/
+    "./src/app/_services/corporateclient.service.ts":
+    /*!******************************************************!*\
+      !*** ./src/app/_services/corporateclient.service.ts ***!
+      \******************************************************/
+
+    /*! exports provided: CorporateClientService */
+
+    /***/
+    function srcApp_servicesCorporateclientServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CorporateClientService", function () {
+        return CorporateClientService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.clientName.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var CorporateClientService = /*#__PURE__*/function () {
+        function CorporateClientService(http) {
+          _classCallCheck(this, CorporateClientService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(CorporateClientService, [{
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/corporateclient/".concat(id));
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this10 = this;
+
+            var url = "api/corporateclient/all";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this10._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this10.CorporateClient = res;
+
+              _this10._data$.next(_this10.CorporateClient);
+
+              _this10._allData$.next(_this10.CorporateClient);
+
+              _this10._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this10._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this10._loading$.next(false);
+              })).subscribe(function (result) {
+                _this10._data$.next(result.data);
+
+                _this10._total$.next(result.total);
+              });
+
+              _this10._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state7 = this._state,
+                sortColumn = _this$_state7.sortColumn,
+                sortDirection = _this$_state7.sortDirection,
+                pageSize = _this$_state7.pageSize,
+                page = _this$_state7.page,
+                searchTerm = _this$_state7.searchTerm; // 1. sort
+
+            var sortedData = sort(this.CorporateClient, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            debugger;
+            return this.http.post("api/corporateclient/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/corporateclient/update", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(updateData) {
+            return this.http.post("api/corporateclient/delete", updateData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return CorporateClientService;
+      }();
+
+      CorporateClientService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      CorporateClientService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], CorporateClientService);
+      /***/
+    },
+
+    /***/
     "./src/app/_services/coupon.service.ts":
     /*!*********************************************!*\
       !*** ./src/app/_services/coupon.service.ts ***!
@@ -4743,30 +5048,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this10 = this;
+            var _this11 = this;
 
             var url = "api/coupon/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this10._loading$.next(true);
+              return _this11._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this10.Coupon = res;
+              _this11.Coupon = res;
 
-              _this10._data$.next(_this10.Coupon);
+              _this11._data$.next(_this11.Coupon);
 
-              _this10._allData$.next(_this10.Coupon);
+              _this11._allData$.next(_this11.Coupon);
 
-              _this10._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this10._search();
+              _this11._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this11._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this10._loading$.next(false);
+                return _this11._loading$.next(false);
               })).subscribe(function (result) {
-                _this10._data$.next(result.data);
+                _this11._data$.next(result.data);
 
-                _this10._total$.next(result.total);
+                _this11._total$.next(result.total);
               });
 
-              _this10._search$.next();
+              _this11._search$.next();
             });
           }
         }, {
@@ -4779,12 +5084,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state7 = this._state,
-                sortColumn = _this$_state7.sortColumn,
-                sortDirection = _this$_state7.sortDirection,
-                pageSize = _this$_state7.pageSize,
-                page = _this$_state7.page,
-                searchTerm = _this$_state7.searchTerm; // 1. sort
+            var _this$_state8 = this._state,
+                sortColumn = _this$_state8.sortColumn,
+                sortDirection = _this$_state8.sortDirection,
+                pageSize = _this$_state8.pageSize,
+                page = _this$_state8.page,
+                searchTerm = _this$_state8.searchTerm; // 1. sort
 
             var sortedData = sort(this.Coupon, sortColumn, sortDirection); //// 2. filter
 
@@ -5033,30 +5338,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this11 = this;
+            var _this12 = this;
 
             var url = "api/customer/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this11._loading$.next(true);
+              return _this12._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this11.customers = res;
+              _this12.customers = res;
 
-              _this11._data$.next(_this11.customers);
+              _this12._data$.next(_this12.customers);
 
-              _this11._allData$.next(_this11.customers);
+              _this12._allData$.next(_this12.customers);
 
-              _this11._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this11._search();
+              _this12._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this12._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this11._loading$.next(false);
+                return _this12._loading$.next(false);
               })).subscribe(function (result) {
-                _this11._data$.next(result.data);
+                _this12._data$.next(result.data);
 
-                _this11._total$.next(result.total);
+                _this12._total$.next(result.total);
               });
 
-              _this11._search$.next();
+              _this12._search$.next();
             });
           }
         }, {
@@ -5069,12 +5374,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state8 = this._state,
-                sortColumn = _this$_state8.sortColumn,
-                sortDirection = _this$_state8.sortDirection,
-                pageSize = _this$_state8.pageSize,
-                page = _this$_state8.page,
-                searchTerm = _this$_state8.searchTerm; // 1. sort
+            var _this$_state9 = this._state,
+                sortColumn = _this$_state9.sortColumn,
+                sortDirection = _this$_state9.sortDirection,
+                pageSize = _this$_state9.pageSize,
+                page = _this$_state9.page,
+                searchTerm = _this$_state9.searchTerm; // 1. sort
 
             var sortedData = sort(this.customers, sortColumn, sortDirection); //// 2. filter
 
@@ -5432,30 +5737,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this12 = this;
+            var _this13 = this;
 
             var url = "api/delivery/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this12._loading$.next(true);
+              return _this13._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this12.Delivery = res;
+              _this13.Delivery = res;
 
-              _this12._data$.next(_this12.Delivery);
+              _this13._data$.next(_this13.Delivery);
 
-              _this12._allData$.next(_this12.Delivery);
+              _this13._allData$.next(_this13.Delivery);
 
-              _this12._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this12._search();
+              _this13._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this13._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this12._loading$.next(false);
+                return _this13._loading$.next(false);
               })).subscribe(function (result) {
-                _this12._data$.next(result.data);
+                _this13._data$.next(result.data);
 
-                _this12._total$.next(result.total);
+                _this13._total$.next(result.total);
               });
 
-              _this12._search$.next();
+              _this13._search$.next();
             });
           }
         }, {
@@ -5468,12 +5773,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state9 = this._state,
-                sortColumn = _this$_state9.sortColumn,
-                sortDirection = _this$_state9.sortDirection,
-                pageSize = _this$_state9.pageSize,
-                page = _this$_state9.page,
-                searchTerm = _this$_state9.searchTerm; // 1. sort
+            var _this$_state10 = this._state,
+                sortColumn = _this$_state10.sortColumn,
+                sortDirection = _this$_state10.sortDirection,
+                pageSize = _this$_state10.pageSize,
+                page = _this$_state10.page,
+                searchTerm = _this$_state10.searchTerm; // 1. sort
 
             var sortedData = sort(this.Delivery, sortColumn, sortDirection); //// 2. filter
 
@@ -5716,30 +6021,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this13 = this;
+            var _this14 = this;
 
             var url = "api/diagnostic/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this13._loading$.next(true);
+              return _this14._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this13.diagnostic = res;
+              _this14.diagnostic = res;
 
-              _this13._data$.next(_this13.diagnostic);
+              _this14._data$.next(_this14.diagnostic);
 
-              _this13._allData$.next(_this13.diagnostic);
+              _this14._allData$.next(_this14.diagnostic);
 
-              _this13._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this13._search();
+              _this14._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this14._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this13._loading$.next(false);
+                return _this14._loading$.next(false);
               })).subscribe(function (result) {
-                _this13._data$.next(result.data);
+                _this14._data$.next(result.data);
 
-                _this13._total$.next(result.total);
+                _this14._total$.next(result.total);
               });
 
-              _this13._search$.next();
+              _this14._search$.next();
             });
           }
         }, {
@@ -5752,12 +6057,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state10 = this._state,
-                sortColumn = _this$_state10.sortColumn,
-                sortDirection = _this$_state10.sortDirection,
-                pageSize = _this$_state10.pageSize,
-                page = _this$_state10.page,
-                searchTerm = _this$_state10.searchTerm; // 1. sort
+            var _this$_state11 = this._state,
+                sortColumn = _this$_state11.sortColumn,
+                sortDirection = _this$_state11.sortDirection,
+                pageSize = _this$_state11.pageSize,
+                page = _this$_state11.page,
+                searchTerm = _this$_state11.searchTerm; // 1. sort
 
             var sortedData = sort(this.diagnostic, sortColumn, sortDirection); //// 2. filter
 
@@ -6011,31 +6316,31 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this14 = this;
+            var _this15 = this;
 
             debugger;
             var url = "api/doctor/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this14._loading$.next(true);
+              return _this15._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this14.doctors = res;
+              _this15.doctors = res;
 
-              _this14._data$.next(_this14.doctors);
+              _this15._data$.next(_this15.doctors);
 
-              _this14._allData$.next(_this14.doctors);
+              _this15._allData$.next(_this15.doctors);
 
-              _this14._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this14._search();
+              _this15._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this15._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this14._loading$.next(false);
+                return _this15._loading$.next(false);
               })).subscribe(function (result) {
-                _this14._data$.next(result.data);
+                _this15._data$.next(result.data);
 
-                _this14._total$.next(result.total);
+                _this15._total$.next(result.total);
               });
 
-              _this14._search$.next();
+              _this15._search$.next();
             });
           }
         }, {
@@ -6048,12 +6353,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state11 = this._state,
-                sortColumn = _this$_state11.sortColumn,
-                sortDirection = _this$_state11.sortDirection,
-                pageSize = _this$_state11.pageSize,
-                page = _this$_state11.page,
-                searchTerm = _this$_state11.searchTerm; // 1. sort
+            var _this$_state12 = this._state,
+                sortColumn = _this$_state12.sortColumn,
+                sortDirection = _this$_state12.sortDirection,
+                pageSize = _this$_state12.pageSize,
+                page = _this$_state12.page,
+                searchTerm = _this$_state12.searchTerm; // 1. sort
 
             var sortedData = sort(this.doctors, sortColumn, sortDirection); //// 2. filter
 
@@ -6190,6 +6495,91 @@
       DoctorsService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
         providedIn: 'root'
       }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], DoctorsService);
+      /***/
+    },
+
+    /***/
+    "./src/app/_services/file-upload.service.ts":
+    /*!**************************************************!*\
+      !*** ./src/app/_services/file-upload.service.ts ***!
+      \**************************************************/
+
+    /*! exports provided: FileUploadService */
+
+    /***/
+    function srcApp_servicesFileUploadServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "FileUploadService", function () {
+        return FileUploadService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var FileUploadService = /*#__PURE__*/function () {
+        function FileUploadService(http) {
+          _classCallCheck(this, FileUploadService);
+
+          this.http = http; // API url
+
+          this.baseApiUrl = 'api/laboratory/insert';
+        } // Returns an observable
+
+
+        _createClass(FileUploadService, [{
+          key: "upload",
+          value: function upload(selectedFile) {
+            debugger; // Create form data
+
+            var formData = new FormData(); // Store form name as "file" with file data
+
+            formData.append('file', selectedFile, selectedFile.name); // Make http post request over api
+            // with formData as req
+
+            return this.http.post(this.baseApiUrl, formData);
+          }
+        }]);
+
+        return FileUploadService;
+      }();
+
+      FileUploadService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      FileUploadService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], FileUploadService);
       /***/
     },
 
@@ -6480,30 +6870,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(brandId) {
-            var _this15 = this;
+            var _this16 = this;
 
             var url = "api/item/all/".concat(brandId);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this15._loading$.next(true);
+              return _this16._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this15.items = res;
+              _this16.items = res;
 
-              _this15._data$.next(_this15.items);
+              _this16._data$.next(_this16.items);
 
-              _this15._allData$.next(_this15.items);
+              _this16._allData$.next(_this16.items);
 
-              _this15._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this15._search();
+              _this16._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this16._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this15._loading$.next(false);
+                return _this16._loading$.next(false);
               })).subscribe(function (result) {
-                _this15._data$.next(result.data);
+                _this16._data$.next(result.data);
 
-                _this15._total$.next(result.total);
+                _this16._total$.next(result.total);
               });
 
-              _this15._search$.next();
+              _this16._search$.next();
             });
           }
         }, {
@@ -6516,12 +6906,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state12 = this._state,
-                sortColumn = _this$_state12.sortColumn,
-                sortDirection = _this$_state12.sortDirection,
-                pageSize = _this$_state12.pageSize,
-                page = _this$_state12.page,
-                searchTerm = _this$_state12.searchTerm; // 1. sort
+            var _this$_state13 = this._state,
+                sortColumn = _this$_state13.sortColumn,
+                sortDirection = _this$_state13.sortDirection,
+                pageSize = _this$_state13.pageSize,
+                page = _this$_state13.page,
+                searchTerm = _this$_state13.searchTerm; // 1. sort
 
             var sortedData = sort(this.items, sortColumn, sortDirection); //// 2. filter
 
@@ -6771,6 +7161,12 @@
             return this.http.get("api/customer/alldropdown");
           }
         }, {
+          key: "loadRNo",
+          value: function loadRNo() {
+            debugger;
+            return this.http.get("api/customer/alldropdownRNo");
+          }
+        }, {
           key: "ExportList",
           value: function ExportList(LaboratoryID) {
             return this.http.get("api/Laboratory/all");
@@ -6792,31 +7188,31 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this16 = this;
+            var _this17 = this;
 
             var url = "api/Laboratory/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this16._loading$.next(true);
+              return _this17._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
               debugger;
-              _this16.laboratory = res;
+              _this17.laboratory = res;
 
-              _this16._data$.next(_this16.laboratory);
+              _this17._data$.next(_this17.laboratory);
 
-              _this16._allData$.next(_this16.laboratory);
+              _this17._allData$.next(_this17.laboratory);
 
-              _this16._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this16._search();
+              _this17._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this17._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this16._loading$.next(false);
+                return _this17._loading$.next(false);
               })).subscribe(function (result) {
-                _this16._data$.next(result.data);
+                _this17._data$.next(result.data);
 
-                _this16._total$.next(result.total);
+                _this17._total$.next(result.total);
               });
 
-              _this16._search$.next();
+              _this17._search$.next();
             });
           }
         }, {
@@ -6829,12 +7225,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state13 = this._state,
-                sortColumn = _this$_state13.sortColumn,
-                sortDirection = _this$_state13.sortDirection,
-                pageSize = _this$_state13.pageSize,
-                page = _this$_state13.page,
-                searchTerm = _this$_state13.searchTerm; // 1. sort
+            var _this$_state14 = this._state,
+                sortColumn = _this$_state14.sortColumn,
+                sortDirection = _this$_state14.sortDirection,
+                pageSize = _this$_state14.pageSize,
+                page = _this$_state14.page,
+                searchTerm = _this$_state14.searchTerm; // 1. sort
 
             var sortedData = sort(this.laboratory, sortColumn, sortDirection); //// 2. filter
 
@@ -7230,30 +7626,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(brandId) {
-            var _this17 = this;
+            var _this18 = this;
 
             var url = "api/location/all/".concat(brandId);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this17._loading$.next(true);
+              return _this18._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this17.locations = res;
+              _this18.locations = res;
 
-              _this17._data$.next(_this17.locations);
+              _this18._data$.next(_this18.locations);
 
-              _this17._allData$.next(_this17.locations);
+              _this18._allData$.next(_this18.locations);
 
-              _this17._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this17._search();
+              _this18._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this18._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this17._loading$.next(false);
+                return _this18._loading$.next(false);
               })).subscribe(function (result) {
-                _this17._data$.next(result.data);
+                _this18._data$.next(result.data);
 
-                _this17._total$.next(result.total);
+                _this18._total$.next(result.total);
               });
 
-              _this17._search$.next();
+              _this18._search$.next();
             });
           }
         }, {
@@ -7266,12 +7662,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state14 = this._state,
-                sortColumn = _this$_state14.sortColumn,
-                sortDirection = _this$_state14.sortDirection,
-                pageSize = _this$_state14.pageSize,
-                page = _this$_state14.page,
-                searchTerm = _this$_state14.searchTerm; // 1. sort
+            var _this$_state15 = this._state,
+                sortColumn = _this$_state15.sortColumn,
+                sortDirection = _this$_state15.sortDirection,
+                pageSize = _this$_state15.pageSize,
+                page = _this$_state15.page,
+                searchTerm = _this$_state15.searchTerm; // 1. sort
 
             var sortedData = sort(this.locations, sortColumn, sortDirection); //// 2. filter
 
@@ -7614,30 +8010,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this18 = this;
+            var _this19 = this;
 
             var url = "api/medicalservice/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this18._loading$.next(true);
+              return _this19._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this18.medical = res;
+              _this19.medical = res;
 
-              _this18._data$.next(_this18.medical);
+              _this19._data$.next(_this19.medical);
 
-              _this18._allData$.next(_this18.medical);
+              _this19._allData$.next(_this19.medical);
 
-              _this18._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this18._search();
+              _this19._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this19._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this18._loading$.next(false);
+                return _this19._loading$.next(false);
               })).subscribe(function (result) {
-                _this18._data$.next(result.data);
+                _this19._data$.next(result.data);
 
-                _this18._total$.next(result.total);
+                _this19._total$.next(result.total);
               });
 
-              _this18._search$.next();
+              _this19._search$.next();
             });
           }
         }, {
@@ -7650,12 +8046,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state15 = this._state,
-                sortColumn = _this$_state15.sortColumn,
-                sortDirection = _this$_state15.sortDirection,
-                pageSize = _this$_state15.pageSize,
-                page = _this$_state15.page,
-                searchTerm = _this$_state15.searchTerm; // 1. sort
+            var _this$_state16 = this._state,
+                sortColumn = _this$_state16.sortColumn,
+                sortDirection = _this$_state16.sortDirection,
+                pageSize = _this$_state16.pageSize,
+                page = _this$_state16.page,
+                searchTerm = _this$_state16.searchTerm; // 1. sort
 
             var sortedData = sort(this.medical, sortColumn, sortDirection); //// 2. filter
 
@@ -7910,31 +8306,31 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this19 = this;
+            var _this20 = this;
 
             debugger;
             var url = "api/nursing/Alltype";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this19._loading$.next(true);
+              return _this20._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this19.medical = res;
+              _this20.medical = res;
 
-              _this19._data$.next(_this19.medical);
+              _this20._data$.next(_this20.medical);
 
-              _this19._allData$.next(_this19.medical);
+              _this20._allData$.next(_this20.medical);
 
-              _this19._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this19._search();
+              _this20._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this20._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this19._loading$.next(false);
+                return _this20._loading$.next(false);
               })).subscribe(function (result) {
-                _this19._data$.next(result.data);
+                _this20._data$.next(result.data);
 
-                _this19._total$.next(result.total);
+                _this20._total$.next(result.total);
               });
 
-              _this19._search$.next();
+              _this20._search$.next();
             });
           }
         }, {
@@ -7947,12 +8343,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state16 = this._state,
-                sortColumn = _this$_state16.sortColumn,
-                sortDirection = _this$_state16.sortDirection,
-                pageSize = _this$_state16.pageSize,
-                page = _this$_state16.page,
-                searchTerm = _this$_state16.searchTerm; // 1. sort
+            var _this$_state17 = this._state,
+                sortColumn = _this$_state17.sortColumn,
+                sortDirection = _this$_state17.sortDirection,
+                pageSize = _this$_state17.pageSize,
+                page = _this$_state17.page,
+                searchTerm = _this$_state17.searchTerm; // 1. sort
 
             var sortedData = sort(this.medical, sortColumn, sortDirection); //// 2. filter
 
@@ -8200,30 +8596,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this20 = this;
+            var _this21 = this;
 
             var url = "api/medicine/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this20._loading$.next(true);
+              return _this21._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this20.medicine = res;
+              _this21.medicine = res;
 
-              _this20._data$.next(_this20.medicine);
+              _this21._data$.next(_this21.medicine);
 
-              _this20._allData$.next(_this20.medicine);
+              _this21._allData$.next(_this21.medicine);
 
-              _this20._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this20._search();
+              _this21._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this21._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this20._loading$.next(false);
+                return _this21._loading$.next(false);
               })).subscribe(function (result) {
-                _this20._data$.next(result.data);
+                _this21._data$.next(result.data);
 
-                _this20._total$.next(result.total);
+                _this21._total$.next(result.total);
               });
 
-              _this20._search$.next();
+              _this21._search$.next();
             });
           }
         }, {
@@ -8236,12 +8632,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state17 = this._state,
-                sortColumn = _this$_state17.sortColumn,
-                sortDirection = _this$_state17.sortDirection,
-                pageSize = _this$_state17.pageSize,
-                page = _this$_state17.page,
-                searchTerm = _this$_state17.searchTerm; // 1. sort
+            var _this$_state18 = this._state,
+                sortColumn = _this$_state18.sortColumn,
+                sortDirection = _this$_state18.sortDirection,
+                pageSize = _this$_state18.pageSize,
+                page = _this$_state18.page,
+                searchTerm = _this$_state18.searchTerm; // 1. sort
 
             var sortedData = sort(this.medicine, sortColumn, sortDirection); //// 2. filter
 
@@ -8490,30 +8886,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(brandId) {
-            var _this21 = this;
+            var _this22 = this;
 
             var url = "api/modifier/all/".concat(brandId);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this21._loading$.next(true);
+              return _this22._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this21.modifiers = res;
+              _this22.modifiers = res;
 
-              _this21._data$.next(_this21.modifiers);
+              _this22._data$.next(_this22.modifiers);
 
-              _this21._allData$.next(_this21.modifiers);
+              _this22._allData$.next(_this22.modifiers);
 
-              _this21._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this21._search();
+              _this22._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this22._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this21._loading$.next(false);
+                return _this22._loading$.next(false);
               })).subscribe(function (result) {
-                _this21._data$.next(result.data);
+                _this22._data$.next(result.data);
 
-                _this21._total$.next(result.total);
+                _this22._total$.next(result.total);
               });
 
-              _this21._search$.next();
+              _this22._search$.next();
             });
           }
         }, {
@@ -8526,12 +8922,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state18 = this._state,
-                sortColumn = _this$_state18.sortColumn,
-                sortDirection = _this$_state18.sortDirection,
-                pageSize = _this$_state18.pageSize,
-                page = _this$_state18.page,
-                searchTerm = _this$_state18.searchTerm; // 1. sort
+            var _this$_state19 = this._state,
+                sortColumn = _this$_state19.sortColumn,
+                sortDirection = _this$_state19.sortDirection,
+                pageSize = _this$_state19.pageSize,
+                page = _this$_state19.page,
+                searchTerm = _this$_state19.searchTerm; // 1. sort
 
             var sortedData = sort(this.modifiers, sortColumn, sortDirection); //// 2. filter
 
@@ -8774,30 +9170,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this22 = this;
+            var _this23 = this;
 
             var url = "api/notification/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this22._loading$.next(true);
+              return _this23._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this22.notification = res;
+              _this23.notification = res;
 
-              _this22._data$.next(_this22.notification);
+              _this23._data$.next(_this23.notification);
 
-              _this22._allData$.next(_this22.notification);
+              _this23._allData$.next(_this23.notification);
 
-              _this22._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this22._search();
+              _this23._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this23._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this22._loading$.next(false);
+                return _this23._loading$.next(false);
               })).subscribe(function (result) {
-                _this22._data$.next(result.data);
+                _this23._data$.next(result.data);
 
-                _this22._total$.next(result.total);
+                _this23._total$.next(result.total);
               });
 
-              _this22._search$.next();
+              _this23._search$.next();
             });
           }
         }, {
@@ -8810,12 +9206,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state19 = this._state,
-                sortColumn = _this$_state19.sortColumn,
-                sortDirection = _this$_state19.sortDirection,
-                pageSize = _this$_state19.pageSize,
-                page = _this$_state19.page,
-                searchTerm = _this$_state19.searchTerm; // 1. sort
+            var _this$_state20 = this._state,
+                sortColumn = _this$_state20.sortColumn,
+                sortDirection = _this$_state20.sortDirection,
+                pageSize = _this$_state20.pageSize,
+                page = _this$_state20.page,
+                searchTerm = _this$_state20.searchTerm; // 1. sort
 
             var sortedData = sort(this.notification, sortColumn, sortDirection); //// 2. filter
 
@@ -9063,30 +9459,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this23 = this;
+            var _this24 = this;
 
             var url = "api/nursingappointment/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this23._loading$.next(true);
+              return _this24._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this23.appointments = res;
+              _this24.appointments = res;
 
-              _this23._data$.next(_this23.appointments);
+              _this24._data$.next(_this24.appointments);
 
-              _this23._allData$.next(_this23.appointments);
+              _this24._allData$.next(_this24.appointments);
 
-              _this23._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this23._search();
+              _this24._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this24._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this23._loading$.next(false);
+                return _this24._loading$.next(false);
               })).subscribe(function (result) {
-                _this23._data$.next(result.data);
+                _this24._data$.next(result.data);
 
-                _this23._total$.next(result.total);
+                _this24._total$.next(result.total);
               });
 
-              _this23._search$.next();
+              _this24._search$.next();
             });
           }
         }, {
@@ -9099,12 +9495,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state20 = this._state,
-                sortColumn = _this$_state20.sortColumn,
-                sortDirection = _this$_state20.sortDirection,
-                pageSize = _this$_state20.pageSize,
-                page = _this$_state20.page,
-                searchTerm = _this$_state20.searchTerm; // 1. sort
+            var _this$_state21 = this._state,
+                sortColumn = _this$_state21.sortColumn,
+                sortDirection = _this$_state21.sortDirection,
+                pageSize = _this$_state21.pageSize,
+                page = _this$_state21.page,
+                searchTerm = _this$_state21.searchTerm; // 1. sort
 
             var sortedData = sort(this.appointments, sortColumn, sortDirection); //// 2. filter
 
@@ -9363,30 +9759,30 @@
         }, {
           key: "getAllData",
           value: function getAllData(fromDate, toDate) {
-            var _this24 = this;
+            var _this25 = this;
 
             var url = "api/orders/all/0/".concat(fromDate, "/").concat(toDate);
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this24._loading$.next(true);
+              return _this25._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this24.orders = res;
+              _this25.orders = res;
 
-              _this24._data$.next(_this24.orders);
+              _this25._data$.next(_this25.orders);
 
-              _this24._allData$.next(_this24.orders);
+              _this25._allData$.next(_this25.orders);
 
-              _this24._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this24._search();
+              _this25._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this25._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this24._loading$.next(false);
+                return _this25._loading$.next(false);
               })).subscribe(function (result) {
-                _this24._data$.next(result.data);
+                _this25._data$.next(result.data);
 
-                _this24._total$.next(result.total);
+                _this25._total$.next(result.total);
               });
 
-              _this24._search$.next();
+              _this25._search$.next();
             });
           }
         }, {
@@ -9399,12 +9795,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state21 = this._state,
-                sortColumn = _this$_state21.sortColumn,
-                sortDirection = _this$_state21.sortDirection,
-                pageSize = _this$_state21.pageSize,
-                page = _this$_state21.page,
-                searchTerm = _this$_state21.searchTerm; // 1. sort
+            var _this$_state22 = this._state,
+                sortColumn = _this$_state22.sortColumn,
+                sortDirection = _this$_state22.sortDirection,
+                pageSize = _this$_state22.pageSize,
+                page = _this$_state22.page,
+                searchTerm = _this$_state22.searchTerm; // 1. sort
 
             var sortedData = sort(this.orders, sortColumn, sortDirection); //// 2. filter
 
@@ -9639,30 +10035,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this25 = this;
+            var _this26 = this;
 
             var url = "api/prescription/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this25._loading$.next(true);
+              return _this26._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this25.prescription = res;
+              _this26.prescription = res;
 
-              _this25._data$.next(_this25.prescription);
+              _this26._data$.next(_this26.prescription);
 
-              _this25._allData$.next(_this25.prescription);
+              _this26._allData$.next(_this26.prescription);
 
-              _this25._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this25._search();
+              _this26._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this26._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this25._loading$.next(false);
+                return _this26._loading$.next(false);
               })).subscribe(function (result) {
-                _this25._data$.next(result.data);
+                _this26._data$.next(result.data);
 
-                _this25._total$.next(result.total);
+                _this26._total$.next(result.total);
               });
 
-              _this25._search$.next();
+              _this26._search$.next();
             });
           }
         }, {
@@ -9675,12 +10071,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state22 = this._state,
-                sortColumn = _this$_state22.sortColumn,
-                sortDirection = _this$_state22.sortDirection,
-                pageSize = _this$_state22.pageSize,
-                page = _this$_state22.page,
-                searchTerm = _this$_state22.searchTerm; // 1. sort
+            var _this$_state23 = this._state,
+                sortColumn = _this$_state23.sortColumn,
+                sortDirection = _this$_state23.sortDirection,
+                pageSize = _this$_state23.pageSize,
+                page = _this$_state23.page,
+                searchTerm = _this$_state23.searchTerm; // 1. sort
 
             var sortedData = sort(this.prescription, sortColumn, sortDirection); //// 2. filter
 
@@ -9928,30 +10324,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this26 = this;
+            var _this27 = this;
 
             var url = "api/promotion/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this26._loading$.next(true);
+              return _this27._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this26.promotions = res;
+              _this27.promotions = res;
 
-              _this26._data$.next(_this26.promotions);
+              _this27._data$.next(_this27.promotions);
 
-              _this26._allData$.next(_this26.promotions);
+              _this27._allData$.next(_this27.promotions);
 
-              _this26._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this26._search();
+              _this27._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this27._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this26._loading$.next(false);
+                return _this27._loading$.next(false);
               })).subscribe(function (result) {
-                _this26._data$.next(result.data);
+                _this27._data$.next(result.data);
 
-                _this26._total$.next(result.total);
+                _this27._total$.next(result.total);
               });
 
-              _this26._search$.next();
+              _this27._search$.next();
             });
           }
         }, {
@@ -9964,12 +10360,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state23 = this._state,
-                sortColumn = _this$_state23.sortColumn,
-                sortDirection = _this$_state23.sortDirection,
-                pageSize = _this$_state23.pageSize,
-                page = _this$_state23.page,
-                searchTerm = _this$_state23.searchTerm; // 1. sort
+            var _this$_state24 = this._state,
+                sortColumn = _this$_state24.sortColumn,
+                sortDirection = _this$_state24.sortDirection,
+                pageSize = _this$_state24.pageSize,
+                page = _this$_state24.page,
+                searchTerm = _this$_state24.searchTerm; // 1. sort
 
             var sortedData = sort(this.promotions, sortColumn, sortDirection); //// 2. filter
 
@@ -10208,12 +10604,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state24 = this._state,
-                sortColumn = _this$_state24.sortColumn,
-                sortDirection = _this$_state24.sortDirection,
-                pageSize = _this$_state24.pageSize,
-                page = _this$_state24.page,
-                searchTerm = _this$_state24.searchTerm; // 1. sort
+            var _this$_state25 = this._state,
+                sortColumn = _this$_state25.sortColumn,
+                sortDirection = _this$_state25.sortDirection,
+                pageSize = _this$_state25.pageSize,
+                page = _this$_state25.page,
+                searchTerm = _this$_state25.searchTerm; // 1. sort
 
             var sortedData = sort(this.salescategorywiseReport, sortColumn, sortDirection); //// 2. filter
 
@@ -10471,30 +10867,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this27 = this;
+            var _this28 = this;
 
             var url = "api/speciality/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this27._loading$.next(true);
+              return _this28._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this27.speciality = res;
+              _this28.speciality = res;
 
-              _this27._data$.next(_this27.speciality);
+              _this28._data$.next(_this28.speciality);
 
-              _this27._allData$.next(_this27.speciality);
+              _this28._allData$.next(_this28.speciality);
 
-              _this27._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this27._search();
+              _this28._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this28._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this27._loading$.next(false);
+                return _this28._loading$.next(false);
               })).subscribe(function (result) {
-                _this27._data$.next(result.data);
+                _this28._data$.next(result.data);
 
-                _this27._total$.next(result.total);
+                _this28._total$.next(result.total);
               });
 
-              _this27._search$.next();
+              _this28._search$.next();
             });
           }
         }, {
@@ -10507,12 +10903,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state25 = this._state,
-                sortColumn = _this$_state25.sortColumn,
-                sortDirection = _this$_state25.sortDirection,
-                pageSize = _this$_state25.pageSize,
-                page = _this$_state25.page,
-                searchTerm = _this$_state25.searchTerm; // 1. sort
+            var _this$_state26 = this._state,
+                sortColumn = _this$_state26.sortColumn,
+                sortDirection = _this$_state26.sortDirection,
+                pageSize = _this$_state26.pageSize,
+                page = _this$_state26.page,
+                searchTerm = _this$_state26.searchTerm; // 1. sort
 
             var sortedData = sort(this.speciality, sortColumn, sortDirection); //// 2. filter
 
@@ -10756,30 +11152,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this28 = this;
+            var _this29 = this;
 
             var url = "api/timeslot/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this28._loading$.next(true);
+              return _this29._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this28.timeslot = res;
+              _this29.timeslot = res;
 
-              _this28._data$.next(_this28.timeslot);
+              _this29._data$.next(_this29.timeslot);
 
-              _this28._allData$.next(_this28.timeslot);
+              _this29._allData$.next(_this29.timeslot);
 
-              _this28._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this28._search();
+              _this29._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this29._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this28._loading$.next(false);
+                return _this29._loading$.next(false);
               })).subscribe(function (result) {
-                _this28._data$.next(result.data);
+                _this29._data$.next(result.data);
 
-                _this28._total$.next(result.total);
+                _this29._total$.next(result.total);
               });
 
-              _this28._search$.next();
+              _this29._search$.next();
             });
           }
         }, {
@@ -10792,12 +11188,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state26 = this._state,
-                sortColumn = _this$_state26.sortColumn,
-                sortDirection = _this$_state26.sortDirection,
-                pageSize = _this$_state26.pageSize,
-                page = _this$_state26.page,
-                searchTerm = _this$_state26.searchTerm; // 1. sort
+            var _this$_state27 = this._state,
+                sortColumn = _this$_state27.sortColumn,
+                sortDirection = _this$_state27.sortDirection,
+                pageSize = _this$_state27.pageSize,
+                page = _this$_state27.page,
+                searchTerm = _this$_state27.searchTerm; // 1. sort
 
             var sortedData = sort(this.timeslot, sortColumn, sortDirection); //// 2. filter
 
@@ -11154,30 +11550,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this29 = this;
+            var _this30 = this;
 
             var url = "api/user/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this29._loading$.next(true);
+              return _this30._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this29.user = res;
+              _this30.user = res;
 
-              _this29._data$.next(_this29.user);
+              _this30._data$.next(_this30.user);
 
-              _this29._allData$.next(_this29.user);
+              _this30._allData$.next(_this30.user);
 
-              _this29._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this29._search();
+              _this30._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this30._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this29._loading$.next(false);
+                return _this30._loading$.next(false);
               })).subscribe(function (result) {
-                _this29._data$.next(result.data);
+                _this30._data$.next(result.data);
 
-                _this29._total$.next(result.total);
+                _this30._total$.next(result.total);
               });
 
-              _this29._search$.next();
+              _this30._search$.next();
             });
           }
         }, {
@@ -11190,12 +11586,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state27 = this._state,
-                sortColumn = _this$_state27.sortColumn,
-                sortDirection = _this$_state27.sortDirection,
-                pageSize = _this$_state27.pageSize,
-                page = _this$_state27.page,
-                searchTerm = _this$_state27.searchTerm; // 1. sort
+            var _this$_state28 = this._state,
+                sortColumn = _this$_state28.sortColumn,
+                sortDirection = _this$_state28.sortDirection,
+                pageSize = _this$_state28.pageSize,
+                page = _this$_state28.page,
+                searchTerm = _this$_state28.searchTerm; // 1. sort
 
             var sortedData = sort(this.user, sortColumn, sortDirection); //// 2. filter
 
@@ -11280,19 +11676,19 @@
         }, {
           key: "getpermission",
           value: function getpermission() {
-            var _this30 = this;
+            var _this31 = this;
 
             debugger;
             var url = "api/user/allpermission";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this30._loading$.next(true);
+              return _this31._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this30.permission = res;
+              _this31.permission = res;
 
-              _this30._obj$.next(_this30.permission);
+              _this31._obj$.next(_this31.permission);
 
-              _this30._allObj$.next(_this30.permission); //this._search$.pipe(
+              _this31._allObj$.next(_this31.permission); //this._search$.pipe(
               //  switchMap(() => this._search()),
               //  tap(() => this._loading$.next(false))
               //).subscribe(result => {
@@ -11301,7 +11697,7 @@
               //});
 
 
-              _this30._search$.next();
+              _this31._search$.next();
             });
           }
         }, {
@@ -11554,21 +11950,21 @@
         }, {
           key: "setSelectedBrand",
           value: function setSelectedBrand() {
-            var _this31 = this;
+            var _this32 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this31.loadingBrand = true;
+                _this32.loadingBrand = true;
 
-                _this31.f.brandID.setValue(sid);
+                _this32.f.brandID.setValue(sid);
 
-                _this31.brandService.getById(sid, _this31.f.brandID.value).subscribe(function (res) {
+                _this32.brandService.getById(sid, _this32.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this31.editForm(res);
+                  _this32.editForm(res);
 
-                  _this31.loadingBrand = false;
+                  _this32.loadingBrand = false;
                 });
               }
             });
@@ -11576,7 +11972,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this32 = this;
+            var _this33 = this;
 
             debugger;
             this.brandForm.markAllAsTouched();
@@ -11595,38 +11991,38 @@
               console.log(JSON.stringify(this.brandForm.value));
               this.brandService.insert(this.brandForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this32.ts.showSuccess("Success", "Record added successfully.");
+                  _this33.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this32.router.navigate(['/admin/brand']);
+                  _this33.router.navigate(['/admin/brand']);
                 }
 
-                _this32.loading = false;
+                _this33.loading = false;
               }, function (error) {
-                _this32.ts.showError("Error", "Failed to insert record.");
+                _this33.ts.showError("Error", "Failed to insert record.");
 
-                _this32.loading = false;
+                _this33.loading = false;
               });
             } else {
               //Update brand
               this.brandService.update(this.brandForm.value).subscribe(function (data) {
-                _this32.loading = false;
+                _this33.loading = false;
 
                 if (data != 0) {
-                  _this32.ts.showSuccess("Success", "Record updated successfully.");
+                  _this33.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this32.router.navigate(['/admin/brand']);
+                  _this33.router.navigate(['/admin/brand']);
                 }
               }, function (error) {
-                _this32.ts.showError("Error", "Failed to update record.");
+                _this33.ts.showError("Error", "Failed to update record.");
 
-                _this32.loading = false;
+                _this33.loading = false;
               });
             }
           }
         }, {
           key: "selectFile",
           value: function selectFile(event) {
-            var _this33 = this;
+            var _this34 = this;
 
             this.fileData = event.target.files[0];
 
@@ -11637,9 +12033,9 @@
 
               reader.onload = function () {
                 debugger;
-                _this33.imageBgUrl = reader.result;
+                _this34.imageBgUrl = reader.result;
 
-                _this33.f.companyURl.setValue(_this33.imageBgUrl);
+                _this34.f.companyURl.setValue(_this34.imageBgUrl);
               };
             } else {
               alert("file type should be image");
@@ -11814,16 +12210,16 @@
         }, {
           key: "Delete",
           value: function Delete(id) {
-            var _this34 = this;
+            var _this35 = this;
 
             this.service["delete"](parseInt(id)).subscribe(function (res) {
               if (res != 0) {
-                _this34.ts.showSuccess("Success", "Record deleted successfully.");
+                _this35.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this34.getData();
-              } else _this34.ts.showError("Error", "Failed to delete record.");
+                _this35.getData();
+              } else _this35.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this34.ts.showError("Error", "Failed to delete record.");
+              _this35.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -12063,21 +12459,21 @@
         }, {
           key: "setSelectedLocations",
           value: function setSelectedLocations() {
-            var _this35 = this;
+            var _this36 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this35.loadingLocations = true;
+                _this36.loadingLocations = true;
 
-                _this35.f.locationID.setValue(sid);
+                _this36.f.locationID.setValue(sid);
 
-                _this35.locationService.getById(sid, _this35.f.brandID.value).subscribe(function (res) {
+                _this36.locationService.getById(sid, _this36.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this35.editForm(res);
+                  _this36.editForm(res);
 
-                  _this35.loadingLocations = false;
+                  _this36.loadingLocations = false;
                 });
               }
             });
@@ -12085,7 +12481,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this36 = this;
+            var _this37 = this;
 
             debugger;
             this.locationForm.markAllAsTouched();
@@ -12105,32 +12501,32 @@
             if (parseInt(this.f.locationID.value) === 0) {
               //Insert location
               this.locationService.insert(this.locationForm.value).subscribe(function (data) {
-                _this36.loading = false;
+                _this37.loading = false;
 
                 if (data != 0) {
-                  _this36.ts.showSuccess("Success", "Record added successfully.");
+                  _this37.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this36.router.navigate(['/admin/location']);
+                  _this37.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this36.ts.showError("Error", "Failed to insert record.");
+                _this37.ts.showError("Error", "Failed to insert record.");
 
-                _this36.loading = false;
+                _this37.loading = false;
               });
             } else {
               //Update location
               this.locationService.update(this.locationForm.value).subscribe(function (data) {
-                _this36.loading = false;
+                _this37.loading = false;
 
                 if (data != 0) {
-                  _this36.ts.showSuccess("Success", "Record updated successfully.");
+                  _this37.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this36.router.navigate(['/admin/location']);
+                  _this37.router.navigate(['/admin/location']);
                 }
               }, function (error) {
-                _this36.ts.showError("Error", "Failed to update record.");
+                _this37.ts.showError("Error", "Failed to update record.");
 
-                _this36.loading = false;
+                _this37.loading = false;
               });
             }
           }
@@ -12295,16 +12691,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this37 = this;
+            var _this38 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this37.ts.showSuccess("Success", "Record deleted successfully.");
+                _this38.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this37.getData();
-              } else _this37.ts.showError("Error", "Failed to delete record.");
+                _this38.getData();
+              } else _this38.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this37.ts.showError("Error", "Failed to delete record.");
+              _this38.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -12636,19 +13032,19 @@
         }, {
           key: "GetDashboard",
           value: function GetDashboard() {
-            var _this38 = this;
+            var _this39 = this;
 
             this.service.getAllData().subscribe(function (res) {
-              _this38.dashboardSummary = res[0];
+              _this39.dashboardSummary = res[0];
             });
           }
         }, {
           key: "GetChart",
           value: function GetChart() {
-            var _this39 = this;
+            var _this40 = this;
 
             this.service.getChart().subscribe(function (res) {
-              _this39.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
+              _this40.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
             });
           }
         }]);
@@ -12814,21 +13210,21 @@
         }, {
           key: "setSelectedReport",
           value: function setSelectedReport() {
-            var _this40 = this;
+            var _this41 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this40.loadingReport = true;
+                _this41.loadingReport = true;
 
-                _this40.f.diagnosticCatID.setValue(sid);
+                _this41.f.diagnosticCatID.setValue(sid);
 
-                _this40.categoryService.getById(sid).subscribe(function (res) {
+                _this41.categoryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this40.editForm(res);
+                  _this41.editForm(res);
 
-                  _this40.loadingReport = false;
+                  _this41.loadingReport = false;
                 });
               }
             });
@@ -12836,7 +13232,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this41 = this;
+            var _this42 = this;
 
             debugger;
             this.categoryForm.markAllAsTouched();
@@ -12855,31 +13251,31 @@
               console.log(JSON.stringify(this.categoryForm.value));
               this.categoryService.insert(this.categoryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this41.ts.showSuccess("Success", "Record added successfully.");
+                  _this42.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this41.router.navigate(['/admin/laboratory/diagnosticcategory']);
+                  _this42.router.navigate(['/admin/laboratory/diagnosticcategory']);
                 }
 
-                _this41.loading = false;
+                _this42.loading = false;
               }, function (error) {
-                _this41.ts.showError("Error", "Failed to insert record.");
+                _this42.ts.showError("Error", "Failed to insert record.");
 
-                _this41.loading = false;
+                _this42.loading = false;
               });
             } else {
               //Update customer
               this.categoryService.update(this.categoryForm.value).subscribe(function (data) {
-                _this41.loading = false;
+                _this42.loading = false;
 
                 if (data != 0) {
-                  _this41.ts.showSuccess("Success", "Record updated successfully.");
+                  _this42.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this41.router.navigate(['/admin/laboratory/diagnosticcategory']);
+                  _this42.router.navigate(['/admin/laboratory/diagnosticcategory']);
                 }
               }, function (error) {
-                _this41.ts.showError("Error", "Failed to update record.");
+                _this42.ts.showError("Error", "Failed to update record.");
 
-                _this41.loading = false;
+                _this42.loading = false;
               });
             }
           }
@@ -12980,31 +13376,37 @@
       /* harmony import */
 
 
-      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! src/app/_directives/sortable.directive */
       "./src/app/_directives/sortable.directive.ts");
       /* harmony import */
 
 
-      var src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! src/app/_services/diagnosticcategories.service */
       "./src/app/_services/diagnosticcategories.service.ts");
       /* harmony import */
 
 
-      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/_services/local-storage.service */
       "./src/app/_services/local-storage.service.ts");
       /* harmony import */
 
 
-      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/_services/toastservice */
       "./src/app/_services/toastservice.ts");
       /* harmony import */
 
 
-      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! src/ExportExcel/excel.service */
       "./src/ExportExcel/excel.service.ts");
 
@@ -13029,7 +13431,7 @@
       };
 
       var DiagnosticCategoriesComponent = /*#__PURE__*/function () {
-        function DiagnosticCategoriesComponent(service, ls, excelService, ts, router) {
+        function DiagnosticCategoriesComponent(service, ls, excelService, ts, router, modalService) {
           _classCallCheck(this, DiagnosticCategoriesComponent);
 
           this.service = service;
@@ -13037,6 +13439,7 @@
           this.excelService = excelService;
           this.ts = ts;
           this.router = router;
+          this.modalService = modalService;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -13075,18 +13478,46 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this42 = this;
+            var _this43 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this42.ts.showSuccess("Success", "Record deleted successfully.");
+                _this43.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this42.getData();
-              } else _this42.ts.showError("Error", "Failed to delete record.");
+                _this43.getData();
+              } else _this43.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this42.ts.showError("Error", "Failed to delete record.");
+              _this43.ts.showError("Error", "Failed to delete record.");
             });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this44 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this44.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this44.Delete(obj);
+              }
+            }, function (reason) {
+              _this44.closeResult = "Dismissed ".concat(_this44.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
           }
         }]);
 
@@ -13095,22 +13526,24 @@
 
       DiagnosticCategoriesComponent.ctorParameters = function () {
         return [{
-          type: src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_3__["DiagnosticCategoryService"]
+          type: src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_4__["DiagnosticCategoryService"]
         }, {
-          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_5__["LocalStorageService"]
         }, {
-          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"]
         }, {
-          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]
         }];
       };
 
       DiagnosticCategoriesComponent.propDecorators = {
         headers: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
-          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"]]
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_3__["NgbdSortableHeader"]]
         }]
       };
       DiagnosticCategoriesComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -13118,11 +13551,11 @@
         template: __importDefault(__webpack_require__(
         /*! raw-loader!./diagnosticcategories.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.html"))["default"],
-        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"]],
         styles: [__importDefault(__webpack_require__(
         /*! ./diagnosticcategories.component.css */
         "./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_3__["DiagnosticCategoryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])], DiagnosticCategoriesComponent);
+      }), __metadata("design:paramtypes", [src_app_services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_4__["DiagnosticCategoryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_5__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_7__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]])], DiagnosticCategoriesComponent);
       /***/
     },
 
@@ -13199,6 +13632,12 @@
       var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! @angular/common/http */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var src_app_services_file_upload_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! src/app/_services/file-upload.service */
+      "./src/app/_services/file-upload.service.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -13221,7 +13660,7 @@
       };
 
       var AddreportsComponent = /*#__PURE__*/function () {
-        function AddreportsComponent(http, formBuilder, router, route, ls, ts, laboratoryService, diagnosticcategoriesService) {
+        function AddreportsComponent(http, formBuilder, router, route, ls, ts, laboratoryService, diagnosticcategoriesService, fileUploadService) {
           _classCallCheck(this, AddreportsComponent);
 
           this.http = http;
@@ -13232,15 +13671,20 @@
           this.ts = ts;
           this.laboratoryService = laboratoryService;
           this.diagnosticcategoriesService = diagnosticcategoriesService;
+          this.fileUploadService = fileUploadService;
           this.formData = {
             customerID: '',
-            diagnosticCatID: ''
+            diagnosticCatID: '',
+            laboratoryID: '',
+            pdfFile: File = null
           };
+          this.selectedFile = null;
           this.submitted = false;
           this.loading = false;
           this.loadingReport = false;
           this.ButtonText = "Save";
           this.CustomerList = [];
+          this.RegistrationList = [];
           this.CategoryList = [];
           this.selectedCustomerIds = [];
           this.selectedCategoryIds = [];
@@ -13249,38 +13693,38 @@
           this.fileName = '';
           this.createForm();
           this.loadCustomer();
+          this.loadRNo();
           this.loadCategories();
         }
 
         _createClass(AddreportsComponent, [{
           key: "onFileChange",
-          value: function onFileChange(event) {
-            this.selectedFile = event.target.files[0];
+          value: function onFileChange(files) {
+            debugger;
+            this.selectedFile = files[0];
           }
         }, {
           key: "onCustomerSelect",
           value: function onCustomerSelect(customerID) {
-            debugger; // this.formData.customerID = customerID.split(' ')[1];
-
+            debugger;
+            this.formData.customerID = customerID;
+          }
+        }, {
+          key: "onCustomerSelectR",
+          value: function onCustomerSelectR(customerID) {
+            debugger;
             this.formData.customerID = customerID;
           }
         }, {
           key: "onDiagnosticSelect",
           value: function onDiagnosticSelect(diagnosticCatID) {
-            debugger; // this.formData.diagnosticCatID = diagnosticCatID.split(' ')[1];
-
+            debugger;
             this.formData.diagnosticCatID = diagnosticCatID;
           }
         }, {
           key: "ngOnInit",
           value: function ngOnInit() {
             this.setSelectedReport();
-          }
-        }, {
-          key: "onFileSelect",
-          value: function onFileSelect(files) {
-            debugger;
-            this.selectedFile = files.item(0);
           }
         }, {
           key: "createForm",
@@ -13297,35 +13741,32 @@
         }, {
           key: "editForm",
           value: function editForm(obj) {
-            debugger; // this.f.customerID.setValue(obj.customerID);
-            // this.f.diagnosticCatID.setValue(obj.diagnosticCatID);
-
-            console.log(this.CategoryList);
-            console.log(this.CustomerList);
+            debugger;
             this.formData.customerID = obj.customerID;
             this.formData.diagnosticCatID = obj.diagnoseCatID;
             this.pdfFilePath = obj.image;
+            this.formData.laboratoryID = obj.laboratoryID;
             this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
           }
         }, {
           key: "setSelectedReport",
           value: function setSelectedReport() {
-            var _this43 = this;
+            var _this45 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this43.loadingReport = true;
+                _this45.loadingReport = true;
 
-                _this43.f.laboratoryID.setValue(sid);
+                _this45.f.laboratoryID.setValue(sid);
 
-                _this43.laboratoryService.getById(sid).subscribe(function (res) {
+                _this45.laboratoryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this43.editForm(res);
+                  _this45.editForm(res);
 
                   debugger;
-                  _this43.loadingReport = false;
+                  _this45.loadingReport = false;
                 });
               }
             });
@@ -13333,38 +13774,68 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this44 = this;
+            var _this46 = this;
 
             debugger;
-            var formData = new FormData();
-            formData.append('customerID', this.formData.customerID);
-            formData.append('diagnosticCatID', this.formData.diagnosticCatID);
-            formData.append('pdfFile', this.selectedFile, this.selectedFile.name);
-            this.http.post('api/laboratory/insert', formData).subscribe(function (response) {
-              _this44.ts.showSuccess("Success", "Record added successfully.");
 
-              _this44.router.navigate(['/admin/laboratory/uploadreport']);
-            }, function (error) {});
+            if (parseInt(this.f.laboratoryID.value) === 0) {
+              var formData1 = new FormData();
+              formData1.append('customerID', this.formData.customerID);
+              formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
+              formData1.append('file', this.selectedFile);
+              this.http.post('api/laboratory/insert', formData1).subscribe(function (response) {
+                _this46.ts.showSuccess("Success", "Record added successfully.");
+
+                _this46.router.navigate(['/admin/laboratory/uploadreport']);
+              }, function (error) {});
+            } else {
+              var _formData = new FormData();
+
+              _formData.append('customerID', this.formData.customerID);
+
+              _formData.append('diagnosticCatID', this.formData.diagnosticCatID);
+
+              _formData.append('laboratoryID', this.formData.laboratoryID);
+
+              _formData.append('file', this.selectedFile);
+
+              this.http.post('api/laboratory/update', _formData).subscribe(function (response) {
+                _this46.ts.showSuccess("Success", "Record added successfully.");
+
+                _this46.router.navigate(['/admin/laboratory/uploadreport']);
+              }, function (error) {});
+            }
           }
         }, {
           key: "loadCustomer",
           value: function loadCustomer() {
-            var _this45 = this;
+            var _this47 = this;
 
             debugger;
             this.laboratoryService.loadCustomer().subscribe(function (res) {
               debugger;
-              _this45.CustomerList = res;
+              _this47.CustomerList = res;
+            });
+          }
+        }, {
+          key: "loadRNo",
+          value: function loadRNo() {
+            var _this48 = this;
+
+            debugger;
+            this.laboratoryService.loadRNo().subscribe(function (res) {
+              debugger;
+              _this48.RegistrationList = res;
             });
           }
         }, {
           key: "loadCategories",
           value: function loadCategories() {
-            var _this46 = this;
+            var _this49 = this;
 
             debugger;
             this.diagnosticcategoriesService.loadCategory().subscribe(function (res) {
-              _this46.CategoryList = res;
+              _this49.CategoryList = res;
             });
           }
         }, {
@@ -13401,6 +13872,8 @@
           type: src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_5__["LaboratoryService"]
         }, {
           type: _services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_7__["DiagnosticCategoryService"]
+        }, {
+          type: src_app_services_file_upload_service__WEBPACK_IMPORTED_MODULE_9__["FileUploadService"]
         }];
       };
 
@@ -13417,46 +13890,7 @@
         template: __importDefault(__webpack_require__(
         /*! raw-loader!./addreports.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/laboratory/uploadreport/addreports/addreports.component.html"))["default"]
-      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClient"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"], src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_5__["LaboratoryService"], _services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_7__["DiagnosticCategoryService"]])], AddreportsComponent); // onSubmit() {
-      //   debugger
-      //   const formData = new FormData();
-      //   formData.append('customerID', this.formData.customerID);
-      //   formData.append('diagnosticCatID', this.formData.diagnosticCatID);
-      //   formData.append('pdfFile', this.selectedFile, this.selectedFile.name);  
-      //   // this.reportForm.markAllAsTouched();
-      //   // this.submitted = true;
-      //   // if (this.formData.invalid) { return; }
-      //   this.loading = true;
-      //   this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-      //   //this.f.pdfFile.setValue(this.selectedFile.name);
-      //   if (parseInt(this.f.laboratoryID.value) === 0) {
-      //     //Insert customer
-      //     console.log(JSON.stringify(this.reportForm.value));
-      //     this.laboratoryService.insert(this.formData.value).subscribe(data => {
-      //       if (data != 0) {
-      //         this.ts.showSuccess("Success", "Record added successfully.")
-      //         this.router.navigate(['/admin/laboratory/uploadreport']);
-      //       }
-      //       this.loading = false;
-      //     }, error => {
-      //       this.ts.showError("Error", "Failed to insert record.")
-      //       this.loading = false;
-      //     });
-      //   } else {
-      //     //Update customer
-      //     this.laboratoryService.update(this.reportForm.value).subscribe(data => {
-      //       this.loading = false;
-      //       if (data != 0) {
-      //         this.ts.showSuccess("Success", "Record updated successfully.")
-      //         this.router.navigate(['/admin/laboratory/uploadreport']);
-      //       }
-      //     }, error => {
-      //       this.ts.showError("Error", "Failed to update record.")
-      //       this.loading = false;
-      //     });
-      //   }
-      // }
-
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClient"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_6__["ToastService"], src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_5__["LaboratoryService"], _services_diagnosticcategories_service__WEBPACK_IMPORTED_MODULE_7__["DiagnosticCategoryService"], src_app_services_file_upload_service__WEBPACK_IMPORTED_MODULE_9__["FileUploadService"]])], AddreportsComponent);
       /***/
     },
 
@@ -13557,6 +13991,12 @@
 
 
       var file_saver__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_8__);
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -13579,7 +14019,7 @@
       };
 
       var UploadreportComponent = /*#__PURE__*/function () {
-        function UploadreportComponent(service, ls, excelService, ts, router, http) {
+        function UploadreportComponent(service, ls, excelService, ts, router, http, modalService) {
           _classCallCheck(this, UploadreportComponent);
 
           this.service = service;
@@ -13588,6 +14028,7 @@
           this.ts = ts;
           this.router = router;
           this.http = http;
+          this.modalService = modalService;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -13626,36 +14067,62 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this47 = this;
+            var _this50 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this47.ts.showSuccess("Success", "Record deleted successfully.");
+                _this50.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this47.getData();
-              } else _this47.ts.showError("Error", "Failed to delete record.");
+                _this50.getData();
+              } else _this50.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this47.ts.showError("Error", "Failed to delete record.");
+              _this50.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "DownloadRpt",
           value: function DownloadRpt(URL) {
             debugger;
-            var pth = URL.replace("D:\\Inetpub\\mamjihospital.online\\admin.mamjihospital.online\\", "");
-            var a = pth.replace("pdfFiles/", "pdfFiles\\"); //local
+            var pth = URL.replace("/ClientApp/dist/assets/Upload/pdfFiles/", "ClientApp/dist/assets/Upload/pdfFiles/"); //var rptName = pth.replace("pdfFiles/","");
+            //local
             //const apiUrl = 'http://localhost:59660/api/laboratory/loadpdf?path=' + URL;  
             //live
 
-            var apiUrl = 'http://admin.mamjihospital.online/api/laboratory/loadpdf?path=' + URL; //const apiUrl = Global.DomainName + '/api/laboratory/loadpdf?path=' + URL;  
-            //const apiUrl = 'http:\\admin.mamjihospital.online\\api\\laboratory\\loadpdf?path=' + a;  
-
-            var rptName = pth.replace("pdfFiles/", "");
+            var apiUrl = 'http://admin.mamjihospital.online/api/laboratory/loadpdf?path=' + pth;
+            var rptName = pth.replace("ClientApp/dist/assets/Upload/pdfFiles/", "");
             this.http.get(apiUrl, {
               responseType: 'blob'
             }).subscribe(function (response) {
-              Object(file_saver__WEBPACK_IMPORTED_MODULE_8__["saveAs"])(response, 'Report_' + rptName);
+              Object(file_saver__WEBPACK_IMPORTED_MODULE_8__["saveAs"])(response, rptName);
             });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this51 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this51.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this51.Delete(obj);
+              }
+            }, function (reason) {
+              _this51.closeResult = "Dismissed ".concat(_this51.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
           }
         }]);
 
@@ -13675,6 +14142,8 @@
           type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
         }, {
           type: _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["NgbModal"]
         }];
       };
 
@@ -13693,7 +14162,7 @@
         styles: [__importDefault(__webpack_require__(
         /*! ./uploadreport.component.css */
         "./src/app/admin/laboratory/uploadreport/uploadreport.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_3__["LaboratoryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"]])], UploadreportComponent);
+      }), __metadata("design:paramtypes", [src_app_services_laboratory_service__WEBPACK_IMPORTED_MODULE_3__["LaboratoryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["NgbModal"]])], UploadreportComponent);
       /***/
     },
 
@@ -13875,21 +14344,21 @@
         }, {
           key: "setSelectedDoctor",
           value: function setSelectedDoctor() {
-            var _this48 = this;
+            var _this52 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this48.loadingDoctor = true;
+                _this52.loadingDoctor = true;
 
-                _this48.f.doctorID.setValue(sid);
+                _this52.f.doctorID.setValue(sid);
 
-                _this48.doctorService.getById(sid).subscribe(function (res) {
+                _this52.doctorService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this48.editForm(res);
+                  _this52.editForm(res);
 
-                  _this48.loadingDoctor = false;
+                  _this52.loadingDoctor = false;
                 });
               }
             });
@@ -13897,26 +14366,26 @@
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this49 = this;
+            var _this53 = this;
 
             this.appointmentService.loadSpecialities().subscribe(function (res) {
-              _this49.selectedSpecialityList = res;
+              _this53.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadTimeSlotsAll",
           value: function loadTimeSlotsAll() {
-            var _this50 = this;
+            var _this54 = this;
 
             debugger;
             this.appointmentService.loadTimeLists().subscribe(function (res) {
-              _this50.selectedTimeList = res;
+              _this54.selectedTimeList = res;
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this51 = this;
+            var _this55 = this;
 
             debugger;
             this.doctorForm.markAllAsTouched();
@@ -13937,31 +14406,31 @@
               console.log(JSON.stringify(this.doctorForm.value));
               this.doctorService.insert(this.doctorForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this51.ts.showSuccess("Success", "Record added successfully.");
+                  _this55.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this51.router.navigate(['/admin/managedoctor/doctor']);
+                  _this55.router.navigate(['/admin/managedoctor/doctor']);
                 }
 
-                _this51.loading = false;
+                _this55.loading = false;
               }, function (error) {
-                _this51.ts.showError("Error", "Failed to insert record.");
+                _this55.ts.showError("Error", "Failed to insert record.");
 
-                _this51.loading = false;
+                _this55.loading = false;
               });
             } else {
               //Update doctor
               this.doctorService.update(this.doctorForm.value).subscribe(function (data) {
-                _this51.loading = false;
+                _this55.loading = false;
 
                 if (data != 0) {
-                  _this51.ts.showSuccess("Success", "Record updated successfully.");
+                  _this55.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this51.router.navigate(['/admin/managedoctor/doctor']);
+                  _this55.router.navigate(['/admin/managedoctor/doctor']);
                 }
               }, function (error) {
-                _this51.ts.showError("Error", "Failed to update record.");
+                _this55.ts.showError("Error", "Failed to update record.");
 
-                _this51.loading = false;
+                _this55.loading = false;
               });
             }
           }
@@ -14161,6 +14630,12 @@
       var src_app_services_doctors_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/_services/doctors.service */
       "./src/app/_services/doctors.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -14183,14 +14658,15 @@
       };
 
       var DoctorComponent = /*#__PURE__*/function () {
-        function DoctorComponent(service, ls, excelService, ts, router) {
+        function DoctorComponent(service, ls, excelService, ts, router, modalService) {
           _classCallCheck(this, DoctorComponent);
 
           this.service = service;
           this.ls = ls;
           this.excelService = excelService;
           this.ts = ts;
-          this.router = router; //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
+          this.router = router;
+          this.modalService = modalService; //this.selectedDoctor =this.ls.getSelectedDoctor().doctorID;
 
           this.loading$ = service.loading$;
           this.submit = false;
@@ -14199,12 +14675,12 @@
         _createClass(DoctorComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this52 = this;
+            var _this56 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this52.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this56.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this52.ts.showError("Error", "Failed to export");
+              _this56.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -14242,17 +14718,45 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this53 = this;
+            var _this57 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this53.ts.showSuccess("Success", "Record deleted successfully.");
+                _this57.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this53.getData();
-              } else _this53.ts.showError("Error", "Failed to delete record.");
+                _this57.getData();
+              } else _this57.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this53.ts.showError("Error", "Failed to delete record.");
+              _this57.ts.showError("Error", "Failed to delete record.");
             });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this58 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this58.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this58.Delete(obj);
+              }
+            }, function (reason) {
+              _this58.closeResult = "Dismissed ".concat(_this58.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
           }
         }]);
 
@@ -14270,6 +14774,8 @@
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]
         }];
       };
 
@@ -14288,7 +14794,7 @@
         styles: [__importDefault(__webpack_require__(
         /*! ./doctor.component.css */
         "./src/app/admin/managedoctor/doctor/doctor.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [src_app_services_doctors_service__WEBPACK_IMPORTED_MODULE_6__["DoctorsService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], DoctorComponent);
+      }), __metadata("design:paramtypes", [src_app_services_doctors_service__WEBPACK_IMPORTED_MODULE_6__["DoctorsService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])], DoctorComponent);
       /***/
     },
 
@@ -14447,21 +14953,21 @@
         }, {
           key: "setSelectedaddon",
           value: function setSelectedaddon() {
-            var _this54 = this;
+            var _this59 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this54.loadingaddon = true;
+                _this59.loadingaddon = true;
 
-                _this54.f.addonID.setValue(sid);
+                _this59.f.addonID.setValue(sid);
 
-                _this54.addonsService.getById(sid, _this54.f.brandID.value).subscribe(function (res) {
+                _this59.addonsService.getById(sid, _this59.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this54.editForm(res);
+                  _this59.editForm(res);
 
-                  _this54.loadingaddon = false;
+                  _this59.loadingaddon = false;
                 });
               }
             });
@@ -14469,7 +14975,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this55 = this;
+            var _this60 = this;
 
             this.addonForm.markAllAsTouched();
             this.submitted = true;
@@ -14487,32 +14993,32 @@
               console.log(JSON.stringify(this.addonForm.value));
               this.addonsService.insert(this.addonForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this55.ts.showSuccess("Success", "Record added successfully.");
+                  _this60.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this55.router.navigate(['/admin/addons']);
+                  _this60.router.navigate(['/admin/addons']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this55.loading = false;
+                _this60.loading = false;
               }, function (error) {
-                _this55.ts.showError("Error", "Failed to insert record.");
+                _this60.ts.showError("Error", "Failed to insert record.");
 
-                _this55.loading = false;
+                _this60.loading = false;
               });
             } else {
               //Update modifier
               this.addonsService.update(this.addonForm.value).subscribe(function (data) {
-                _this55.loading = false;
+                _this60.loading = false;
 
                 if (data != 0) {
-                  _this55.ts.showSuccess("Success", "Record updated successfully.");
+                  _this60.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this55.router.navigate(['/admin/addons']);
+                  _this60.router.navigate(['/admin/addons']);
                 }
               }, function (error) {
-                _this55.ts.showError("Error", "Failed to update record.");
+                _this60.ts.showError("Error", "Failed to update record.");
 
-                _this55.loading = false;
+                _this60.loading = false;
               });
             }
           }
@@ -14666,11 +15172,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this56 = this;
+            var _this61 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this56.ts.showError("Error", "Failed to export");
+              _this61.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -14702,16 +15208,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this57 = this;
+            var _this62 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this57.ts.showSuccess("Success", "Record deleted successfully.");
+                _this62.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this57.getData();
-              } else _this57.ts.showError("Error", "Failed to delete record.");
+                _this62.getData();
+              } else _this62.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this57.ts.showError("Error", "Failed to delete record.");
+              _this62.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -14912,21 +15418,21 @@
         }, {
           key: "setSelectedCategory",
           value: function setSelectedCategory() {
-            var _this58 = this;
+            var _this63 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this58.loadingCategory = true;
+                _this63.loadingCategory = true;
 
-                _this58.f.categoryID.setValue(sid);
+                _this63.f.categoryID.setValue(sid);
 
-                _this58.categoryService.getById(sid, _this58.f.brandID.value).subscribe(function (res) {
+                _this63.categoryService.getById(sid, _this63.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this58.editForm(res);
+                  _this63.editForm(res);
 
-                  _this58.loadingCategory = false;
+                  _this63.loadingCategory = false;
                 });
               }
             });
@@ -14934,7 +15440,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this59 = this;
+            var _this64 = this;
 
             this.categoryForm.markAllAsTouched();
             this.submitted = true;
@@ -14951,31 +15457,31 @@
               //Insert category
               this.categoryService.insert(this.categoryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this59.ts.showSuccess("Success", "Record added successfully.");
+                  _this64.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this59.router.navigate(['/admin/category']);
+                  _this64.router.navigate(['/admin/category']);
                 }
 
-                _this59.loading = false;
+                _this64.loading = false;
               }, function (error) {
-                _this59.ts.showError("Error", "Failed to insert record.");
+                _this64.ts.showError("Error", "Failed to insert record.");
 
-                _this59.loading = false;
+                _this64.loading = false;
               });
             } else {
               //Update category
               this.categoryService.update(this.categoryForm.value).subscribe(function (data) {
-                _this59.loading = false;
+                _this64.loading = false;
 
                 if (data != 0) {
-                  _this59.ts.showSuccess("Success", "Record updated successfully.");
+                  _this64.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this59.router.navigate(['/admin/category']);
+                  _this64.router.navigate(['/admin/category']);
                 }
               }, function (error) {
-                _this59.ts.showError("Error", "Failed to update record.");
+                _this64.ts.showError("Error", "Failed to update record.");
 
-                _this59.loading = false;
+                _this64.loading = false;
               });
             }
           }
@@ -15137,11 +15643,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this60 = this;
+            var _this65 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this60.ts.showError("Error", "Failed to export");
+              _this65.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -15173,18 +15679,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this61 = this;
+            var _this66 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this61.ts.showSuccess("Success", "Record deleted successfully.");
+                _this66.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this61.getData();
+                _this66.getData();
               } else {
-                _this61.ts.showError("Error", "Failed to delete record.");
+                _this66.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this61.ts.showError("Error", "Failed to delete record.");
+              _this66.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15422,21 +15928,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this62 = this;
+            var _this67 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this62.loadingItems = true;
+                _this67.loadingItems = true;
 
-                _this62.f.itemID.setValue(sid);
+                _this67.f.itemID.setValue(sid);
 
-                _this62.itemsService.getById(sid, _this62.f.brandID.value).subscribe(function (res) {
+                _this67.itemsService.getById(sid, _this67.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this62.editForm(res);
+                  _this67.editForm(res);
 
-                  _this62.loadingItems = false;
+                  _this67.loadingItems = false;
                 });
               }
             });
@@ -15444,7 +15950,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this63 = this;
+            var _this68 = this;
 
             this.itemsForm.markAllAsTouched();
             this.submitted = true;
@@ -15464,31 +15970,31 @@
               console.log(JSON.stringify(this.itemsForm.value));
               this.itemsService.insert(this.itemsForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this63.ts.showSuccess("Success", "Record added successfully.");
+                  _this68.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this63.router.navigate(['/admin/item']);
+                  _this68.router.navigate(['/admin/item']);
                 }
 
-                _this63.loading = false;
+                _this68.loading = false;
               }, function (error) {
-                _this63.ts.showError("Error", "Failed to insert record.");
+                _this68.ts.showError("Error", "Failed to insert record.");
 
-                _this63.loading = false;
+                _this68.loading = false;
               });
             } else {
               //Update item
               this.itemsService.update(this.itemsForm.value).subscribe(function (data) {
-                _this63.loading = false;
+                _this68.loading = false;
 
                 if (data != 0) {
-                  _this63.ts.showSuccess("Success", "Record updated successfully.");
+                  _this68.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this63.router.navigate(['/admin/item']);
+                  _this68.router.navigate(['/admin/item']);
                 }
               }, function (error) {
-                _this63.ts.showError("Error", "Failed to update record.");
+                _this68.ts.showError("Error", "Failed to update record.");
 
-                _this63.loading = false;
+                _this68.loading = false;
               });
             }
           } // private loadCategory() {
@@ -15500,28 +16006,28 @@
         }, {
           key: "loadActiveCategory",
           value: function loadActiveCategory() {
-            var _this64 = this;
+            var _this69 = this;
 
             this.itemsService.loadActiveCategories(this.f.brandID.value).subscribe(function (res) {
-              _this64.CategoriesActive = res;
+              _this69.CategoriesActive = res;
             });
           }
         }, {
           key: "loadModifiers",
           value: function loadModifiers() {
-            var _this65 = this;
+            var _this70 = this;
 
             this.itemsService.loadModifierList(this.f.brandID.value).subscribe(function (res) {
-              _this65.ModifiersList = res;
+              _this70.ModifiersList = res;
             });
           }
         }, {
           key: "loadAddons",
           value: function loadAddons() {
-            var _this66 = this;
+            var _this71 = this;
 
             this.itemsService.loadAddonList(this.f.brandID.value).subscribe(function (res) {
-              _this66.AddonsList = res;
+              _this71.AddonsList = res;
             });
           }
         }, {
@@ -15674,12 +16180,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this67 = this;
+            var _this72 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this67.ts.showError("Error", "Failed to export");
+              _this72.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -15711,16 +16217,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this68 = this;
+            var _this73 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this68.ts.showSuccess("Success", "Record deleted successfully.");
+                _this73.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this68.getData();
-              } else _this68.ts.showError("Error", "Failed to delete record.");
+                _this73.getData();
+              } else _this73.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this68.ts.showError("Error", "Failed to delete record.");
+              _this73.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -15886,20 +16392,20 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this69 = this;
+            var _this74 = this;
 
             this.itemsService.getTodaysItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               debugger;
               var stringToConvert = res.items;
-              _this69.isItemSetting = res.isItemSetting;
-              _this69.itemSettingTitle = res.itemSettingTitle;
-              _this69.selectedItemIds = stringToConvert.split(',').map(Number);
+              _this74.isItemSetting = res.isItemSetting;
+              _this74.itemSettingTitle = res.itemSettingTitle;
+              _this74.selectedItemIds = stringToConvert.split(',').map(Number);
             });
           }
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this70 = this;
+            var _this75 = this;
 
             var obj = new Object();
             obj["Items"] = this.selectedItemIds.toString();
@@ -15908,29 +16414,29 @@
             obj["IsItemSetting"] = this.isItemSetting;
             this.loading = true;
             this.itemsService.updateSettings(obj).subscribe(function (data) {
-              _this70.loading = false;
+              _this75.loading = false;
 
               if (data != 0) {
-                _this70.ts.showSuccess("Success", "Updated successfully.");
+                _this75.ts.showSuccess("Success", "Updated successfully.");
 
-                _this70.router.navigate(['/admin/item/settings']);
+                _this75.router.navigate(['/admin/item/settings']);
               }
             }, function (error) {
-              _this70.ts.showError("Error", "Failed to update.");
+              _this75.ts.showError("Error", "Failed to update.");
 
-              _this70.loading = false;
+              _this75.loading = false;
             });
           }
         }, {
           key: "loadItems",
           value: function loadItems() {
-            var _this71 = this;
+            var _this76 = this;
 
             this.itemsService.loadItems(this.ls.getSelectedBrand().brandID).subscribe(function (res) {
               debugger;
-              _this71.ItemsList = res;
+              _this76.ItemsList = res;
 
-              _this71.setSelecteditem();
+              _this76.setSelecteditem();
             });
           }
         }]);
@@ -16121,21 +16627,21 @@
         }, {
           key: "setSelectedmodifier",
           value: function setSelectedmodifier() {
-            var _this72 = this;
+            var _this77 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this72.loadingmodifier = true;
+                _this77.loadingmodifier = true;
 
-                _this72.f.modifierID.setValue(sid);
+                _this77.f.modifierID.setValue(sid);
 
-                _this72.modifierService.getById(sid, _this72.f.brandID.value).subscribe(function (res) {
+                _this77.modifierService.getById(sid, _this77.f.brandID.value).subscribe(function (res) {
                   //Set Forms
-                  _this72.editForm(res);
+                  _this77.editForm(res);
 
-                  _this72.loadingmodifier = false;
+                  _this77.loadingmodifier = false;
                 });
               }
             });
@@ -16143,7 +16649,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this73 = this;
+            var _this78 = this;
 
             this.modifierForm.markAllAsTouched();
             this.submitted = true;
@@ -16161,32 +16667,32 @@
               console.log(JSON.stringify(this.modifierForm.value));
               this.modifierService.insert(this.modifierForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this73.ts.showSuccess("Success", "Record added successfully.");
+                  _this78.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this73.router.navigate(['/admin/modifier']);
+                  _this78.router.navigate(['/admin/modifier']);
                 } // this.alertService.success("Item has been created");
 
 
-                _this73.loading = false;
+                _this78.loading = false;
               }, function (error) {
-                _this73.ts.showError("Error", "Failed to insert record.");
+                _this78.ts.showError("Error", "Failed to insert record.");
 
-                _this73.loading = false;
+                _this78.loading = false;
               });
             } else {
               //Update modifier
               this.modifierService.update(this.modifierForm.value).subscribe(function (data) {
-                _this73.loading = false;
+                _this78.loading = false;
 
                 if (data != 0) {
-                  _this73.ts.showSuccess("Success", "Record updated successfully.");
+                  _this78.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this73.router.navigate(['/admin/modifier']);
+                  _this78.router.navigate(['/admin/modifier']);
                 }
               }, function (error) {
-                _this73.ts.showError("Error", "Failed to update record.");
+                _this78.ts.showError("Error", "Failed to update record.");
 
-                _this73.loading = false;
+                _this78.loading = false;
               });
             }
           }
@@ -16340,12 +16846,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this74 = this;
+            var _this79 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this74.ts.showError("Error", "Failed to export");
+              _this79.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -16377,16 +16883,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this75 = this;
+            var _this80 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this75.ts.showSuccess("Success", "Record deleted successfully.");
+                _this80.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this75.getData();
-              } else _this75.ts.showError("Error", "Failed to delete record.");
+                _this80.getData();
+              } else _this80.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this75.ts.showError("Error", "Failed to delete record.");
+              _this80.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -16557,19 +17063,19 @@
         }, {
           key: "updateStatus",
           value: function updateStatus(item, status) {
-            var _this76 = this;
+            var _this81 = this;
 
             debugger;
             item.isRead = status; //Update 
 
             this.service.status(item).subscribe(function (data) {
               if (data != 0) {
-                _this76.ts.showSuccess("Success", "Record updated successfully.");
+                _this81.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this76.router.navigate(['/admin/notification']);
+                _this81.router.navigate(['/admin/notification']);
               }
             }, function (error) {
-              _this76.ts.showError("Error", "Failed to update record.");
+              _this81.ts.showError("Error", "Failed to update record.");
             });
           }
         }]);
@@ -16762,15 +17268,15 @@
         }, {
           key: "onSelect",
           value: function onSelect(formName) {
-            var _this77 = this;
+            var _this82 = this;
 
             debugger;
             this.permissionService.getById(formName).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this77.editForm(res);
+                _this82.editForm(res);
 
-                _this77.formName = res[0];
+                _this82.formName = res[0];
               }
 
               debugger;
@@ -16779,7 +17285,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this78 = this;
+            var _this83 = this;
 
             debugger;
             {
@@ -16802,28 +17308,28 @@
 
               this.f.roleName.setValue(this.f.roleName.value);
               this.permissionService.update(this.permissionForm.value).subscribe(function (data) {
-                _this78.loading = false;
+                _this83.loading = false;
 
                 if (data != 0) {
-                  _this78.ts.showSuccess("Success", "Record updated successfully.");
+                  _this83.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this78.router.navigate(['/admin/permission']);
+                  _this83.router.navigate(['/admin/permission']);
                 }
               }, function (error) {
-                _this78.ts.showError("Error", "Failed to update record.");
+                _this83.ts.showError("Error", "Failed to update record.");
 
-                _this78.loading = false;
+                _this83.loading = false;
               });
             }
           }
         }, {
           key: "loadUser",
           value: function loadUser() {
-            var _this79 = this;
+            var _this84 = this;
 
             debugger;
             this.userService.loadUser().subscribe(function (res) {
-              _this79.UserList = res;
+              _this84.UserList = res;
             }); // this.UserList = [
             //   { "type": "Super Admin" },
             //   { "type": "Admin" },
@@ -17107,21 +17613,21 @@
         }, {
           key: "setSelectedmedicine",
           value: function setSelectedmedicine() {
-            var _this80 = this;
+            var _this85 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this80.loadingmedicine = true;
+                _this85.loadingmedicine = true;
 
-                _this80.f.medicineID.setValue(sid);
+                _this85.f.medicineID.setValue(sid);
 
-                _this80.medicineService.getById(sid).subscribe(function (res) {
+                _this85.medicineService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this80.editForm(res);
+                  _this85.editForm(res);
 
-                  _this80.loadingmedicine = false;
+                  _this85.loadingmedicine = false;
                 });
               }
             });
@@ -17129,7 +17635,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this81 = this;
+            var _this86 = this;
 
             this.medicineForm.markAllAsTouched();
             this.submitted = true;
@@ -17147,31 +17653,31 @@
               console.log(JSON.stringify(this.medicineForm.value));
               this.medicineService.insert(this.medicineForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this81.ts.showSuccess("Success", "Record added successfully.");
+                  _this86.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this81.router.navigate(['/admin/pharmacy/medicine']);
+                  _this86.router.navigate(['/admin/pharmacy/medicine']);
                 }
 
-                _this81.loading = false;
+                _this86.loading = false;
               }, function (error) {
-                _this81.ts.showError("Error", "Failed to insert record.");
+                _this86.ts.showError("Error", "Failed to insert record.");
 
-                _this81.loading = false;
+                _this86.loading = false;
               });
             } else {
               //Update medicine
               this.medicineService.update(this.medicineForm.value).subscribe(function (data) {
-                _this81.loading = false;
+                _this86.loading = false;
 
                 if (data != 0) {
-                  _this81.ts.showSuccess("Success", "Record updated successfully.");
+                  _this86.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this81.router.navigate(['/admin/pharmacy/medicine']);
+                  _this86.router.navigate(['/admin/pharmacy/medicine']);
                 }
               }, function (error) {
-                _this81.ts.showError("Error", "Failed to update record.");
+                _this86.ts.showError("Error", "Failed to update record.");
 
-                _this81.loading = false;
+                _this86.loading = false;
               });
             }
           }
@@ -17279,6 +17785,12 @@
       var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/ExportExcel/excel.service */
       "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -17301,7 +17813,7 @@
       };
 
       var MedicineComponent = /*#__PURE__*/function () {
-        function MedicineComponent(service, ls, excelService, ts, router) {
+        function MedicineComponent(service, ls, excelService, ts, router, modalService) {
           _classCallCheck(this, MedicineComponent);
 
           this.service = service;
@@ -17309,6 +17821,7 @@
           this.excelService = excelService;
           this.ts = ts;
           this.router = router;
+          this.modalService = modalService;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -17354,18 +17867,46 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this82 = this;
+            var _this87 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this82.ts.showSuccess("Success", "Record deleted successfully.");
+                _this87.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this82.getData();
-              } else _this82.ts.showError("Error", "Failed to delete record.");
+                _this87.getData();
+              } else _this87.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this82.ts.showError("Error", "Failed to delete record.");
+              _this87.ts.showError("Error", "Failed to delete record.");
             });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this88 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this88.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this88.Delete(obj);
+              }
+            }, function (reason) {
+              _this88.closeResult = "Dismissed ".concat(_this88.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
           }
         }]);
 
@@ -17383,6 +17924,8 @@
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]
         }];
       };
 
@@ -17398,7 +17941,7 @@
         /*! raw-loader!./medicine.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/pharmacy/medicine/medicine.component.html"))["default"],
         providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
-      }), __metadata("design:paramtypes", [src_app_services_medicine_service__WEBPACK_IMPORTED_MODULE_2__["MedicineService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], MedicineComponent);
+      }), __metadata("design:paramtypes", [src_app_services_medicine_service__WEBPACK_IMPORTED_MODULE_2__["MedicineService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])], MedicineComponent);
       /***/
     },
 
@@ -17505,15 +18048,15 @@
         }, {
           key: "setSelectedOrder",
           value: function setSelectedOrder() {
-            var _this83 = this;
+            var _this89 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this83.service.getById(sid).subscribe(function (res) {
-                  _this83.editForm(res);
+                _this89.service.getById(sid).subscribe(function (res) {
+                  _this89.editForm(res);
                 });
               }
             });
@@ -17521,7 +18064,7 @@
         }, {
           key: "updateOrder",
           value: function updateOrder(order, status) {
-            var _this84 = this;
+            var _this90 = this;
 
             debugger;
             order.statusID = status;
@@ -17529,12 +18072,12 @@
 
             this.service.update(order).subscribe(function (data) {
               if (data != 0) {
-                _this84.ts.showSuccess("Success", "Record updated successfully.");
+                _this90.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this84.router.navigate(['/admin/orders']);
+                _this90.router.navigate(['/admin/orders']);
               }
             }, function (error) {
-              _this84.ts.showError("Error", "Failed to update record.");
+              _this90.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -17737,13 +18280,13 @@
         }, {
           key: "Print",
           value: function Print(sid) {
-            var _this85 = this;
+            var _this91 = this;
 
             this.service.printorder(sid, this.selectedBrand).subscribe(function (res) {
               //Set Forms
               if (res.status == 1) {
-                _this85.printout(res.html);
-              } else _this85.ts.showError("Error", "Failed to print.");
+                _this91.printout(res.html);
+              } else _this91.ts.showError("Error", "Failed to print.");
             });
           }
         }, {
@@ -17754,27 +18297,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this86 = this;
+            var _this92 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this86.Locations = res;
-              _this86.locationID = _this86.selectedLocation;
+              _this92.Locations = res;
+              _this92.locationID = _this92.selectedLocation;
 
-              _this86.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this92.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this86.Locations = res;
+                _this92.Locations = res;
                 var arr = [];
 
-                _this86.Locations.forEach(function (element) {
+                _this92.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this86.selectedLocations = arr;
+                _this92.selectedLocations = arr;
 
-                _this86.getData();
+                _this92.getData();
               });
             });
           }
@@ -17980,21 +18523,21 @@
         }, {
           key: "setSelectedPrescription",
           value: function setSelectedPrescription() {
-            var _this87 = this;
+            var _this93 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this87.loadingPrescription = true;
+                _this93.loadingPrescription = true;
 
-                _this87.f.prescriptionID.setValue(sid);
+                _this93.f.prescriptionID.setValue(sid);
 
-                _this87.prescriptionService.getById(sid).subscribe(function (res) {
+                _this93.prescriptionService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this87.editForm(res);
+                  _this93.editForm(res);
 
-                  _this87.loadingPrescription = false;
+                  _this93.loadingPrescription = false;
                 });
               }
             });
@@ -18002,7 +18545,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this88 = this;
+            var _this94 = this;
 
             this.prescriptionForm.markAllAsTouched();
             this.submitted = true;
@@ -18020,31 +18563,31 @@
               console.log(JSON.stringify(this.prescriptionForm.value));
               this.prescriptionService.insert(this.prescriptionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this88.ts.showSuccess("Success", "Record added successfully.");
+                  _this94.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this88.router.navigate(['/admin/pharmacy/prescription']);
+                  _this94.router.navigate(['/admin/pharmacy/prescription']);
                 }
 
-                _this88.loading = false;
+                _this94.loading = false;
               }, function (error) {
-                _this88.ts.showError("Error", "Failed to insert record.");
+                _this94.ts.showError("Error", "Failed to insert record.");
 
-                _this88.loading = false;
+                _this94.loading = false;
               });
             } else {
               //Update doctor
               this.prescriptionService.update(this.prescriptionForm.value).subscribe(function (data) {
-                _this88.loading = false;
+                _this94.loading = false;
 
                 if (data != 0) {
-                  _this88.ts.showSuccess("Success", "Record updated successfully.");
+                  _this94.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this88.router.navigate(['/admin/pharmacy/prescription']);
+                  _this94.router.navigate(['/admin/pharmacy/prescription']);
                 }
               }, function (error) {
-                _this88.ts.showError("Error", "Failed to update record.");
+                _this94.ts.showError("Error", "Failed to update record.");
 
-                _this88.loading = false;
+                _this94.loading = false;
               });
             }
           }
@@ -18218,12 +18761,12 @@
         _createClass(PrescriptionComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this89 = this;
+            var _this95 = this;
 
             this.service.ExportList(this.selectedPrescription).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this89.ts.showError("Error", "Failed to export");
+              _this95.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -18260,16 +18803,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this90 = this;
+            var _this96 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this90.ts.showSuccess("Success", "Record deleted successfully.");
+                _this96.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this90.getData();
-              } else _this90.ts.showError("Error", "Failed to delete record.");
+                _this96.getData();
+              } else _this96.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this90.ts.showError("Error", "Failed to delete record.");
+              _this96.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -18492,16 +19035,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this91 = this;
+            var _this97 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this91.ts.showSuccess("Success", "Record deleted successfully.");
+                _this97.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this91.getData();
-              } else _this91.ts.showError("Error", "Failed to delete record.");
+                _this97.getData();
+              } else _this97.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this91.ts.showError("Error", "Failed to delete record.");
+              _this97.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -18645,16 +19188,16 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this92 = this;
+            var _this98 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this92.service.getById(sid).subscribe(function (res) {
+                _this98.service.getById(sid).subscribe(function (res) {
                   debugger;
 
-                  _this92.editForm(res);
+                  _this98.editForm(res);
                 });
               }
             });
@@ -18662,7 +19205,7 @@
         }, {
           key: "updateAppointment",
           value: function updateAppointment(appointment, status) {
-            var _this93 = this;
+            var _this99 = this;
 
             debugger;
             appointment.appointmentStatus = status;
@@ -18670,12 +19213,12 @@
 
             this.service.statusUpdate(appointment).subscribe(function (data) {
               if (data != 0) {
-                _this93.ts.showSuccess("Success", "Record updated successfully.");
+                _this99.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this93.router.navigate(['reception/appointment']);
+                _this99.router.navigate(['reception/appointment']);
               }
             }, function (error) {
-              _this93.ts.showError("Error", "Failed to update record.");
+              _this99.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -18867,22 +19410,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this94 = this;
+            var _this100 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this94.loadingCustomer = true;
+                _this100.loadingCustomer = true;
 
-                _this94.f.customerID.setValue(sid);
+                _this100.f.customerID.setValue(sid);
 
-                _this94.customerService.getById(sid).subscribe(function (res) {
+                _this100.customerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this94.editForm(res);
+                  _this100.editForm(res);
 
-                  _this94.loadingCustomer = false;
+                  _this100.loadingCustomer = false;
                 });
               }
             });
@@ -18890,7 +19433,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this95 = this;
+            var _this101 = this;
 
             this.customerForm.markAllAsTouched();
             this.submitted = true;
@@ -18908,31 +19451,31 @@
               console.log(JSON.stringify(this.customerForm.value));
               this.customerService.insert(this.customerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this95.ts.showSuccess("Success", "Record added successfully.");
+                  _this101.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this95.router.navigate(['/admin/reception/customers']);
+                  _this101.router.navigate(['/admin/reception/customers']);
                 }
 
-                _this95.loading = false;
+                _this101.loading = false;
               }, function (error) {
-                _this95.ts.showError("Error", "Failed to insert record.");
+                _this101.ts.showError("Error", "Failed to insert record.");
 
-                _this95.loading = false;
+                _this101.loading = false;
               });
             } else {
               //Update customer
               this.customerService.update(this.customerForm.value).subscribe(function (data) {
-                _this95.loading = false;
+                _this101.loading = false;
 
                 if (data != 0) {
-                  _this95.ts.showSuccess("Success", "Record updated successfully.");
+                  _this101.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this95.router.navigate(['/admin/reception/customers']);
+                  _this101.router.navigate(['/admin/reception/customers']);
                 }
               }, function (error) {
-                _this95.ts.showError("Error", "Failed to update record.");
+                _this101.ts.showError("Error", "Failed to update record.");
 
-                _this95.loading = false;
+                _this101.loading = false;
               });
             }
           }
@@ -19086,11 +19629,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this96 = this;
+            var _this102 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this96.ts.showError("Error", "Failed to export");
+              _this102.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -19122,17 +19665,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this97 = this;
+            var _this103 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this97.ts.showSuccess("Success", "Record deleted successfully.");
+                _this103.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this97.getData();
-              } else _this97.ts.showError("Error", "Failed to delete record.");
+                _this103.getData();
+              } else _this103.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this97.ts.showError("Error", "Failed to delete record.");
+              _this103.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -19335,21 +19878,21 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this98 = this;
+            var _this104 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this98.loadingAppointment = true;
+                _this104.loadingAppointment = true;
 
-                _this98.f.appointmentID.setValue(sid);
+                _this104.f.appointmentID.setValue(sid);
 
-                _this98.nursingappointmentService.getById(sid).subscribe(function (res) {
+                _this104.nursingappointmentService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this98.editForm(res);
+                  _this104.editForm(res);
 
-                  _this98.loadingAppointment = false;
+                  _this104.loadingAppointment = false;
                 });
               }
             });
@@ -19357,7 +19900,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this99 = this;
+            var _this105 = this;
 
             this.nursingappointmentForm.markAllAsTouched();
             this.submitted = true;
@@ -19373,71 +19916,71 @@
               console.log(JSON.stringify(this.nursingappointmentForm.value));
               this.nursingappointmentService.insert(this.nursingappointmentForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this99.ts.showSuccess("Success", "Record added successfully.");
+                  _this105.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this99.router.navigate(['/admin/reception/appointment']);
+                  _this105.router.navigate(['/admin/reception/appointment']);
                 }
 
-                _this99.loading = false;
+                _this105.loading = false;
               }, function (error) {
-                _this99.ts.showError("Error", "Failed to insert record.");
+                _this105.ts.showError("Error", "Failed to insert record.");
 
-                _this99.loading = false;
+                _this105.loading = false;
               });
             } else {
               //Update doctor
               this.nursingappointmentService.update(this.nursingappointmentForm.value).subscribe(function (data) {
-                _this99.loading = false;
+                _this105.loading = false;
 
                 if (data != 0) {
-                  _this99.ts.showSuccess("Success", "Record updated successfully.");
+                  _this105.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this99.router.navigate(['/admin/reception/appointment']);
+                  _this105.router.navigate(['/admin/reception/appointment']);
                 }
               }, function (error) {
-                _this99.ts.showError("Error", "Failed to update record.");
+                _this105.ts.showError("Error", "Failed to update record.");
 
-                _this99.loading = false;
+                _this105.loading = false;
               });
             }
           }
         }, {
           key: "loadDoctor",
           value: function loadDoctor() {
-            var _this100 = this;
+            var _this106 = this;
 
             this.nursingappointmentService.loadDoctor().subscribe(function (res) {
-              _this100.DoctorList = res;
+              _this106.DoctorList = res;
             });
           }
         }, {
           key: "loadSpecialities",
           value: function loadSpecialities() {
-            var _this101 = this;
+            var _this107 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this101.SpecialityList = res;
+              _this107.SpecialityList = res;
             });
           }
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this102 = this;
+            var _this108 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this102.selectedSpecialityList = res;
+              _this108.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadDay",
           value: function loadDay() {
-            var _this103 = this;
+            var _this109 = this;
 
             debugger;
             this.nursingappointmentService.loadDay().subscribe(function (res) {
-              _this103.DoctorDaysList = res;
+              _this109.DoctorDaysList = res;
             });
           }
         }, {
@@ -19667,16 +20210,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this104 = this;
+            var _this110 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this104.ts.showSuccess("Success", "Record deleted successfully.");
+                _this110.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this104.getData();
-              } else _this104.ts.showError("Error", "Failed to delete record.");
+                _this110.getData();
+              } else _this110.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this104.ts.showError("Error", "Failed to delete record.");
+              _this110.ts.showError("Error", "Failed to delete record.");
             });
           } //Status(data) {
           //  debugger
@@ -19862,14 +20405,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this105 = this;
+            var _this111 = this;
 
             this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this105.salesCategoryWise = res;
-              } else _this105.ts.showError("Error", "Something went wrong");
+                _this111.salesCategoryWise = res;
+              } else _this111.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this105.ts.showError("Error", "Failed to delete record.");
+              _this111.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -19881,27 +20424,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this106 = this;
+            var _this112 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this106.Locations = res;
-              _this106.locationID = _this106.selectedLocation;
+              _this112.Locations = res;
+              _this112.locationID = _this112.selectedLocation;
 
-              _this106.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this112.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this106.Locations = res;
+                _this112.Locations = res;
                 var arr = [];
 
-                _this106.Locations.forEach(function (element) {
+                _this112.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this106.selectedLocations = arr;
+                _this112.selectedLocations = arr;
 
-                _this106.getData(_this106.selectedLocations.toString());
+                _this112.getData(_this112.selectedLocations.toString());
               });
             });
           }
@@ -20094,14 +20637,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this107 = this;
+            var _this113 = this;
 
             this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this107.orders = res;
-              } else _this107.ts.showError("Error", "Something went wrong");
+                _this113.orders = res;
+              } else _this113.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this107.ts.showError("Error", "Failed to delete record.");
+              _this113.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20113,27 +20656,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this108 = this;
+            var _this114 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this108.Locations = res;
-              _this108.locationID = _this108.selectedLocation;
+              _this114.Locations = res;
+              _this114.locationID = _this114.selectedLocation;
 
-              _this108.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this114.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this108.Locations = res;
+                _this114.Locations = res;
                 var arr = [];
 
-                _this108.Locations.forEach(function (element) {
+                _this114.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this108.selectedLocations = arr;
+                _this114.selectedLocations = arr;
 
-                _this108.getData(_this108.selectedLocations.toString());
+                _this114.getData(_this114.selectedLocations.toString());
               });
             });
           }
@@ -20322,14 +20865,14 @@
         }, {
           key: "getData",
           value: function getData(locaionIDs) {
-            var _this109 = this;
+            var _this115 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this109.orderDetails = res;
-              } else _this109.ts.showError("Error", "Something went wrong");
+                _this115.orderDetails = res;
+              } else _this115.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this109.ts.showError("Error", "Failed to delete record.");
+              _this115.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20346,27 +20889,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this110 = this;
+            var _this116 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this110.Locations = res;
-              _this110.locationID = _this110.selectedLocation;
+              _this116.Locations = res;
+              _this116.locationID = _this116.selectedLocation;
 
-              _this110.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this116.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this110.Locations = res;
+                _this116.Locations = res;
                 var arr = [];
 
-                _this110.Locations.forEach(function (element) {
+                _this116.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this110.selectedLocations = arr;
+                _this116.selectedLocations = arr;
 
-                _this110.getData(_this110.selectedLocations.toString());
+                _this116.getData(_this116.selectedLocations.toString());
               });
             });
           }
@@ -20562,14 +21105,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this111 = this;
+            var _this117 = this;
 
             this.service.SalesItemwiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this111.salesItemWise = res;
-              } else _this111.ts.showError("Error", "Something went wrong");
+                _this117.salesItemWise = res;
+              } else _this117.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this111.ts.showError("Error", "Failed to delete record.");
+              _this117.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20600,27 +21143,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this112 = this;
+            var _this118 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this112.Locations = res;
-              _this112.locationID = _this112.selectedLocation;
+              _this118.Locations = res;
+              _this118.locationID = _this118.selectedLocation;
 
-              _this112.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this118.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this112.Locations = res;
+                _this118.Locations = res;
                 var arr = [];
 
-                _this112.Locations.forEach(function (element) {
+                _this118.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this112.selectedLocations = arr;
+                _this118.selectedLocations = arr;
 
-                _this112.getData(_this112.selectedLocations.toString());
+                _this118.getData(_this118.selectedLocations.toString());
               });
             });
           }
@@ -20785,14 +21328,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this113 = this;
+            var _this119 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this113.data$ = res;
-              } else _this113.ts.showError("Error", "Something went wrong");
+                _this119.data$ = res;
+              } else _this119.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this113.ts.showError("Error", "Failed to delete record.");
+              _this119.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20804,11 +21347,11 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this114 = this;
+            var _this120 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this114.Locations = res;
-              _this114.locationID = _this114.selectedLocation;
+              _this120.Locations = res;
+              _this120.locationID = _this120.selectedLocation;
             });
           }
         }, {
@@ -20975,16 +21518,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this115 = this;
+            var _this121 = this;
 
             this.service.SalesSummaryRpt(this.selectedBrand, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this115._model = res[0];
+                _this121._model = res[0];
 
-                _this115["export"].push(_this115._model);
-              } else _this115.ts.showError("Error", "Something went wrong");
+                _this121["export"].push(_this121._model);
+              } else _this121.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this115.ts.showError("Error", "Failed to delete record.");
+              _this121.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21159,14 +21702,14 @@
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this116 = this;
+            var _this122 = this;
 
             this.loadingSetting = true;
             this.settingService.getById(1).subscribe(function (res) {
               //Set Forms
-              _this116.editForm(res);
+              _this122.editForm(res);
 
-              _this116.loadingSetting = false;
+              _this122.loadingSetting = false;
             }); // this.route.paramMap.subscribe(param => {
             //   const sid = +param.get('id');
             //   if (sid) {
@@ -21183,7 +21726,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this117 = this;
+            var _this123 = this;
 
             debugger;
             this.settingForm.markAllAsTouched();
@@ -21201,33 +21744,33 @@
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this117.ts.showSuccess("Success", "Record added successfully.");
+                  _this123.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this117.router.navigate(['/admin/settings/appsettings']);
+                  _this123.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this117.loading = false;
+                _this123.loading = false;
               }, function (error) {
-                _this117.ts.showError("Error", "Failed to insert record.");
+                _this123.ts.showError("Error", "Failed to insert record.");
 
-                _this117.loading = false;
+                _this123.loading = false;
               });
             } else {
               //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this117.loading = false;
+                _this123.loading = false;
 
                 if (data != 0) {
-                  _this117.ts.showSuccess("Success", "Record updated successfully.");
+                  _this123.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this117.setSelectedSetting();
+                  _this123.setSelectedSetting();
 
-                  _this117.router.navigate(['/admin/settings/appsettings/add']);
+                  _this123.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this117.ts.showError("Error", "Failed to update record.");
+                _this123.ts.showError("Error", "Failed to update record.");
 
-                _this117.loading = false;
+                _this123.loading = false;
               });
             }
           }
@@ -21398,16 +21941,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this118 = this;
+            var _this124 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this118.ts.showSuccess("Success", "Record deleted successfully.");
+                _this124.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this118.getData();
-              } else _this118.ts.showError("Error", "Failed to delete record.");
+                _this124.getData();
+              } else _this124.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this118.ts.showError("Error", "Failed to delete record.");
+              _this124.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -21594,21 +22137,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this119 = this;
+            var _this125 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this119.loadingCustomer = true;
+                _this125.loadingCustomer = true;
 
-                _this119.f.bannerID.setValue(sid);
+                _this125.f.bannerID.setValue(sid);
 
-                _this119.bannerService.getById(sid).subscribe(function (res) {
+                _this125.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this119.editForm(res);
+                  _this125.editForm(res);
 
-                  _this119.loadingCustomer = false;
+                  _this125.loadingCustomer = false;
                 });
               }
             });
@@ -21616,7 +22159,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this120 = this;
+            var _this126 = this;
 
             debugger;
             this.bannerForm.markAllAsTouched();
@@ -21635,31 +22178,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this120.ts.showSuccess("Success", "Record added successfully.");
+                  _this126.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this120.router.navigate(['/admin/settings/banner']);
+                  _this126.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this120.loading = false;
+                _this126.loading = false;
               }, function (error) {
-                _this120.ts.showError("Error", "Failed to insert record.");
+                _this126.ts.showError("Error", "Failed to insert record.");
 
-                _this120.loading = false;
+                _this126.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this120.loading = false;
+                _this126.loading = false;
 
                 if (data != 0) {
-                  _this120.ts.showSuccess("Success", "Record updated successfully.");
+                  _this126.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this120.router.navigate(['/admin/settings/banner']);
+                  _this126.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this120.ts.showError("Error", "Failed to update record.");
+                _this126.ts.showError("Error", "Failed to update record.");
 
-                _this120.loading = false;
+                _this126.loading = false;
               });
             }
           }
@@ -21764,6 +22307,12 @@
       var src_app_services_banner_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/_services/banner.service */
       "./src/app/_services/banner.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -21786,7 +22335,7 @@
       };
 
       var BannerComponent = /*#__PURE__*/function () {
-        function BannerComponent(service, ls, ts, router) {
+        function BannerComponent(service, ls, ts, router, modalService) {
           _classCallCheck(this, BannerComponent);
 
           /*     this.selectedBrand =this.ls.getSelectedBrand().brandID;*/
@@ -21794,6 +22343,7 @@
           this.ls = ls;
           this.ts = ts;
           this.router = router;
+          this.modalService = modalService;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -21832,17 +22382,45 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this121 = this;
+            var _this127 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this121.ts.showSuccess("Success", "Record deleted successfully.");
+                _this127.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this121.getData();
-              } else _this121.ts.showError("Error", "Failed to delete record.");
+                _this127.getData();
+              } else _this127.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this121.ts.showError("Error", "Failed to delete record.");
+              _this127.ts.showError("Error", "Failed to delete record.");
             });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this128 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this128.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this128.Delete(obj);
+              }
+            }, function (reason) {
+              _this128.closeResult = "Dismissed ".concat(_this128.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
           }
         }]);
 
@@ -21858,6 +22436,8 @@
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]
         }];
       };
 
@@ -21873,7 +22453,476 @@
         /*! raw-loader!./banner.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/banner/banner.component.html"))["default"],
         providers: []
-      }), __metadata("design:paramtypes", [src_app_services_banner_service__WEBPACK_IMPORTED_MODULE_5__["BannerService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], BannerComponent);
+      }), __metadata("design:paramtypes", [src_app_services_banner_service__WEBPACK_IMPORTED_MODULE_5__["BannerService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])], BannerComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.css":
+    /*!****************************************************************************************************!*\
+      !*** ./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.css ***!
+      \****************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function srcAppAdminSettingsCorporateclientAddcorporateclientAddcorporateclientComponentCss(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3NldHRpbmdzL2NvcnBvcmF0ZWNsaWVudC9hZGRjb3Jwb3JhdGVjbGllbnQvYWRkY29ycG9yYXRlY2xpZW50LmNvbXBvbmVudC5jc3MifQ== */";
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.ts":
+    /*!***************************************************************************************************!*\
+      !*** ./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.ts ***!
+      \***************************************************************************************************/
+
+    /*! exports provided: addcorporateclientComponent */
+
+    /***/
+    function srcAppAdminSettingsCorporateclientAddcorporateclientAddcorporateclientComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "addcorporateclientComponent", function () {
+        return addcorporateclientComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_corporateclient_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/corporateclient.service */
+      "./src/app/_services/corporateclient.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var addcorporateclientComponent = /*#__PURE__*/function () {
+        function addcorporateclientComponent(formBuilder, router, route, ls, ts, addcorporateclientService) {
+          _classCallCheck(this, addcorporateclientComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ls = ls;
+          this.ts = ts;
+          this.addcorporateclientService = addcorporateclientService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingCustomer = false;
+          this.ButtonText = "Save";
+          this.NursingTypeActive = ['Header', 'Featured'];
+          this.createForm();
+        }
+
+        _createClass(addcorporateclientComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedCustomer();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.corporateclientForm = this.formBuilder.group({
+              clientName: [''],
+              statusID: [true],
+              corporateClientID: 0,
+              image: ['']
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            debugger;
+            this.f.clientName.setValue(obj.clientName);
+            this.f.corporateClientID.setValue(obj.corporateClientID);
+            this.f.image.setValue(obj.image);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.image;
+          }
+        }, {
+          key: "setSelectedCustomer",
+          value: function setSelectedCustomer() {
+            var _this129 = this;
+
+            debugger;
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this129.loadingCustomer = true;
+
+                _this129.f.corporateClientID.setValue(sid);
+
+                _this129.addcorporateclientService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this129.editForm(res);
+
+                  _this129.loadingCustomer = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this130 = this;
+
+            debugger;
+            this.corporateclientForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.corporateclientForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.image.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.corporateClientID.value) === 0) {
+              //Insert banner
+              console.log(JSON.stringify(this.corporateclientForm.value));
+              this.addcorporateclientService.insert(this.corporateclientForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this130.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this130.router.navigate(['/admin/settings/corporateclient']);
+                }
+
+                _this130.loading = false;
+              }, function (error) {
+                _this130.ts.showError("Error", "Failed to insert record.");
+
+                _this130.loading = false;
+              });
+            } else {
+              //Update banner
+              this.addcorporateclientService.update(this.corporateclientForm.value).subscribe(function (data) {
+                _this130.loading = false;
+
+                if (data != 0) {
+                  _this130.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this130.router.navigate(['/admin/settings/corporateclient']);
+                }
+              }, function (error) {
+                _this130.ts.showError("Error", "Failed to update record.");
+
+                _this130.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.corporateclientForm.controls;
+          }
+        }]);
+
+        return addcorporateclientComponent;
+      }();
+
+      addcorporateclientComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_corporateclient_service__WEBPACK_IMPORTED_MODULE_6__["CorporateClientService"]
+        }];
+      };
+
+      addcorporateclientComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      addcorporateclientComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addcorporateclient',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addcorporateclient.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.html"))["default"],
+        styles: [__importDefault(__webpack_require__(
+        /*! ./addcorporateclient.component.css */
+        "./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.css"))["default"]]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_corporateclient_service__WEBPACK_IMPORTED_MODULE_6__["CorporateClientService"]])], addcorporateclientComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/settings/corporateclient/corporateclient.component.ts":
+    /*!*****************************************************************************!*\
+      !*** ./src/app/admin/settings/corporateclient/corporateclient.component.ts ***!
+      \*****************************************************************************/
+
+    /*! exports provided: CorporateClientComponent */
+
+    /***/
+    function srcAppAdminSettingsCorporateclientCorporateclientComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CorporateClientComponent", function () {
+        return CorporateClientComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      /* harmony import */
+
+
+      var src_app_services_corporateclient_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/corporateclient.service */
+      "./src/app/_services/corporateclient.service.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var CorporateClientComponent = /*#__PURE__*/function () {
+        function CorporateClientComponent(service, ls, ts, router, modalService) {
+          _classCallCheck(this, CorporateClientComponent);
+
+          /*     this.selectedBrand =this.ls.getSelectedBrand().brandID;*/
+          this.service = service;
+          this.ls = ls;
+          this.ts = ts;
+          this.router = router;
+          this.modalService = modalService;
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(CorporateClientComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref19) {
+            var column = _ref19.column,
+                direction = _ref19.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(corporateclient) {
+            this.router.navigate(["admin/settings/corporateclient/edit", corporateclient]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this131 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this131.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this131.getData();
+              } else _this131.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this131.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this132 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this132.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this132.Delete(obj);
+              }
+            }, function (reason) {
+              _this132.closeResult = "Dismissed ".concat(_this132.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
+        }]);
+
+        return CorporateClientComponent;
+      }();
+
+      CorporateClientComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_corporateclient_service__WEBPACK_IMPORTED_MODULE_6__["CorporateClientService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModal"]
+        }];
+      };
+
+      CorporateClientComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      CorporateClientComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-CorporateClient',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./corporateclient.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/corporateclient/corporateclient.component.html"))["default"],
+        providers: []
+      }), __metadata("design:paramtypes", [src_app_services_corporateclient_service__WEBPACK_IMPORTED_MODULE_6__["CorporateClientService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModal"]])], CorporateClientComponent);
       /***/
     },
 
@@ -22006,21 +23055,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this122 = this;
+            var _this133 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this122.loadingCoupon = true;
+                _this133.loadingCoupon = true;
 
-                _this122.f.couponID.setValue(sid);
+                _this133.f.couponID.setValue(sid);
 
-                _this122.couponService.getById(sid).subscribe(function (res) {
+                _this133.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this122.editForm(res);
+                  _this133.editForm(res);
 
-                  _this122.loadingCoupon = false;
+                  _this133.loadingCoupon = false;
                 });
               }
             });
@@ -22028,7 +23077,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this123 = this;
+            var _this134 = this;
 
             debugger;
             this.couponForm.markAllAsTouched();
@@ -22046,31 +23095,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this123.ts.showSuccess("Success", "Record added successfully.");
+                  _this134.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this123.router.navigate(['/admin/settings/coupon']);
+                  _this134.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this123.loading = false;
+                _this134.loading = false;
               }, function (error) {
-                _this123.ts.showError("Error", "Failed to insert record.");
+                _this134.ts.showError("Error", "Failed to insert record.");
 
-                _this123.loading = false;
+                _this134.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this123.loading = false;
+                _this134.loading = false;
 
                 if (data != 0) {
-                  _this123.ts.showSuccess("Success", "Record updated successfully.");
+                  _this134.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this123.router.navigate(['/admin/settings/coupon']);
+                  _this134.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this123.ts.showError("Error", "Failed to update record.");
+                _this134.ts.showError("Error", "Failed to update record.");
 
-                _this123.loading = false;
+                _this134.loading = false;
               });
             }
           }
@@ -22255,9 +23304,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref19) {
-            var column = _ref19.column,
-                direction = _ref19.direction;
+          value: function onSort(_ref20) {
+            var column = _ref20.column,
+                direction = _ref20.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -22274,17 +23323,17 @@
         }, {
           key: "Delete",
           value: function Delete(item) {
-            var _this124 = this;
+            var _this135 = this;
 
             debugger;
             this.service["delete"](item).subscribe(function (res) {
               if (res != 0) {
-                _this124.ts.showSuccess("Success", "Record deleted successfully.");
+                _this135.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this124.getData();
-              } else _this124.ts.showError("Error", "Failed to delete record.");
+                _this135.getData();
+              } else _this135.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this124.ts.showError("Error", "Failed to delete record.");
+              _this135.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -22482,21 +23531,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this125 = this;
+            var _this136 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this125.loading = true;
+                _this136.loading = true;
 
-                _this125.f.deliveryAreaID.setValue(sid);
+                _this136.f.deliveryAreaID.setValue(sid);
 
-                _this125.deliveryService.getById(sid).subscribe(function (res) {
+                _this136.deliveryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this125.editForm(res);
+                  _this136.editForm(res);
 
-                  _this125.loading = false; //BrandsFill
+                  _this136.loading = false; //BrandsFill
                   // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
                   // .subscribe((res: any) => {            
                   //   var stringToConvert = res.items;
@@ -22509,7 +23558,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this126 = this;
+            var _this137 = this;
 
             debugger;
             this.deliveryForm.markAllAsTouched();
@@ -22526,41 +23575,41 @@
               //Insert delivery
               this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this126.ts.showSuccess("Success", "Record added successfully.");
+                  _this137.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this126.router.navigate(['/admin/delivery']);
+                  _this137.router.navigate(['/admin/delivery']);
                 }
 
-                _this126.loading = false;
+                _this137.loading = false;
               }, function (error) {
-                _this126.ts.showError("Error", "Failed to insert record.");
+                _this137.ts.showError("Error", "Failed to insert record.");
 
-                _this126.loading = false;
+                _this137.loading = false;
               });
             } else {
               //Update delivery
               this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this126.loading = false;
+                _this137.loading = false;
 
                 if (data != 0) {
-                  _this126.ts.showSuccess("Success", "Record updated successfully.");
+                  _this137.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this126.router.navigate(['/admin/delivery']);
+                  _this137.router.navigate(['/admin/delivery']);
                 }
               }, function (error) {
-                _this126.ts.showError("Error", "Failed to update record.");
+                _this137.ts.showError("Error", "Failed to update record.");
 
-                _this126.loading = false;
+                _this137.loading = false;
               });
             }
           }
         }, {
           key: "loadBrands",
           value: function loadBrands() {
-            var _this127 = this;
+            var _this138 = this;
 
             this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this127.BrandsList = res; // this.setSelecteditem();
+              _this138.BrandsList = res; // this.setSelecteditem();
             });
           }
         }, {
@@ -22684,6 +23733,12 @@
       var src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/_services/delivery.service */
       "./src/app/_services/delivery.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -22706,7 +23761,7 @@
       };
 
       var DeliveryComponent = /*#__PURE__*/function () {
-        function DeliveryComponent(service, ls, ts, router) {
+        function DeliveryComponent(service, ls, ts, router, modalService) {
           _classCallCheck(this, DeliveryComponent);
 
           //this.selectedBrand =this.ls.getSelectedBrand().brandID;
@@ -22714,6 +23769,7 @@
           this.ls = ls;
           this.ts = ts;
           this.router = router;
+          this.modalService = modalService;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -22733,9 +23789,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref20) {
-            var column = _ref20.column,
-                direction = _ref20.direction;
+          value: function onSort(_ref21) {
+            var column = _ref21.column,
+                direction = _ref21.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -22752,17 +23808,45 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this128 = this;
+            var _this139 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this128.ts.showSuccess("Success", "Record deleted successfully.");
+                _this139.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this128.getData();
-              } else _this128.ts.showError("Error", "Failed to delete record.");
+                _this139.getData();
+              } else _this139.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this128.ts.showError("Error", "Failed to delete record.");
+              _this139.ts.showError("Error", "Failed to delete record.");
             });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this140 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this140.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this140.Delete(obj);
+              }
+            }, function (reason) {
+              _this140.closeResult = "Dismissed ".concat(_this140.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
           }
         }]);
 
@@ -22778,6 +23862,8 @@
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]
         }];
       };
 
@@ -22795,7 +23881,7 @@
         styles: [__importDefault(__webpack_require__(
         /*! ./delivery.component.css */
         "./src/app/admin/settings/delivery/delivery.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__["DeliveryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], DeliveryComponent);
+      }), __metadata("design:paramtypes", [src_app_services_delivery_service__WEBPACK_IMPORTED_MODULE_5__["DeliveryService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])], DeliveryComponent);
       /***/
     },
 
@@ -22936,31 +24022,31 @@
         }, {
           key: "loadActiveType",
           value: function loadActiveType() {
-            var _this129 = this;
+            var _this141 = this;
 
             this.services.loadActiveTyp().subscribe(function (res) {
-              _this129.NursingTypeActive = res;
+              _this141.NursingTypeActive = res;
             });
           }
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this130 = this;
+            var _this142 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this130.loadingService = true;
+                _this142.loadingService = true;
 
-                _this130.f.medicalServiceID.setValue(sid);
+                _this142.f.medicalServiceID.setValue(sid);
 
-                _this130.services.getById(sid).subscribe(function (res) {
+                _this142.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this130.editForm(res);
+                  _this142.editForm(res);
 
-                  _this130.loadingService = false;
+                  _this142.loadingService = false;
                 });
               }
             });
@@ -22968,7 +24054,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this131 = this;
+            var _this143 = this;
 
             debugger;
             this.servicesForm.markAllAsTouched();
@@ -22987,31 +24073,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this131.ts.showSuccess("Success", "Record added successfully.");
+                  _this143.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this131.router.navigate(['/admin/settings/medicalservices']);
+                  _this143.router.navigate(['/admin/settings/medicalservices']);
                 }
 
-                _this131.loading = false;
+                _this143.loading = false;
               }, function (error) {
-                _this131.ts.showError("Error", "Failed to insert record.");
+                _this143.ts.showError("Error", "Failed to insert record.");
 
-                _this131.loading = false;
+                _this143.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this131.loading = false;
+                _this143.loading = false;
 
                 if (data != 0) {
-                  _this131.ts.showSuccess("Success", "Record updated successfully.");
+                  _this143.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this131.router.navigate(['/admin/settings/medicalservices']);
+                  _this143.router.navigate(['/admin/settings/medicalservices']);
                 }
               }, function (error) {
-                _this131.ts.showError("Error", "Failed to update record.");
+                _this143.ts.showError("Error", "Failed to update record.");
 
-                _this131.loading = false;
+                _this143.loading = false;
               });
             }
           }
@@ -23162,9 +24248,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref21) {
-            var column = _ref21.column,
-                direction = _ref21.direction;
+          value: function onSort(_ref22) {
+            var column = _ref22.column,
+                direction = _ref22.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -23181,16 +24267,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this132 = this;
+            var _this144 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this132.ts.showSuccess("Success", "Record deleted successfully.");
+                _this144.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this132.getData();
-              } else _this132.ts.showError("Error", "Failed to delete record.");
+                _this144.getData();
+              } else _this144.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this132.ts.showError("Error", "Failed to delete record.");
+              _this144.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -23349,22 +24435,22 @@
         }, {
           key: "setSelectedType",
           value: function setSelectedType() {
-            var _this133 = this;
+            var _this145 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this133.loadingService = true;
+                _this145.loadingService = true;
 
-                _this133.f.nursingTypeID.setValue(sid);
+                _this145.f.nursingTypeID.setValue(sid);
 
-                _this133.services.getById(sid).subscribe(function (res) {
+                _this145.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this133.editForm(res);
+                  _this145.editForm(res);
 
-                  _this133.loadingService = false;
+                  _this145.loadingService = false;
                 });
               }
             });
@@ -23372,7 +24458,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this134 = this;
+            var _this146 = this;
 
             this.servicesForm.markAllAsTouched();
             this.submitted = true;
@@ -23389,31 +24475,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this134.ts.showSuccess("Success", "Record added successfully.");
+                  _this146.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this134.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this146.router.navigate(['/admin/settings/medicalservicetype']);
                 }
 
-                _this134.loading = false;
+                _this146.loading = false;
               }, function (error) {
-                _this134.ts.showError("Error", "Failed to insert record.");
+                _this146.ts.showError("Error", "Failed to insert record.");
 
-                _this134.loading = false;
+                _this146.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this134.loading = false;
+                _this146.loading = false;
 
                 if (data != 0) {
-                  _this134.ts.showSuccess("Success", "Record updated successfully.");
+                  _this146.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this134.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this146.router.navigate(['/admin/settings/medicalservicetype']);
                 }
               }, function (error) {
-                _this134.ts.showError("Error", "Failed to update record.");
+                _this146.ts.showError("Error", "Failed to update record.");
 
-                _this134.loading = false;
+                _this146.loading = false;
               });
             }
           }
@@ -23564,9 +24650,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref22) {
-            var column = _ref22.column,
-                direction = _ref22.direction;
+          value: function onSort(_ref23) {
+            var column = _ref23.column,
+                direction = _ref23.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -23584,16 +24670,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this135 = this;
+            var _this147 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this135.ts.showSuccess("Success", "Record deleted successfully.");
+                _this147.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this135.getData();
-              } else _this135.ts.showError("Error", "Failed to delete record.");
+                _this147.getData();
+              } else _this147.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this135.ts.showError("Error", "Failed to delete record.");
+              _this147.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -23780,21 +24866,21 @@
         }, {
           key: "setSelectedOffers",
           value: function setSelectedOffers() {
-            var _this136 = this;
+            var _this148 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this136.loadingOffers = true;
+                _this148.loadingOffers = true;
 
-                _this136.f.promotionID.setValue(sid);
+                _this148.f.promotionID.setValue(sid);
 
-                _this136.promotion.getById(sid).subscribe(function (res) {
+                _this148.promotion.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this136.editForm(res);
+                  _this148.editForm(res);
 
-                  _this136.loadingOffers = false;
+                  _this148.loadingOffers = false;
                 });
               }
             });
@@ -23802,7 +24888,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this137 = this;
+            var _this149 = this;
 
             this.promotionForm.markAllAsTouched();
             this.submitted = true;
@@ -23820,31 +24906,31 @@
               debugger;
               this.promotion.insert(this.promotionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this137.ts.showSuccess("Success", "Record added successfully.");
+                  _this149.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this137.router.navigate(['/admin/offers']);
+                  _this149.router.navigate(['/admin/offers']);
                 }
 
-                _this137.loading = false;
+                _this149.loading = false;
               }, function (error) {
-                _this137.ts.showError("Error", "Failed to insert record.");
+                _this149.ts.showError("Error", "Failed to insert record.");
 
-                _this137.loading = false;
+                _this149.loading = false;
               });
             } else {
               //Update offers
               this.promotion.update(this.promotionForm.value).subscribe(function (data) {
-                _this137.loading = false;
+                _this149.loading = false;
 
                 if (data != 0) {
-                  _this137.ts.showSuccess("Success", "Record updated successfully.");
+                  _this149.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this137.router.navigate(['/admin/offers']);
+                  _this149.router.navigate(['/admin/offers']);
                 }
               }, function (error) {
-                _this137.ts.showError("Error", "Failed to update record.");
+                _this149.ts.showError("Error", "Failed to update record.");
 
-                _this137.loading = false;
+                _this149.loading = false;
               });
             }
           }
@@ -23997,9 +25083,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref23) {
-            var column = _ref23.column,
-                direction = _ref23.direction;
+          value: function onSort(_ref24) {
+            var column = _ref24.column,
+                direction = _ref24.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -24016,16 +25102,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this138 = this;
+            var _this150 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this138.ts.showSuccess("Success", "Record deleted successfully.");
+                _this150.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this138.getData();
-              } else _this138.ts.showError("Error", "Failed to delete record.");
+                _this150.getData();
+              } else _this150.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this138.ts.showError("Error", "Failed to delete record.");
+              _this150.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -24191,22 +25277,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this139 = this;
+            var _this151 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this139.loadingService = true;
+                _this151.loadingService = true;
 
-                _this139.f.specialistID.setValue(sid);
+                _this151.f.specialistID.setValue(sid);
 
-                _this139.services.getById(sid).subscribe(function (res) {
+                _this151.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this139.editForm(res);
+                  _this151.editForm(res);
 
-                  _this139.loadingService = false;
+                  _this151.loadingService = false;
                 });
               }
             });
@@ -24214,7 +25300,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this140 = this;
+            var _this152 = this;
 
             debugger;
             this.specialityForm.markAllAsTouched();
@@ -24233,31 +25319,31 @@
               console.log(JSON.stringify(this.specialityForm.value));
               this.services.insert(this.specialityForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this140.ts.showSuccess("Success", "Record added successfully.");
+                  _this152.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this140.router.navigate(['/admin/settings/speciality']);
+                  _this152.router.navigate(['/admin/settings/speciality']);
                 }
 
-                _this140.loading = false;
+                _this152.loading = false;
               }, function (error) {
-                _this140.ts.showError("Error", "Failed to insert record.");
+                _this152.ts.showError("Error", "Failed to insert record.");
 
-                _this140.loading = false;
+                _this152.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.specialityForm.value).subscribe(function (data) {
-                _this140.loading = false;
+                _this152.loading = false;
 
                 if (data != 0) {
-                  _this140.ts.showSuccess("Success", "Record updated successfully.");
+                  _this152.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this140.router.navigate(['/admin/settings/speciality']);
+                  _this152.router.navigate(['/admin/settings/speciality']);
                 }
               }, function (error) {
-                _this140.ts.showError("Error", "Failed to update record.");
+                _this152.ts.showError("Error", "Failed to update record.");
 
-                _this140.loading = false;
+                _this152.loading = false;
               });
             }
           }
@@ -24359,6 +25445,12 @@
       var _services_speciality_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../../../_services/speciality.service */
       "./src/app/_services/speciality.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -24381,7 +25473,7 @@
       };
 
       var SpecialityComponent = /*#__PURE__*/function () {
-        function SpecialityComponent(service, ls, ts, router) {
+        function SpecialityComponent(service, ls, ts, router, modalService) {
           _classCallCheck(this, SpecialityComponent);
 
           /*     this.selectedBrand =this.ls.getSelectedBrand().brandID;*/
@@ -24389,6 +25481,7 @@
           this.ls = ls;
           this.ts = ts;
           this.router = router;
+          this.modalService = modalService;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -24408,9 +25501,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref24) {
-            var column = _ref24.column,
-                direction = _ref24.direction;
+          value: function onSort(_ref25) {
+            var column = _ref25.column,
+                direction = _ref25.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -24427,17 +25520,45 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this141 = this;
+            var _this153 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this141.ts.showSuccess("Success", "Record deleted successfully.");
+                _this153.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this141.getData();
-              } else _this141.ts.showError("Error", "Failed to delete record.");
+                _this153.getData();
+              } else _this153.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this141.ts.showError("Error", "Failed to delete record.");
+              _this153.ts.showError("Error", "Failed to delete record.");
             });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this154 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this154.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this154.Delete(obj);
+              }
+            }, function (reason) {
+              _this154.closeResult = "Dismissed ".concat(_this154.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
           }
         }]);
 
@@ -24453,6 +25574,8 @@
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]
         }];
       };
 
@@ -24468,7 +25591,7 @@
         /*! raw-loader!./speciality.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/speciality/speciality.component.html"))["default"],
         providers: []
-      }), __metadata("design:paramtypes", [_services_speciality_service__WEBPACK_IMPORTED_MODULE_5__["SpecialityService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], SpecialityComponent);
+      }), __metadata("design:paramtypes", [_services_speciality_service__WEBPACK_IMPORTED_MODULE_5__["SpecialityService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])], SpecialityComponent);
       /***/
     },
 
@@ -24597,22 +25720,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this142 = this;
+            var _this155 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this142.loadingService = true;
+                _this155.loadingService = true;
 
-                _this142.f.timeSlotID.setValue(sid);
+                _this155.f.timeSlotID.setValue(sid);
 
-                _this142.services.getById(sid).subscribe(function (res) {
+                _this155.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this142.editForm(res);
+                  _this155.editForm(res);
 
-                  _this142.loadingService = false;
+                  _this155.loadingService = false;
                 });
               }
             });
@@ -24620,7 +25743,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this143 = this;
+            var _this156 = this;
 
             debugger;
             this.timeslotForm.markAllAsTouched();
@@ -24638,31 +25761,31 @@
               console.log(JSON.stringify(this.timeslotForm.value));
               this.services.insert(this.timeslotForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this143.ts.showSuccess("Success", "Record added successfully.");
+                  _this156.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this143.router.navigate(['/admin/settings/timeslot']);
+                  _this156.router.navigate(['/admin/settings/timeslot']);
                 }
 
-                _this143.loading = false;
+                _this156.loading = false;
               }, function (error) {
-                _this143.ts.showError("Error", "Failed to insert record.");
+                _this156.ts.showError("Error", "Failed to insert record.");
 
-                _this143.loading = false;
+                _this156.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.timeslotForm.value).subscribe(function (data) {
-                _this143.loading = false;
+                _this156.loading = false;
 
                 if (data != 0) {
-                  _this143.ts.showSuccess("Success", "Record updated successfully.");
+                  _this156.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this143.router.navigate(['/admin/settings/timeslot']);
+                  _this156.router.navigate(['/admin/settings/timeslot']);
                 }
               }, function (error) {
-                _this143.ts.showError("Error", "Failed to update record.");
+                _this156.ts.showError("Error", "Failed to update record.");
 
-                _this143.loading = false;
+                _this156.loading = false;
               });
             }
           }
@@ -24764,6 +25887,12 @@
       var _services_timeslot_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../../../_services/timeslot.service */
       "./src/app/_services/timeslot.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -24786,7 +25915,7 @@
       };
 
       var TimeSlotComponent = /*#__PURE__*/function () {
-        function TimeSlotComponent(service, ls, ts, router) {
+        function TimeSlotComponent(service, ls, ts, router, modalService) {
           _classCallCheck(this, TimeSlotComponent);
 
           /*     this.selectedBrand =this.ls.getSelectedBrand().brandID;*/
@@ -24794,6 +25923,7 @@
           this.ls = ls;
           this.ts = ts;
           this.router = router;
+          this.modalService = modalService;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -24813,9 +25943,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref25) {
-            var column = _ref25.column,
-                direction = _ref25.direction;
+          value: function onSort(_ref26) {
+            var column = _ref26.column,
+                direction = _ref26.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -24832,18 +25962,46 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this144 = this;
+            var _this157 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this144.ts.showSuccess("Success", "Record deleted successfully.");
+                _this157.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this144.getData();
-              } else _this144.ts.showError("Error", "Failed to delete record.");
+                _this157.getData();
+              } else _this157.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this144.ts.showError("Error", "Failed to delete record.");
+              _this157.ts.showError("Error", "Failed to delete record.");
             });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this158 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this158.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this158.Delete(obj);
+              }
+            }, function (reason) {
+              _this158.closeResult = "Dismissed ".concat(_this158.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
           }
         }]);
 
@@ -24859,6 +26017,8 @@
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]
         }];
       };
 
@@ -24874,7 +26034,7 @@
         /*! raw-loader!./timeslot.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/settings/timeslot/timeslot.component.html"))["default"],
         providers: []
-      }), __metadata("design:paramtypes", [_services_timeslot_service__WEBPACK_IMPORTED_MODULE_5__["TimeSlotService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], TimeSlotComponent);
+      }), __metadata("design:paramtypes", [_services_timeslot_service__WEBPACK_IMPORTED_MODULE_5__["TimeSlotService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]])], TimeSlotComponent);
       /***/
     },
 
@@ -25008,22 +26168,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this145 = this;
+            var _this159 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this145.loadingCustomer = true;
+                _this159.loadingCustomer = true;
 
-                _this145.f.id.setValue(sid);
+                _this159.f.id.setValue(sid);
 
-                _this145.userService.getById(sid).subscribe(function (res) {
+                _this159.userService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this145.editForm(res);
+                  _this159.editForm(res);
 
-                  _this145.loadingCustomer = false;
+                  _this159.loadingCustomer = false;
                 });
               }
             });
@@ -25031,7 +26191,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this146 = this;
+            var _this160 = this;
 
             debugger;
             this.userForm.markAllAsTouched();
@@ -25049,31 +26209,31 @@
               console.log(JSON.stringify(this.userForm.value));
               this.userService.insert(this.userForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this146.ts.showSuccess("Success", "Record added successfully.");
+                  _this160.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this146.router.navigate(['/admin/user']);
+                  _this160.router.navigate(['/admin/user']);
                 }
 
-                _this146.loading = false;
+                _this160.loading = false;
               }, function (error) {
-                _this146.ts.showError("Error", "Failed to insert record.");
+                _this160.ts.showError("Error", "Failed to insert record.");
 
-                _this146.loading = false;
+                _this160.loading = false;
               });
             } else {
               //Update customer
               this.userService.update(this.userForm.value).subscribe(function (data) {
-                _this146.loading = false;
+                _this160.loading = false;
 
                 if (data != 0) {
-                  _this146.ts.showSuccess("Success", "Record updated successfully.");
+                  _this160.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this146.router.navigate(['/admin/user']);
+                  _this160.router.navigate(['/admin/user']);
                 }
               }, function (error) {
-                _this146.ts.showError("Error", "Failed to update record.");
+                _this160.ts.showError("Error", "Failed to update record.");
 
-                _this146.loading = false;
+                _this160.loading = false;
               });
             }
           }
@@ -25258,13 +26418,13 @@
         }, {
           key: "onSelect",
           value: function onSelect(rolename) {
-            var _this147 = this;
+            var _this161 = this;
 
             debugger;
             this.userService.getPermissionId(rolename).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this147.formName = res[0];
+                _this161.formName = res[0];
               }
 
               debugger;
@@ -25273,22 +26433,22 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this148 = this;
+            var _this162 = this;
 
             debugger; //Update customer
 
             this.userService.permissionupdate(this.formName).subscribe(function (obj) {
-              _this148.loading = false;
+              _this162.loading = false;
 
               if (obj != 0) {
-                _this148.ts.showSuccess("Success", "Record updated successfully.");
+                _this162.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this148.router.navigate(['/admin/permission']);
+                _this162.router.navigate(['/admin/permission']);
               }
             }, function (error) {
-              _this148.ts.showError("Error", "Failed to update record.");
+              _this162.ts.showError("Error", "Failed to update record.");
 
-              _this148.loading = false;
+              _this162.loading = false;
             });
           }
         }, {
@@ -25452,12 +26612,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this149 = this;
+            var _this163 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this149.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this163.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this149.ts.showError("Error", "Failed to export");
+              _this163.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -25470,9 +26630,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref26) {
-            var column = _ref26.column,
-                direction = _ref26.direction;
+          value: function onSort(_ref27) {
+            var column = _ref27.column,
+                direction = _ref27.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -25489,17 +26649,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this150 = this;
+            var _this164 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this150.ts.showSuccess("Success", "Record deleted successfully.");
+                _this164.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this150.getData();
-              } else _this150.ts.showError("Error", "Failed to delete record.");
+                _this164.getData();
+              } else _this164.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this150.ts.showError("Error", "Failed to delete record.");
+              _this164.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -25601,6 +26761,12 @@
       var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/ExportExcel/excel.service */
       "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ng-bootstrap/ng-bootstrap */
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -25623,7 +26789,7 @@
       };
 
       var UserComponent = /*#__PURE__*/function () {
-        function UserComponent(service, ls, excelService, ts, router) {
+        function UserComponent(service, ls, excelService, ts, router, modalService) {
           _classCallCheck(this, UserComponent);
 
           //this.selectedBrand =this.ls.getSelectedBrand().brandID;
@@ -25632,6 +26798,7 @@
           this.excelService = excelService;
           this.ts = ts;
           this.router = router;
+          this.modalService = modalService;
           this.loading$ = service.loading$;
           this.submit = false;
         }
@@ -25644,12 +26811,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this151 = this;
+            var _this165 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this151.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this165.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this151.ts.showError("Error", "Failed to export");
+              _this165.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -25662,9 +26829,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref27) {
-            var column = _ref27.column,
-                direction = _ref27.direction;
+          value: function onSort(_ref28) {
+            var column = _ref28.column,
+                direction = _ref28.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -25681,22 +26848,47 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this152 = this;
+            var _this166 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this152.ts.showSuccess("Success", "Record deleted successfully.");
+                _this166.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this152.getData();
-              } else _this152.ts.showError("Error", "Failed to delete record.");
+                _this166.getData();
+              } else _this166.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this152.ts.showError("Error", "Failed to delete record.");
+              _this166.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
-          key: "Deactive",
-          value: function Deactive(id, rowVersion) {}
+          key: "open",
+          value: function open(content, obj) {
+            var _this167 = this;
+
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this167.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this167.Delete(obj);
+              }
+            }, function (reason) {
+              _this167.closeResult = "Dismissed ".concat(_this167.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
         }]);
 
         return UserComponent;
@@ -25713,6 +26905,8 @@
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]
         }];
       };
 
@@ -25728,7 +26922,7 @@
         /*! raw-loader!./user.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user/user.component.html"))["default"],
         providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
-      }), __metadata("design:paramtypes", [src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], UserComponent);
+      }), __metadata("design:paramtypes", [src_app_services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModal"]])], UserComponent);
       /***/
     },
 
@@ -25859,471 +27053,477 @@
       /* harmony import */
 
 
-      var _home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! ./home/home.component */
-      "./src/app/home/home.component.ts");
-      /* harmony import */
-
-
-      var _counter_counter_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ./counter/counter.component */
       "./src/app/counter/counter.component.ts");
       /* harmony import */
 
 
-      var _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! ./fetch-data/fetch-data.component */
       "./src/app/fetch-data/fetch-data.component.ts");
       /* harmony import */
 
 
-      var _login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _login_login_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! ./login/login.component */
       "./src/app/login/login.component.ts");
       /* harmony import */
 
 
-      var _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! ./admin/dashboard/dashboard.component */
       "./src/app/admin/dashboard/dashboard.component.ts");
       /* harmony import */
 
 
-      var _layout_layout_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! ./layout/layout.component */
       "./src/app/layout/layout.component.ts");
       /* harmony import */
 
 
-      var _angular_service_worker__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @angular/service-worker */
       "./node_modules/@angular/service-worker/__ivy_ngcc__/fesm2015/service-worker.js");
       /* harmony import */
 
 
-      var _environments_environment__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../environments/environment */
       "./src/environments/environment.ts");
       /* harmony import */
 
 
-      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
       "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
-      var _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+      var _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! ./admin/menu/category/category.component */
       "./src/app/admin/menu/category/category.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+      var _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
       /*! ./admin/menu/category/addcategory/addcategory.component */
       "./src/app/admin/menu/category/addcategory/addcategory.component.ts");
       /* harmony import */
 
 
-      var _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+      var _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
       /*! ./imageupload/imageupload.component */
       "./src/app/imageupload/imageupload.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+      var _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
       /*! ./admin/menu/items/items.component */
       "./src/app/admin/menu/items/items.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+      var _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
       /*! ./admin/menu/items/additem/additem.component */
       "./src/app/admin/menu/items/additem/additem.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
+      var _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
       /*! ./admin/menu/modifiers/modifiers.component */
       "./src/app/admin/menu/modifiers/modifiers.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
+      var _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
       /*! ./admin/menu/modifiers/addmodifier/addmodifier.component */
       "./src/app/admin/menu/modifiers/addmodifier/addmodifier.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
+      var _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
       /*! ./admin/reception/customers/customers.component */
       "./src/app/admin/reception/customers/customers.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+      var _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
       /*! ./admin/reception/customers/addcustomers/addcustomer.component */
       "./src/app/admin/reception/customers/addcustomers/addcustomer.component.ts");
       /* harmony import */
 
 
-      var _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
+      var _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
       /*! ./admin/company/locations/locations.component */
       "./src/app/admin/company/locations/locations.component.ts");
       /* harmony import */
 
 
-      var _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
+      var _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
       /*! ./admin/company/locations/addlocation/addlocation.component */
       "./src/app/admin/company/locations/addlocation/addlocation.component.ts");
       /* harmony import */
 
 
-      var _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
+      var _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
       /*! @ng-select/ng-select */
       "./node_modules/@ng-select/ng-select/__ivy_ngcc__/fesm2015/ng-select-ng-select.js");
       /* harmony import */
 
 
-      var _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
+      var _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
       /*! ./admin/company/brands/addbrand/addbrand.component */
       "./src/app/admin/company/brands/addbrand/addbrand.component.ts");
       /* harmony import */
 
 
-      var ngx_toastr__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
+      var ngx_toastr__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
       /*! ngx-toastr */
       "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
       /* harmony import */
 
 
-      var _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
+      var _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
       /*! ./admin/company/brands/brands.component */
       "./src/app/admin/company/brands/brands.component.ts");
       /* harmony import */
 
 
-      var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(
+      var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
       /*! @angular/platform-browser/animations */
       "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
       /* harmony import */
 
 
-      var _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(
+      var _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(
       /*! ./admin/report/summary/summary.component */
       "./src/app/admin/report/summary/summary.component.ts");
       /* harmony import */
 
 
-      var _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
+      var _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(
       /*! ./datepicker-range/datepicker-range-popup */
       "./src/app/datepicker-range/datepicker-range-popup.ts");
       /* harmony import */
 
 
-      var _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
+      var _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
       /*! ./admin/settings/banner/banner.component */
       "./src/app/admin/settings/banner/banner.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
+      var _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
       /*! ./admin/settings/banner/addbanner/addbanner.component */
       "./src/app/admin/settings/banner/addbanner/addbanner.component.ts");
       /* harmony import */
 
 
-      var _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
+      var _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
       /*! ./admin/report/salesdetail/salesdetail.component */
       "./src/app/admin/report/salesdetail/salesdetail.component.ts");
       /* harmony import */
 
 
-      var _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(
+      var _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
       /*! ./admin/report/salesuserwise/salesuserwise.component */
       "./src/app/admin/report/salesuserwise/salesuserwise.component.ts");
       /* harmony import */
 
 
-      var _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(
+      var _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(
       /*! ./admin/report/salescustomerwise/salescustomerwise.component */
       "./src/app/admin/report/salescustomerwise/salescustomerwise.component.ts");
       /* harmony import */
 
 
-      var _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(
+      var _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(
       /*! ./admin/report/salescategorywise/salescategorywise.component */
       "./src/app/admin/report/salescategorywise/salescategorywise.component.ts");
       /* harmony import */
 
 
-      var _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(
+      var _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(
       /*! ./admin/report/salesitemwise/salesitemwise.component */
       "./src/app/admin/report/salesitemwise/salesitemwise.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(
+      var _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(
       /*! ./admin/settings/promotion/promotion.component */
       "./src/app/admin/settings/promotion/promotion.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(
+      var _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(
       /*! ./admin/settings/promotion/addpromotion/addpromotion.component */
       "./src/app/admin/settings/promotion/addpromotion/addpromotion.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(
+      var _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(
       /*! ./admin/menu/items/itemsettings/itemsettings.component */
       "./src/app/admin/menu/items/itemsettings/itemsettings.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(
+      var _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(
       /*! ./admin/settings/delivery/delivery.component */
       "./src/app/admin/settings/delivery/delivery.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
+      var _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(
       /*! ./admin/settings/appsettings/appsettings.component */
       "./src/app/admin/settings/appsettings/appsettings.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
+      var _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
       /*! ./admin/settings/appsettings/addappsettings/addsettings.component */
       "./src/app/admin/settings/appsettings/addappsettings/addsettings.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
+      var _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
       /*! ./admin/menu/addons/addons.component */
       "./src/app/admin/menu/addons/addons.component.ts");
       /* harmony import */
 
 
-      var _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
+      var _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
       /*! ./admin/menu/addons/addaddons/addaddons.component */
       "./src/app/admin/menu/addons/addaddons/addaddons.component.ts");
       /* harmony import */
 
 
-      var _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
+      var _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
       /*! ./admin/managedoctor/doctor/doctor.component */
       "./src/app/admin/managedoctor/doctor/doctor.component.ts");
       /* harmony import */
 
 
-      var _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
+      var _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
       /*! ./admin/managedoctor/doctor/adddoctors/adddoctors.component */
       "./src/app/admin/managedoctor/doctor/adddoctors/adddoctors.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
+      var _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
       /*! ./admin/pharmacy/prescription/prescription.component */
       "./src/app/admin/pharmacy/prescription/prescription.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(
+      var _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
       /*! ./admin/pharmacy/prescription/add/addprescription.component */
       "./src/app/admin/pharmacy/prescription/add/addprescription.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(
+      var _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(
       /*! ./admin/reception/appointment/appointment.component */
       "./src/app/admin/reception/appointment/appointment.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(
+      var _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(
       /*! ./admin/reception/appointmentdetails/appointmentdetails.component */
       "./src/app/admin/reception/appointmentdetails/appointmentdetails.component.ts");
       /* harmony import */
 
 
-      var _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(
+      var _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(
       /*! ./admin/laboratory/uploadreport/uploadreport.component */
       "./src/app/admin/laboratory/uploadreport/uploadreport.component.ts");
       /* harmony import */
 
 
-      var _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(
+      var _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(
       /*! ./admin/laboratory/uploadreport/addreports/addreports.component */
       "./src/app/admin/laboratory/uploadreport/addreports/addreports.component.ts");
       /* harmony import */
 
 
-      var _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(
+      var _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(
       /*! ./admin/laboratory/diagnosticcategories/diagnosticcategories.component */
       "./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.ts");
       /* harmony import */
 
 
-      var _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(
+      var _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(
       /*! ./admin/laboratory/diagnosticcategories/add/addcategory.component */
       "./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(
+      var _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(
       /*! ./admin/pharmacy/deliverydetail/deliverydetail.component */
       "./src/app/admin/pharmacy/deliverydetail/deliverydetail.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(
+      var _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(
       /*! ./admin/settings/coupon/coupon.component */
       "./src/app/admin/settings/coupon/coupon.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(
+      var _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(
       /*! ./admin/settings/coupon/addcoupon/addcoupon.component */
       "./src/app/admin/settings/coupon/addcoupon/addcoupon.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(
+      var _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(
       /*! ./admin/pharmacy/medicine/medicine.component */
       "./src/app/admin/pharmacy/medicine/medicine.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(
+      var _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(
       /*! ./admin/pharmacy/medicine/addmedicines/addmedicine.component */
       "./src/app/admin/pharmacy/medicine/addmedicines/addmedicine.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(
+      var _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(
       /*! ./admin/pharmacy/orders/orders.component */
       "./src/app/admin/pharmacy/orders/orders.component.ts");
       /* harmony import */
 
 
-      var _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(
+      var _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(
       /*! ./admin/pharmacy/orderdetails/orderdetails.component */
       "./src/app/admin/pharmacy/orderdetails/orderdetails.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(
+      var _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(
       /*! ./admin/settings/medicalservices/service.component */
       "./src/app/admin/settings/medicalservices/service.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(
+      var _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(
       /*! ./admin/settings/medicalservices/add/addservice.component */
       "./src/app/admin/settings/medicalservices/add/addservice.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(
+      var _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(
       /*! ./admin/settings/medicalservicetype/medicalservicetype.component */
       "./src/app/admin/settings/medicalservicetype/medicalservicetype.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(
+      var _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(
       /*! ./admin/settings/medicalservicetype/add/addmedicalservicetype.component */
       "./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(
+      var _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(
       /*! ./admin/reception/nursingappointment/nursingappointment.component */
       "./src/app/admin/reception/nursingappointment/nursingappointment.component.ts");
       /* harmony import */
 
 
-      var _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(
+      var _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(
       /*! ./admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component */
       "./src/app/admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component.ts");
       /* harmony import */
 
 
-      var _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(
+      var _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(
       /*! ./admin/notification/notification.component */
       "./src/app/admin/notification/notification.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(
+      var _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(
       /*! ././admin/settings/speciality/speciality.component */
       "./src/app/admin/settings/speciality/speciality.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(
+      var _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(
       /*! ././admin/settings/speciality/add/addspeciality.component */
       "./src/app/admin/settings/speciality/add/addspeciality.component.ts");
       /* harmony import */
 
 
-      var _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(
+      var _admin_user_user_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(
       /*! ./admin/user/user.component */
       "./src/app/admin/user/user.component.ts");
       /* harmony import */
 
 
-      var _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(
+      var _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(
       /*! ./admin/user/add/adduser.component */
       "./src/app/admin/user/add/adduser.component.ts");
       /* harmony import */
 
 
-      var _has_role_guard__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(
+      var _has_role_guard__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(
       /*! ./has-role.guard */
       "./src/app/has-role.guard.ts");
       /* harmony import */
 
 
-      var ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
+      var ng_apexcharts__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(
       /*! ng-apexcharts */
       "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
       /* harmony import */
 
 
-      var _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
+      var _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(
       /*! ./admin/user/permission/permission.component */
       "./src/app/admin/user/permission/permission.component.ts");
       /* harmony import */
 
 
-      var _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
+      var _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(
       /*! ./admin/user/permission/add/add.component */
       "./src/app/admin/user/permission/add/add.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
+      var _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(
       /*! ./admin/settings/timeslot/timeslot.component */
       "./src/app/admin/settings/timeslot/timeslot.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
+      var _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(
       /*! ./admin/settings/timeslot/add/addtimeslot.component */
       "./src/app/admin/settings/timeslot/add/addtimeslot.component.ts");
       /* harmony import */
 
 
-      var _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
+      var _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(
       /*! ./admin/permission/formpermission.component */
       "./src/app/admin/permission/formpermission.component.ts");
       /* harmony import */
 
 
-      var _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
+      var _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(
       /*! ./admin/settings/delivery/adddelivery/adddelivery.component */
       "./src/app/admin/settings/delivery/adddelivery/adddelivery.component.ts");
+      /* harmony import */
+
+
+      var _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(
+      /*! ./admin/settings/corporateclient/corporateclient.component */
+      "./src/app/admin/settings/corporateclient/corporateclient.component.ts");
+      /* harmony import */
+
+
+      var _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(
+      /*! ./admin/settings/corporateclient/addcorporateclient/addcorporateclient.component */
+      "./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.ts");
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -26343,290 +27543,301 @@
       };
 
       AppModule = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_12__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_13__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_9__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_10__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_17__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_18__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_19__["ImageuploadComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"], _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_7__["NavMenuComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"], _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"], _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"], _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_19__["ItemsComponent"], _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_20__["AdditemsComponent"], _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_21__["ModifiersComponent"], _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__["AddmodifierComponent"], _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_23__["CustomersComponent"], _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_24__["AddcustomerComponent"], _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_30__["BrandComponent"], _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_28__["AddbrandComponent"], _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_25__["LocationsComponent"], _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__["AddlocationComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__["ImageuploadComponent"], _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_32__["SummaryComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"], _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_34__["BannerComponent"], _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__["AddbannerComponent"], _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_41__["PromotionComponent"], _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__["AddpromotionComponent"], _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_36__["SalesdetailComponent"], _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_39__["SalescategorywiseComponent"], _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_38__["SalescustomerwiseComponent"], _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_40__["SalesitemwiseComponent"], _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_37__["SalesuserwiseComponent"], _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_43__["ItemsettingsComponent"], _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_44__["DeliveryComponent"], _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_84__["AdddeliveryComponent"], _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_45__["AppsettingComponent"], _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_47__["AddonsComponent"], _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_48__["AddaddonsComponent"], _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_49__["DoctorComponent"], _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_50__["AdddoctorsComponent"], _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_60__["CouponComponent"], _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__["AddCouponComponent"], _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_51__["PrescriptionComponent"], _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_52__["AddprescriptionComponent"], _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_53__["AppointmentComponent"], _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentdetailsComponent"], _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_70__["NursingAppointmentComponent"], _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["AddnursingappointmentComponent"], _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_55__["UploadreportComponent"], _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_56__["AddreportsComponent"], _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"], _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"], _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__["OrdersComponent"], _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__["OrderdetailsComponent"], _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_46__["AddsettingsComponent"], _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__["ServiceComponent"], _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"], _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["MedicalServicetypeComponent"], _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"], _admin_user_user_component__WEBPACK_IMPORTED_MODULE_75__["UserComponent"], _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_76__["AdduserComponent"], _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_72__["NotificationComponent"], _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_74__["AddSpecialityComponent"], _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_73__["SpecialityComponent"], _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_79__["PermissionComponent"], _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_80__["AddComponent"], _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_57__["DiagnosticCategoriesComponent"], _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_58__["AddCategoryComponent"], _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_81__["TimeSlotComponent"], _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_82__["AddTimeSlotComponent"], _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_83__["FormPermissionComponent"], _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_85__["CorporateClientComponent"], _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_86__["addcorporateclientComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({
           appId: 'ng-cli-universal'
-        }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_30__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"],
+        }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_78__["NgApexchartsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_27__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_29__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_31__["BrowserAnimationsModule"],
+        /*    MatDialogModule,*/
+
         /*    NgApexchartsModule,*/
         _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([{
           path: '',
-          component: _login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"],
+          component: _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"],
           pathMatch: 'full'
         }, {
           path: 'admin',
-          component: _layout_layout_component__WEBPACK_IMPORTED_MODULE_13__["LayoutComponent"],
+          component: _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__["LayoutComponent"],
           children: [{
             path: 'dashboard',
-            component: _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_12__["DashboardComponent"]
+            component: _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"]
           }, {
             path: 'category',
-            component: _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_17__["CategoryComponent"]
+            component: _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"]
           }, {
             path: 'category/add',
-            component: _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_18__["AddcategoryComponent"]
+            component: _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"]
           }, {
             path: 'category/edit/:id',
-            component: _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_18__["AddcategoryComponent"]
+            component: _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"]
           }, {
             path: 'item',
-            component: _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"]
+            component: _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_19__["ItemsComponent"]
           }, {
             path: 'item/add',
-            component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"]
+            component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_20__["AdditemsComponent"]
           }, {
             path: 'item/settings',
-            component: _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"]
+            component: _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_43__["ItemsettingsComponent"]
           }, {
             path: 'item/edit/:id',
-            component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"]
+            component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_20__["AdditemsComponent"]
           }, {
             path: 'modifier',
-            component: _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"]
+            component: _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_21__["ModifiersComponent"]
           }, {
             path: 'modifier/add',
-            component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"]
+            component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__["AddmodifierComponent"]
           }, {
             path: 'modifier/edit/:id',
-            component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"]
+            component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__["AddmodifierComponent"]
           }, {
             path: 'notification',
-            component: _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"]
+            component: _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_72__["NotificationComponent"]
           }, {
             path: 'location',
-            component: _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"]
+            component: _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_25__["LocationsComponent"]
           }, {
             path: 'location/add',
-            component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"]
+            component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__["AddlocationComponent"]
           }, {
             path: 'location/edit/:id',
-            component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"]
+            component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__["AddlocationComponent"]
           }, {
             path: 'brand',
-            component: _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"]
+            component: _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_30__["BrandComponent"]
           }, {
             path: 'brand/add',
-            component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"]
+            component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_28__["AddbrandComponent"]
           }, {
             path: 'brand/edit/:id',
-            component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"]
+            component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_28__["AddbrandComponent"]
           }, {
             path: 'settings/banner',
-            component: _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"]
+            component: _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_34__["BannerComponent"]
           }, {
             path: 'settings/banner/add',
-            component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"]
+            component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__["AddbannerComponent"]
           }, {
             path: 'settings/banner/edit/:id',
-            component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"]
+            component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__["AddbannerComponent"]
+          }, {
+            path: 'settings/corporateclient',
+            component: _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_85__["CorporateClientComponent"]
+          }, {
+            path: 'settings/corporateclient/add',
+            component: _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_86__["addcorporateclientComponent"]
+          }, {
+            path: 'settings/corporateclient/edit/:id',
+            component: _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_86__["addcorporateclientComponent"]
           }, {
             path: 'promotion',
-            component: _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"]
+            component: _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_41__["PromotionComponent"]
           }, {
             path: 'promotion/add',
-            component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"]
+            component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__["AddpromotionComponent"]
           }, {
             path: 'promotion/edit/:id',
-            component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"]
+            component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__["AddpromotionComponent"]
           }, {
             path: 'report/summary',
-            component: _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"]
+            component: _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_32__["SummaryComponent"]
           }, {
             path: 'report/salesdetail',
-            component: _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"]
+            component: _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_36__["SalesdetailComponent"]
           }, {
             path: 'report/salesuserwise',
-            component: _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"]
+            component: _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_37__["SalesuserwiseComponent"]
           }, {
             path: 'report/salescustomerwise',
-            component: _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"]
+            component: _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_38__["SalescustomerwiseComponent"]
           }, {
             path: 'report/salescategorywise',
-            component: _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"]
+            component: _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_39__["SalescategorywiseComponent"]
           }, {
             path: 'report/salesitemwise',
-            component: _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"]
+            component: _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_40__["SalesitemwiseComponent"]
           }, {
             path: 'delivery',
-            component: _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"]
+            component: _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_44__["DeliveryComponent"]
           }, {
             path: 'delivery/add',
-            component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"]
+            component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_84__["AdddeliveryComponent"]
           }, {
             path: 'delivery/edit/:id',
-            component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"]
+            component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_84__["AdddeliveryComponent"]
           }, {
             path: 'settings/appsettings',
-            component: _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"]
+            component: _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_45__["AppsettingComponent"]
           }, {
             path: 'settings/appsettings/add',
-            component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"]
+            component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_46__["AddsettingsComponent"]
           }, {
             path: 'settings/appsettings/edit/:id',
-            component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"]
+            component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_46__["AddsettingsComponent"]
           }, {
             path: 'addons',
-            component: _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"]
+            component: _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_47__["AddonsComponent"]
           }, {
             path: 'addons/add',
-            component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"]
+            component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_48__["AddaddonsComponent"]
           }, {
             path: 'addons/edit/:id',
-            component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"]
+            component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_48__["AddaddonsComponent"]
           }, {
             path: 'managedoctor/doctor',
-            component: _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"]
+            component: _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_49__["DoctorComponent"]
           }, {
             path: 'managedoctor/doctor/adddoctors',
-            component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"]
+            component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_50__["AdddoctorsComponent"]
           }, {
             path: 'managedoctor/doctor/edit/:id',
-            component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"]
+            component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_50__["AdddoctorsComponent"]
           }, {
             path: 'pharmacy/prescription',
-            component: _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"]
+            component: _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_51__["PrescriptionComponent"]
           }, {
             path: 'pharmacy/prescription/addprescription',
-            component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"]
+            component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_52__["AddprescriptionComponent"]
           }, {
             path: 'pharmacy/prescription/edit/:id',
-            component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"]
+            component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_52__["AddprescriptionComponent"]
           }, {
             path: 'reception/customers',
-            component: _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"]
+            component: _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_23__["CustomersComponent"]
           }, {
             path: 'reception/customers/addcustomers',
-            component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"]
+            component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_24__["AddcustomerComponent"]
           }, {
             path: 'reception/customers/edit/:id',
-            component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"]
+            component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_24__["AddcustomerComponent"]
           }, {
             path: 'reception/appointment',
-            component: _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"]
+            component: _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_53__["AppointmentComponent"]
           }, {
             path: 'appointment/view/:id',
-            component: _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"]
+            component: _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentdetailsComponent"]
           }, {
             path: 'reception/nursingappointment',
-            component: _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"]
+            component: _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_70__["NursingAppointmentComponent"]
           }, {
             path: 'reception/nursingappointment/addnursingappointment',
-            component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"]
+            component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["AddnursingappointmentComponent"]
           }, {
             path: 'reception/nursingappointment/edit/:id',
-            component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"]
+            component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["AddnursingappointmentComponent"]
           }, {
             path: 'laboratory/uploadreport',
-            component: _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"]
+            component: _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_55__["UploadreportComponent"]
           }, {
             path: 'laboratory/uploadreport/addreports',
-            component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"]
+            component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_56__["AddreportsComponent"]
           }, {
             path: 'laboratory/uploadreport/edit/:id',
-            component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"]
+            component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_56__["AddreportsComponent"]
           }, {
             path: 'laboratory/diagnosticcategory',
-            component: _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"]
+            component: _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_57__["DiagnosticCategoriesComponent"]
           }, {
             path: 'laboratory/diagnosticcategory/add',
-            component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"]
+            component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_58__["AddCategoryComponent"]
           }, {
             path: 'laboratory/diagnosticcategory/edit/:id',
-            component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"]
+            component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_58__["AddCategoryComponent"]
           }, {
             path: 'pharmacy/deliverydetail',
-            component: _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_60__["DeliverydetailComponent"]
+            component: _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_59__["DeliverydetailComponent"]
           }, {
             path: 'settings/coupon',
-            component: _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"]
+            component: _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_60__["CouponComponent"]
           }, {
             path: 'settings/coupon/add',
-            component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"]
+            component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__["AddCouponComponent"]
           }, {
             path: 'settings/coupon/edit/:id',
-            component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"]
+            component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__["AddCouponComponent"]
           }, {
             path: 'pharmacy/medicine',
-            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"],
-            canActivate: [_has_role_guard__WEBPACK_IMPORTED_MODULE_78__["HasRoleGuard"]],
+            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"],
+            canActivate: [_has_role_guard__WEBPACK_IMPORTED_MODULE_77__["HasRoleGuard"]],
             data: {
               type: ['SuperAdmin']
             }
           }, {
             path: 'pharmacy/medicine/addmedicines',
-            component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"]
+            component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"]
           }, {
             path: 'pharmacy/medicine/edit/:id',
-            component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"]
+            component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"]
           }, {
             path: 'pharmacy/orders',
-            component: _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"]
+            component: _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__["OrdersComponent"]
           }, {
             path: 'orders/view/:id',
-            component: _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"]
+            component: _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__["OrderdetailsComponent"]
           }, {
             path: 'settings/medicalservices',
-            component: _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"]
+            component: _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__["ServiceComponent"]
           }, {
             path: 'settings/medicalservices/add',
-            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"]
+            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"]
           }, {
             path: 'settings/medicalservices/edit/:id',
-            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"]
+            component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"]
           }, {
             path: 'settings/medicalservicetype',
-            component: _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"]
+            component: _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["MedicalServicetypeComponent"]
           }, {
             path: 'settings/medicalservicetype/add',
-            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"]
+            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"]
           }, {
             path: 'settings/medicalservicetype/edit/:id',
-            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"]
+            component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"]
           }, {
             path: 'user',
-            component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"]
+            component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_75__["UserComponent"]
           }, {
             path: 'user/add',
-            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"]
+            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_76__["AdduserComponent"]
           }, {
             path: 'user/edit/:id',
-            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"]
+            component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_76__["AdduserComponent"]
           }, {
             path: 'permission',
-            component: _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"]
+            component: _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_79__["PermissionComponent"]
           }, {
             path: 'permission/add',
-            component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"]
+            component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_80__["AddComponent"]
           }, {
             path: 'permission/edit/:id',
-            component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"]
+            component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_80__["AddComponent"]
           }, {
             path: 'settings/speciality',
-            component: _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"]
+            component: _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_73__["SpecialityComponent"]
           }, {
             path: 'settings/speciality/add',
-            component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"]
+            component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_74__["AddSpecialityComponent"]
           }, {
             path: 'settings/speciality/edit/:id',
-            component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"]
+            component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_74__["AddSpecialityComponent"]
           }, {
             path: 'settings/timeslot',
-            component: _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"]
+            component: _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_81__["TimeSlotComponent"]
           }, {
             path: 'settings/timeslot/add',
-            component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"]
+            component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_82__["AddTimeSlotComponent"]
           }, {
             path: 'settings/timeslot/edit/:id',
-            component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"]
+            component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_82__["AddTimeSlotComponent"]
           }, {
             path: 'formpermission',
-            component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"]
+            component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_83__["FormPermissionComponent"]
           }]
-        }]), _angular_service_worker__WEBPACK_IMPORTED_MODULE_14__["ServiceWorkerModule"].register('ngsw-worker.js', {
-          enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_15__["environment"].production
-        }), _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__["NgbModule"]],
-        providers: [_has_role_guard__WEBPACK_IMPORTED_MODULE_78__["HasRoleGuard"]],
-        exports: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"]],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"]]
+        }]), _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__["ServiceWorkerModule"].register('ngsw-worker.js', {
+          enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].production
+        }), _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"]],
+        providers: [_has_role_guard__WEBPACK_IMPORTED_MODULE_77__["HasRoleGuard"]],
+        exports: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"]],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"]]
       })], AppModule);
       /***/
     },
@@ -26874,12 +28085,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this153 = this;
+        var _this168 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this153.forecasts = result;
+          _this168.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -26993,61 +28204,6 @@
     },
 
     /***/
-    "./src/app/home/home.component.ts":
-    /*!****************************************!*\
-      !*** ./src/app/home/home.component.ts ***!
-      \****************************************/
-
-    /*! exports provided: HomeComponent */
-
-    /***/
-    function srcAppHomeHomeComponentTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "HomeComponent", function () {
-        return HomeComponent;
-      });
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-
-      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
-        var c = arguments.length,
-            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-            d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        }
-        return c > 3 && r && Object.defineProperty(target, key, r), r;
-      };
-
-      var __importDefault = undefined && undefined.__importDefault || function (mod) {
-        return mod && mod.__esModule ? mod : {
-          "default": mod
-        };
-      };
-
-      var HomeComponent = function HomeComponent() {
-        _classCallCheck(this, HomeComponent);
-      };
-
-      HomeComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-        selector: 'app-home',
-        template: __importDefault(__webpack_require__(
-        /*! raw-loader!./home.component.html */
-        "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html"))["default"]
-      })], HomeComponent);
-      /***/
-    },
-
-    /***/
     "./src/app/imageupload/imageupload.component.ts":
     /*!******************************************************!*\
       !*** ./src/app/imageupload/imageupload.component.ts ***!
@@ -27117,7 +28273,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this154 = this;
+            var _this169 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -27127,14 +28283,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this154.imageUrl = reader.result;
+                _this169.imageUrl = reader.result;
 
-                _this154.registrationForm.patchValue({
+                _this169.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this154.editFile = false;
-                _this154.removeUpload = true;
+                _this169.editFile = false;
+                _this169.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -27261,7 +28417,7 @@
 
       var LayoutComponent = /*#__PURE__*/function () {
         function LayoutComponent(router, service, userService, ls) {
-          var _this155 = this;
+          var _this170 = this;
 
           _classCallCheck(this, LayoutComponent);
 
@@ -27287,7 +28443,7 @@
 
           this.permission = this.ls.getSelectedBrand();
           var role = this.permission.permissionForm.find(function (element) {
-            return element.roleName == _this155.type;
+            return element.roleName == _this170.type;
           });
           var roleNameType = role.roleName;
           this.isDiagnostic = role.diagnostic === 1 ? true : false;
@@ -27481,7 +28637,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this156 = this;
+            var _this171 = this;
 
             this.loginForm.markAllAsTouched();
 
@@ -27491,19 +28647,19 @@
 
             this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this156.ls.setSelectedBrand(data);
+                _this171.ls.setSelectedBrand(data);
 
-                _this156.userService.getAllData(); //this.userService.getpermission();
+                _this171.userService.getAllData(); //this.userService.getpermission();
 
 
                 src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].rootScope = data;
 
-                _this156.router.navigate(["/admin/dashboard"]);
+                _this171.router.navigate(["/admin/dashboard"]);
               } else {
-                _this156.ts.showError("Error", "Username or password is not correct.");
+                _this171.ts.showError("Error", "Username or password is not correct.");
               }
             }, function (error) {
-              _this156.ts.showError("Error", "Something went wrong.");
+              _this171.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {

@@ -28,6 +28,11 @@ namespace MamjiAdmin.Controllers
         {
             return _service.GetAlldropdown();
         }
+        [HttpGet("alldropdownRNo")]
+        public List<CustomerRNoDropdownBLL> GetAlldropdownRNo()
+        {
+            return _service.GetAlldropdownRNo();
+        }
         [HttpGet("customer/{id}")]
         public CustomerBLL Get(int id)
         {

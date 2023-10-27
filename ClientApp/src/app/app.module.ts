@@ -107,6 +107,8 @@ import { AddTimeSlotComponent } from './admin/settings/timeslot/add/addtimeslot.
 
 import { FormPermissionComponent } from './admin/permission/formpermission.component';
 import { AdddeliveryComponent } from './admin/settings/delivery/adddelivery/adddelivery.component';
+import { CorporateClientComponent } from './admin/settings/corporateclient/corporateclient.component';
+import { addcorporateclientComponent } from './admin/settings/corporateclient/addcorporateclient/addcorporateclient.component';
 
 
 
@@ -182,6 +184,8 @@ import { AdddeliveryComponent } from './admin/settings/delivery/adddelivery/addd
     TimeSlotComponent,
     AddTimeSlotComponent,
     FormPermissionComponent,
+    CorporateClientComponent,
+    addcorporateclientComponent,
 
   ],
   imports: [
@@ -228,6 +232,10 @@ import { AdddeliveryComponent } from './admin/settings/delivery/adddelivery/addd
           { path: 'settings/banner', component: BannerComponent },
           { path: 'settings/banner/add', component: AddbannerComponent },
           { path: 'settings/banner/edit/:id', component: AddbannerComponent },
+
+          { path: 'settings/corporateclient', component: CorporateClientComponent },
+          { path: 'settings/corporateclient/add', component: addcorporateclientComponent },
+          { path: 'settings/corporateclient/edit/:id', component: addcorporateclientComponent },
 
           { path: 'promotion', component: PromotionComponent },
           { path: 'promotion/add', component: AddpromotionComponent },

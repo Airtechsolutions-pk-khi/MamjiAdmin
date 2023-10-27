@@ -1,6 +1,7 @@
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\MamjiAdmin.exe
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\appsettings.json
+E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\libman.json
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\MamjiAdmin.dll
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\MamjiAdmin.deps.json
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\MamjiAdmin.runtimeconfig.json
@@ -117,6 +118,7 @@ E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\ass
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\d9f38256-ebde-4939-99b6-42fe76f42c26.jpg
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\f5c67c68-b5c6-44ba-a9e3-e7b2f2c82f76.jpg
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\Brand\f5e777cf-25ce-4815-b3e3-a412d6f986d8.jpg
+E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\Upload\pdfFiles\GASTROENTEROLOGY DEPARTMENT.pdf
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\bootstrap\js\bootstrap.bundle.js
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\bootstrap\js\bootstrap.bundle.js.map
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\vendor\bootstrap\js\bootstrap.bundle.min.js

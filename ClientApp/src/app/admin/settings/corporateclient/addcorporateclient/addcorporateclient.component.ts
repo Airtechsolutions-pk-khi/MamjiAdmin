@@ -3,22 +3,26 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
-import { CustomersService } from 'src/app/_services/customers.service';
 import { ToastService } from 'src/app/_services/toastservice';
-//import { debug } from 'console';
+import { CorporateClientService } from 'src/app/_services/corporateclient.service';
 
 @Component({
-  selector: 'app-addcustomer',
-  templateUrl: './addcustomer.component.html',
-  styleUrls: ['./addcustomer.component.css']
+  selector: 'app-addcorporateclient',
+  templateUrl: './addcorporateclient.component.html',
+  styleUrls: ['./addcorporateclient.component.css']
 })
-export class AddcustomerComponent implements OnInit {
-
+export class addcorporateclientComponent implements OnInit {
+ 
   submitted = false;
-  customerForm: FormGroup;
+  corporateclientForm: FormGroup;
   loading = false;
   loadingCustomer = false;
-  ButtonText = "Save";
+  ButtonText = "Save"; 
+  selectedSubCategoriesIds: string[];
+  selectedLocationIds: string[];
+  selectedgroupModifierIds: string[];
+
+  NursingTypeActive :any= ['Header','Featured'];
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -27,7 +31,7 @@ export class AddcustomerComponent implements OnInit {
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
-    private customerService: CustomersService
+    private addcorporateclientService: CorporateClientService
 
   ) {
     this.createForm();
@@ -37,41 +41,34 @@ export class AddcustomerComponent implements OnInit {
     this.setSelectedCustomer();
   }
 
-  get f() { return this.customerForm.controls; }
+  get f() { return this.corporateclientForm.controls; }
 
   private createForm() {
-    this.customerForm = this.formBuilder.group({
-      fullName: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+    this.corporateclientForm = this.formBuilder.group({
+      clientName: [''],      
       statusID: [true],
-      mobile: ['', Validators.required],
-      password: ['', Validators.required],
-      customerID: 0,
+      corporateClientID: 0,
       image: [''],
-      
     });
   }
 
   private editForm(obj) {
-    debugger;
-    this.f.fullName.setValue(obj.fullName);
-    this.f.email.setValue(obj.email);
-    this.f.password.setValue(obj.password);
-    this.f.mobile.setValue(obj.mobile);    
-    this.f.customerID.setValue(obj.customerID);
+    debugger
+    this.f.clientName.setValue(obj.clientName);     
+    this.f.corporateClientID.setValue(obj.corporateClientID);
     this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.image;
   }
 
   setSelectedCustomer() {
-    debugger;
+    debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
         this.loadingCustomer = true;
-        this.f.customerID.setValue(sid);
-        this.customerService.getById(sid).subscribe(res => {
+        this.f.corporateClientID.setValue(sid);
+        this.addcorporateclientService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
           this.loadingCustomer = false;
@@ -79,21 +76,24 @@ export class AddcustomerComponent implements OnInit {
       }
     })
   }
+
   onSubmit() {
-    this.customerForm.markAllAsTouched();
+    debugger
+    this.corporateclientForm.markAllAsTouched();
     this.submitted = true;
-    if (this.customerForm.invalid) { return; }
+    if (this.corporateclientForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.image.setValue(this.imgComp.imageUrl);
+    
 
-    if (parseInt(this.f.customerID.value) === 0) {
-      //Insert customer
-      console.log(JSON.stringify(this.customerForm.value));
-      this.customerService.insert(this.customerForm.value).subscribe(data => {
+    if (parseInt(this.f.corporateClientID.value) === 0) {
+      //Insert banner
+      console.log(JSON.stringify(this.corporateclientForm.value));
+      this.addcorporateclientService.insert(this.corporateclientForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/reception/customers']);
+          this.router.navigate(['/admin/settings/corporateclient']);
         }
         this.loading = false;
       }, error => {
@@ -101,12 +101,12 @@ export class AddcustomerComponent implements OnInit {
         this.loading = false;
       });
     } else {
-      //Update customer
-      this.customerService.update(this.customerForm.value).subscribe(data => {
+      //Update banner
+      this.addcorporateclientService.update(this.corporateclientForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
           this.ts.showSuccess("Success","Record updated successfully.")
-          this.router.navigate(['/admin/reception/customers']);
+          this.router.navigate(['/admin/settings/corporateclient']);
         }
       }, error => {
         this.ts.showError("Error","Failed to update record.")
@@ -114,4 +114,7 @@ export class AddcustomerComponent implements OnInit {
       });
     }
   }
+
+
+
 }

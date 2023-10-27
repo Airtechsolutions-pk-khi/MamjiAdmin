@@ -4,9 +4,10 @@ namespace MohsinFoodAdmin._Models
 {
 	public class UploadViewModel
 	{
-		public string DiagnosticCatID { get; set; }
-		public string CustomerID { get; set; }
-		public IFormFile PdfFile { get; set; }
-	}
-
+        public string LaboratoryID { get; set; }
+        public string DiagnosticCatID { get; set; }
+		public string CustomerID { get; set; }		
+        public IFormFile File { get; set; }
+    }
+   
 }

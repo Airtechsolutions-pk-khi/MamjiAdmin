@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace MamjiAdmin.BLL._Services
 {
-    public class customerService : baseService
+    public class corporateclientService : baseService
     {
-        customerDB _service;
-        public customerService()
+        corporateclientDB _service;
+        public corporateclientService()
         {
-            _service = new customerDB();
+            _service = new corporateclientDB();
         }
 
-        public List<CustomerBLL> GetAll()
+        public List<CorporateClientBLL> GetAll()
         {
             try
             {
@@ -25,35 +25,14 @@ namespace MamjiAdmin.BLL._Services
             }
             catch (Exception ex)
             {
-                return new List<CustomerBLL>();
+                return new List<CorporateClientBLL>();
             }
         }
-        public List<CustomerDropdownBLL> GetAlldropdown()
+        
+        public CorporateClientBLL Get(int id)
         {
             try
             {
-                return _service.GetAlldropdown();
-            }
-            catch (Exception ex)
-            {
-                return new List<CustomerDropdownBLL>();
-            }
-        }
-        public List<CustomerRNoDropdownBLL> GetAlldropdownRNo()
-        {
-            try
-            {
-                return _service.GetAlldropdownRNo();
-            }
-            catch (Exception ex)
-            {
-                return new List<CustomerRNoDropdownBLL>();
-            }
-        }
-        public CustomerBLL Get(int id)
-        {
-            try
-            { 
                 return _service.Get(id);
             }
             catch (Exception ex)
@@ -61,12 +40,12 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(CustomerBLL data, IWebHostEnvironment _env)
+        public int Insert(CorporateClientBLL data, IWebHostEnvironment _env)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Customer", _env);
-                data.CreatedOn = _UTCDateTime_SA();
+                data.Image = UploadImage(data.Image, "CorporateClient", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 
                 return result;
@@ -77,11 +56,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Update(CustomerBLL data, IWebHostEnvironment _env)
+        public int Update(CorporateClientBLL data, IWebHostEnvironment _env)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Customer", _env);
+                data.Image = UploadImage(data.Image, "CorporateClient", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 
@@ -93,10 +72,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
 
-        public int Delete(CustomerBLL data)
+        public int Delete(CorporateClientBLL data)
         {
             try
-            {                
+            {
+                data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Delete(data);
 
                 return result;

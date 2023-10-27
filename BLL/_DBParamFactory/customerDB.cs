@@ -73,6 +73,29 @@ namespace BAL.Repositories
                 return null;
             }
         }
+        public List<CustomerRNoDropdownBLL> GetAlldropdownRNo()
+        {
+            try
+            {
+                var lst = new List<CustomerRNoDropdownBLL>();
+                SqlParameter[] p = new SqlParameter[0];
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_getcustomerRNo_DropDown", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        //lst = _dt.DataTableToList<CustomerBLL>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerRNoDropdownBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
         public CustomerBLL Get(int id)
         {
             try
@@ -113,7 +136,8 @@ namespace BAL.Repositories
                 p[8] = new SqlParameter("@CreatedBy", data.CreatedBy);
                 p[9] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
                 p[10] = new SqlParameter("@CustomerID", data.CustomerID);
-             
+                
+
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_insertCustomer_Admin", p);              
                 return rtn;
             }
@@ -127,17 +151,19 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[9];
+                SqlParameter[] p = new SqlParameter[10];
 
                 p[0] = new SqlParameter("@FullName", data.FullName);
                 p[1] = new SqlParameter("@Email", data.Email);
-                p[2] = new SqlParameter("@Mobile", data.Mobile);
-                p[3] = new SqlParameter("@Image", data.Image);
-                p[4] = new SqlParameter("@StatusID", data.StatusID);
-                p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[7] = new SqlParameter("@Password", data.Password);
-                p[8] = new SqlParameter("@CustomerID", data.CustomerID);
+                p[2] = new SqlParameter("@Password", data.Password);
+                p[3] = new SqlParameter("@Mobile", data.Mobile);
+                p[4] = new SqlParameter("@Image", data.Image);
+                p[5] = new SqlParameter("@RegistrationNo", data.RegistrationNo);
+                p[6] = new SqlParameter("@StatusID", data.StatusID);
+                p[7] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);               
+                p[8] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[9] = new SqlParameter("@CustomerID", data.CustomerID);
+                
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateCustomer_Admin", p);
 

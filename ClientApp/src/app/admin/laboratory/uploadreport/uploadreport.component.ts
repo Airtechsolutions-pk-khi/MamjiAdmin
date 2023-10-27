@@ -83,18 +83,17 @@ export class UploadreportComponent implements OnInit {
 
   DownloadRpt(URL: string) {
     debugger       
-    var pth = URL.replace("D:\\Inetpub\\mamjihospital.online\\admin.mamjihospital.online\\","");
-    var a = pth.replace("pdfFiles/","pdfFiles\\");
+     var pth = URL.replace("/ClientApp/dist/assets/Upload/pdfFiles/","ClientApp/dist/assets/Upload/pdfFiles/");
+     //var rptName = pth.replace("pdfFiles/","");
 
      //local
     //const apiUrl = 'http://localhost:59660/api/laboratory/loadpdf?path=' + URL;  
     //live
-    const apiUrl = 'http://admin.mamjihospital.online/api/laboratory/loadpdf?path=' + URL;  
-    //const apiUrl = Global.DomainName + '/api/laboratory/loadpdf?path=' + URL;  
-    //const apiUrl = 'http:\\admin.mamjihospital.online\\api\\laboratory\\loadpdf?path=' + a;  
-    var rptName = pth.replace("pdfFiles/","");
+    const apiUrl = 'http://admin.mamjihospital.online/api/laboratory/loadpdf?path=' + pth;  
+    
+    var rptName = pth.replace("ClientApp/dist/assets/Upload/pdfFiles/","");
     this.http.get(apiUrl, { responseType: 'blob' }).subscribe((response: Blob) => {
-      saveAs(response, 'Report_'+rptName);
+      saveAs(response, rptName);
     });
   }
   open(content, obj) {

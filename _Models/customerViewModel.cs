@@ -22,6 +22,7 @@ namespace MamjiAdmin._Models
         public string Email { get; set; }
         public string Mobile { get; set; }
         public string Image { get; set; }
+        public string RegistrationNo { get; set; }
         public int StatusID { get; set; }
         public string LastUpdatedBy { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
@@ -34,5 +35,11 @@ namespace MamjiAdmin._Models
         public int? CustomerID { get; set; }
         public string FullName { get; set; }
         
+    }
+    public class CustomerRNoDropdownBLL
+    {
+        public int? CustomerID { get; set; }
+        public string RegistrationNo { get; set; }
+
     }
 }

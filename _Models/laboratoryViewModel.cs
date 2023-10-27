@@ -22,6 +22,7 @@ namespace MamjiAdmin._Models
         public string FilePath { get; set; } = "";
         public string Image { get; set; }
         public string FullName { get; set; }
+        public string RegistrationNo { get; set; }
         public string CategoryName { get; set; }
     }
 }

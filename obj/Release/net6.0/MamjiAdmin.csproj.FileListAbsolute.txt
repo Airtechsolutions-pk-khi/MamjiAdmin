@@ -144,3 +144,4 @@ E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\refint\MamjiAdmin.dll
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\MamjiAdmin.pdb
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\MamjiAdmin.genruntimeconfig.cache
 E:\Project\Mamji\MamjiAdmin_Git\obj\Release\net6.0\ref\MamjiAdmin.dll
+E:\Project\Mamji\MamjiAdmin_Git\bin\Release\net6.0\libman.json

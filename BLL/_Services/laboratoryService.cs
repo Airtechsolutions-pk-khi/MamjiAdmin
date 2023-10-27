@@ -46,30 +46,35 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                var data = Getcustomer(obj.CustomerID);
+                //var data = Getcustomer(obj.CustomerID);
                 string contentRootPath = _env.ContentRootPath;
 
+                string path = "/ClientApp/dist/assets/Upload/";
+                string filePath = contentRootPath + path;
                 string Body = "";
-                
-                    Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\labreportupload.txt");
-                  
-                    try
-                    {
-                    CustLab(obj, _env, Body);
-                    //var ds = _service.GetToken(obj.CustomerID);
-                    //var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
-                    //foreach (var item in getTokens)
-                    //{
-                    //    var token = new PushNotificationBLL();
-                    //    token.Title = "Mamji Hospital" + " | Appointment Update";
-                    //    token.Message = "Your appointment has been confirmed";
-                    //    token.DeviceID = item.Token;
-                    //    _service.PushNotificationAndroid(token);
-                    //}
-                }
-                    catch (Exception)
-                    {
-                    }
+
+                Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\labreportupload.txt");
+                CustLab(obj, _env, Body);
+
+
+
+                //try
+                //    {
+                   
+                //    //var ds = _service.GetToken(obj.CustomerID);
+                //    //var getTokens = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(ds.Tables[0])).ToObject<List<PushTokenBLL>>();
+                //    //foreach (var item in getTokens)
+                //    //{
+                //    //    var token = new PushNotificationBLL();
+                //    //    token.Title = "Mamji Hospital" + " | Appointment Update";
+                //    //    token.Message = "Your appointment has been confirmed";
+                //    //    token.DeviceID = item.Token;
+                //    //    _service.PushNotificationAndroid(token);
+                //    //}
+                //}
+                //    catch (Exception)
+                //    {
+                //    }
                 
                 return 1;
             }
@@ -89,16 +94,15 @@ namespace MamjiAdmin.BLL._Services
 
             try
             {
-                
-                var email = Getcustomer(obj.CustomerID);
-
-                string ToEmail, SubJect;
-                ToEmail = email.Email;
+                var data = Getcustomer(obj.CustomerID);
+                string ToEmail, SubJect, rno;
+                ToEmail = data.Email;
+                rno = data.RegistrationNo;
                 SubJect = "Your Report has been uploaded";
 
-                Body = Body.Replace("#description#", "-")
-                    .Replace("#date#", DateTime.UtcNow.ToString());
-                SendEmail("Mamji Hospital: ||  " + "Reports", Body, email.Email);
+                Body = Body.Replace("#RegistrationNo#", data.RegistrationNo.ToString());
+                Body = Body.Replace("#date#", DateTime.UtcNow.ToString());
+                SendEmail("Mamji Hospital: ||  " + "Reports", Body, data.Email);
             }
             catch { }
             return 1;
@@ -119,7 +123,7 @@ namespace MamjiAdmin.BLL._Services
                 smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
                 smtp.Credentials = new System.Net.NetworkCredential
                      ("mamjihospital5@gmail.com", "npdcdyiamrbqmyud");
-                smtp.EnableSsl = false;
+                smtp.EnableSsl = true;
                 smtp.Send(mail);               
             }
             catch (Exception ex)
@@ -141,8 +145,8 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.FilePath = UploadFile(data.FilePath, "pdfFiles", _env);
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                //data.FilePath = UploadFile(data.FilePath, "pdfFiles", _env);
+                data.LastUpdatedDate = DateTime.UtcNow;
                 var result = _service.Insert(data);
 
                 return result;
@@ -158,7 +162,7 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 //data.Image = uploadFiles(data.Image, "laboratory", _env);
-                data.LastUpdatedDate = DateTime.Now;
+                data.LastUpdatedDate = DateTime.UtcNow;
                 var result = _service.Update(data);
 
                 return result;
