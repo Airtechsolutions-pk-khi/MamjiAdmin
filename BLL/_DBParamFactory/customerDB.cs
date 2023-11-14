@@ -182,7 +182,7 @@ namespace BAL.Repositories
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@id", data.CustomerID);
-                p[1] = new SqlParameter("@LastUpdatedDate", DateTime.Now);
+                p[1] = new SqlParameter("@LastUpdatedDate", DateTime.UtcNow.AddMinutes(300));
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteCustomer", p);
 

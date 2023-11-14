@@ -41,29 +41,28 @@
             <td> {{item.address}} </td>
             <td> {{item.note}} </td>
             <td>
-              <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
-              </ngb-highlight>
-            </td>
-            <td>
-              <!--<div class="btn-group">
-                <button type="button" class="btn btn-warning">Action</button>
-                <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item badge-info">Accept</a>
-                  <a class="dropdown-item badge-danger" href="#">Reject</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{{item.image}}" target="_blank"  title="ImageName">Download Image</a>
-                </div>
-              </div>-->
+              <span class="badge badge-warning"
+                    *ngIf="item.statusID == 101">Pending</span>
 
+              <span class="badge badge-success"
+                    *ngIf="item.statusID == 102">Approved</span>
+
+              <span class="badge badge-info"
+                    *ngIf="item.statusID == 103">Completed</span>
+
+              <span class="badge badge-dark"
+                    *ngIf="![101, 102, 103].includes(item.statusID)">-</span>
+            </td>
+            <!--<td>
+              <ngb-highlight [ngClass]="{'btn-warning': item.statusID === 1, 'btn-success':item.statusID === 2, 'btn-primary': item.statusID ===3 }" class="btn btn-sm" [result]="item.statusID ==1?'Pending':item.statusID ==2?'Approved':'Completed'" [term]="service.searchTerm">
+              </ngb-highlight>
+            </td>-->
+            <td>
               <a download="sd" href="{{item.image}}" target="_blank" title="ImageName">
                 <i class="fas fa-fw fa-download" download></i>
               </a>
-              <!--<a href="javascript:void(0);" (click)="downloadImage(item.prescriptionID)"><i class="fas fa-fw fa-download"></i> </a>-->
-              <!--<a (click)="Edit(item.prescriptionID)"><i class="fas fa-fw fa-edit"></i> </a>-->
-              <!--<a (click)="Delete(item)"><i class="fas fa-fw fa-trash-alt"></i> </a>-->
+              &nbsp;
+              <a (click)="Edit(item.prescriptionID)"><i class="fas fa-fw fa-edit"></i> </a>
             </td>
           </tr>
         </tbody>

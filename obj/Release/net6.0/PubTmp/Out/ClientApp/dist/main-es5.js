@@ -362,7 +362,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- <h1>Angular 10 Alerts</h1>\r\n  <button class=\"btn btn-success m-1\" (click)=\"alertService.success('Success!!', options)\">Success</button>\r\n  <button class=\"btn btn-danger m-1\" (click)=\"alertService.error('Error :(', options)\">Error</button>\r\n  <button class=\"btn btn-info m-1\" (click)=\"alertService.info('Some info....', options)\">Info</button>\r\n  <button class=\"btn btn-warning m-1\" (click)=\"alertService.warn('Warning: ...', options)\">Warn</button>\r\n  <button class=\"btn btn-outline-dark m-1\" (click)=\"alertService.clear()\">Clear</button>\r\n  <div class=\"form-group mt-2\">\r\n    <div class=\"form-check\">\r\n      <input type=\"checkbox\" name=\"autoClose\" id=\"autoClose\" class=\"form-check-input\" [(ngModel)]=\"options.autoClose\">\r\n      <label for=\"autoClose\">Auto close alert after three seconds</label>\r\n    </div>\r\n    <div class=\"form-check\">\r\n      <input type=\"checkbox\" name=\"keepAfterRouteChange\" id=\"keepAfterRouteChange\" class=\"form-check-input\"\r\n        [(ngModel)]=\"options.keepAfterRouteChange\">\r\n      <label for=\"keepAfterRouteChange\">Keep displaying after one route change</label>\r\n    </div>\r\n  </div> -->\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalSales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayNursingAppointments}}</div>\r\n            <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Today Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>\r\n            <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
+      __webpack_exports__["default"] = "<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalSales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayNursingAppointments}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Today Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -462,7 +462,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Urdu Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=urduName placeholder=\"\" formControlName=\"urduName\">\r\n                  \r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.email.errors.required\">\r\n                          Email is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                  <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                   <div *ngIf=\"f.skills.invalid && (f.skills.dirty || f.skills.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.skills.errors.required\">\r\n                          Skill is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" required formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.gender.invalid && (f.gender.dirty || f.gender.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.gender.errors.required\">\r\n                      Gender is required.\r\n                    </div>\r\n                </div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                  <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                   <div *ngIf=\"f.education.invalid && (f.education.dirty || f.education.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.education.errors.required\">\r\n                          Education is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                 \r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <br />\r\n                  <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"tile-body p-0 table-responsive \">\r\n                <table class=\"table table-striped\">\r\n                  <thead>\r\n                    <tr class=\"table-header\">\r\n                      <th width=\"20%\">Speciality </th>\r\n                      <!--<th width=\"20%\">Fees </th>-->\r\n                      <th width=\"40%\">Profile </th>\r\n                      <th width=\"20%\">Action</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let item of  DoctorProfiles\">\r\n\r\n                      <td>\r\n                        {{item.name}}\r\n                      </td>\r\n                      <!--<td>\r\n                        {{item.fees}}\r\n                      </td>-->\r\n                      <td> {{item.profile}} </td>\r\n\r\n                      <td>\r\n                        <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                      </td>\r\n                    </tr>\r\n\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\" style=\"display: none;\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n              <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n              <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n              <ng-select [items]=\"selectedTimeList\" bindLabel=\"timeSlot\" [multiple]=\"true\" bindValue=\"timeSlot\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.timeSlot}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <br />\r\n              <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n              <thead>\r\n                <tr class=\"table-header\">\r\n                  <th width=\"20%\">ID </th>\r\n                  <th width=\"20%\">Speciality </th>\r\n                  <th width=\"20%\">Days </th>\r\n                  <th width=\"20%\">Timeslot</th>\r\n                  <th width=\"20%\">Action</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                  <td>\r\n                    {{item.specialistID}}\r\n\r\n                  </td>\r\n                  <td>\r\n                    {{item.name}}\r\n\r\n                  </td>\r\n                  <td> {{item.dayName}} </td>\r\n                  <td> {{item.timeSlot}} </td>\r\n\r\n                  <td>\r\n                    <i (click)=\"RemoveChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                  </td>\r\n                </tr>\r\n\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Urdu Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=urduName placeholder=\"\" formControlName=\"urduName\">\r\n                  \r\n                </div>\r\n                <!--<div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                </div>-->\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                  <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                   <div *ngIf=\"f.skills.invalid && (f.skills.dirty || f.skills.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.skills.errors.required\">\r\n                          Skill is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" required formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.gender.invalid && (f.gender.dirty || f.gender.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.gender.errors.required\">\r\n                      Gender is required.\r\n                    </div>\r\n                </div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                  <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                   <div *ngIf=\"f.education.invalid && (f.education.dirty || f.education.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.education.errors.required\">\r\n                          Education is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                 \r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <br />\r\n                  <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"tile-body p-0 table-responsive \">\r\n                <table class=\"table table-striped\">\r\n                  <thead>\r\n                    <tr class=\"table-header\">\r\n                      <th width=\"20%\">Speciality </th>\r\n                      <!--<th width=\"20%\">Fees </th>-->\r\n                      <th width=\"40%\">Profile </th>\r\n                      <th width=\"20%\">Action</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let item of  DoctorProfiles\">\r\n\r\n                      <td>\r\n                        {{item.name}}\r\n                      </td>\r\n                      <!--<td>\r\n                        {{item.fees}}\r\n                      </td>-->\r\n                      <td> {{item.profile}} </td>\r\n\r\n                      <td>\r\n                        <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                      </td>\r\n                    </tr>\r\n\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\" style=\"display: none;\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n              <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n              <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n              <ng-select [items]=\"selectedTimeList\" bindLabel=\"timeSlot\" [multiple]=\"true\" bindValue=\"timeSlot\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.timeSlot}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <br />\r\n              <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n              <thead>\r\n                <tr class=\"table-header\">\r\n                  <th width=\"20%\">ID </th>\r\n                  <th width=\"20%\">Speciality </th>\r\n                  <th width=\"20%\">Days </th>\r\n                  <th width=\"20%\">Timeslot</th>\r\n                  <th width=\"20%\">Action</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                  <td>\r\n                    {{item.specialistID}}\r\n\r\n                  </td>\r\n                  <td>\r\n                    {{item.name}}\r\n\r\n                  </td>\r\n                  <td> {{item.dayName}} </td>\r\n                  <td> {{item.timeSlot}} </td>\r\n\r\n                  <td>\r\n                    <i (click)=\"RemoveChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                  </td>\r\n                </tr>\r\n\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -682,7 +682,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Date </th>\r\n            <th width=\"10%\" sortable=\"Status\">Status</th>\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate | date:'dd-MM-yyyy' }} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.isRead === 0, 'btn-danger':item.isRead !== 0 }\" class=\"btn btn-sm\" [result]=\"item.isRead ==0?'UnRead':'Read'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Date </th>\r\n            <!--<th width=\"10%\" sortable=\"Status\">Status</th>-->\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate | date:'dd-MM-yyyy' }} </td>\r\n            <!--<td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>-->\r\n            <td>\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.isRead == 1\">Read</span>\r\n\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.isRead == 0\">UnRead</span>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -802,7 +802,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Sales</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Orders List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\"> </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\" col-lg-3 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <!-- <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n            <span translate>Export</span>\r\n        </button> -->\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"orderNo\" (sort)=\"onSort($event)\"> Order # </th>\r\n            <th width=\"10%\" sortable=\"transactionNo\" (sort)=\"onSort($event)\">Trans # </th>\r\n            <th width=\"15%\" sortable=\"customerName\" (sort)=\"onSort($event)\">Name </th>\r\n            <th width=\"10%\" sortable=\"customerMobile\" (sort)=\"onSort($event)\">Contact </th>\r\n            <th width=\"10%\" sortable=\"grandTotal\" (sort)=\"onSort($event)\">Total </th>\r\n            <th width=\"10%\" sortable=\"orderDate\" (sort)=\"onSort($event)\">Date </th>\r\n            <th width=\"10%\" sortable=\"orderType\" (sort)=\"onSort($event)\">Order Type </th>\r\n            <th width=\"10%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"5%\"></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n\r\n            <td> {{item.orderNo}} </td>\r\n            <td> {{item.transactionNo}} </td>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.customerMobile}} </td>\r\n\r\n            <td> <span class=\"badge badge-success-soft text-success badge-pill py-2 px-3 mb-2\" style=\"background-color: #bfe5dc;\">{{item.grandTotal | number : '1.2-2'}} PKR</span> </td>\r\n            <td>{{item.orderDate | date}}</td>\r\n            <td><span class=\"badge badge-yellow\">{{item.orderType}}</span></td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-success': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==100 ? 'Completed' :\r\n                             item.statusID ==101 ? 'Pending' :\r\n                             item.statusID ==104 ? 'Out For Delivery' :\r\n                             item.statusID ==102 ? 'Approved' :\r\n                             item.statusID ==103 ? 'Cancelled' :\r\n                             item.statusID ==100 ? 'Completed' :'-'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.orderID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Print(item.orderID)\"><i class=\"fas fa-fw fa-print\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Sales</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Orders List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\"> </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\" col-lg-3 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <!-- <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n            <span translate>Export</span>\r\n        </button> -->\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"orderNo\" (sort)=\"onSort($event)\"> Order # </th>\r\n            <th width=\"10%\" sortable=\"transactionNo\" (sort)=\"onSort($event)\">Trans # </th>\r\n            <th width=\"15%\" sortable=\"customerName\" (sort)=\"onSort($event)\">Name </th>\r\n            <th width=\"10%\" sortable=\"customerMobile\" (sort)=\"onSort($event)\">Contact </th>\r\n            <th width=\"10%\" sortable=\"grandTotal\" (sort)=\"onSort($event)\">Total </th>\r\n            <th width=\"10%\" sortable=\"orderDate\" (sort)=\"onSort($event)\">Date </th>\r\n            <th width=\"10%\" sortable=\"orderType\" (sort)=\"onSort($event)\">Order Type </th>\r\n            <th width=\"10%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"5%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n\r\n            <td> {{item.orderNo}} </td>\r\n            <td> {{item.transactionNo}} </td>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.customerMobile}} </td>\r\n\r\n            <td> <span class=\"badge badge-success-soft text-success badge-pill py-2 px-3 mb-2\" style=\"background-color: #bfe5dc;\">{{item.grandTotal | number : '1.2-2'}} PKR</span> </td>\r\n            <td>{{item.orderDate | date}}</td>\r\n            <td><span class=\"badge badge-yellow\">{{item.orderType}}</span></td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-warning': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==100 ? 'Completed' :\r\n                             item.statusID ==101 ? 'Pending' :\r\n                             item.statusID ==104 ? 'Out For Delivery' :\r\n                             item.statusID ==102 ? 'Approved' :\r\n                             item.statusID ==103 ? 'Cancelled' :\r\n                             item.statusID ==100 ? 'Completed' :'-'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.orderID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              <!--<a (click)=\"Print(item.orderID)\"><i class=\"fas fa-fw fa-print\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n";
       /***/
     },
 
@@ -822,7 +822,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"prescriptionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Prescription Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=customerName placeholder=\"\" formControlName=\"customerName\" readonly>\r\n                <div *ngIf=\"f.customerName.invalid && (f.customerName.dirty || f.customerName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.customerName.errors.required\">\r\n                    Customer Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Mobile</label>\r\n                <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\" readonly>\r\n                <div *ngIf=\"f.mobile.invalid && (f.mobile.dirty || f.mobile.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.mobile.errors.required\">\r\n                    Mobile is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n                  <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\" readonly>\r\n                  <div *ngIf=\"f.address.invalid && (f.address.dirty || f.address.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.address.errors.required\">\r\n                      Address is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Notes</label>\r\n                  <input type=\"text\" class=\"form-control\" id=note placeholder=\"\" formControlName=\"note\" readonly>\r\n                  <div *ngIf=\"f.note.invalid && (f.note.dirty || f.note.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.note.errors.required\">\r\n                      Notes is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload readonly></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\" >\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-danger\" type=\"submit\">Close</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Add Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"prescriptionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Prescription Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=customerName placeholder=\"\" formControlName=\"customerName\" readonly>\r\n                <div *ngIf=\"f.customerName.invalid && (f.customerName.dirty || f.customerName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.customerName.errors.required\">\r\n                    Customer Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Mobile</label>\r\n                <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\" readonly>\r\n                <div *ngIf=\"f.mobile.invalid && (f.mobile.dirty || f.mobile.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.mobile.errors.required\">\r\n                    Mobile is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n                  <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\" readonly>\r\n                  <div *ngIf=\"f.address.invalid && (f.address.dirty || f.address.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.address.errors.required\">\r\n                      Address is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Notes</label>\r\n                  <input type=\"text\" class=\"form-control\" id=note placeholder=\"\" formControlName=\"note\" readonly>\r\n                  <div *ngIf=\"f.note.invalid && (f.note.dirty || f.note.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.note.errors.required\">\r\n                      Notes is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Prescription Status</label>\r\n                  <select class=\"form-control\" formControlName=\"statusID\">\r\n                    <option value=\"101\">Pending</option>\r\n                    <option value=\"102\">Approved</option>\r\n                    <option value=\"103\">Completed</option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload readonly></app-imageupload>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-success\" type=\"submit\">Save</button>\r\n          &nbsp;\r\n          &nbsp;\r\n          <button class=\"btn btn-danger\" type=\"submit\">Close</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -842,7 +842,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"FullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <!--<div class=\"btn-group\">\r\n                <button type=\"button\" class=\"btn btn-warning\">Action</button>\r\n                <button type=\"button\" class=\"btn btn-warning dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                  <span class=\"sr-only\">Toggle Dropdown</span>\r\n                </button>\r\n                <div class=\"dropdown-menu\">\r\n                  <a class=\"dropdown-item badge-info\">Accept</a>\r\n                  <a class=\"dropdown-item badge-danger\" href=\"#\">Reject</a>\r\n                  <div class=\"dropdown-divider\"></div>\r\n                  <a class=\"dropdown-item\" href=\"{{item.image}}\" target=\"_blank\"  title=\"ImageName\">Download Image</a>\r\n                </div>\r\n              </div>-->\r\n\r\n              <a download=\"sd\" href=\"{{item.image}}\" target=\"_blank\" title=\"ImageName\">\r\n                <i class=\"fas fa-fw fa-download\" download></i>\r\n              </a>\r\n              <!--<a href=\"javascript:void(0);\" (click)=\"downloadImage(item.prescriptionID)\"><i class=\"fas fa-fw fa-download\"></i> </a>-->\r\n              <!--<a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>-->\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"FullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td>\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.statusID == 101\">Pending</span>\r\n\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.statusID == 102\">Approved</span>\r\n\r\n              <span class=\"badge badge-info\"\r\n                    *ngIf=\"item.statusID == 103\">Completed</span>\r\n\r\n              <span class=\"badge badge-dark\"\r\n                    *ngIf=\"![101, 102, 103].includes(item.statusID)\">-</span>\r\n            </td>\r\n            <!--<td>\r\n              <ngb-highlight [ngClass]=\"{'btn-warning': item.statusID === 1, 'btn-success':item.statusID === 2, 'btn-primary': item.statusID ===3 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Pending':item.statusID ==2?'Approved':'Completed'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>-->\r\n            <td>\r\n              <a download=\"sd\" href=\"{{item.image}}\" target=\"_blank\" title=\"ImageName\">\r\n                <i class=\"fas fa-fw fa-download\" download></i>\r\n              </a>\r\n              &nbsp;\r\n              <a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -862,7 +862,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n            <th width=\"15%\" sortable=\"FullName\"> Patient Name </th>\r\n            <th width=\"10%\" sortable=\"Address\"> Address </th>\r\n            <th width=\"10%\" sortable=\"Email\"> Email </th>\r\n            <th width=\"10%\" sortable=\"Mobile\"> Mobile </th>\r\n            <!--<th width=\"10%\" sortable=\"Fees\"> Fees </th>-->\r\n            <th width=\"15%\" sortable=\"BookingDate\"> Booking Date </th>\r\n            <th width=\"20%\" sortable=\"Timeslot\"> Time Slot </th>\r\n            <th width=\"20%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n            <th width=\"15%\" sortable=\"Status\"> Status </th>\r\n            <th width=\"10%\">Action</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.appointmentNo}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.email}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <!--<td> {{item.fees}} </td>-->\r\n            <td> {{item.bookingDate}} </td>\r\n            <td> {{item.timeslot}} </td>\r\n            <td>\r\n              {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 100 ?\"Completed\": \"-\"}}\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.appointmentID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Print(item.appointmentID)\"><i class=\"fas fa-fw fa-print\"></i> </a>-->\r\n              <!--<a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n            </td>\r\n            <!--<td>\r\n              <select class=\"btn btn-danger dropdown form-control\" (change)=\"Status(item)\" id=\"appointmentStatus\" name=\"appointmentStatus\" [(ngModel)]=\"item.appointmentStatus\" style=\" padding-left: 5px;\">\r\n                <option selected></option>\r\n                <option [ngValue]=\"102\">Approved</option>\r\n                <option [ngValue]=\"103\">Cancelled</option>\r\n                <option [ngValue]=\"104\">Completed</option>\r\n              </select>\r\n            </td>-->\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n  function handleDropDownEvents(e) {\r\n    if (e.value == \"CreditCard\") {\r\n      showCreditCardMethod();\r\n    }\r\n    else if (e.value == \"SendPayment\") {\r\n      showSendPaymentMethod();\r\n    }\r\n  }\r\n</script>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n            <th width=\"15%\" sortable=\"FullName\"> Patient Name </th>\r\n            <!--<th width=\"10%\" sortable=\"Address\"> Address </th>-->\r\n            <th width=\"10%\" sortable=\"Email\"> Email </th>\r\n            <th width=\"10%\" sortable=\"Mobile\"> Mobile </th>\r\n            <!--<th width=\"10%\" sortable=\"Fees\"> Fees </th>-->\r\n            <th width=\"15%\" sortable=\"BookingDate\"> Booking Date </th>\r\n            <th width=\"15%\" sortable=\"BookingTime\"> Booking Time </th>\r\n            <th width=\"20%\" sortable=\"Timeslot\"> Time Slot </th>\r\n            <th width=\"20%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n            <th width=\"15%\" sortable=\"Status\"> Status </th>\r\n            <th width=\"10%\">Action</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.appointmentNo}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <!--<td> {{item.address}} </td>-->\r\n            <td> {{item.email}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <!--<td> {{item.fees}} </td>-->\r\n            <td> {{item.bookingDate}} </td>\r\n            <td> {{item.createdOn | date: 'HH:mm:ss'}} </td>\r\n            <td> {{item.timeslot}} </td>\r\n            <td>\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.appointmentStatus == 101\">Pending</span>\r\n\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.appointmentStatus == 102\">Approved</span>\r\n\r\n              <span class=\"badge badge-danger\"\r\n                    *ngIf=\"item.appointmentStatus == 103\">Cancelled</span>\r\n\r\n              <span class=\"badge badge-info\"\r\n                    *ngIf=\"item.appointmentStatus == 100\">Completed</span>\r\n\r\n              <span class=\"badge badge-dark\"\r\n                    *ngIf=\"![101, 102, 103, 100].includes(item.appointmentStatus)\">-</span>\r\n            </td>\r\n            <!--<td>\r\n              {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 100 ?\"Completed\": \"-\"}}\r\n            </td>-->\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.appointmentID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n  function handleDropDownEvents(e) {\r\n    if (e.value == \"CreditCard\") {\r\n      showCreditCardMethod();\r\n    }\r\n    else if (e.value == \"SendPayment\") {\r\n      showSendPaymentMethod();\r\n    }\r\n  }\r\n</script>\r\n";
       /***/
     },
 
@@ -882,7 +882,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Details - <span class=\"badge badge-info\"> {{\r\n            appointment.appointmentStatus == 100 ? \"Completed\" : appointment.appointmentStatus==101 ?\"Pending\" :\r\n            appointment.appointmentStatus == 102? \"Approved\" : appointment.appointmentStatus == 103? \"Cancelled\" : \"-\"\r\n            }}</span></h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n\r\n      </div>\r\n    </div>\r\n    <hr />\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 form-group \">\r\n        <p>Comments / Reason (Optional)</p>\r\n        <input type=\"text\" class=\"form-control\" id=msg placeholder=\"\" [(ngModel)]=\"StatusMsg\">\r\n      </div>\r\n      <div class=\"col-md-12 mb-4\" *ngIf=\"appointment.appointmentStatus!=100\">\r\n        <div class=\"card border-left-info shadow mb-4\">\r\n          <div class=\"card-header border-bottom-0\">Appointment Status</div>\r\n          <div class=\"card-body\">\r\n            <div class=\"\">\r\n              <!--<button class=\"btn btn-primary mr-1\" (click)=\"updateAppointment(appointment,101)\">\r\n            <i class=\"fas fa-truck\"></i> Pending\r\n          </button>-->\r\n              <button class=\"btn btn-info mr-1\" (click)=\"updateAppointment(appointment,100)\">\r\n                <i class=\"fas fa-truck\"></i> Completed\r\n              </button>\r\n              <button class=\"btn btn-success mr-1\" (click)=\"updateAppointment(appointment,102)\">\r\n                <i class=\"fas fa-people-carry\"></i> Approved\r\n              </button>\r\n              <button class=\"btn btn-danger mr-1\" (click)=\"updateAppointment(appointment,103)\">\r\n                <i class=\"fas fa-people-carry\"></i> Cancelled\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-danger shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Appointment Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.patientName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Mobile\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.mobile }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Email\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.email }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Address\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.address }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Age & Gender\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.age + \" \" + appointment.gender }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Booking Date\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.bookingDate }}</div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-Success shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Doctor Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.doctorName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Time Slot\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.timeslot }}</div>\r\n              </div>\r\n              <!-- <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Fee\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.fees }}</div>\r\n              </div> -->\r\n              <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th>Specialities</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let specialty of appointment.specialities\">\r\n                    <td>{{ specialty.specialityName }}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Details - <span class=\"badge badge-info\"> {{\r\n            appointment.appointmentStatus == 100 ? \"Completed\" : appointment.appointmentStatus==101 ?\"Pending\" :\r\n            appointment.appointmentStatus == 102? \"Approved\" : appointment.appointmentStatus == 103? \"Cancelled\" : \"-\"\r\n            }}</span></h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n\r\n      </div>\r\n    </div>\r\n    <hr />\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 form-group \">\r\n        <p>Comments / Reason (Optional)</p>\r\n        <input type=\"text\" class=\"form-control\" id=msg placeholder=\"\" [(ngModel)]=\"StatusMsg\">\r\n      </div>\r\n      <div class=\"col-md-12 mb-4\" *ngIf=\"appointment.appointmentStatus!=100\">\r\n        <div class=\"card border-left-info shadow mb-4\">\r\n          <div class=\"card-header border-bottom-0\">Appointment Status</div>\r\n          <div class=\"card-body\">\r\n            <div class=\"\">\r\n              <button class=\"btn btn-info mr-1\" (click)=\"updateAppointment(appointment,100)\">\r\n                <i class=\"fas fa-truck\"></i> Completed\r\n              </button>\r\n              <button class=\"btn btn-success mr-1\" (click)=\"updateAppointment(appointment,102)\">\r\n                <i class=\"fas fa-people-carry\"></i> Approved\r\n              </button>\r\n              <button class=\"btn btn-danger mr-1\" (click)=\"updateAppointment(appointment,103)\">\r\n                <i class=\"fas fa-people-carry\"></i> Cancelled\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-danger shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Appointment Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.patientName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Mobile\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.mobile }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Email\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.email }}</div>\r\n              </div>\r\n              <!--<div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Address\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.address }}</div>\r\n              </div>-->\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Age & Gender\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.age + \" \" + appointment.gender }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Booking Date\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.bookingDate }}</div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-Success shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Doctor Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.doctorName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Time Slot\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.timeslot }}</div>\r\n              </div>\r\n              <!-- <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Fee\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.fees }}</div>\r\n              </div> -->\r\n              <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th>Specialities</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let specialty of appointment.specialities\">\r\n                    <td>{{ specialty.specialityName }}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1562,7 +1562,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n\r\n            <td>{{item.password}}</td>\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <!--<th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>-->\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <!--<td class=\"d-table-cell\">{{item.password}}</td>-->\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n";
       /***/
     },
 
@@ -1682,7 +1682,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/permission/add']\">Permissions</a> -->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\">Coming Soon</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>-->\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
+      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>-->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\">Coming Soon</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>-->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
       /***/
     },
 
@@ -9846,6 +9846,11 @@
             }));
           }
         }, {
+          key: "delete",
+          value: function _delete(data) {
+            return this.http.post('api/orders/delete', data);
+          }
+        }, {
           key: "total$",
           get: function get() {
             return this._total$.asObservable();
@@ -14303,7 +14308,7 @@
             this.doctorForm = this.formBuilder.group({
               fullName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               urduName: [''],
-              email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              email: [''],
               skills: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               education: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               imagePath: [''],
@@ -14735,6 +14740,7 @@
           value: function open(content, obj) {
             var _this58 = this;
 
+            debugger;
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
@@ -17062,11 +17068,11 @@
           }
         }, {
           key: "updateStatus",
-          value: function updateStatus(item, status) {
+          value: function updateStatus(item) {
             var _this81 = this;
 
             debugger;
-            item.isRead = status; //Update 
+            item.isRead = 1 ? true : undefined; //Update 
 
             this.service.status(item).subscribe(function (data) {
               if (data != 0) {
@@ -18227,7 +18233,7 @@
       var now = new Date();
 
       var OrdersComponent = /*#__PURE__*/function () {
-        function OrdersComponent(service, ls, excelService, ts, router) {
+        function OrdersComponent(service, ls, excelService, ts, router, modalService) {
           _classCallCheck(this, OrdersComponent);
 
           this.service = service;
@@ -18235,13 +18241,13 @@
           this.excelService = excelService;
           this.ts = ts;
           this.router = router;
+          this.modalService = modalService;
           this.Locations = [];
           this.selectedLocations = [];
           this.locationID = 0;
           this.salesorders = [];
           this.loading$ = service.loading$;
-          this.submit = false; // this.selectedBrand = this.ls.getSelectedBrand().brandID;
-          // this.loadLocations();
+          this.submit = false;
         }
 
         _createClass(OrdersComponent, [{
@@ -18347,6 +18353,50 @@
             newWindow.document.write(html);
             newWindow.print();
           }
+        }, {
+          key: "Delete",
+          value: function Delete(data) {
+            var _this93 = this;
+
+            this.service["delete"](data).subscribe(function (res) {
+              if (res != 0) {
+                _this93.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this93.getData();
+              } else _this93.ts.showError("Error", "Failed to delete record.");
+            }, function (error) {
+              _this93.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }, {
+          key: "open",
+          value: function open(content, obj) {
+            var _this94 = this;
+
+            debugger;
+            this.modalService.open(content, {
+              ariaLabelledBy: 'modal-basic-title'
+            }).result.then(function (result) {
+              _this94.closeResult = "Closed with: ".concat(result);
+
+              if (result === 'yes') {
+                _this94.Delete(obj);
+              }
+            }, function (reason) {
+              _this94.closeResult = "Dismissed ".concat(_this94.getDismissReason(reason));
+            });
+          }
+        }, {
+          key: "getDismissReason",
+          value: function getDismissReason(reason) {
+            if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["ModalDismissReasons"].ESC) {
+              return 'by pressing ESC';
+            } else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["ModalDismissReasons"].BACKDROP_CLICK) {
+              return 'by clicking on a backdrop';
+            } else {
+              return "with: ".concat(reason);
+            }
+          }
         }]);
 
         return OrdersComponent;
@@ -18363,6 +18413,8 @@
           type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+        }, {
+          type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbModal"]
         }];
       };
 
@@ -18388,7 +18440,7 @@
         /*! raw-loader!./orders.component.html */
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/pharmacy/orders/orders.component.html"))["default"],
         providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"]]
-      }), __metadata("design:paramtypes", [src_app_services_orders_service__WEBPACK_IMPORTED_MODULE_6__["OrdersService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], OrdersComponent);
+      }), __metadata("design:paramtypes", [src_app_services_orders_service__WEBPACK_IMPORTED_MODULE_6__["OrdersService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbModal"]])], OrdersComponent);
       /***/
     },
 
@@ -18505,7 +18557,7 @@
               address: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               note: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               image: [''],
-              statusID: [true],
+              statusID: 0,
               prescriptionID: 0
             });
           }
@@ -18518,26 +18570,27 @@
             this.f.note.setValue(obj.note);
             this.f.prescriptionID.setValue(obj.prescriptionID);
             this.f.image.setValue(obj.image);
-            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.f.statusID.setValue(obj.statusID);
           }
         }, {
           key: "setSelectedPrescription",
           value: function setSelectedPrescription() {
-            var _this93 = this;
+            var _this95 = this;
 
+            debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this93.loadingPrescription = true;
+                _this95.loadingPrescription = true;
 
-                _this93.f.prescriptionID.setValue(sid);
+                _this95.f.prescriptionID.setValue(sid);
 
-                _this93.prescriptionService.getById(sid).subscribe(function (res) {
+                _this95.prescriptionService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this93.editForm(res);
+                  _this95.editForm(res);
 
-                  _this93.loadingPrescription = false;
+                  _this95.loadingPrescription = false;
                 });
               }
             });
@@ -18545,8 +18598,9 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this94 = this;
+            var _this96 = this;
 
+            debugger;
             this.prescriptionForm.markAllAsTouched();
             this.submitted = true;
 
@@ -18555,7 +18609,8 @@
             }
 
             this.loading = true;
-            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            /*    this.f.statusID.setValue(this.f.statusID.value === true ? 101 : 2);*/
+
             this.f.image.setValue(this.imgComp.imageUrl);
 
             if (parseInt(this.f.prescriptionID.value) === 0) {
@@ -18563,31 +18618,31 @@
               console.log(JSON.stringify(this.prescriptionForm.value));
               this.prescriptionService.insert(this.prescriptionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this94.ts.showSuccess("Success", "Record added successfully.");
+                  _this96.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this94.router.navigate(['/admin/pharmacy/prescription']);
+                  _this96.router.navigate(['/admin/pharmacy/prescription']);
                 }
 
-                _this94.loading = false;
+                _this96.loading = false;
               }, function (error) {
-                _this94.ts.showError("Error", "Failed to insert record.");
+                _this96.ts.showError("Error", "Failed to insert record.");
 
-                _this94.loading = false;
+                _this96.loading = false;
               });
             } else {
               //Update doctor
               this.prescriptionService.update(this.prescriptionForm.value).subscribe(function (data) {
-                _this94.loading = false;
+                _this96.loading = false;
 
                 if (data != 0) {
-                  _this94.ts.showSuccess("Success", "Record updated successfully.");
+                  _this96.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this94.router.navigate(['/admin/pharmacy/prescription']);
+                  _this96.router.navigate(['/admin/pharmacy/prescription']);
                 }
               }, function (error) {
-                _this94.ts.showError("Error", "Failed to update record.");
+                _this96.ts.showError("Error", "Failed to update record.");
 
-                _this94.loading = false;
+                _this96.loading = false;
               });
             }
           }
@@ -18761,12 +18816,12 @@
         _createClass(PrescriptionComponent, [{
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this95 = this;
+            var _this97 = this;
 
             this.service.ExportList(this.selectedPrescription).subscribe(function (res) {
               /*      this.excelService.exportAsExcelFile(res, 'Report_Export');*/
             }, function (error) {
-              _this95.ts.showError("Error", "Failed to export");
+              _this97.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -18798,21 +18853,28 @@
         }, {
           key: "View",
           value: function View(prescription) {
+            debugger;
+            this.router.navigate(["admin/pharmacy/prescription/edit", prescription]);
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(prescription) {
+            debugger;
             this.router.navigate(["admin/pharmacy/prescription/edit", prescription]);
           }
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this96 = this;
+            var _this98 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this96.ts.showSuccess("Success", "Record deleted successfully.");
+                _this98.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this96.getData();
-              } else _this96.ts.showError("Error", "Failed to delete record.");
+                _this98.getData();
+              } else _this98.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this96.ts.showError("Error", "Failed to delete record.");
+              _this98.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -18820,7 +18882,6 @@
           value: function downloadImage(img) {
             debugger;
             var a = this.service.getById(img);
-            a;
             var imgUrl = img.src;
             var imgName = imgUrl.substr(imgUrl.lastIndexOf('/') + 1);
             this.httpClient.get(imgUrl, {
@@ -19035,16 +19096,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this97 = this;
+            var _this99 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this97.ts.showSuccess("Success", "Record deleted successfully.");
+                _this99.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this97.getData();
-              } else _this97.ts.showError("Error", "Failed to delete record.");
+                _this99.getData();
+              } else _this99.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this97.ts.showError("Error", "Failed to delete record.");
+              _this99.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -19188,16 +19249,16 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this98 = this;
+            var _this100 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this98.service.getById(sid).subscribe(function (res) {
+                _this100.service.getById(sid).subscribe(function (res) {
                   debugger;
 
-                  _this98.editForm(res);
+                  _this100.editForm(res);
                 });
               }
             });
@@ -19205,7 +19266,7 @@
         }, {
           key: "updateAppointment",
           value: function updateAppointment(appointment, status) {
-            var _this99 = this;
+            var _this101 = this;
 
             debugger;
             appointment.appointmentStatus = status;
@@ -19213,12 +19274,12 @@
 
             this.service.statusUpdate(appointment).subscribe(function (data) {
               if (data != 0) {
-                _this99.ts.showSuccess("Success", "Record updated successfully.");
+                _this101.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this99.router.navigate(['reception/appointment']);
+                _this101.router.navigate(['reception/appointment']);
               }
             }, function (error) {
-              _this99.ts.showError("Error", "Failed to update record.");
+              _this101.ts.showError("Error", "Failed to update record.");
             });
           }
         }, {
@@ -19386,7 +19447,7 @@
           value: function createForm() {
             this.customerForm = this.formBuilder.group({
               fullName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-              email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].email],
+              email: [''],
               statusID: [true],
               mobile: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
@@ -19410,22 +19471,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this100 = this;
+            var _this102 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this100.loadingCustomer = true;
+                _this102.loadingCustomer = true;
 
-                _this100.f.customerID.setValue(sid);
+                _this102.f.customerID.setValue(sid);
 
-                _this100.customerService.getById(sid).subscribe(function (res) {
+                _this102.customerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this100.editForm(res);
+                  _this102.editForm(res);
 
-                  _this100.loadingCustomer = false;
+                  _this102.loadingCustomer = false;
                 });
               }
             });
@@ -19433,7 +19494,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this101 = this;
+            var _this103 = this;
 
             this.customerForm.markAllAsTouched();
             this.submitted = true;
@@ -19451,31 +19512,31 @@
               console.log(JSON.stringify(this.customerForm.value));
               this.customerService.insert(this.customerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this101.ts.showSuccess("Success", "Record added successfully.");
+                  _this103.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this101.router.navigate(['/admin/reception/customers']);
+                  _this103.router.navigate(['/admin/reception/customers']);
                 }
 
-                _this101.loading = false;
+                _this103.loading = false;
               }, function (error) {
-                _this101.ts.showError("Error", "Failed to insert record.");
+                _this103.ts.showError("Error", "Failed to insert record.");
 
-                _this101.loading = false;
+                _this103.loading = false;
               });
             } else {
               //Update customer
               this.customerService.update(this.customerForm.value).subscribe(function (data) {
-                _this101.loading = false;
+                _this103.loading = false;
 
                 if (data != 0) {
-                  _this101.ts.showSuccess("Success", "Record updated successfully.");
+                  _this103.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this101.router.navigate(['/admin/reception/customers']);
+                  _this103.router.navigate(['/admin/reception/customers']);
                 }
               }, function (error) {
-                _this101.ts.showError("Error", "Failed to update record.");
+                _this103.ts.showError("Error", "Failed to update record.");
 
-                _this101.loading = false;
+                _this103.loading = false;
               });
             }
           }
@@ -19629,11 +19690,11 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this102 = this;
+            var _this104 = this;
 
             this.service.ExportList(this.selectedBrand).subscribe(function (res) {//  this.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this102.ts.showError("Error", "Failed to export");
+              _this104.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -19665,17 +19726,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this103 = this;
+            var _this105 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this103.ts.showSuccess("Success", "Record deleted successfully.");
+                _this105.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this103.getData();
-              } else _this103.ts.showError("Error", "Failed to delete record.");
+                _this105.getData();
+              } else _this105.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this103.ts.showError("Error", "Failed to delete record.");
+              _this105.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -19878,21 +19939,21 @@
         }, {
           key: "setSelectedAppointment",
           value: function setSelectedAppointment() {
-            var _this104 = this;
+            var _this106 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this104.loadingAppointment = true;
+                _this106.loadingAppointment = true;
 
-                _this104.f.appointmentID.setValue(sid);
+                _this106.f.appointmentID.setValue(sid);
 
-                _this104.nursingappointmentService.getById(sid).subscribe(function (res) {
+                _this106.nursingappointmentService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this104.editForm(res);
+                  _this106.editForm(res);
 
-                  _this104.loadingAppointment = false;
+                  _this106.loadingAppointment = false;
                 });
               }
             });
@@ -19900,7 +19961,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this105 = this;
+            var _this107 = this;
 
             this.nursingappointmentForm.markAllAsTouched();
             this.submitted = true;
@@ -19916,71 +19977,71 @@
               console.log(JSON.stringify(this.nursingappointmentForm.value));
               this.nursingappointmentService.insert(this.nursingappointmentForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this105.ts.showSuccess("Success", "Record added successfully.");
+                  _this107.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this105.router.navigate(['/admin/reception/appointment']);
+                  _this107.router.navigate(['/admin/reception/appointment']);
                 }
 
-                _this105.loading = false;
+                _this107.loading = false;
               }, function (error) {
-                _this105.ts.showError("Error", "Failed to insert record.");
+                _this107.ts.showError("Error", "Failed to insert record.");
 
-                _this105.loading = false;
+                _this107.loading = false;
               });
             } else {
               //Update doctor
               this.nursingappointmentService.update(this.nursingappointmentForm.value).subscribe(function (data) {
-                _this105.loading = false;
+                _this107.loading = false;
 
                 if (data != 0) {
-                  _this105.ts.showSuccess("Success", "Record updated successfully.");
+                  _this107.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this105.router.navigate(['/admin/reception/appointment']);
+                  _this107.router.navigate(['/admin/reception/appointment']);
                 }
               }, function (error) {
-                _this105.ts.showError("Error", "Failed to update record.");
+                _this107.ts.showError("Error", "Failed to update record.");
 
-                _this105.loading = false;
+                _this107.loading = false;
               });
             }
           }
         }, {
           key: "loadDoctor",
           value: function loadDoctor() {
-            var _this106 = this;
+            var _this108 = this;
 
             this.nursingappointmentService.loadDoctor().subscribe(function (res) {
-              _this106.DoctorList = res;
+              _this108.DoctorList = res;
             });
           }
         }, {
           key: "loadSpecialities",
           value: function loadSpecialities() {
-            var _this107 = this;
+            var _this109 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this107.SpecialityList = res;
+              _this109.SpecialityList = res;
             });
           }
         }, {
           key: "loadSpecialitiesAll",
           value: function loadSpecialitiesAll() {
-            var _this108 = this;
+            var _this110 = this;
 
             debugger;
             this.nursingappointmentService.loadSpecialities().subscribe(function (res) {
-              _this108.selectedSpecialityList = res;
+              _this110.selectedSpecialityList = res;
             });
           }
         }, {
           key: "loadDay",
           value: function loadDay() {
-            var _this109 = this;
+            var _this111 = this;
 
             debugger;
             this.nursingappointmentService.loadDay().subscribe(function (res) {
-              _this109.DoctorDaysList = res;
+              _this111.DoctorDaysList = res;
             });
           }
         }, {
@@ -20210,16 +20271,16 @@
         }, {
           key: "Delete",
           value: function Delete(data) {
-            var _this110 = this;
+            var _this112 = this;
 
             this.service["delete"](data).subscribe(function (res) {
               if (res != 0) {
-                _this110.ts.showSuccess("Success", "Record deleted successfully.");
+                _this112.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this110.getData();
-              } else _this110.ts.showError("Error", "Failed to delete record.");
+                _this112.getData();
+              } else _this112.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this110.ts.showError("Error", "Failed to delete record.");
+              _this112.ts.showError("Error", "Failed to delete record.");
             });
           } //Status(data) {
           //  debugger
@@ -20405,14 +20466,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this111 = this;
+            var _this113 = this;
 
             this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this111.salesCategoryWise = res;
-              } else _this111.ts.showError("Error", "Something went wrong");
+                _this113.salesCategoryWise = res;
+              } else _this113.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this111.ts.showError("Error", "Failed to delete record.");
+              _this113.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20424,27 +20485,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this112 = this;
+            var _this114 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this112.Locations = res;
-              _this112.locationID = _this112.selectedLocation;
+              _this114.Locations = res;
+              _this114.locationID = _this114.selectedLocation;
 
-              _this112.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this114.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this112.Locations = res;
+                _this114.Locations = res;
                 var arr = [];
 
-                _this112.Locations.forEach(function (element) {
+                _this114.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this112.selectedLocations = arr;
+                _this114.selectedLocations = arr;
 
-                _this112.getData(_this112.selectedLocations.toString());
+                _this114.getData(_this114.selectedLocations.toString());
               });
             });
           }
@@ -20637,14 +20698,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this113 = this;
+            var _this115 = this;
 
             this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this113.orders = res;
-              } else _this113.ts.showError("Error", "Something went wrong");
+                _this115.orders = res;
+              } else _this115.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this113.ts.showError("Error", "Failed to delete record.");
+              _this115.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20656,27 +20717,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this114 = this;
+            var _this116 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this114.Locations = res;
-              _this114.locationID = _this114.selectedLocation;
+              _this116.Locations = res;
+              _this116.locationID = _this116.selectedLocation;
 
-              _this114.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this116.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this114.Locations = res;
+                _this116.Locations = res;
                 var arr = [];
 
-                _this114.Locations.forEach(function (element) {
+                _this116.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this114.selectedLocations = arr;
+                _this116.selectedLocations = arr;
 
-                _this114.getData(_this114.selectedLocations.toString());
+                _this116.getData(_this116.selectedLocations.toString());
               });
             });
           }
@@ -20865,14 +20926,14 @@
         }, {
           key: "getData",
           value: function getData(locaionIDs) {
-            var _this115 = this;
+            var _this117 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this115.orderDetails = res;
-              } else _this115.ts.showError("Error", "Something went wrong");
+                _this117.orderDetails = res;
+              } else _this117.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this115.ts.showError("Error", "Failed to delete record.");
+              _this117.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -20889,27 +20950,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this116 = this;
+            var _this118 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this116.Locations = res;
-              _this116.locationID = _this116.selectedLocation;
+              _this118.Locations = res;
+              _this118.locationID = _this118.selectedLocation;
 
-              _this116.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this118.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this116.Locations = res;
+                _this118.Locations = res;
                 var arr = [];
 
-                _this116.Locations.forEach(function (element) {
+                _this118.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this116.selectedLocations = arr;
+                _this118.selectedLocations = arr;
 
-                _this116.getData(_this116.selectedLocations.toString());
+                _this118.getData(_this118.selectedLocations.toString());
               });
             });
           }
@@ -21105,14 +21166,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this117 = this;
+            var _this119 = this;
 
             this.service.SalesItemwiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this117.salesItemWise = res;
-              } else _this117.ts.showError("Error", "Something went wrong");
+                _this119.salesItemWise = res;
+              } else _this119.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this117.ts.showError("Error", "Failed to delete record.");
+              _this119.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21143,27 +21204,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this118 = this;
+            var _this120 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this118.Locations = res;
-              _this118.locationID = _this118.selectedLocation;
+              _this120.Locations = res;
+              _this120.locationID = _this120.selectedLocation;
 
-              _this118.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this120.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this118.Locations = res;
+                _this120.Locations = res;
                 var arr = [];
 
-                _this118.Locations.forEach(function (element) {
+                _this120.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this118.selectedLocations = arr;
+                _this120.selectedLocations = arr;
 
-                _this118.getData(_this118.selectedLocations.toString());
+                _this120.getData(_this120.selectedLocations.toString());
               });
             });
           }
@@ -21328,14 +21389,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this119 = this;
+            var _this121 = this;
 
             this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this119.data$ = res;
-              } else _this119.ts.showError("Error", "Something went wrong");
+                _this121.data$ = res;
+              } else _this121.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this119.ts.showError("Error", "Failed to delete record.");
+              _this121.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21347,11 +21408,11 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this120 = this;
+            var _this122 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this120.Locations = res;
-              _this120.locationID = _this120.selectedLocation;
+              _this122.Locations = res;
+              _this122.locationID = _this122.selectedLocation;
             });
           }
         }, {
@@ -21518,16 +21579,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this121 = this;
+            var _this123 = this;
 
             this.service.SalesSummaryRpt(this.selectedBrand, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this121._model = res[0];
+                _this123._model = res[0];
 
-                _this121["export"].push(_this121._model);
-              } else _this121.ts.showError("Error", "Something went wrong");
+                _this123["export"].push(_this123._model);
+              } else _this123.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this121.ts.showError("Error", "Failed to delete record.");
+              _this123.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -21702,14 +21763,14 @@
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this122 = this;
+            var _this124 = this;
 
             this.loadingSetting = true;
             this.settingService.getById(1).subscribe(function (res) {
               //Set Forms
-              _this122.editForm(res);
+              _this124.editForm(res);
 
-              _this122.loadingSetting = false;
+              _this124.loadingSetting = false;
             }); // this.route.paramMap.subscribe(param => {
             //   const sid = +param.get('id');
             //   if (sid) {
@@ -21726,7 +21787,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this123 = this;
+            var _this125 = this;
 
             debugger;
             this.settingForm.markAllAsTouched();
@@ -21744,33 +21805,33 @@
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this123.ts.showSuccess("Success", "Record added successfully.");
+                  _this125.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this123.router.navigate(['/admin/settings/appsettings']);
+                  _this125.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this123.loading = false;
+                _this125.loading = false;
               }, function (error) {
-                _this123.ts.showError("Error", "Failed to insert record.");
+                _this125.ts.showError("Error", "Failed to insert record.");
 
-                _this123.loading = false;
+                _this125.loading = false;
               });
             } else {
               //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this123.loading = false;
+                _this125.loading = false;
 
                 if (data != 0) {
-                  _this123.ts.showSuccess("Success", "Record updated successfully.");
+                  _this125.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this123.setSelectedSetting();
+                  _this125.setSelectedSetting();
 
-                  _this123.router.navigate(['/admin/settings/appsettings/add']);
+                  _this125.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this123.ts.showError("Error", "Failed to update record.");
+                _this125.ts.showError("Error", "Failed to update record.");
 
-                _this123.loading = false;
+                _this125.loading = false;
               });
             }
           }
@@ -21941,16 +22002,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this124 = this;
+            var _this126 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this124.ts.showSuccess("Success", "Record deleted successfully.");
+                _this126.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this124.getData();
-              } else _this124.ts.showError("Error", "Failed to delete record.");
+                _this126.getData();
+              } else _this126.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this124.ts.showError("Error", "Failed to delete record.");
+              _this126.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -22137,21 +22198,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this125 = this;
+            var _this127 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this125.loadingCustomer = true;
+                _this127.loadingCustomer = true;
 
-                _this125.f.bannerID.setValue(sid);
+                _this127.f.bannerID.setValue(sid);
 
-                _this125.bannerService.getById(sid).subscribe(function (res) {
+                _this127.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this125.editForm(res);
+                  _this127.editForm(res);
 
-                  _this125.loadingCustomer = false;
+                  _this127.loadingCustomer = false;
                 });
               }
             });
@@ -22159,7 +22220,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this126 = this;
+            var _this128 = this;
 
             debugger;
             this.bannerForm.markAllAsTouched();
@@ -22178,31 +22239,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this126.ts.showSuccess("Success", "Record added successfully.");
+                  _this128.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this126.router.navigate(['/admin/settings/banner']);
+                  _this128.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this126.loading = false;
+                _this128.loading = false;
               }, function (error) {
-                _this126.ts.showError("Error", "Failed to insert record.");
+                _this128.ts.showError("Error", "Failed to insert record.");
 
-                _this126.loading = false;
+                _this128.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this126.loading = false;
+                _this128.loading = false;
 
                 if (data != 0) {
-                  _this126.ts.showSuccess("Success", "Record updated successfully.");
+                  _this128.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this126.router.navigate(['/admin/settings/banner']);
+                  _this128.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this126.ts.showError("Error", "Failed to update record.");
+                _this128.ts.showError("Error", "Failed to update record.");
 
-                _this126.loading = false;
+                _this128.loading = false;
               });
             }
           }
@@ -22382,33 +22443,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this127 = this;
+            var _this129 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this127.ts.showSuccess("Success", "Record deleted successfully.");
+                _this129.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this127.getData();
-              } else _this127.ts.showError("Error", "Failed to delete record.");
+                _this129.getData();
+              } else _this129.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this127.ts.showError("Error", "Failed to delete record.");
+              _this129.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this128 = this;
+            var _this130 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this128.closeResult = "Closed with: ".concat(result);
+              _this130.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this128.Delete(obj);
+                _this130.Delete(obj);
               }
             }, function (reason) {
-              _this128.closeResult = "Dismissed ".concat(_this128.getDismissReason(reason));
+              _this130.closeResult = "Dismissed ".concat(_this130.getDismissReason(reason));
             });
           }
         }, {
@@ -22605,22 +22666,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this129 = this;
+            var _this131 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this129.loadingCustomer = true;
+                _this131.loadingCustomer = true;
 
-                _this129.f.corporateClientID.setValue(sid);
+                _this131.f.corporateClientID.setValue(sid);
 
-                _this129.addcorporateclientService.getById(sid).subscribe(function (res) {
+                _this131.addcorporateclientService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this129.editForm(res);
+                  _this131.editForm(res);
 
-                  _this129.loadingCustomer = false;
+                  _this131.loadingCustomer = false;
                 });
               }
             });
@@ -22628,7 +22689,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this130 = this;
+            var _this132 = this;
 
             debugger;
             this.corporateclientForm.markAllAsTouched();
@@ -22647,31 +22708,31 @@
               console.log(JSON.stringify(this.corporateclientForm.value));
               this.addcorporateclientService.insert(this.corporateclientForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this130.ts.showSuccess("Success", "Record added successfully.");
+                  _this132.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this130.router.navigate(['/admin/settings/corporateclient']);
+                  _this132.router.navigate(['/admin/settings/corporateclient']);
                 }
 
-                _this130.loading = false;
+                _this132.loading = false;
               }, function (error) {
-                _this130.ts.showError("Error", "Failed to insert record.");
+                _this132.ts.showError("Error", "Failed to insert record.");
 
-                _this130.loading = false;
+                _this132.loading = false;
               });
             } else {
               //Update banner
               this.addcorporateclientService.update(this.corporateclientForm.value).subscribe(function (data) {
-                _this130.loading = false;
+                _this132.loading = false;
 
                 if (data != 0) {
-                  _this130.ts.showSuccess("Success", "Record updated successfully.");
+                  _this132.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this130.router.navigate(['/admin/settings/corporateclient']);
+                  _this132.router.navigate(['/admin/settings/corporateclient']);
                 }
               }, function (error) {
-                _this130.ts.showError("Error", "Failed to update record.");
+                _this132.ts.showError("Error", "Failed to update record.");
 
-                _this130.loading = false;
+                _this132.loading = false;
               });
             }
           }
@@ -22851,33 +22912,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this131 = this;
+            var _this133 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this131.ts.showSuccess("Success", "Record deleted successfully.");
+                _this133.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this131.getData();
-              } else _this131.ts.showError("Error", "Failed to delete record.");
+                _this133.getData();
+              } else _this133.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this131.ts.showError("Error", "Failed to delete record.");
+              _this133.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this132 = this;
+            var _this134 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this132.closeResult = "Closed with: ".concat(result);
+              _this134.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this132.Delete(obj);
+                _this134.Delete(obj);
               }
             }, function (reason) {
-              _this132.closeResult = "Dismissed ".concat(_this132.getDismissReason(reason));
+              _this134.closeResult = "Dismissed ".concat(_this134.getDismissReason(reason));
             });
           }
         }, {
@@ -23055,21 +23116,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this133 = this;
+            var _this135 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this133.loadingCoupon = true;
+                _this135.loadingCoupon = true;
 
-                _this133.f.couponID.setValue(sid);
+                _this135.f.couponID.setValue(sid);
 
-                _this133.couponService.getById(sid).subscribe(function (res) {
+                _this135.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this133.editForm(res);
+                  _this135.editForm(res);
 
-                  _this133.loadingCoupon = false;
+                  _this135.loadingCoupon = false;
                 });
               }
             });
@@ -23077,7 +23138,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this134 = this;
+            var _this136 = this;
 
             debugger;
             this.couponForm.markAllAsTouched();
@@ -23095,31 +23156,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this134.ts.showSuccess("Success", "Record added successfully.");
+                  _this136.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this134.router.navigate(['/admin/settings/coupon']);
+                  _this136.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this134.loading = false;
+                _this136.loading = false;
               }, function (error) {
-                _this134.ts.showError("Error", "Failed to insert record.");
+                _this136.ts.showError("Error", "Failed to insert record.");
 
-                _this134.loading = false;
+                _this136.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this134.loading = false;
+                _this136.loading = false;
 
                 if (data != 0) {
-                  _this134.ts.showSuccess("Success", "Record updated successfully.");
+                  _this136.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this134.router.navigate(['/admin/settings/coupon']);
+                  _this136.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this134.ts.showError("Error", "Failed to update record.");
+                _this136.ts.showError("Error", "Failed to update record.");
 
-                _this134.loading = false;
+                _this136.loading = false;
               });
             }
           }
@@ -23323,17 +23384,17 @@
         }, {
           key: "Delete",
           value: function Delete(item) {
-            var _this135 = this;
+            var _this137 = this;
 
             debugger;
             this.service["delete"](item).subscribe(function (res) {
               if (res != 0) {
-                _this135.ts.showSuccess("Success", "Record deleted successfully.");
+                _this137.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this135.getData();
-              } else _this135.ts.showError("Error", "Failed to delete record.");
+                _this137.getData();
+              } else _this137.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this135.ts.showError("Error", "Failed to delete record.");
+              _this137.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -23531,21 +23592,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this136 = this;
+            var _this138 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this136.loading = true;
+                _this138.loading = true;
 
-                _this136.f.deliveryAreaID.setValue(sid);
+                _this138.f.deliveryAreaID.setValue(sid);
 
-                _this136.deliveryService.getById(sid).subscribe(function (res) {
+                _this138.deliveryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this136.editForm(res);
+                  _this138.editForm(res);
 
-                  _this136.loading = false; //BrandsFill
+                  _this138.loading = false; //BrandsFill
                   // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
                   // .subscribe((res: any) => {            
                   //   var stringToConvert = res.items;
@@ -23558,7 +23619,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this137 = this;
+            var _this139 = this;
 
             debugger;
             this.deliveryForm.markAllAsTouched();
@@ -23575,41 +23636,41 @@
               //Insert delivery
               this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this137.ts.showSuccess("Success", "Record added successfully.");
+                  _this139.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this137.router.navigate(['/admin/delivery']);
+                  _this139.router.navigate(['/admin/delivery']);
                 }
 
-                _this137.loading = false;
+                _this139.loading = false;
               }, function (error) {
-                _this137.ts.showError("Error", "Failed to insert record.");
+                _this139.ts.showError("Error", "Failed to insert record.");
 
-                _this137.loading = false;
+                _this139.loading = false;
               });
             } else {
               //Update delivery
               this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this137.loading = false;
+                _this139.loading = false;
 
                 if (data != 0) {
-                  _this137.ts.showSuccess("Success", "Record updated successfully.");
+                  _this139.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this137.router.navigate(['/admin/delivery']);
+                  _this139.router.navigate(['/admin/delivery']);
                 }
               }, function (error) {
-                _this137.ts.showError("Error", "Failed to update record.");
+                _this139.ts.showError("Error", "Failed to update record.");
 
-                _this137.loading = false;
+                _this139.loading = false;
               });
             }
           }
         }, {
           key: "loadBrands",
           value: function loadBrands() {
-            var _this138 = this;
+            var _this140 = this;
 
             this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this138.BrandsList = res; // this.setSelecteditem();
+              _this140.BrandsList = res; // this.setSelecteditem();
             });
           }
         }, {
@@ -23808,33 +23869,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this139 = this;
+            var _this141 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this139.ts.showSuccess("Success", "Record deleted successfully.");
+                _this141.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this139.getData();
-              } else _this139.ts.showError("Error", "Failed to delete record.");
+                _this141.getData();
+              } else _this141.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this139.ts.showError("Error", "Failed to delete record.");
+              _this141.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this140 = this;
+            var _this142 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this140.closeResult = "Closed with: ".concat(result);
+              _this142.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this140.Delete(obj);
+                _this142.Delete(obj);
               }
             }, function (reason) {
-              _this140.closeResult = "Dismissed ".concat(_this140.getDismissReason(reason));
+              _this142.closeResult = "Dismissed ".concat(_this142.getDismissReason(reason));
             });
           }
         }, {
@@ -24022,31 +24083,31 @@
         }, {
           key: "loadActiveType",
           value: function loadActiveType() {
-            var _this141 = this;
+            var _this143 = this;
 
             this.services.loadActiveTyp().subscribe(function (res) {
-              _this141.NursingTypeActive = res;
+              _this143.NursingTypeActive = res;
             });
           }
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this142 = this;
+            var _this144 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this142.loadingService = true;
+                _this144.loadingService = true;
 
-                _this142.f.medicalServiceID.setValue(sid);
+                _this144.f.medicalServiceID.setValue(sid);
 
-                _this142.services.getById(sid).subscribe(function (res) {
+                _this144.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this142.editForm(res);
+                  _this144.editForm(res);
 
-                  _this142.loadingService = false;
+                  _this144.loadingService = false;
                 });
               }
             });
@@ -24054,7 +24115,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this143 = this;
+            var _this145 = this;
 
             debugger;
             this.servicesForm.markAllAsTouched();
@@ -24073,31 +24134,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this143.ts.showSuccess("Success", "Record added successfully.");
+                  _this145.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this143.router.navigate(['/admin/settings/medicalservices']);
+                  _this145.router.navigate(['/admin/settings/medicalservices']);
                 }
 
-                _this143.loading = false;
+                _this145.loading = false;
               }, function (error) {
-                _this143.ts.showError("Error", "Failed to insert record.");
+                _this145.ts.showError("Error", "Failed to insert record.");
 
-                _this143.loading = false;
+                _this145.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this143.loading = false;
+                _this145.loading = false;
 
                 if (data != 0) {
-                  _this143.ts.showSuccess("Success", "Record updated successfully.");
+                  _this145.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this143.router.navigate(['/admin/settings/medicalservices']);
+                  _this145.router.navigate(['/admin/settings/medicalservices']);
                 }
               }, function (error) {
-                _this143.ts.showError("Error", "Failed to update record.");
+                _this145.ts.showError("Error", "Failed to update record.");
 
-                _this143.loading = false;
+                _this145.loading = false;
               });
             }
           }
@@ -24267,16 +24328,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this144 = this;
+            var _this146 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this144.ts.showSuccess("Success", "Record deleted successfully.");
+                _this146.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this144.getData();
-              } else _this144.ts.showError("Error", "Failed to delete record.");
+                _this146.getData();
+              } else _this146.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this144.ts.showError("Error", "Failed to delete record.");
+              _this146.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -24435,22 +24496,22 @@
         }, {
           key: "setSelectedType",
           value: function setSelectedType() {
-            var _this145 = this;
+            var _this147 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this145.loadingService = true;
+                _this147.loadingService = true;
 
-                _this145.f.nursingTypeID.setValue(sid);
+                _this147.f.nursingTypeID.setValue(sid);
 
-                _this145.services.getById(sid).subscribe(function (res) {
+                _this147.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this145.editForm(res);
+                  _this147.editForm(res);
 
-                  _this145.loadingService = false;
+                  _this147.loadingService = false;
                 });
               }
             });
@@ -24458,7 +24519,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this146 = this;
+            var _this148 = this;
 
             this.servicesForm.markAllAsTouched();
             this.submitted = true;
@@ -24475,31 +24536,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this146.ts.showSuccess("Success", "Record added successfully.");
+                  _this148.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this146.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this148.router.navigate(['/admin/settings/medicalservicetype']);
                 }
 
-                _this146.loading = false;
+                _this148.loading = false;
               }, function (error) {
-                _this146.ts.showError("Error", "Failed to insert record.");
+                _this148.ts.showError("Error", "Failed to insert record.");
 
-                _this146.loading = false;
+                _this148.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this146.loading = false;
+                _this148.loading = false;
 
                 if (data != 0) {
-                  _this146.ts.showSuccess("Success", "Record updated successfully.");
+                  _this148.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this146.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this148.router.navigate(['/admin/settings/medicalservicetype']);
                 }
               }, function (error) {
-                _this146.ts.showError("Error", "Failed to update record.");
+                _this148.ts.showError("Error", "Failed to update record.");
 
-                _this146.loading = false;
+                _this148.loading = false;
               });
             }
           }
@@ -24670,16 +24731,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this147 = this;
+            var _this149 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this147.ts.showSuccess("Success", "Record deleted successfully.");
+                _this149.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this147.getData();
-              } else _this147.ts.showError("Error", "Failed to delete record.");
+                _this149.getData();
+              } else _this149.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this147.ts.showError("Error", "Failed to delete record.");
+              _this149.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -24866,21 +24927,21 @@
         }, {
           key: "setSelectedOffers",
           value: function setSelectedOffers() {
-            var _this148 = this;
+            var _this150 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this148.loadingOffers = true;
+                _this150.loadingOffers = true;
 
-                _this148.f.promotionID.setValue(sid);
+                _this150.f.promotionID.setValue(sid);
 
-                _this148.promotion.getById(sid).subscribe(function (res) {
+                _this150.promotion.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this148.editForm(res);
+                  _this150.editForm(res);
 
-                  _this148.loadingOffers = false;
+                  _this150.loadingOffers = false;
                 });
               }
             });
@@ -24888,7 +24949,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this149 = this;
+            var _this151 = this;
 
             this.promotionForm.markAllAsTouched();
             this.submitted = true;
@@ -24906,31 +24967,31 @@
               debugger;
               this.promotion.insert(this.promotionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this149.ts.showSuccess("Success", "Record added successfully.");
+                  _this151.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this149.router.navigate(['/admin/offers']);
+                  _this151.router.navigate(['/admin/offers']);
                 }
 
-                _this149.loading = false;
+                _this151.loading = false;
               }, function (error) {
-                _this149.ts.showError("Error", "Failed to insert record.");
+                _this151.ts.showError("Error", "Failed to insert record.");
 
-                _this149.loading = false;
+                _this151.loading = false;
               });
             } else {
               //Update offers
               this.promotion.update(this.promotionForm.value).subscribe(function (data) {
-                _this149.loading = false;
+                _this151.loading = false;
 
                 if (data != 0) {
-                  _this149.ts.showSuccess("Success", "Record updated successfully.");
+                  _this151.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this149.router.navigate(['/admin/offers']);
+                  _this151.router.navigate(['/admin/offers']);
                 }
               }, function (error) {
-                _this149.ts.showError("Error", "Failed to update record.");
+                _this151.ts.showError("Error", "Failed to update record.");
 
-                _this149.loading = false;
+                _this151.loading = false;
               });
             }
           }
@@ -25102,16 +25163,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this150 = this;
+            var _this152 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this150.ts.showSuccess("Success", "Record deleted successfully.");
+                _this152.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this150.getData();
-              } else _this150.ts.showError("Error", "Failed to delete record.");
+                _this152.getData();
+              } else _this152.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this150.ts.showError("Error", "Failed to delete record.");
+              _this152.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -25277,22 +25338,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this151 = this;
+            var _this153 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this151.loadingService = true;
+                _this153.loadingService = true;
 
-                _this151.f.specialistID.setValue(sid);
+                _this153.f.specialistID.setValue(sid);
 
-                _this151.services.getById(sid).subscribe(function (res) {
+                _this153.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this151.editForm(res);
+                  _this153.editForm(res);
 
-                  _this151.loadingService = false;
+                  _this153.loadingService = false;
                 });
               }
             });
@@ -25300,7 +25361,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this152 = this;
+            var _this154 = this;
 
             debugger;
             this.specialityForm.markAllAsTouched();
@@ -25319,31 +25380,31 @@
               console.log(JSON.stringify(this.specialityForm.value));
               this.services.insert(this.specialityForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this152.ts.showSuccess("Success", "Record added successfully.");
+                  _this154.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this152.router.navigate(['/admin/settings/speciality']);
+                  _this154.router.navigate(['/admin/settings/speciality']);
                 }
 
-                _this152.loading = false;
+                _this154.loading = false;
               }, function (error) {
-                _this152.ts.showError("Error", "Failed to insert record.");
+                _this154.ts.showError("Error", "Failed to insert record.");
 
-                _this152.loading = false;
+                _this154.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.specialityForm.value).subscribe(function (data) {
-                _this152.loading = false;
+                _this154.loading = false;
 
                 if (data != 0) {
-                  _this152.ts.showSuccess("Success", "Record updated successfully.");
+                  _this154.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this152.router.navigate(['/admin/settings/speciality']);
+                  _this154.router.navigate(['/admin/settings/speciality']);
                 }
               }, function (error) {
-                _this152.ts.showError("Error", "Failed to update record.");
+                _this154.ts.showError("Error", "Failed to update record.");
 
-                _this152.loading = false;
+                _this154.loading = false;
               });
             }
           }
@@ -25520,33 +25581,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this153 = this;
+            var _this155 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this153.ts.showSuccess("Success", "Record deleted successfully.");
+                _this155.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this153.getData();
-              } else _this153.ts.showError("Error", "Failed to delete record.");
+                _this155.getData();
+              } else _this155.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this153.ts.showError("Error", "Failed to delete record.");
+              _this155.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this154 = this;
+            var _this156 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this154.closeResult = "Closed with: ".concat(result);
+              _this156.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this154.Delete(obj);
+                _this156.Delete(obj);
               }
             }, function (reason) {
-              _this154.closeResult = "Dismissed ".concat(_this154.getDismissReason(reason));
+              _this156.closeResult = "Dismissed ".concat(_this156.getDismissReason(reason));
             });
           }
         }, {
@@ -25720,22 +25781,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this155 = this;
+            var _this157 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this155.loadingService = true;
+                _this157.loadingService = true;
 
-                _this155.f.timeSlotID.setValue(sid);
+                _this157.f.timeSlotID.setValue(sid);
 
-                _this155.services.getById(sid).subscribe(function (res) {
+                _this157.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this155.editForm(res);
+                  _this157.editForm(res);
 
-                  _this155.loadingService = false;
+                  _this157.loadingService = false;
                 });
               }
             });
@@ -25743,7 +25804,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this156 = this;
+            var _this158 = this;
 
             debugger;
             this.timeslotForm.markAllAsTouched();
@@ -25761,31 +25822,31 @@
               console.log(JSON.stringify(this.timeslotForm.value));
               this.services.insert(this.timeslotForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this156.ts.showSuccess("Success", "Record added successfully.");
+                  _this158.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this156.router.navigate(['/admin/settings/timeslot']);
+                  _this158.router.navigate(['/admin/settings/timeslot']);
                 }
 
-                _this156.loading = false;
+                _this158.loading = false;
               }, function (error) {
-                _this156.ts.showError("Error", "Failed to insert record.");
+                _this158.ts.showError("Error", "Failed to insert record.");
 
-                _this156.loading = false;
+                _this158.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.timeslotForm.value).subscribe(function (data) {
-                _this156.loading = false;
+                _this158.loading = false;
 
                 if (data != 0) {
-                  _this156.ts.showSuccess("Success", "Record updated successfully.");
+                  _this158.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this156.router.navigate(['/admin/settings/timeslot']);
+                  _this158.router.navigate(['/admin/settings/timeslot']);
                 }
               }, function (error) {
-                _this156.ts.showError("Error", "Failed to update record.");
+                _this158.ts.showError("Error", "Failed to update record.");
 
-                _this156.loading = false;
+                _this158.loading = false;
               });
             }
           }
@@ -25962,34 +26023,34 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this157 = this;
+            var _this159 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this157.ts.showSuccess("Success", "Record deleted successfully.");
+                _this159.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this157.getData();
-              } else _this157.ts.showError("Error", "Failed to delete record.");
+                _this159.getData();
+              } else _this159.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this157.ts.showError("Error", "Failed to delete record.");
+              _this159.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this158 = this;
+            var _this160 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this158.closeResult = "Closed with: ".concat(result);
+              _this160.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this158.Delete(obj);
+                _this160.Delete(obj);
               }
             }, function (reason) {
-              _this158.closeResult = "Dismissed ".concat(_this158.getDismissReason(reason));
+              _this160.closeResult = "Dismissed ".concat(_this160.getDismissReason(reason));
             });
           }
         }, {
@@ -26168,22 +26229,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this159 = this;
+            var _this161 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this159.loadingCustomer = true;
+                _this161.loadingCustomer = true;
 
-                _this159.f.id.setValue(sid);
+                _this161.f.id.setValue(sid);
 
-                _this159.userService.getById(sid).subscribe(function (res) {
+                _this161.userService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this159.editForm(res);
+                  _this161.editForm(res);
 
-                  _this159.loadingCustomer = false;
+                  _this161.loadingCustomer = false;
                 });
               }
             });
@@ -26191,7 +26252,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this160 = this;
+            var _this162 = this;
 
             debugger;
             this.userForm.markAllAsTouched();
@@ -26209,31 +26270,31 @@
               console.log(JSON.stringify(this.userForm.value));
               this.userService.insert(this.userForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this160.ts.showSuccess("Success", "Record added successfully.");
+                  _this162.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this160.router.navigate(['/admin/user']);
+                  _this162.router.navigate(['/admin/user']);
                 }
 
-                _this160.loading = false;
+                _this162.loading = false;
               }, function (error) {
-                _this160.ts.showError("Error", "Failed to insert record.");
+                _this162.ts.showError("Error", "Failed to insert record.");
 
-                _this160.loading = false;
+                _this162.loading = false;
               });
             } else {
               //Update customer
               this.userService.update(this.userForm.value).subscribe(function (data) {
-                _this160.loading = false;
+                _this162.loading = false;
 
                 if (data != 0) {
-                  _this160.ts.showSuccess("Success", "Record updated successfully.");
+                  _this162.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this160.router.navigate(['/admin/user']);
+                  _this162.router.navigate(['/admin/user']);
                 }
               }, function (error) {
-                _this160.ts.showError("Error", "Failed to update record.");
+                _this162.ts.showError("Error", "Failed to update record.");
 
-                _this160.loading = false;
+                _this162.loading = false;
               });
             }
           }
@@ -26418,13 +26479,13 @@
         }, {
           key: "onSelect",
           value: function onSelect(rolename) {
-            var _this161 = this;
+            var _this163 = this;
 
             debugger;
             this.userService.getPermissionId(rolename).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this161.formName = res[0];
+                _this163.formName = res[0];
               }
 
               debugger;
@@ -26433,22 +26494,22 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this162 = this;
+            var _this164 = this;
 
             debugger; //Update customer
 
             this.userService.permissionupdate(this.formName).subscribe(function (obj) {
-              _this162.loading = false;
+              _this164.loading = false;
 
               if (obj != 0) {
-                _this162.ts.showSuccess("Success", "Record updated successfully.");
+                _this164.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this162.router.navigate(['/admin/permission']);
+                _this164.router.navigate(['/admin/permission']);
               }
             }, function (error) {
-              _this162.ts.showError("Error", "Failed to update record.");
+              _this164.ts.showError("Error", "Failed to update record.");
 
-              _this162.loading = false;
+              _this164.loading = false;
             });
           }
         }, {
@@ -26612,12 +26673,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this163 = this;
+            var _this165 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this163.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this165.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this163.ts.showError("Error", "Failed to export");
+              _this165.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -26649,17 +26710,17 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this164 = this;
+            var _this166 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this164.ts.showSuccess("Success", "Record deleted successfully.");
+                _this166.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this164.getData();
-              } else _this164.ts.showError("Error", "Failed to delete record.");
+                _this166.getData();
+              } else _this166.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this164.ts.showError("Error", "Failed to delete record.");
+              _this166.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -26811,12 +26872,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this165 = this;
+            var _this167 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this165.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this167.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this165.ts.showError("Error", "Failed to export");
+              _this167.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -26848,34 +26909,34 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this166 = this;
+            var _this168 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this166.ts.showSuccess("Success", "Record deleted successfully.");
+                _this168.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this166.getData();
-              } else _this166.ts.showError("Error", "Failed to delete record.");
+                _this168.getData();
+              } else _this168.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this166.ts.showError("Error", "Failed to delete record.");
+              _this168.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this167 = this;
+            var _this169 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this167.closeResult = "Closed with: ".concat(result);
+              _this169.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this167.Delete(obj);
+                _this169.Delete(obj);
               }
             }, function (reason) {
-              _this167.closeResult = "Dismissed ".concat(_this167.getDismissReason(reason));
+              _this169.closeResult = "Dismissed ".concat(_this169.getDismissReason(reason));
             });
           }
         }, {
@@ -28085,12 +28146,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this168 = this;
+        var _this170 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this168.forecasts = result;
+          _this170.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -28273,7 +28334,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this169 = this;
+            var _this171 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -28283,14 +28344,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this169.imageUrl = reader.result;
+                _this171.imageUrl = reader.result;
 
-                _this169.registrationForm.patchValue({
+                _this171.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this169.editFile = false;
-                _this169.removeUpload = true;
+                _this171.editFile = false;
+                _this171.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -28417,7 +28478,7 @@
 
       var LayoutComponent = /*#__PURE__*/function () {
         function LayoutComponent(router, service, userService, ls) {
-          var _this170 = this;
+          var _this172 = this;
 
           _classCallCheck(this, LayoutComponent);
 
@@ -28438,12 +28499,12 @@
           this.isReport = true;
           this.isSetting = true;
           this.permission = new _models_Permission__WEBPACK_IMPORTED_MODULE_5__["Permission"]();
-          this.userName = this.ls.getSelectedBrand().email;
+          this.userName = this.ls.getSelectedBrand().userName;
           this.type = this.ls.getSelectedBrand().type; //  this.permission=environment.rootScope;
 
           this.permission = this.ls.getSelectedBrand();
           var role = this.permission.permissionForm.find(function (element) {
-            return element.roleName == _this170.type;
+            return element.roleName == _this172.type;
           });
           var roleNameType = role.roleName;
           this.isDiagnostic = role.diagnostic === 1 ? true : false;
@@ -28637,7 +28698,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this171 = this;
+            var _this173 = this;
 
             this.loginForm.markAllAsTouched();
 
@@ -28647,19 +28708,19 @@
 
             this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this171.ls.setSelectedBrand(data);
+                _this173.ls.setSelectedBrand(data);
 
-                _this171.userService.getAllData(); //this.userService.getpermission();
+                _this173.userService.getAllData(); //this.userService.getpermission();
 
 
                 src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].rootScope = data;
 
-                _this171.router.navigate(["/admin/dashboard"]);
+                _this173.router.navigate(["/admin/dashboard"]);
               } else {
-                _this171.ts.showError("Error", "Username or password is not correct.");
+                _this173.ts.showError("Error", "Username or password is not correct.");
               }
             }, function (error) {
-              _this171.ts.showError("Error", "Something went wrong.");
+              _this173.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
@@ -28954,7 +29015,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! E:\Project\Mamji\MamjiAdmin_Git\ClientApp\src\main.ts */
+      /*! F:\Projects\Mamji_Admin\ClientApp\src\main.ts */
       "./src/main.ts");
       /***/
     },

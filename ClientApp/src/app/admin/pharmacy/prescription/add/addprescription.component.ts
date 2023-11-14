@@ -39,7 +39,7 @@ export class AddprescriptionComponent implements OnInit {
         address: ['', Validators.required],
         note: ['', Validators.required],
         image: [''],
-        statusID: [true],
+        statusID: 0,
         prescriptionID: 0,
     });
 }
@@ -50,28 +50,31 @@ export class AddprescriptionComponent implements OnInit {
     this.f.note.setValue(obj.note);
     this.f.prescriptionID.setValue(obj.prescriptionID);
     this.f.image.setValue(obj.image);
-    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.f.statusID.setValue(obj.statusID);
 }
   setSelectedPrescription() {
-    this.route.paramMap.subscribe(param => {
-      const sid = +param.get('id');
-      if (sid) {
-        this.loadingPrescription = true;
-        this.f.prescriptionID.setValue(sid);
-        this.prescriptionService.getById(sid).subscribe(res => {
-          //Set Forms
-          this.editForm(res);
-          this.loadingPrescription = false;
-        });
-      }
-    })
-  }
+    debugger
+      this.route.paramMap.subscribe(param => {
+        const sid = +param.get('id');
+        if (sid) {
+          this.loadingPrescription = true;
+          this.f.prescriptionID.setValue(sid);
+          this.prescriptionService.getById(sid).subscribe(res => {
+            //Set Forms
+            this.editForm(res);
+            this.loadingPrescription = false;
+          });
+        }
+      })
+    }
+
   onSubmit() {
+    debugger
     this.prescriptionForm.markAllAsTouched();
     this.submitted = true;
     if (this.prescriptionForm.invalid) { return; }
     this.loading = true;
-    this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+/*    this.f.statusID.setValue(this.f.statusID.value === true ? 101 : 2);*/
     this.f.image.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.prescriptionID.value) === 0) {

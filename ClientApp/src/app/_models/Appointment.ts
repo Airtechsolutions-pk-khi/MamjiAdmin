@@ -19,7 +19,8 @@ export class Appointment {
   appointmentStatus: number;
   statusID: number;
   doctor: string;
-  
+  createdOn: string;
+  lastUpdatedDate: string;
   specialities: DoctorSpeciality[];
 }
 

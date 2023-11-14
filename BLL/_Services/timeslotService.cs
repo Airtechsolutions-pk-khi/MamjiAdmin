@@ -44,8 +44,8 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.CreatedDate = DateTime.Now;
-                var result = _service.Insert(data);
+                data.CreatedDate = DateTime.UtcNow.AddMinutes(300);
+				var result = _service.Insert(data);
 
                 return result;
             }
@@ -59,8 +59,8 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.CreatedDate = DateTime.Now;
-                var result = _service.Update(data);
+                data.CreatedDate = DateTime.UtcNow.AddMinutes(300);
+				var result = _service.Update(data);
 
                 return result;
             }
@@ -74,8 +74,8 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.CreatedDate = DateTime.Now;
-                var result = _service.Delete(data);
+                data.CreatedDate = DateTime.UtcNow.AddMinutes(300);
+				var result = _service.Delete(data);
 
                 return result;
             }

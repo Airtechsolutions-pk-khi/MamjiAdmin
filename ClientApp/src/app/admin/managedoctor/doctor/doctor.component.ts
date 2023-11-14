@@ -71,10 +71,10 @@ export class DoctorComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
+
   Edit(doctors) {
     this.router.navigate(["admin/managedoctor/doctor/edit", doctors]);
   }
-
 
   Delete(data) {
     this.service.delete(data).subscribe((res: any) => {
@@ -90,6 +90,7 @@ export class DoctorComponent implements OnInit {
     });
   }
   open(content, obj) {
+    debugger
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
       if (result === 'yes') {

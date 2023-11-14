@@ -64,9 +64,17 @@ export class PrescriptionComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
+
   View(prescription) {
+    debugger
     this.router.navigate(["admin/pharmacy/prescription/edit", prescription]);
   }
+
+  Edit(prescription) {
+    debugger
+    this.router.navigate(["admin/pharmacy/prescription/edit", prescription]);
+  }
+
   Delete(data) {
     this.service.delete(data).subscribe((res: any) => {
       if(res!=0){
@@ -83,7 +91,6 @@ export class PrescriptionComponent implements OnInit {
   downloadImage(img) {
     debugger
     var a = this.service.getById(img);
-    a
     const imgUrl = img.src;
     const imgName = imgUrl.substr(imgUrl.lastIndexOf('/') + 1);
     this.httpClient.get(imgUrl, { responseType: 'blob' as 'json' })
@@ -114,4 +121,20 @@ export class PrescriptionComponent implements OnInit {
         }, 100);
       });
   }
+
+  //updateAppointment(appointment, status) {
+  //  debugger
+  //  appointment.appointmentStatus = status;
+  //  appointment.statusMsg = this.StatusMsg;
+  //  //Update 
+  //  this.service.statusUpdate(appointment).subscribe(data => {
+
+  //    if (data != 0) {
+  //      this.ts.showSuccess("Success", "Record updated successfully.")
+  //      this.router.navigate(['reception/appointment']);
+  //    }
+  //  }, error => {
+  //    this.ts.showError("Error", "Failed to update record.")
+  //  });
+  //}
  }

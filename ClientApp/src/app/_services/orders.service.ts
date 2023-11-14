@@ -148,6 +148,8 @@ export class OrdersService {
       }));
   }
  
-   
+  delete(data) {
+    return this.http.post('api/orders/delete', data);
+  }
 
 }

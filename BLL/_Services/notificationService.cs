@@ -45,7 +45,6 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 var result = _service.Status(data);
-
                 return result;
             }
             catch (Exception ex)

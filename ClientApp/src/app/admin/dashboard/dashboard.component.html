@@ -3,24 +3,6 @@
   <div class="col-md-12">
     <alert></alert>
   </div>
-  <!-- <h1>Angular 10 Alerts</h1>
-  <button class="btn btn-success m-1" (click)="alertService.success('Success!!', options)">Success</button>
-  <button class="btn btn-danger m-1" (click)="alertService.error('Error :(', options)">Error</button>
-  <button class="btn btn-info m-1" (click)="alertService.info('Some info....', options)">Info</button>
-  <button class="btn btn-warning m-1" (click)="alertService.warn('Warning: ...', options)">Warn</button>
-  <button class="btn btn-outline-dark m-1" (click)="alertService.clear()">Clear</button>
-  <div class="form-group mt-2">
-    <div class="form-check">
-      <input type="checkbox" name="autoClose" id="autoClose" class="form-check-input" [(ngModel)]="options.autoClose">
-      <label for="autoClose">Auto close alert after three seconds</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" name="keepAfterRouteChange" id="keepAfterRouteChange" class="form-check-input"
-        [(ngModel)]="options.keepAfterRouteChange">
-      <label for="keepAfterRouteChange">Keep displaying after one route change</label>
-    </div>
-  </div> -->
-
   <!-- Earnings (Monthly) Card Example -->
   <div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-primary shadow h-100 py-2">
@@ -56,6 +38,21 @@
   </div>
   <!-- Pending Requests Card Example -->
   <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-info shadow h-100 py-2">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Today Doctor Appointments</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{dashboardSummary.todayDoctorAppointments}}</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-list-ul fa-2x text-gray-300"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-warning shadow h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
@@ -69,8 +66,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-xl-3 col-md-6 mb-4">
+  </div>-->
+  <!--<div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-info shadow h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
@@ -90,7 +87,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
   <!-- Earnings (Monthly) Card Example -->
   <div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-warning shadow h-100 py-2">
@@ -108,7 +105,7 @@
     </div>
   </div>
 
-  <div class="col-xl-3 col-md-6 mb-4">
+  <!--<div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-info shadow h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
@@ -122,40 +119,39 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="col-xl-3 col-md-6 mb-4">
+  </div>-->
+  <!--<div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-success shadow h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Todays Nursing Appointments</div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">{{dashboardSummary.todayNursingAppointments}}</div>
-            <!--<div class="h5 mb-0 font-weight-bold text-gray-800">0</div>-->
-          </div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{dashboardSummary.todayNursingAppointments}}</div>-->
+  <!--<div class="h5 mb-0 font-weight-bold text-gray-800">0</div>-->
+  <!--</div>
           <div class="col-auto">
             <i class="fas fa-address-card fa-2x text-gray-300"></i>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-xl-3 col-md-6 mb-4">
+  </div>-->
+  <!--<div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-danger shadow h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Today Sales</div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">{{dashboardSummary.todaySales}}</div>
-            <!--<div class="h5 mb-0 font-weight-bold text-gray-800">0</div>-->
-          </div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{dashboardSummary.todaySales}}</div>-->
+  <!--<div class="h5 mb-0 font-weight-bold text-gray-800">0</div>-->
+  <!--</div>
           <div class="col-auto">
             <i class="fas fa-tablet fa-2x text-gray-300"></i>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 </div>
 
 <div class="row">

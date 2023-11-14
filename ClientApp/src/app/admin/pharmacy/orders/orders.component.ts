@@ -11,6 +11,7 @@ import { Location } from 'src/app/_models/Location';
 import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-range-popup';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 const now = new Date();
 @Component({
@@ -29,12 +30,13 @@ export class OrdersComponent implements OnInit {
   Locations: Location[] = [];
   selectedLocations = [];
   locationID = 0;
-
+  closeResult: string;
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
-  
+
   locationSubscription: Subscription;
   submit: boolean;
   salesorders: Orders[] = [];
+
 
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
   @ViewChild('locationDrp') drplocation: any;
@@ -42,14 +44,10 @@ export class OrdersComponent implements OnInit {
     public ls: LocalStorageService,
     public excelService: ExcelService,
     public ts: ToastService,
-    
-    public router: Router) {
+    public router: Router,
+    private modalService: NgbModal) {
     this.loading$ = service.loading$;
     this.submit = false;
-    
-
-    // this.selectedBrand = this.ls.getSelectedBrand().brandID;
-    // this.loadLocations();
   }
 
   ngOnInit() {
@@ -60,7 +58,7 @@ export class OrdersComponent implements OnInit {
   }
 
   getData() {
-     
+
     this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
@@ -84,7 +82,7 @@ export class OrdersComponent implements OnInit {
   Print(sid) {
     this.service.printorder(sid, this.selectedBrand).subscribe((res: any) => {
       //Set Forms
-      
+
       if (res.status == 1) {
         this.printout(res.html);
       }
@@ -111,7 +109,7 @@ export class OrdersComponent implements OnInit {
             arr.push(element.locationID);
           });
           this.selectedLocations = arr;
-          
+
           this.getData();
         });
 
@@ -126,7 +124,7 @@ export class OrdersComponent implements OnInit {
     return of(items).pipe(delay(500));
   }
   Filter() {
-    
+
     this.getData();
   }
   printout(html) {
@@ -134,5 +132,40 @@ export class OrdersComponent implements OnInit {
     var newWindow = window.open('_self');
     newWindow.document.write(html);
     newWindow.print();
+  }
+
+  Delete(data) {
+    this.service.delete(data).subscribe((res: any) => {
+      if (res != 0) {
+        this.ts.showSuccess("Success", "Record deleted successfully.")
+        this.getData();
+      }
+      else
+        this.ts.showError("Error", "Failed to delete record.")
+
+    }, error => {
+      this.ts.showError("Error", "Failed to delete record.")
+    });
+  }
+  open(content, obj) {
+    debugger
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+      if (result === 'yes') {
+        this.Delete(obj);
+      }
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 }
