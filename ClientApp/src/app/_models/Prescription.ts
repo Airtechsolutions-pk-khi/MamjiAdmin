@@ -6,4 +6,5 @@ export class Prescription {
     address: string;
     note: string;
     statusID: number;
+  createdOn: string;
 }

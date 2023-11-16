@@ -37,7 +37,7 @@ namespace MamjiAdmin.Controllers
         [Route("update")]
         public int PostUpdate([FromBody] PrescriptionBLL obj)
         {
-            return _service.Update(obj, _env);
+            return _service.Update(obj);
         }
         [HttpPost]
         [Route("delete")]

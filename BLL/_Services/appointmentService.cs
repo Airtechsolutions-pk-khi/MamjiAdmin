@@ -293,7 +293,7 @@ namespace MamjiAdmin.BLL._Services
 
                 MailMessage mail = new MailMessage();
                 mail.To.Add(_To);
-                mail.From = new MailAddress("ammadsiddiqui136@gmail.com");
+                mail.From = new MailAddress("mamjihospital5@gmail.com");
                 mail.Subject = _SubjectEmail;
                 mail.Body = _BodyEmail;
                 mail.IsBodyHtml = true;
@@ -302,7 +302,7 @@ namespace MamjiAdmin.BLL._Services
                 smtp.Port = Int32.Parse("587");
                 smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
                 smtp.Credentials = new System.Net.NetworkCredential
-                     ("ammadsiddiqui136@gmail.com", "vartpzivrepkaxyq");
+                     ("mamjihospital5@gmail.com", "npdcdyiamrbqmyud");
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
                 //smtp.UseDefaultCredentials = true;

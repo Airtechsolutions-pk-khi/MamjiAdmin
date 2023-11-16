@@ -53,12 +53,11 @@ namespace MamjiAdmin.BLL._Services
                 return 0;
             }
         }
-        public int Update(PrescriptionBLL data, IWebHostEnvironment _env)
+        public int Update(PrescriptionBLL data)
         {
             try
             {
-                data.Image = UploadImage(data.Image, "Presc", _env);
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.LastUpdatedDate = DateTime.UtcNow.AddMinutes(300);
                 var result = _service.Update(data);
 
                 return result;

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
+import { ImageViewComponent } from 'src/app/imageview/imageview.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { PrescriptionService } from 'src/app/_services/prescription.service';
@@ -11,19 +11,19 @@ import { ToastService } from 'src/app/_services/toastservice';
   templateUrl: './addprescription.component.html',
 })
 export class AddprescriptionComponent implements OnInit {
-    submitted = false;
-    prescriptionForm: FormGroup;
-    loading = false;
-    loadingPrescription = false;
-    ButtonText = "Save";
-    @ViewChild(ImageuploadComponent, { static: true }) imgComp;
+  submitted = false;
+  prescriptionForm: FormGroup;
+  loading = false;
+  loadingPrescription = false;
+  ButtonText = "Save";
+  @ViewChild(ImageViewComponent, { static: true }) imgComp;
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
-    private prescriptionService: PrescriptionService
+    private prescriptionService: PrescriptionService,
 
   ) {
     this.createForm();
@@ -34,16 +34,18 @@ export class AddprescriptionComponent implements OnInit {
   get f() { return this.prescriptionForm.controls; }
   private createForm() {
     this.prescriptionForm = this.formBuilder.group({
-        customerName: ['', Validators.required],
-        mobile: ['', Validators.required],
-        address: ['', Validators.required],
-        note: ['', Validators.required],
-        image: [''],
-        statusID: 0,
-        prescriptionID: 0,
+      customerName: [''],
+      mobile: [''],
+      address: [''],
+      note: [''],
+      image: [''],
+      createdOn: [''],
+      statusID: 0,
+      prescriptionID: 0,
     });
-}
+  }
   private editForm(obj) {
+    debugger
     this.f.customerName.setValue(obj.customerName);
     this.f.mobile.setValue(obj.mobile);
     this.f.address.setValue(obj.address);
@@ -51,22 +53,24 @@ export class AddprescriptionComponent implements OnInit {
     this.f.prescriptionID.setValue(obj.prescriptionID);
     this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID);
-}
+    this.f.createdOn.setValue(obj.createdOn);
+    this.imgComp.imageUrl = obj.image;
+  }
   setSelectedPrescription() {
     debugger
-      this.route.paramMap.subscribe(param => {
-        const sid = +param.get('id');
-        if (sid) {
-          this.loadingPrescription = true;
-          this.f.prescriptionID.setValue(sid);
-          this.prescriptionService.getById(sid).subscribe(res => {
-            //Set Forms
-            this.editForm(res);
-            this.loadingPrescription = false;
-          });
-        }
-      })
-    }
+    this.route.paramMap.subscribe(param => {
+      const sid = +param.get('id');
+      if (sid) {
+        this.loadingPrescription = true;
+        this.f.prescriptionID.setValue(sid);
+        this.prescriptionService.getById(sid).subscribe(res => {
+          //Set Forms
+          this.editForm(res);
+          this.loadingPrescription = false;
+        });
+      }
+    })
+  }
 
   onSubmit() {
     debugger
@@ -74,7 +78,7 @@ export class AddprescriptionComponent implements OnInit {
     this.submitted = true;
     if (this.prescriptionForm.invalid) { return; }
     this.loading = true;
-/*    this.f.statusID.setValue(this.f.statusID.value === true ? 101 : 2);*/
+    /*    this.f.statusID.setValue(this.f.statusID.value === true ? 101 : 2);*/
     this.f.image.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.prescriptionID.value) === 0) {
@@ -103,5 +107,8 @@ export class AddprescriptionComponent implements OnInit {
         this.loading = false;
       });
     }
+  }
+  goBack() {
+    this.router.navigate(['/admin/pharmacy/prescription']);
   }
 }
