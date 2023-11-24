@@ -46,6 +46,28 @@ namespace BAL.Repositories
             {
                 return null;
             }
+        }      
+        public List<PermissionBLL> GetRoles()
+        {
+            try
+            {
+                var lst = new List<PermissionBLL>();
+                SqlParameter[] p = new SqlParameter[0];
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_getRoles", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<PermissionBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
         public LoginBLL Get(int id)
         {

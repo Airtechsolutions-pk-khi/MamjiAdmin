@@ -9,15 +9,32 @@
       <div class="col-md-4">
         <h6 class="m-0 font-weight-bold text-orange">Prescription List</h6>
       </div>
+      <!--<div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
+        <div class="input-group-prepend" style="height: 39px;">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+        </div>
+        <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
+      </div>-->
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-7 form-group">
+        <label>Select Date</label>
+        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>
+      </div>
       <div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
         <div class="input-group-prepend" style="height: 39px;">
           <span class="input-group-text"><i class="fa fa-search"></i></span>
         </div>
         <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
       </div>
+      <div class="col-md-1 form-group text-right">
+        <button class="btn btn-primary mt-4" (click)="Filter()" type="submit">Search</button>
+      </div>
     </div>
-  </div>
-  <div class="card-body">
+
+
     <div class="tile-body p-0 table-responsive ">
       <table class="table table-striped">
         <thead>
@@ -54,9 +71,9 @@
                     *ngIf="![101, 102, 103].includes(item.statusID)">-</span>
             </td>
             <!--<td>
-              <ngb-highlight [ngClass]="{'btn-warning': item.statusID === 1, 'btn-success':item.statusID === 2, 'btn-primary': item.statusID ===3 }" class="btn btn-sm" [result]="item.statusID ==1?'Pending':item.statusID ==2?'Approved':'Completed'" [term]="service.searchTerm">
-              </ngb-highlight>
-            </td>-->
+            <ngb-highlight [ngClass]="{'btn-warning': item.statusID === 1, 'btn-success':item.statusID === 2, 'btn-primary': item.statusID ===3 }" class="btn btn-sm" [result]="item.statusID ==1?'Pending':item.statusID ==2?'Approved':'Completed'" [term]="service.searchTerm">
+            </ngb-highlight>
+          </td>-->
             <td>
               <a download="sd" href="{{item.image}}" target="_blank" title="ImageName">
                 <i class="fas fa-fw fa-download" download></i>

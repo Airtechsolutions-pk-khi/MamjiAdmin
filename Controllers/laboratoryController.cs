@@ -23,11 +23,11 @@ namespace MamjiAdmin.Controllers
             _service = new laboratoryService();
             _env = env;
         }
-        [HttpGet("all")]
-        public List<LaboratoryBLL> GetAll()
+        [HttpGet("all/{fromDate}/{toDate}")]
+        public List<LaboratoryBLL> GetAll(string fromDate, string toDate)
         {
-            return _service.GetAll();
-        }
+            return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+		}
         [HttpGet("laboratory/{id}")]
         public LaboratoryBLL Get(int id)
         {
@@ -62,12 +62,14 @@ namespace MamjiAdmin.Controllers
                
 
                 LaboratoryBLL data = new LaboratoryBLL();
-                data.CustomerID = int.Parse(Data.CustomerID);
+                data.Name = Data.Name;
+                data.RegistrationNo = Data.RegistrationNo;
+                data.LabReferenceNo = Data.ReferenceNo;
                 data.FilePath = filePath;                
                 data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
                 data.StatusID = 1;
 
-                int res = _service.Insert(data, _env);
+                int res = _service.Insert(data);
 
 
                 if (res != 0)
@@ -118,7 +120,7 @@ namespace MamjiAdmin.Controllers
             data.LaboratoryID = int.Parse(Data.LaboratoryID);
             data.StatusID = 1;
             
-            return _service.Update(data, _env);
+            return _service.Update(data);
         }
         [HttpPost]
         [Route("delete")]

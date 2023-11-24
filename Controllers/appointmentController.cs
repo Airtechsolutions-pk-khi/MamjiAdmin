@@ -22,12 +22,11 @@ namespace MamjiAdmin.Controllers
             _env = env;
         }
 
-
-        [HttpGet("{all}")]
-        public List<AppointmentBLL> GetAll()
-        {
-            return _service.GetAll();
-        }
+		[HttpGet("all/{fromDate}/{toDate}")]
+		public List<AppointmentBLL> GetAll(string fromDate, string toDate)
+		{
+            return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+		}
 
         [HttpGet("appointment/{id}")]
         public AppointmentBLL Get(int id)

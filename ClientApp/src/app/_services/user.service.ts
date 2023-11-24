@@ -6,7 +6,7 @@ import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 import { State } from '../_models/State';
 import { User } from '../_models/User';
-import { PermissionForms } from '../_models/Permission';
+import { Permission, PermissionForms } from '../_models/Permission';
 
 
 interface SearchUsersResult {
@@ -82,7 +82,7 @@ export class UserService {
   }
 
   loadUser() {
-    return this.http.get<User[]>(`api/user/all`);
+    return this.http.get<Permission[]>(`api/user/permission`);
   }
 
   ExportList() {

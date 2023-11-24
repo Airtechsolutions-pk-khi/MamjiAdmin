@@ -15,12 +15,14 @@ export class AppointmentdetailsComponent implements OnInit {
   public appointment = new Appointment();
   public doctor = new Doctors();
   private selectedBrand;
-  StatusMsg="";
+  StatusMsg = "";
+  userName = "";
   constructor(public service: AppointmentService,
     public ls: LocalStorageService,
     public ts: ToastService,
     public router: Router,
     private route: ActivatedRoute) {
+    this.userName = this.ls.getSelectedBrand().userName;
   }
 
   ngOnInit() {
@@ -40,7 +42,8 @@ export class AppointmentdetailsComponent implements OnInit {
   updateAppointment(appointment, status) {
     debugger
     appointment.appointmentStatus  = status;
-    appointment.statusMsg  = this.StatusMsg;
+    appointment.statusMsg = this.StatusMsg;
+    appointment.userName = this.userName;
     //Update 
     this.service.statusUpdate(appointment).subscribe(data => {
 

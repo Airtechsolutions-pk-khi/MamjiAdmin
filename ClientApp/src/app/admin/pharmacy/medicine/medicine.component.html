@@ -23,11 +23,10 @@
         <table class="table table-striped">
           <thead>
             <tr class="table-header">
-              <th width="10%">IMAGE</th>
+              <!--<th width="10%">IMAGE</th>-->
               <th width="20%" sortable="FullName"> Name </th>
-              <!-- <th width="15%" sortable="Description">Description </th> -->
               <th width="20%" sortable="BrandDetails"> Brand Details </th>
-              <th width="15%" sortable="Price"> Price </th>
+              <th width="20%" sortable="Price"> Price </th>
               <th width="20%" sortable="Quantity"> Quantity Description </th>
               <th width="15%" sortable="Status">Status </th>
               <th width="10%">Action</th>
@@ -35,14 +34,16 @@
           </thead>
           <tbody>
             <tr *ngFor="let item of data$ | async ">
-              <td>
+              <!--<td>
                 <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
                 <div *ngIf="item.image === ''" class="image-replace"></div>
-              </td>
+              </td>-->
               <td> {{item.name}} </td>
-              <!-- <td> {{item.description}} </td> -->
               <td> {{item.brandDetails}} </td>
-              <td> {{item.price}} </td>
+              <td style="display:flex">
+                <input type="number" [(ngModel)]="item.price" class="form-control" style="width:60%;" />
+                <a (click)="Update(item)" style="margin-top: 7px; margin-left: 8px;"><i class="fas fa-fw fa-save"></i> </a>
+              </td>
               <td> {{item.quantityDescription}} </td>
               <td>
                 <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
@@ -90,4 +91,4 @@
     <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">No</button>
     <button type="button" class="btn btn-outline-dark" (click)="c('yes')">Yes</button>
   </div>
-</ng-template> 
+</ng-template>

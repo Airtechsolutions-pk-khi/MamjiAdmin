@@ -3,11 +3,10 @@ export class Laboratory {
   customerID: string;
   diagnosticCatID: string;
   selectedFile: File;
-  fullName: string;
+  name: string;
   labReferenceNo: string;
   registrationNo:string;
   statusID: number;
-  customer: string;
   categoryName: string;
   image: string;
 }

@@ -21,10 +21,10 @@ namespace MamjiAdmin.Controllers
             _service = new notificationService();
         }
 
-        [HttpGet("{all}")]
-        public List<NotificationBLL> GetAll()
+        [HttpGet("all/{fromDate}/{toDate}")]
+        public List<NotificationBLL> GetAll(string fromDate, string toDate)
         {
-            return _service.GetAll();
+            return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
         }
 
         [HttpGet("notification/{id}")]

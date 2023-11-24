@@ -57,14 +57,14 @@ export class FormPermissionComponent implements OnInit {
 
   private editForm(obj) {
     debugger
-    this.f.notification.setValue(obj.notification ==1 ? true : false);
-    this.f.doctor.setValue(obj.doctor ==1 ? true : false);
-    this.f.mamjiUser.setValue(obj.mamjiUser ==1 ? true : false);
-    this.f.pharmacy.setValue(obj.pharmacy ==1 ? true : false);
-    this.f.reception.setValue(obj.reception ==1 ? true : false);
-    this.f.diagnostic.setValue(obj.diagnostic ==1 ? true : false);
-    this.f.reports.setValue(obj.reports ==1 ? true : false);
-    this.f.setting.setValue(obj.setting ==1 ? true : false);
+    this.f.notification.setValue(obj.notification == 1 ? true : false);
+    this.f.doctor.setValue(obj.doctor == 1 ? true : false);
+    this.f.mamjiUser.setValue(obj.mamjiUser == 1 ? true : false);
+    this.f.pharmacy.setValue(obj.pharmacy == 1 ? true : false);
+    this.f.reception.setValue(obj.reception == 1 ? true : false);
+    this.f.diagnostic.setValue(obj.diagnostic == 1 ? true : false);
+    this.f.reports.setValue(obj.reports == 1 ? true : false);
+    this.f.setting.setValue(obj.setting == 1 ? true : false);
     //this.f.formPermissionID.setValue(obj.formPermissionID);
     this.f.roleName.setValue(obj.roleName);
   }
@@ -118,9 +118,10 @@ export class FormPermissionComponent implements OnInit {
   private loadUser() {
     debugger
     this.userService.loadUser().subscribe((res: any) => {
-     this.UserList = res;
+      debugger
+      this.UserList = res;
     });
-   
+
     // this.UserList = [
     //   { "type": "Super Admin" },
     //   { "type": "Admin" },

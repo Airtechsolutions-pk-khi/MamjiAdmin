@@ -16,11 +16,11 @@ namespace MamjiAdmin.BLL._Services
         {
             _service = new prescriptionDB();
         }
-        public List<PrescriptionBLL> GetAll()
+        public List<PrescriptionBLL> GetAll(DateTime FromDate, DateTime ToDate)
         {
             try
             {
-                return _service.GetAll();
+                return _service.GetAll(FromDate, ToDate);
             }
             catch (Exception)
             {

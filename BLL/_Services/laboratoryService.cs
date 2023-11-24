@@ -20,13 +20,13 @@ namespace MamjiAdmin.BLL._Services
         {
             _service = new laboratoryDB();
         }
-        public List<LaboratoryBLL> GetAll()
-        {
-            try
-            {
-                return _service.GetAll();
-            }
-            catch (Exception ex)
+		public List<LaboratoryBLL> GetAll(DateTime FromDate, DateTime ToDate)
+		{
+			try
+			{
+				return _service.GetAll(FromDate, ToDate);
+			}
+			catch (Exception ex)
             {
                 return new List<LaboratoryBLL>();
             }
@@ -141,11 +141,11 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int Insert(LaboratoryBLL data, IWebHostEnvironment _env)
+        public int Insert(LaboratoryBLL data)
         {
             try
             {
-                //data.FilePath = UploadFile(data.FilePath, "pdfFiles", _env);
+                data.LastUpdatedBy = 1;
                 data.LastUpdatedDate = DateTime.UtcNow;
                 var result = _service.Insert(data);
 
@@ -157,11 +157,11 @@ namespace MamjiAdmin.BLL._Services
             }
         }
         
-        public int Update(LaboratoryBLL data, IWebHostEnvironment _env)
+        public int Update(LaboratoryBLL data)
         {
             try
             {
-                //data.Image = uploadFiles(data.Image, "laboratory", _env);
+                data.LastUpdatedBy = 1;
                 data.LastUpdatedDate = DateTime.UtcNow;
                 var result = _service.Update(data);
 

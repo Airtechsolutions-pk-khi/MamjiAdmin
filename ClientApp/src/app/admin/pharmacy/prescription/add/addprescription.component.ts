@@ -16,6 +16,7 @@ export class AddprescriptionComponent implements OnInit {
   loading = false;
   loadingPrescription = false;
   ButtonText = "Save";
+  userName = "";
   @ViewChild(ImageViewComponent, { static: true }) imgComp;
   constructor(
     private formBuilder: FormBuilder,
@@ -24,8 +25,8 @@ export class AddprescriptionComponent implements OnInit {
     private ls: LocalStorageService,
     public ts: ToastService,
     private prescriptionService: PrescriptionService,
-
   ) {
+    this.userName = this.ls.getSelectedBrand().userName;
     this.createForm();
   }
   ngOnInit() {
@@ -40,6 +41,7 @@ export class AddprescriptionComponent implements OnInit {
       note: [''],
       image: [''],
       createdOn: [''],
+      lastUpdatedBy: [''],
       statusID: 0,
       prescriptionID: 0,
     });
@@ -55,6 +57,7 @@ export class AddprescriptionComponent implements OnInit {
     this.f.statusID.setValue(obj.statusID);
     this.f.createdOn.setValue(obj.createdOn);
     this.imgComp.imageUrl = obj.image;
+    this.f.lastUpdatedBy.setValue(this.userName);
   }
   setSelectedPrescription() {
     debugger
@@ -80,7 +83,6 @@ export class AddprescriptionComponent implements OnInit {
     this.loading = true;
     /*    this.f.statusID.setValue(this.f.statusID.value === true ? 101 : 2);*/
     this.f.image.setValue(this.imgComp.imageUrl);
-
     if (parseInt(this.f.prescriptionID.value) === 0) {
       //Insert doctor
       console.log(JSON.stringify(this.prescriptionForm.value));

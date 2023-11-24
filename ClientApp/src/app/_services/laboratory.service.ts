@@ -13,6 +13,7 @@ interface SearchLaboratoryResult {
   total: number;
 }
 const compare = (v1: string, v2: string) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+
 function sort(data: Laboratory[], column: SortColumn, direction: string): Laboratory[] {
   if (direction === '' || column === '') {
     return data;
@@ -24,7 +25,7 @@ function sort(data: Laboratory[], column: SortColumn, direction: string): Labora
   }
 }
 function matches(data: Laboratory, term: string) {
-  return data.fullName.toLowerCase().includes(term.toLowerCase())
+  return data.categoryName.toLowerCase().includes(term.toLowerCase())
 }
 
 @Injectable({
@@ -88,14 +89,14 @@ export class LaboratoryService {
     const url = 'http://mamjiadmin.airtechsolutions.pk/ClientApp/dist/assets/Upload/laboratory';
     return this.http.post(url, formData);
   }
-  getAllData() {
-    const url = `api/Laboratory/all`;
+  getAllData(fromDate, toDate) {
+    debugger
+    const url = `api/Laboratory/all/${fromDate}/${toDate}`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Laboratory[]>(url).subscribe(res => {
-        debugger;
+        debugger
         this.laboratory = res;
-
         this._data$.next(this.laboratory);
         this._allData$.next(this.laboratory);
 
@@ -129,7 +130,6 @@ export class LaboratoryService {
     const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
     return of({ data, total });
   }
-
 
   clear() {
     // clear by calling subject.next() without parameters

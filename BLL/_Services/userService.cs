@@ -28,7 +28,18 @@ namespace MamjiAdmin.BLL._Services
                 return new List<LoginBLL>();
             }
         }
-        public LoginBLL Get(int id)
+		public List<PermissionBLL> GetRoles()
+		{
+			try
+			{
+				return _service.GetRoles();
+			}
+			catch (Exception ex)
+			{
+				return new List<PermissionBLL>();
+			}
+		}
+		public LoginBLL Get(int id)
         {
             try
             {

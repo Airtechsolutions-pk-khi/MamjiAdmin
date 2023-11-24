@@ -23,12 +23,12 @@ namespace MamjiAdmin.BLL._Services
         {
             _service = new appointmentDB();
         }
-        public List<AppointmentBLL> GetAll()
-        {
+        public List<AppointmentBLL> GetAll(DateTime FromDate, DateTime ToDate)
+		{
             try
             {
-                return _service.GetAll();
-            }
+                return _service.GetAll(FromDate, ToDate);
+			}
             catch (Exception ex)
             {
                 return new List<AppointmentBLL>();
@@ -213,7 +213,7 @@ namespace MamjiAdmin.BLL._Services
                 Body = Body.Replace("#SenderName#", email.FullName);
                 Body = Body.Replace("#Mobile#", email.Mobile);
                 Body = Body.Replace("#Date#", data.BookingDate);
-                Body = Body.Replace("#StatusMsg#", data.StatusMsg == null || data.StatusMsg == "" ? "N/A" : data.StatusMsg);
+                //Body = Body.Replace("#StatusMsg#", data.StatusMsg == null || data.StatusMsg == "" ? "N/A" : data.StatusMsg);
                 
                 SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, email.Email);
             }
@@ -268,7 +268,8 @@ namespace MamjiAdmin.BLL._Services
                     .Replace("#date#", data.BookingDate)
                     .Replace("#appointmentno#", data.AppointmentNo)
                     .Replace("#name#", email.FullName)
-                    .Replace("#contact#", email.Mobile);
+                    .Replace("#contact#", email.Mobile)
+                    .Replace("#username#", obj.UserName);
                 SendEmail("Mamji Hospital || Appointments: " + data.AppointmentNo, Body, email.Email);
             }
             catch { }

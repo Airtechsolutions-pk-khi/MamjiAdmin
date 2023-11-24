@@ -16,6 +16,19 @@
     </div>
   </div>
   <div class="card-body">
+
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <label>Select Date</label>
+        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>
+      </div>
+
+      <div class="col-md-6 form-group text-right">
+        <button class="btn btn-primary mt-4" (click)="Filter()" type="submit">Search</button>
+      </div>
+    </div>
+
+
     <div class="tile-body p-0 table-responsive ">
       <table class="table table-striped">
         <thead>

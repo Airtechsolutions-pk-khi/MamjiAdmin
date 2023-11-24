@@ -17,10 +17,15 @@ export class AddreportsComponent implements OnInit {
 
   formData = {
     customerID: '',
+    name: '',
+    registrationNo: '',
+    referenceNo: '',
     diagnosticCatID: '',
     laboratoryID:'',
     pdfFile: File = null
   };
+
+
 
   selectedFile: File = null;
   percentDone: number;
@@ -31,17 +36,14 @@ export class AddreportsComponent implements OnInit {
     this.selectedFile = files[0];
   }
 
-  onCustomerSelect(customerID: string) {
-    debugger;    
-    this.formData.customerID = customerID;
-  }
-  onCustomerSelectR(customerID: string) {
-    debugger;    
-    this.formData.customerID = customerID;
-  }
+  //onCustomerSelect(customerID: string) {
+  //  this.formData.customerID = customerID;
+  //}
+  //onCustomerSelectR(customerID: string) { 
+  //  this.formData.customerID = customerID;
+  //}
 
-  onDiagnosticSelect(diagnosticCatID: string) {
-    debugger;   
+  onDiagnosticSelect(diagnosticCatID: string) {   
     this.formData.diagnosticCatID = diagnosticCatID;
   }
   
@@ -61,10 +63,7 @@ export class AddreportsComponent implements OnInit {
   pdfSrc;
   pdfBufferRender;
   localPDF;
-
   fileName = '';
-
-  // selectedFile: File = null;
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -80,8 +79,8 @@ export class AddreportsComponent implements OnInit {
 
   ) {
     this.createForm();
-    this.loadCustomer();
-    this.loadRNo();
+    //this.loadCustomer();
+    //this.loadRNo();
     this.loadCategories();
   }
 
@@ -98,16 +97,19 @@ export class AddreportsComponent implements OnInit {
       customerID: 0,
       diagnosticCatID: 0,
       laboratoryID: [0],
+      referenceNo: ['', Validators.required],
+      name: ['', Validators.required],
       selectedFile: File = null,
     });
   }
   private editForm(obj) {
     debugger
-     
-    this.formData.customerID = obj.customerID;
+    this.formData.name = obj.name;
     this.formData.diagnosticCatID = obj.diagnoseCatID;    
     this.pdfFilePath = obj.image;
     this.formData.laboratoryID = obj.laboratoryID;
+    this.formData.referenceNo = obj.labReferenceNo;
+    this.formData.registrationNo = obj.registrationNo;
 
     this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
   }
@@ -132,7 +134,9 @@ export class AddreportsComponent implements OnInit {
     if(parseInt(this.f.laboratoryID.value) === 0)
     {
       const formData1 = new FormData();    
-      formData1.append('customerID',  this.formData.customerID);
+      formData1.append('name', this.formData.name);
+      formData1.append('referenceNo', this.formData.referenceNo);
+      formData1.append('registrationNo', this.formData.registrationNo);
       formData1.append('diagnosticCatID', this.formData.diagnosticCatID);          
       formData1.append('file', this.selectedFile);   
    
@@ -148,11 +152,12 @@ export class AddreportsComponent implements OnInit {
       );
     }
     else{
-      const formData1 = new FormData();    
-      formData1.append('customerID',  this.formData.customerID);
-      formData1.append('diagnosticCatID', this.formData.diagnosticCatID);   
-      formData1.append('laboratoryID', this.formData.laboratoryID);   
-      formData1.append('file', this.selectedFile);   
+      const formData1 = new FormData();
+      formData1.append('name', this.formData.name);
+      formData1.append('referenceNo', this.formData.referenceNo);
+      formData1.append('registrationNo', this.formData.registrationNo);
+      formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
+      formData1.append('file', this.selectedFile);     
    
       this.http.post('api/laboratory/update', formData1).subscribe(
         response => {
@@ -168,25 +173,24 @@ export class AddreportsComponent implements OnInit {
     
   }
 
-  private loadCustomer() {
-    debugger
-    this.laboratoryService.loadCustomer().subscribe((res: any) => {
-      debugger;
-      this.CustomerList = res;
+  //private loadCustomer() {
+  //  debugger
+  //  this.laboratoryService.loadCustomer().subscribe((res: any) => {
+  //    debugger;
+  //    this.CustomerList = res;
        
-    });
-  }
-  private loadRNo() {
-    debugger
-    this.laboratoryService.loadRNo().subscribe((res: any) => {
-      debugger;
-      this.RegistrationList = res;
+  //  });
+  //}
+  //private loadRNo() {
+  //  debugger
+  //  this.laboratoryService.loadRNo().subscribe((res: any) => {
+  //    debugger;
+  //    this.RegistrationList = res;
        
-    });
-  }
+  //  });
+  //}
 
   private loadCategories() {
-    debugger
     this.diagnosticcategoriesService.loadCategory().subscribe((res: any) => {
       this.CategoryList = res;
     });
@@ -197,14 +201,4 @@ export class AddreportsComponent implements OnInit {
     this.Images.splice(index, 1);
     this.f.imagesSource.setValue(this.Images);
   }
-
- 
 }
-
- 
-
-
-
-
-
-  

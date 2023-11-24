@@ -1,4 +1,4 @@
-import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Observable, Observer, Subscription } from 'rxjs';
 import { NgbdSortableHeader, SortEvent } from 'src/app/_directives/sortable.directive';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
@@ -8,6 +8,11 @@ import { ExcelService } from 'src/ExportExcel/excel.service';
 import { Prescription } from 'src/app/_models/Prescription';
 import { PrescriptionService } from 'src/app/_services/prescription.service';
 import { HttpClient } from '@angular/common/http';
+import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdDatepickerRangePopup } from '../../../datepicker-range/datepicker-range-popup';
+
+const now = new Date();
+
 @Component({
   selector: 'app-prescription',
   templateUrl: './prescription.component.html',
@@ -22,11 +27,12 @@ export class PrescriptionComponent implements OnInit {
   private selectedPrescription;
   name = "Mr";
   base64Image: any;
+  @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
 
   locationSubscription: Subscription;
   submit: boolean;
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
-
+  @ViewChild('locationDrp') drplocation: any;
   constructor(public service: PrescriptionService, private httpClient: HttpClient,
     public ls :LocalStorageService,
     public excelService: ExcelService,
@@ -46,14 +52,22 @@ export class PrescriptionComponent implements OnInit {
     });
   }
   ngOnInit() {
+    const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, now.getDate());
+    this._datepicker.fromDate = date;
+    this._datepicker.toDate = date;
+
     this.getData();
   }
   getData() {
-    this.service.getAllData();
+    this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
     this.loading$ = this.service.loading$;
   }
+  parseDate(obj) {
+    return obj.year + "-" + obj.month + "-" + obj.day;
+  }
+
   onSort({ column, direction }: SortEvent) {
 
     this.headers.forEach(header => {
@@ -121,7 +135,9 @@ export class PrescriptionComponent implements OnInit {
         }, 100);
       });
   }
-
+  Filter() {
+    this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
+  }
   //updateAppointment(appointment, status) {
   //  debugger
   //  appointment.appointmentStatus = status;
