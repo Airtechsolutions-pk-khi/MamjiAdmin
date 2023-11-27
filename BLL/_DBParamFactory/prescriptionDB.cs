@@ -110,17 +110,16 @@ namespace BAL.Repositories
 			try
 			{
 				int rtn = 0;
-				SqlParameter[] p = new SqlParameter[9];
+				SqlParameter[] p = new SqlParameter[8];
 
 				p[0] = new SqlParameter("@CustomerName", data.CustomerName);
-				p[1] = new SqlParameter("@Image", data.Image);
-				p[2] = new SqlParameter("@Mobile", data.Mobile);
-				p[3] = new SqlParameter("@Address", data.Address);
-				p[4] = new SqlParameter("@Note", data.Note);
-				p[5] = new SqlParameter("@StatusID", data.StatusID);
-				p[6] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
-				p[7] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-				p[8] = new SqlParameter("@PrescriptionID", data.PrescriptionID);
+				p[1] = new SqlParameter("@Mobile", data.Mobile);
+				p[2] = new SqlParameter("@Address", data.Address);
+				p[3] = new SqlParameter("@Note", data.Note);
+				p[4] = new SqlParameter("@StatusID", data.StatusID);
+				p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
+				p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+				p[7] = new SqlParameter("@PrescriptionID", data.PrescriptionID);
 
 				rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updatePrescription_Admin", p);
 

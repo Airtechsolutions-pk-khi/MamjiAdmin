@@ -32,14 +32,25 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Registration #</label>
-                  <input type="text" class="form-control" name="registrationNo" [(ngModel)]="formData.registrationNo"/>
+                  <!--<input type="text" class="form-control" name="registrationNo" [(ngModel)]="formData.registrationNo"/>-->
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Registration#" name="registrationNo" [(ngModel)]="formData.registrationNo" [disabled]="formData.customerID>0?true: false">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button" (click)="search()">
+                        <i class="fa fa-search"></i>
+                      </button>
+                      <button class="btn btn-info" type="button" (click)="refresh()">
+                        <i class="fa fa-recycle"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Lab Reference #</label>
-                  <input type="text" class="form-control" name="referenceNo" [(ngModel)]="formData.referenceNo"/>
+                  <input type="text" class="form-control" name="referenceNo" [(ngModel)]="formData.referenceNo" placeholder="Enter Lab Reference#" />
                 </div>
               </div>
 
@@ -54,7 +65,7 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Patient Name</label>
-                  <input type="text" class="form-control" name="name" [(ngModel)]="formData.name" required />
+                  <input type="text" class="form-control" name="name" [(ngModel)]="formData.name" required placeholder="Enter Patient Name" />
                 </div>
               </div>
               <div class="form-row">

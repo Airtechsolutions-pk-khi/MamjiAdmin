@@ -72,6 +72,28 @@ namespace BAL.Repositories
 				return null;
 			}
 		}
+		public CustomerBLL GetDetail(string registrationNo)
+		{
+			try
+			{
+				var _obj = new CustomerBLL();
+				SqlParameter[] p = new SqlParameter[1];
+				p[0] = new SqlParameter("@registrationNo", registrationNo);
+				_dt = (new DBHelper().GetTableFromSP)("sp_GetCustomerDetail_Admin", p);
+				if (_dt != null)
+				{
+					if (_dt.Rows.Count > 0)
+					{
+						_obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>().FirstOrDefault();
+					}
+				}
+				return _obj;
+			}
+			catch (Exception)
+			{
+				return null;
+			}
+		}
 		public CustomerBLL Getcustomer(int id)
 		{
 			try
@@ -131,15 +153,15 @@ namespace BAL.Repositories
 				p[0] = new SqlParameter("@Name", data.Name);
 				p[1] = new SqlParameter("@ImagePath", data.FilePath);
 				p[2] = new SqlParameter("@LabReferenceNo", data.LabReferenceNo);
-				p[3] = new SqlParameter("@RegitrationNo", data.RegistrationNo);
+				p[3] = new SqlParameter("@RegistrationNo", data.RegistrationNo);
 				p[4] = new SqlParameter("@StatusID", data.StatusID);
 				p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
 				p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 				p[7] = new SqlParameter("@DiagnoseCatID", data.DiagnoseCatID);
 				p[8] = new SqlParameter("@LaboratoryID", data.LaboratoryID);
 
-				rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateReport_Admin_V2", p);
-
+				//rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateReport_Admin_V2", p);
+				rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateReport_Admin_V2", p);
 				return rtn;
 			}
 			catch (Exception ex)

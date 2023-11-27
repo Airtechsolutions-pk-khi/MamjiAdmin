@@ -1,5 +1,5 @@
 export class Laboratory {
-  laboratoryID: number;
+  laboratoryID: string;
   customerID: string;
   diagnosticCatID: string;
   selectedFile: File;
@@ -8,5 +8,6 @@ export class Laboratory {
   registrationNo:string;
   statusID: number;
   categoryName: string;
+  lastUpdatedBy: string;
   image: string;
 }

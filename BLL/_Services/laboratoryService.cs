@@ -42,7 +42,18 @@ namespace MamjiAdmin.BLL._Services
                 return null;
             }
         }
-        public int SendEmailtoCustLab(UploadViewModel obj, IWebHostEnvironment _env)
+		public CustomerBLL GetDetail(string registrationNo)
+		{
+			try
+			{
+				return _service.GetDetail(registrationNo);
+			}
+			catch (Exception ex)
+			{
+				return null;
+			}
+		}
+		public int SendEmailtoCustLab(UploadViewModel obj, IWebHostEnvironment _env)
         {
             try
             {
@@ -94,15 +105,15 @@ namespace MamjiAdmin.BLL._Services
 
             try
             {
-                var data = Getcustomer(obj.CustomerID);
-                string ToEmail, SubJect, rno;
-                ToEmail = data.Email;
-                rno = data.RegistrationNo;
-                SubJect = "Your Report has been uploaded";
+                //var data = Getcustomer(obj.CustomerID);
+                //string ToEmail, SubJect, rno;
+                //ToEmail = data.Email;
+                //rno = data.RegistrationNo;
+                //SubJect = "Your Report has been uploaded";
 
-                Body = Body.Replace("#RegistrationNo#", data.RegistrationNo.ToString());
-                Body = Body.Replace("#date#", DateTime.UtcNow.ToString());
-                SendEmail("Mamji Hospital: ||  " + "Reports", Body, data.Email);
+                //Body = Body.Replace("#RegistrationNo#", data.RegistrationNo.ToString());
+                //Body = Body.Replace("#date#", DateTime.UtcNow.ToString());
+                //SendEmail("Mamji Hospital: ||  " + "Reports", Body, data.Email);
             }
             catch { }
             return 1;
@@ -145,8 +156,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.LastUpdatedBy = 1;
-                data.LastUpdatedDate = DateTime.UtcNow;
+                data.LastUpdatedDate = DateTime.UtcNow.AddMinutes(300);
                 var result = _service.Insert(data);
 
                 return result;
@@ -161,9 +171,8 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.LastUpdatedBy = 1;
-                data.LastUpdatedDate = DateTime.UtcNow;
-                var result = _service.Update(data);
+				data.LastUpdatedDate = DateTime.UtcNow.AddMinutes(300);
+				var result = _service.Update(data);
 
                 return result;
             }

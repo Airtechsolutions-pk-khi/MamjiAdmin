@@ -60,7 +60,6 @@ export class AddprescriptionComponent implements OnInit {
     this.f.lastUpdatedBy.setValue(this.userName);
   }
   setSelectedPrescription() {
-    debugger
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
@@ -81,36 +80,21 @@ export class AddprescriptionComponent implements OnInit {
     this.submitted = true;
     if (this.prescriptionForm.invalid) { return; }
     this.loading = true;
-    /*    this.f.statusID.setValue(this.f.statusID.value === true ? 101 : 2);*/
-    this.f.image.setValue(this.imgComp.imageUrl);
-    if (parseInt(this.f.prescriptionID.value) === 0) {
-      //Insert doctor
-      console.log(JSON.stringify(this.prescriptionForm.value));
-      this.prescriptionService.insert(this.prescriptionForm.value).subscribe(data => {
-        if (data != 0) {
-          this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/pharmacy/prescription']);
-        }
-        this.loading = false;
-      }, error => {
-        this.ts.showError("Error", "Failed to insert record.")
-        this.loading = false;
-      });
-    } else {
-      //Update doctor
-      this.prescriptionService.update(this.prescriptionForm.value).subscribe(data => {
-        this.loading = false;
-        if (data != 0) {
-          this.ts.showSuccess("Success", "Record updated successfully.")
-          this.router.navigate(['/admin/pharmacy/prescription']);
-        }
-      }, error => {
-        this.ts.showError("Error", "Failed to update record.")
-        this.loading = false;
-      });
-    }
+    //this.f.image.setValue(this.imgComp.imageUrl);
+    //Update doctor
+    this.prescriptionService.update(this.prescriptionForm.value).subscribe(data => {
+      this.loading = false;
+      if (data != 0) {
+        this.ts.showSuccess("Success", "Record updated successfully.")
+        this.router.navigate(['/admin/pharmacy/prescription']);
+      }
+    }, error => {
+      this.ts.showError("Error", "Failed to update record.")
+      this.loading = false;
+    });
   }
   goBack() {
     this.router.navigate(['/admin/pharmacy/prescription']);
   }
+
 }

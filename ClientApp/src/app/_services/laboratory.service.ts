@@ -81,6 +81,9 @@ export class LaboratoryService {
   getById(id) {
     return this.http.get<Laboratory[]>(`api/Laboratory/Laboratory/${id}`);
   }
+  getDetail(registrationNo) {
+    return this.http.get<Laboratory[]>(`api/Laboratory/Detail/${registrationNo}`);
+  }
   uploadPDF(file: File): Observable<any> {
     debugger
     const formData: FormData = new FormData();

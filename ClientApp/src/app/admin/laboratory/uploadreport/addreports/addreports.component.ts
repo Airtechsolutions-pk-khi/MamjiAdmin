@@ -21,8 +21,9 @@ export class AddreportsComponent implements OnInit {
     registrationNo: '',
     referenceNo: '',
     diagnosticCatID: '',
-    laboratoryID:'',
-    pdfFile: File = null
+    laboratoryID: '',
+    pdfFile: File = null,
+    userName: ''
   };
 
 
@@ -32,7 +33,7 @@ export class AddreportsComponent implements OnInit {
   uploadSuccess: boolean;
 
   onFileChange(files: File[]) {
-  debugger
+    debugger
     this.selectedFile = files[0];
   }
 
@@ -43,10 +44,10 @@ export class AddreportsComponent implements OnInit {
   //  this.formData.customerID = customerID;
   //}
 
-  onDiagnosticSelect(diagnosticCatID: string) {   
+  onDiagnosticSelect(diagnosticCatID: string) {
     this.formData.diagnosticCatID = diagnosticCatID;
   }
-  
+
   submitted = false;
   reportForm: FormGroup;
   loading = false;
@@ -64,6 +65,7 @@ export class AddreportsComponent implements OnInit {
   pdfBufferRender;
   localPDF;
   fileName = '';
+  userName = "";
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -78,16 +80,48 @@ export class AddreportsComponent implements OnInit {
     private fileUploadService: FileUploadService
 
   ) {
+    this.userName = this.ls.getSelectedBrand().userName;
+
     this.createForm();
     //this.loadCustomer();
     //this.loadRNo();
     this.loadCategories();
   }
 
+  search() {
+    debugger
+    console.log('Searching for registration number:', this.formData.registrationNo);
+    if (this.formData.registrationNo) {
+      this.loadingReport = true;
+      this.laboratoryService.getDetail(this.formData.registrationNo).subscribe(res => {
+        debugger
+        //Set Forms
+        this.editForm(res);
+        debugger;
+        this.loadingReport = false;
+      });
+    }
+  }
+
+  refresh() {
+    debugger
+    this.router.navigate(['/admin/laboratory/uploadreport/addreports']);
+    this.formData = {
+      customerID: '',
+      name: '',
+      registrationNo: '',
+      referenceNo: '',
+      diagnosticCatID: '',
+      laboratoryID: '',
+      pdfFile: File = null,
+      userName: ''
+    };
+  }
+
   ngOnInit() {
     this.setSelectedReport();
   }
- 
+
   get f() { return this.reportForm.controls; }
 
   private createForm() {
@@ -104,13 +138,17 @@ export class AddreportsComponent implements OnInit {
   }
   private editForm(obj) {
     debugger
-    this.formData.name = obj.name;
-    this.formData.diagnosticCatID = obj.diagnoseCatID;    
+    if (obj.name != null) {
+      this.formData.name = obj.name;
+    } else {
+      this.formData.name = obj.fullName;
+    }
+    this.formData.diagnosticCatID = obj.diagnoseCatID;
     this.pdfFilePath = obj.image;
     this.formData.laboratoryID = obj.laboratoryID;
     this.formData.referenceNo = obj.labReferenceNo;
     this.formData.registrationNo = obj.registrationNo;
-
+    this.formData.customerID = obj.customerID;
     this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
   }
   setSelectedReport() {
@@ -128,49 +166,47 @@ export class AddreportsComponent implements OnInit {
       }
     })
   }
-  
+
   onSubmit() {
     debugger
-    if(parseInt(this.f.laboratoryID.value) === 0)
-    {
-      const formData1 = new FormData();    
-      formData1.append('name', this.formData.name);
-      formData1.append('referenceNo', this.formData.referenceNo);
-      formData1.append('registrationNo', this.formData.registrationNo);
-      formData1.append('diagnosticCatID', this.formData.diagnosticCatID);          
-      formData1.append('file', this.selectedFile);   
-   
-      this.http.post('api/laboratory/insert', formData1).subscribe(
-        response => {
-          this.ts.showSuccess("Success", "Record added successfully.")
-          this.router.navigate(['/admin/laboratory/uploadreport']);
-          
-        },
-        error => {
-           
-        }
-      );
-    }
-    else{
+    if (parseInt(this.f.laboratoryID.value) === 0) {
       const formData1 = new FormData();
       formData1.append('name', this.formData.name);
       formData1.append('referenceNo', this.formData.referenceNo);
       formData1.append('registrationNo', this.formData.registrationNo);
+      formData1.append('customerID', this.formData.customerID);
       formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
-      formData1.append('file', this.selectedFile);     
-   
+      formData1.append('file', this.selectedFile);
+      formData1.append('userName', this.userName);
+      this.http.post('api/laboratory/insert', formData1).subscribe(
+        response => {
+          this.ts.showSuccess("Success", "Record added successfully.")
+          this.router.navigate(['/admin/laboratory/uploadreport']);
+        },
+        error => {
+        }
+      );
+    }
+    else {
+      const formData1 = new FormData();
+      formData1.append('name', this.formData.name);
+      formData1.append('referenceNo', this.formData.referenceNo);
+      formData1.append('registrationNo', this.formData.registrationNo);   
+      formData1.append('customerID', this.formData.customerID);
+      formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
+      formData1.append('laboratoryID', this.formData.laboratoryID);
+      formData1.append('file', this.selectedFile);
+      formData1.append('userName', this.userName);
+
       this.http.post('api/laboratory/update', formData1).subscribe(
         response => {
           this.ts.showSuccess("Success", "Record added successfully.")
           this.router.navigate(['/admin/laboratory/uploadreport']);
-          
         },
         error => {
-           
         }
       );
     }
-    
   }
 
   //private loadCustomer() {
@@ -178,7 +214,7 @@ export class AddreportsComponent implements OnInit {
   //  this.laboratoryService.loadCustomer().subscribe((res: any) => {
   //    debugger;
   //    this.CustomerList = res;
-       
+
   //  });
   //}
   //private loadRNo() {
@@ -186,7 +222,7 @@ export class AddreportsComponent implements OnInit {
   //  this.laboratoryService.loadRNo().subscribe((res: any) => {
   //    debugger;
   //    this.RegistrationList = res;
-       
+
   //  });
   //}
 
@@ -195,7 +231,7 @@ export class AddreportsComponent implements OnInit {
       this.CategoryList = res;
     });
   }
-  
+
   removeImage(obj) {
     const index = this.Images.indexOf(obj);
     this.Images.splice(index, 1);

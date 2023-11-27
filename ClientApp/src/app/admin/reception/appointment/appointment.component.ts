@@ -24,6 +24,7 @@ export class AppointmentComponent implements OnInit {
   total$: Observable<number>;
   loading$: Observable<boolean>;
   private selectedAppointment;
+  userName = "";
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
 
   locationSubscription: Subscription;
@@ -51,6 +52,7 @@ export class AppointmentComponent implements OnInit {
   getData() {
     this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
     this.data$ = this.service.data$;
+    console.log('data$');
     this.total$ = this.service.total$;
     this.loading$ = this.service.loading$;
   }

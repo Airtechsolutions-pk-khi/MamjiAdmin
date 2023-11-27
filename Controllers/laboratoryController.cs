@@ -33,6 +33,11 @@ namespace MamjiAdmin.Controllers
         {
             return _service.Get(id);
         }
+		[HttpGet("Detail/{registrationNo}")]
+		public CustomerBLL GetDetail(string registrationNo)
+		{
+			return _service.GetDetail(registrationNo);
+		}
 
 		[HttpGet]
 		[Route("loadpdf")]
@@ -66,10 +71,10 @@ namespace MamjiAdmin.Controllers
                 data.RegistrationNo = Data.RegistrationNo;
                 data.LabReferenceNo = Data.ReferenceNo;
                 data.FilePath = filePath;                
-                data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
+                data.DiagnoseCatID = Data.DiagnosticCatID;
                 data.StatusID = 1;
-
-                int res = _service.Insert(data);
+				data.LastUpdatedBy = Data.UserName;
+				int res = _service.Insert(data);
 
 
                 if (res != 0)
@@ -113,14 +118,16 @@ namespace MamjiAdmin.Controllers
         public async Task<int> PostUpdate(UploadViewModel Data)
         {
             var filePath = await CopyPdfToPath(Data.File, FolderName);
-            LaboratoryBLL data = new LaboratoryBLL();
-            data.CustomerID = int.Parse(Data.CustomerID);
-            data.FilePath = filePath;            
-            data.DiagnoseCatID = int.Parse(Data.DiagnosticCatID);
-            data.LaboratoryID = int.Parse(Data.LaboratoryID);
-            data.StatusID = 1;
-            
-            return _service.Update(data);
+			LaboratoryBLL data = new LaboratoryBLL();
+			data.Name = Data.Name;
+			data.RegistrationNo = Data.RegistrationNo;
+			data.LabReferenceNo = Data.ReferenceNo;
+			data.FilePath = filePath;
+			data.DiagnoseCatID = Data.DiagnosticCatID;
+			data.StatusID = 1;
+			data.LastUpdatedBy = Data.UserName;
+            data.LaboratoryID = Data.LaboratoryID;
+			return _service.Update(data);
         }
         [HttpPost]
         [Route("delete")]

@@ -106,6 +106,7 @@ export class AppointmentService {
     tap(() => this._loading$.next(true)),
       this.http.get<Appointment[]>(url).subscribe(res =>
       {
+        debugger
         this.appointments = res;
         this._data$.next(this.appointments);
         this._allData$.next(this.appointments);

@@ -40,10 +40,11 @@
         <thead>
           <tr class="table-header">
             <th width="10%">IMAGE</th>
-            <th width="15%" sortable="FullName">Customer Name </th>
+            <th width="15%" sortable="fullName">Customer Name </th>
             <th width="15%" sortable="Mobile">Mobile </th>
             <th width="15%" sortable="Address">Address </th>
             <th width="15%" sortable="Notes">Notes </th>
+            <th width="15%" sortable="Status">Aproved By </th>
             <th width="15%" sortable="Status">Status </th>
             <th width="10%">Action</th>
           </tr>
@@ -57,6 +58,7 @@
             <td> {{item.mobile}} </td>
             <td> {{item.address}} </td>
             <td> {{item.note}} </td>
+            <td> {{item.lastUpdatedBy}} </td>
             <td>
               <span class="badge badge-warning"
                     *ngIf="item.statusID == 101">Pending</span>
@@ -64,11 +66,14 @@
               <span class="badge badge-success"
                     *ngIf="item.statusID == 102">Approved</span>
 
+              <span class="badge badge-danger"
+                    *ngIf="item.statusID == 103">Cancelled</span>
+
               <span class="badge badge-info"
-                    *ngIf="item.statusID == 103">Completed</span>
+                    *ngIf="item.statusID == 100">Completed</span>
 
               <span class="badge badge-dark"
-                    *ngIf="![101, 102, 103].includes(item.statusID)">-</span>
+                    *ngIf="![101, 102, 103, 100].includes(item.statusID)">-</span>
             </td>
             <!--<td>
             <ngb-highlight [ngClass]="{'btn-warning': item.statusID === 1, 'btn-success':item.statusID === 2, 'btn-primary': item.statusID ===3 }" class="btn btn-sm" [result]="item.statusID ==1?'Pending':item.statusID ==2?'Approved':'Completed'" [term]="service.searchTerm">

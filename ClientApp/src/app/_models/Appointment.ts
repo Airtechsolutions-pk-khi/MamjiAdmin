@@ -22,6 +22,7 @@ export class Appointment {
   createdOn: string;
   userName: string;
   lastUpdatedDate: string;
+  lastUpdatedBy: string;
   specialities: DoctorSpeciality[];
 }
 
