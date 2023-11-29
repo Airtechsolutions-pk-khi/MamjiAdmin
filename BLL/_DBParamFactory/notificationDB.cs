@@ -27,14 +27,17 @@ namespace BAL.Repositories
             _ds = new DataSet();
         }
 
-        public List<NotificationBLL> GetAll()
+        public List<NotificationBLL> GetAll(DateTime FromDate, DateTime ToDate)
         {
             try
             {
                 var lst = new List<NotificationBLL>();
-                SqlParameter[] p = new SqlParameter[0];
+				SqlParameter[] p = new SqlParameter[2];
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetNotifications", p);
+				p[0] = new SqlParameter("@fromdate", FromDate.Date);
+				p[1] = new SqlParameter("@todate", ToDate.Date);
+
+				_dt = (new DBHelper().GetTableFromSP)("sp_GetNotifications_V2", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -78,7 +81,7 @@ namespace BAL.Repositories
             try
             {
                 int _obj = 0;
-                int isread = data.IsRead == false ? 0 : 1;  
+                int isread = data.IsRead == true ? 1 : 0;  
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@id", data.NotificationID);
                 p[1] = new SqlParameter("@IsRead", isread);

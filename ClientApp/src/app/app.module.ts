@@ -18,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryComponent } from './admin/menu/category/category.component';
 import { AddcategoryComponent } from './admin/menu/category/addcategory/addcategory.component';
 import { ImageuploadComponent } from './imageupload/imageupload.component';
+import { ImageViewComponent } from './imageview/imageview.component';
 import { ItemsComponent } from './admin/menu/items/items.component';
 import { AdditemsComponent } from './admin/menu/items/additem/additem.component';
 import { ModifiersComponent } from './admin/menu/modifiers/modifiers.component';
@@ -134,6 +135,7 @@ import { addcorporateclientComponent } from './admin/settings/corporateclient/ad
     LocationsComponent,
     AddlocationComponent,
     ImageuploadComponent,
+    ImageViewComponent,
     SummaryComponent,
     NgbdDatepickerRangePopup,
     BannerComponent,

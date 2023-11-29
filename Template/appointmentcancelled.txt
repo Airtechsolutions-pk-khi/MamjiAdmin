@@ -166,6 +166,7 @@
                                                                                                                         <td style="padding:0; line-height:36px; text-align:inherit; color: #383838" height="100%" valign="top" bgcolor="" role="module-content">
                                                                                                                             <div>
                                                                                                                                 <div style="font-family: inherit; text-align: inherit;padding-top: 10px;"><span style="color: #383838; font-size: 25px; font-family: inherit">Your appointment is cancelled. </span></div>
+                                                                                                                                <div style="font-family: inherit; text-align: inherit">Cancelled By: #username#</div> </span></div>
                                                                                                                                 <div style="font-family: inherit; text-align: inherit;padding:10px 0;"><span style="color: #383838; font-size: 25px; font-family: inherit">If you are unaware of the reason for cancellation, please contact us. </span></div>
                                                                                                                                 <div></div>
                                                                                                                             </div>

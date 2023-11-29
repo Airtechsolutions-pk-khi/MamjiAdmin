@@ -18,6 +18,15 @@ export class AdduserComponent implements OnInit {
   loading = false;
   loadingCustomer = false;
   ButtonText = "Save";
+  showPassword = false;
+  passwordFieldType = 'password';
+
+  // ... other component methods and lifecycle hooks
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+    this.passwordFieldType = this.showPassword ? 'text' : 'password';
+  }
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -60,7 +69,7 @@ export class AdduserComponent implements OnInit {
   }
 
   setSelectedCustomer() {
-    debugger;
+    
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {

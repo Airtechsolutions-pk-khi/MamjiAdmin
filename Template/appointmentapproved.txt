@@ -196,6 +196,7 @@
                                                                                                 <div style="font-family: inherit; text-align: inherit">Date: #date#</div>
                                                                                                 <div style="font-family: inherit; text-align: inherit">Name: #name#</div>
                                                                                                 <div style="font-family: inherit; text-align: inherit">Contact: #contact#</div>
+                                                                                                <div style="font-family: inherit; text-align: inherit">Approved By: #username#</div>
                                                                                                 
                                                                                                 <div></div>
                                                                                             </div>

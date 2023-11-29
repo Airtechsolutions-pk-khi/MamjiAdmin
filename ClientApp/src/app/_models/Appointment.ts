@@ -19,7 +19,10 @@ export class Appointment {
   appointmentStatus: number;
   statusID: number;
   doctor: string;
-  
+  createdOn: string;
+  userName: string;
+  lastUpdatedDate: string;
+  lastUpdatedBy: string;
   specialities: DoctorSpeciality[];
 }
 

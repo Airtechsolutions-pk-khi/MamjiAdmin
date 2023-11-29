@@ -45,7 +45,6 @@ export class ItemsettingsComponent implements OnInit {
   setSelecteditem() {
     this.itemsService.getTodaysItems(this.ls.getSelectedBrand().brandID)
       .subscribe((res: any) => {
-         debugger;
         var stringToConvert = res.items;
         this.isItemSetting = res.isItemSetting;
         this.itemSettingTitle = res.itemSettingTitle;
@@ -79,7 +78,6 @@ export class ItemsettingsComponent implements OnInit {
   private loadItems() {
      
     this.itemsService.loadItems(this.ls.getSelectedBrand().brandID).subscribe((res: any) => {
-      debugger;
       this.ItemsList = res;
      
       this.setSelecteditem();

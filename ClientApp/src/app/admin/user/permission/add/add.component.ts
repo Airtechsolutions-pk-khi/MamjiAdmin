@@ -98,7 +98,7 @@ export class AddComponent implements OnInit {
     //});
     debugger 
     this.UserList = [
-      { "type": "Super Admin" },
+      { "type": "SuperAdmin" },
       { "type": "Admin" },
       { "type": "Pharmacy" },
       { "type": "Reception" },

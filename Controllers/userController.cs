@@ -22,7 +22,12 @@ namespace MamjiAdmin.Controllers
         {
             return _service.GetAll();
         }
-        [HttpGet("user/{id}")]
+		[HttpGet("permission")]
+		public List<PermissionBLL> GetRoles()
+		{
+			return _service.GetRoles();
+		}
+		[HttpGet("user/{id}")]
         public LoginBLL Get(int id)
         {
             return _service.Get(id);

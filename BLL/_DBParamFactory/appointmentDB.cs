@@ -26,14 +26,17 @@ namespace BAL.Repositories
             _dt = new DataTable();
             _ds = new DataSet();
         }
-        public List<AppointmentBLL> GetAll()
-        {
+        public List<AppointmentBLL> GetAll(DateTime FromDate, DateTime ToDate)
+		{
             try
             {
                 var lst = new List<AppointmentBLL>();
-                //SqlParameter[] p = new SqlParameter[1];
+				SqlParameter[] p = new SqlParameter[2];
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_Appointment_admin");
+				p[0] = new SqlParameter("@fromdate", FromDate.Date);
+				p[1] = new SqlParameter("@todate", ToDate.Date);
+
+				_dt = (new DBHelper().GetTableFromSP)("sp_Appointment_admin_V2", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)
@@ -208,11 +211,12 @@ namespace BAL.Repositories
             try
             {
                 int _obj = 0;
-                SqlParameter[] p = new SqlParameter[4];
+                SqlParameter[] p = new SqlParameter[5];
                 p[0] = new SqlParameter("@id", data.AppointmentID);
                 p[1] = new SqlParameter("@AppointmentStatus", data.AppointmentStatus);
                 p[2] = new SqlParameter("@StatusMsg", data.StatusMsg);
                 p[3] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[4] = new SqlParameter("@LastUpdatedBy", data.UserName);
 
                 _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_AppointmentStatus", p);          
                 return _obj;

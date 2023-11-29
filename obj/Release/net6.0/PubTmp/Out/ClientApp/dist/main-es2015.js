@@ -283,7 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- <h1>Angular 10 Alerts</h1>\r\n  <button class=\"btn btn-success m-1\" (click)=\"alertService.success('Success!!', options)\">Success</button>\r\n  <button class=\"btn btn-danger m-1\" (click)=\"alertService.error('Error :(', options)\">Error</button>\r\n  <button class=\"btn btn-info m-1\" (click)=\"alertService.info('Some info....', options)\">Info</button>\r\n  <button class=\"btn btn-warning m-1\" (click)=\"alertService.warn('Warning: ...', options)\">Warn</button>\r\n  <button class=\"btn btn-outline-dark m-1\" (click)=\"alertService.clear()\">Clear</button>\r\n  <div class=\"form-group mt-2\">\r\n    <div class=\"form-check\">\r\n      <input type=\"checkbox\" name=\"autoClose\" id=\"autoClose\" class=\"form-check-input\" [(ngModel)]=\"options.autoClose\">\r\n      <label for=\"autoClose\">Auto close alert after three seconds</label>\r\n    </div>\r\n    <div class=\"form-check\">\r\n      <input type=\"checkbox\" name=\"keepAfterRouteChange\" id=\"keepAfterRouteChange\" class=\"form-check-input\"\r\n        [(ngModel)]=\"options.keepAfterRouteChange\">\r\n      <label for=\"keepAfterRouteChange\">Keep displaying after one route change</label>\r\n    </div>\r\n  </div> -->\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalSales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayNursingAppointments}}</div>\r\n            <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Today Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>\r\n            <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Today Sale's</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayNursingAppointments}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Today Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -322,7 +322,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- <form [formGroup]=\"reportForm\" class=\"form\" (ngSubmit)=\"onSubmit()\"> -->\r\n<form class=\"form\" (ngSubmit)=\"onSubmit()\" #myForm=\"ngForm\">\r\n\r\n  \r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Registration #</label>\r\n \r\n                  <ng-select [items]=\"RegistrationList\" bindLabel=\"registrationNo\" bindValue=\"customerID\" [multiple]=\"false\" placeholder=\"--Select Registration #--\" (change)=\"onCustomerSelectR(formData.customerID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.customerID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.registrationNo}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n \r\n                  <ng-select [items]=\"CustomerList\" bindLabel=\"fullName\" bindValue=\"customerID\" [multiple]=\"false\" placeholder=\"--Select Customer--\" (change)=\"onCustomerSelect(formData.customerID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.customerID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.fullName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n\r\n                </div>\r\n              </div>\r\n\r\n              \r\n             <input type=\"file\" (change)=\"onFileChange($event.target.files)\" />  \r\n\r\n            </div>\r\n            \r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Catgeory</label>                  \r\n                  <ng-select [items]=\"CategoryList\" bindLabel=\"categoryName\" bindValue=\"diagnosticCatID\" [multiple]=\"false\" placeholder=\"--Select Diagnostic Category--\" (change)=\"onDiagnosticSelect(formData.diagnosticCatID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.diagnosticCatID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.categoryName}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>");
+/* harmony default export */ __webpack_exports__["default"] = ("<style>\r\n  input[type=\"file\" i] {\r\n    appearance: none;\r\n    background-color: initial;\r\n    cursor: default;\r\n    align-items: baseline;\r\n    color: inherit;\r\n    text-overflow: ellipsis;\r\n    text-align: start !important;\r\n    padding: initial;\r\n    border: 1px solid #ced4da;\r\n    white-space: pre;\r\n    overflow: hidden !important;\r\n    width: 100%;\r\n    border-radius: 5px;\r\n  }\r\n</style>\r\n\r\n\r\n<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form class=\"form\" (ngSubmit)=\"onSubmit()\" #myForm=\"ngForm\">\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Registration #</label>\r\n                  <!--<input type=\"text\" class=\"form-control\" name=\"registrationNo\" [(ngModel)]=\"formData.registrationNo\"/>-->\r\n                  <div class=\"input-group\">\r\n                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter Registration#\" name=\"registrationNo\" [(ngModel)]=\"formData.registrationNo\" [disabled]=\"formData.customerID>0?true: false\">\r\n                    <div class=\"input-group-append\">\r\n                      <button class=\"btn btn-secondary\" type=\"button\" (click)=\"search()\">\r\n                        <i class=\"fa fa-search\"></i>\r\n                      </button>\r\n                      <button class=\"btn btn-info\" type=\"button\" (click)=\"refresh()\">\r\n                        <i class=\"fa fa-recycle\"></i>\r\n                      </button>\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Lab Reference #</label>\r\n                  <input type=\"text\" class=\"form-control\" name=\"referenceNo\" [(ngModel)]=\"formData.referenceNo\" placeholder=\"Enter Lab Reference#\" />\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <input type=\"file\" (change)=\"onFileChange($event.target.files)\" style=\"margin-top: 32px; \" />\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Patient Name</label>\r\n                  <input type=\"text\" class=\"form-control\" name=\"name\" [(ngModel)]=\"formData.name\" required placeholder=\"Enter Patient Name\" />\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Category</label>\r\n                  <ng-select [items]=\"CategoryList\" bindLabel=\"categoryName\" bindValue=\"diagnosticCatID\" [multiple]=\"false\" placeholder=\"--Select Diagnostic Category--\" (change)=\"onDiagnosticSelect(formData.diagnosticCatID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.diagnosticCatID\">\r\n                  </ng-select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -335,7 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n\r\n            <th width=\"20%\">Report</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Registration #</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Customer Name</th>\r\n            <th width=\"15%\" sortable=\"LabReference\">Category</th>\r\n            <th width=\"10%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n\r\n              <button class=\"btnDownload\" (click)=\"DownloadRpt(item.image)\"><i class=\"fa fa-download\"></i> Download Report</button>\r\n\r\n              <!-- <a href=\"http://localhost:59660/assets/pdf/zzz.pdf\" Download=\"ABC.pdf\">Download the PDF</a> -->\r\n              <!-- <a (click)=\"DownloadRpt(item.image)\"><i class=\"fas fa-fw fa-edit\"></i></a> -->\r\n              <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> -->\r\n            </td>\r\n\r\n            <td>{{item.registrationNo}}</td>\r\n            <td>{{item.fullName}}</td>\r\n            <td>{{item.categoryName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <!-- <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              <!--<a title=\"Delete\" (click)=\"open(content,item.laboratoryID)\" href=\"javascript:void(0);\">Delete</a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>   \r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\"col-md-8 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-7 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-1 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n\r\n            <th width=\"20%\">Report</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Registration #</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Lab Reference #</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Patient Name</th>\r\n            <th width=\"15%\" sortable=\"LabReference\">Category</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Upload By</th>\r\n            <th width=\"10%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n\r\n              <button class=\"btnDownload\" (click)=\"DownloadRpt(item.image)\"><i class=\"fa fa-download\"></i> Download</button>\r\n\r\n              <!-- <a href=\"http://localhost:59660/assets/pdf/zzz.pdf\" Download=\"ABC.pdf\">Download the PDF</a> -->\r\n              <!-- <a (click)=\"DownloadRpt(item.image)\"><i class=\"fas fa-fw fa-edit\"></i></a> -->\r\n              <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> -->\r\n            </td>\r\n\r\n            <td>{{item.registrationNo}}</td>\r\n            <td>{{item.labReferenceNo}}</td>\r\n            <td>{{item.name}}</td>\r\n            <td>{{item.categoryName}}</td>\r\n            <td>{{item.lastUpdatedBy}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <!-- <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              <!--<a title=\"Delete\" (click)=\"open(content,item.laboratoryID)\" href=\"javascript:void(0);\">Delete</a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -348,7 +348,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Urdu Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=urduName placeholder=\"\" formControlName=\"urduName\">\r\n                  \r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.email.errors.required\">\r\n                          Email is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                  <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                   <div *ngIf=\"f.skills.invalid && (f.skills.dirty || f.skills.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.skills.errors.required\">\r\n                          Skill is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" required formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.gender.invalid && (f.gender.dirty || f.gender.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.gender.errors.required\">\r\n                      Gender is required.\r\n                    </div>\r\n                </div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                  <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                   <div *ngIf=\"f.education.invalid && (f.education.dirty || f.education.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.education.errors.required\">\r\n                          Education is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                 \r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <br />\r\n                  <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"tile-body p-0 table-responsive \">\r\n                <table class=\"table table-striped\">\r\n                  <thead>\r\n                    <tr class=\"table-header\">\r\n                      <th width=\"20%\">Speciality </th>\r\n                      <!--<th width=\"20%\">Fees </th>-->\r\n                      <th width=\"40%\">Profile </th>\r\n                      <th width=\"20%\">Action</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let item of  DoctorProfiles\">\r\n\r\n                      <td>\r\n                        {{item.name}}\r\n                      </td>\r\n                      <!--<td>\r\n                        {{item.fees}}\r\n                      </td>-->\r\n                      <td> {{item.profile}} </td>\r\n\r\n                      <td>\r\n                        <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                      </td>\r\n                    </tr>\r\n\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\" style=\"display: none;\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n              <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n              <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n              <ng-select [items]=\"selectedTimeList\" bindLabel=\"timeSlot\" [multiple]=\"true\" bindValue=\"timeSlot\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.timeSlot}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <br />\r\n              <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n              <thead>\r\n                <tr class=\"table-header\">\r\n                  <th width=\"20%\">ID </th>\r\n                  <th width=\"20%\">Speciality </th>\r\n                  <th width=\"20%\">Days </th>\r\n                  <th width=\"20%\">Timeslot</th>\r\n                  <th width=\"20%\">Action</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                  <td>\r\n                    {{item.specialistID}}\r\n\r\n                  </td>\r\n                  <td>\r\n                    {{item.name}}\r\n\r\n                  </td>\r\n                  <td> {{item.dayName}} </td>\r\n                  <td> {{item.timeSlot}} </td>\r\n\r\n                  <td>\r\n                    <i (click)=\"RemoveChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                  </td>\r\n                </tr>\r\n\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<h1 class=\"h3 mb-2 text-gray-800\">Add Doctor</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"doctorForm\" class=\"form\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Item Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Name </label>\r\n                  <input type=\"text\" class=\"form-control\" id=fullName placeholder=\"\" formControlName=\"fullName\">\r\n                  <div *ngIf=\"f.fullName.invalid && (f.fullName.dirty || f.fullName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.fullName.errors.required\">\r\n                      Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Urdu Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=urduName placeholder=\"\" formControlName=\"urduName\">\r\n                  \r\n                </div>\r\n                <!--<div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                </div>-->\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Skills</label>\r\n                  <input type=\"text\" class=\"form-control\" id=skills placeholder=\"\" formControlName=\"skills\">\r\n                   <div *ngIf=\"f.skills.invalid && (f.skills.dirty || f.skills.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.skills.errors.required\">\r\n                          Skill is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Gender</label>\r\n                  <select type=\"text\" class=\"form-control\" id=gender placeholder=\"\" required formControlName=\"gender\">\r\n                    <option selected disabled> -- Please Select -- </option>\r\n                    <option>Male</option>\r\n                    <option>Female</option>\r\n                  </select>\r\n                  <div *ngIf=\"f.gender.invalid && (f.gender.dirty || f.gender.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.gender.errors.required\">\r\n                      Gender is required.\r\n                    </div>\r\n                </div>\r\n                </div>\r\n\r\n\r\n                <div class=\"form-group col-md-6\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Education</label>\r\n                  <input type=\"text\" class=\"form-control\" id=education placeholder=\"\" formControlName=\"education\">\r\n                   <div *ngIf=\"f.education.invalid && (f.education.dirty || f.education.touched)\" class=\"alert alert-danger\">\r\n                      <div *ngIf=\"f.education.errors.required\">\r\n                          Education is required.\r\n                      </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n                  <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\"  [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.specialistID\">\r\n                    <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                      <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                        <span class=\"ng-value-label\">{{item.name}}</span>\r\n                        <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                      </div>\r\n                    </ng-template>\r\n                  </ng-select>\r\n                 \r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Profile</label>\r\n                  <input type=\"text\" class=\"form-control\" id=\"profile\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"drProfile.profile\">\r\n                </div>\r\n                <div class=\"form-group col-md-3\">\r\n                  <br />\r\n                  <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddProfileChild(drProfile)\" [disabled]=\"drProfile==null\">Add</button>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"tile-body p-0 table-responsive \">\r\n                <table class=\"table table-striped\">\r\n                  <thead>\r\n                    <tr class=\"table-header\">\r\n                      <th width=\"20%\">Speciality </th>\r\n                      <!--<th width=\"20%\">Fees </th>-->\r\n                      <th width=\"40%\">Profile </th>\r\n                      <th width=\"20%\">Action</th>\r\n                    </tr>\r\n                  </thead>\r\n                  <tbody>\r\n                    <tr *ngFor=\"let item of  DoctorProfiles\">\r\n\r\n                      <td>\r\n                        {{item.name}}\r\n                      </td>\r\n                      <!--<td>\r\n                        {{item.fees}}\r\n                      </td>-->\r\n                      <td> {{item.profile}} </td>\r\n\r\n                      <td>\r\n                        <i (click)=\"RemoveProfileChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                      </td>\r\n                    </tr>\r\n\r\n                  </tbody>\r\n                </table>\r\n              </div>\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\" style=\"display: none;\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Attach Speciality</label>\r\n              <ng-select [items]=\"selectedSpecialityList\" bindLabel=\"name\" bindValue=\"specialistID\" [multiple]=\"false\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.specialistID\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.name}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputLocation\">Attach Days</label>\r\n              <select name=\"dayName\" id=\"dayName\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.dayName\">\r\n                <option *ngFor=\"let option of DoctorDaysList\" [value]=\"option\">{{option}}</option>\r\n              </select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Timeslot</label>\r\n              <ng-select [items]=\"selectedTimeList\" bindLabel=\"timeSlot\" [multiple]=\"true\" bindValue=\"timeSlot\" placeholder=\"\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"spec.timeSlot\">\r\n                <ng-template ng-multi-label-tmp let-items=\"items\" let-clear=\"clear\">\r\n                  <div class=\"ng-value\" *ngFor=\"let item of items\">\r\n                    <span class=\"ng-value-label\">{{item.timeSlot}}</span>\r\n                    <span class=\"ng-value-icon right\" style=\"border-left: 1px solid #000;\" (click)=\"clear(item)\" aria-hidden=\"true\">×</span>\r\n                  </div>\r\n                </ng-template>\r\n              </ng-select>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group col-md-3\">\r\n              <br />\r\n              <button class=\"btn btn-primary\" type=\"submit\" (click)=\"AddChild(spec)\" [disabled]=\"spec==null\">Add</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n              <thead>\r\n                <tr class=\"table-header\">\r\n                  <th width=\"20%\">ID </th>\r\n                  <th width=\"20%\">Speciality </th>\r\n                  <th width=\"20%\">Days </th>\r\n                  <th width=\"20%\">Timeslot</th>\r\n                  <th width=\"20%\">Action</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr *ngFor=\"let item of  DoctorSchedule\">\r\n                  <td>\r\n                    {{item.specialistID}}\r\n\r\n                  </td>\r\n                  <td>\r\n                    {{item.name}}\r\n\r\n                  </td>\r\n                  <td> {{item.dayName}} </td>\r\n                  <td> {{item.timeSlot}} </td>\r\n\r\n                  <td>\r\n                    <i (click)=\"RemoveChild(item)\" class=\"fas fa-fw fa-trash-alt \"></i>\r\n                  </td>\r\n                </tr>\r\n\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" (click)=\"onSubmit()\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -491,7 +491,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Date </th>\r\n            <th width=\"10%\" sortable=\"Status\">Status</th>\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate | date:'dd-MM-yyyy' }} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.isRead === 0, 'btn-danger':item.isRead !== 0 }\" class=\"btn btn-sm\" [result]=\"item.isRead ==0?'UnRead':'Read'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Notification</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Notification's List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n      </div>\r\n      <div class=\"col-md-3 form-group text-right\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"Title\">Title </th>\r\n            <th width=\"15%\" sortable=\"Description\">Description </th>\r\n            <th width=\"15%\" sortable=\"NotificationType\">Notification Type </th>\r\n            <th width=\"15%\" sortable=\"NotificationDate\">Date </th>\r\n            <!--<th width=\"10%\" sortable=\"Status\">Status</th>-->\r\n            <th width=\"10%\">Read/UnRead</th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.title}} </td>\r\n            <td> {{item.description}} </td>\r\n            <td> {{item.notificationType}} </td>\r\n            <td> {{item.notificationDate | date:'dd-MM-yyyy' }} </td>\r\n            <!--<td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>-->\r\n            <td>\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.isRead == 1\">Read</span>\r\n\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.isRead == 0\">UnRead</span>\r\n            </td>\r\n            <td>\r\n              <button class=\"btn btn-outline-info mr-1\" (click)=\"updateStatus(item)\">\r\n                <i class=\"fas fa-marker\"></i>\r\n              </button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -504,7 +504,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Permission</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"permissionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Permission Details</div>\r\n        <div class=\"card-body\">\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Role Name</label>\r\n              <!-- <select class=\"custom-select\" [(ngModel)]=\"formName.roleName\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelect($event.target.value)\"> -->\r\n                <select class=\"custom-select\" formControlName=\"roleName\" (change)=\"onSelect($event.target.value)\">\r\n                <option *ngFor=\"let option of UserList\">\r\n                  {{option.type}}\r\n                </option>\r\n              </select>\r\n            </div> \r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Notification</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"notification\" formControlName=\"notification\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"notification\" [(ngModel)]=\"formName.notification\" [ngModelOptions]=\"{standalone: true}\" > -->\r\n                <label class=\"custom-control-label\" for=\"notification\"></label>       \r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Doctor</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"doctor\" formControlName=\"doctor\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"doctor\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.doctor\"> -->\r\n                <label class=\"custom-control-label\" for=\"doctor\"></label>       \r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">User</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"mamjiUser\" formControlName=\"mamjiUser\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"user\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.user\"> -->\r\n                <label class=\"custom-control-label\" for=\"user\"></label>       \r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Pharmacy</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" formControlName=\"pharmacy\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"pharmacy\"></label>       \r\n              </div>\r\n            </div>  \r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reception</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reception\" formControlName=\"reception\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"reception\"></label>       \r\n              </div>\r\n            </div> \r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Diagnostic</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"diagnostic\" formControlName=\"diagnostic\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"diagnostic\"></label>       \r\n              </div>\r\n            </div>  \r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reports</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reports\" formControlName=\"reports\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"reports\"></label>       \r\n              </div>\r\n            </div>   \r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Settings</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"setting\" formControlName=\"setting\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"setting\"></label>       \r\n              </div>\r\n            </div>      \r\n          </div>\r\n          <div class=\"form-row\">\r\n     \r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Permission</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"permissionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Permission Details</div>\r\n        <div class=\"card-body\">\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <label class=\"small mb-1\" for=\"inputUsername\">Role Name</label>\r\n              <!-- <select class=\"custom-select\" [(ngModel)]=\"formName.roleName\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelect($event.target.value)\"> -->\r\n              <select class=\"custom-select\" formControlName=\"roleName\" (change)=\"onSelect($event.target.value)\">\r\n                <option *ngFor=\"let option of UserList\">\r\n                  {{option.roleName}}\r\n                </option>\r\n              </select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Notification</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"notification\" formControlName=\"notification\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"notification\" [(ngModel)]=\"formName.notification\" [ngModelOptions]=\"{standalone: true}\" > -->\r\n                <label class=\"custom-control-label\" for=\"notification\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Doctor</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"doctor\" formControlName=\"doctor\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"doctor\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.doctor\"> -->\r\n                <label class=\"custom-control-label\" for=\"doctor\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">User</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"mamjiUser\" formControlName=\"mamjiUser\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"user\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.user\"> -->\r\n                <label class=\"custom-control-label\" for=\"user\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Pharmacy</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" formControlName=\"pharmacy\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"pharmacy\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reception</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reception\" formControlName=\"reception\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"reception\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Diagnostic</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"diagnostic\" formControlName=\"diagnostic\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"diagnostic\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Reports</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"reports\" formControlName=\"reports\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"reports\"></label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-lg-3\">\r\n              <label for=\"Item Status\">Settings</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"setting\" formControlName=\"setting\">\r\n                <!-- <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"pharmacy\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formName.pharmacy\"> -->\r\n                <label class=\"custom-control-label\" for=\"setting\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -543,7 +543,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Medicines</h1>\r\n<p class=\"mb-4\"></p>\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Medicine List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button [routerLink]=\"['addmedicines']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Medicine\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n      <div class=\"tile-body p-0 table-responsive \">\r\n        <table class=\"table table-striped\">\r\n          <thead>\r\n            <tr class=\"table-header\">\r\n              <th width=\"10%\">IMAGE</th>\r\n              <th width=\"20%\" sortable=\"FullName\"> Name </th>\r\n              <!-- <th width=\"15%\" sortable=\"Description\">Description </th> -->\r\n              <th width=\"20%\" sortable=\"BrandDetails\"> Brand Details </th>\r\n              <th width=\"15%\" sortable=\"Price\"> Price </th>\r\n              <th width=\"20%\" sortable=\"Quantity\"> Quantity Description </th>\r\n              <th width=\"15%\" sortable=\"Status\">Status </th>\r\n              <th width=\"10%\">Action</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr *ngFor=\"let item of data$ | async \">\r\n              <td>\r\n                <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n              </td>\r\n              <td> {{item.name}} </td>\r\n              <!-- <td> {{item.description}} </td> -->\r\n              <td> {{item.brandDetails}} </td>\r\n              <td> {{item.price}} </td>\r\n              <td> {{item.quantityDescription}} </td>\r\n              <td>\r\n                <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                </ngb-highlight>\r\n              </td>\r\n              <td>\r\n                <a (click)=\"Edit(item.medicineID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                <a (click)=\"open(content,item.medicineID)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              </td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <p class=\"pagination-count\">\r\n            Showing\r\n            <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n            <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n            <strong>{{(total$ | async)!}}</strong> results\r\n          </p>\r\n        </div>\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n          </ngb-pagination>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Medicines</h1>\r\n<p class=\"mb-4\"></p>\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Medicine List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button [routerLink]=\"['addmedicines']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add Medicine\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n      <div class=\"tile-body p-0 table-responsive \">\r\n        <table class=\"table table-striped\">\r\n          <thead>\r\n            <tr class=\"table-header\">\r\n              <!--<th width=\"10%\">IMAGE</th>-->\r\n              <th width=\"20%\" sortable=\"FullName\"> Name </th>\r\n              <th width=\"20%\" sortable=\"BrandDetails\"> Brand Details </th>\r\n              <th width=\"20%\" sortable=\"Price\"> Price </th>\r\n              <th width=\"20%\" sortable=\"Quantity\"> Quantity Description </th>\r\n              <th width=\"15%\" sortable=\"Status\">Status </th>\r\n              <th width=\"10%\">Action</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr *ngFor=\"let item of data$ | async \">\r\n              <!--<td>\r\n                <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n              </td>-->\r\n              <td> {{item.name}} </td>\r\n              <td> {{item.brandDetails}} </td>\r\n              <td style=\"display:flex\">\r\n                <input type=\"number\" [(ngModel)]=\"item.price\" class=\"form-control\" style=\"width:60%;\" />\r\n                <a (click)=\"Update(item)\" style=\"margin-top: 7px; margin-left: 8px;\"><i class=\"fas fa-fw fa-save\"></i> </a>\r\n              </td>\r\n              <td> {{item.quantityDescription}} </td>\r\n              <td>\r\n                <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                </ngb-highlight>\r\n              </td>\r\n              <td>\r\n                <a (click)=\"Edit(item.medicineID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n                <a (click)=\"open(content,item.medicineID)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              </td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <p class=\"pagination-count\">\r\n            Showing\r\n            <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n            <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n            <strong>{{(total$ | async)!}}</strong> results\r\n          </p>\r\n        </div>\r\n        <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n          <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n          </ngb-pagination>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -569,7 +569,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Sales</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Orders List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\"> </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\" col-lg-3 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <!-- <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n            <span translate>Export</span>\r\n        </button> -->\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"orderNo\" (sort)=\"onSort($event)\"> Order # </th>\r\n            <th width=\"10%\" sortable=\"transactionNo\" (sort)=\"onSort($event)\">Trans # </th>\r\n            <th width=\"15%\" sortable=\"customerName\" (sort)=\"onSort($event)\">Name </th>\r\n            <th width=\"10%\" sortable=\"customerMobile\" (sort)=\"onSort($event)\">Contact </th>\r\n            <th width=\"10%\" sortable=\"grandTotal\" (sort)=\"onSort($event)\">Total </th>\r\n            <th width=\"10%\" sortable=\"orderDate\" (sort)=\"onSort($event)\">Date </th>\r\n            <th width=\"10%\" sortable=\"orderType\" (sort)=\"onSort($event)\">Order Type </th>\r\n            <th width=\"10%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"5%\"></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n\r\n            <td> {{item.orderNo}} </td>\r\n            <td> {{item.transactionNo}} </td>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.customerMobile}} </td>\r\n\r\n            <td> <span class=\"badge badge-success-soft text-success badge-pill py-2 px-3 mb-2\" style=\"background-color: #bfe5dc;\">{{item.grandTotal | number : '1.2-2'}} PKR</span> </td>\r\n            <td>{{item.orderDate | date}}</td>\r\n            <td><span class=\"badge badge-yellow\">{{item.orderType}}</span></td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-success': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==100 ? 'Completed' :\r\n                             item.statusID ==101 ? 'Pending' :\r\n                             item.statusID ==104 ? 'Out For Delivery' :\r\n                             item.statusID ==102 ? 'Approved' :\r\n                             item.statusID ==103 ? 'Cancelled' :\r\n                             item.statusID ==100 ? 'Completed' :'-'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.orderID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Print(item.orderID)\"><i class=\"fas fa-fw fa-print\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Sales</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Orders List</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\"> </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\" col-lg-3 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n\r\n      <div class=\"col-md-3 form-group text-right\">\r\n        <!-- <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n            <span translate>Export</span>\r\n        </button> -->\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"orderNo\" (sort)=\"onSort($event)\"> Order # </th>\r\n            <th width=\"10%\" sortable=\"transactionNo\" (sort)=\"onSort($event)\">Trans # </th>\r\n            <th width=\"15%\" sortable=\"customerName\" (sort)=\"onSort($event)\">Name </th>\r\n            <th width=\"10%\" sortable=\"customerMobile\" (sort)=\"onSort($event)\">Contact </th>\r\n            <th width=\"10%\" sortable=\"grandTotal\" (sort)=\"onSort($event)\">Total </th>\r\n            <th width=\"10%\" sortable=\"orderDate\" (sort)=\"onSort($event)\">Date </th>\r\n            <th width=\"10%\" sortable=\"orderType\" (sort)=\"onSort($event)\">Order Type </th>\r\n            <th width=\"10%\" sortable=\"statusID\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"5%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n\r\n            <td> {{item.orderNo}} </td>\r\n            <td> {{item.transactionNo}} </td>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.customerMobile}} </td>\r\n\r\n            <td> <span class=\"badge badge-success-soft text-success badge-pill py-2 px-3 mb-2\" style=\"background-color: #bfe5dc;\">{{item.grandTotal | number : '1.2-2'}} PKR</span> </td>\r\n            <td>{{item.orderDate | date}}</td>\r\n            <td><span class=\"badge badge-yellow\">{{item.orderType}}</span></td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-warning': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==100 ? 'Completed' :\r\n                             item.statusID ==101 ? 'Pending' :\r\n                             item.statusID ==104 ? 'Out For Delivery' :\r\n                             item.statusID ==102 ? 'Approved' :\r\n                             item.statusID ==103 ? 'Cancelled' :\r\n                             item.statusID ==100 ? 'Completed' :'-'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.orderID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              <!--<a (click)=\"Print(item.orderID)\"><i class=\"fas fa-fw fa-print\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -582,7 +582,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"prescriptionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Prescription Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=customerName placeholder=\"\" formControlName=\"customerName\" readonly>\r\n                <div *ngIf=\"f.customerName.invalid && (f.customerName.dirty || f.customerName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.customerName.errors.required\">\r\n                    Customer Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Mobile</label>\r\n                <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\" readonly>\r\n                <div *ngIf=\"f.mobile.invalid && (f.mobile.dirty || f.mobile.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.mobile.errors.required\">\r\n                    Mobile is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n                  <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\" readonly>\r\n                  <div *ngIf=\"f.address.invalid && (f.address.dirty || f.address.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.address.errors.required\">\r\n                      Address is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Notes</label>\r\n                  <input type=\"text\" class=\"form-control\" id=note placeholder=\"\" formControlName=\"note\" readonly>\r\n                  <div *ngIf=\"f.note.invalid && (f.note.dirty || f.note.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.note.errors.required\">\r\n                      Notes is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload readonly></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\" >\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-danger\" type=\"submit\">Close</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"prescriptionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Prescription Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Order #</label>\r\n                <input type=\"text\" class=\"form-control\" id=prescriptionID placeholder=\"\" formControlName=\"prescriptionID\" readonly>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=customerName placeholder=\"\" formControlName=\"customerName\" readonly>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Mobile</label>\r\n                <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\" readonly>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n                  <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\" readonly>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Notes</label>\r\n                  <input type=\"text\" class=\"form-control\" id=note placeholder=\"\" formControlName=\"note\" readonly>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Upload Date</label>\r\n                  <input type=\"text\" class=\"form-control\" id=createdOn placeholder=\"\" formControlName=\"createdOn\" readonly>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Prescription Status</label>\r\n                  <select class=\"form-control\" formControlName=\"statusID\">\r\n                    <option value=\"101\">Pending</option>\r\n                    <option value=\"102\">Approved</option>\r\n                    <option value=\"103\">Cancelled</option>\r\n                    <option value=\"100\">Completed</option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageview></app-imageview>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-success\" type=\"submit\">Save</button>\r\n          &nbsp;\r\n          &nbsp;\r\n          <button class=\"btn btn-danger\" type=\"button\" (click)=\"goBack()\">Back</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -595,7 +595,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"FullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <!--<div class=\"btn-group\">\r\n                <button type=\"button\" class=\"btn btn-warning\">Action</button>\r\n                <button type=\"button\" class=\"btn btn-warning dropdown-toggle dropdown-toggle-split\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                  <span class=\"sr-only\">Toggle Dropdown</span>\r\n                </button>\r\n                <div class=\"dropdown-menu\">\r\n                  <a class=\"dropdown-item badge-info\">Accept</a>\r\n                  <a class=\"dropdown-item badge-danger\" href=\"#\">Reject</a>\r\n                  <div class=\"dropdown-divider\"></div>\r\n                  <a class=\"dropdown-item\" href=\"{{item.image}}\" target=\"_blank\"  title=\"ImageName\">Download Image</a>\r\n                </div>\r\n              </div>-->\r\n\r\n              <a download=\"sd\" href=\"{{item.image}}\" target=\"_blank\" title=\"ImageName\">\r\n                <i class=\"fas fa-fw fa-download\" download></i>\r\n              </a>\r\n              <!--<a href=\"javascript:void(0);\" (click)=\"downloadImage(item.prescriptionID)\"><i class=\"fas fa-fw fa-download\"></i> </a>-->\r\n              <!--<a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>-->\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <!--<div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>-->\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-7 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-1 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"fullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Aproved By </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td> {{item.lastUpdatedBy}} </td>\r\n            <td>\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.statusID == 101\">Pending</span>\r\n\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.statusID == 102\">Approved</span>\r\n\r\n              <span class=\"badge badge-danger\"\r\n                    *ngIf=\"item.statusID == 103\">Cancelled</span>\r\n\r\n              <span class=\"badge badge-info\"\r\n                    *ngIf=\"item.statusID == 100\">Completed</span>\r\n\r\n              <span class=\"badge badge-dark\"\r\n                    *ngIf=\"![101, 102, 103, 100].includes(item.statusID)\">-</span>\r\n            </td>\r\n            <!--<td>\r\n            <ngb-highlight [ngClass]=\"{'btn-warning': item.statusID === 1, 'btn-success':item.statusID === 2, 'btn-primary': item.statusID ===3 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Pending':item.statusID ==2?'Approved':'Completed'\" [term]=\"service.searchTerm\">\r\n            </ngb-highlight>\r\n          </td>-->\r\n            <td>\r\n              <a download=\"sd\" href=\"{{item.image}}\" target=\"_blank\" title=\"ImageName\">\r\n                <i class=\"fas fa-fw fa-download\" download></i>\r\n              </a>\r\n              &nbsp;\r\n              <a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -608,7 +608,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n            <th width=\"15%\" sortable=\"FullName\"> Patient Name </th>\r\n            <th width=\"10%\" sortable=\"Address\"> Address </th>\r\n            <th width=\"10%\" sortable=\"Email\"> Email </th>\r\n            <th width=\"10%\" sortable=\"Mobile\"> Mobile </th>\r\n            <!--<th width=\"10%\" sortable=\"Fees\"> Fees </th>-->\r\n            <th width=\"15%\" sortable=\"BookingDate\"> Booking Date </th>\r\n            <th width=\"20%\" sortable=\"Timeslot\"> Time Slot </th>\r\n            <th width=\"20%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n            <th width=\"15%\" sortable=\"Status\"> Status </th>\r\n            <th width=\"10%\">Action</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.appointmentNo}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.email}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <!--<td> {{item.fees}} </td>-->\r\n            <td> {{item.bookingDate}} </td>\r\n            <td> {{item.timeslot}} </td>\r\n            <td>\r\n              {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 100 ?\"Completed\": \"-\"}}\r\n            </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.appointmentID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Print(item.appointmentID)\"><i class=\"fas fa-fw fa-print\"></i> </a>-->\r\n              <!--<a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n            </td>\r\n            <!--<td>\r\n              <select class=\"btn btn-danger dropdown form-control\" (change)=\"Status(item)\" id=\"appointmentStatus\" name=\"appointmentStatus\" [(ngModel)]=\"item.appointmentStatus\" style=\" padding-left: 5px;\">\r\n                <option selected></option>\r\n                <option [ngValue]=\"102\">Approved</option>\r\n                <option [ngValue]=\"103\">Cancelled</option>\r\n                <option [ngValue]=\"104\">Completed</option>\r\n              </select>\r\n            </td>-->\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n  function handleDropDownEvents(e) {\r\n    if (e.value == \"CreditCard\") {\r\n      showCreditCardMethod();\r\n    }\r\n    else if (e.value == \"SendPayment\") {\r\n      showSendPaymentMethod();\r\n    }\r\n  }\r\n</script>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-7 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-1 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n            <th width=\"25%\" sortable=\"FullName\"> Patient Name </th>\r\n            <!--<th width=\"10%\" sortable=\"Address\"> Address </th>-->\r\n            <!--<th width=\"10%\" sortable=\"Email\"> Email </th>-->\r\n            <th width=\"10%\" sortable=\"Mobile\"> Mobile </th>\r\n            <!--<th width=\"10%\" sortable=\"Fees\"> Fees </th>-->\r\n            <th width=\"15%\" sortable=\"BookingTime\"> Booking Date/Time </th>\r\n            <th width=\"15%\" sortable=\"BookingDate\"> Appointment Date </th>\r\n            <th width=\"20%\" sortable=\"Timeslot\"> Appointment Slot</th>\r\n            <th width=\"20%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n            <th width=\"15%\" sortable=\"Status\"> Approved By </th>\r\n            <th width=\"10%\">Action</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.appointmentNo}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <!--<td> {{item.address}} </td>-->\r\n            <!--<td> {{item.email}} </td>-->\r\n            <td> {{item.mobile}} </td>\r\n            <!--<td> {{item.fees}} </td>-->\r\n            <td> {{item.createdOn | date: 'dd/MM/yyyy hh:mm:ss'}} </td>\r\n            <td> {{item.bookingDate}} </td>\r\n            <td> {{item.timeslot}} </td>\r\n            <td>\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.appointmentStatus == 101\">Pending</span>\r\n\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.appointmentStatus == 102\">Approved</span>\r\n\r\n              <span class=\"badge badge-danger\"\r\n                    *ngIf=\"item.appointmentStatus == 103\">Cancelled</span>\r\n\r\n              <span class=\"badge badge-info\"\r\n                    *ngIf=\"item.appointmentStatus == 100\">Completed</span>\r\n\r\n              <span class=\"badge badge-dark\"\r\n                    *ngIf=\"![101, 102, 103, 100].includes(item.appointmentStatus)\">-</span>\r\n            </td>\r\n            <!--<td>\r\n              {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 100 ?\"Completed\": \"-\"}}\r\n            </td>-->\r\n          <td>\r\n            {{item.lastUpdatedBy}}\r\n          </td>\r\n            <td>\r\n              <a (click)=\"View(item.appointmentID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n  function handleDropDownEvents(e) {\r\n    if (e.value == \"CreditCard\") {\r\n      showCreditCardMethod();\r\n    }\r\n    else if (e.value == \"SendPayment\") {\r\n      showSendPaymentMethod();\r\n    }\r\n  }\r\n</script>\r\n");
 
 /***/ }),
 
@@ -621,7 +621,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Details - <span class=\"badge badge-info\"> {{\r\n            appointment.appointmentStatus == 100 ? \"Completed\" : appointment.appointmentStatus==101 ?\"Pending\" :\r\n            appointment.appointmentStatus == 102? \"Approved\" : appointment.appointmentStatus == 103? \"Cancelled\" : \"-\"\r\n            }}</span></h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n\r\n      </div>\r\n    </div>\r\n    <hr />\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 form-group \">\r\n        <p>Comments / Reason (Optional)</p>\r\n        <input type=\"text\" class=\"form-control\" id=msg placeholder=\"\" [(ngModel)]=\"StatusMsg\">\r\n      </div>\r\n      <div class=\"col-md-12 mb-4\" *ngIf=\"appointment.appointmentStatus!=100\">\r\n        <div class=\"card border-left-info shadow mb-4\">\r\n          <div class=\"card-header border-bottom-0\">Appointment Status</div>\r\n          <div class=\"card-body\">\r\n            <div class=\"\">\r\n              <!--<button class=\"btn btn-primary mr-1\" (click)=\"updateAppointment(appointment,101)\">\r\n            <i class=\"fas fa-truck\"></i> Pending\r\n          </button>-->\r\n              <button class=\"btn btn-info mr-1\" (click)=\"updateAppointment(appointment,100)\">\r\n                <i class=\"fas fa-truck\"></i> Completed\r\n              </button>\r\n              <button class=\"btn btn-success mr-1\" (click)=\"updateAppointment(appointment,102)\">\r\n                <i class=\"fas fa-people-carry\"></i> Approved\r\n              </button>\r\n              <button class=\"btn btn-danger mr-1\" (click)=\"updateAppointment(appointment,103)\">\r\n                <i class=\"fas fa-people-carry\"></i> Cancelled\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-danger shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Appointment Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.patientName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Mobile\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.mobile }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Email\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.email }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Address\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.address }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Age & Gender\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.age + \" \" + appointment.gender }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Booking Date\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.bookingDate }}</div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-Success shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Doctor Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.doctorName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Time Slot\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.timeslot }}</div>\r\n              </div>\r\n              <!-- <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Fee\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.fees }}</div>\r\n              </div> -->\r\n              <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th>Specialities</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let specialty of appointment.specialities\">\r\n                    <td>{{ specialty.specialityName }}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Details - <span class=\"badge badge-info\"> {{\r\n            appointment.appointmentStatus == 100 ? \"Completed\" : appointment.appointmentStatus==101 ?\"Pending\" :\r\n            appointment.appointmentStatus == 102? \"Approved\" : appointment.appointmentStatus == 103? \"Cancelled\" : \"-\"\r\n            }}</span></h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\">\r\n\r\n      </div>\r\n    </div>\r\n    <hr />\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 form-group \">\r\n        <p>Comments / Reason (Optional)</p>\r\n        <input type=\"text\" class=\"form-control\" id=msg placeholder=\"\" [(ngModel)]=\"StatusMsg\">\r\n      </div>\r\n      <div class=\"col-md-12 mb-4\" *ngIf=\"appointment.appointmentStatus!=100\">\r\n        <div class=\"card border-left-info shadow mb-4\">\r\n          <div class=\"card-header border-bottom-0\">Appointment Status</div>\r\n          <div class=\"card-body\">\r\n            <div class=\"\">\r\n              <button class=\"btn btn-info mr-1\" (click)=\"updateAppointment(appointment,100)\">\r\n                <i class=\"fas fa-truck\"></i> Completed\r\n              </button>\r\n              <button class=\"btn btn-success mr-1\" (click)=\"updateAppointment(appointment,102)\">\r\n                <i class=\"fas fa-people-carry\"></i> Approved\r\n              </button>\r\n              <button class=\"btn btn-danger mr-1\" (click)=\"updateAppointment(appointment,103)\">\r\n                <i class=\"fas fa-people-carry\"></i> Cancelled\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-danger shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Appointment Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.patientName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Mobile\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.mobile }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Email\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.email }}</div>\r\n              </div>\r\n              <!--<div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Patient Address\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.address }}</div>\r\n              </div>-->\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Age & Gender\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.age + \" \" + appointment.gender }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Booking Date\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.bookingDate }}</div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"col-md-6 mb-4\">\r\n        <div class=\"card border-left-Success shadow mb-4\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card\">\r\n              <div class=\"card-header border-bottom-0\">Doctor Information</div>\r\n\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Appointment #\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.appointmentNo }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Name\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.doctorName }}</div>\r\n              </div>\r\n              <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Time Slot\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.timeslot }}</div>\r\n              </div>\r\n              <!-- <div class=\"d-flex align-items-center\">\r\n                <div class=\"flex-grow-1\">\r\n                  <div class=\"list-group list-group-flush small\">\r\n                    <a class=\"list-group-item list-group-item-action\" href=\"#!\">\r\n                      Doctor Fee\r\n                    </a>\r\n                  </div>\r\n                </div>\r\n                <div class=\"mr-2\">{{ appointment.fees }}</div>\r\n              </div> -->\r\n              <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th>Specialities</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let specialty of appointment.specialities\">\r\n                    <td>{{ specialty.specialityName }}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1024,7 +1024,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add User</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"userForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">User Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n               \r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">User Name</label>\r\n                  <input type=\"text\" class=\"form-control\" id=userName placeholder=\"\" formControlName=\"userName\">\r\n                  <div *ngIf=\"f.userName.invalid && (f.userName.dirty || f.userName.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.userName.errors.required\">\r\n                      User Name is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n               \r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                  <input type=\"password\" class=\"form-control\" id=password placeholder=\"\" formControlName=\"password\">\r\n                  <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.password.errors.required\">\r\n                      Password is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n            </div>\r\n            <div class=\"form-group col-md-6 \">\r\n               \r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                  <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                  <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                    <div *ngIf=\"f.email.errors.required\">\r\n                      Email is required.\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              \r\n           \r\n            <div class=\"form-group col-md-12\">\r\n              \r\n              <label class=\"small mb-1\" for=\"inputLastName\">Role</label>\r\n              <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                <option selected disabled> -- Please Select -- </option>\r\n                <option>Super Admin</option>\r\n                <option>Admin</option>\r\n                <option>Pharmacy</option>\r\n              </select>\r\n            \r\n            </div>\r\n          </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add User</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"userForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">User Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">User Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=userName placeholder=\"\" formControlName=\"userName\">\r\n                <div *ngIf=\"f.userName.invalid && (f.userName.dirty || f.userName.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.userName.errors.required\">\r\n                    User Name is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                <div class=\"input-group\">\r\n                  <input type=\"{{ passwordFieldType }}\" class=\"form-control\" id=\"password\" placeholder=\"\" formControlName=\"password\">\r\n                  <div class=\"input-group-append\">\r\n                    <button class=\"btn btn-outline-secondary\" type=\"button\" (click)=\"togglePasswordVisibility()\">\r\n                      {{ showPassword ? 'Hide' : 'Show' }}\r\n                    </button>\r\n                  </div>\r\n                </div>\r\n                <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.password.errors.required\">\r\n                    Password is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n\r\n              <!--<div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Password</label>\r\n                <input type=\"password\" class=\"form-control\" id=password placeholder=\"\" formControlName=\"password\">\r\n                <div *ngIf=\"f.password.invalid && (f.password.dirty || f.password.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.password.errors.required\">\r\n                    Password is required.\r\n                  </div>\r\n                </div>\r\n              </div>-->\r\n\r\n            </div>\r\n            <div class=\"form-group col-md-6 \">\r\n\r\n              <div class=\"form-group col-md-12\">\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Email</label>\r\n                <input type=\"text\" class=\"form-control\" id=email placeholder=\"\" formControlName=\"email\">\r\n                <div *ngIf=\"f.email.invalid && (f.email.dirty || f.email.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.email.errors.required\">\r\n                    Email is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n\r\n              <div class=\"form-group col-md-12\">\r\n\r\n                <label class=\"small mb-1\" for=\"inputLastName\">Role</label>\r\n                <select type=\"text\" class=\"form-control\" id=type placeholder=\"\" formControlName=\"type\">\r\n                  <option selected disabled> -- Please Select -- </option>\r\n                  <option>SuperAdmin</option>\r\n                  <option>Admin</option>\r\n                  <option>Reception</option>\r\n                  <option>Pharmacy</option>\r\n                  <option>Laboratory</option>\r\n                </select>\r\n\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -1063,7 +1063,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n\r\n            <td>{{item.password}}</td>\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Users</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">User List</h6>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span translate>Export</span>\r\n        </button>\r\n        <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n          Add User\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"15%\" sortable=\"UserName\" (sort)=\"onSort($event)\"> User Name </th>\r\n            <th width=\"15%\" sortable=\"Email\" (sort)=\"onSort($event)\">Email </th>\r\n            <!--<th width=\"15%\" sortable=\"Password\" (sort)=\"onSort($event)\">Password </th>-->\r\n            <th width=\"15%\" sortable=\"Role\" (sort)=\"onSort($event)\">Role </th>\r\n            <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n            <th width=\"10%\" style=\"text-align:center\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.userName}} </td>\r\n            <td> {{item.email}} </td>\r\n            <!--<td class=\"d-table-cell\">{{item.password}}</td>-->\r\n            <td> {{item.type}} </td>\r\n\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td style=\"text-align:center\">\r\n              <a (click)=\"Edit(item.id)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template> \r\n");
 
 /***/ }),
 
@@ -1128,7 +1128,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"group-gap mt-4\">\r\n\r\n    <div class=\"avatar-upload\">\r\n        <div class=\"avatar-edit\">\r\n            <input type='file' id=\"imageUpload\" accept=\".png, .jpg, .jpeg\" #fileInput (change)=\"onFileChange($event)\" />\r\n        </div>\r\n        <div class=\"avatar-preview\">\r\n            <div id=\"imagePreview\" [style.backgroundImage]=\"'url('+ imageUrl +')'\">\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<!-- Submit Button -->\r\n\r\n<button type=\"button\" class=\"file-upload-btn\" (click)=\"fileInput.click()\">Upload Image</button>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"group-gap mt-4\">\r\n\r\n    <div class=\"avatar-upload\">\r\n        <div class=\"avatar-edit\">\r\n            <input type='file' id=\"imageUpload\" accept=\".png, .jpg, .jpeg\" #fileInput (change)=\"onFileChange($event)\" />\r\n        </div>\r\n        <div class=\"avatar-preview\">\r\n            <div id=\"imagePreview\" [style.backgroundImage]=\"'url('+ imageUrl +')'\">\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<!-- Submit Button -->\r\n\r\n<button type=\"button\" class=\"file-upload-btn\" (click)=\"fileInput.click()\">Upload Image</button>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/imageview/imageview.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/imageview/imageview.component.html ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"group-gap mt-4\">\r\n\r\n  <div class=\"avatar-upload\">\r\n    <div class=\"avatar-edit\">\r\n      <input type='file' id=\"imageUpload\" accept=\".png, .jpg, .jpeg\" #fileInput (change)=\"onFileChange($event)\" />\r\n    </div>\r\n    <div class=\"avatar-preview\">\r\n      <div id=\"imagePreview\" [style.backgroundImage]=\"'url('+ imageUrl +')'\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Submit Button -->\r\n\r\n<!--<button type=\"button\" class=\"file-upload-btn\" (click)=\"fileInput.click()\">Upload Image</button>-->\r\n");
 
 /***/ }),
 
@@ -1141,7 +1154,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <!-- <a class=\"collapse-item\" [routerLink]=\"['/admin/permission/add']\">Permissions</a> -->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\">Coming Soon</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/coupon']\">Coupons</a>-->\r\n\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <!--<div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\">Coming Soon</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>-->\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>-->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
 
 /***/ }),
 
@@ -1760,11 +1773,9 @@ let SignalrService = class SignalrService {
                 .withUrl(`${domain}/Notify`).build();
             yield this.hubConnection.start();
             this.hubConnection.on('privateMessageMethodName', (data) => {
-                debugger;
                 console.log('private Message:' + data);
             });
             this.hubConnection.on('publicMessageMethodName', (data) => {
-                debugger;
                 console.log('public Message:' + data.message);
                 this.ts.showToast(data.title, data.message);
                 // this.ts.showWarning(data.title, data.message);
@@ -1772,11 +1783,9 @@ let SignalrService = class SignalrService {
                 // alert(data.message);
             });
             this.hubConnection.on('clientMethodName', (data) => {
-                debugger;
                 console.log('server message:' + data);
             });
             this.hubConnection.on('WelcomeMethodName', (data) => {
-                debugger;
                 console.log('client Id:' + data);
                 this.hubConnection.invoke('GetDataFromClient', 'abc@abc.com', data).catch(err => console.log(err));
             });
@@ -2049,12 +2058,13 @@ let AppointmentService = class AppointmentService {
     ExportList(doctorID) {
         return this.http.get('api/appointment/all/${appointmentID}');
     }
-    getAllData() {
+    getAllData(fromDate, toDate) {
         debugger;
-        const url = `api/appointment/all`;
+        const url = `api/appointment/all/${fromDate}/${toDate}`;
         console.log(url);
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
             this.http.get(url).subscribe(res => {
+                debugger;
                 this.appointments = res;
                 this._data$.next(this.appointments);
                 this._allData$.next(this.appointments);
@@ -3204,7 +3214,6 @@ let CustomersService = class CustomersService {
         }));
     }
     delete(data) {
-        debugger;
         return this.http.post(`api/customer/delete`, data);
     }
 };
@@ -4134,7 +4143,7 @@ function sort(data, column, direction) {
     }
 }
 function matches(data, term) {
-    return data.fullName.toLowerCase().includes(term.toLowerCase());
+    return data.categoryName.toLowerCase().includes(term.toLowerCase());
 }
 let LaboratoryService = class LaboratoryService {
     constructor(http) {
@@ -4182,6 +4191,9 @@ let LaboratoryService = class LaboratoryService {
     getById(id) {
         return this.http.get(`api/Laboratory/Laboratory/${id}`);
     }
+    getDetail(registrationNo) {
+        return this.http.get(`api/Laboratory/Detail/${registrationNo}`);
+    }
     uploadPDF(file) {
         debugger;
         const formData = new FormData();
@@ -4189,8 +4201,9 @@ let LaboratoryService = class LaboratoryService {
         const url = 'http://mamjiadmin.airtechsolutions.pk/ClientApp/dist/assets/Upload/laboratory';
         return this.http.post(url, formData);
     }
-    getAllData() {
-        const url = `api/Laboratory/all`;
+    getAllData(fromDate, toDate) {
+        debugger;
+        const url = `api/Laboratory/all/${fromDate}/${toDate}`;
         console.log(url);
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
             this.http.get(url).subscribe(res => {
@@ -4485,7 +4498,6 @@ let LocationsService = class LocationsService {
         };
     }
     insert(data) {
-        debugger;
         return this.http.post(`api/location/insertlocation`, data)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             console.log(res);
@@ -4493,7 +4505,6 @@ let LocationsService = class LocationsService {
         }));
     }
     update(updateData) {
-        debugger;
         return this.http.post(`api/location/update`, updateData)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             console.log(res);
@@ -5285,8 +5296,8 @@ let NotificationService = class NotificationService {
     getById(id) {
         return this.http.get(`api/notification/notification/${id}`);
     }
-    getAllData() {
-        const url = `api/notification/all`;
+    getAllData(fromDate, toDate) {
+        const url = `api/notification/all/${fromDate}/${toDate}`;
         console.log(url);
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
             this.http.get(url).subscribe(res => {
@@ -5654,6 +5665,9 @@ let OrdersService = class OrdersService {
             return res;
         }));
     }
+    delete(data) {
+        return this.http.post('api/orders/delete', data);
+    }
 };
 OrdersService.ctorParameters = () => [
     { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
@@ -5749,11 +5763,12 @@ let PrescriptionService = class PrescriptionService {
     ExportList(prescriptionID) {
         return this.http.get('api/prescription/all/${prescriptionID}');
     }
-    getAllData() {
-        const url = `api/prescription/all`;
+    getAllData(fromDate, toDate) {
+        const url = `api/prescription/all/${fromDate}/${toDate}`;
         console.log(url);
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
             this.http.get(url).subscribe(res => {
+                debugger;
                 this.prescription = res;
                 this._data$.next(this.prescription);
                 this._allData$.next(this.prescription);
@@ -5802,6 +5817,7 @@ let PrescriptionService = class PrescriptionService {
         }));
     }
     update(data) {
+        debugger;
         return this.http.post('api/prescription/update', data)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             console.log(res);
@@ -6050,7 +6066,6 @@ let ReportService = class ReportService {
     set sortColumn(sortColumn) { this._set({ sortColumn }); }
     set sortDirection(sortDirection) { this._set({ sortDirection }); }
     get data$() {
-        debugger;
         return this._data$.asObservable();
     }
     get allData$() {
@@ -6577,7 +6592,7 @@ let UserService = class UserService {
         return this._allObj$.asObservable();
     }
     loadUser() {
-        return this.http.get(`api/user/all`);
+        return this.http.get(`api/user/permission`);
     }
     ExportList() {
         return this.http.get(`api/user/all`);
@@ -6811,7 +6826,6 @@ let AddbrandComponent = class AddbrandComponent {
         });
     }
     onSubmit() {
-        debugger;
         this.brandForm.markAllAsTouched();
         this.submitted = true;
         if (this.brandForm.invalid) {
@@ -6851,11 +6865,9 @@ let AddbrandComponent = class AddbrandComponent {
     selectFile(event) {
         this.fileData = event.target.files[0];
         if (this.fileData.type == 'image/jpeg' || this.fileData.type == 'image/jpeg' || this.fileData.type == 'image/jpg') {
-            debugger;
             const reader = new FileReader();
             reader.readAsDataURL(this.fileData);
             reader.onload = () => {
-                debugger;
                 this.imageBgUrl = reader.result;
                 this.f.companyURl.setValue(this.imageBgUrl);
             };
@@ -7073,7 +7085,6 @@ let AddlocationComponent = class AddlocationComponent {
     }
     get f() { return this.locationForm.controls; }
     createForm() {
-        debugger;
         this.locationForm = this.formBuilder.group({
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             email: [''],
@@ -7100,7 +7111,6 @@ let AddlocationComponent = class AddlocationComponent {
         });
     }
     editForm(obj) {
-        debugger;
         this.f.name.setValue(obj.name);
         this.f.email.setValue(obj.email);
         this.f.contactNo.setValue(obj.contactNo);
@@ -7143,7 +7153,6 @@ let AddlocationComponent = class AddlocationComponent {
         });
     }
     onSubmit() {
-        debugger;
         this.locationForm.markAllAsTouched();
         this.submitted = true;
         this.f.opentime.setValue(this.opentime.hour + ":" + this.opentime.minute);
@@ -7624,7 +7633,6 @@ let AddCategoryComponent = class AddCategoryComponent {
         });
     }
     editForm(obj) {
-        debugger;
         this.f.categoryName.setValue(obj.categoryName);
         this.f.image.setValue(obj.image);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
@@ -7645,7 +7653,6 @@ let AddCategoryComponent = class AddCategoryComponent {
         });
     }
     onSubmit() {
-        debugger;
         this.categoryForm.markAllAsTouched();
         this.submitted = true;
         if (this.categoryForm.invalid) {
@@ -7795,7 +7802,6 @@ let DiagnosticCategoriesComponent = class DiagnosticCategoriesComponent {
         this.router.navigate(["admin/laboratory/diagnosticcategory/edit", medicine]);
     }
     Delete(obj) {
-        debugger;
         this.service.delete(obj).subscribe((res) => {
             if (res != 0) {
                 this.ts.showSuccess("Success", "Record deleted successfully.");
@@ -7914,9 +7920,13 @@ let AddreportsComponent = class AddreportsComponent {
         this.fileUploadService = fileUploadService;
         this.formData = {
             customerID: '',
+            name: '',
+            registrationNo: '',
+            referenceNo: '',
             diagnosticCatID: '',
             laboratoryID: '',
-            pdfFile: File = null
+            pdfFile: File = null,
+            userName: ''
         };
         this.selectedFile = null;
         this.submitted = false;
@@ -7931,47 +7941,77 @@ let AddreportsComponent = class AddreportsComponent {
         this.Images = [];
         this.pdfFilePath = '';
         this.fileName = '';
+        this.userName = "";
+        this.userName = this.ls.getSelectedBrand().userName;
         this.createForm();
-        this.loadCustomer();
-        this.loadRNo();
+        //this.loadCustomer();
+        //this.loadRNo();
         this.loadCategories();
     }
     onFileChange(files) {
-        debugger;
         this.selectedFile = files[0];
     }
-    onCustomerSelect(customerID) {
-        debugger;
-        this.formData.customerID = customerID;
-    }
-    onCustomerSelectR(customerID) {
-        debugger;
-        this.formData.customerID = customerID;
-    }
+    //onCustomerSelect(customerID: string) {
+    //  this.formData.customerID = customerID;
+    //}
+    //onCustomerSelectR(customerID: string) { 
+    //  this.formData.customerID = customerID;
+    //}
     onDiagnosticSelect(diagnosticCatID) {
-        debugger;
         this.formData.diagnosticCatID = diagnosticCatID;
+    }
+    search() {
+        console.log('Searching for registration number:', this.formData.registrationNo);
+        if (this.formData.registrationNo) {
+            this.loadingReport = true;
+            this.laboratoryService.getDetail(this.formData.registrationNo).subscribe(res => {
+                //Set Forms
+                this.editForm(res);
+                this.loadingReport = false;
+            });
+        }
+    }
+    refresh() {
+        this.router.navigate(['/admin/laboratory/uploadreport/addreports']);
+        this.formData = {
+            customerID: '',
+            name: '',
+            registrationNo: '',
+            referenceNo: '',
+            diagnosticCatID: '',
+            laboratoryID: '',
+            pdfFile: File = null,
+            userName: ''
+        };
     }
     ngOnInit() {
         this.setSelectedReport();
     }
     get f() { return this.reportForm.controls; }
     createForm() {
-        debugger;
         this.reportForm = this.formBuilder.group({
             statusID: [true],
             customerID: 0,
             diagnosticCatID: 0,
             laboratoryID: [0],
+            referenceNo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             selectedFile: File = null,
         });
     }
     editForm(obj) {
-        debugger;
-        this.formData.customerID = obj.customerID;
+        if (obj.name != null) {
+            this.formData.name = obj.name;
+        }
+        else {
+            this.formData.name = obj.fullName;
+        }
         this.formData.diagnosticCatID = obj.diagnoseCatID;
         this.pdfFilePath = obj.image;
         this.formData.laboratoryID = obj.laboratoryID;
+        this.formData.referenceNo = obj.labReferenceNo;
+        this.formData.registrationNo = obj.registrationNo;
+        this.formData.customerID = obj.customerID;
         this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
     }
     setSelectedReport() {
@@ -7983,19 +8023,21 @@ let AddreportsComponent = class AddreportsComponent {
                 this.laboratoryService.getById(sid).subscribe(res => {
                     //Set Forms
                     this.editForm(res);
-                    debugger;
                     this.loadingReport = false;
                 });
             }
         });
     }
     onSubmit() {
-        debugger;
         if (parseInt(this.f.laboratoryID.value) === 0) {
             const formData1 = new FormData();
+            formData1.append('name', this.formData.name);
+            formData1.append('referenceNo', this.formData.referenceNo);
+            formData1.append('registrationNo', this.formData.registrationNo);
             formData1.append('customerID', this.formData.customerID);
             formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
             formData1.append('file', this.selectedFile);
+            formData1.append('userName', this.userName);
             this.http.post('api/laboratory/insert', formData1).subscribe(response => {
                 this.ts.showSuccess("Success", "Record added successfully.");
                 this.router.navigate(['/admin/laboratory/uploadreport']);
@@ -8004,10 +8046,14 @@ let AddreportsComponent = class AddreportsComponent {
         }
         else {
             const formData1 = new FormData();
+            formData1.append('name', this.formData.name);
+            formData1.append('referenceNo', this.formData.referenceNo);
+            formData1.append('registrationNo', this.formData.registrationNo);
             formData1.append('customerID', this.formData.customerID);
             formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
             formData1.append('laboratoryID', this.formData.laboratoryID);
             formData1.append('file', this.selectedFile);
+            formData1.append('userName', this.userName);
             this.http.post('api/laboratory/update', formData1).subscribe(response => {
                 this.ts.showSuccess("Success", "Record added successfully.");
                 this.router.navigate(['/admin/laboratory/uploadreport']);
@@ -8015,22 +8061,21 @@ let AddreportsComponent = class AddreportsComponent {
             });
         }
     }
-    loadCustomer() {
-        debugger;
-        this.laboratoryService.loadCustomer().subscribe((res) => {
-            debugger;
-            this.CustomerList = res;
-        });
-    }
-    loadRNo() {
-        debugger;
-        this.laboratoryService.loadRNo().subscribe((res) => {
-            debugger;
-            this.RegistrationList = res;
-        });
-    }
+    //private loadCustomer() {
+    //  debugger
+    //  this.laboratoryService.loadCustomer().subscribe((res: any) => {
+    //    
+    //    this.CustomerList = res;
+    //  });
+    //}
+    //private loadRNo() {
+    //  debugger
+    //  this.laboratoryService.loadRNo().subscribe((res: any) => {
+    //    
+    //    this.RegistrationList = res;
+    //  });
+    //}
     loadCategories() {
-        debugger;
         this.diagnosticcategoriesService.loadCategory().subscribe((res) => {
             this.CategoryList = res;
         });
@@ -8109,6 +8154,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! file-saver */ "./node_modules/file-saver/dist/FileSaver.min.js");
 /* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8131,6 +8177,8 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+const now = new Date();
 let UploadreportComponent = class UploadreportComponent {
     constructor(service, ls, excelService, ts, router, http, modalService) {
         this.service = service;
@@ -8144,13 +8192,22 @@ let UploadreportComponent = class UploadreportComponent {
         this.submit = false;
     }
     ngOnInit() {
+        const date = new _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["NgbDate"](now.getFullYear(), now.getMonth() + 1, now.getDate());
+        this._datepicker.fromDate = date;
+        this._datepicker.toDate = date;
         this.getData();
     }
     getData() {
-        this.service.getAllData();
+        this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
         this.data$ = this.service.data$;
         this.total$ = this.service.total$;
         this.loading$ = this.service.loading$;
+    }
+    parseDate(obj) {
+        return obj.year + "-" + obj.month + "-" + obj.day;
+    }
+    Filter() {
+        this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
     }
     onSort({ column, direction }) {
         this.headers.forEach(header => {
@@ -8177,7 +8234,6 @@ let UploadreportComponent = class UploadreportComponent {
         });
     }
     DownloadRpt(URL) {
-        debugger;
         var pth = URL.replace("/ClientApp/dist/assets/Upload/pdfFiles/", "ClientApp/dist/assets/Upload/pdfFiles/");
         //var rptName = pth.replace("pdfFiles/","");
         //local
@@ -8221,6 +8277,7 @@ UploadreportComponent.ctorParameters = () => [
     { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["NgbModal"] }
 ];
 UploadreportComponent.propDecorators = {
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_10__["NgbdDatepickerRangePopup"], { static: true },] }],
     headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_2__["NgbdSortableHeader"],] }]
 };
 UploadreportComponent = __decorate([
@@ -8320,7 +8377,7 @@ let AdddoctorsComponent = class AdddoctorsComponent {
         this.doctorForm = this.formBuilder.group({
             fullName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             urduName: [''],
-            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            email: [''],
             skills: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             education: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             imagePath: [''],
@@ -8335,7 +8392,6 @@ let AdddoctorsComponent = class AdddoctorsComponent {
     }
     editForm(obj1) {
         var obj = obj1[0];
-        debugger;
         this.f.fullName.setValue(obj.fullName);
         this.f.urduName.setValue(obj.urduName);
         this.f.email.setValue(obj.email);
@@ -8347,7 +8403,6 @@ let AdddoctorsComponent = class AdddoctorsComponent {
         this.f.education.setValue(obj.education);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
         if (obj.doctorProfiles != "") {
-            debugger;
             this.DoctorProfiles = obj.doctorProfiles;
         }
         if (obj.doctorTimings != "") {
@@ -8374,13 +8429,11 @@ let AdddoctorsComponent = class AdddoctorsComponent {
         });
     }
     loadTimeSlotsAll() {
-        debugger;
         this.appointmentService.loadTimeLists().subscribe((res) => {
             this.selectedTimeList = res;
         });
     }
     onSubmit() {
-        debugger;
         this.doctorForm.markAllAsTouched();
         this.submitted = true;
         if (this.doctorForm.invalid) {
@@ -8429,7 +8482,6 @@ let AdddoctorsComponent = class AdddoctorsComponent {
     }
     AddChild(val) {
         var obj = this.selectedSpecialityList.find(element => element.specialistID == val.specialistID);
-        debugger;
         if (val.specialistID != null) {
             //if (!this.DoctorSchedule.find(element => element.specialistID == val.specialistID)) {
             this.DoctorSchedule.push({
@@ -8451,7 +8503,6 @@ let AdddoctorsComponent = class AdddoctorsComponent {
         this.spec.timeSlot = "";
     }
     AddProfileChild(val) {
-        debugger;
         var obj = this.selectedSpecialityList.find(element => element.specialistID == val.specialistID);
         if (val != null) {
             this.DoctorProfiles.push({
@@ -8575,7 +8626,6 @@ let DoctorComponent = class DoctorComponent {
         this.getData();
     }
     getData() {
-        debugger;
         this.service.getAllData();
         this.data$ = this.service.data$;
         this.total$ = this.service.total$;
@@ -9667,7 +9717,6 @@ let ItemsettingsComponent = class ItemsettingsComponent {
     setSelecteditem() {
         this.itemsService.getTodaysItems(this.ls.getSelectedBrand().brandID)
             .subscribe((res) => {
-            debugger;
             var stringToConvert = res.items;
             this.isItemSetting = res.isItemSetting;
             this.itemSettingTitle = res.itemSettingTitle;
@@ -9694,7 +9743,6 @@ let ItemsettingsComponent = class ItemsettingsComponent {
     }
     loadItems() {
         this.itemsService.loadItems(this.ls.getSelectedBrand().brandID).subscribe((res) => {
-            debugger;
             this.ItemsList = res;
             this.setSelecteditem();
         });
@@ -10039,6 +10087,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
 /* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
 /* harmony import */ var src_app_services_notification_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/notification.service */ "./src/app/_services/notification.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10058,6 +10108,9 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
+const now = new Date();
 let NotificationComponent = class NotificationComponent {
     constructor(service, ls, excelService, ts, router) {
         this.service = service;
@@ -10069,13 +10122,19 @@ let NotificationComponent = class NotificationComponent {
         this.submit = false;
     }
     ngOnInit() {
+        const date = new _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbDate"](now.getFullYear(), now.getMonth() + 1, now.getDate());
+        this._datepicker.fromDate = date;
+        this._datepicker.toDate = date;
         this.getData();
     }
     getData() {
-        this.service.getAllData();
+        this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
         this.data$ = this.service.data$;
         this.total$ = this.service.total$;
         this.loading$ = this.service.loading$;
+    }
+    parseDate(obj) {
+        return obj.year + "-" + obj.month + "-" + obj.day;
     }
     onSort({ column, direction }) {
         this.headers.forEach(header => {
@@ -10086,9 +10145,8 @@ let NotificationComponent = class NotificationComponent {
         this.service.sortColumn = column;
         this.service.sortDirection = direction;
     }
-    updateStatus(item, status) {
-        debugger;
-        item.isRead = status;
+    updateStatus(item) {
+        item.isRead = 1 ? true : undefined;
         //Update 
         this.service.status(item).subscribe(data => {
             if (data != 0) {
@@ -10099,6 +10157,9 @@ let NotificationComponent = class NotificationComponent {
             this.ts.showError("Error", "Failed to update record.");
         });
     }
+    Filter() {
+        this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
+    }
 };
 NotificationComponent.ctorParameters = () => [
     { type: src_app_services_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"] },
@@ -10108,7 +10169,9 @@ NotificationComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 NotificationComponent.propDecorators = {
-    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__["NgbdDatepickerRangePopup"], { static: true },] }],
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }],
+    drplocation: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: ['locationDrp',] }]
 };
 NotificationComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -10203,7 +10266,6 @@ let FormPermissionComponent = class FormPermissionComponent {
         });
     }
     editForm(obj) {
-        debugger;
         this.f.notification.setValue(obj.notification == 1 ? true : false);
         this.f.doctor.setValue(obj.doctor == 1 ? true : false);
         this.f.mamjiUser.setValue(obj.mamjiUser == 1 ? true : false);
@@ -10219,18 +10281,15 @@ let FormPermissionComponent = class FormPermissionComponent {
         //this.setSelectedPermission();
     }
     onSelect(formName) {
-        debugger;
         this.permissionService.getById(formName).subscribe(res => {
             //Set Forms
             if (res != null) {
                 this.editForm(res);
                 this.formName = res[0];
             }
-            debugger;
         });
     }
     onSubmit() {
-        debugger;
         {
             this.permissionForm.markAllAsTouched();
             this.submitted = true;
@@ -10261,7 +10320,6 @@ let FormPermissionComponent = class FormPermissionComponent {
         }
     }
     loadUser() {
-        debugger;
         this.userService.loadUser().subscribe((res) => {
             this.UserList = res;
         });
@@ -10595,6 +10653,15 @@ let MedicineComponent = class MedicineComponent {
     Edit(medicine) {
         this.router.navigate(["admin/pharmacy/medicine/edit", medicine]);
     }
+    Update(medicine) {
+        debugger;
+        this.service.update(medicine).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Price Updated Successfully.");
+                this.getData();
+            }
+        });
+    }
     Delete(obj) {
         debugger;
         this.service.delete(obj).subscribe((res) => {
@@ -10813,22 +10880,22 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 const now = new Date();
 let OrdersComponent = class OrdersComponent {
-    constructor(service, ls, excelService, ts, router) {
+    constructor(service, ls, excelService, ts, router, modalService) {
         this.service = service;
         this.ls = ls;
         this.excelService = excelService;
         this.ts = ts;
         this.router = router;
+        this.modalService = modalService;
         this.Locations = [];
         this.selectedLocations = [];
         this.locationID = 0;
         this.salesorders = [];
         this.loading$ = service.loading$;
         this.submit = false;
-        // this.selectedBrand = this.ls.getSelectedBrand().brandID;
-        // this.loadLocations();
     }
     ngOnInit() {
         const date = new _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbDate"](now.getFullYear(), now.getMonth() + 1, 1);
@@ -10898,13 +10965,48 @@ let OrdersComponent = class OrdersComponent {
         newWindow.document.write(html);
         newWindow.print();
     }
+    Delete(data) {
+        this.service.delete(data).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else
+                this.ts.showError("Error", "Failed to delete record.");
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+    open(content, obj) {
+        debugger;
+        this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+            this.closeResult = `Closed with: ${result}`;
+            if (result === 'yes') {
+                this.Delete(obj);
+            }
+        }, (reason) => {
+            this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+    }
+    getDismissReason(reason) {
+        if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["ModalDismissReasons"].ESC) {
+            return 'by pressing ESC';
+        }
+        else if (reason === _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["ModalDismissReasons"].BACKDROP_CLICK) {
+            return 'by clicking on a backdrop';
+        }
+        else {
+            return `with: ${reason}`;
+        }
+    }
 };
 OrdersComponent.ctorParameters = () => [
     { type: src_app_services_orders_service__WEBPACK_IMPORTED_MODULE_6__["OrdersService"] },
     { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"] },
     { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"] },
     { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbModal"] }
 ];
 OrdersComponent.propDecorators = {
     _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__["NgbdDatepickerRangePopup"], { static: true },] }],
@@ -10921,7 +11023,8 @@ OrdersComponent = __decorate([
         src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_3__["LocalStorageService"],
         src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_9__["ExcelService"],
         src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
-        _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+        _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
+        _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbModal"]])
 ], OrdersComponent);
 
 
@@ -10940,7 +11043,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddprescriptionComponent", function() { return AddprescriptionComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var src_app_imageview_imageview_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageview/imageview.component */ "./src/app/imageview/imageview.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
 /* harmony import */ var src_app_services_prescription_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/prescription.service */ "./src/app/_services/prescription.service.ts");
@@ -10976,6 +11079,8 @@ let AddprescriptionComponent = class AddprescriptionComponent {
         this.loading = false;
         this.loadingPrescription = false;
         this.ButtonText = "Save";
+        this.userName = "";
+        this.userName = this.ls.getSelectedBrand().userName;
         this.createForm();
     }
     ngOnInit() {
@@ -10984,23 +11089,29 @@ let AddprescriptionComponent = class AddprescriptionComponent {
     get f() { return this.prescriptionForm.controls; }
     createForm() {
         this.prescriptionForm = this.formBuilder.group({
-            customerName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            mobile: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            address: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            note: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            customerName: [''],
+            mobile: [''],
+            address: [''],
+            note: [''],
             image: [''],
-            statusID: [true],
+            createdOn: [''],
+            lastUpdatedBy: [''],
+            statusID: 0,
             prescriptionID: 0,
         });
     }
     editForm(obj) {
+        debugger;
         this.f.customerName.setValue(obj.customerName);
         this.f.mobile.setValue(obj.mobile);
         this.f.address.setValue(obj.address);
         this.f.note.setValue(obj.note);
         this.f.prescriptionID.setValue(obj.prescriptionID);
         this.f.image.setValue(obj.image);
-        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.f.statusID.setValue(obj.statusID);
+        this.f.createdOn.setValue(obj.createdOn);
+        this.imgComp.imageUrl = obj.image;
+        this.f.lastUpdatedBy.setValue(this.userName);
     }
     setSelectedPrescription() {
         this.route.paramMap.subscribe(param => {
@@ -11017,41 +11128,28 @@ let AddprescriptionComponent = class AddprescriptionComponent {
         });
     }
     onSubmit() {
+        debugger;
         this.prescriptionForm.markAllAsTouched();
         this.submitted = true;
         if (this.prescriptionForm.invalid) {
             return;
         }
         this.loading = true;
-        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-        this.f.image.setValue(this.imgComp.imageUrl);
-        if (parseInt(this.f.prescriptionID.value) === 0) {
-            //Insert doctor
-            console.log(JSON.stringify(this.prescriptionForm.value));
-            this.prescriptionService.insert(this.prescriptionForm.value).subscribe(data => {
-                if (data != 0) {
-                    this.ts.showSuccess("Success", "Record added successfully.");
-                    this.router.navigate(['/admin/pharmacy/prescription']);
-                }
-                this.loading = false;
-            }, error => {
-                this.ts.showError("Error", "Failed to insert record.");
-                this.loading = false;
-            });
-        }
-        else {
-            //Update doctor
-            this.prescriptionService.update(this.prescriptionForm.value).subscribe(data => {
-                this.loading = false;
-                if (data != 0) {
-                    this.ts.showSuccess("Success", "Record updated successfully.");
-                    this.router.navigate(['/admin/pharmacy/prescription']);
-                }
-            }, error => {
-                this.ts.showError("Error", "Failed to update record.");
-                this.loading = false;
-            });
-        }
+        //this.f.image.setValue(this.imgComp.imageUrl);
+        //Update doctor
+        this.prescriptionService.update(this.prescriptionForm.value).subscribe(data => {
+            this.loading = false;
+            if (data != 0) {
+                this.ts.showSuccess("Success", "Record updated successfully.");
+                this.router.navigate(['/admin/pharmacy/prescription']);
+            }
+        }, error => {
+            this.ts.showError("Error", "Failed to update record.");
+            this.loading = false;
+        });
+    }
+    goBack() {
+        this.router.navigate(['/admin/pharmacy/prescription']);
     }
 };
 AddprescriptionComponent.ctorParameters = () => [
@@ -11063,7 +11161,7 @@ AddprescriptionComponent.ctorParameters = () => [
     { type: src_app_services_prescription_service__WEBPACK_IMPORTED_MODULE_5__["PrescriptionService"] }
 ];
 AddprescriptionComponent.propDecorators = {
-    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageview_imageview_component__WEBPACK_IMPORTED_MODULE_2__["ImageViewComponent"], { static: true },] }]
 };
 AddprescriptionComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -11113,6 +11211,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
 /* harmony import */ var src_app_services_prescription_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/prescription.service */ "./src/app/_services/prescription.service.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11133,6 +11233,9 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
+const now = new Date();
 let PrescriptionComponent = class PrescriptionComponent {
     constructor(service, httpClient, ls, excelService, ts, router) {
         //this.selectedPrescription =this.ls.getSelectedPrescription().prescriptionID;
@@ -11154,13 +11257,19 @@ let PrescriptionComponent = class PrescriptionComponent {
         });
     }
     ngOnInit() {
+        const date = new _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbDate"](now.getFullYear(), now.getMonth() + 1, now.getDate());
+        this._datepicker.fromDate = date;
+        this._datepicker.toDate = date;
         this.getData();
     }
     getData() {
-        this.service.getAllData();
+        this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
         this.data$ = this.service.data$;
         this.total$ = this.service.total$;
         this.loading$ = this.service.loading$;
+    }
+    parseDate(obj) {
+        return obj.year + "-" + obj.month + "-" + obj.day;
     }
     onSort({ column, direction }) {
         this.headers.forEach(header => {
@@ -11172,6 +11281,11 @@ let PrescriptionComponent = class PrescriptionComponent {
         this.service.sortDirection = direction;
     }
     View(prescription) {
+        debugger;
+        this.router.navigate(["admin/pharmacy/prescription/edit", prescription]);
+    }
+    Edit(prescription) {
+        debugger;
         this.router.navigate(["admin/pharmacy/prescription/edit", prescription]);
     }
     Delete(data) {
@@ -11189,7 +11303,6 @@ let PrescriptionComponent = class PrescriptionComponent {
     downloadImage(img) {
         debugger;
         var a = this.service.getById(img);
-        a;
         const imgUrl = img.src;
         const imgName = imgUrl.substr(imgUrl.lastIndexOf('/') + 1);
         this.httpClient.get(imgUrl, { responseType: 'blob' })
@@ -11216,6 +11329,9 @@ let PrescriptionComponent = class PrescriptionComponent {
             }, 100);
         });
     }
+    Filter() {
+        this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
+    }
 };
 PrescriptionComponent.ctorParameters = () => [
     { type: src_app_services_prescription_service__WEBPACK_IMPORTED_MODULE_6__["PrescriptionService"] },
@@ -11226,7 +11342,9 @@ PrescriptionComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 PrescriptionComponent.propDecorators = {
-    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_9__["NgbdDatepickerRangePopup"], { static: true },] }],
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }],
+    drplocation: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: ['locationDrp',] }]
 };
 PrescriptionComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -11276,6 +11394,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
 /* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
 /* harmony import */ var src_app_services_appointment_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/appointment.service */ "./src/app/_services/appointment.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11295,6 +11415,9 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
+const now = new Date();
 let AppointmentComponent = class AppointmentComponent {
     constructor(service, ls, excelService, ts, router) {
         this.service = service;
@@ -11302,18 +11425,26 @@ let AppointmentComponent = class AppointmentComponent {
         this.excelService = excelService;
         this.ts = ts;
         this.router = router;
+        this.userName = "";
         //this.selectedDoctor =this.ls.getSelectedAppointment().appointmentID;
         this.loading$ = service.loading$;
         this.submit = false;
     }
     ngOnInit() {
+        const date = new _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbDate"](now.getFullYear(), now.getMonth() + 1, now.getDate());
+        this._datepicker.fromDate = date;
+        this._datepicker.toDate = date;
         this.getData();
     }
     getData() {
-        this.service.getAllData();
+        this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
         this.data$ = this.service.data$;
+        console.log('data$');
         this.total$ = this.service.total$;
         this.loading$ = this.service.loading$;
+    }
+    parseDate(obj) {
+        return obj.year + "-" + obj.month + "-" + obj.day;
     }
     onSort({ column, direction }) {
         this.headers.forEach(header => {
@@ -11336,6 +11467,9 @@ let AppointmentComponent = class AppointmentComponent {
             this.ts.showError("Error", "Failed to delete record.");
         });
     }
+    Filter() {
+        this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
+    }
     View(appointment) {
         this.router.navigate(["admin/appointment/view", appointment]);
     }
@@ -11348,7 +11482,9 @@ AppointmentComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 AppointmentComponent.propDecorators = {
-    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+    _datepicker: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_8__["NgbdDatepickerRangePopup"], { static: true },] }],
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }],
+    drplocation: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: ['locationDrp',] }]
 };
 AppointmentComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -11412,6 +11548,8 @@ let AppointmentdetailsComponent = class AppointmentdetailsComponent {
         this.appointment = new src_app_models_Appointment__WEBPACK_IMPORTED_MODULE_3__["Appointment"]();
         this.doctor = new src_app_models_Appointment__WEBPACK_IMPORTED_MODULE_3__["Doctors"]();
         this.StatusMsg = "";
+        this.userName = "";
+        this.userName = this.ls.getSelectedBrand().userName;
     }
     ngOnInit() {
         this.setSelectedAppointment();
@@ -11421,7 +11559,6 @@ let AppointmentdetailsComponent = class AppointmentdetailsComponent {
             const sid = +param.get('id');
             if (sid) {
                 this.service.getById(sid).subscribe(res => {
-                    debugger;
                     this.editForm(res);
                 });
             }
@@ -11431,6 +11568,7 @@ let AppointmentdetailsComponent = class AppointmentdetailsComponent {
         debugger;
         appointment.appointmentStatus = status;
         appointment.statusMsg = this.StatusMsg;
+        appointment.userName = this.userName;
         //Update 
         this.service.statusUpdate(appointment).subscribe(data => {
             if (data != 0) {
@@ -11541,7 +11679,7 @@ let AddcustomerComponent = class AddcustomerComponent {
     createForm() {
         this.customerForm = this.formBuilder.group({
             fullName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].email],
+            email: [''],
             statusID: [true],
             mobile: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
@@ -11550,7 +11688,6 @@ let AddcustomerComponent = class AddcustomerComponent {
         });
     }
     editForm(obj) {
-        debugger;
         this.f.fullName.setValue(obj.fullName);
         this.f.email.setValue(obj.email);
         this.f.password.setValue(obj.password);
@@ -11561,7 +11698,6 @@ let AddcustomerComponent = class AddcustomerComponent {
         this.imgComp.imageUrl = obj.image;
     }
     setSelectedCustomer() {
-        debugger;
         this.route.paramMap.subscribe(param => {
             const sid = +param.get('id');
             if (sid) {
@@ -11718,7 +11854,6 @@ let CustomersComponent = class CustomersComponent {
         this.router.navigate(["admin/reception/customers/edit", customers]);
     }
     Delete(obj) {
-        debugger;
         this.service.delete(obj).subscribe((res) => {
             if (res != 0) {
                 this.ts.showSuccess("Success", "Record deleted successfully.");
@@ -12325,7 +12460,6 @@ let SalescustomerwiseComponent = class SalescustomerwiseComponent {
     ngOnInit() {
     }
     exportAsXLSX() {
-        debugger;
         //  this.excelService.exportAsExcelFile(this.orders, 'Report_Export');
     }
     getData(locaionID) {
@@ -12474,7 +12608,6 @@ let SalesdetailComponent = class SalesdetailComponent {
         ;
     }
     exportAsXLSX() {
-        debugger;
         //  this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
     }
     loadLocations() {
@@ -12593,7 +12726,6 @@ let SalesitemwiseComponent = class SalesitemwiseComponent {
     ngOnInit() {
     }
     exportAsXLSX() {
-        debugger;
         //  this.excelService.exportAsExcelFile(this.salesItemWise, 'Report_Export');
     }
     getData(locaionID) {
@@ -15751,7 +15883,14 @@ let AdduserComponent = class AdduserComponent {
         this.loading = false;
         this.loadingCustomer = false;
         this.ButtonText = "Save";
+        this.showPassword = false;
+        this.passwordFieldType = 'password';
         this.createForm();
+    }
+    // ... other component methods and lifecycle hooks
+    togglePasswordVisibility() {
+        this.showPassword = !this.showPassword;
+        this.passwordFieldType = this.showPassword ? 'text' : 'password';
     }
     ngOnInit() {
         this.setSelectedCustomer();
@@ -15777,7 +15916,6 @@ let AdduserComponent = class AdduserComponent {
         //this.f.statusID.setValue(obj.statusID.value === true ? 1 : 2);
     }
     setSelectedCustomer() {
-        debugger;
         this.route.paramMap.subscribe(param => {
             const sid = +param.get('id');
             if (sid) {
@@ -15968,7 +16106,7 @@ let AddComponent = class AddComponent {
         //});
         debugger;
         this.UserList = [
-            { "type": "Super Admin" },
+            { "type": "SuperAdmin" },
             { "type": "Admin" },
             { "type": "Pharmacy" },
             { "type": "Reception" },
@@ -16080,7 +16218,6 @@ let PermissionComponent = class PermissionComponent {
         this.router.navigate(["admin/user/edit", customers]);
     }
     Delete(obj) {
-        debugger;
         this.service.delete(obj).subscribe((res) => {
             if (res != 0) {
                 this.ts.showSuccess("Success", "Record deleted successfully.");
@@ -16201,7 +16338,6 @@ let UserComponent = class UserComponent {
         this.router.navigate(["admin/user/edit", customers]);
     }
     Delete(obj) {
-        debugger;
         this.service.delete(obj).subscribe((res) => {
             if (res != 0) {
                 this.ts.showSuccess("Success", "Record deleted successfully.");
@@ -16330,80 +16466,82 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./admin/menu/category/category.component */ "./src/app/admin/menu/category/category.component.ts");
 /* harmony import */ var _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./admin/menu/category/addcategory/addcategory.component */ "./src/app/admin/menu/category/addcategory/addcategory.component.ts");
 /* harmony import */ var _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
-/* harmony import */ var _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./admin/menu/items/items.component */ "./src/app/admin/menu/items/items.component.ts");
-/* harmony import */ var _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./admin/menu/items/additem/additem.component */ "./src/app/admin/menu/items/additem/additem.component.ts");
-/* harmony import */ var _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./admin/menu/modifiers/modifiers.component */ "./src/app/admin/menu/modifiers/modifiers.component.ts");
-/* harmony import */ var _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./admin/menu/modifiers/addmodifier/addmodifier.component */ "./src/app/admin/menu/modifiers/addmodifier/addmodifier.component.ts");
-/* harmony import */ var _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./admin/reception/customers/customers.component */ "./src/app/admin/reception/customers/customers.component.ts");
-/* harmony import */ var _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./admin/reception/customers/addcustomers/addcustomer.component */ "./src/app/admin/reception/customers/addcustomers/addcustomer.component.ts");
-/* harmony import */ var _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./admin/company/locations/locations.component */ "./src/app/admin/company/locations/locations.component.ts");
-/* harmony import */ var _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./admin/company/locations/addlocation/addlocation.component */ "./src/app/admin/company/locations/addlocation/addlocation.component.ts");
-/* harmony import */ var _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @ng-select/ng-select */ "./node_modules/@ng-select/ng-select/__ivy_ngcc__/fesm2015/ng-select-ng-select.js");
-/* harmony import */ var _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./admin/company/brands/addbrand/addbrand.component */ "./src/app/admin/company/brands/addbrand/addbrand.component.ts");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
-/* harmony import */ var _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./admin/company/brands/brands.component */ "./src/app/admin/company/brands/brands.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
-/* harmony import */ var _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./admin/report/summary/summary.component */ "./src/app/admin/report/summary/summary.component.ts");
-/* harmony import */ var _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
-/* harmony import */ var _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./admin/settings/banner/banner.component */ "./src/app/admin/settings/banner/banner.component.ts");
-/* harmony import */ var _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./admin/settings/banner/addbanner/addbanner.component */ "./src/app/admin/settings/banner/addbanner/addbanner.component.ts");
-/* harmony import */ var _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./admin/report/salesdetail/salesdetail.component */ "./src/app/admin/report/salesdetail/salesdetail.component.ts");
-/* harmony import */ var _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./admin/report/salesuserwise/salesuserwise.component */ "./src/app/admin/report/salesuserwise/salesuserwise.component.ts");
-/* harmony import */ var _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./admin/report/salescustomerwise/salescustomerwise.component */ "./src/app/admin/report/salescustomerwise/salescustomerwise.component.ts");
-/* harmony import */ var _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./admin/report/salescategorywise/salescategorywise.component */ "./src/app/admin/report/salescategorywise/salescategorywise.component.ts");
-/* harmony import */ var _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./admin/report/salesitemwise/salesitemwise.component */ "./src/app/admin/report/salesitemwise/salesitemwise.component.ts");
-/* harmony import */ var _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./admin/settings/promotion/promotion.component */ "./src/app/admin/settings/promotion/promotion.component.ts");
-/* harmony import */ var _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./admin/settings/promotion/addpromotion/addpromotion.component */ "./src/app/admin/settings/promotion/addpromotion/addpromotion.component.ts");
-/* harmony import */ var _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./admin/menu/items/itemsettings/itemsettings.component */ "./src/app/admin/menu/items/itemsettings/itemsettings.component.ts");
-/* harmony import */ var _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./admin/settings/delivery/delivery.component */ "./src/app/admin/settings/delivery/delivery.component.ts");
-/* harmony import */ var _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./admin/settings/appsettings/appsettings.component */ "./src/app/admin/settings/appsettings/appsettings.component.ts");
-/* harmony import */ var _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./admin/settings/appsettings/addappsettings/addsettings.component */ "./src/app/admin/settings/appsettings/addappsettings/addsettings.component.ts");
-/* harmony import */ var _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./admin/menu/addons/addons.component */ "./src/app/admin/menu/addons/addons.component.ts");
-/* harmony import */ var _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./admin/menu/addons/addaddons/addaddons.component */ "./src/app/admin/menu/addons/addaddons/addaddons.component.ts");
-/* harmony import */ var _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./admin/managedoctor/doctor/doctor.component */ "./src/app/admin/managedoctor/doctor/doctor.component.ts");
-/* harmony import */ var _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./admin/managedoctor/doctor/adddoctors/adddoctors.component */ "./src/app/admin/managedoctor/doctor/adddoctors/adddoctors.component.ts");
-/* harmony import */ var _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./admin/pharmacy/prescription/prescription.component */ "./src/app/admin/pharmacy/prescription/prescription.component.ts");
-/* harmony import */ var _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./admin/pharmacy/prescription/add/addprescription.component */ "./src/app/admin/pharmacy/prescription/add/addprescription.component.ts");
-/* harmony import */ var _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./admin/reception/appointment/appointment.component */ "./src/app/admin/reception/appointment/appointment.component.ts");
-/* harmony import */ var _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./admin/reception/appointmentdetails/appointmentdetails.component */ "./src/app/admin/reception/appointmentdetails/appointmentdetails.component.ts");
-/* harmony import */ var _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./admin/laboratory/uploadreport/uploadreport.component */ "./src/app/admin/laboratory/uploadreport/uploadreport.component.ts");
-/* harmony import */ var _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./admin/laboratory/uploadreport/addreports/addreports.component */ "./src/app/admin/laboratory/uploadreport/addreports/addreports.component.ts");
-/* harmony import */ var _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./admin/laboratory/diagnosticcategories/diagnosticcategories.component */ "./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.ts");
-/* harmony import */ var _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./admin/laboratory/diagnosticcategories/add/addcategory.component */ "./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.ts");
-/* harmony import */ var _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./admin/pharmacy/deliverydetail/deliverydetail.component */ "./src/app/admin/pharmacy/deliverydetail/deliverydetail.component.ts");
-/* harmony import */ var _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./admin/settings/coupon/coupon.component */ "./src/app/admin/settings/coupon/coupon.component.ts");
-/* harmony import */ var _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./admin/settings/coupon/addcoupon/addcoupon.component */ "./src/app/admin/settings/coupon/addcoupon/addcoupon.component.ts");
-/* harmony import */ var _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./admin/pharmacy/medicine/medicine.component */ "./src/app/admin/pharmacy/medicine/medicine.component.ts");
-/* harmony import */ var _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./admin/pharmacy/medicine/addmedicines/addmedicine.component */ "./src/app/admin/pharmacy/medicine/addmedicines/addmedicine.component.ts");
-/* harmony import */ var _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./admin/pharmacy/orders/orders.component */ "./src/app/admin/pharmacy/orders/orders.component.ts");
-/* harmony import */ var _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./admin/pharmacy/orderdetails/orderdetails.component */ "./src/app/admin/pharmacy/orderdetails/orderdetails.component.ts");
-/* harmony import */ var _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./admin/settings/medicalservices/service.component */ "./src/app/admin/settings/medicalservices/service.component.ts");
-/* harmony import */ var _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./admin/settings/medicalservices/add/addservice.component */ "./src/app/admin/settings/medicalservices/add/addservice.component.ts");
-/* harmony import */ var _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./admin/settings/medicalservicetype/medicalservicetype.component */ "./src/app/admin/settings/medicalservicetype/medicalservicetype.component.ts");
-/* harmony import */ var _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./admin/settings/medicalservicetype/add/addmedicalservicetype.component */ "./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.ts");
-/* harmony import */ var _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./admin/reception/nursingappointment/nursingappointment.component */ "./src/app/admin/reception/nursingappointment/nursingappointment.component.ts");
-/* harmony import */ var _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component */ "./src/app/admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component.ts");
-/* harmony import */ var _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./admin/notification/notification.component */ "./src/app/admin/notification/notification.component.ts");
-/* harmony import */ var _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ././admin/settings/speciality/speciality.component */ "./src/app/admin/settings/speciality/speciality.component.ts");
-/* harmony import */ var _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ././admin/settings/speciality/add/addspeciality.component */ "./src/app/admin/settings/speciality/add/addspeciality.component.ts");
-/* harmony import */ var _admin_user_user_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./admin/user/user.component */ "./src/app/admin/user/user.component.ts");
-/* harmony import */ var _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./admin/user/add/adduser.component */ "./src/app/admin/user/add/adduser.component.ts");
-/* harmony import */ var _has_role_guard__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./has-role.guard */ "./src/app/has-role.guard.ts");
-/* harmony import */ var ng_apexcharts__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ng-apexcharts */ "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
-/* harmony import */ var _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./admin/user/permission/permission.component */ "./src/app/admin/user/permission/permission.component.ts");
-/* harmony import */ var _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./admin/user/permission/add/add.component */ "./src/app/admin/user/permission/add/add.component.ts");
-/* harmony import */ var _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./admin/settings/timeslot/timeslot.component */ "./src/app/admin/settings/timeslot/timeslot.component.ts");
-/* harmony import */ var _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./admin/settings/timeslot/add/addtimeslot.component */ "./src/app/admin/settings/timeslot/add/addtimeslot.component.ts");
-/* harmony import */ var _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./admin/permission/formpermission.component */ "./src/app/admin/permission/formpermission.component.ts");
-/* harmony import */ var _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./admin/settings/delivery/adddelivery/adddelivery.component */ "./src/app/admin/settings/delivery/adddelivery/adddelivery.component.ts");
-/* harmony import */ var _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./admin/settings/corporateclient/corporateclient.component */ "./src/app/admin/settings/corporateclient/corporateclient.component.ts");
-/* harmony import */ var _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./admin/settings/corporateclient/addcorporateclient/addcorporateclient.component */ "./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.ts");
+/* harmony import */ var _imageview_imageview_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./imageview/imageview.component */ "./src/app/imageview/imageview.component.ts");
+/* harmony import */ var _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./admin/menu/items/items.component */ "./src/app/admin/menu/items/items.component.ts");
+/* harmony import */ var _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./admin/menu/items/additem/additem.component */ "./src/app/admin/menu/items/additem/additem.component.ts");
+/* harmony import */ var _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./admin/menu/modifiers/modifiers.component */ "./src/app/admin/menu/modifiers/modifiers.component.ts");
+/* harmony import */ var _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./admin/menu/modifiers/addmodifier/addmodifier.component */ "./src/app/admin/menu/modifiers/addmodifier/addmodifier.component.ts");
+/* harmony import */ var _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./admin/reception/customers/customers.component */ "./src/app/admin/reception/customers/customers.component.ts");
+/* harmony import */ var _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./admin/reception/customers/addcustomers/addcustomer.component */ "./src/app/admin/reception/customers/addcustomers/addcustomer.component.ts");
+/* harmony import */ var _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./admin/company/locations/locations.component */ "./src/app/admin/company/locations/locations.component.ts");
+/* harmony import */ var _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./admin/company/locations/addlocation/addlocation.component */ "./src/app/admin/company/locations/addlocation/addlocation.component.ts");
+/* harmony import */ var _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @ng-select/ng-select */ "./node_modules/@ng-select/ng-select/__ivy_ngcc__/fesm2015/ng-select-ng-select.js");
+/* harmony import */ var _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./admin/company/brands/addbrand/addbrand.component */ "./src/app/admin/company/brands/addbrand/addbrand.component.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./admin/company/brands/brands.component */ "./src/app/admin/company/brands/brands.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
+/* harmony import */ var _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./admin/report/summary/summary.component */ "./src/app/admin/report/summary/summary.component.ts");
+/* harmony import */ var _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./datepicker-range/datepicker-range-popup */ "./src/app/datepicker-range/datepicker-range-popup.ts");
+/* harmony import */ var _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./admin/settings/banner/banner.component */ "./src/app/admin/settings/banner/banner.component.ts");
+/* harmony import */ var _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./admin/settings/banner/addbanner/addbanner.component */ "./src/app/admin/settings/banner/addbanner/addbanner.component.ts");
+/* harmony import */ var _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./admin/report/salesdetail/salesdetail.component */ "./src/app/admin/report/salesdetail/salesdetail.component.ts");
+/* harmony import */ var _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./admin/report/salesuserwise/salesuserwise.component */ "./src/app/admin/report/salesuserwise/salesuserwise.component.ts");
+/* harmony import */ var _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./admin/report/salescustomerwise/salescustomerwise.component */ "./src/app/admin/report/salescustomerwise/salescustomerwise.component.ts");
+/* harmony import */ var _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./admin/report/salescategorywise/salescategorywise.component */ "./src/app/admin/report/salescategorywise/salescategorywise.component.ts");
+/* harmony import */ var _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./admin/report/salesitemwise/salesitemwise.component */ "./src/app/admin/report/salesitemwise/salesitemwise.component.ts");
+/* harmony import */ var _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./admin/settings/promotion/promotion.component */ "./src/app/admin/settings/promotion/promotion.component.ts");
+/* harmony import */ var _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./admin/settings/promotion/addpromotion/addpromotion.component */ "./src/app/admin/settings/promotion/addpromotion/addpromotion.component.ts");
+/* harmony import */ var _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./admin/menu/items/itemsettings/itemsettings.component */ "./src/app/admin/menu/items/itemsettings/itemsettings.component.ts");
+/* harmony import */ var _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./admin/settings/delivery/delivery.component */ "./src/app/admin/settings/delivery/delivery.component.ts");
+/* harmony import */ var _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./admin/settings/appsettings/appsettings.component */ "./src/app/admin/settings/appsettings/appsettings.component.ts");
+/* harmony import */ var _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./admin/settings/appsettings/addappsettings/addsettings.component */ "./src/app/admin/settings/appsettings/addappsettings/addsettings.component.ts");
+/* harmony import */ var _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./admin/menu/addons/addons.component */ "./src/app/admin/menu/addons/addons.component.ts");
+/* harmony import */ var _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./admin/menu/addons/addaddons/addaddons.component */ "./src/app/admin/menu/addons/addaddons/addaddons.component.ts");
+/* harmony import */ var _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./admin/managedoctor/doctor/doctor.component */ "./src/app/admin/managedoctor/doctor/doctor.component.ts");
+/* harmony import */ var _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./admin/managedoctor/doctor/adddoctors/adddoctors.component */ "./src/app/admin/managedoctor/doctor/adddoctors/adddoctors.component.ts");
+/* harmony import */ var _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./admin/pharmacy/prescription/prescription.component */ "./src/app/admin/pharmacy/prescription/prescription.component.ts");
+/* harmony import */ var _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./admin/pharmacy/prescription/add/addprescription.component */ "./src/app/admin/pharmacy/prescription/add/addprescription.component.ts");
+/* harmony import */ var _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./admin/reception/appointment/appointment.component */ "./src/app/admin/reception/appointment/appointment.component.ts");
+/* harmony import */ var _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./admin/reception/appointmentdetails/appointmentdetails.component */ "./src/app/admin/reception/appointmentdetails/appointmentdetails.component.ts");
+/* harmony import */ var _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./admin/laboratory/uploadreport/uploadreport.component */ "./src/app/admin/laboratory/uploadreport/uploadreport.component.ts");
+/* harmony import */ var _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./admin/laboratory/uploadreport/addreports/addreports.component */ "./src/app/admin/laboratory/uploadreport/addreports/addreports.component.ts");
+/* harmony import */ var _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./admin/laboratory/diagnosticcategories/diagnosticcategories.component */ "./src/app/admin/laboratory/diagnosticcategories/diagnosticcategories.component.ts");
+/* harmony import */ var _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./admin/laboratory/diagnosticcategories/add/addcategory.component */ "./src/app/admin/laboratory/diagnosticcategories/add/addcategory.component.ts");
+/* harmony import */ var _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./admin/pharmacy/deliverydetail/deliverydetail.component */ "./src/app/admin/pharmacy/deliverydetail/deliverydetail.component.ts");
+/* harmony import */ var _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./admin/settings/coupon/coupon.component */ "./src/app/admin/settings/coupon/coupon.component.ts");
+/* harmony import */ var _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./admin/settings/coupon/addcoupon/addcoupon.component */ "./src/app/admin/settings/coupon/addcoupon/addcoupon.component.ts");
+/* harmony import */ var _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./admin/pharmacy/medicine/medicine.component */ "./src/app/admin/pharmacy/medicine/medicine.component.ts");
+/* harmony import */ var _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./admin/pharmacy/medicine/addmedicines/addmedicine.component */ "./src/app/admin/pharmacy/medicine/addmedicines/addmedicine.component.ts");
+/* harmony import */ var _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./admin/pharmacy/orders/orders.component */ "./src/app/admin/pharmacy/orders/orders.component.ts");
+/* harmony import */ var _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./admin/pharmacy/orderdetails/orderdetails.component */ "./src/app/admin/pharmacy/orderdetails/orderdetails.component.ts");
+/* harmony import */ var _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./admin/settings/medicalservices/service.component */ "./src/app/admin/settings/medicalservices/service.component.ts");
+/* harmony import */ var _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./admin/settings/medicalservices/add/addservice.component */ "./src/app/admin/settings/medicalservices/add/addservice.component.ts");
+/* harmony import */ var _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./admin/settings/medicalservicetype/medicalservicetype.component */ "./src/app/admin/settings/medicalservicetype/medicalservicetype.component.ts");
+/* harmony import */ var _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./admin/settings/medicalservicetype/add/addmedicalservicetype.component */ "./src/app/admin/settings/medicalservicetype/add/addmedicalservicetype.component.ts");
+/* harmony import */ var _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./admin/reception/nursingappointment/nursingappointment.component */ "./src/app/admin/reception/nursingappointment/nursingappointment.component.ts");
+/* harmony import */ var _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component */ "./src/app/admin/reception/nursingappointment/addnursingappointment/addnursingappointment.component.ts");
+/* harmony import */ var _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./admin/notification/notification.component */ "./src/app/admin/notification/notification.component.ts");
+/* harmony import */ var _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ././admin/settings/speciality/speciality.component */ "./src/app/admin/settings/speciality/speciality.component.ts");
+/* harmony import */ var _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ././admin/settings/speciality/add/addspeciality.component */ "./src/app/admin/settings/speciality/add/addspeciality.component.ts");
+/* harmony import */ var _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./admin/user/user.component */ "./src/app/admin/user/user.component.ts");
+/* harmony import */ var _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./admin/user/add/adduser.component */ "./src/app/admin/user/add/adduser.component.ts");
+/* harmony import */ var _has_role_guard__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./has-role.guard */ "./src/app/has-role.guard.ts");
+/* harmony import */ var ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ng-apexcharts */ "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
+/* harmony import */ var _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./admin/user/permission/permission.component */ "./src/app/admin/user/permission/permission.component.ts");
+/* harmony import */ var _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./admin/user/permission/add/add.component */ "./src/app/admin/user/permission/add/add.component.ts");
+/* harmony import */ var _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./admin/settings/timeslot/timeslot.component */ "./src/app/admin/settings/timeslot/timeslot.component.ts");
+/* harmony import */ var _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./admin/settings/timeslot/add/addtimeslot.component */ "./src/app/admin/settings/timeslot/add/addtimeslot.component.ts");
+/* harmony import */ var _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./admin/permission/formpermission.component */ "./src/app/admin/permission/formpermission.component.ts");
+/* harmony import */ var _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./admin/settings/delivery/adddelivery/adddelivery.component */ "./src/app/admin/settings/delivery/adddelivery/adddelivery.component.ts");
+/* harmony import */ var _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./admin/settings/corporateclient/corporateclient.component */ "./src/app/admin/settings/corporateclient/corporateclient.component.ts");
+/* harmony import */ var _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./admin/settings/corporateclient/addcorporateclient/addcorporateclient.component */ "./src/app/admin/settings/corporateclient/addcorporateclient/addcorporateclient.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -16507,80 +16645,81 @@ AppModule = __decorate([
             _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"],
             _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"],
             _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"],
-            _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_19__["ItemsComponent"],
-            _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_20__["AdditemsComponent"],
-            _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_21__["ModifiersComponent"],
-            _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__["AddmodifierComponent"],
-            _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_23__["CustomersComponent"],
-            _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_24__["AddcustomerComponent"],
-            _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_30__["BrandComponent"],
-            _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_28__["AddbrandComponent"],
-            _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_25__["LocationsComponent"],
-            _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__["AddlocationComponent"],
+            _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"],
+            _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"],
+            _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"],
+            _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"],
+            _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"],
+            _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"],
+            _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"],
+            _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"],
+            _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"],
+            _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"],
             _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_18__["ImageuploadComponent"],
-            _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_32__["SummaryComponent"],
-            _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"],
-            _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_34__["BannerComponent"],
-            _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__["AddbannerComponent"],
-            _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_41__["PromotionComponent"],
-            _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__["AddpromotionComponent"],
-            _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_36__["SalesdetailComponent"],
-            _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_39__["SalescategorywiseComponent"],
-            _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_38__["SalescustomerwiseComponent"],
-            _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_40__["SalesitemwiseComponent"],
-            _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_37__["SalesuserwiseComponent"],
-            _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_43__["ItemsettingsComponent"],
-            _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_44__["DeliveryComponent"],
-            _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_84__["AdddeliveryComponent"],
-            _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_45__["AppsettingComponent"],
-            _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_47__["AddonsComponent"],
-            _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_48__["AddaddonsComponent"],
-            _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_49__["DoctorComponent"],
-            _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_50__["AdddoctorsComponent"],
-            _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_60__["CouponComponent"],
-            _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__["AddCouponComponent"],
-            _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_51__["PrescriptionComponent"],
-            _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_52__["AddprescriptionComponent"],
-            _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_53__["AppointmentComponent"],
-            _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentdetailsComponent"],
-            _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_70__["NursingAppointmentComponent"],
-            _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["AddnursingappointmentComponent"],
-            _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_55__["UploadreportComponent"],
-            _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_56__["AddreportsComponent"],
-            _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"],
-            _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"],
-            _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__["OrdersComponent"],
-            _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__["OrderdetailsComponent"],
-            _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_46__["AddsettingsComponent"],
-            _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__["ServiceComponent"],
-            _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"],
-            _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["MedicalServicetypeComponent"],
-            _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"],
-            _admin_user_user_component__WEBPACK_IMPORTED_MODULE_75__["UserComponent"],
-            _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_76__["AdduserComponent"],
-            _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_72__["NotificationComponent"],
-            _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_74__["AddSpecialityComponent"],
-            _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_73__["SpecialityComponent"],
-            _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_79__["PermissionComponent"],
-            _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_80__["AddComponent"],
-            _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_57__["DiagnosticCategoriesComponent"],
-            _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_58__["AddCategoryComponent"],
-            _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_81__["TimeSlotComponent"],
-            _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_82__["AddTimeSlotComponent"],
-            _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_83__["FormPermissionComponent"],
-            _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_85__["CorporateClientComponent"],
-            _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_86__["addcorporateclientComponent"],
+            _imageview_imageview_component__WEBPACK_IMPORTED_MODULE_19__["ImageViewComponent"],
+            _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"],
+            _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"],
+            _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"],
+            _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"],
+            _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"],
+            _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"],
+            _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"],
+            _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"],
+            _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"],
+            _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"],
+            _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"],
+            _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"],
+            _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"],
+            _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"],
+            _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"],
+            _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"],
+            _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"],
+            _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"],
+            _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"],
+            _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"],
+            _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"],
+            _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"],
+            _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"],
+            _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"],
+            _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"],
+            _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"],
+            _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"],
+            _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"],
+            _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"],
+            _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"],
+            _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"],
+            _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"],
+            _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"],
+            _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"],
+            _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"],
+            _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"],
+            _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"],
+            _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"],
+            _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"],
+            _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"],
+            _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"],
+            _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"],
+            _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"],
+            _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"],
+            _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"],
+            _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"],
+            _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"],
+            _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"],
+            _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"],
+            _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"],
+            _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"],
+            _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'ng-cli-universal' }),
             _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-            ng_apexcharts__WEBPACK_IMPORTED_MODULE_78__["NgApexchartsModule"],
+            ng_apexcharts__WEBPACK_IMPORTED_MODULE_79__["NgApexchartsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
-            _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_27__["NgSelectModule"],
+            _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_28__["NgSelectModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
             _alert_alert_module__WEBPACK_IMPORTED_MODULE_5__["AlertModule"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_29__["ToastrModule"].forRoot(),
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_31__["BrowserAnimationsModule"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_30__["ToastrModule"].forRoot(),
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_32__["BrowserAnimationsModule"],
             /*    MatDialogModule,*/
             /*    NgApexchartsModule,*/
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([
@@ -16592,108 +16731,108 @@ AppModule = __decorate([
                         { path: 'category', component: _admin_menu_category_category_component__WEBPACK_IMPORTED_MODULE_16__["CategoryComponent"] },
                         { path: 'category/add', component: _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"] },
                         { path: 'category/edit/:id', component: _admin_menu_category_addcategory_addcategory_component__WEBPACK_IMPORTED_MODULE_17__["AddcategoryComponent"] },
-                        { path: 'item', component: _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_19__["ItemsComponent"] },
-                        { path: 'item/add', component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_20__["AdditemsComponent"] },
-                        { path: 'item/settings', component: _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_43__["ItemsettingsComponent"] },
-                        { path: 'item/edit/:id', component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_20__["AdditemsComponent"] },
-                        { path: 'modifier', component: _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_21__["ModifiersComponent"] },
-                        { path: 'modifier/add', component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__["AddmodifierComponent"] },
-                        { path: 'modifier/edit/:id', component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_22__["AddmodifierComponent"] },
-                        { path: 'notification', component: _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_72__["NotificationComponent"] },
-                        { path: 'location', component: _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_25__["LocationsComponent"] },
-                        { path: 'location/add', component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__["AddlocationComponent"] },
-                        { path: 'location/edit/:id', component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_26__["AddlocationComponent"] },
-                        { path: 'brand', component: _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_30__["BrandComponent"] },
-                        { path: 'brand/add', component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_28__["AddbrandComponent"] },
-                        { path: 'brand/edit/:id', component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_28__["AddbrandComponent"] },
-                        { path: 'settings/banner', component: _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_34__["BannerComponent"] },
-                        { path: 'settings/banner/add', component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__["AddbannerComponent"] },
-                        { path: 'settings/banner/edit/:id', component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_35__["AddbannerComponent"] },
-                        { path: 'settings/corporateclient', component: _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_85__["CorporateClientComponent"] },
-                        { path: 'settings/corporateclient/add', component: _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_86__["addcorporateclientComponent"] },
-                        { path: 'settings/corporateclient/edit/:id', component: _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_86__["addcorporateclientComponent"] },
-                        { path: 'promotion', component: _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_41__["PromotionComponent"] },
-                        { path: 'promotion/add', component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__["AddpromotionComponent"] },
-                        { path: 'promotion/edit/:id', component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_42__["AddpromotionComponent"] },
-                        { path: 'report/summary', component: _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_32__["SummaryComponent"] },
-                        { path: 'report/salesdetail', component: _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_36__["SalesdetailComponent"] },
-                        { path: 'report/salesuserwise', component: _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_37__["SalesuserwiseComponent"] },
-                        { path: 'report/salescustomerwise', component: _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_38__["SalescustomerwiseComponent"] },
-                        { path: 'report/salescategorywise', component: _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_39__["SalescategorywiseComponent"] },
-                        { path: 'report/salesitemwise', component: _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_40__["SalesitemwiseComponent"] },
-                        { path: 'delivery', component: _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_44__["DeliveryComponent"] },
-                        { path: 'delivery/add', component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_84__["AdddeliveryComponent"] },
-                        { path: 'delivery/edit/:id', component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_84__["AdddeliveryComponent"] },
-                        { path: 'settings/appsettings', component: _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_45__["AppsettingComponent"] },
-                        { path: 'settings/appsettings/add', component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_46__["AddsettingsComponent"] },
-                        { path: 'settings/appsettings/edit/:id', component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_46__["AddsettingsComponent"] },
-                        { path: 'addons', component: _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_47__["AddonsComponent"] },
-                        { path: 'addons/add', component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_48__["AddaddonsComponent"] },
-                        { path: 'addons/edit/:id', component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_48__["AddaddonsComponent"] },
-                        { path: 'managedoctor/doctor', component: _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_49__["DoctorComponent"] },
-                        { path: 'managedoctor/doctor/adddoctors', component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_50__["AdddoctorsComponent"] },
-                        { path: 'managedoctor/doctor/edit/:id', component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_50__["AdddoctorsComponent"] },
-                        { path: 'pharmacy/prescription', component: _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_51__["PrescriptionComponent"] },
-                        { path: 'pharmacy/prescription/addprescription', component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_52__["AddprescriptionComponent"] },
-                        { path: 'pharmacy/prescription/edit/:id', component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_52__["AddprescriptionComponent"] },
-                        { path: 'reception/customers', component: _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_23__["CustomersComponent"] },
-                        { path: 'reception/customers/addcustomers', component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_24__["AddcustomerComponent"] },
-                        { path: 'reception/customers/edit/:id', component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_24__["AddcustomerComponent"] },
-                        { path: 'reception/appointment', component: _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_53__["AppointmentComponent"] },
-                        { path: 'appointment/view/:id', component: _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentdetailsComponent"] },
-                        { path: 'reception/nursingappointment', component: _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_70__["NursingAppointmentComponent"] },
-                        { path: 'reception/nursingappointment/addnursingappointment', component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["AddnursingappointmentComponent"] },
-                        { path: 'reception/nursingappointment/edit/:id', component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["AddnursingappointmentComponent"] },
-                        { path: 'laboratory/uploadreport', component: _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_55__["UploadreportComponent"] },
-                        { path: 'laboratory/uploadreport/addreports', component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_56__["AddreportsComponent"] },
-                        { path: 'laboratory/uploadreport/edit/:id', component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_56__["AddreportsComponent"] },
-                        { path: 'laboratory/diagnosticcategory', component: _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_57__["DiagnosticCategoriesComponent"] },
-                        { path: 'laboratory/diagnosticcategory/add', component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_58__["AddCategoryComponent"] },
-                        { path: 'laboratory/diagnosticcategory/edit/:id', component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_58__["AddCategoryComponent"] },
-                        { path: 'pharmacy/deliverydetail', component: _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_59__["DeliverydetailComponent"] },
-                        { path: 'settings/coupon', component: _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_60__["CouponComponent"] },
-                        { path: 'settings/coupon/add', component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__["AddCouponComponent"] },
-                        { path: 'settings/coupon/edit/:id', component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_61__["AddCouponComponent"] },
+                        { path: 'item', component: _admin_menu_items_items_component__WEBPACK_IMPORTED_MODULE_20__["ItemsComponent"] },
+                        { path: 'item/add', component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"] },
+                        { path: 'item/settings', component: _admin_menu_items_itemsettings_itemsettings_component__WEBPACK_IMPORTED_MODULE_44__["ItemsettingsComponent"] },
+                        { path: 'item/edit/:id', component: _admin_menu_items_additem_additem_component__WEBPACK_IMPORTED_MODULE_21__["AdditemsComponent"] },
+                        { path: 'modifier', component: _admin_menu_modifiers_modifiers_component__WEBPACK_IMPORTED_MODULE_22__["ModifiersComponent"] },
+                        { path: 'modifier/add', component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"] },
+                        { path: 'modifier/edit/:id', component: _admin_menu_modifiers_addmodifier_addmodifier_component__WEBPACK_IMPORTED_MODULE_23__["AddmodifierComponent"] },
+                        { path: 'notification', component: _admin_notification_notification_component__WEBPACK_IMPORTED_MODULE_73__["NotificationComponent"] },
+                        { path: 'location', component: _admin_company_locations_locations_component__WEBPACK_IMPORTED_MODULE_26__["LocationsComponent"] },
+                        { path: 'location/add', component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"] },
+                        { path: 'location/edit/:id', component: _admin_company_locations_addlocation_addlocation_component__WEBPACK_IMPORTED_MODULE_27__["AddlocationComponent"] },
+                        { path: 'brand', component: _admin_company_brands_brands_component__WEBPACK_IMPORTED_MODULE_31__["BrandComponent"] },
+                        { path: 'brand/add', component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"] },
+                        { path: 'brand/edit/:id', component: _admin_company_brands_addbrand_addbrand_component__WEBPACK_IMPORTED_MODULE_29__["AddbrandComponent"] },
+                        { path: 'settings/banner', component: _admin_settings_banner_banner_component__WEBPACK_IMPORTED_MODULE_35__["BannerComponent"] },
+                        { path: 'settings/banner/add', component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"] },
+                        { path: 'settings/banner/edit/:id', component: _admin_settings_banner_addbanner_addbanner_component__WEBPACK_IMPORTED_MODULE_36__["AddbannerComponent"] },
+                        { path: 'settings/corporateclient', component: _admin_settings_corporateclient_corporateclient_component__WEBPACK_IMPORTED_MODULE_86__["CorporateClientComponent"] },
+                        { path: 'settings/corporateclient/add', component: _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"] },
+                        { path: 'settings/corporateclient/edit/:id', component: _admin_settings_corporateclient_addcorporateclient_addcorporateclient_component__WEBPACK_IMPORTED_MODULE_87__["addcorporateclientComponent"] },
+                        { path: 'promotion', component: _admin_settings_promotion_promotion_component__WEBPACK_IMPORTED_MODULE_42__["PromotionComponent"] },
+                        { path: 'promotion/add', component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"] },
+                        { path: 'promotion/edit/:id', component: _admin_settings_promotion_addpromotion_addpromotion_component__WEBPACK_IMPORTED_MODULE_43__["AddpromotionComponent"] },
+                        { path: 'report/summary', component: _admin_report_summary_summary_component__WEBPACK_IMPORTED_MODULE_33__["SummaryComponent"] },
+                        { path: 'report/salesdetail', component: _admin_report_salesdetail_salesdetail_component__WEBPACK_IMPORTED_MODULE_37__["SalesdetailComponent"] },
+                        { path: 'report/salesuserwise', component: _admin_report_salesuserwise_salesuserwise_component__WEBPACK_IMPORTED_MODULE_38__["SalesuserwiseComponent"] },
+                        { path: 'report/salescustomerwise', component: _admin_report_salescustomerwise_salescustomerwise_component__WEBPACK_IMPORTED_MODULE_39__["SalescustomerwiseComponent"] },
+                        { path: 'report/salescategorywise', component: _admin_report_salescategorywise_salescategorywise_component__WEBPACK_IMPORTED_MODULE_40__["SalescategorywiseComponent"] },
+                        { path: 'report/salesitemwise', component: _admin_report_salesitemwise_salesitemwise_component__WEBPACK_IMPORTED_MODULE_41__["SalesitemwiseComponent"] },
+                        { path: 'delivery', component: _admin_settings_delivery_delivery_component__WEBPACK_IMPORTED_MODULE_45__["DeliveryComponent"] },
+                        { path: 'delivery/add', component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"] },
+                        { path: 'delivery/edit/:id', component: _admin_settings_delivery_adddelivery_adddelivery_component__WEBPACK_IMPORTED_MODULE_85__["AdddeliveryComponent"] },
+                        { path: 'settings/appsettings', component: _admin_settings_appsettings_appsettings_component__WEBPACK_IMPORTED_MODULE_46__["AppsettingComponent"] },
+                        { path: 'settings/appsettings/add', component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"] },
+                        { path: 'settings/appsettings/edit/:id', component: _admin_settings_appsettings_addappsettings_addsettings_component__WEBPACK_IMPORTED_MODULE_47__["AddsettingsComponent"] },
+                        { path: 'addons', component: _admin_menu_addons_addons_component__WEBPACK_IMPORTED_MODULE_48__["AddonsComponent"] },
+                        { path: 'addons/add', component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"] },
+                        { path: 'addons/edit/:id', component: _admin_menu_addons_addaddons_addaddons_component__WEBPACK_IMPORTED_MODULE_49__["AddaddonsComponent"] },
+                        { path: 'managedoctor/doctor', component: _admin_managedoctor_doctor_doctor_component__WEBPACK_IMPORTED_MODULE_50__["DoctorComponent"] },
+                        { path: 'managedoctor/doctor/adddoctors', component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"] },
+                        { path: 'managedoctor/doctor/edit/:id', component: _admin_managedoctor_doctor_adddoctors_adddoctors_component__WEBPACK_IMPORTED_MODULE_51__["AdddoctorsComponent"] },
+                        { path: 'pharmacy/prescription', component: _admin_pharmacy_prescription_prescription_component__WEBPACK_IMPORTED_MODULE_52__["PrescriptionComponent"] },
+                        { path: 'pharmacy/prescription/addprescription', component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"] },
+                        { path: 'pharmacy/prescription/edit/:id', component: _admin_pharmacy_prescription_add_addprescription_component__WEBPACK_IMPORTED_MODULE_53__["AddprescriptionComponent"] },
+                        { path: 'reception/customers', component: _admin_reception_customers_customers_component__WEBPACK_IMPORTED_MODULE_24__["CustomersComponent"] },
+                        { path: 'reception/customers/addcustomers', component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"] },
+                        { path: 'reception/customers/edit/:id', component: _admin_reception_customers_addcustomers_addcustomer_component__WEBPACK_IMPORTED_MODULE_25__["AddcustomerComponent"] },
+                        { path: 'reception/appointment', component: _admin_reception_appointment_appointment_component__WEBPACK_IMPORTED_MODULE_54__["AppointmentComponent"] },
+                        { path: 'appointment/view/:id', component: _admin_reception_appointmentdetails_appointmentdetails_component__WEBPACK_IMPORTED_MODULE_55__["AppointmentdetailsComponent"] },
+                        { path: 'reception/nursingappointment', component: _admin_reception_nursingappointment_nursingappointment_component__WEBPACK_IMPORTED_MODULE_71__["NursingAppointmentComponent"] },
+                        { path: 'reception/nursingappointment/addnursingappointment', component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"] },
+                        { path: 'reception/nursingappointment/edit/:id', component: _admin_reception_nursingappointment_addnursingappointment_addnursingappointment_component__WEBPACK_IMPORTED_MODULE_72__["AddnursingappointmentComponent"] },
+                        { path: 'laboratory/uploadreport', component: _admin_laboratory_uploadreport_uploadreport_component__WEBPACK_IMPORTED_MODULE_56__["UploadreportComponent"] },
+                        { path: 'laboratory/uploadreport/addreports', component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"] },
+                        { path: 'laboratory/uploadreport/edit/:id', component: _admin_laboratory_uploadreport_addreports_addreports_component__WEBPACK_IMPORTED_MODULE_57__["AddreportsComponent"] },
+                        { path: 'laboratory/diagnosticcategory', component: _admin_laboratory_diagnosticcategories_diagnosticcategories_component__WEBPACK_IMPORTED_MODULE_58__["DiagnosticCategoriesComponent"] },
+                        { path: 'laboratory/diagnosticcategory/add', component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"] },
+                        { path: 'laboratory/diagnosticcategory/edit/:id', component: _admin_laboratory_diagnosticcategories_add_addcategory_component__WEBPACK_IMPORTED_MODULE_59__["AddCategoryComponent"] },
+                        { path: 'pharmacy/deliverydetail', component: _admin_pharmacy_deliverydetail_deliverydetail_component__WEBPACK_IMPORTED_MODULE_60__["DeliverydetailComponent"] },
+                        { path: 'settings/coupon', component: _admin_settings_coupon_coupon_component__WEBPACK_IMPORTED_MODULE_61__["CouponComponent"] },
+                        { path: 'settings/coupon/add', component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"] },
+                        { path: 'settings/coupon/edit/:id', component: _admin_settings_coupon_addcoupon_addcoupon_component__WEBPACK_IMPORTED_MODULE_62__["AddCouponComponent"] },
                         {
                             path: 'pharmacy/medicine',
-                            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_62__["MedicineComponent"],
-                            canActivate: [_has_role_guard__WEBPACK_IMPORTED_MODULE_77__["HasRoleGuard"]],
+                            component: _admin_pharmacy_medicine_medicine_component__WEBPACK_IMPORTED_MODULE_63__["MedicineComponent"],
+                            canActivate: [_has_role_guard__WEBPACK_IMPORTED_MODULE_78__["HasRoleGuard"]],
                             data: {
                                 type: ['SuperAdmin']
                             }
                         },
-                        { path: 'pharmacy/medicine/addmedicines', component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"] },
-                        { path: 'pharmacy/medicine/edit/:id', component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_63__["AddmedicineComponent"] },
-                        { path: 'pharmacy/orders', component: _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_64__["OrdersComponent"] },
-                        { path: 'orders/view/:id', component: _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_65__["OrderdetailsComponent"] },
-                        { path: 'settings/medicalservices', component: _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_66__["ServiceComponent"] },
-                        { path: 'settings/medicalservices/add', component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"] },
-                        { path: 'settings/medicalservices/edit/:id', component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_67__["AddServiceComponent"] },
-                        { path: 'settings/medicalservicetype', component: _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_68__["MedicalServicetypeComponent"] },
-                        { path: 'settings/medicalservicetype/add', component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"] },
-                        { path: 'settings/medicalservicetype/edit/:id', component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["AddMedicalServicetypeComponent"] },
-                        { path: 'user', component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_75__["UserComponent"] },
-                        { path: 'user/add', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_76__["AdduserComponent"] },
-                        { path: 'user/edit/:id', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_76__["AdduserComponent"] },
-                        { path: 'permission', component: _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_79__["PermissionComponent"] },
-                        { path: 'permission/add', component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_80__["AddComponent"] },
-                        { path: 'permission/edit/:id', component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_80__["AddComponent"] },
-                        { path: 'settings/speciality', component: _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_73__["SpecialityComponent"] },
-                        { path: 'settings/speciality/add', component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_74__["AddSpecialityComponent"] },
-                        { path: 'settings/speciality/edit/:id', component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_74__["AddSpecialityComponent"] },
-                        { path: 'settings/timeslot', component: _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_81__["TimeSlotComponent"] },
-                        { path: 'settings/timeslot/add', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_82__["AddTimeSlotComponent"] },
-                        { path: 'settings/timeslot/edit/:id', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_82__["AddTimeSlotComponent"] },
-                        { path: 'formpermission', component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_83__["FormPermissionComponent"] }
+                        { path: 'pharmacy/medicine/addmedicines', component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"] },
+                        { path: 'pharmacy/medicine/edit/:id', component: _admin_pharmacy_medicine_addmedicines_addmedicine_component__WEBPACK_IMPORTED_MODULE_64__["AddmedicineComponent"] },
+                        { path: 'pharmacy/orders', component: _admin_pharmacy_orders_orders_component__WEBPACK_IMPORTED_MODULE_65__["OrdersComponent"] },
+                        { path: 'orders/view/:id', component: _admin_pharmacy_orderdetails_orderdetails_component__WEBPACK_IMPORTED_MODULE_66__["OrderdetailsComponent"] },
+                        { path: 'settings/medicalservices', component: _admin_settings_medicalservices_service_component__WEBPACK_IMPORTED_MODULE_67__["ServiceComponent"] },
+                        { path: 'settings/medicalservices/add', component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"] },
+                        { path: 'settings/medicalservices/edit/:id', component: _admin_settings_medicalservices_add_addservice_component__WEBPACK_IMPORTED_MODULE_68__["AddServiceComponent"] },
+                        { path: 'settings/medicalservicetype', component: _admin_settings_medicalservicetype_medicalservicetype_component__WEBPACK_IMPORTED_MODULE_69__["MedicalServicetypeComponent"] },
+                        { path: 'settings/medicalservicetype/add', component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"] },
+                        { path: 'settings/medicalservicetype/edit/:id', component: _admin_settings_medicalservicetype_add_addmedicalservicetype_component__WEBPACK_IMPORTED_MODULE_70__["AddMedicalServicetypeComponent"] },
+                        { path: 'user', component: _admin_user_user_component__WEBPACK_IMPORTED_MODULE_76__["UserComponent"] },
+                        { path: 'user/add', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"] },
+                        { path: 'user/edit/:id', component: _admin_user_add_adduser_component__WEBPACK_IMPORTED_MODULE_77__["AdduserComponent"] },
+                        { path: 'permission', component: _admin_user_permission_permission_component__WEBPACK_IMPORTED_MODULE_80__["PermissionComponent"] },
+                        { path: 'permission/add', component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"] },
+                        { path: 'permission/edit/:id', component: _admin_user_permission_add_add_component__WEBPACK_IMPORTED_MODULE_81__["AddComponent"] },
+                        { path: 'settings/speciality', component: _admin_settings_speciality_speciality_component__WEBPACK_IMPORTED_MODULE_74__["SpecialityComponent"] },
+                        { path: 'settings/speciality/add', component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"] },
+                        { path: 'settings/speciality/edit/:id', component: _admin_settings_speciality_add_addspeciality_component__WEBPACK_IMPORTED_MODULE_75__["AddSpecialityComponent"] },
+                        { path: 'settings/timeslot', component: _admin_settings_timeslot_timeslot_component__WEBPACK_IMPORTED_MODULE_82__["TimeSlotComponent"] },
+                        { path: 'settings/timeslot/add', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"] },
+                        { path: 'settings/timeslot/edit/:id', component: _admin_settings_timeslot_add_addtimeslot_component__WEBPACK_IMPORTED_MODULE_83__["AddTimeSlotComponent"] },
+                        { path: 'formpermission', component: _admin_permission_formpermission_component__WEBPACK_IMPORTED_MODULE_84__["FormPermissionComponent"] }
                     ]
                 }
             ]),
             _angular_service_worker__WEBPACK_IMPORTED_MODULE_13__["ServiceWorkerModule"].register('ngsw-worker.js', { enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].production }),
             _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"]
         ],
-        providers: [_has_role_guard__WEBPACK_IMPORTED_MODULE_77__["HasRoleGuard"]],
-        exports: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"]],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_33__["NgbdDatepickerRangePopup"]]
+        providers: [_has_role_guard__WEBPACK_IMPORTED_MODULE_78__["HasRoleGuard"]],
+        exports: [_datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"]],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_34__["NgbdDatepickerRangePopup"]]
     })
 ], AppModule);
 
@@ -16995,6 +17134,80 @@ ImageuploadComponent = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/imageview/imageview.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/imageview/imageview.component.ts ***!
+  \**************************************************/
+/*! exports provided: ImageViewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageViewComponent", function() { return ImageViewComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+let ImageViewComponent = class ImageViewComponent {
+    constructor(fb, cd) {
+        this.fb = fb;
+        this.cd = cd;
+        this.imageUrl = "https://marnpossastorage.blob.core.windows.net/marnpos-v2-images/default-product.PNG";
+        this.editFile = true;
+        this.removeUpload = false;
+        this.currentFile = null;
+        this.registrationForm = this.fb.group({
+            file: [null]
+        });
+    }
+    onFileChange(event) {
+        let reader = new FileReader(); // HTML5 FileReader API
+        let file = event.target.files[0];
+        if (event.target.files && event.target.files[0]) {
+            reader.readAsDataURL(file);
+            // When file uploads set it to file formcontrol
+            reader.onload = () => {
+                this.imageUrl = reader.result;
+                this.registrationForm.patchValue({
+                    file: reader.result
+                });
+                this.editFile = false;
+                this.removeUpload = true;
+            };
+            // ChangeDetectorRef since file is loading outside the zone
+            this.cd.markForCheck();
+        }
+    }
+};
+ImageViewComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }
+];
+ImageViewComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-imageview',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./imageview.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/imageview/imageview.component.html")).default
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]])
+], ImageViewComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/layout/layout.component.css":
 /*!*********************************************!*\
   !*** ./src/app/layout/layout.component.css ***!
@@ -17061,7 +17274,7 @@ let LayoutComponent = class LayoutComponent {
         this.isReport = true;
         this.isSetting = true;
         this.permission = new _models_Permission__WEBPACK_IMPORTED_MODULE_5__["Permission"]();
-        this.userName = this.ls.getSelectedBrand().email;
+        this.userName = this.ls.getSelectedBrand().userName;
         this.type = this.ls.getSelectedBrand().type;
         //  this.permission=environment.rootScope;
         this.permission = this.ls.getSelectedBrand();
@@ -17387,7 +17600,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! E:\Project\Mamji\MamjiAdmin_Git\ClientApp\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! F:\Projects\Mamji_Admin\ClientApp\src\main.ts */"./src/main.ts");
 
 
 /***/ }),

@@ -42,18 +42,17 @@ export class AddcustomerComponent implements OnInit {
   private createForm() {
     this.customerForm = this.formBuilder.group({
       fullName: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+      email: [''],
       statusID: [true],
       mobile: ['', Validators.required],
       password: ['', Validators.required],
       customerID: 0,
-      image: [''],
-      
+      image: [''],  
     });
   }
 
   private editForm(obj) {
-    debugger;
+    
     this.f.fullName.setValue(obj.fullName);
     this.f.email.setValue(obj.email);
     this.f.password.setValue(obj.password);
@@ -65,7 +64,7 @@ export class AddcustomerComponent implements OnInit {
   }
 
   setSelectedCustomer() {
-    debugger;
+    
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {

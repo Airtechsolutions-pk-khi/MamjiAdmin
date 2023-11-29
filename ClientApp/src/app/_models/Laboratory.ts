@@ -1,13 +1,13 @@
 export class Laboratory {
-  laboratoryID: number;
+  laboratoryID: string;
   customerID: string;
   diagnosticCatID: string;
   selectedFile: File;
-  fullName: string;
+  name: string;
   labReferenceNo: string;
   registrationNo:string;
   statusID: number;
-  customer: string;
   categoryName: string;
+  lastUpdatedBy: string;
   image: string;
 }

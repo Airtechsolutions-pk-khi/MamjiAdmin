@@ -47,7 +47,7 @@ export class LayoutComponent implements OnInit {
     , public service: LocationsService
     , public userService: UserService
     , public ls: LocalStorageService) {
-      this.userName = this.ls.getSelectedBrand().email;
+      this.userName = this.ls.getSelectedBrand().userName;
       this.type = this.ls.getSelectedBrand().type;
        
       //  this.permission=environment.rootScope;

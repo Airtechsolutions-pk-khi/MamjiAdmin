@@ -63,6 +63,15 @@ export class MedicineComponent implements OnInit {
   Edit(medicine) {
     this.router.navigate(["admin/pharmacy/medicine/edit", medicine]);
   }
+  Update(medicine) {
+    debugger
+    this.service.update(medicine).subscribe((res: any) => {
+      if (res != 0) {
+        this.ts.showSuccess("Success", "Price Updated Successfully.")
+        this.getData();
+      }
+    })
+  }
 
   Delete(obj) {
     debugger

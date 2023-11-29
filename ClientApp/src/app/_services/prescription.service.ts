@@ -70,12 +70,13 @@ export class PrescriptionService {
   ExportList(prescriptionID) {
     return this.http.get<Prescription[]>('api/prescription/all/${prescriptionID}');
   }
-  getAllData() {
+  getAllData(fromDate, toDate) {
 
-    const url = `api/prescription/all`;
+    const url = `api/prescription/all/${fromDate}/${toDate}`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Prescription[]>(url).subscribe(res => {
+        debugger
         this.prescription = res;
 
         this._data$.next(this.prescription);
@@ -133,6 +134,7 @@ export class PrescriptionService {
       }));
   }
   update(data) {
+    debugger
     return this.http.post('api/prescription/update', data)
       .pipe(map(res => {
         console.log(res);

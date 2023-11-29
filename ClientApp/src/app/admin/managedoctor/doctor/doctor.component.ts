@@ -54,7 +54,6 @@ export class DoctorComponent implements OnInit {
   }
 
   getData() {
-    debugger
     this.service.getAllData();
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
@@ -71,10 +70,10 @@ export class DoctorComponent implements OnInit {
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
+
   Edit(doctors) {
     this.router.navigate(["admin/managedoctor/doctor/edit", doctors]);
   }
-
 
   Delete(data) {
     this.service.delete(data).subscribe((res: any) => {

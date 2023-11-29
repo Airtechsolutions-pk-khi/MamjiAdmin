@@ -17,11 +17,11 @@ namespace MamjiAdmin.BLL._Services
             _service = new notificationDB();
         }
        
-        public List<NotificationBLL> GetAll()
+        public List<NotificationBLL> GetAll(DateTime FromDate, DateTime ToDate)
         {
             try
             {
-                return _service.GetAll();
+                return _service.GetAll(FromDate, ToDate);
             }
             catch (Exception)
             {
@@ -45,7 +45,6 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 var result = _service.Status(data);
-
                 return result;
             }
             catch (Exception ex)

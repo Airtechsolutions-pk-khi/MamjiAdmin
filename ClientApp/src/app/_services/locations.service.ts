@@ -136,7 +136,7 @@ export class LocationsService {
     };
   }
   insert(data) {
-    debugger;
+    
     return this.http.post(`api/location/insertlocation`, data)
       .pipe(map(res => {        
         console.log(res);
@@ -145,7 +145,7 @@ export class LocationsService {
   }
 
   update(updateData) {
-    debugger;
+    
     return this.http.post(`api/location/update`, updateData)
       .pipe(map(res => {
         console.log(res);

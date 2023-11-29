@@ -9,27 +9,32 @@
       <div class="col-md-4">
         <h6 class="m-0 font-weight-bold text-orange">Lab Reports List</h6>
       </div>
+      <div class="col-md-8 form-group text-right">
+        <!--<button type="submit" class="btn btn-primary mt-4 mr-1">
+          <span translate>Export</span>
+        </button>-->
+        <button [routerLink]="['addreports']" class="btn btn-primary mr-1">
+          Upload Report
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-7 form-group">
+        <label>Select Date</label>
+        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>
+      </div>
       <div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
         <div class="input-group-prepend" style="height: 39px;">
           <span class="input-group-text"><i class="fa fa-search"></i></span>
         </div>
         <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
-
       </div>
-      <div class="col-md-4 form-group text-right">
-        <!--<button type="submit" class="btn btn-primary mt-4 mr-1">
-          <span translate>Export</span>
-        </button>-->
-        <button [routerLink]="['addreports']" class="btn btn-primary mt-4 mr-1">
-          Upload Report
-        </button>
+      <div class="col-md-1 form-group text-right">
+        <button class="btn btn-primary mt-4" (click)="Filter()" type="submit">Search</button>
       </div>
     </div>
-
-
-
-  </div>
-  <div class="card-body">
     <div class="tile-body p-0 table-responsive ">
       <table class="table table-striped">
         <thead>
@@ -37,8 +42,10 @@
 
             <th width="20%">Report</th>
             <th width="20%" sortable="LabReference">Registration #</th>
-            <th width="20%" sortable="LabReference">Customer Name</th>
+            <th width="20%" sortable="LabReference">Lab Reference #</th>
+            <th width="20%" sortable="LabReference">Patient Name</th>
             <th width="15%" sortable="LabReference">Category</th>
+            <th width="20%" sortable="LabReference">Upload By</th>
             <th width="10%" sortable="Status">Status </th>
             <th width="10%">Action</th>
           </tr>
@@ -47,7 +54,7 @@
           <tr *ngFor="let item of data$ | async ">
             <td>
 
-              <button class="btnDownload" (click)="DownloadRpt(item.image)"><i class="fa fa-download"></i> Download Report</button>
+              <button class="btnDownload" (click)="DownloadRpt(item.image)"><i class="fa fa-download"></i> Download</button>
 
               <!-- <a href="http://localhost:59660/assets/pdf/zzz.pdf" Download="ABC.pdf">Download the PDF</a> -->
               <!-- <a (click)="DownloadRpt(item.image)"><i class="fas fa-fw fa-edit"></i></a> -->
@@ -56,8 +63,10 @@
             </td>
 
             <td>{{item.registrationNo}}</td>
-            <td>{{item.fullName}}</td>
+            <td>{{item.labReferenceNo}}</td>
+            <td>{{item.name}}</td>
             <td>{{item.categoryName}}</td>
+            <td>{{item.lastUpdatedBy}}</td>
             <td>
               <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
               </ngb-highlight>
@@ -105,4 +114,4 @@
     <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">No</button>
     <button type="button" class="btn btn-outline-dark" (click)="c('yes')">Yes</button>
   </div>
-</ng-template>   
+</ng-template>

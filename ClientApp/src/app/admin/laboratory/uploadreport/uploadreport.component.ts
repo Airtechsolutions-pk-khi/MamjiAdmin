@@ -1,4 +1,4 @@
-import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { NgbdSortableHeader, SortEvent } from 'src/app/_directives/sortable.directive';
@@ -10,8 +10,10 @@ import { ExcelService } from 'src/ExportExcel/excel.service';
 import { HttpClient } from '@angular/common/http';
 import { saveAs } from 'file-saver';
 import { Global } from 'src/app/GlobalAndCommons/Global';
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalDismissReasons, NgbDate, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdDatepickerRangePopup } from '../../../datepicker-range/datepicker-range-popup';
 
+const now = new Date();
 @Component({
   selector: 'app-uploadreport',
   templateUrl: './uploadreport.component.html',
@@ -25,12 +27,12 @@ export class UploadreportComponent implements OnInit {
   total$: Observable<number>;
   closeResult: string;  
   loading$: Observable<boolean>;
-
+  @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
   locationSubscription: Subscription;
   submit: boolean;
+  userName = "";
 
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
-
   constructor(public service: LaboratoryService,
     public ls: LocalStorageService,
     public excelService: ExcelService,
@@ -38,21 +40,34 @@ export class UploadreportComponent implements OnInit {
     public router: Router,
     private http: HttpClient,
     private modalService: NgbModal) {  
-      
+    this.userName = this.ls.getSelectedBrand().userName;
       this.loading$ = service.loading$;
       this.submit = false;
   }
 
   ngOnInit() {
+    const date: NgbDate = new NgbDate(now.getFullYear(), now.getMonth() + 1, now.getDate());
+    this._datepicker.fromDate = date;
+    this._datepicker.toDate = date;
+
     this.getData();
   }
 
   getData() {
-    this.service.getAllData();
+    this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
     this.loading$ = this.service.loading$;
   }
+
+  parseDate(obj) {
+    return obj.year + "-" + obj.month + "-" + obj.day;
+  }
+
+  Filter() {
+    this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
+  }
+
   onSort({ column, direction }: SortEvent) {
 
     this.headers.forEach(header => {
@@ -68,6 +83,8 @@ export class UploadreportComponent implements OnInit {
     this.router.navigate(["admin/laboratory/uploadreport/edit", medicine]);
   }
   Delete(obj) {
+    debugger
+    obj.userName = this.userName;
     this.service.delete(obj).subscribe((res: any) => {
       if (res != 0) {
         this.ts.showSuccess("Success", "Record deleted successfully.")
@@ -81,8 +98,7 @@ export class UploadreportComponent implements OnInit {
     });
   }
 
-  DownloadRpt(URL: string) {
-    debugger       
+  DownloadRpt(URL: string) {      
      var pth = URL.replace("/ClientApp/dist/assets/Upload/pdfFiles/","ClientApp/dist/assets/Upload/pdfFiles/");
      //var rptName = pth.replace("pdfFiles/","");
 

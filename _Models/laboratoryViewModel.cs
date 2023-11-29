@@ -13,15 +13,16 @@ namespace MamjiAdmin._Models
     public class LaboratoryBLL
     {
         public int LaboratoryID { get; set; }
-        public int CustomerID { get; set; }
+        public int? CustomerID { get; set; }
         public int DiagnoseCatID { get; set; }
         public IFormFile SelectedFile { get; set; }
         public Nullable<int> StatusID { get; set; }
-        public Nullable<int> LastUpdatedBy { get; set; } = 1;
+        public string LastUpdatedBy { get; set; }
         public Nullable<DateTime> LastUpdatedDate { get; set; }
         public string FilePath { get; set; } = "";
         public string Image { get; set; }
-        public string FullName { get; set; }
+        public string Name { get; set; }
+        public string LabReferenceNo { get; set; }
         public string RegistrationNo { get; set; }
         public string CategoryName { get; set; }
     }

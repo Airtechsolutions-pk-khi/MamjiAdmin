@@ -166,6 +166,7 @@
                                                                                                                         <td style="padding:18px 0px 18px 0px; line-height:36px; text-align:inherit; color: #383838 " height="100%" valign="top" bgcolor="" role="module-content">
                                                                                                                             <div>
                                                                                                                                 <div style="font-family: inherit; text-align: inherit;padding:10px 0 10px 0;"><span style="color: #383838 ; font-size: 18px; font-family: inherit">Your appointment is completed, Hope you are happy with the services provided by us,  </span></div>
+                                                                                                                                <div style="font-family: inherit; text-align: inherit">Completed By: #username#</div> </span></div>
                                                                                                                                 <div style="font-family: inherit; text-align: inherit;padding:10px 0 10px 0;"><span style="color: #383838 ; font-size: 18px; font-family: inherit">We would like to hear your opinion of our services  </span></div>
 
                                                                                                                                 <div></div>

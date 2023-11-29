@@ -66,8 +66,8 @@ export class NotificationService {
   getById(id) {
     return this.http.get<Notification[]>(`api/notification/notification/${id}`);
   }
-  getAllData() {
-    const url = `api/notification/all`;
+  getAllData(fromDate, toDate) {
+    const url = `api/notification/all/${fromDate}/${toDate}`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Notification[]>(url).subscribe(res => {

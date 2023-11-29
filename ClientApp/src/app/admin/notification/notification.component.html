@@ -16,6 +16,19 @@
     </div>
   </div>
   <div class="card-body">
+
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <label>Select Date</label>
+        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>
+      </div>
+
+      <div class="col-md-6 form-group text-right">
+        <button class="btn btn-primary mt-4" (click)="Filter()" type="submit">Search</button>
+      </div>
+    </div>
+
+
     <div class="tile-body p-0 table-responsive ">
       <table class="table table-striped">
         <thead>
@@ -24,7 +37,7 @@
             <th width="15%" sortable="Description">Description </th>
             <th width="15%" sortable="NotificationType">Notification Type </th>
             <th width="15%" sortable="NotificationDate">Date </th>
-            <th width="10%" sortable="Status">Status</th>
+            <!--<th width="10%" sortable="Status">Status</th>-->
             <th width="10%">Read/UnRead</th>
             <th width="10%">Action</th>
           </tr>
@@ -35,13 +48,16 @@
             <td> {{item.description}} </td>
             <td> {{item.notificationType}} </td>
             <td> {{item.notificationDate | date:'dd-MM-yyyy' }} </td>
-            <td>
+            <!--<td>
               <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID ==1?'Active':'Inactive'" [term]="service.searchTerm">
               </ngb-highlight>
-            </td>
+            </td>-->
             <td>
-              <ngb-highlight [ngClass]="{'btn-success': item.isRead === 0, 'btn-danger':item.isRead !== 0 }" class="btn btn-sm" [result]="item.isRead ==0?'UnRead':'Read'" [term]="service.searchTerm">
-              </ngb-highlight>
+              <span class="badge badge-success"
+                    *ngIf="item.isRead == 1">Read</span>
+
+              <span class="badge badge-warning"
+                    *ngIf="item.isRead == 0">UnRead</span>
             </td>
             <td>
               <button class="btn btn-outline-info mr-1" (click)="updateStatus(item)">

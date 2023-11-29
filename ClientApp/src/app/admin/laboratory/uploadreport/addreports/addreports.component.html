@@ -1,10 +1,26 @@
+<style>
+  input[type="file" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: baseline;
+    color: inherit;
+    text-overflow: ellipsis;
+    text-align: start !important;
+    padding: initial;
+    border: 1px solid #ced4da;
+    white-space: pre;
+    overflow: hidden !important;
+    width: 100%;
+    border-radius: 5px;
+  }
+</style>
+
+
 <h1 class="h3 mb-2 text-gray-800">Upload Reports</h1>
 <p class="mb-4"></p>
 
-<!-- <form [formGroup]="reportForm" class="form" (ngSubmit)="onSubmit()"> -->
 <form class="form" (ngSubmit)="onSubmit()" #myForm="ngForm">
-
-  
 
   <div class="row">
     <div class="col-xl-12">
@@ -13,61 +29,55 @@
         <div class="card-body">
           <div class="form-row">
             <div class="form-group col-md-6">
-
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label class="small mb-1" for="inputUsername">Registration #</label>
- 
-                  <ng-select [items]="RegistrationList" bindLabel="registrationNo" bindValue="customerID" [multiple]="false" placeholder="--Select Registration #--" (change)="onCustomerSelectR(formData.customerID)" [ngModelOptions]="{standalone: true}" [(ngModel)]="formData.customerID">
-                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                      <div class="ng-value" *ngFor="let item of items">
-                        <span class="ng-value-label">{{item.registrationNo}}</span>
-                        <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                      </div>
-                    </ng-template>
-                  </ng-select>
-
+                  <!--<input type="text" class="form-control" name="registrationNo" [(ngModel)]="formData.registrationNo"/>-->
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Registration#" name="registrationNo" [(ngModel)]="formData.registrationNo" [disabled]="formData.customerID>0?true: false">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button" (click)="search()">
+                        <i class="fa fa-search"></i>
+                      </button>
+                      <button class="btn btn-info" type="button" (click)="refresh()">
+                        <i class="fa fa-recycle"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputUsername">Customer Name</label>
- 
-                  <ng-select [items]="CustomerList" bindLabel="fullName" bindValue="customerID" [multiple]="false" placeholder="--Select Customer--" (change)="onCustomerSelect(formData.customerID)" [ngModelOptions]="{standalone: true}" [(ngModel)]="formData.customerID">
-                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                      <div class="ng-value" *ngFor="let item of items">
-                        <span class="ng-value-label">{{item.fullName}}</span>
-                        <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                      </div>
-                    </ng-template>
-                  </ng-select>
-
+                  <label class="small mb-1" for="inputUsername">Lab Reference #</label>
+                  <input type="text" class="form-control" name="referenceNo" [(ngModel)]="formData.referenceNo" placeholder="Enter Lab Reference#" />
                 </div>
               </div>
 
-              
-             <input type="file" (change)="onFileChange($event.target.files)" />  
-
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="file" (change)="onFileChange($event.target.files)" style="margin-top: 32px; " />
+                </div>
+              </div>
             </div>
-            
+
             <div class="form-group col-md-6">
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputUsername">Diagnostic Catgeory</label>                  
+                  <label class="small mb-1" for="inputUsername">Patient Name</label>
+                  <input type="text" class="form-control" name="name" [(ngModel)]="formData.name" required placeholder="Enter Patient Name" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputUsername">Diagnostic Category</label>
                   <ng-select [items]="CategoryList" bindLabel="categoryName" bindValue="diagnosticCatID" [multiple]="false" placeholder="--Select Diagnostic Category--" (change)="onDiagnosticSelect(formData.diagnosticCatID)" [ngModelOptions]="{standalone: true}" [(ngModel)]="formData.diagnosticCatID">
-                    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                      <div class="ng-value" *ngFor="let item of items">
-                        <span class="ng-value-label">{{item.categoryName}}</span>
-                        <span class="ng-value-icon right" style="border-left: 1px solid #000;" (click)="clear(item)" aria-hidden="true">×</span>
-                      </div>
-                    </ng-template>
                   </ng-select>
                 </div>
               </div>
-
             </div>
           </div>
+
           <div class="form-row">
             <div class="form-group col-lg-12">
               <label for="Item Status">Status</label>
@@ -77,6 +87,7 @@
               </div>
             </div>
           </div>
+
           <!-- Save changes button-->
           <button class="btn btn-primary" type="submit">Save changes</button>
         </div>

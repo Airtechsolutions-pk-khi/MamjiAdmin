@@ -152,7 +152,7 @@ export class CustomersService {
       }));
   }
   delete(data) {
-    debugger;
+    
     return this.http.post(`api/customer/delete`, data);
   }
 

@@ -98,14 +98,15 @@ export class AppointmentService {
   {
     return this.http.get<Appointment[]>('api/appointment/all/${appointmentID}');
   }
-  getAllData()
+  getAllData(fromDate, toDate)
   {
     debugger
-    const url = `api/appointment/all`;
+    const url = `api/appointment/all/${fromDate}/${toDate}`;
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Appointment[]>(url).subscribe(res =>
       {
+        debugger
         this.appointments = res;
         this._data$.next(this.appointments);
         this._allData$.next(this.appointments);

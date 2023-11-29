@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using MamjiAdmin._Models;
 using MamjiAdmin.BLL._Services;
@@ -17,10 +18,10 @@ namespace MamjiAdmin.Controllers
             _service = new prescripitonService();
             _env = env;
         }
-        [HttpGet("{all}")]
-        public List<PrescriptionBLL> GetAll()
+        [HttpGet("all/{fromDate}/{toDate}")]
+        public List<PrescriptionBLL> GetAll(string fromDate, string toDate)
         {
-            return _service.GetAll();
+            return _service.GetAll(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
         }
         [HttpGet("prescription/{id}")]
         public PrescriptionBLL Get(int id)
@@ -37,7 +38,7 @@ namespace MamjiAdmin.Controllers
         [Route("update")]
         public int PostUpdate([FromBody] PrescriptionBLL obj)
         {
-            return _service.Update(obj, _env);
+            return _service.Update(obj);
         }
         [HttpPost]
         [Route("delete")]
