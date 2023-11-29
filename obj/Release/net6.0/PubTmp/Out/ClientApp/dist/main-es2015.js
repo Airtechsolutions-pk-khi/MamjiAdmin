@@ -7499,9 +7499,9 @@ let DashboardComponent = class DashboardComponent {
     }
     ngOnInit() {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.singlarService.startConnection();
             this.GetDashboard();
             this.GetChart();
+            yield this.singlarService.startConnection();
         });
     }
     BindTodaysSales(sales, timeSlot) {
@@ -7522,6 +7522,7 @@ let DashboardComponent = class DashboardComponent {
         };
     }
     GetDashboard() {
+        debugger;
         this.service.getAllData().subscribe((res) => {
             this.dashboardSummary = res[0];
         });

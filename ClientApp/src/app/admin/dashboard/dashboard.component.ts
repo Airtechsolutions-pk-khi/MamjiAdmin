@@ -74,10 +74,10 @@ export class DashboardComponent {
 
   dashboardSummary = new DashboardSummary();
   async ngOnInit() {
-    
-    await this.singlarService.startConnection();
     this.GetDashboard();
     this.GetChart();
+    await this.singlarService.startConnection();
+   
   }
 
   constructor(public service: DashboardService,
@@ -221,6 +221,7 @@ export class DashboardComponent {
   }
 
   GetDashboard() {
+    debugger
     this.service.getAllData().subscribe((res: any) => {
       this.dashboardSummary = res[0];
     });
