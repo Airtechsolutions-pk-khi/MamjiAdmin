@@ -26,6 +26,7 @@ export class PrescriptionComponent implements OnInit {
   loading$: Observable<boolean>;
   private selectedPrescription;
   name = "Mr";
+  userName = "";
   base64Image: any;
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
 
@@ -39,7 +40,8 @@ export class PrescriptionComponent implements OnInit {
     public ts :ToastService,
     public router:Router) {
     //this.selectedPrescription =this.ls.getSelectedPrescription().prescriptionID;
- 
+    this.userName = this.ls.getSelectedBrand().userName;
+
      this.loading$ = service.loading$;
      this.submit = false;
      
@@ -90,6 +92,8 @@ export class PrescriptionComponent implements OnInit {
   }
 
   Delete(data) {
+    debugger
+    data.userName = this.userName;
     this.service.delete(data).subscribe((res: any) => {
       if(res!=0){
         this.ts.showSuccess("Success","Record deleted successfully.")

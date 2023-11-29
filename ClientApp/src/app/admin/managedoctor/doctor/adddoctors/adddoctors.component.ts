@@ -14,12 +14,12 @@ import { DoctorProfiles, DoctorSchedule } from 'src/app/_models/Doctors';
 
 })
 export class AdddoctorsComponent implements OnInit {
-  
+
   submitted = false;
-  public spec = new DoctorSchedule(); 
-  public drProfile = new DoctorProfiles(); 
-  dayName =[];
-  timeSlot =[];
+  public spec = new DoctorSchedule();
+  public drProfile = new DoctorProfiles();
+  dayName = [];
+  timeSlot = [];
   doctorForm: FormGroup;
   loading = false;
   loadingDoctor = false;
@@ -28,15 +28,15 @@ export class AdddoctorsComponent implements OnInit {
   selectedLocationIds: string[];
   selectedgroupModifierIds: string[];
   DoctorDaysDetailList = [];
-  selectedSpecialityList=[];
-  DoctorSchedule=[];
+  selectedSpecialityList = [];
+  DoctorSchedule = [];
 
-  DoctorProfiles=[];
+  DoctorProfiles = [];
 
-  selectedSpecialistIds=[];
-  DoctorDaysList=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  selectedSpecialistIds = [];
+  DoctorDaysList = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   selectedTimeList = [];
-  
+
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
   constructor(
@@ -64,26 +64,25 @@ export class AdddoctorsComponent implements OnInit {
     this.doctorForm = this.formBuilder.group({
       fullName: ['', Validators.required],
       urduName: [''],
-      email: [''],      
+      email: [''],
       skills: ['', Validators.required],
       education: ['', Validators.required],
       imagePath: [''],
-      profile:[''],
+      profile: [''],
       statusID: [true],
-      gender:[''],
-      timeSlot:[''],
-      doctorID:[0],
- 
-      doctorProfiles:[],  
-      
-      doctorSchedule:[],
+      gender: [''],
+      timeSlot: [''],
+      doctorID: [0],
+
+      doctorProfiles: [],
+
+      doctorSchedule: [],
     });
   }
   private editForm(obj1) {
     var obj = obj1[0];
-    debugger
-    this.f.fullName.setValue(obj.fullName);    
-    this.f.urduName.setValue(obj.urduName);    
+    this.f.fullName.setValue(obj.fullName);
+    this.f.urduName.setValue(obj.urduName);
     this.f.email.setValue(obj.email);
     this.f.profile.setValue(obj.profile);
     this.f.skills.setValue(obj.skills);
@@ -93,15 +92,14 @@ export class AdddoctorsComponent implements OnInit {
     this.f.education.setValue(obj.education);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
 
- if (obj.doctorProfiles != "") {
-  debugger
+    if (obj.doctorProfiles != "") {
       this.DoctorProfiles = obj.doctorProfiles;
     }
-    if (obj.doctorTimings != "") {    
-          this.DoctorSchedule = obj.doctorTimings;
-        }
+    if (obj.doctorTimings != "") {
+      this.DoctorSchedule = obj.doctorTimings;
+    }
   }
-  
+
   setSelectedDoctor() {
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
@@ -118,19 +116,17 @@ export class AdddoctorsComponent implements OnInit {
   }
 
   loadSpecialitiesAll() {
-     this.appointmentService.loadSpecialities().subscribe((res: any) => {
-       this.selectedSpecialityList = res;
-     });
-   }
+    this.appointmentService.loadSpecialities().subscribe((res: any) => {
+      this.selectedSpecialityList = res;
+    });
+  }
   loadTimeSlotsAll() {
-    debugger;
     this.appointmentService.loadTimeLists().subscribe((res: any) => {
       this.selectedTimeList = res;
-     });
-   }
-   
+    });
+  }
+
   onSubmit() {
-    debugger
     this.doctorForm.markAllAsTouched();
     this.submitted = true;
     if (this.doctorForm.invalid) { return; }
@@ -138,7 +134,7 @@ export class AdddoctorsComponent implements OnInit {
 
     this.f.doctorSchedule.setValue(this.DoctorSchedule);
     this.f.doctorProfiles.setValue(this.DoctorProfiles);
-    
+
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.imagePath.setValue(this.imgComp.imageUrl);
 
@@ -181,51 +177,45 @@ export class AdddoctorsComponent implements OnInit {
   }
   AddChild(val) {
     var obj = this.selectedSpecialityList.find(element => element.specialistID == val.specialistID);
-     debugger
-     if (val.specialistID != null) {
-//if (!this.DoctorSchedule.find(element => element.specialistID == val.specialistID)) {
-         this.DoctorSchedule.push({
-          specialistID:val.specialistID, 
-          name: obj.name,
-           dayName: val.dayName,
-           timeSlot:val.timeSlot,
-         });
-       /*}*/
-       //else {
-       //  alert("Item already added in list")
-       //}
-       this.clearSpec();
-     }    
-   }
-   clearSpec() {
+    if (val.specialistID != null) {
+      //if (!this.DoctorSchedule.find(element => element.specialistID == val.specialistID)) {
+      this.DoctorSchedule.push({
+        specialistID: val.specialistID,
+        name: obj.name,
+        dayName: val.dayName,
+        timeSlot: val.timeSlot,
+      });
+      /*}*/
+      //else {
+      //  alert("Item already added in list")
+      //}
+      this.clearSpec();
+    }
+  }
+  clearSpec() {
     this.spec.name = "";
     this.spec.dayName = "";
     this.spec.timeSlot = "";
 
   }
-   AddProfileChild(val) {       
-    debugger   
+  AddProfileChild(val) {
     var obj = this.selectedSpecialityList.find(element => element.specialistID == val.specialistID);
-      if (val != null) {
-        
-          this.DoctorProfiles.push({
-            name: obj.name,
-            specialistID:val.specialistID,
-            fees: val.fees,
-            profile: val.profile,            
-          });
-      }
-        else {
-          alert("Item already added in list")
-        }
-        this.clear();
-      }
-      clear() {
-        this.drProfile.fees = 0;
-        this.drProfile.profile = "";
-    
-      }
-   
-  }
+    if (val != null) {
 
- 
+      this.DoctorProfiles.push({
+        name: obj.name,
+        specialistID: val.specialistID,
+        fees: val.fees,
+        profile: val.profile,
+      });
+    }
+    else {
+      alert("Item already added in list")
+    }
+    this.clear();
+  }
+  clear() {
+    this.drProfile.fees = 0;
+    this.drProfile.profile = "";
+  }
+}

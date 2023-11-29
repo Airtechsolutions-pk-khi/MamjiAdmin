@@ -54,7 +54,6 @@ export class DoctorComponent implements OnInit {
   }
 
   getData() {
-    debugger
     this.service.getAllData();
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
@@ -90,7 +89,6 @@ export class DoctorComponent implements OnInit {
     });
   }
   open(content, obj) {
-    debugger
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
       if (result === 'yes') {

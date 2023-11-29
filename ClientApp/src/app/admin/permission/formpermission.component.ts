@@ -56,7 +56,6 @@ export class FormPermissionComponent implements OnInit {
   }
 
   private editForm(obj) {
-    debugger
     this.f.notification.setValue(obj.notification == 1 ? true : false);
     this.f.doctor.setValue(obj.doctor == 1 ? true : false);
     this.f.mamjiUser.setValue(obj.mamjiUser == 1 ? true : false);
@@ -74,19 +73,17 @@ export class FormPermissionComponent implements OnInit {
   }
 
   onSelect(formName) {
-    debugger
     this.permissionService.getById(formName).subscribe(res => {
       //Set Forms
       if (res != null) {
         this.editForm(res);
         this.formName = res[0];
       }
-      debugger
+
     });
   }
 
   onSubmit() {
-    debugger
     {
       this.permissionForm.markAllAsTouched();
       this.submitted = true;
@@ -116,9 +113,7 @@ export class FormPermissionComponent implements OnInit {
     }
   }
   private loadUser() {
-    debugger
     this.userService.loadUser().subscribe((res: any) => {
-      debugger
       this.UserList = res;
     });
 

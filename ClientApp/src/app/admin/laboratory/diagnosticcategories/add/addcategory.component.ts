@@ -47,7 +47,6 @@ export class AddCategoryComponent implements OnInit {
     });
   }
   private editForm(obj) {
-    debugger
     this.f.categoryName.setValue(obj.categoryName);
     this.f.image.setValue(obj.image);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
@@ -68,7 +67,6 @@ export class AddCategoryComponent implements OnInit {
     })
   }
   onSubmit() {
-    debugger
     this.categoryForm.markAllAsTouched();
     this.submitted = true;
     if (this.categoryForm.invalid) { return; }

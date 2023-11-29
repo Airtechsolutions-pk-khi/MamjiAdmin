@@ -69,7 +69,6 @@ export class NotificationComponent implements OnInit {
     this.service.sortDirection = direction;
   }
   updateStatus(item) {
-    debugger
     item.isRead = 1 ? true : false;
     //Update 
     this.service.status(item).subscribe(data => {

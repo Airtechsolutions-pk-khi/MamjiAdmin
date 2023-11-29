@@ -30,6 +30,7 @@ export class UploadreportComponent implements OnInit {
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
   locationSubscription: Subscription;
   submit: boolean;
+  userName = "";
 
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
   constructor(public service: LaboratoryService,
@@ -39,7 +40,7 @@ export class UploadreportComponent implements OnInit {
     public router: Router,
     private http: HttpClient,
     private modalService: NgbModal) {  
-      
+    this.userName = this.ls.getSelectedBrand().userName;
       this.loading$ = service.loading$;
       this.submit = false;
   }
@@ -53,7 +54,6 @@ export class UploadreportComponent implements OnInit {
   }
 
   getData() {
-    debugger
     this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
     this.data$ = this.service.data$;
     this.total$ = this.service.total$;
@@ -83,6 +83,8 @@ export class UploadreportComponent implements OnInit {
     this.router.navigate(["admin/laboratory/uploadreport/edit", medicine]);
   }
   Delete(obj) {
+    debugger
+    obj.userName = this.userName;
     this.service.delete(obj).subscribe((res: any) => {
       if (res != 0) {
         this.ts.showSuccess("Success", "Record deleted successfully.")
@@ -96,8 +98,7 @@ export class UploadreportComponent implements OnInit {
     });
   }
 
-  DownloadRpt(URL: string) {
-    debugger       
+  DownloadRpt(URL: string) {      
      var pth = URL.replace("/ClientApp/dist/assets/Upload/pdfFiles/","ClientApp/dist/assets/Upload/pdfFiles/");
      //var rptName = pth.replace("pdfFiles/","");
 

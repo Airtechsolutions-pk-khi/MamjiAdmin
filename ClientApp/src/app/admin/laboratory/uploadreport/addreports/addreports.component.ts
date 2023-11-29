@@ -33,7 +33,6 @@ export class AddreportsComponent implements OnInit {
   uploadSuccess: boolean;
 
   onFileChange(files: File[]) {
-    debugger
     this.selectedFile = files[0];
   }
 
@@ -89,22 +88,18 @@ export class AddreportsComponent implements OnInit {
   }
 
   search() {
-    debugger
     console.log('Searching for registration number:', this.formData.registrationNo);
     if (this.formData.registrationNo) {
       this.loadingReport = true;
       this.laboratoryService.getDetail(this.formData.registrationNo).subscribe(res => {
-        debugger
         //Set Forms
         this.editForm(res);
-        debugger;
         this.loadingReport = false;
       });
     }
   }
 
   refresh() {
-    debugger
     this.router.navigate(['/admin/laboratory/uploadreport/addreports']);
     this.formData = {
       customerID: '',
@@ -125,7 +120,6 @@ export class AddreportsComponent implements OnInit {
   get f() { return this.reportForm.controls; }
 
   private createForm() {
-    debugger
     this.reportForm = this.formBuilder.group({
       statusID: [true],
       customerID: 0,
@@ -137,7 +131,6 @@ export class AddreportsComponent implements OnInit {
     });
   }
   private editForm(obj) {
-    debugger
     if (obj.name != null) {
       this.formData.name = obj.name;
     } else {
@@ -160,7 +153,6 @@ export class AddreportsComponent implements OnInit {
         this.laboratoryService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
-          debugger;
           this.loadingReport = false;
         });
       }
@@ -168,7 +160,6 @@ export class AddreportsComponent implements OnInit {
   }
 
   onSubmit() {
-    debugger
     if (parseInt(this.f.laboratoryID.value) === 0) {
       const formData1 = new FormData();
       formData1.append('name', this.formData.name);
@@ -212,7 +203,7 @@ export class AddreportsComponent implements OnInit {
   //private loadCustomer() {
   //  debugger
   //  this.laboratoryService.loadCustomer().subscribe((res: any) => {
-  //    debugger;
+  //    
   //    this.CustomerList = res;
 
   //  });
@@ -220,7 +211,7 @@ export class AddreportsComponent implements OnInit {
   //private loadRNo() {
   //  debugger
   //  this.laboratoryService.loadRNo().subscribe((res: any) => {
-  //    debugger;
+  //    
   //    this.RegistrationList = res;
 
   //  });

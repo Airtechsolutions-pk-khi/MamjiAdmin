@@ -29,12 +29,12 @@ export class SignalrService {
     await this.hubConnection.start();
 
     this.hubConnection.on('privateMessageMethodName', (data) => {
-      debugger;
+      
       console.log('private Message:' + data);
     });
 
     this.hubConnection.on('publicMessageMethodName', (data: Notification) => {
-      debugger;
+      
       console.log('public Message:' + data.message);
       this.ts.showToast(data.title, data.message);
       // this.ts.showWarning(data.title, data.message);
@@ -43,12 +43,12 @@ export class SignalrService {
     });
 
     this.hubConnection.on('clientMethodName', (data) => {
-      debugger;
+      
       console.log('server message:' + data);
     });
 
     this.hubConnection.on('WelcomeMethodName', (data) => {
-      debugger;
+      
       console.log('client Id:' + data);
       this.hubConnection.invoke('GetDataFromClient', 'abc@abc.com', data).catch(err => console.log(err));
     });

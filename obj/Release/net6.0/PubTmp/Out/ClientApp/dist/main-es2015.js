@@ -283,7 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalSales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayNursingAppointments}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Today Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Content Row -->\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\">\r\n    <alert></alert>\r\n  </div>\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-primary shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-orange text-uppercase mb-1\">Total Doctors</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctors}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Total Patients</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalPatients}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pending Requests Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Total Dr.Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.totalDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-calendar fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-info text-uppercase mb-1\">Total Nursing Appointment</div>\r\n            <div class=\"row no-gutters align-items-center\">\r\n              <div class=\"col-auto\">\r\n                <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">{{dashboardSummary.totalNursingAppointments}}\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-clipboard-list fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!-- Earnings (Monthly) Card Example -->\r\n  <div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-warning shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">Today Sale's</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-dollar-sign fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-info shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Today Doctor Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayDoctorAppointments}}</div>\r\n          </div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-list-ul fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-success shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-success text-uppercase mb-1\">Todays Nursing Appointments</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todayNursingAppointments}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-address-card fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n  <!--<div class=\"col-xl-3 col-md-6 mb-4\">\r\n    <div class=\"card border-left-danger shadow h-100 py-2\">\r\n      <div class=\"card-body\">\r\n        <div class=\"row no-gutters align-items-center\">\r\n          <div class=\"col mr-2\">\r\n            <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Today Sales</div>\r\n            <div class=\"h5 mb-0 font-weight-bold text-gray-800\">{{dashboardSummary.todaySales}}</div>-->\r\n  <!--<div class=\"h5 mb-0 font-weight-bold text-gray-800\">0</div>-->\r\n  <!--</div>\r\n          <div class=\"col-auto\">\r\n            <i class=\"fas fa-tablet fa-2x text-gray-300\"></i>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>-->\r\n</div>\r\n\r\n<div class=\"row\">\r\n\r\n  <!-- Area Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Overview</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body\">\r\n        <div class=\"w-100 h-100 \">\r\n          <div style=\"text-align:center\">\r\n            <div id=\"chart\">\r\n              <apx-chart [series]=\"chartOptions.series\" [chart]=\"chartOptions.chart\"\r\n                [dataLabels]=\"chartOptions.dataLabels\" [plotOptions]=\"chartOptions.plotOptions\"\r\n                [yaxis]=\"chartOptions.yaxis\" [xaxis]=\"chartOptions.xaxis\" [legend]=\"chartOptions.legend\"\r\n                [colors]=\"chartOptions.colors\" [grid]=\"chartOptions.grid\">\r\n              </apx-chart>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Pie Chart -->\r\n  <div class=\"col-xl-6 col-lg-6\">\r\n    <div class=\"card shadow mb-4\">\r\n      <!-- Card Header - Dropdown -->\r\n      <div class=\"card-header py-3 d-flex flex-row align-items-center justify-content-between\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Pharmacy Sales</h6>\r\n      </div>\r\n      <!-- Card Body -->\r\n      <div class=\"card-body p-0\">\r\n        <div id=\"chart\">\r\n          <apx-chart [series]=\"lineChartOptions.series\" [chart]=\"lineChartOptions.chart\"\r\n            [xaxis]=\"lineChartOptions.xaxis\" [stroke]=\"lineChartOptions.stroke\" [tooltip]=\"lineChartOptions.tooltip\"\r\n            [dataLabels]=\"lineChartOptions.dataLabels\" [fill]=\"lineChartOptions.fill\" [yaxis]=\"lineChartOptions.yaxis\"\r\n            [title]=\"lineChartOptions.title\">\r\n          </apx-chart>\r\n        </div>\r\n\r\n        <div class=\"mt-4 text-center small\">\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -322,7 +322,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<style>\r\n  input[type=\"file\" i] {\r\n    appearance: none;\r\n    background-color: initial;\r\n    cursor: default;\r\n    align-items: baseline;\r\n    color: inherit;\r\n    text-overflow: ellipsis;\r\n    text-align: start !important;\r\n    padding: initial;\r\n    border: 1px solid #ced4da;\r\n    white-space: pre;\r\n    overflow: hidden !important;\r\n    width: 100%;\r\n    border-radius: 5px;\r\n  }\r\n</style>\r\n\r\n\r\n<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form class=\"form\" (ngSubmit)=\"onSubmit()\" #myForm=\"ngForm\">\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Registration #</label>\r\n                  <input type=\"text\" class=\"form-control\" name=\"registrationNo\" [(ngModel)]=\"formData.registrationNo\"/>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Lab Reference #</label>\r\n                  <input type=\"text\" class=\"form-control\" name=\"referenceNo\" [(ngModel)]=\"formData.referenceNo\"/>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <input type=\"file\" (change)=\"onFileChange($event.target.files)\" style=\"margin-top: 32px; \" />\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Patient Name</label>\r\n                  <input type=\"text\" class=\"form-control\" name=\"name\" [(ngModel)]=\"formData.name\" required />\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Category</label>\r\n                  <ng-select [items]=\"CategoryList\" bindLabel=\"categoryName\" bindValue=\"diagnosticCatID\" [multiple]=\"false\" placeholder=\"--Select Diagnostic Category--\" (change)=\"onDiagnosticSelect(formData.diagnosticCatID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.diagnosticCatID\">\r\n                  </ng-select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<style>\r\n  input[type=\"file\" i] {\r\n    appearance: none;\r\n    background-color: initial;\r\n    cursor: default;\r\n    align-items: baseline;\r\n    color: inherit;\r\n    text-overflow: ellipsis;\r\n    text-align: start !important;\r\n    padding: initial;\r\n    border: 1px solid #ced4da;\r\n    white-space: pre;\r\n    overflow: hidden !important;\r\n    width: 100%;\r\n    border-radius: 5px;\r\n  }\r\n</style>\r\n\r\n\r\n<h1 class=\"h3 mb-2 text-gray-800\">Upload Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form class=\"form\" (ngSubmit)=\"onSubmit()\" #myForm=\"ngForm\">\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Report Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Registration #</label>\r\n                  <!--<input type=\"text\" class=\"form-control\" name=\"registrationNo\" [(ngModel)]=\"formData.registrationNo\"/>-->\r\n                  <div class=\"input-group\">\r\n                    <input type=\"text\" class=\"form-control\" placeholder=\"Enter Registration#\" name=\"registrationNo\" [(ngModel)]=\"formData.registrationNo\" [disabled]=\"formData.customerID>0?true: false\">\r\n                    <div class=\"input-group-append\">\r\n                      <button class=\"btn btn-secondary\" type=\"button\" (click)=\"search()\">\r\n                        <i class=\"fa fa-search\"></i>\r\n                      </button>\r\n                      <button class=\"btn btn-info\" type=\"button\" (click)=\"refresh()\">\r\n                        <i class=\"fa fa-recycle\"></i>\r\n                      </button>\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Lab Reference #</label>\r\n                  <input type=\"text\" class=\"form-control\" name=\"referenceNo\" [(ngModel)]=\"formData.referenceNo\" placeholder=\"Enter Lab Reference#\" />\r\n                </div>\r\n              </div>\r\n\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <input type=\"file\" (change)=\"onFileChange($event.target.files)\" style=\"margin-top: 32px; \" />\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"form-group col-md-6\">\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Patient Name</label>\r\n                  <input type=\"text\" class=\"form-control\" name=\"name\" [(ngModel)]=\"formData.name\" required placeholder=\"Enter Patient Name\" />\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputUsername\">Diagnostic Category</label>\r\n                  <ng-select [items]=\"CategoryList\" bindLabel=\"categoryName\" bindValue=\"diagnosticCatID\" [multiple]=\"false\" placeholder=\"--Select Diagnostic Category--\" (change)=\"onDiagnosticSelect(formData.diagnosticCatID)\" [ngModelOptions]=\"{standalone: true}\" [(ngModel)]=\"formData.diagnosticCatID\">\r\n                  </ng-select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -335,7 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\"col-md-8 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-7 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-1 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n\r\n            <th width=\"20%\">Report</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Registration #</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Lab Reference #</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Patient Name</th>\r\n            <th width=\"15%\" sortable=\"LabReference\">Category</th>\r\n            <th width=\"10%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n\r\n              <button class=\"btnDownload\" (click)=\"DownloadRpt(item.image)\"><i class=\"fa fa-download\"></i> Download Report</button>\r\n\r\n              <!-- <a href=\"http://localhost:59660/assets/pdf/zzz.pdf\" Download=\"ABC.pdf\">Download the PDF</a> -->\r\n              <!-- <a (click)=\"DownloadRpt(item.image)\"><i class=\"fas fa-fw fa-edit\"></i></a> -->\r\n              <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> -->\r\n            </td>\r\n\r\n            <td>{{item.registrationNo}}</td>\r\n            <td>{{item.labReferenceNo}}</td>\r\n            <td>{{item.name}}</td>\r\n            <td>{{item.categoryName}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <!-- <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              <!--<a title=\"Delete\" (click)=\"open(content,item.laboratoryID)\" href=\"javascript:void(0);\">Delete</a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Laboratory Reports</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Lab Reports List</h6>\r\n      </div>\r\n      <div class=\"col-md-8 form-group text-right\">\r\n        <!--<button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\">\r\n          <span translate>Export</span>\r\n        </button>-->\r\n        <button [routerLink]=\"['addreports']\" class=\"btn btn-primary mr-1\">\r\n          Upload Report\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-7 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-1 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n\r\n            <th width=\"20%\">Report</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Registration #</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Lab Reference #</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Patient Name</th>\r\n            <th width=\"15%\" sortable=\"LabReference\">Category</th>\r\n            <th width=\"20%\" sortable=\"LabReference\">Upload By</th>\r\n            <th width=\"10%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n\r\n              <button class=\"btnDownload\" (click)=\"DownloadRpt(item.image)\"><i class=\"fa fa-download\"></i> Download</button>\r\n\r\n              <!-- <a href=\"http://localhost:59660/assets/pdf/zzz.pdf\" Download=\"ABC.pdf\">Download the PDF</a> -->\r\n              <!-- <a (click)=\"DownloadRpt(item.image)\"><i class=\"fas fa-fw fa-edit\"></i></a> -->\r\n              <!-- <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> -->\r\n            </td>\r\n\r\n            <td>{{item.registrationNo}}</td>\r\n            <td>{{item.labReferenceNo}}</td>\r\n            <td>{{item.name}}</td>\r\n            <td>{{item.categoryName}}</td>\r\n            <td>{{item.lastUpdatedBy}}</td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n              <!-- <a (click)=\"Edit(item.laboratoryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a> -->\r\n              <!--<a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>-->\r\n              <a (click)=\"open(content,item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n              <!--<a title=\"Delete\" (click)=\"open(content,item.laboratoryID)\" href=\"javascript:void(0);\">Delete</a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n  <div class=\"modal-header\">\r\n    <h4 class=\"modal-title\" id=\"modal-basic-title\">Confirmation</h4>\r\n    <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"d('Cross click')\">\r\n      <span aria-hidden=\"true\">×</span>\r\n    </button>\r\n  </div>\r\n  <div class=\"modal-body\">\r\n    <p>Are you sure to delete this?</p>\r\n  </div>\r\n  <div class=\"modal-footer\">\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"d('Cross click')\">No</button>\r\n    <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('yes')\">Yes</button>\r\n  </div>\r\n</ng-template>\r\n");
 
 /***/ }),
 
@@ -582,7 +582,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"prescriptionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Prescription Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Order #</label>\r\n                <input type=\"text\" class=\"form-control\" id=prescriptionID placeholder=\"\" formControlName=\"prescriptionID\" readonly>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=customerName placeholder=\"\" formControlName=\"customerName\" readonly>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Mobile</label>\r\n                <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\" readonly>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n                  <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\" readonly>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Notes</label>\r\n                  <input type=\"text\" class=\"form-control\" id=note placeholder=\"\" formControlName=\"note\" readonly>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Upload Date</label>\r\n                  <input type=\"text\" class=\"form-control\" id=createdOn placeholder=\"\" formControlName=\"createdOn\" readonly>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Prescription Status</label>\r\n                  <select class=\"form-control\" formControlName=\"statusID\">\r\n                    <option value=\"101\">Pending</option>\r\n                    <option value=\"102\">Approved</option>\r\n                    <option value=\"103\">Completed</option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageview></app-imageview>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-success\" type=\"submit\">Save</button>\r\n          &nbsp;\r\n          &nbsp;\r\n          <button class=\"btn btn-danger\" type=\"button\" (click)=\"goBack()\">Back</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Add Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n<form [formGroup]=\"prescriptionForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Prescription Details</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Order #</label>\r\n                <input type=\"text\" class=\"form-control\" id=prescriptionID placeholder=\"\" formControlName=\"prescriptionID\" readonly>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Customer Name</label>\r\n                <input type=\"text\" class=\"form-control\" id=customerName placeholder=\"\" formControlName=\"customerName\" readonly>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Mobile</label>\r\n                <input type=\"text\" class=\"form-control\" id=mobile placeholder=\"\" formControlName=\"mobile\" readonly>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputFirstName\">Address</label>\r\n                  <input type=\"text\" class=\"form-control\" id=address placeholder=\"\" formControlName=\"address\" readonly>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Notes</label>\r\n                  <input type=\"text\" class=\"form-control\" id=note placeholder=\"\" formControlName=\"note\" readonly>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Upload Date</label>\r\n                  <input type=\"text\" class=\"form-control\" id=createdOn placeholder=\"\" formControlName=\"createdOn\" readonly>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLastName\">Prescription Status</label>\r\n                  <select class=\"form-control\" formControlName=\"statusID\">\r\n                    <option value=\"101\">Pending</option>\r\n                    <option value=\"102\">Approved</option>\r\n                    <option value=\"103\">Cancelled</option>\r\n                    <option value=\"100\">Completed</option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageview></app-imageview>\r\n            </div>\r\n          </div>\r\n\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-success\" type=\"submit\">Save</button>\r\n          &nbsp;\r\n          &nbsp;\r\n          <button class=\"btn btn-danger\" type=\"button\" (click)=\"goBack()\">Back</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -595,7 +595,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <!--<div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>-->\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-7 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-1 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"fullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td>\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.statusID == 101\">Pending</span>\r\n\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.statusID == 102\">Approved</span>\r\n\r\n              <span class=\"badge badge-info\"\r\n                    *ngIf=\"item.statusID == 103\">Completed</span>\r\n\r\n              <span class=\"badge badge-dark\"\r\n                    *ngIf=\"![101, 102, 103].includes(item.statusID)\">-</span>\r\n            </td>\r\n            <!--<td>\r\n            <ngb-highlight [ngClass]=\"{'btn-warning': item.statusID === 1, 'btn-success':item.statusID === 2, 'btn-primary': item.statusID ===3 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Pending':item.statusID ==2?'Approved':'Completed'\" [term]=\"service.searchTerm\">\r\n            </ngb-highlight>\r\n          </td>-->\r\n            <td>\r\n              <a download=\"sd\" href=\"{{item.image}}\" target=\"_blank\" title=\"ImageName\">\r\n                <i class=\"fas fa-fw fa-download\" download></i>\r\n              </a>\r\n              &nbsp;\r\n              <a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Prescription</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Prescription List</h6>\r\n      </div>\r\n      <!--<div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>-->\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-7 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-1 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">IMAGE</th>\r\n            <th width=\"15%\" sortable=\"fullName\">Customer Name </th>\r\n            <th width=\"15%\" sortable=\"Mobile\">Mobile </th>\r\n            <th width=\"15%\" sortable=\"Address\">Address </th>\r\n            <th width=\"15%\" sortable=\"Notes\">Notes </th>\r\n            <th width=\"15%\" sortable=\"Status\">Aproved By </th>\r\n            <th width=\"15%\" sortable=\"Status\">Status </th>\r\n            <th width=\"10%\">Action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>\r\n              <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n              <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n            <td> {{item.customerName}} </td>\r\n            <td> {{item.mobile}} </td>\r\n            <td> {{item.address}} </td>\r\n            <td> {{item.note}} </td>\r\n            <td> {{item.lastUpdatedBy}} </td>\r\n            <td>\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.statusID == 101\">Pending</span>\r\n\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.statusID == 102\">Approved</span>\r\n\r\n              <span class=\"badge badge-danger\"\r\n                    *ngIf=\"item.statusID == 103\">Cancelled</span>\r\n\r\n              <span class=\"badge badge-info\"\r\n                    *ngIf=\"item.statusID == 100\">Completed</span>\r\n\r\n              <span class=\"badge badge-dark\"\r\n                    *ngIf=\"![101, 102, 103, 100].includes(item.statusID)\">-</span>\r\n            </td>\r\n            <!--<td>\r\n            <ngb-highlight [ngClass]=\"{'btn-warning': item.statusID === 1, 'btn-success':item.statusID === 2, 'btn-primary': item.statusID ===3 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Pending':item.statusID ==2?'Approved':'Completed'\" [term]=\"service.searchTerm\">\r\n            </ngb-highlight>\r\n          </td>-->\r\n            <td>\r\n              <a download=\"sd\" href=\"{{item.image}}\" target=\"_blank\" title=\"ImageName\">\r\n                <i class=\"fas fa-fw fa-download\" download></i>\r\n              </a>\r\n              &nbsp;\r\n              <a (click)=\"Edit(item.prescriptionID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -608,7 +608,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-7 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-1 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n            <th width=\"25%\" sortable=\"FullName\"> Patient Name </th>\r\n            <!--<th width=\"10%\" sortable=\"Address\"> Address </th>-->\r\n            <!--<th width=\"10%\" sortable=\"Email\"> Email </th>-->\r\n            <th width=\"10%\" sortable=\"Mobile\"> Mobile </th>\r\n            <!--<th width=\"10%\" sortable=\"Fees\"> Fees </th>-->\r\n            <th width=\"15%\" sortable=\"BookingTime\"> Booking Date/Time </th>\r\n            <th width=\"15%\" sortable=\"BookingDate\"> Appointment Date </th>\r\n            <th width=\"20%\" sortable=\"Timeslot\"> Appointment Slot</th>\r\n            <th width=\"20%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n            <th width=\"15%\" sortable=\"Status\"> Status </th>\r\n            <th width=\"10%\">Action</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.appointmentNo}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <!--<td> {{item.address}} </td>-->\r\n            <!--<td> {{item.email}} </td>-->\r\n            <td> {{item.mobile}} </td>\r\n            <!--<td> {{item.fees}} </td>-->\r\n            <td> {{item.createdOn | date: 'dd/MM/yyyy hh:mm:ss'}} </td>\r\n            <td> {{item.bookingDate}} </td>\r\n            <td> {{item.timeslot}} </td>\r\n            <td>\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.appointmentStatus == 101\">Pending</span>\r\n\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.appointmentStatus == 102\">Approved</span>\r\n\r\n              <span class=\"badge badge-danger\"\r\n                    *ngIf=\"item.appointmentStatus == 103\">Cancelled</span>\r\n\r\n              <span class=\"badge badge-info\"\r\n                    *ngIf=\"item.appointmentStatus == 100\">Completed</span>\r\n\r\n              <span class=\"badge badge-dark\"\r\n                    *ngIf=\"![101, 102, 103, 100].includes(item.appointmentStatus)\">-</span>\r\n            </td>\r\n            <!--<td>\r\n              {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 100 ?\"Completed\": \"-\"}}\r\n            </td>-->\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n            <td>\r\n              <a (click)=\"View(item.appointmentID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n  function handleDropDownEvents(e) {\r\n    if (e.value == \"CreditCard\") {\r\n      showCreditCardMethod();\r\n    }\r\n    else if (e.value == \"SendPayment\") {\r\n      showSendPaymentMethod();\r\n    }\r\n  }\r\n</script>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Doctor Appoinment</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Doctor Appoinment List</h6>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-7 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n      <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n      <div class=\"col-md-1 form-group text-right\">\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\" sortable=\"AppointmentNo\"> Appoint. No.</th>\r\n            <th width=\"25%\" sortable=\"FullName\"> Patient Name </th>\r\n            <!--<th width=\"10%\" sortable=\"Address\"> Address </th>-->\r\n            <!--<th width=\"10%\" sortable=\"Email\"> Email </th>-->\r\n            <th width=\"10%\" sortable=\"Mobile\"> Mobile </th>\r\n            <!--<th width=\"10%\" sortable=\"Fees\"> Fees </th>-->\r\n            <th width=\"15%\" sortable=\"BookingTime\"> Booking Date/Time </th>\r\n            <th width=\"15%\" sortable=\"BookingDate\"> Appointment Date </th>\r\n            <th width=\"20%\" sortable=\"Timeslot\"> Appointment Slot</th>\r\n            <th width=\"20%\" sortable=\"AppointmentStatus\"> Appointment Status </th>\r\n            <th width=\"15%\" sortable=\"Status\"> Approved By </th>\r\n            <th width=\"10%\">Action</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td> {{item.appointmentNo}} </td>\r\n            <td> {{item.fullName}} </td>\r\n            <!--<td> {{item.address}} </td>-->\r\n            <!--<td> {{item.email}} </td>-->\r\n            <td> {{item.mobile}} </td>\r\n            <!--<td> {{item.fees}} </td>-->\r\n            <td> {{item.createdOn | date: 'dd/MM/yyyy hh:mm:ss'}} </td>\r\n            <td> {{item.bookingDate}} </td>\r\n            <td> {{item.timeslot}} </td>\r\n            <td>\r\n              <span class=\"badge badge-warning\"\r\n                    *ngIf=\"item.appointmentStatus == 101\">Pending</span>\r\n\r\n              <span class=\"badge badge-success\"\r\n                    *ngIf=\"item.appointmentStatus == 102\">Approved</span>\r\n\r\n              <span class=\"badge badge-danger\"\r\n                    *ngIf=\"item.appointmentStatus == 103\">Cancelled</span>\r\n\r\n              <span class=\"badge badge-info\"\r\n                    *ngIf=\"item.appointmentStatus == 100\">Completed</span>\r\n\r\n              <span class=\"badge badge-dark\"\r\n                    *ngIf=\"![101, 102, 103, 100].includes(item.appointmentStatus)\">-</span>\r\n            </td>\r\n            <!--<td>\r\n              {{ item.appointmentStatus == 101 ?\"Pending\":item.appointmentStatus == 102 ? \"Approved\" : item.appointmentStatus==103 ?\"Cancelled\" : item.appointmentStatus == 100 ?\"Completed\": \"-\"}}\r\n            </td>-->\r\n          <td>\r\n            {{item.lastUpdatedBy}}\r\n          </td>\r\n            <td>\r\n              <a (click)=\"View(item.appointmentID)\"><i class=\"fas fa-fw fa-eye\"></i> </a>\r\n              <!--<a (click)=\"Edit(item.appointmentID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>-->\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<script type=\"text/javascript\">\r\n  function handleDropDownEvents(e) {\r\n    if (e.value == \"CreditCard\") {\r\n      showCreditCardMethod();\r\n    }\r\n    else if (e.value == \"SendPayment\") {\r\n      showSendPaymentMethod();\r\n    }\r\n  }\r\n</script>\r\n");
 
 /***/ }),
 
@@ -1773,11 +1773,9 @@ let SignalrService = class SignalrService {
                 .withUrl(`${domain}/Notify`).build();
             yield this.hubConnection.start();
             this.hubConnection.on('privateMessageMethodName', (data) => {
-                debugger;
                 console.log('private Message:' + data);
             });
             this.hubConnection.on('publicMessageMethodName', (data) => {
-                debugger;
                 console.log('public Message:' + data.message);
                 this.ts.showToast(data.title, data.message);
                 // this.ts.showWarning(data.title, data.message);
@@ -1785,11 +1783,9 @@ let SignalrService = class SignalrService {
                 // alert(data.message);
             });
             this.hubConnection.on('clientMethodName', (data) => {
-                debugger;
                 console.log('server message:' + data);
             });
             this.hubConnection.on('WelcomeMethodName', (data) => {
-                debugger;
                 console.log('client Id:' + data);
                 this.hubConnection.invoke('GetDataFromClient', 'abc@abc.com', data).catch(err => console.log(err));
             });
@@ -2068,6 +2064,7 @@ let AppointmentService = class AppointmentService {
         console.log(url);
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
             this.http.get(url).subscribe(res => {
+                debugger;
                 this.appointments = res;
                 this._data$.next(this.appointments);
                 this._allData$.next(this.appointments);
@@ -3217,7 +3214,6 @@ let CustomersService = class CustomersService {
         }));
     }
     delete(data) {
-        debugger;
         return this.http.post(`api/customer/delete`, data);
     }
 };
@@ -4195,6 +4191,9 @@ let LaboratoryService = class LaboratoryService {
     getById(id) {
         return this.http.get(`api/Laboratory/Laboratory/${id}`);
     }
+    getDetail(registrationNo) {
+        return this.http.get(`api/Laboratory/Detail/${registrationNo}`);
+    }
     uploadPDF(file) {
         debugger;
         const formData = new FormData();
@@ -4499,7 +4498,6 @@ let LocationsService = class LocationsService {
         };
     }
     insert(data) {
-        debugger;
         return this.http.post(`api/location/insertlocation`, data)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             console.log(res);
@@ -4507,7 +4505,6 @@ let LocationsService = class LocationsService {
         }));
     }
     update(updateData) {
-        debugger;
         return this.http.post(`api/location/update`, updateData)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             console.log(res);
@@ -6069,7 +6066,6 @@ let ReportService = class ReportService {
     set sortColumn(sortColumn) { this._set({ sortColumn }); }
     set sortDirection(sortDirection) { this._set({ sortDirection }); }
     get data$() {
-        debugger;
         return this._data$.asObservable();
     }
     get allData$() {
@@ -6830,7 +6826,6 @@ let AddbrandComponent = class AddbrandComponent {
         });
     }
     onSubmit() {
-        debugger;
         this.brandForm.markAllAsTouched();
         this.submitted = true;
         if (this.brandForm.invalid) {
@@ -6870,11 +6865,9 @@ let AddbrandComponent = class AddbrandComponent {
     selectFile(event) {
         this.fileData = event.target.files[0];
         if (this.fileData.type == 'image/jpeg' || this.fileData.type == 'image/jpeg' || this.fileData.type == 'image/jpg') {
-            debugger;
             const reader = new FileReader();
             reader.readAsDataURL(this.fileData);
             reader.onload = () => {
-                debugger;
                 this.imageBgUrl = reader.result;
                 this.f.companyURl.setValue(this.imageBgUrl);
             };
@@ -7092,7 +7085,6 @@ let AddlocationComponent = class AddlocationComponent {
     }
     get f() { return this.locationForm.controls; }
     createForm() {
-        debugger;
         this.locationForm = this.formBuilder.group({
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             email: [''],
@@ -7119,7 +7111,6 @@ let AddlocationComponent = class AddlocationComponent {
         });
     }
     editForm(obj) {
-        debugger;
         this.f.name.setValue(obj.name);
         this.f.email.setValue(obj.email);
         this.f.contactNo.setValue(obj.contactNo);
@@ -7162,7 +7153,6 @@ let AddlocationComponent = class AddlocationComponent {
         });
     }
     onSubmit() {
-        debugger;
         this.locationForm.markAllAsTouched();
         this.submitted = true;
         this.f.opentime.setValue(this.opentime.hour + ":" + this.opentime.minute);
@@ -7642,7 +7632,6 @@ let AddCategoryComponent = class AddCategoryComponent {
         });
     }
     editForm(obj) {
-        debugger;
         this.f.categoryName.setValue(obj.categoryName);
         this.f.image.setValue(obj.image);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
@@ -7663,7 +7652,6 @@ let AddCategoryComponent = class AddCategoryComponent {
         });
     }
     onSubmit() {
-        debugger;
         this.categoryForm.markAllAsTouched();
         this.submitted = true;
         if (this.categoryForm.invalid) {
@@ -7813,7 +7801,6 @@ let DiagnosticCategoriesComponent = class DiagnosticCategoriesComponent {
         this.router.navigate(["admin/laboratory/diagnosticcategory/edit", medicine]);
     }
     Delete(obj) {
-        debugger;
         this.service.delete(obj).subscribe((res) => {
             if (res != 0) {
                 this.ts.showSuccess("Success", "Record deleted successfully.");
@@ -7961,7 +7948,6 @@ let AddreportsComponent = class AddreportsComponent {
         this.loadCategories();
     }
     onFileChange(files) {
-        debugger;
         this.selectedFile = files[0];
     }
     //onCustomerSelect(customerID: string) {
@@ -7973,12 +7959,35 @@ let AddreportsComponent = class AddreportsComponent {
     onDiagnosticSelect(diagnosticCatID) {
         this.formData.diagnosticCatID = diagnosticCatID;
     }
+    search() {
+        console.log('Searching for registration number:', this.formData.registrationNo);
+        if (this.formData.registrationNo) {
+            this.loadingReport = true;
+            this.laboratoryService.getDetail(this.formData.registrationNo).subscribe(res => {
+                //Set Forms
+                this.editForm(res);
+                this.loadingReport = false;
+            });
+        }
+    }
+    refresh() {
+        this.router.navigate(['/admin/laboratory/uploadreport/addreports']);
+        this.formData = {
+            customerID: '',
+            name: '',
+            registrationNo: '',
+            referenceNo: '',
+            diagnosticCatID: '',
+            laboratoryID: '',
+            pdfFile: File = null,
+            userName: ''
+        };
+    }
     ngOnInit() {
         this.setSelectedReport();
     }
     get f() { return this.reportForm.controls; }
     createForm() {
-        debugger;
         this.reportForm = this.formBuilder.group({
             statusID: [true],
             customerID: 0,
@@ -7990,13 +7999,18 @@ let AddreportsComponent = class AddreportsComponent {
         });
     }
     editForm(obj) {
-        debugger;
-        this.formData.name = obj.name;
+        if (obj.name != null) {
+            this.formData.name = obj.name;
+        }
+        else {
+            this.formData.name = obj.fullName;
+        }
         this.formData.diagnosticCatID = obj.diagnoseCatID;
         this.pdfFilePath = obj.image;
         this.formData.laboratoryID = obj.laboratoryID;
         this.formData.referenceNo = obj.labReferenceNo;
         this.formData.registrationNo = obj.registrationNo;
+        this.formData.customerID = obj.customerID;
         this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
     }
     setSelectedReport() {
@@ -8008,19 +8022,18 @@ let AddreportsComponent = class AddreportsComponent {
                 this.laboratoryService.getById(sid).subscribe(res => {
                     //Set Forms
                     this.editForm(res);
-                    debugger;
                     this.loadingReport = false;
                 });
             }
         });
     }
     onSubmit() {
-        debugger;
         if (parseInt(this.f.laboratoryID.value) === 0) {
             const formData1 = new FormData();
             formData1.append('name', this.formData.name);
             formData1.append('referenceNo', this.formData.referenceNo);
             formData1.append('registrationNo', this.formData.registrationNo);
+            formData1.append('customerID', this.formData.customerID);
             formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
             formData1.append('file', this.selectedFile);
             formData1.append('userName', this.userName);
@@ -8035,6 +8048,7 @@ let AddreportsComponent = class AddreportsComponent {
             formData1.append('name', this.formData.name);
             formData1.append('referenceNo', this.formData.referenceNo);
             formData1.append('registrationNo', this.formData.registrationNo);
+            formData1.append('customerID', this.formData.customerID);
             formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
             formData1.append('laboratoryID', this.formData.laboratoryID);
             formData1.append('file', this.selectedFile);
@@ -8049,14 +8063,14 @@ let AddreportsComponent = class AddreportsComponent {
     //private loadCustomer() {
     //  debugger
     //  this.laboratoryService.loadCustomer().subscribe((res: any) => {
-    //    debugger;
+    //    
     //    this.CustomerList = res;
     //  });
     //}
     //private loadRNo() {
     //  debugger
     //  this.laboratoryService.loadRNo().subscribe((res: any) => {
-    //    debugger;
+    //    
     //    this.RegistrationList = res;
     //  });
     //}
@@ -8183,7 +8197,6 @@ let UploadreportComponent = class UploadreportComponent {
         this.getData();
     }
     getData() {
-        debugger;
         this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
         this.data$ = this.service.data$;
         this.total$ = this.service.total$;
@@ -8220,7 +8233,6 @@ let UploadreportComponent = class UploadreportComponent {
         });
     }
     DownloadRpt(URL) {
-        debugger;
         var pth = URL.replace("/ClientApp/dist/assets/Upload/pdfFiles/", "ClientApp/dist/assets/Upload/pdfFiles/");
         //var rptName = pth.replace("pdfFiles/","");
         //local
@@ -8379,7 +8391,6 @@ let AdddoctorsComponent = class AdddoctorsComponent {
     }
     editForm(obj1) {
         var obj = obj1[0];
-        debugger;
         this.f.fullName.setValue(obj.fullName);
         this.f.urduName.setValue(obj.urduName);
         this.f.email.setValue(obj.email);
@@ -8391,7 +8402,6 @@ let AdddoctorsComponent = class AdddoctorsComponent {
         this.f.education.setValue(obj.education);
         this.f.statusID.setValue(obj.statusID === 1 ? true : false);
         if (obj.doctorProfiles != "") {
-            debugger;
             this.DoctorProfiles = obj.doctorProfiles;
         }
         if (obj.doctorTimings != "") {
@@ -8418,13 +8428,11 @@ let AdddoctorsComponent = class AdddoctorsComponent {
         });
     }
     loadTimeSlotsAll() {
-        debugger;
         this.appointmentService.loadTimeLists().subscribe((res) => {
             this.selectedTimeList = res;
         });
     }
     onSubmit() {
-        debugger;
         this.doctorForm.markAllAsTouched();
         this.submitted = true;
         if (this.doctorForm.invalid) {
@@ -8473,7 +8481,6 @@ let AdddoctorsComponent = class AdddoctorsComponent {
     }
     AddChild(val) {
         var obj = this.selectedSpecialityList.find(element => element.specialistID == val.specialistID);
-        debugger;
         if (val.specialistID != null) {
             //if (!this.DoctorSchedule.find(element => element.specialistID == val.specialistID)) {
             this.DoctorSchedule.push({
@@ -8495,7 +8502,6 @@ let AdddoctorsComponent = class AdddoctorsComponent {
         this.spec.timeSlot = "";
     }
     AddProfileChild(val) {
-        debugger;
         var obj = this.selectedSpecialityList.find(element => element.specialistID == val.specialistID);
         if (val != null) {
             this.DoctorProfiles.push({
@@ -8619,7 +8625,6 @@ let DoctorComponent = class DoctorComponent {
         this.getData();
     }
     getData() {
-        debugger;
         this.service.getAllData();
         this.data$ = this.service.data$;
         this.total$ = this.service.total$;
@@ -8650,7 +8655,6 @@ let DoctorComponent = class DoctorComponent {
         });
     }
     open(content, obj) {
-        debugger;
         this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
             this.closeResult = `Closed with: ${result}`;
             if (result === 'yes') {
@@ -9712,7 +9716,6 @@ let ItemsettingsComponent = class ItemsettingsComponent {
     setSelecteditem() {
         this.itemsService.getTodaysItems(this.ls.getSelectedBrand().brandID)
             .subscribe((res) => {
-            debugger;
             var stringToConvert = res.items;
             this.isItemSetting = res.isItemSetting;
             this.itemSettingTitle = res.itemSettingTitle;
@@ -9739,7 +9742,6 @@ let ItemsettingsComponent = class ItemsettingsComponent {
     }
     loadItems() {
         this.itemsService.loadItems(this.ls.getSelectedBrand().brandID).subscribe((res) => {
-            debugger;
             this.ItemsList = res;
             this.setSelecteditem();
         });
@@ -10143,7 +10145,6 @@ let NotificationComponent = class NotificationComponent {
         this.service.sortDirection = direction;
     }
     updateStatus(item) {
-        debugger;
         item.isRead = 1 ? true : undefined;
         //Update 
         this.service.status(item).subscribe(data => {
@@ -10264,7 +10265,6 @@ let FormPermissionComponent = class FormPermissionComponent {
         });
     }
     editForm(obj) {
-        debugger;
         this.f.notification.setValue(obj.notification == 1 ? true : false);
         this.f.doctor.setValue(obj.doctor == 1 ? true : false);
         this.f.mamjiUser.setValue(obj.mamjiUser == 1 ? true : false);
@@ -10280,18 +10280,15 @@ let FormPermissionComponent = class FormPermissionComponent {
         //this.setSelectedPermission();
     }
     onSelect(formName) {
-        debugger;
         this.permissionService.getById(formName).subscribe(res => {
             //Set Forms
             if (res != null) {
                 this.editForm(res);
                 this.formName = res[0];
             }
-            debugger;
         });
     }
     onSubmit() {
-        debugger;
         {
             this.permissionForm.markAllAsTouched();
             this.submitted = true;
@@ -10322,9 +10319,7 @@ let FormPermissionComponent = class FormPermissionComponent {
         }
     }
     loadUser() {
-        debugger;
         this.userService.loadUser().subscribe((res) => {
-            debugger;
             this.UserList = res;
         });
         // this.UserList = [
@@ -11429,6 +11424,7 @@ let AppointmentComponent = class AppointmentComponent {
         this.excelService = excelService;
         this.ts = ts;
         this.router = router;
+        this.userName = "";
         //this.selectedDoctor =this.ls.getSelectedAppointment().appointmentID;
         this.loading$ = service.loading$;
         this.submit = false;
@@ -11442,6 +11438,7 @@ let AppointmentComponent = class AppointmentComponent {
     getData() {
         this.service.getAllData(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate));
         this.data$ = this.service.data$;
+        console.log('data$');
         this.total$ = this.service.total$;
         this.loading$ = this.service.loading$;
     }
@@ -11561,7 +11558,6 @@ let AppointmentdetailsComponent = class AppointmentdetailsComponent {
             const sid = +param.get('id');
             if (sid) {
                 this.service.getById(sid).subscribe(res => {
-                    debugger;
                     this.editForm(res);
                 });
             }
@@ -11691,7 +11687,6 @@ let AddcustomerComponent = class AddcustomerComponent {
         });
     }
     editForm(obj) {
-        debugger;
         this.f.fullName.setValue(obj.fullName);
         this.f.email.setValue(obj.email);
         this.f.password.setValue(obj.password);
@@ -11702,7 +11697,6 @@ let AddcustomerComponent = class AddcustomerComponent {
         this.imgComp.imageUrl = obj.image;
     }
     setSelectedCustomer() {
-        debugger;
         this.route.paramMap.subscribe(param => {
             const sid = +param.get('id');
             if (sid) {
@@ -11859,7 +11853,6 @@ let CustomersComponent = class CustomersComponent {
         this.router.navigate(["admin/reception/customers/edit", customers]);
     }
     Delete(obj) {
-        debugger;
         this.service.delete(obj).subscribe((res) => {
             if (res != 0) {
                 this.ts.showSuccess("Success", "Record deleted successfully.");
@@ -12466,7 +12459,6 @@ let SalescustomerwiseComponent = class SalescustomerwiseComponent {
     ngOnInit() {
     }
     exportAsXLSX() {
-        debugger;
         //  this.excelService.exportAsExcelFile(this.orders, 'Report_Export');
     }
     getData(locaionID) {
@@ -12615,7 +12607,6 @@ let SalesdetailComponent = class SalesdetailComponent {
         ;
     }
     exportAsXLSX() {
-        debugger;
         //  this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
     }
     loadLocations() {
@@ -12734,7 +12725,6 @@ let SalesitemwiseComponent = class SalesitemwiseComponent {
     ngOnInit() {
     }
     exportAsXLSX() {
-        debugger;
         //  this.excelService.exportAsExcelFile(this.salesItemWise, 'Report_Export');
     }
     getData(locaionID) {
@@ -15925,7 +15915,6 @@ let AdduserComponent = class AdduserComponent {
         //this.f.statusID.setValue(obj.statusID.value === true ? 1 : 2);
     }
     setSelectedCustomer() {
-        debugger;
         this.route.paramMap.subscribe(param => {
             const sid = +param.get('id');
             if (sid) {
@@ -16228,7 +16217,6 @@ let PermissionComponent = class PermissionComponent {
         this.router.navigate(["admin/user/edit", customers]);
     }
     Delete(obj) {
-        debugger;
         this.service.delete(obj).subscribe((res) => {
             if (res != 0) {
                 this.ts.showSuccess("Success", "Record deleted successfully.");
@@ -16349,7 +16337,6 @@ let UserComponent = class UserComponent {
         this.router.navigate(["admin/user/edit", customers]);
     }
     Delete(obj) {
-        debugger;
         this.service.delete(obj).subscribe((res) => {
             if (res != 0) {
                 this.ts.showSuccess("Success", "Record deleted successfully.");

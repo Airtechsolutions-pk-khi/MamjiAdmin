@@ -37,7 +37,6 @@ export class AddlocationComponent implements OnInit {
   get f() { return this.locationForm.controls; }
 
   private createForm() {
-    debugger;
     this.locationForm = this.formBuilder.group({
       
       name: ['', Validators.required],
@@ -67,7 +66,6 @@ export class AddlocationComponent implements OnInit {
   }
 
   private editForm(obj) {
-    debugger
     this.f.name.setValue(obj.name);
     this.f.email.setValue(obj.email);
     this.f.contactNo.setValue(obj.contactNo);
@@ -114,7 +112,7 @@ export class AddlocationComponent implements OnInit {
   }
 
   onSubmit() {
-    debugger
+   
     this.locationForm.markAllAsTouched();
     this.submitted = true;
     this.f.opentime.setValue(this.opentime.hour + ":" + this.opentime.minute);

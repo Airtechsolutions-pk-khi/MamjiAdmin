@@ -62,7 +62,6 @@ export class DiagnosticCategoriesComponent implements OnInit {
     this.router.navigate(["admin/laboratory/diagnosticcategory/edit", medicine]);
   }
   Delete(obj) {
-    debugger
     this.service.delete(obj).subscribe((res: any) => {
       if (res != 0) {
         this.ts.showSuccess("Success", "Record deleted successfully.")

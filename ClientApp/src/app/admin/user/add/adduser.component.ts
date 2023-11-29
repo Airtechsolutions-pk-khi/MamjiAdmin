@@ -69,7 +69,7 @@ export class AdduserComponent implements OnInit {
   }
 
   setSelectedCustomer() {
-    debugger;
+    
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
