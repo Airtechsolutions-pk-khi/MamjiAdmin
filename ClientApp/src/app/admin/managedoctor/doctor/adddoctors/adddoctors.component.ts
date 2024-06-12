@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
@@ -14,6 +14,8 @@ import { DoctorProfiles, DoctorSchedule } from 'src/app/_models/Doctors';
 
 })
 export class AdddoctorsComponent implements OnInit {
+  editingIndex: number | null = null;
+  editedTimeSlot: string = '';
 
   submitted = false;
   public spec = new DoctorSchedule();
@@ -30,6 +32,7 @@ export class AdddoctorsComponent implements OnInit {
   DoctorDaysDetailList = [];
   selectedSpecialityList = [];
   DoctorSchedule = [];
+ 
 
   DoctorProfiles = [];
 
@@ -47,15 +50,35 @@ export class AdddoctorsComponent implements OnInit {
     public ts: ToastService,
     private doctorService: DoctorsService,
     private appointmentService: AppointmentService
+    
 
   ) {
     this.createForm();
     // this.loadDay();
     this.loadSpecialitiesAll();
-    this.loadTimeSlotsAll();
+     this.loadTimeSlotsAll();
+ 
   }
   ngOnInit() {
     this.setSelectedDoctor();
+     
+  }
+
+  editRow(index: number) {
+    debugger
+    this.editingIndex = index;
+    this.editedTimeSlot = this.DoctorSchedule[index].timeSlot;
+  }
+  saveRow(index: number) {
+    debugger
+    // Save changes to the edited row
+    this.DoctorSchedule[index].timeSlot =[this.editedTimeSlot];
+    this.DoctorSchedule[index].timeSlot = this.editedTimeSlot.split(" - ");
+    this.DoctorSchedule[index].timeSlot = [this.editedTimeSlot];
+    this.DoctorSchedule[index].timeSlot.join(" - ");
+    // Reset editing state
+    this.editingIndex = null;
+    this.editedTimeSlot = '';
   }
 
   get f() { return this.doctorForm.controls; }
@@ -123,17 +146,22 @@ export class AdddoctorsComponent implements OnInit {
   loadTimeSlotsAll() {
     this.appointmentService.loadTimeLists().subscribe((res: any) => {
       this.selectedTimeList = res;
+      
     });
   }
-
+   
   onSubmit() {
+    debugger
     this.doctorForm.markAllAsTouched();
     this.submitted = true;
     if (this.doctorForm.invalid) { return; }
     this.loading = true;
-
+ 
+    // console.log(this.DoctorSchedule);
+    // this.DoctorSchedule[0].timeSlot = this.timeSlot;
     this.f.doctorSchedule.setValue(this.DoctorSchedule);
     this.f.doctorProfiles.setValue(this.DoctorProfiles);
+    
 
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.imagePath.setValue(this.imgComp.imageUrl);
@@ -166,6 +194,7 @@ export class AdddoctorsComponent implements OnInit {
     }
   }
 
+  
   RemoveChild(obj) {
     const index = this.DoctorSchedule.indexOf(obj);
     this.DoctorSchedule.splice(index, 1);
@@ -176,19 +205,17 @@ export class AdddoctorsComponent implements OnInit {
     this.DoctorProfiles.splice(index, 1);
   }
   AddChild(val) {
+    debugger
     var obj = this.selectedSpecialityList.find(element => element.specialistID == val.specialistID);
     if (val.specialistID != null) {
-      //if (!this.DoctorSchedule.find(element => element.specialistID == val.specialistID)) {
+      
       this.DoctorSchedule.push({
         specialistID: val.specialistID,
         name: obj.name,
         dayName: val.dayName,
         timeSlot: val.timeSlot,
       });
-      /*}*/
-      //else {
-      //  alert("Item already added in list")
-      //}
+     
       this.clearSpec();
     }
   }

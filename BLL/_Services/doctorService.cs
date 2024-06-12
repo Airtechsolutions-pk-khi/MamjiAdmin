@@ -80,7 +80,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.ImagePath = UploadImage(data.ImagePath, "Doctor", _env);
+                //data.ImagePath = UploadImage(data.ImagePath, "Doctor", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
 

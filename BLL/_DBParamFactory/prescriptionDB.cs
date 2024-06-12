@@ -68,7 +68,7 @@ namespace BAL.Repositories
                     if (_dt.Rows.Count > 0)
                     {
                         _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<PrescriptionBLL>>().FirstOrDefault();
-                        _obj.Image = _obj.Image == null ? "" : "https://mamjihospital.online/" + _obj.Image;
+                        _obj.Image = _obj.Image == null ? "" : "http://mamjihospital.online/" + _obj.Image;
 
                     }
                 }

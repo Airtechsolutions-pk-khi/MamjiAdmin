@@ -69,12 +69,13 @@ namespace MamjiAdmin.Controllers
                 LaboratoryBLL data = new LaboratoryBLL();
                 data.Name = Data.Name;
                 data.RegistrationNo = Data.RegistrationNo;
-                data.LabReferenceNo = Data.ReferenceNo;
+                data.LabReferenceNo = Data.ReferenceNo == "undefined" ? "" : Data.ReferenceNo;
                 data.FilePath = filePath;                
                 data.DiagnoseCatID = Data.DiagnosticCatID;
                 data.StatusID = 1;
 				data.LastUpdatedBy = Data.UserName;
-				int res = _service.Insert(data);
+                data.CustomerID = Data.CustomerID;
+                int res = _service.Insert(data);
 
 
                 if (res != 0)
@@ -117,8 +118,14 @@ namespace MamjiAdmin.Controllers
         [Route("update")]
         public async Task<int> PostUpdate(UploadViewModel Data)
         {
-            var filePath = await CopyPdfToPath(Data.File, FolderName);
-			LaboratoryBLL data = new LaboratoryBLL();
+            var filePath = "";
+            if (Data.File == null) {
+                filePath = Data.Image;
+            }
+            else { 
+             filePath = await CopyPdfToPath(Data.File, FolderName);
+            }
+            LaboratoryBLL data = new LaboratoryBLL();
 			data.Name = Data.Name;
 			data.RegistrationNo = Data.RegistrationNo;
 			data.LabReferenceNo = Data.ReferenceNo;
@@ -127,7 +134,9 @@ namespace MamjiAdmin.Controllers
 			data.StatusID = 1;
 			data.LastUpdatedBy = Data.UserName;
             data.LaboratoryID = Data.LaboratoryID;
-			return _service.Update(data);
+            data.CustomerID = Data.CustomerID;
+            
+            return _service.Update(data);
         }
         [HttpPost]
         [Route("delete")]

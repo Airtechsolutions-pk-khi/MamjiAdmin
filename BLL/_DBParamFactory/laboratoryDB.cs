@@ -10,6 +10,7 @@ using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net.Mail;
+using System.Security.Cryptography;
 using System.Text;
 using WebAPICode.Helpers;
 
@@ -33,8 +34,8 @@ namespace BAL.Repositories
 				var lst = new List<LaboratoryBLL>();
 				SqlParameter[] p = new SqlParameter[2];
 
-				p[0] = new SqlParameter("@fromdate", FromDate.Date);
-				p[1] = new SqlParameter("@todate", ToDate.Date);
+				p[0] = new SqlParameter("@fromdate", FromDate);
+				p[1] = new SqlParameter("@todate", ToDate);
 				_dt = (new DBHelper().GetTableFromSP)("sp_getAllReports_V2", p);
 				if (_dt != null)
 				{
@@ -120,9 +121,8 @@ namespace BAL.Repositories
 		{
 			try
 			{
-
 				int rtn = 0;
-				SqlParameter[] p = new SqlParameter[8];
+				SqlParameter[] p = new SqlParameter[9];
 
 				p[0] = new SqlParameter("@Name", data.Name);
 				p[1] = new SqlParameter("@ImagePath", data.FilePath);
@@ -132,10 +132,13 @@ namespace BAL.Repositories
 				p[5] = new SqlParameter("@LastUpdatedBy", data.LastUpdatedBy);
 				p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 				p[7] = new SqlParameter("@DiagnoseCatID", data.DiagnoseCatID);
+                p[8] = new SqlParameter("@CustomerID", data.CustomerID);
 
-				rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_insertReport_Admin_V2", p);
 
-				return rtn;
+                //rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_insertReport_Admin_V2", p);
+                rtn = int.Parse(new DBHelper().GetTableFromSP("sp_insertReport_Admin_V2", p).Rows[0][0].ToString());
+
+                return rtn;
 			}
 			catch (Exception ex)
 			{
@@ -148,7 +151,7 @@ namespace BAL.Repositories
 			try
 			{
 				int rtn = 0;
-				SqlParameter[] p = new SqlParameter[9];
+				SqlParameter[] p = new SqlParameter[10];
 
 				p[0] = new SqlParameter("@Name", data.Name);
 				p[1] = new SqlParameter("@ImagePath", data.FilePath);
@@ -159,9 +162,10 @@ namespace BAL.Repositories
 				p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
 				p[7] = new SqlParameter("@DiagnoseCatID", data.DiagnoseCatID);
 				p[8] = new SqlParameter("@LaboratoryID", data.LaboratoryID);
+                p[9] = new SqlParameter("@CustomerID", data.CustomerID);
 
-				//rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateReport_Admin_V2", p);
-				rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateReport_Admin_V2", p);
+                //rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateReport_Admin_V2", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("sp_updateReport_Admin_V2", p);
 				return rtn;
 			}
 			catch (Exception ex)

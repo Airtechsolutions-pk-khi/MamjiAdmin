@@ -17,32 +17,26 @@ export class AddreportsComponent implements OnInit {
 
   formData = {
     customerID: '',
+    image: '',
     name: '',
     registrationNo: '',
     referenceNo: '',
     diagnosticCatID: '',
-    laboratoryID: '',
+    laboratoryID: 0,
     pdfFile: File = null,
     userName: ''
   };
-
-
-
+ 
   selectedFile: File = null;
   percentDone: number;
   uploadSuccess: boolean;
 
   onFileChange(files: File[]) {
+    debugger
     this.selectedFile = files[0];
+    this.formData.pdfFile = '';
   }
-
-  //onCustomerSelect(customerID: string) {
-  //  this.formData.customerID = customerID;
-  //}
-  //onCustomerSelectR(customerID: string) { 
-  //  this.formData.customerID = customerID;
-  //}
-
+   
   onDiagnosticSelect(diagnosticCatID: string) {
     this.formData.diagnosticCatID = diagnosticCatID;
   }
@@ -81,7 +75,7 @@ export class AddreportsComponent implements OnInit {
   ) {
     this.userName = this.ls.getSelectedBrand().userName;
 
-    this.createForm();
+    
     //this.loadCustomer();
     //this.loadRNo();
     this.loadCategories();
@@ -103,11 +97,12 @@ export class AddreportsComponent implements OnInit {
     this.router.navigate(['/admin/laboratory/uploadreport/addreports']);
     this.formData = {
       customerID: '',
+      image: '',
       name: '',
       registrationNo: '',
       referenceNo: '',
       diagnosticCatID: '',
-      laboratoryID: '',
+      laboratoryID: 0,
       pdfFile: File = null,
       userName: ''
     };
@@ -116,40 +111,28 @@ export class AddreportsComponent implements OnInit {
   ngOnInit() {
     this.setSelectedReport();
   }
-
-  get f() { return this.reportForm.controls; }
-
-  private createForm() {
-    this.reportForm = this.formBuilder.group({
-      statusID: [true],
-      customerID: 0,
-      diagnosticCatID: 0,
-      laboratoryID: [0],
-      referenceNo: ['', Validators.required],
-      name: ['', Validators.required],
-      selectedFile: File = null,
-    });
-  }
+ 
   private editForm(obj) {
+    debugger
     if (obj.name != null) {
       this.formData.name = obj.name;
     } else {
       this.formData.name = obj.fullName;
     }
     this.formData.diagnosticCatID = obj.diagnoseCatID;
-    this.pdfFilePath = obj.image;
+    this.formData.pdfFile = obj.image.replace('/ClientApp/dist/assets/', '');
     this.formData.laboratoryID = obj.laboratoryID;
     this.formData.referenceNo = obj.labReferenceNo;
     this.formData.registrationNo = obj.registrationNo;
     this.formData.customerID = obj.customerID;
-    this.f.statusID.setValue(obj.statusID === true ? 1 : 2);
+     
   }
   setSelectedReport() {
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
         this.loadingReport = true;
-        this.f.laboratoryID.setValue(sid);
+        
         this.laboratoryService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
@@ -160,12 +143,14 @@ export class AddreportsComponent implements OnInit {
   }
 
   onSubmit() {
-    if (parseInt(this.f.laboratoryID.value) === 0) {
+    debugger
+    if (this.formData.laboratoryID == 0 || this.formData.laboratoryID == undefined ) {
       const formData1 = new FormData();
       formData1.append('name', this.formData.name);
       formData1.append('referenceNo', this.formData.referenceNo);
       formData1.append('registrationNo', this.formData.registrationNo);
       formData1.append('customerID', this.formData.customerID);
+      formData1.append('image', this.formData.image);
       formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
       formData1.append('file', this.selectedFile);
       formData1.append('userName', this.userName);
@@ -184,8 +169,9 @@ export class AddreportsComponent implements OnInit {
       formData1.append('referenceNo', this.formData.referenceNo);
       formData1.append('registrationNo', this.formData.registrationNo);   
       formData1.append('customerID', this.formData.customerID);
+      formData1.append('image', this.formData.image);
       formData1.append('diagnosticCatID', this.formData.diagnosticCatID);
-      formData1.append('laboratoryID', this.formData.laboratoryID);
+      formData1.append('laboratoryID', this.formData.laboratoryID.toString());
       formData1.append('file', this.selectedFile);
       formData1.append('userName', this.userName);
 
@@ -200,22 +186,7 @@ export class AddreportsComponent implements OnInit {
     }
   }
 
-  //private loadCustomer() {
-  //  debugger
-  //  this.laboratoryService.loadCustomer().subscribe((res: any) => {
-  //    
-  //    this.CustomerList = res;
-
-  //  });
-  //}
-  //private loadRNo() {
-  //  debugger
-  //  this.laboratoryService.loadRNo().subscribe((res: any) => {
-  //    
-  //    this.RegistrationList = res;
-
-  //  });
-  //}
+ 
 
   private loadCategories() {
     this.diagnosticcategoriesService.loadCategory().subscribe((res: any) => {
@@ -223,9 +194,5 @@ export class AddreportsComponent implements OnInit {
     });
   }
 
-  removeImage(obj) {
-    const index = this.Images.indexOf(obj);
-    this.Images.splice(index, 1);
-    this.f.imagesSource.setValue(this.Images);
-  }
+  
 }

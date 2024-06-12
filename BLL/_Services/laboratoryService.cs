@@ -157,7 +157,7 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 data.LastUpdatedDate = DateTime.UtcNow.AddMinutes(300);
-                var result = _service.Insert(data);
+                int result = _service.Insert(data);
 
                 return result;
             }

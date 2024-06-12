@@ -182,8 +182,9 @@
                   <th width="20%">Action</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr *ngFor="let item of  DoctorSchedule">
+              <!-- <tbody>
+                
+                <tr *ngFor="let item of  DoctorSchedule; index as i;">
                   <td>
                     {{item.specialistID}}
 
@@ -193,14 +194,41 @@
 
                   </td>
                   <td> {{item.dayName}} </td>
-                  <td> {{item.timeSlot}} </td>
-
+                  
+                  <td>
+                    <input type="text" value="{{item.timeSlot}}" [(ngModel)]="item.timeSlot" />
+                     
+                      
+                  </td>
                   <td>
                     <i (click)="RemoveChild(item)" class="fas fa-fw fa-trash-alt "></i>
                   </td>
+                  <td>
+                    <a (click)="enableEditMethod($event, i)" class="fas fa-fw fa-edit"></a>
+                  </td>
                 </tr>
 
+              </tbody> -->
+
+              <tbody>
+                <tr *ngFor="let item of DoctorSchedule; let i = index" [class.editing]="i === editingIndex">
+                  <td>{{ item.specialistID }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.dayName }}</td>
+                  <td *ngIf="i !== editingIndex">{{ item.timeSlot }}</td>
+                  <td *ngIf="i === editingIndex">
+                    <input type="text" [(ngModel)]="editedTimeSlot" [ngModelOptions]="{standalone: true}"/>
+                  </td>
+                  <td>
+                    <button style="border:none;" class="badge badge-warning" (click)="editRow(i)" *ngIf="i !== editingIndex">Edit</button>
+                    <button style="border:none;" class="badge badge-success" (click)="saveRow(i)" *ngIf="i === editingIndex">Save</button>
+                    <i (click)="RemoveChild(item)" class="fas fa-fw fa-trash-alt "></i>
+                  </td>
+                </tr>
               </tbody>
+
+
+
             </table>
           </div>
 

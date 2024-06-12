@@ -40,12 +40,12 @@
         <thead>
           <tr class="table-header">
 
-            <th width="20%">Report</th>
-            <th width="20%" sortable="LabReference">Registration #</th>
-            <th width="20%" sortable="LabReference">Lab Reference #</th>
+            <th width="15%">Report</th>
+            <th width="15%" sortable="LabReference">Registration #</th>
+            <!-- <th width="20%" sortable="LabReference">Lab Reference #</th> -->
             <th width="20%" sortable="LabReference">Patient Name</th>
             <th width="15%" sortable="LabReference">Category</th>
-            <th width="20%" sortable="LabReference">Upload By</th>
+            <th width="10%" sortable="LabReference">Upload By</th>
             <th width="10%" sortable="Status">Status </th>
             <th width="10%">Action</th>
           </tr>
@@ -63,7 +63,7 @@
             </td>
 
             <td>{{item.registrationNo}}</td>
-            <td>{{item.labReferenceNo}}</td>
+            <!-- <td>{{item.labReferenceNo}}</td> -->
             <td>{{item.name}}</td>
             <td>{{item.categoryName}}</td>
             <td>{{item.lastUpdatedBy}}</td>
