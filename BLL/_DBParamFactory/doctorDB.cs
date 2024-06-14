@@ -164,6 +164,7 @@ namespace BAL.Repositories
                                 {
                                     DoctorID = _i.DoctorID,
                                     FullName = _i.FullName,
+                                    UrduName = _i.UrduName,
                                     Email = _i.Email,
                                     Education = _i.Education,
                                     Skills = _i.Skills,

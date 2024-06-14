@@ -36,6 +36,7 @@ export class LayoutComponent implements OnInit {
   isReception: boolean = true;
   isReport: boolean = true;
   isSetting: boolean = true;
+  isAdmin: boolean = false;
 
   public permission = new Permission();
   
@@ -49,7 +50,7 @@ export class LayoutComponent implements OnInit {
     , public ls: LocalStorageService) {
       this.userName = this.ls.getSelectedBrand().userName;
       this.type = this.ls.getSelectedBrand().type;
-       
+       debugger
       //  this.permission=environment.rootScope;
       this.permission=this.ls.getSelectedBrand(); 
        var role = this.permission.permissionForm.find(element => element.roleName == this.type); 
@@ -63,7 +64,7 @@ export class LayoutComponent implements OnInit {
        this.isReport = role.reports === 1 ? true : false;
        this.isSetting = role.setting === 1 ? true : false;
        
-
+       this.isAdmin = this.type === 'Admin';
                                  
   }
   Logout() {
