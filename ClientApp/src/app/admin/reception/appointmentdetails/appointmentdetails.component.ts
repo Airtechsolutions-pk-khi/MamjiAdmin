@@ -49,7 +49,7 @@ export class AppointmentdetailsComponent implements OnInit {
 
       if (data != 0) {
         this.ts.showSuccess("Success", "Record updated successfully.")
-        this.router.navigate(['reception/appointment']);
+        this.router.navigate(['/admin/reception/appointment']);
       }
     }, error => {
       this.ts.showError("Error", "Failed to update record.")
