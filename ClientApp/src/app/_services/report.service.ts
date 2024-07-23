@@ -110,8 +110,9 @@ clear() {
     return this.http.get<SummaryReport[]>(`api/report/summary/${brandID}/${fromDate}/${toDate}`);
   }
 
-  SalesDetailRpt(brandID,locationID,fromDate,toDate) {
-    return this.http.get<SalesdetailReport[]>(`api/report/salesdetail/${brandID}/${locationID}/${fromDate}/${toDate}`);
+  SalesDetailRpt(fromDate,toDate) {
+    debugger
+    return this.http.get<SalesdetailReport[]>(`api/report/salesdetail/${fromDate}/${toDate}`);
   }
 
   SalesItemwiseRpt(brandID,locationID,fromDate,toDate) {

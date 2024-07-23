@@ -38,14 +38,14 @@ export class SalesuserwiseComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getData(this.selectedLocation);
-    this.loadLocations();
+    this.getData();
+     
   }
   exportAsXLSX(): void {
   //  this.excelService.exportAsExcelFile(this.salesUserWise, 'Report_Export');
   }
-  getData(locaionID) {
-    this.service.SalesDetailRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+  getData() {
+    this.service.SalesDetailRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
       .subscribe((res: any) => {
         if (res != null) {
           this.data$ = res;

@@ -53,21 +53,20 @@ namespace BAL.Repositories
                 return new List<salesSummarytBLL>();
             }
         }
-        public List<SalesDetailBLL> GetSalesDetailRpt(int brandID, string locationID, DateTime FromDate, DateTime ToDate)
+        public List<SalesDetailBLL> GetSalesDetailRpt(DateTime FromDate, DateTime ToDate)
         {
             try
             {
                 var lst = new List<SalesDetailBLL>();
 
-                SqlParameter[] p = new SqlParameter[5];
-                p[0] = new SqlParameter("@brandid", brandID);
-                p[1] = new SqlParameter("@locationid", locationID);
-                p[2] = new SqlParameter("@fromdate", FromDate);
-                p[3] = new SqlParameter("@todate", ToDate);
-                p[4] = new SqlParameter("@customerid", DBNull.Value);
+                SqlParameter[] p = new SqlParameter[2];
+               
+                p[0] = new SqlParameter("@fromdate", FromDate);
+                p[1] = new SqlParameter("@todate", ToDate);
+                
 
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_rptSalesDetailsReport", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_AppointmentReport_admin", p);
                 if (_dt != null)
                 {
                     if (_dt.Rows.Count > 0)

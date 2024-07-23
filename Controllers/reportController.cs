@@ -23,10 +23,10 @@ namespace MamjiAdmin.Controllers
             return _service.GetSalesSummaryRpt(brandid, Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
         }
 
-        [HttpGet("salesdetail/{brandid}/{locationid}/{fromDate}/{toDate}")]
-        public List<SalesDetailBLL> GetSalesDetail(int brandid, string locationid, string fromDate, string toDate)
+        [HttpGet("salesdetail/{fromDate}/{toDate}")]
+        public List<SalesDetailBLL> GetSalesDetail(string fromDate, string toDate)
         {
-            return _service.GetSalesDetailRpt(locationid,brandid, Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+            return _service.GetSalesDetailRpt(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
         }
 
         [HttpGet("salesitemwise/{brandid}/{locationid}/{fromDate}/{toDate}")]

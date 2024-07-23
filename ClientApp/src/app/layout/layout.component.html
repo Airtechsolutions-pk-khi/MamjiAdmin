@@ -138,7 +138,7 @@
     <hr class="sidebar-divider">
   </div>
 
-  <!--<div *ngIf="isDiagnostic">
+  <div *ngIf="isDiagnostic">
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReport" aria-expanded="true" aria-controls="collapseReport">
         <i class="fas fa-fw fa-list"></i>
@@ -146,12 +146,12 @@
       </a>
       <div id="collapseReport" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item">Coming Soon</a>
+          <a class="collapse-item" [routerLink]="['/admin/report/salesdetail']" >Appointment Report</a>
         </div>
       </div>
     </li>
     <hr class="sidebar-divider d-none d-md-block">
-  </div>-->
+  </div>
   <div *ngIf="isSetting">
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">

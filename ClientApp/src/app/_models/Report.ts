@@ -16,19 +16,15 @@ export class SummaryReport {
 }
 
 export class SalesdetailReport {
-  orderNo: number;
-  transactionNo: number;
-  customerID: string;
-  customerName: string;
-  customerMobile: string;
-  orderDate: string;
-  statusID: number;
-  orderID: number;
-  amountTotal: number;
-  grandTotal: number;
-  serviceCharges: number;
-  discountAmount: number;
-  tax: number;
+  appointmentNo: number;
+  patientName: number;
+  mobile: string;
+  bookingDate: string;
+  appointmentDate: string;
+  appointmentSlot: string;
+  appointmentStatus: number;
+  approvedBy: number;
+  
 }
 export class SalesitemwiseReport {
   itemName: string;

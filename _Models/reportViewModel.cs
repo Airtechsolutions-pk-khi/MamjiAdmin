@@ -25,20 +25,19 @@ namespace MamjiAdmin._Models
     }
     public class SalesDetailBLL
     {
-        public int OrderNo { get; set; }
-        public int TransactionNo { get; set; }
-        public float GrandTotal { get; set; }
-        public float Tax { get; set; }
-        public float ServiceCharges { get; set; }
-        public float AmountTotal { get; set; }
-        public float DiscountAmount { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerAddress { get; set; }
-        public string CustomerMobile { get; set; }
-        public int CustomerID { get; set; }
+        public int AppointmentNo { get; set; }
+        public string BookingDate { get; set; }
+        public string Day { get; set; }
+        public string FullName { get; set; }
+        public string Mobile { get; set; }
+        public string ApprovedBy { get; set; }
+        public string Timeslot { get; set; }
+        public int AppointmentStatus { get; set; }
+        public Nullable<System.DateTime> CreatedOn { get; set; }
+        public string LastUpdatedBy { get; set; }
+        public Nullable<System.DateTime> LastUpdatedDate { get; set; }
         public int StatusID { get; set; }
-        public int OrderID { get; set; }
-        public DateTime OrderDate{ get; set; }
+        
 
     }
     public class SalesUserwiseBLL

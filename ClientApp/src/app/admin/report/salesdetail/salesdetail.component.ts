@@ -10,21 +10,18 @@ import { Location } from 'src/app/_models/Location';
 import { NgbdDatepickerRangePopup } from 'src/app/datepicker-range/datepicker-range-popup';
 import { delay, map } from 'rxjs/operators';
 import { ExcelService } from 'src/ExportExcel/excel.service';
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-salesdetail',
   templateUrl: './salesdetail.component.html',
-  providers: [ExcelService]
+  providers: [ExcelService,DatePipe]
 })
 
 export class SalesdetailComponent implements OnInit {
   data$: Observable<SalesdetailReport[]>;
 
   @ViewChild(NgbdDatepickerRangePopup, { static: true }) _datepicker;
-  private selectedBrand;
-  private selectedLocation;
-  Locations: Location[] = [];
-  selectedLocations = [];
-  locationID = 0;
+ 
   locationSubscription: Subscription;
   submit: boolean;
   orderDetails: SalesdetailReport[] = [];
@@ -34,24 +31,28 @@ export class SalesdetailComponent implements OnInit {
     public ls: LocalStorageService,
     public ts: ToastService,
     public excelService: ExcelService,
-    public router: Router) {
-    this.selectedBrand = this.ls.getSelectedBrand().brandID;
-    // this.selectedLocation = this.ls.getSelectedLocation().locationID
-
-
-    this.loadLocations();
+    public router: Router,
+    private datePipe: DatePipe) {
+    
   }
 
   ngOnInit() {
     
   }
-
-  getData(locaionIDs) {
-    this.service.SalesDetailRpt(this.selectedBrand, locaionIDs, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
-      .subscribe((res: any) => {
+  parseDate1(date: Date): string {
+    return this.datePipe.transform(date, 'yyyy-MM-dd'); // Adjust format as needed for the backend
+  }
+  getData() {
+    this.service.SalesDetailRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate))
+      .subscribe((res: any[]) => {
         if (res != null) {
-          
-          this.orderDetails = res;
+          debugger
+          //this.orderDetails = res;
+          this.orderDetails = res.map((item: any) => {
+            const rawDate = new Date(item.createdOn);
+            item.createdOn = this.datePipe.transform(rawDate, 'dd-MM-yyyy hh:mm a');
+            return item;
+          });
         }
         else
           this.ts.showError("Error", "Something went wrong");
@@ -66,38 +67,12 @@ export class SalesdetailComponent implements OnInit {
   }
   exportAsXLSX(): void {
     
-  //  this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+    this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
   }
-  loadLocations() {
-    this.service.loadLocations(this.selectedBrand).subscribe((res: any) => {
-
-      this.Locations = res;
-      this.locationID = this.selectedLocation;
-
-      this.loadLocationsMulti()
-      .pipe(map(x => x.filter(y => !y.disabled)))
-      .subscribe((res) => {
-        this.Locations = res;
-        var arr=[];
-        this.Locations.forEach(element => {
-           arr.push(element.locationID);
-        });
-        this.selectedLocations=arr;
-        this.getData(this.selectedLocations.toString());   
-      });
-
-    });
-    
-  }
-  loadLocationsMulti(term: string = null): Observable<Location[]> {
-    let items = this.Locations;
-    if (term) {
-      items = items.filter(x => x.name.toLocaleLowerCase().indexOf(term.toLocaleLowerCase()) > -1);
-    }
-    return of(items).pipe(delay(500));
-  }
+  
+  
   Filter() {
     
-    this.getData(this.selectedLocations.toString());
+    this.getData();
   }
 }

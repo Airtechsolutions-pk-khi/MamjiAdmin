@@ -27,11 +27,11 @@ namespace MamjiAdmin.BLL._Services
                 return new List<salesSummarytBLL>();
             }
         }
-        public List<SalesDetailBLL> GetSalesDetailRpt(string locaitonID, int brandID, DateTime FromDate, DateTime ToDate)
+        public List<SalesDetailBLL> GetSalesDetailRpt(DateTime FromDate, DateTime ToDate)
         {
             try
             {
-                return _service.GetSalesDetailRpt(brandID, locaitonID, FromDate, ToDate);
+                return _service.GetSalesDetailRpt(FromDate, ToDate);
             }
             catch (Exception ex)
             {
