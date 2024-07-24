@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj": {}
+    "E:\\Project\\Mamji\\MamjiAdmin_GIT\\MamjiAdmin.csproj": {}
   },
   "projects": {
-    "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj": {
+    "E:\\Project\\Mamji\\MamjiAdmin_GIT\\MamjiAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj",
+        "projectUniqueName": "E:\\Project\\Mamji\\MamjiAdmin_GIT\\MamjiAdmin.csproj",
         "projectName": "MamjiAdmin",
-        "projectPath": "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj",
+        "projectPath": "E:\\Project\\Mamji\\MamjiAdmin_GIT\\MamjiAdmin.csproj",
         "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\Mamji\\MamjiAdmin_Git\\obj\\",
+        "outputPath": "E:\\Project\\Mamji\\MamjiAdmin_GIT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",

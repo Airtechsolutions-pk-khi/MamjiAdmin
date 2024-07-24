@@ -28,7 +28,26 @@ namespace MamjiAdmin.Controllers
         {
             return _service.GetSalesDetailRpt(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
         }
-
+        [HttpGet("medicinedetail/{fromDate}/{toDate}")]
+        public List<MedicineDetailBLL> GetMedicineDetail(string fromDate, string toDate)
+        {
+            return _service.GeMedicineDetailRpt(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+        }
+        [HttpGet("prescriptiondetail/{fromDate}/{toDate}")]
+        public List<PrescriptionDetailBLL> GetPrescriptionDetail(string fromDate, string toDate)
+        {
+            return _service.GetPrescriptionDetailRpt(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+        }
+        [HttpGet("dashboarddetail/{fromDate}/{toDate}")]
+        public List<DashboardRptBLL> Getdashboarddetail(string fromDate, string toDate)
+        {
+            return _service.Getdashboarddetail(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+        }
+        [HttpGet("orderlistrpt/{fromDate}/{toDate}")]
+        public List<MedicineOrderListReport> GetMedOrderdetail(string fromDate, string toDate)
+        {
+            return _service.GetMedOrderdetailRpt(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+        }
         [HttpGet("salesitemwise/{brandid}/{locationid}/{fromDate}/{toDate}")]
         public List<SalesItemwiseBLL> GetSalesItemwise(int brandid, string locationid, string fromDate, string toDate)
         {

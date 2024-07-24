@@ -7,7 +7,7 @@
     <div class="card-header py-3">
         <div class="row">
             <div class="col-md-6">
-                <h6 class="m-0 font-weight-bold text-orange">Appointment Report</h6>
+                <h6 class="m-0 font-weight-bold text-orange">Order List Report</h6>
             </div>
             <div class="col-md-6 text-right"> </div>
         </div>
@@ -24,7 +24,7 @@
                 <div class="input-group-prepend" style="height: 39px;">
                     <span class="input-group-text"><i class="fa fa-search"></i></span>
                 </div>
-                <input class="form-control search-filter" placeholder="Filter by Patient Name | Mobile | Booking Date" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
+                <input class="form-control search-filter" placeholder="Filter by Patient Name | Brand Details" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
             </div>
 
             <div class="col-md-4 form-group text-right">
@@ -39,44 +39,37 @@
             <table class="table table-striped">
                 <thead>
                     <tr class="table-header">
-                        <th width="10%">Appoint.No</th>
-                        <th width="15%">Patient Name</th>
-                        <th width="10%">Mobile</th>
-                        <th width="15%">Booking Date / Time </th>
-                        <th width="10%">Appointment Date</th>
-                        <th width="15%">Appointment Slot</th>
-                        <th width="10%">Appointment Status </th>
-                        <th width="15%">Approved By </th>
+                        <th width="10%">Order #</th>
+                        <th width="15%">Transaction #</th>
+                         
+                        <th width="15%">Name</th>
+                        <th width="15%">Contact</th>
+                        <!-- <th width="15%">Total</th> -->
+                        <th width="15%">Date</th>
+                        <th width="15%">Order Type</th>
+                        <th width="10%">Status</th>
+                        
                         
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let item of data$ | async ">
-                        <td>{{item.appointmentNo}} </td>
-                        <td>{{item.fullName}} </td>
-                        <td>{{item.mobile}} </td>
-                        <td>{{item.bookingDate}} </td>
-                        <td>{{item.createdOn }}</td>
-                        <td>{{item.timeslot}}</td>
-                        
+                        <td>{{item.orderNo}} </td>
+                        <td>{{item.transactionNo}} </td>                         
+                        <td>{{item.customerName}} </td>
+                        <td>{{item.customerMobile}} </td>
+                        <!-- <td> <span class="badge badge-success-soft text-success badge-pill py-2 px-3 mb-2" style="background-color: #bfe5dc;">{{item.grandTotal | number : '1.2-2'}} PKR</span> </td> -->
+                        <td>{{item.orderDate | date}}</td>
+                        <td><span class="badge badge-yellow">{{item.orderType}}</span></td>
                         <td>
-                            <span class="badge badge-warning"
-                                  *ngIf="item.appointmentStatus == 101">Pending</span>
-              
-                            <span class="badge badge-success"
-                                  *ngIf="item.appointmentStatus == 102">Approved</span>
-              
-                            <span class="badge badge-danger"
-                                  *ngIf="item.appointmentStatus == 103">Cancelled</span>
-              
-                            <span class="badge badge-info"
-                                  *ngIf="item.appointmentStatus == 100">Completed</span>
-              
-                            <span class="badge badge-dark"
-                                  *ngIf="![101, 102, 103, 100].includes(item.appointmentStatus)">-</span>
-                          </td>
-
-                        <td>{{item.lastUpdatedBy}}</td>
+                            <ngb-highlight [ngClass]="{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-warning': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }" class="btn btn-sm" [result]="item.statusID ==100 ? 'Completed' :
+                                           item.statusID ==101 ? 'Pending' :
+                                           item.statusID ==104 ? 'Out For Delivery' :
+                                           item.statusID ==102 ? 'Approved' :
+                                           item.statusID ==103 ? 'Cancelled' :
+                                           item.statusID ==100 ? 'Completed' :'-'" [term]="service.searchTerm">
+                            </ngb-highlight>
+                          </td> 
                     </tr>
                 </tbody>
             </table>

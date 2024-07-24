@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SummaryReport, SalesdetailReport, SalescategorywiseReport, SalescustomerwiseReport, SalesitemwiseReport, Report } from '../_models/Report';
+import { SummaryReport, SalesdetailReport, SalescategorywiseReport, SalescustomerwiseReport, SalesitemwiseReport, Report, MedicineReport } from '../_models/Report';
 import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { State } from '../_models/State';
 import { switchMap, tap, map } from 'rxjs/operators';
@@ -8,12 +8,12 @@ import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 
 
 interface SearchReportsResult {
-  data: SalesdetailReport[];
+  data: MedicineReport[];
   total: number;
 }
 const compare = (v1: string, v2: string) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
 
-function sort(data: SalesdetailReport[], column: SortColumn, direction: string): SalesdetailReport[] {
+function sort(data: MedicineReport[], column: SortColumn, direction: string): MedicineReport[] {
   if (direction === '' || column === '') {
     return data;
   } else {
@@ -28,11 +28,10 @@ function sort(data: SalesdetailReport[], column: SortColumn, direction: string):
 //   debugger
 //   return data.fullName.toLowerCase().includes(term.toLowerCase())
 // }
-function matches(data: SalesdetailReport, term: string) {
+function matches(data: MedicineReport, term: string) {
   
-  return data.fullName.toLowerCase().includes(term.toLowerCase()) ||
-         data.mobile.toLowerCase().includes(term.toLowerCase())||
-         data.bookingDate.toLowerCase().includes(term.toLowerCase());
+  return data.name.toLowerCase().includes(term.toLowerCase()) ||
+         data.brandDetails.toLowerCase().includes(term.toLowerCase());
 }
 
 
@@ -40,16 +39,16 @@ function matches(data: SalesdetailReport, term: string) {
   providedIn: 'root'
 })
 
-export class ReportService {
+export class MedicineReportService {
 
   constructor(private http: HttpClient) {   
   }
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _allData$ = new BehaviorSubject<SalesdetailReport[]>([]);
-  private _data$ = new BehaviorSubject<SalesdetailReport[]>([]);
+  private _allData$ = new BehaviorSubject<MedicineReport[]>([]);
+  private _data$ = new BehaviorSubject<MedicineReport[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
-  public salesdetailReport: SalesdetailReport[];  
+  public medicineReport: MedicineReport[];  
   private _state: State = {
     page: 1,
     pageSize: 10,
@@ -78,7 +77,7 @@ export class ReportService {
   
  
   SalesSummaryRpt(brandID,fromDate,toDate) {
-    return this.http.get<SummaryReport[]>(`api/report/summary/${brandID}/${fromDate}/${toDate}`);
+    return this.http.get<MedicineReport[]>(`api/report/summary/${brandID}/${fromDate}/${toDate}`);
   }
 
   // SalesDetailRpt(fromDate,toDate) {
@@ -86,17 +85,17 @@ export class ReportService {
   //   return this.http.get<SalesdetailReport[]>(`api/report/salesdetail/${fromDate}/${toDate}`);
     
   // }
-  SalesDetailRpt(fromDate: string, toDate: string): Observable<SalesdetailReport[]> {
+  medicineDetailRpt(fromDate: string, toDate: string): Observable<MedicineReport[]> {
     debugger;
-    const url = `api/report/salesdetail/${fromDate}/${toDate}`;
+    const url = `api/report/medicinedetail/${fromDate}/${toDate}`;
     console.log(url);
     tap(() => this._loading$.next(true)),
     this._loading$.next(true);
-    return this.http.get<SalesdetailReport[]>(url).pipe(
+    return this.http.get<MedicineReport[]>(url).pipe(
       tap(res => {
-        this.salesdetailReport = res;
-        this._data$.next(this.salesdetailReport);
-        this._allData$.next(this.salesdetailReport);
+        this.medicineReport = res;
+        this._data$.next(this.medicineReport);
+        this._allData$.next(this.medicineReport);
 
         this._search$.pipe(
           switchMap(() => this._search()),
@@ -121,7 +120,7 @@ private _search(): Observable<SearchReportsResult> {
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
 
     // 1. sort
-    let sortedData = sort(this.salesdetailReport, sortColumn, sortDirection);
+    let sortedData = sort(this.medicineReport, sortColumn, sortDirection);
 
     //// 2. filter
     sortedData = sortedData.filter(data => matches(data, searchTerm));

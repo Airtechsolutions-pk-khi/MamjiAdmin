@@ -81,6 +81,119 @@ namespace BAL.Repositories
                 return new List<SalesDetailBLL>();
             }
         }
+        public List<PrescriptionDetailBLL> GetPrescriptionDetailRpt(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                var lst = new List<PrescriptionDetailBLL>();
+
+                SqlParameter[] p = new SqlParameter[2];
+
+                p[0] = new SqlParameter("@fromdate", FromDate);
+                p[1] = new SqlParameter("@todate", ToDate);
+
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_PrescriptionReport_admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<PrescriptionDetailBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return new List<PrescriptionDetailBLL>();
+            }
+        }
+        public List<DashboardRptBLL> GetdashboarddetailRpt(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                var lst = new List<DashboardRptBLL>();
+
+                SqlParameter[] p = new SqlParameter[2];
+
+                p[0] = new SqlParameter("@fromdate", FromDate);
+                p[1] = new SqlParameter("@todate", ToDate);
+
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_DashboardReport_admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<DashboardRptBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return new List<DashboardRptBLL>();
+            }
+        }
+        public List<MedicineOrderListReport> GetMedOrderdetailRpt(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                var lst = new List<MedicineOrderListReport>();
+
+                SqlParameter[] p = new SqlParameter[2];
+
+                p[0] = new SqlParameter("@fromdate", FromDate);
+                p[1] = new SqlParameter("@todate", ToDate);
+
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_MedicineOrderListReport_admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<MedicineOrderListReport>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return new List<MedicineOrderListReport>();
+            }
+        }
+        
+        public List<MedicineDetailBLL> GetMedicineDetailRpt(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                var lst = new List<MedicineDetailBLL>();
+
+                SqlParameter[] p = new SqlParameter[2];
+
+                p[0] = new SqlParameter("@fromdate", FromDate);
+                p[1] = new SqlParameter("@todate", ToDate);
+
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_MedicineReport_admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<MedicineDetailBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return new List<MedicineDetailBLL>();
+            }
+        }
         public List<SalesItemwiseBLL> GetSalesItemwiseRpt(int brandID, string locationID, DateTime FromDate, DateTime ToDate)
         {
             try

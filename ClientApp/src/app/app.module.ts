@@ -110,6 +110,10 @@ import { FormPermissionComponent } from './admin/permission/formpermission.compo
 import { AdddeliveryComponent } from './admin/settings/delivery/adddelivery/adddelivery.component';
 import { CorporateClientComponent } from './admin/settings/corporateclient/corporateclient.component';
 import { addcorporateclientComponent } from './admin/settings/corporateclient/addcorporateclient/addcorporateclient.component';
+import { MedicineReportComponent } from './admin/report/medicinereport/medicinereport.component';
+import { PrescriptionReportComponent } from './admin/report/prescriptionreport/prescriptionreport.component';
+import { DashboardReportComponent } from './admin/report/dashboardreport/dashboardreport.component';
+import { MedicineOrderListReportComponent } from './admin/report/medicineorderlistreport/medicineorderlistreport.component';
 
 
 
@@ -188,7 +192,10 @@ import { addcorporateclientComponent } from './admin/settings/corporateclient/ad
     FormPermissionComponent,
     CorporateClientComponent,
     addcorporateclientComponent,
-
+    MedicineReportComponent,
+    PrescriptionReportComponent,
+    DashboardReportComponent,
+    MedicineOrderListReportComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -245,6 +252,12 @@ import { addcorporateclientComponent } from './admin/settings/corporateclient/ad
 
           { path: 'report/summary', component: SummaryComponent },
           { path: 'report/salesdetail', component: SalesdetailComponent },
+
+          { path: 'report/medicinereport', component: MedicineReportComponent },
+          { path: 'report/prescriptionreport', component: PrescriptionReportComponent },
+          { path: 'report/dashboardreport', component: DashboardReportComponent },
+          { path: 'report/medicineorderlistreport', component: MedicineOrderListReportComponent },
+
           { path: 'report/salesuserwise', component: SalesuserwiseComponent },
           { path: 'report/salescustomerwise', component: SalescustomerwiseComponent },
           { path: 'report/salescategorywise', component: SalescategorywiseComponent },

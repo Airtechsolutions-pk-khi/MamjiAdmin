@@ -38,6 +38,53 @@ namespace MamjiAdmin.BLL._Services
                 return new List<SalesDetailBLL>();
             }
         }
+
+        
+        public List<PrescriptionDetailBLL> GetPrescriptionDetailRpt(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                return _service.GetPrescriptionDetailRpt(FromDate, ToDate);
+            }
+            catch (Exception ex)
+            {
+                return new List<PrescriptionDetailBLL>();
+            }
+        }
+        public List<DashboardRptBLL> Getdashboarddetail(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                return _service.GetdashboarddetailRpt(FromDate, ToDate);
+            }
+            catch (Exception ex)
+            {
+                return new List<DashboardRptBLL>();
+            }
+        }
+        public List<MedicineOrderListReport> GetMedOrderdetailRpt(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                return _service.GetMedOrderdetailRpt(FromDate, ToDate);
+            }
+            catch (Exception ex)
+            {
+                return new List<MedicineOrderListReport>();
+            }
+        }
+        
+        public List<MedicineDetailBLL> GeMedicineDetailRpt(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                return _service.GetMedicineDetailRpt(FromDate, ToDate);
+            }
+            catch (Exception ex)
+            {
+                return new List<MedicineDetailBLL>();
+            }
+        }
         public List<SalesUserwiseBLL> GetSalesUserwiseRpt(string locaitonID, int brandID, DateTime FromDate, DateTime ToDate)
         {
             try
