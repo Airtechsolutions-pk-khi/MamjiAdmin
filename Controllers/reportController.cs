@@ -71,5 +71,10 @@ namespace MamjiAdmin.Controllers
         {
             return _service.GetSalesCustomerwiseRpt(locationid, brandid, customerid,Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
         }
+        [HttpGet("customerrpt/{fromDate}/{toDate}")]
+        public List<CustomerBLL> GetCustomer(string fromDate, string toDate)
+        {
+            return _service.GetCustomer(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+        }
     }
 }

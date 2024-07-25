@@ -114,6 +114,7 @@ import { MedicineReportComponent } from './admin/report/medicinereport/mediciner
 import { PrescriptionReportComponent } from './admin/report/prescriptionreport/prescriptionreport.component';
 import { DashboardReportComponent } from './admin/report/dashboardreport/dashboardreport.component';
 import { MedicineOrderListReportComponent } from './admin/report/medicineorderlistreport/medicineorderlistreport.component';
+import { CustomerReportComponent } from './admin/report/customerreport/customerreport.component';
 
 
 
@@ -196,6 +197,7 @@ import { MedicineOrderListReportComponent } from './admin/report/medicineorderli
     PrescriptionReportComponent,
     DashboardReportComponent,
     MedicineOrderListReportComponent,
+    CustomerReportComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -257,6 +259,7 @@ import { MedicineOrderListReportComponent } from './admin/report/medicineorderli
           { path: 'report/prescriptionreport', component: PrescriptionReportComponent },
           { path: 'report/dashboardreport', component: DashboardReportComponent },
           { path: 'report/medicineorderlistreport', component: MedicineOrderListReportComponent },
+          { path: 'report/customerreport', component: CustomerReportComponent },
 
           { path: 'report/salesuserwise', component: SalesuserwiseComponent },
           { path: 'report/salescustomerwise', component: SalescustomerwiseComponent },

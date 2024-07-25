@@ -309,5 +309,28 @@ namespace BAL.Repositories
                 return new List<SalesCustomerwiseBLL>();
             }
         }
+        public List<CustomerBLL> GetCustomer(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                var lst = new List<CustomerBLL>();
+                SqlParameter[] p = new SqlParameter[2];
+                p[0] = new SqlParameter("@fromdate", FromDate);
+                p[1] = new SqlParameter("@todate", ToDate);
+                _dt = (new DBHelper().GetTableFromSP)("sp_CustomerReport_admin", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return new List<CustomerBLL>();
+            }
+        }
     }
 }

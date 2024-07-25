@@ -104,3 +104,14 @@ export class SalescategorywiseReport {
   profit: string;
   itemID: string;
 }
+
+export class CustomerReport {
+  customerID: number;
+  fullName: string;
+  email: string;
+  mobile: string;
+  password: string;
+  image: string;
+  statusID: number;
+  registrationNo: string;
+}
