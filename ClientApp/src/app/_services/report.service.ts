@@ -95,6 +95,7 @@ export class ReportService {
     return this.http.get<SalesdetailReport[]>(url).pipe(
       tap(res => {
         this.salesdetailReport = res;
+        debugger
         this._data$.next(this.salesdetailReport);
         this._allData$.next(this.salesdetailReport);
 
