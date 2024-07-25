@@ -129,5 +129,16 @@ namespace MamjiAdmin.BLL._Services
                 return new List<SalesCategorywiseBLL>();
             }
         }
+        public List<CustomerBLL> GetCustomer(DateTime FromDate, DateTime ToDate)
+        {
+            try
+            {
+                return _service.GetCustomer(FromDate, ToDate);
+            }
+            catch (Exception ex)
+            {
+                return new List<CustomerBLL>();
+            }
+        }
     }
 }
