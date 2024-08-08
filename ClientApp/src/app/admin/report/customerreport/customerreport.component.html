@@ -1,5 +1,5 @@
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Report</h1>
+<h1 class="h3 mb-2 text-gray-800">Customer Report</h1>
 <p class="mb-4"></p>
 
 <!-- DataTales Example -->
@@ -44,7 +44,7 @@
                         <th width="15%">Mobile</th> 
                         <th width="15%">Email</th>                        
                         <th width="15%">Password</th>                    
-                        <th width="15%">Status</th>             
+                        <!--<th width="15%">Status</th> k-->            
                     </tr>
                 </thead>
                 <tbody>
@@ -57,7 +57,7 @@
                     <td>{{item.mobile}} </td>
                     <td>{{item.email}} </td>
                     <td>{{item.password}} </td>
-                    <td>
+                    <!--<td>
                       <span class="badge badge-success"
                             *ngIf="item.statusID == 1">Active</span>
 
@@ -69,7 +69,7 @@
 
                       <span class="badge badge-dark"
                             *ngIf="![1, 2, 3].includes(item.statusID)">-</span>
-                    </td>
+                    </td>-->
                   </tr>
                 </tbody>
             </table>

@@ -1,5 +1,5 @@
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Report</h1>
+<h1 class="h3 mb-2 text-gray-800">Appointment Report</h1>
 <p class="mb-4"></p>
 
 <!-- DataTales Example -->
@@ -60,7 +60,8 @@
                         <td>{{item.timeslot}}</td>
                         
                         <td>
-                            <span class="badge badge-warning"
+                         {{item.status}}
+                            <!--<span class="badge badge-warning"
                                   *ngIf="item.appointmentStatus == 101">Pending</span>
               
                             <span class="badge badge-success"
@@ -73,10 +74,10 @@
                                   *ngIf="item.appointmentStatus == 100">Completed</span>
               
                             <span class="badge badge-dark"
-                                  *ngIf="![101, 102, 103, 100].includes(item.appointmentStatus)">-</span>
+                                  *ngIf="![101, 102, 103, 100].includes(item.appointmentStatus)">-</span>-->
                           </td>
 
-                        <td>{{item.lastUpdatedBy}}</td>
+                        <td>{{item.approvedBy}}</td>
                     </tr>
                 </tbody>
             </table>

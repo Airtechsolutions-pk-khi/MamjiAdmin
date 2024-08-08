@@ -129,7 +129,7 @@ namespace MamjiAdmin.BLL._Services
                 return new List<SalesCategorywiseBLL>();
             }
         }
-        public List<CustomerBLL> GetCustomer(DateTime FromDate, DateTime ToDate)
+        public List<CustomerRptBLL> GetCustomer(DateTime FromDate, DateTime ToDate)
         {
             try
             {
@@ -137,7 +137,7 @@ namespace MamjiAdmin.BLL._Services
             }
             catch (Exception ex)
             {
-                return new List<CustomerBLL>();
+                return new List<CustomerRptBLL>();
             }
         }
     }

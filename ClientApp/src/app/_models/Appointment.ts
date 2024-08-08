@@ -55,3 +55,17 @@ export class Doctors {
   profile: string;
   statusID: number;
 }
+
+export class AppointmentReport {
+  appointmentNo: string;
+  bookingDate: string;
+  day: string;
+  doctorName: string;
+  appointmentType: string;
+  fullName: string;
+  mobile: string;
+  timeslot: string;
+  lastUpdatedBy: string;
+  appointmentStatus: number;
+  status: string;
+}

@@ -137,7 +137,7 @@ namespace MamjiAdmin.BLL._Services
                     {
                     }
                 }
-                else if (obj.AppointmentStatus == 100)
+                if (obj.AppointmentStatus == 100)
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\appointmentcompleted.txt");
                     UpdateComplete(obj, _env, Body);
@@ -159,7 +159,7 @@ namespace MamjiAdmin.BLL._Services
                     }
                 }
 
-                else if (obj.AppointmentStatus == 103)
+                if (obj.AppointmentStatus == 103)
                 {
                     Body = System.IO.File.ReadAllText(contentRootPath + "\\Template\\appointmentcancelled.txt");
                     UpdateCancelled(obj, _env, Body);
@@ -182,9 +182,8 @@ namespace MamjiAdmin.BLL._Services
                 }
 
                 obj.LastUpdatedDate = _UTCDateTime_SA();
+                //obj.LastUpdatedBy = ;
                 var result = _service.Status(obj);
-
-
                 return result;
             }
             catch (Exception ex)

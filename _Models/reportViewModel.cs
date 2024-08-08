@@ -28,21 +28,19 @@ namespace MamjiAdmin._Models
         public int AppointmentNo { get; set; }
         public string BookingDate { get; set; }
         public string Day { get; set; }
+        public string DoctorName { get; set; }
         public string FullName { get; set; }
         public string Mobile { get; set; }
+        public string CreatedOn{ get; set; }
         public string ApprovedBy { get; set; }
+        //public int AppointmentStatus { get; set; }
         public string Timeslot { get; set; }
-        public int AppointmentStatus { get; set; }
-        public Nullable<System.DateTime> CreatedOn { get; set; }
-        public string LastUpdatedBy { get; set; }
-        public Nullable<System.DateTime> LastUpdatedDate { get; set; }
-        public int StatusID { get; set; }
-        
-
+        //public string LastUpdatedBy { get; set; }
+        public string Status { get; set; }
+        //public Nullable<System.DateTime> LastUpdatedDate { get; set; } 
     }
     public class MedicineDetailBLL
-    {
-       
+    {  
         public string Name { get; set; }
         public string BrandDetails { get; set; }
         public int Price { get; set; }

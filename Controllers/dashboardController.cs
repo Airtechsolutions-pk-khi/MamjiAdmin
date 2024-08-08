@@ -28,5 +28,11 @@ namespace MamjiAdmin.Controllers
         {
             return _service.GetChart();
         }
+
+        [HttpGet("getlinecharts")]
+        public RspDashboard GetLineChart()
+        {
+            return _service.GetChart();
+        }
     }
 }

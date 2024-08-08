@@ -76,8 +76,8 @@ export class DashboardComponent {
   async ngOnInit() {
     this.GetDashboard();
     this.GetChart();
+    this.GetLineChart();
     await this.singlarService.startConnection();
-   
   }
 
   constructor(public service: DashboardService,
@@ -85,82 +85,78 @@ export class DashboardComponent {
     public router: Router,
     private singlarService: SignalrService,
     // public alertService: AlertService
-    ) {
+  ) {
     this.loading$ = service.loading$;
+  //  this.lineChartOptions = {
+  //    series: [
+  //      {
+  //        name: "Appointment",
+  //        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+  //      }
+  //    ],
+  //    chart: {
+  //      height: 350,
+  //      type: "line",
+  //      zoom: {
+  //        enabled: false
+  //      }
+  //    },
+  //    dataLabels: {
+  //      enabled: false
+  //    },
+  //    stroke: {
+  //      curve: "straight"
+  //    },
+  //    title: {
+  //      text: "",
+  //      align: "left"
+  //    },
+  //    grid: {
+  //      row: {
+  //        colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+  //        opacity: 0.5
+  //      }
+  //    },
+  //    xaxis: {
+  //      categories: [
+  //        "Jan",
+  //        "Feb",
+  //        "Mar",
+  //        "Apr",
+  //        "May",
+  //        "Jun",
+  //        "Jul",
+  //        "Aug",
+  //        "Sep"
+  //      ]
+  //    }
+  //  };
+  }
+  BindTodaysSales(sales, timeSlot) {
+    this.chartOptions = {
+      series: [
+        {
+          name: "Appointments",
+          data: sales
+        }
+      ],
+      chart: {
+        height: 300,
+        type: "bar"
+      },
+      xaxis: {
+        categories: timeSlot
+      }
+    };
 
-    //this.chartOptions = {
-    //  series: [
-    //    {
-    //      name: "Appointment",
-    //      data: [5, 3, 7, 9, 2, 8, 11]
-    //    },
-    //  ],
-    //  chart: {
-    //    height: 350,
-    //    type: "bar",
-    //    events: {
-    //      click: function (chart, w, e) {
-    //        // console.log(chart, w, e)
-    //      }
-    //    }
+  }
 
-    //  },
-    //  colors: [
-    //    "#008FFB",
-    //    "#00E396",
-    //    "#FEB019",
-    //    "#FF4560",
-    //    "#775DD0",
-    //    "#546E7A",
-    //    "#26a69a"
-    //  ],
-    //  plotOptions: {
-    //    bar: {
-    //      columnWidth: "45%",
-    //      distributed: true
-    //    }
-    //  },
-    //  dataLabels: {
-    //    enabled: false
-    //  },
-    //  legend: {
-    //    show: false
-    //  },
-    //  grid: {
-    //    show: false
-    //  },
-    //  xaxis: {
-    //    categories: [
-    //      ["16/Jan/2023"],
-    //      ["17/Jan/2023"],
-    //      ["18/Jan/2023"],
-    //      ["19/Jan/2023"],
-    //      ["20/Jan/2023"],
-    //      ["21/Jan/2023"],
-    //      ["22/Jan/2023"]
-    //    ],
-    //    labels: {
-    //      style: {
-    //        colors: [
-    //          "#008FFB",
-    //          "#00E396",
-    //          "#FEB019",
-    //          "#FF4560",
-    //          "#775DD0",
-    //          "#546E7A",
-    //          "#26a69a"
-    //        ],
-    //        fontSize: "12px"
-    //      }
-    //    }
-    //  }
-    //};
-
+  BindMonthlySales(appointments, months) {
     this.lineChartOptions = {
       series: [
         {
-          name: "Sales",
-          data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+          name: "Appointments",
+          data: appointments
         }
       ],
       chart: {
@@ -169,9 +165,6 @@ export class DashboardComponent {
         zoom: {
           enabled: false
         }
-      },
-      dataLabels: {
-        enabled: false
       },
       stroke: {
         curve: "straight"
@@ -187,39 +180,10 @@ export class DashboardComponent {
         }
       },
       xaxis: {
-        categories: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep"
-        ]
+        categories: months
       }
-    };
+    }
   }
-  BindTodaysSales(sales, timeSlot) {
-    this.chartOptions = {
-      series: [
-        {
-          name: "Sales",
-          data: sales
-        }
-      ],
-      chart: {
-        height: 300,
-        type: "bar"
-      },
-      xaxis: {
-        categories: timeSlot
-      }
-    };
-
-  }
-
   GetDashboard() {
     debugger
     this.service.getAllData().subscribe((res: any) => {
@@ -228,7 +192,15 @@ export class DashboardComponent {
   }
   GetChart() {
     this.service.getChart().subscribe((res: any) => {
-      this.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
+      debugger
+      this.BindTodaysSales(res.todaysales.appointments, res.todaysales.timeSlot);
+    });
+  }
+  GetLineChart() {
+    debugger
+    this.service.getLineChart().subscribe((res: any) => {
+      debugger
+      this.BindMonthlySales(res.todaysales.appointments, res.todaysales.timeSlot);
     });
   }
 }

@@ -5,15 +5,16 @@ import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { State } from '../_models/State';
 import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
+import { Appointment, AppointmentReport } from '../_models/Appointment';
 
 
 interface SearchReportsResult {
-  data: SalesdetailReport[];
+  data: AppointmentReport[];
   total: number;
 }
 const compare = (v1: string, v2: string) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
 
-function sort(data: SalesdetailReport[], column: SortColumn, direction: string): SalesdetailReport[] {
+function sort(data: AppointmentReport[], column: SortColumn, direction: string): AppointmentReport[] {
   if (direction === '' || column === '') {
     return data;
   } else {
@@ -28,13 +29,10 @@ function sort(data: SalesdetailReport[], column: SortColumn, direction: string):
 //   debugger
 //   return data.fullName.toLowerCase().includes(term.toLowerCase())
 // }
-function matches(data: SalesdetailReport, term: string) {
+function matches(data: AppointmentReport, term: string) {
   
-  return data.fullName.toLowerCase().includes(term.toLowerCase()) ||
-         data.mobile.toLowerCase().includes(term.toLowerCase())||
-         data.bookingDate.toLowerCase().includes(term.toLowerCase());
+  return data.fullName.toLowerCase().includes(term.toLowerCase());
 }
-
 
 @Injectable({
   providedIn: 'root'
@@ -46,10 +44,10 @@ export class ReportService {
   }
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _allData$ = new BehaviorSubject<SalesdetailReport[]>([]);
-  private _data$ = new BehaviorSubject<SalesdetailReport[]>([]);
+  private _allData$ = new BehaviorSubject<AppointmentReport[]>([]);
+  private _data$ = new BehaviorSubject<AppointmentReport[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
-  public salesdetailReport: SalesdetailReport[];  
+  public salesdetailReport: AppointmentReport[];  
   private _state: State = {
     page: 1,
     pageSize: 10,
@@ -86,13 +84,13 @@ export class ReportService {
   //   return this.http.get<SalesdetailReport[]>(`api/report/salesdetail/${fromDate}/${toDate}`);
     
   // }
-  SalesDetailRpt(fromDate: string, toDate: string): Observable<SalesdetailReport[]> {
+  SalesDetailRpt(fromDate: string, toDate: string): Observable<AppointmentReport[]> {
     debugger;
     const url = `api/report/salesdetail/${fromDate}/${toDate}`;
     console.log(url);
     tap(() => this._loading$.next(true)),
     this._loading$.next(true);
-    return this.http.get<SalesdetailReport[]>(url).pipe(
+    return this.http.get<AppointmentReport[]>(url).pipe(
       tap(res => {
         this.salesdetailReport = res;
         this._data$.next(this.salesdetailReport);

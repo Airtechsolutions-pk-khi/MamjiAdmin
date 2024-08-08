@@ -85,23 +85,55 @@ namespace BAL.Repositories
             {
                 SqlParameter[] p = new SqlParameter[0];
 
-                _dt = (new DBHelper().GetTableFromSP)("sp_SaleaToday_admin", p);
+                _dt = (new DBHelper().GetTableFromSP)("sp_TodayAppointments_Admin", p);
 
                 for (int i = 0; i < _dt.Rows.Count; i++)
                 {
-                    lstS.Add(_dt.Rows[i]["Sales"].ToString());
+                    lstS.Add(_dt.Rows[i]["Appointments"].ToString());
                 }
                 for (int i = 0; i < _dt.Rows.Count; i++)
                 {
                     lstTS.Add(_dt.Rows[i]["TimeSlot"].ToString());
                 }
-                rsp.Sales = lstS;
+                rsp.Appointments = lstS;
                 rsp.TimeSlot = lstTS;
             }
             catch (Exception ex)
             {
-                rsp.Sales = new List<string>();
+                rsp.Appointments = new List<string>();
                 rsp.TimeSlot = new List<string>();
+            }
+
+            return rsp;
+        }
+
+        public DashboardMonth GetMonthAppointments()
+        {
+            var rsp = new DashboardMonth();
+            var lstS = new List<string>();
+            var lstTS = new List<string>();
+
+            try
+            {
+                SqlParameter[] p = new SqlParameter[0];
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_AnnualAppointmentChart_Admina", p);
+
+                for (int i = 0; i < _dt.Rows.Count; i++)
+                {
+                    lstS.Add(_dt.Rows[i]["Appointments"].ToString());
+                }
+                for (int i = 0; i < _dt.Rows.Count; i++)
+                {
+                    lstTS.Add(_dt.Rows[i]["Months"].ToString());
+                }
+                rsp.Appointments = lstS;
+                rsp.Months = lstTS;
+            }
+            catch (Exception ex)
+            {
+                rsp.Appointments = new List<string>();
+                rsp.Months = new List<string>();
             }
 
             return rsp;

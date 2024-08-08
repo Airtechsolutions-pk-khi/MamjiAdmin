@@ -62,7 +62,6 @@ export class SalesdetailReport {
   fullName:string;
   timeSlot:string;
   lastUpdatedBy:string;
-  
 }
 export class SalesitemwiseReport {
   itemName: string;

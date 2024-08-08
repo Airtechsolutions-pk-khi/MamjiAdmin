@@ -13,6 +13,7 @@ namespace MamjiAdmin._Models
         public DashboardSummary summarysales { get; set; }
         public DashboardToday todaysales{ get; set; }
         public DashboardMAEN maensales { get; set; }
+        public DashboardMonth monthappointments { get; set; }   
     }
     public class DashboardSummary
     {
@@ -30,8 +31,13 @@ namespace MamjiAdmin._Models
     }
     public class DashboardToday
     {
-        public List<string> Sales { get; set; }
+        public List<string> Appointments { get; set; }
         public List<string> TimeSlot { get; set; }
+    }   
+    public class DashboardMonth
+    {
+        public List<string> Appointments { get; set; }
+        public List<string> Months { get; set; }
     }
     public class DashboardMAEN
     {

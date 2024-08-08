@@ -64,8 +64,6 @@ namespace BAL.Repositories
                 p[0] = new SqlParameter("@fromdate", FromDate);
                 p[1] = new SqlParameter("@todate", ToDate);
                 
-
-
                 _dt = (new DBHelper().GetTableFromSP)("sp_AppointmentReport_admin", p);
                 if (_dt != null)
                 {
@@ -309,11 +307,11 @@ namespace BAL.Repositories
                 return new List<SalesCustomerwiseBLL>();
             }
         }
-        public List<CustomerBLL> GetCustomer(DateTime FromDate, DateTime ToDate)
+        public List<CustomerRptBLL> GetCustomer(DateTime FromDate, DateTime ToDate)
         {
             try
             {
-                var lst = new List<CustomerBLL>();
+                var lst = new List<CustomerRptBLL>();
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@fromdate", FromDate);
                 p[1] = new SqlParameter("@todate", ToDate);
@@ -322,14 +320,14 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerBLL>>();
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<CustomerRptBLL>>();
                     }
                 }
                 return lst;
             }
             catch (Exception ex)
             {
-                return new List<CustomerBLL>();
+                return new List<CustomerRptBLL>();
             }
         }
     }

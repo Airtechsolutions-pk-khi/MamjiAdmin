@@ -40,4 +40,7 @@ export class DashboardService {
   getChart() {
     return this.http.get<any[]>(`api/dashboard/getcharts`);
   }
+  getLineChart() {
+    return this.http.get<any[]>(`api/dashboard/getlinecharts`);
+  }
 }

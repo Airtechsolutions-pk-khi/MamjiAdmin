@@ -47,6 +47,14 @@ namespace MamjiAdmin.BLL._Services
             {
                 rsp.todaysales = new DashboardToday();
             }
+            try
+            {
+                rsp.monthappointments = _service.GetMonthAppointments();
+            }
+            catch (Exception)
+            {
+                rsp.monthappointments = new DashboardMonth();
+            }
 
             return rsp;
 
