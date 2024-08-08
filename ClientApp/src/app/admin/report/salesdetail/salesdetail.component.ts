@@ -68,7 +68,7 @@ export class SalesdetailComponent implements OnInit {
           this.ts.showError("Error", "Something went wrong");
 
       }, error => {
-        this.ts.showError("Error", "Failed to delete record.")
+        this.ts.showError("Error", "Failed to load record.")
       });
   }
   onSort({ column, direction }: SortEvent) {

@@ -9114,19 +9114,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MRC\\.nuget\\packages\\": {}
+    "C:\\Users\\Airtech Soutions\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\Mamji_Admin\\MamjiAdmin.csproj",
+      "projectUniqueName": "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj",
       "projectName": "MamjiAdmin",
-      "projectPath": "E:\\Projects\\Mamji_Admin\\MamjiAdmin.csproj",
-      "packagesPath": "C:\\Users\\MRC\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\Mamji_Admin\\obj\\",
+      "projectPath": "E:\\Project\\Mamji\\MamjiAdmin_Git\\MamjiAdmin.csproj",
+      "packagesPath": "C:\\Users\\Airtech Soutions\\.nuget\\packages\\",
+      "outputPath": "E:\\Project\\Mamji\\MamjiAdmin_Git\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MRC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Airtech Soutions\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9146,11 +9146,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -9217,20 +9212,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "libraryId": "Newtonsoft.Json",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }
