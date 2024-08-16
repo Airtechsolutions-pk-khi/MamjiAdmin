@@ -45,9 +45,7 @@
                         <th width="15%">Address</th>
                         <th width="15%">note</th>
                         <th width="15%">Approved by</th>                        
-                        <th width="15%">Status</th>
-                        
-                        
+                        <!--<th width="15%">Status</th>-->    
                     </tr>
                 </thead>
                 <tbody>
@@ -59,7 +57,7 @@
                         <td>{{item.address}} </td>
                         <td>{{item.note}} </td>
                         <td>{{item.lastUpdatedBy}} </td>
-                        <td>
+                        <!--<td>
                             <span class="badge badge-warning"
                                   *ngIf="item.statusID == 101">Pending</span>
               
@@ -74,7 +72,7 @@
               
                             <span class="badge badge-dark"
                                   *ngIf="![101, 102, 103, 100].includes(item.statusID)">-</span>
-                          </td>
+                          </td>-->
                     </tr>
                 </tbody>
             </table>

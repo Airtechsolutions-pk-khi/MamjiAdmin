@@ -3,10 +3,10 @@ export class Report {
 }
 export class MedicineReport {
   name: string;
-  brandDetails: string;  
+  brandDetails: string;
   price: string;
   quantityDescription: string;
-  status: number;  
+  status: number;
 }
 export class PrescriptionReport {
   prescriptionID: number;
@@ -15,27 +15,29 @@ export class PrescriptionReport {
   mobile: string;
   address: string;
   note: string;
+  approvedBy: string;
   statusID: number;
-   
+
   lastUpdatedBy: string;
 }
-export class DashboardReport{
+export class DashboardReport {
   totalDoctors: string;
-  totalPatients: string;  
-  DoctorAppointments: string;  
+  totalPatients: string;
+  DoctorAppointments: string;
   totalPrescription: string;
 }
-export class MedicineOrderListReport{
-   
+export class MedicineOrderListReport {
+
   orderNo: number;
   transactionNo: string;
-  customerMobile: string;   
+  customerMobile: string;
   customerName: string;
-  amountTotal: number;   
+  amountTotal: number;
   statusID: number;
   orderDate: string;
-  orderType: string
-  
+  orderType: string;
+  status: string;
+
 }
 export class SummaryReport {
   totalSales: string;
@@ -59,9 +61,9 @@ export class SalesdetailReport {
   appointmentSlot: string;
   appointmentStatus: number;
   approvedBy: number;
-  fullName:string;
-  timeSlot:string;
-  lastUpdatedBy:string;
+  fullName: string;
+  timeSlot: string;
+  lastUpdatedBy: string;
 }
 export class SalesitemwiseReport {
   itemName: string;
@@ -111,6 +113,5 @@ export class CustomerReport {
   mobile: string;
   password: string;
   image: string;
-  statusID: number;
   registrationNo: string;
 }

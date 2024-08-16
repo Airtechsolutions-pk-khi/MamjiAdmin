@@ -65,7 +65,8 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 data.ImagePath = UploadImage(data.ImagePath, "Doctor", _env);
-                data.CreatedOn = _UTCDateTime_SA();
+                data.CreatedOn = DateTime.Now.AddMinutes(300);
+                data.LastUpdatedDate = DateTime.Now.AddMinutes(300);
                 var result = _service.Insert(data);
 
                 return result;
@@ -81,7 +82,7 @@ namespace MamjiAdmin.BLL._Services
             try
             {
                 //data.ImagePath = UploadImage(data.ImagePath, "Doctor", _env);
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.LastUpdatedDate = DateTime.Now.AddMinutes(300);
                 var result = _service.Update(data);
 
                 return result;
@@ -96,7 +97,7 @@ namespace MamjiAdmin.BLL._Services
         {
             try
             {
-                data.LastUpdatedDate = _UTCDateTime_SA();
+                data.LastUpdatedDate = DateTime.Now.AddMinutes(300);
                 var result = _service.Delete(data);
 
                 return result;

@@ -82,11 +82,25 @@ export class MedicineReportComponent implements OnInit {
   parseDate(obj) {
     return obj.year + "-" + obj.month + "-" + obj.day;;
   }
+  //exportAsXLSX(): void {
+
+  //  this.excelService.exportMedical(this.orderDetails, 'Report_Export');
+  //}
+
+
   exportAsXLSX(): void {
-    
-    this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+    const fromDate = this.parseDate(this._datepicker.fromDate);
+    const toDate = this.parseDate(this._datepicker.toDate);
+
+    this.orderDetails = this.orderDetails.map(order => {
+      return {
+        ...order,
+        fromDate: fromDate,
+        toDate: toDate
+      };
+    });
+    this.excelService.exportMedical(this.orderDetails, 'Report_Export');
   }
-  
   
   Filter() {
     

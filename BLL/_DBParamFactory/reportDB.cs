@@ -1,6 +1,4 @@
-﻿
-
-using MamjiAdmin._Models;
+﻿using MamjiAdmin._Models;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;

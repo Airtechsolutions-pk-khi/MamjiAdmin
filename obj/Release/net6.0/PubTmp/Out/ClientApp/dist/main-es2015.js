@@ -686,7 +686,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customer Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Customer Name \" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Image</th>\r\n                        <th width=\"15%\">Name</th>\r\n                        <th width=\"15%\">Mobile</th> \r\n                        <th width=\"15%\">Email</th>                        \r\n                        <th width=\"15%\">Password</th>                    \r\n                        <!--<th width=\"15%\">Status</th> k-->            \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td>{{item.fullName}} </td>\r\n                    <td>{{item.mobile}} </td>\r\n                    <td>{{item.email}} </td>\r\n                    <td>{{item.password}} </td>\r\n                    <!--<td>\r\n                      <span class=\"badge badge-success\"\r\n                            *ngIf=\"item.statusID == 1\">Active</span>\r\n\r\n                      <span class=\"badge badge-warning\"\r\n                            *ngIf=\"item.statusID == 2\">InActive</span>\r\n\r\n                      <span class=\"badge badge-danger\"\r\n                            *ngIf=\"item.statusID == 3\">Deleted</span>\r\n\r\n                      <span class=\"badge badge-dark\"\r\n                            *ngIf=\"![1, 2, 3].includes(item.statusID)\">-</span>\r\n                    </td>-->\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customer Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customer Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Customer Name \" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Image</th>\r\n                        <th width=\"15%\">Name</th>\r\n                        <th width=\"15%\">Mobile</th> \r\n                        <th width=\"15%\">Email</th>                        \r\n                        <th width=\"15%\">Password</th>                    \r\n                        <!--<th width=\"15%\">Status</th> k-->            \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td>{{item.fullName}} </td>\r\n                    <td>{{item.mobile}} </td>\r\n                    <td>{{item.email}} </td>\r\n                    <td>{{item.password}} </td>\r\n                    <!--<td>\r\n                      <span class=\"badge badge-success\"\r\n                            *ngIf=\"item.statusID == 1\">Active</span>\r\n\r\n                      <span class=\"badge badge-warning\"\r\n                            *ngIf=\"item.statusID == 2\">InActive</span>\r\n\r\n                      <span class=\"badge badge-danger\"\r\n                            *ngIf=\"item.statusID == 3\">Deleted</span>\r\n\r\n                      <span class=\"badge badge-dark\"\r\n                            *ngIf=\"![1, 2, 3].includes(item.statusID)\">-</span>\r\n                    </td>-->\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -699,7 +699,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Dashboard Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <!-- <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div> -->\r\n\r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Total Doctors</th>\r\n                        <th width=\"15%\">Total Patients</th>\r\n                         \r\n                        <th width=\"15%\">Total Doctor Appointments </th>\r\n                        <th width=\"10%\">Total Prescription</th>\r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails \">\r\n                        <td>{{item.totalDoctors}} </td>\r\n                        <td>{{item.totalPatients}} </td>                         \r\n                        <td>{{item.totalDoctorAppointments}} </td>\r\n                        <td>{{item.totalPrescription}} </td>\r\n                         \r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Dashboard Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Dashboard Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <!-- <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div> -->\r\n\r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Total Doctors</th>\r\n                        <th width=\"15%\">Total Patients</th>                     \r\n                        <th width=\"15%\">Total Doctor Appointments </th>\r\n                        <th width=\"10%\">Total Prescription</th>    \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails \">\r\n                        <td>{{item.totalDoctors}} </td>\r\n                        <td>{{item.totalPatients}} </td>                         \r\n                        <td>{{item.totalDoctorAppointments}} </td>\r\n                        <td>{{item.totalPrescription}} </td>\r\n                         \r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -712,7 +712,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Order List Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Order #</th>\r\n                        <th width=\"15%\">Transaction #</th>\r\n                         \r\n                        <th width=\"15%\">Name</th>\r\n                        <th width=\"15%\">Contact</th>\r\n                        <!-- <th width=\"15%\">Total</th> -->\r\n                        <th width=\"15%\">Date</th>\r\n                        <th width=\"15%\">Order Type</th>\r\n                        <th width=\"10%\">Status</th>\r\n                        \r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>{{item.orderNo}} </td>\r\n                        <td>{{item.transactionNo}} </td>                         \r\n                        <td>{{item.customerName}} </td>\r\n                        <td>{{item.customerMobile}} </td>\r\n                        <!-- <td> <span class=\"badge badge-success-soft text-success badge-pill py-2 px-3 mb-2\" style=\"background-color: #bfe5dc;\">{{item.grandTotal | number : '1.2-2'}} PKR</span> </td> -->\r\n                        <td>{{item.orderDate | date}}</td>\r\n                        <td><span class=\"badge badge-yellow\">{{item.orderType}}</span></td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-warning': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==100 ? 'Completed' :\r\n                                           item.statusID ==101 ? 'Pending' :\r\n                                           item.statusID ==104 ? 'Out For Delivery' :\r\n                                           item.statusID ==102 ? 'Approved' :\r\n                                           item.statusID ==103 ? 'Cancelled' :\r\n                                           item.statusID ==100 ? 'Completed' :'-'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                          </td> \r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Order List Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Order List Report</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\"> </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">\r\n\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span>Export</span>\r\n        </button>\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">Order #</th>\r\n            <th width=\"15%\">Transaction #</th>\r\n            <th width=\"15%\">Name</th>\r\n            <th width=\"15%\">Contact</th>\r\n            <!-- <th width=\"15%\">Total</th> -->\r\n            <th width=\"15%\">Date</th>\r\n            <th width=\"10%\">Status</th>\r\n\r\n\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>{{item.orderNo}} </td>\r\n            <td>{{item.transactionNo}} </td>\r\n            <td>{{item.customerName}} </td>\r\n            <td>{{item.customerMobile}} </td>\r\n            <!-- <td> <span class=\"badge badge-success-soft text-success badge-pill py-2 px-3 mb-2\" style=\"background-color: #bfe5dc;\">{{item.grandTotal | number : '1.2-2'}} PKR</span> </td> -->\r\n            <td>{{item.orderDate | date}}</td>\r\n            <td>{{item.status}}</td>\r\n            <!--<td>\r\n                <ngb-highlight [ngClass]=\"{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-warning': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==100 ? 'Completed' :\r\n                               item.statusID ==101 ? 'Pending' :\r\n                               item.statusID ==104 ? 'Out For Delivery' :\r\n                               item.statusID ==102 ? 'Approved' :\r\n                               item.statusID ==103 ? 'Cancelled' :\r\n                               item.statusID ==100 ? 'Completed' :'-'\" [term]=\"service.searchTerm\">\r\n                </ngb-highlight>\r\n              </td>-->\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -725,7 +725,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Medicine Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Name</th>\r\n                        <th width=\"15%\">Brand Detail</th>\r\n                         \r\n                        <th width=\"15%\">Quantity Description </th>\r\n                        <th width=\"10%\">Status</th>\r\n                        \r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>{{item.name}} </td>\r\n                        <td>{{item.brandDetails}} </td>\r\n                         \r\n                        <td>{{item.quantityDescription}} </td>\r\n                       \r\n                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                          </td>\r\n\r\n                         \r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Medicine Report</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\"> </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">\r\n\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span>Export</span>\r\n        </button>\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">Name</th>\r\n            <th width=\"15%\">Brand Detail</th>\r\n            <th width=\"15%\">Quantity Description </th>\r\n            <th width=\"10%\">Status</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>{{item.name}} </td>\r\n            <td>{{item.brandDetails}} </td>\r\n            <td>{{item.quantityDescription}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -738,7 +738,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Prescription Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Customer Name \" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Image</th>\r\n                        <th width=\"15%\">Customer Name</th>                         \r\n                        <th width=\"15%\">mobile</th>\r\n                        <th width=\"15%\">Address</th>\r\n                        <th width=\"15%\">note</th>\r\n                        <th width=\"15%\">Approved by</th>                        \r\n                        <th width=\"15%\">Status</th>\r\n                        \r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td><img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> </td>\r\n                        <td>{{item.customerName}} </td>                         \r\n                        <td>{{item.mobile}} </td>\r\n                        <td>{{item.address}} </td>\r\n                        <td>{{item.note}} </td>\r\n                        <td>{{item.lastUpdatedBy}} </td>\r\n                        <td>\r\n                            <span class=\"badge badge-warning\"\r\n                                  *ngIf=\"item.statusID == 101\">Pending</span>\r\n              \r\n                            <span class=\"badge badge-success\"\r\n                                  *ngIf=\"item.statusID == 102\">Approved</span>\r\n              \r\n                            <span class=\"badge badge-danger\"\r\n                                  *ngIf=\"item.statusID == 103\">Cancelled</span>\r\n              \r\n                            <span class=\"badge badge-info\"\r\n                                  *ngIf=\"item.statusID == 100\">Completed</span>\r\n              \r\n                            <span class=\"badge badge-dark\"\r\n                                  *ngIf=\"![101, 102, 103, 100].includes(item.statusID)\">-</span>\r\n                          </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Prescription Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Prescription Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Customer Name \" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Image</th>\r\n                        <th width=\"15%\">Customer Name</th>                         \r\n                        <th width=\"15%\">mobile</th>\r\n                        <th width=\"15%\">Address</th>\r\n                        <th width=\"15%\">note</th>\r\n                        <th width=\"15%\">Approved by</th>                        \r\n                        <!--<th width=\"15%\">Status</th>-->    \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td><img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> </td>\r\n                        <td>{{item.customerName}} </td>                         \r\n                        <td>{{item.mobile}} </td>\r\n                        <td>{{item.address}} </td>\r\n                        <td>{{item.note}} </td>\r\n                        <td>{{item.lastUpdatedBy}} </td>\r\n                        <!--<td>\r\n                            <span class=\"badge badge-warning\"\r\n                                  *ngIf=\"item.statusID == 101\">Pending</span>\r\n              \r\n                            <span class=\"badge badge-success\"\r\n                                  *ngIf=\"item.statusID == 102\">Approved</span>\r\n              \r\n                            <span class=\"badge badge-danger\"\r\n                                  *ngIf=\"item.statusID == 103\">Cancelled</span>\r\n              \r\n                            <span class=\"badge badge-info\"\r\n                                  *ngIf=\"item.statusID == 100\">Completed</span>\r\n              \r\n                            <span class=\"badge badge-dark\"\r\n                                  *ngIf=\"![101, 102, 103, 100].includes(item.statusID)\">-</span>\r\n                          </td>-->\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -777,7 +777,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Mobile | Booking Date\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Appoint.No</th>\r\n                        <th width=\"15%\">Patient Name</th>\r\n                        <th width=\"10%\">Mobile</th>\r\n                        <th width=\"15%\">Booking Date / Time </th>\r\n                        <th width=\"10%\">Appointment Date</th>\r\n                        <th width=\"15%\">Appointment Slot</th>\r\n                        <th width=\"10%\">Appointment Status </th>\r\n                        <th width=\"15%\">Approved By </th>\r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>{{item.appointmentNo}} </td>\r\n                        <td>{{item.fullName}} </td>\r\n                        <td>{{item.mobile}} </td>\r\n                        <td>{{item.bookingDate}} </td>\r\n                        <td>{{item.createdOn }}</td>\r\n                        <td>{{item.timeslot}}</td>\r\n                        \r\n                        <td>\r\n                            <span class=\"badge badge-warning\"\r\n                                  *ngIf=\"item.appointmentStatus == 101\">Pending</span>\r\n              \r\n                            <span class=\"badge badge-success\"\r\n                                  *ngIf=\"item.appointmentStatus == 102\">Approved</span>\r\n              \r\n                            <span class=\"badge badge-danger\"\r\n                                  *ngIf=\"item.appointmentStatus == 103\">Cancelled</span>\r\n              \r\n                            <span class=\"badge badge-info\"\r\n                                  *ngIf=\"item.appointmentStatus == 100\">Completed</span>\r\n              \r\n                            <span class=\"badge badge-dark\"\r\n                                  *ngIf=\"![101, 102, 103, 100].includes(item.appointmentStatus)\">-</span>\r\n                          </td>\r\n\r\n                        <td>{{item.approvedBy}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Appointment Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Mobile | Booking Date\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Appoint.No</th>\r\n                        <th width=\"15%\">Patient Name</th>\r\n                        <th width=\"10%\">Mobile</th>\r\n                        <th width=\"15%\">Booking Date / Time </th>\r\n                        <th width=\"10%\">Appointment Date</th>\r\n                        <th width=\"15%\">Appointment Slot</th>\r\n                        <th width=\"10%\">Appointment Status </th>\r\n                        <th width=\"15%\">Approved By </th>\r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>{{item.appointmentNo}} </td>\r\n                        <td>{{item.fullName}} </td>\r\n                        <td>{{item.mobile}} </td>\r\n                        <td>{{item.bookingDate}} </td>\r\n                        <td>{{item.createdOn }}</td>\r\n                        <td>{{item.timeslot}}</td>\r\n                        \r\n                        <td>\r\n                         {{item.status}}\r\n                            <!--<span class=\"badge badge-warning\"\r\n                                  *ngIf=\"item.appointmentStatus == 101\">Pending</span>\r\n              \r\n                            <span class=\"badge badge-success\"\r\n                                  *ngIf=\"item.appointmentStatus == 102\">Approved</span>\r\n              \r\n                            <span class=\"badge badge-danger\"\r\n                                  *ngIf=\"item.appointmentStatus == 103\">Cancelled</span>\r\n              \r\n                            <span class=\"badge badge-info\"\r\n                                  *ngIf=\"item.appointmentStatus == 100\">Completed</span>\r\n              \r\n                            <span class=\"badge badge-dark\"\r\n                                  *ngIf=\"![101, 102, 103, 100].includes(item.appointmentStatus)\">-</span>-->\r\n                          </td>\r\n\r\n                        <td>{{item.approvedBy}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1219,7 +1219,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  \r\n  <div *ngIf=\"!isAdmin && isReception\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"true\" aria-controls=\"collapseThree\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseThree\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">          \r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/salesdetail']\" >Appointment Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/medicinereport']\" >Medicine Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/prescriptionreport']\" >Prescription Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/dashboardreport']\" >Dashboard Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/medicineorderlistreport']\" >Medicine Order Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/customerreport']\" >Customer Report</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>-->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  \r\n  <div *ngIf=\"!isAdmin && isReception\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"true\" aria-controls=\"collapseThree\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Doctor's Appointment</span>\r\n      </a>\r\n      <div id=\"collapseThree\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">          \r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isAdmin\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isReport\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/salesdetail']\" >Appointment Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/medicinereport']\" >Medicine Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/prescriptionreport']\" >Prescription Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/dashboardreport']\" >Dashboard Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/medicineorderlistreport']\" >Medicine Order Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/customerreport']\" >Customer Report</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>-->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n");
 
 /***/ }),
 
@@ -1285,8 +1285,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! file-saver */ "./node_modules/file-saver/dist/FileSaver.min.js");
 /* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! xlsx */ "./node_modules/xlsx/xlsx.js");
-/* harmony import */ var xlsx__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(xlsx__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var exceljs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! exceljs */ "./node_modules/exceljs/dist/exceljs.min.js");
+/* harmony import */ var exceljs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(exceljs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+//import { Injectable } from '@angular/core';
+//import * as FileSaver from 'file-saver';
+//import * as XLSX from 'xlsx';
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1296,32 +1300,707 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+//const EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
+//const EXCEL_EXTENSION = '.xlsx';
+//@Injectable()
+//export class ExcelService {
+// constructor() { }
+// public exportAsExcelFile(json: any[], excelFileName: string): void {
+//   const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(json);
+//   console.log('worksheet',worksheet);
+//   const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
+//   const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+//   //const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'buffer' });
+//   this.saveAsExcelFile(excelBuffer, excelFileName);
+// }
+// private saveAsExcelFile(buffer: any, fileName: string): void {
+//   const data: Blob = new Blob([buffer], {
+//     type: EXCEL_TYPE
+//   });
+//   FileSaver.saveAs(data, fileName + '_export_' + new Date().getTime() + EXCEL_EXTENSION);
+// }
+//}
 
 
 
-const EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
-const EXCEL_EXTENSION = '.xlsx';
+
 let ExcelService = class ExcelService {
-    constructor() { }
+    constructor(http) {
+        this.http = http;
+    }
     exportAsExcelFile(json, excelFileName) {
-        const worksheet = xlsx__WEBPACK_IMPORTED_MODULE_2__["utils"].json_to_sheet(json);
-        console.log('worksheet', worksheet);
-        const workbook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
-        const excelBuffer = xlsx__WEBPACK_IMPORTED_MODULE_2__["write"](workbook, { bookType: 'xlsx', type: 'array' });
-        //const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'buffer' });
-        this.saveAsExcelFile(excelBuffer, excelFileName);
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+                const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+                const logoBase64 = yield this.getBase64ImageFromAssets(logoUrl);
+                const footerBase64 = yield this.getBase64ImageFromAssets(footerUrl);
+                const workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                const worksheet = workbook.addWorksheet('Report');
+                // Remove gridlines
+                worksheet.properties.showGridLines = false;
+                // Merge cells across more columns to center the logo horizontally
+                worksheet.mergeCells('A1:C8');
+                worksheet.getCell('A1').alignment = { vertical: 'middle', horizontal: 'centerContinuous' };
+                // Add the logo image to the worksheet
+                const logo = workbook.addImage({
+                    base64: logoBase64,
+                    extension: 'png',
+                });
+                worksheet.addImage(logo, {
+                    tl: { col: 0, row: 0 },
+                    ext: { width: 400, height: 150 },
+                });
+                // Leave the necessary space before adding the data
+                worksheet.addRow([]);
+                worksheet.addRow([]);
+                // Add data headers and rows, starting after the empty rows
+                worksheet.addRow(Object.keys(json[0])); // Add header row
+                json.forEach((order) => {
+                    worksheet.addRow(Object.values(order)); // Add data rows
+                });
+                // Adjust column widths
+                worksheet.columns = [
+                    { key: 'col1', width: 15 },
+                    { key: 'col2', width: 30 },
+                    { key: 'col3', width: 30 },
+                    { key: 'col4', width: 30 },
+                    { key: 'col5', width: 30 },
+                    { key: 'col6', width: 30 },
+                    { key: 'col7', width: 30 },
+                    { key: 'col8', width: 30 },
+                    { key: 'col9', width: 30 },
+                    { key: 'col10', width: 30 },
+                ];
+                // Add the footer image to the worksheet
+                const footerImage = workbook.addImage({
+                    base64: footerBase64,
+                    extension: 'png',
+                });
+                // Determine the row for the footer image (e.g., 2 rows below the last data row)
+                const footerRow = worksheet.lastRow.number + 4;
+                worksheet.mergeCells(`A${footerRow}:C${footerRow + 4}`); // Adjust merging range as needed
+                worksheet.addImage(footerImage, {
+                    tl: { col: 0, row: footerRow + 0 },
+                    ext: { width: 500, height: 75 },
+                });
+                // Generate Excel file and trigger download
+                const buffer = yield workbook.xlsx.writeBuffer();
+                this.saveAsExcelFile(buffer, excelFileName);
+            }
+            catch (error) {
+                console.error('Error exporting Excel file:', error);
+            }
+        });
+    }
+    exportAppointment(json, excelFileName) {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+                const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+                const logoBase64 = yield this.getBase64ImageFromAssets(logoUrl);
+                const footerBase64 = yield this.getBase64ImageFromAssets(footerUrl);
+                const workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                const worksheet = workbook.addWorksheet('Report');
+                // Remove gridlines
+                worksheet.properties.showGridLines = false;
+                // Merge cells across more columns to center the logo horizontally
+                worksheet.mergeCells('A1:C8');
+                worksheet.getCell('A1').alignment = { vertical: 'middle', horizontal: 'centerContinuous' };
+                // Add the logo image to the worksheet
+                const logo = workbook.addImage({
+                    base64: logoBase64,
+                    extension: 'png',
+                });
+                worksheet.addImage(logo, {
+                    tl: { col: 0, row: 0 },
+                    ext: { width: 400, height: 150 },
+                });
+                // Adjust the "From Date" and "To Date" filters
+                worksheet.addRow([]);
+                worksheet.mergeCells('A10');
+                worksheet.mergeCells('C10');
+                const fromDateCell = worksheet.getCell('A10');
+                const toDateCell = worksheet.getCell('C10');
+                fromDateCell.value = `From Date: ${((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A'}`;
+                toDateCell.value = `To Date: ${((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'}`;
+                // Format the "From Date" and "To Date" cells
+                fromDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                toDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                fromDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                toDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                // Leave the necessary space before adding the data
+                worksheet.addRow([]);
+                worksheet.addRow([]);
+                // Predefined Column Titles
+                const headers = ['Appointment #', 'Booking Date', 'Booking Day', 'Doctor Name', 'Patient Name', 'Mobile', 'CreatedOn', 'Approved By', 'Timeslot', 'Status'];
+                const headerRow = worksheet.addRow(headers);
+                // Bold the header row
+                headerRow.eachCell((cell) => {
+                    cell.font = { bold: true };
+                });
+                // Add data rows, starting after the header row
+                json.forEach((order) => {
+                    worksheet.addRow([
+                        order.appointmentNo,
+                        order.bookingDate,
+                        order.day,
+                        order.doctorName,
+                        order.fullName,
+                        order.mobile,
+                        order.createdOn,
+                        order.approvedBy,
+                        order.timeslot,
+                        order.status,
+                    ]);
+                });
+                // Adjust column widths
+                worksheet.columns = headers.map((header) => ({ width: 25 }));
+                // Add borders to each cell in the table
+                worksheet.eachRow((row, rowNumber) => {
+                    if (rowNumber >= 4) { // Assuming row 3 is headers and data starts from row 4
+                        row.eachCell({ includeEmpty: true }, (cell) => {
+                            cell.border = {
+                                top: { style: 'thin' },
+                                left: { style: 'thin' },
+                                bottom: { style: 'thin' },
+                                right: { style: 'thin' },
+                            };
+                        });
+                    }
+                });
+                // Add the footer image to the worksheet
+                const footerImage = workbook.addImage({
+                    base64: footerBase64,
+                    extension: 'png',
+                });
+                // Determine the row for the footer image (e.g., 2 rows below the last data row)
+                const footerRow = worksheet.lastRow.number + 5;
+                worksheet.mergeCells(`A${footerRow}:E${footerRow + 5}`); // Adjust merging range as needed
+                worksheet.addImage(footerImage, {
+                    tl: { col: 0, row: footerRow + 0 },
+                    ext: { width: 750, height: 75 },
+                });
+                // Generate Excel file and trigger download
+                const buffer = yield workbook.xlsx.writeBuffer();
+                this.saveAsExcelFile(buffer, excelFileName);
+            }
+            catch (error) {
+                console.error('Error exporting Excel file:', error);
+            }
+        });
+    }
+    exportMedical(json, excelFileName) {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+                const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+                const logoBase64 = yield this.getBase64ImageFromAssets(logoUrl);
+                const footerBase64 = yield this.getBase64ImageFromAssets(footerUrl);
+                const workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                const worksheet = workbook.addWorksheet('Report');
+                // Remove gridlines
+                worksheet.properties.showGridLines = false;
+                // Merge cells across more columns to center the logo horizontally
+                worksheet.mergeCells('A1:C8');
+                worksheet.getCell('A1').alignment = { vertical: 'middle', horizontal: 'centerContinuous' };
+                // Add the logo image to the worksheet
+                const logo = workbook.addImage({
+                    base64: logoBase64,
+                    extension: 'png',
+                });
+                worksheet.addImage(logo, {
+                    tl: { col: 0, row: 0 },
+                    ext: { width: 400, height: 150 },
+                });
+                // Adjust the "From Date" and "To Date" filters
+                worksheet.addRow([]);
+                worksheet.mergeCells('A10');
+                worksheet.mergeCells('C10');
+                const fromDateCell = worksheet.getCell('A10');
+                const toDateCell = worksheet.getCell('C10');
+                fromDateCell.value = `From Date: ${((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A'}`;
+                toDateCell.value = `To Date: ${((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'}`;
+                // Format the "From Date" and "To Date" cells
+                fromDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                toDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                fromDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                toDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                // Leave the necessary space before adding the data
+                worksheet.addRow([]);
+                worksheet.addRow([]);
+                // Predefined Column Titles
+                const headers = ['Name', 'Brand Details', 'Price', 'Quantity'];
+                const headerRow = worksheet.addRow(headers);
+                // Bold the header row
+                headerRow.eachCell((cell) => {
+                    cell.font = { bold: true };
+                });
+                // Add data rows, starting after the header row
+                json.forEach((order) => {
+                    worksheet.addRow([
+                        order.name,
+                        order.brandDetails,
+                        order.price,
+                        order.quantityDescription,
+                    ]);
+                });
+                // Adjust column widths
+                worksheet.columns = headers.map((header) => ({ width: 25 }));
+                // Add borders to each cell in the table
+                worksheet.eachRow((row, rowNumber) => {
+                    if (rowNumber >= 2) { // Assuming row 3 is headers and data starts from row 4
+                        row.eachCell({ includeEmpty: true }, (cell) => {
+                            cell.border = {
+                                top: { style: 'thin' },
+                                left: { style: 'thin' },
+                                bottom: { style: 'thin' },
+                                right: { style: 'thin' },
+                            };
+                        });
+                    }
+                });
+                // Add the footer image to the worksheet
+                const footerImage = workbook.addImage({
+                    base64: footerBase64,
+                    extension: 'png',
+                });
+                // Determine the row for the footer image (e.g., 2 rows below the last data row)
+                const footerRow = worksheet.lastRow.number + 5;
+                worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+                worksheet.addImage(footerImage, {
+                    tl: { col: 0, row: footerRow + 0 },
+                    ext: { width: 600, height: 75 },
+                });
+                // Generate Excel file and trigger download
+                const buffer = yield workbook.xlsx.writeBuffer();
+                this.saveAsExcelFile(buffer, excelFileName);
+            }
+            catch (error) {
+                console.error('Error exporting Excel file:', error);
+            }
+        });
+    }
+    exportPrescripiton(json, excelFileName) {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+                const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+                const logoBase64 = yield this.getBase64ImageFromAssets(logoUrl);
+                const footerBase64 = yield this.getBase64ImageFromAssets(footerUrl);
+                const workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                const worksheet = workbook.addWorksheet('Report');
+                // Remove gridlines
+                worksheet.properties.showGridLines = false;
+                // Merge cells across more columns to center the logo horizontally
+                worksheet.mergeCells('A1:C8');
+                worksheet.getCell('A1').alignment = { vertical: 'middle', horizontal: 'centerContinuous' };
+                // Add the logo image to the worksheet
+                const logo = workbook.addImage({
+                    base64: logoBase64,
+                    extension: 'png',
+                });
+                worksheet.addImage(logo, {
+                    tl: { col: 0, row: 0 },
+                    ext: { width: 400, height: 150 },
+                });
+                // Adjust the "From Date" and "To Date" filters
+                worksheet.addRow([]);
+                worksheet.mergeCells('A10');
+                worksheet.mergeCells('C10');
+                const fromDateCell = worksheet.getCell('A10');
+                const toDateCell = worksheet.getCell('C10');
+                fromDateCell.value = `From Date: ${((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A'}`;
+                toDateCell.value = `To Date: ${((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'}`;
+                // Format the "From Date" and "To Date" cells
+                fromDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                toDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                fromDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                toDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                // Leave the necessary space before adding the data
+                worksheet.addRow([]);
+                worksheet.addRow([]);
+                // Predefined Column Titles
+                const headers = ['Image', 'Customer Name', 'Mobile', 'Address', 'Note', 'Approved By'];
+                const headerRow = worksheet.addRow(headers);
+                // Bold the header row
+                headerRow.eachCell((cell) => {
+                    cell.font = { bold: true };
+                });
+                // Add data rows, starting after the header row
+                json.forEach((order) => {
+                    worksheet.addRow([
+                        order.image,
+                        order.customerName,
+                        order.mobile,
+                        order.address,
+                        order.note,
+                        order.lastUpdatedBy,
+                    ]);
+                });
+                // Adjust column widths
+                worksheet.columns = headers.map((header) => ({ width: 25 }));
+                // Add borders to each cell in the table
+                worksheet.eachRow((row, rowNumber) => {
+                    if (rowNumber >= 2) { // Assuming row 3 is headers and data starts from row 4
+                        row.eachCell({ includeEmpty: true }, (cell) => {
+                            cell.border = {
+                                top: { style: 'thin' },
+                                left: { style: 'thin' },
+                                bottom: { style: 'thin' },
+                                right: { style: 'thin' },
+                            };
+                        });
+                    }
+                });
+                // Add the footer image to the worksheet
+                const footerImage = workbook.addImage({
+                    base64: footerBase64,
+                    extension: 'png',
+                });
+                // Determine the row for the footer image (e.g., 2 rows below the last data row)
+                const footerRow = worksheet.lastRow.number + 5;
+                worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+                worksheet.addImage(footerImage, {
+                    tl: { col: 0, row: footerRow + 0 },
+                    ext: { width: 600, height: 75 },
+                });
+                // Generate Excel file and trigger download
+                const buffer = yield workbook.xlsx.writeBuffer();
+                this.saveAsExcelFile(buffer, excelFileName);
+            }
+            catch (error) {
+                console.error('Error exporting Excel file:', error);
+            }
+        });
+    }
+    exportDashboardReport(json, excelFileName) {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+                const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+                const logoBase64 = yield this.getBase64ImageFromAssets(logoUrl);
+                const footerBase64 = yield this.getBase64ImageFromAssets(footerUrl);
+                const workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                const worksheet = workbook.addWorksheet('Report');
+                // Remove gridlines
+                worksheet.properties.showGridLines = false;
+                // Merge cells across more columns to center the logo horizontally
+                worksheet.mergeCells('A1:C8');
+                worksheet.getCell('A1').alignment = { vertical: 'middle', horizontal: 'centerContinuous' };
+                // Add the logo image to the worksheet
+                const logo = workbook.addImage({
+                    base64: logoBase64,
+                    extension: 'png',
+                });
+                worksheet.addImage(logo, {
+                    tl: { col: 0, row: 0 },
+                    ext: { width: 400, height: 150 },
+                });
+                // Adjust the "From Date" and "To Date" filters
+                worksheet.addRow([]);
+                worksheet.mergeCells('A10');
+                worksheet.mergeCells('C10');
+                const fromDateCell = worksheet.getCell('A10');
+                const toDateCell = worksheet.getCell('C10');
+                fromDateCell.value = `From Date: ${((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A'}`;
+                toDateCell.value = `To Date: ${((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'}`;
+                // Format the "From Date" and "To Date" cells
+                fromDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                toDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                fromDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                toDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                // Leave the necessary space before adding the data
+                worksheet.addRow([]);
+                worksheet.addRow([]);
+                // Predefined Column Titles
+                const headers = ['Total Doctors', 'Total Patients', 'Total Doctors Appointment', 'Total Prescription'];
+                const headerRow = worksheet.addRow(headers);
+                // Bold the header row
+                headerRow.eachCell((cell) => {
+                    cell.font = { bold: true };
+                });
+                // Add data rows, starting after the header row
+                json.forEach((order) => {
+                    worksheet.addRow([
+                        order.totalDoctors,
+                        order.totalPatients,
+                        order.totalDoctorAppointments,
+                        order.totalPrescription,
+                    ]);
+                });
+                // Adjust column widths
+                worksheet.columns = headers.map((header) => ({ width: 25 }));
+                // Add borders to each cell in the table
+                worksheet.eachRow((row, rowNumber) => {
+                    if (rowNumber >= 2) { // Assuming row 3 is headers and data starts from row 4
+                        row.eachCell({ includeEmpty: true }, (cell) => {
+                            cell.border = {
+                                top: { style: 'thin' },
+                                left: { style: 'thin' },
+                                bottom: { style: 'thin' },
+                                right: { style: 'thin' },
+                            };
+                        });
+                    }
+                });
+                // Add the footer image to the worksheet
+                const footerImage = workbook.addImage({
+                    base64: footerBase64,
+                    extension: 'png',
+                });
+                // Determine the row for the footer image (e.g., 2 rows below the last data row)
+                const footerRow = worksheet.lastRow.number + 5;
+                worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+                worksheet.addImage(footerImage, {
+                    tl: { col: 0, row: footerRow + 0 },
+                    ext: { width: 600, height: 75 },
+                });
+                // Generate Excel file and trigger download
+                const buffer = yield workbook.xlsx.writeBuffer();
+                this.saveAsExcelFile(buffer, excelFileName);
+            }
+            catch (error) {
+                console.error('Error exporting Excel file:', error);
+            }
+        });
+    }
+    exportMedicineReport(json, excelFileName) {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+                const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+                const logoBase64 = yield this.getBase64ImageFromAssets(logoUrl);
+                const footerBase64 = yield this.getBase64ImageFromAssets(footerUrl);
+                const workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                const worksheet = workbook.addWorksheet('Report');
+                // Remove gridlines
+                worksheet.properties.showGridLines = false;
+                // Merge cells across more columns to center the logo horizontally
+                worksheet.mergeCells('A1:C8');
+                worksheet.getCell('A1').alignment = { vertical: 'middle', horizontal: 'centerContinuous' };
+                // Add the logo image to the worksheet
+                const logo = workbook.addImage({
+                    base64: logoBase64,
+                    extension: 'png',
+                });
+                worksheet.addImage(logo, {
+                    tl: { col: 0, row: 0 },
+                    ext: { width: 400, height: 150 },
+                });
+                // Adjust the "From Date" and "To Date" filters
+                worksheet.addRow([]);
+                worksheet.mergeCells('A10');
+                worksheet.mergeCells('C10');
+                const fromDateCell = worksheet.getCell('A10');
+                const toDateCell = worksheet.getCell('C10');
+                fromDateCell.value = `From Date: ${((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A'}`;
+                toDateCell.value = `To Date: ${((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'}`;
+                // Format the "From Date" and "To Date" cells
+                fromDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                toDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                fromDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                toDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                // Leave the necessary space before adding the data
+                worksheet.addRow([]);
+                worksheet.addRow([]);
+                // Predefined Column Titles
+                const headers = ['Order #', 'Transaction #', 'Customer Name', 'Customer Mobile', 'Amount Total', 'Order Date', 'Status'];
+                const headerRow = worksheet.addRow(headers);
+                // Bold the header row
+                headerRow.eachCell((cell) => {
+                    cell.font = { bold: true };
+                });
+                // Add data rows, starting after the header row
+                json.forEach((order) => {
+                    worksheet.addRow([
+                        order.orderNo,
+                        order.transactionNo,
+                        order.customerName,
+                        order.customerMobile,
+                        order.amountTotal,
+                        order.orderDate,
+                        order.status,
+                    ]);
+                });
+                // Adjust column widths
+                worksheet.columns = headers.map((header) => ({ width: 25 }));
+                // Add borders to each cell in the table
+                worksheet.eachRow((row, rowNumber) => {
+                    if (rowNumber >= 2) { // Assuming row 3 is headers and data starts from row 4
+                        row.eachCell({ includeEmpty: true }, (cell) => {
+                            cell.border = {
+                                top: { style: 'thin' },
+                                left: { style: 'thin' },
+                                bottom: { style: 'thin' },
+                                right: { style: 'thin' },
+                            };
+                        });
+                    }
+                });
+                // Add the footer image to the worksheet
+                const footerImage = workbook.addImage({
+                    base64: footerBase64,
+                    extension: 'png',
+                });
+                // Determine the row for the footer image (e.g., 2 rows below the last data row)
+                const footerRow = worksheet.lastRow.number + 5;
+                worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+                worksheet.addImage(footerImage, {
+                    tl: { col: 0, row: footerRow + 0 },
+                    ext: { width: 600, height: 75 },
+                });
+                // Generate Excel file and trigger download
+                const buffer = yield workbook.xlsx.writeBuffer();
+                this.saveAsExcelFile(buffer, excelFileName);
+            }
+            catch (error) {
+                console.error('Error exporting Excel file:', error);
+            }
+        });
+    }
+    exportCustomerReport(json, excelFileName) {
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+                const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+                const logoBase64 = yield this.getBase64ImageFromAssets(logoUrl);
+                const footerBase64 = yield this.getBase64ImageFromAssets(footerUrl);
+                const workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                const worksheet = workbook.addWorksheet('Report');
+                // Remove gridlines
+                worksheet.properties.showGridLines = false;
+                // Merge cells across more columns to center the logo horizontally
+                worksheet.mergeCells('A1:C8');
+                worksheet.getCell('A1').alignment = { vertical: 'middle', horizontal: 'centerContinuous' };
+                // Add the logo image to the worksheet
+                const logo = workbook.addImage({
+                    base64: logoBase64,
+                    extension: 'png',
+                });
+                worksheet.addImage(logo, {
+                    tl: { col: 0, row: 0 },
+                    ext: { width: 400, height: 150 },
+                });
+                // Adjust the "From Date" and "To Date" filters
+                worksheet.addRow([]);
+                worksheet.mergeCells('A10');
+                worksheet.mergeCells('C10');
+                const fromDateCell = worksheet.getCell('A10');
+                const toDateCell = worksheet.getCell('C10');
+                fromDateCell.value = `From Date: ${((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A'}`;
+                toDateCell.value = `To Date: ${((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'}`;
+                // Format the "From Date" and "To Date" cells
+                fromDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                toDateCell.font = { bold: true, color: { argb: 'FF0000' } }; // Bold and red color
+                fromDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                toDateCell.alignment = { vertical: 'middle', horizontal: 'left' };
+                // Leave the necessary space before adding the data
+                worksheet.addRow([]);
+                worksheet.addRow([]);
+                // Predefined Column Titles
+                const headers = ['Image', 'Full Name', 'Address', 'Email', 'Mobile', 'Registration #', 'Password', 'Created On'];
+                const headerRow = worksheet.addRow(headers);
+                // Bold the header row
+                headerRow.eachCell((cell) => {
+                    cell.font = { bold: true };
+                });
+                // Add data rows, starting after the header row
+                json.forEach((order) => {
+                    debugger;
+                    worksheet.addRow([
+                        order.image,
+                        order.fullName,
+                        order.address,
+                        order.email,
+                        order.mobile,
+                        order.registrationNo,
+                        order.password,
+                        order.createdOn
+                    ]);
+                });
+                // Adjust column widths
+                worksheet.columns = headers.map((header) => ({ width: 25 }));
+                // Add borders to each cell in the table
+                worksheet.eachRow((row, rowNumber) => {
+                    if (rowNumber >= 2) { // Assuming row 3 is headers and data starts from row 4
+                        row.eachCell({ includeEmpty: true }, (cell) => {
+                            cell.border = {
+                                top: { style: 'thin' },
+                                left: { style: 'thin' },
+                                bottom: { style: 'thin' },
+                                right: { style: 'thin' },
+                            };
+                        });
+                    }
+                });
+                // Add the footer image to the worksheet
+                const footerImage = workbook.addImage({
+                    base64: footerBase64,
+                    extension: 'png',
+                });
+                // Determine the row for the footer image (e.g., 2 rows below the last data row)
+                const footerRow = worksheet.lastRow.number + 5;
+                worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+                worksheet.addImage(footerImage, {
+                    tl: { col: 0, row: footerRow + 0 },
+                    ext: { width: 600, height: 75 },
+                });
+                // Generate Excel file and trigger download
+                const buffer = yield workbook.xlsx.writeBuffer();
+                this.saveAsExcelFile(buffer, excelFileName);
+            }
+            catch (error) {
+                console.error('Error exporting Excel file:', error);
+            }
+        });
+    }
+    getBase64ImageFromAssets(url) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = url;
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    const ctx = canvas.getContext('2d');
+                    ctx === null || ctx === void 0 ? void 0 : ctx.drawImage(img, 0, 0);
+                    const base64data = canvas.toDataURL('image/png');
+                    resolve(base64data);
+                };
+                img.onerror = (err) => {
+                    reject(`Failed to load image: ${err}`);
+                };
+            });
+        });
     }
     saveAsExcelFile(buffer, fileName) {
-        const data = new Blob([buffer], {
-            type: EXCEL_TYPE
-        });
-        file_saver__WEBPACK_IMPORTED_MODULE_1__["saveAs"](data, fileName + '_export_' + new Date().getTime() + EXCEL_EXTENSION);
+        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8' });
+        file_saver__WEBPACK_IMPORTED_MODULE_1__["saveAs"](blob, fileName + '_export_' + new Date().getTime() + '.xlsx');
     }
 };
-ExcelService.ctorParameters = () => [];
+ExcelService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+];
 ExcelService = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
 ], ExcelService);
 
 
@@ -6921,6 +7600,7 @@ let ReportService = class ReportService {
             this._loading$.next(true);
         return this.http.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(res => {
             this.salesdetailReport = res;
+            debugger;
             this._data$.next(this.salesdetailReport);
             this._allData$.next(this.salesdetailReport);
             this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
@@ -13177,8 +13857,19 @@ let CustomerReportComponent = class CustomerReportComponent {
         return obj.year + "-" + obj.month + "-" + obj.day;
         ;
     }
+    //exportAsXLSX(): void {
+    //  this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+    //}
     exportAsXLSX() {
-        this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+        const fromDate = this.parseDate(this._datepicker.fromDate);
+        const toDate = this.parseDate(this._datepicker.toDate);
+        this.orderDetails = this.orderDetails.map(order => {
+            return Object.assign(Object.assign({}, order), { image: this.showImagePath(order), fromDate: fromDate, toDate: toDate });
+        });
+        this.excelService.exportCustomerReport(this.orderDetails, 'Report_Export');
+    }
+    showImagePath(order) {
+        return 'http://admin.mamjihospital.online/' + order.image;
     }
     Filter() {
         this.getData();
@@ -13304,8 +13995,19 @@ let DashboardReportComponent = class DashboardReportComponent {
         return obj.year + "-" + obj.month + "-" + obj.day;
         ;
     }
+    //exportAsXLSX(): void {
+    //  this.excelService.exportDashboardReport(this.orderDetails, 'Report_Export');
+    //}
     exportAsXLSX() {
-        this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+        const fromDate = this.parseDate(this._datepicker.fromDate);
+        const toDate = this.parseDate(this._datepicker.toDate);
+        this.orderDetails = this.orderDetails.map(order => {
+            return Object.assign(Object.assign({}, order), { image: this.showImagePath(order), fromDate: fromDate, toDate: toDate });
+        });
+        this.excelService.exportDashboardReport(this.orderDetails, 'Report_Export');
+    }
+    showImagePath(order) {
+        return 'http://admin.mamjihospital.online/' + order.image;
     }
     Filter() {
         this.getData();
@@ -13431,8 +14133,19 @@ let MedicineOrderListReportComponent = class MedicineOrderListReportComponent {
         return obj.year + "-" + obj.month + "-" + obj.day;
         ;
     }
+    //exportAsXLSX(): void {
+    //  this.excelService.exportMedicineReport(this.orderDetails, 'Report_Export');
+    //}
     exportAsXLSX() {
-        this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+        const fromDate = this.parseDate(this._datepicker.fromDate);
+        const toDate = this.parseDate(this._datepicker.toDate);
+        this.orderDetails = this.orderDetails.map(order => {
+            return Object.assign(Object.assign({}, order), { image: this.showImagePath(order), fromDate: fromDate, toDate: toDate });
+        });
+        this.excelService.exportMedicineReport(this.orderDetails, 'Report_Export');
+    }
+    showImagePath(order) {
+        return 'http://admin.mamjihospital.online/' + order.image;
     }
     Filter() {
         this.getData();
@@ -13558,8 +14271,19 @@ let MedicineReportComponent = class MedicineReportComponent {
         return obj.year + "-" + obj.month + "-" + obj.day;
         ;
     }
+    //exportAsXLSX(): void {
+    //  this.excelService.exportMedical(this.orderDetails, 'Report_Export');
+    //}
     exportAsXLSX() {
-        this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+        const fromDate = this.parseDate(this._datepicker.fromDate);
+        const toDate = this.parseDate(this._datepicker.toDate);
+        this.orderDetails = this.orderDetails.map(order => {
+            return Object.assign(Object.assign({}, order), { image: this.showImagePath(order), fromDate: fromDate, toDate: toDate });
+        });
+        this.excelService.exportMedical(this.orderDetails, 'Report_Export');
+    }
+    showImagePath(order) {
+        return 'http://admin.mamjihospital.online/' + order.image;
     }
     Filter() {
         this.getData();
@@ -13685,8 +14409,19 @@ let PrescriptionReportComponent = class PrescriptionReportComponent {
         return obj.year + "-" + obj.month + "-" + obj.day;
         ;
     }
+    //exportAsXLSX(): void {
+    //  this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+    //}
     exportAsXLSX() {
-        this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+        const fromDate = this.parseDate(this._datepicker.fromDate);
+        const toDate = this.parseDate(this._datepicker.toDate);
+        this.orderDetails = this.orderDetails.map(order => {
+            return Object.assign(Object.assign({}, order), { image: this.showImagePath(order), fromDate: fromDate, toDate: toDate });
+        });
+        this.excelService.exportPrescripiton(this.orderDetails, 'Report_Export');
+    }
+    showImagePath(order) {
+        return 'http://admin.mamjihospital.online/' + order.image;
     }
     Filter() {
         this.getData();
@@ -14067,7 +14802,7 @@ let SalesdetailComponent = class SalesdetailComponent {
             else
                 this.ts.showError("Error", "Something went wrong");
         }, error => {
-            this.ts.showError("Error", "Failed to delete record.");
+            this.ts.showError("Error", "Failed to load record.");
         });
     }
     onSort({ column, direction }) {
@@ -14083,8 +14818,19 @@ let SalesdetailComponent = class SalesdetailComponent {
         return obj.year + "-" + obj.month + "-" + obj.day;
         ;
     }
+    //exportAsXLSX(): void {
+    //  this.excelService.exportAppointment(this.orderDetails, 'Report_Export');
+    //}
     exportAsXLSX() {
-        this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+        const fromDate = this.parseDate(this._datepicker.fromDate);
+        const toDate = this.parseDate(this._datepicker.toDate);
+        this.orderDetails = this.orderDetails.map(order => {
+            return Object.assign(Object.assign({}, order), { image: this.showImagePath(order), fromDate: fromDate, toDate: toDate });
+        });
+        this.excelService.exportAppointment(this.orderDetails, 'Report_Export');
+    }
+    showImagePath(order) {
+        return 'http://admin.mamjihospital.online/' + order.image;
     }
     Filter() {
         this.getData();
@@ -19078,39 +19824,6 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 
 module.exports = __webpack_require__(/*! E:\Projects\Mamji_Admin\ClientApp\src\main.ts */"./src/main.ts");
 
-
-/***/ }),
-
-/***/ 1:
-/*!********************!*\
-  !*** fs (ignored) ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 2:
-/*!************************!*\
-  !*** crypto (ignored) ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 3:
-/*!************************!*\
-  !*** stream (ignored) ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ })
 

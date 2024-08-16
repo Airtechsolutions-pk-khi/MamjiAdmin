@@ -982,7 +982,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customer Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Customer Name \" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Image</th>\r\n                        <th width=\"15%\">Name</th>\r\n                        <th width=\"15%\">Mobile</th> \r\n                        <th width=\"15%\">Email</th>                        \r\n                        <th width=\"15%\">Password</th>                    \r\n                        <!--<th width=\"15%\">Status</th> k-->            \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td>{{item.fullName}} </td>\r\n                    <td>{{item.mobile}} </td>\r\n                    <td>{{item.email}} </td>\r\n                    <td>{{item.password}} </td>\r\n                    <!--<td>\r\n                      <span class=\"badge badge-success\"\r\n                            *ngIf=\"item.statusID == 1\">Active</span>\r\n\r\n                      <span class=\"badge badge-warning\"\r\n                            *ngIf=\"item.statusID == 2\">InActive</span>\r\n\r\n                      <span class=\"badge badge-danger\"\r\n                            *ngIf=\"item.statusID == 3\">Deleted</span>\r\n\r\n                      <span class=\"badge badge-dark\"\r\n                            *ngIf=\"![1, 2, 3].includes(item.statusID)\">-</span>\r\n                    </td>-->\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Customer Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Customer Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Customer Name \" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Image</th>\r\n                        <th width=\"15%\">Name</th>\r\n                        <th width=\"15%\">Mobile</th> \r\n                        <th width=\"15%\">Email</th>                        \r\n                        <th width=\"15%\">Password</th>                    \r\n                        <!--<th width=\"15%\">Status</th> k-->            \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                  <tr *ngFor=\"let item of data$ | async \">\r\n                    <td>\r\n                      <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n                      <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                    </td>\r\n                    <td>{{item.fullName}} </td>\r\n                    <td>{{item.mobile}} </td>\r\n                    <td>{{item.email}} </td>\r\n                    <td>{{item.password}} </td>\r\n                    <!--<td>\r\n                      <span class=\"badge badge-success\"\r\n                            *ngIf=\"item.statusID == 1\">Active</span>\r\n\r\n                      <span class=\"badge badge-warning\"\r\n                            *ngIf=\"item.statusID == 2\">InActive</span>\r\n\r\n                      <span class=\"badge badge-danger\"\r\n                            *ngIf=\"item.statusID == 3\">Deleted</span>\r\n\r\n                      <span class=\"badge badge-dark\"\r\n                            *ngIf=\"![1, 2, 3].includes(item.statusID)\">-</span>\r\n                    </td>-->\r\n                  </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1002,7 +1002,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Dashboard Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <!-- <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div> -->\r\n\r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Total Doctors</th>\r\n                        <th width=\"15%\">Total Patients</th>\r\n                         \r\n                        <th width=\"15%\">Total Doctor Appointments </th>\r\n                        <th width=\"10%\">Total Prescription</th>\r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails \">\r\n                        <td>{{item.totalDoctors}} </td>\r\n                        <td>{{item.totalPatients}} </td>                         \r\n                        <td>{{item.totalDoctorAppointments}} </td>\r\n                        <td>{{item.totalPrescription}} </td>\r\n                         \r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Dashboard Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Dashboard Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <!-- <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div> -->\r\n\r\n            <div class=\"col-md-6 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Total Doctors</th>\r\n                        <th width=\"15%\">Total Patients</th>                     \r\n                        <th width=\"15%\">Total Doctor Appointments </th>\r\n                        <th width=\"10%\">Total Prescription</th>    \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of orderDetails \">\r\n                        <td>{{item.totalDoctors}} </td>\r\n                        <td>{{item.totalPatients}} </td>                         \r\n                        <td>{{item.totalDoctorAppointments}} </td>\r\n                        <td>{{item.totalPrescription}} </td>\r\n                         \r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1022,7 +1022,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Order List Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Order #</th>\r\n                        <th width=\"15%\">Transaction #</th>\r\n                         \r\n                        <th width=\"15%\">Name</th>\r\n                        <th width=\"15%\">Contact</th>\r\n                        <!-- <th width=\"15%\">Total</th> -->\r\n                        <th width=\"15%\">Date</th>\r\n                        <th width=\"15%\">Order Type</th>\r\n                        <th width=\"10%\">Status</th>\r\n                        \r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>{{item.orderNo}} </td>\r\n                        <td>{{item.transactionNo}} </td>                         \r\n                        <td>{{item.customerName}} </td>\r\n                        <td>{{item.customerMobile}} </td>\r\n                        <!-- <td> <span class=\"badge badge-success-soft text-success badge-pill py-2 px-3 mb-2\" style=\"background-color: #bfe5dc;\">{{item.grandTotal | number : '1.2-2'}} PKR</span> </td> -->\r\n                        <td>{{item.orderDate | date}}</td>\r\n                        <td><span class=\"badge badge-yellow\">{{item.orderType}}</span></td>\r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-warning': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==100 ? 'Completed' :\r\n                                           item.statusID ==101 ? 'Pending' :\r\n                                           item.statusID ==104 ? 'Out For Delivery' :\r\n                                           item.statusID ==102 ? 'Approved' :\r\n                                           item.statusID ==103 ? 'Cancelled' :\r\n                                           item.statusID ==100 ? 'Completed' :'-'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                          </td> \r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Order List Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Order List Report</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\"> </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">\r\n\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span>Export</span>\r\n        </button>\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">Order #</th>\r\n            <th width=\"15%\">Transaction #</th>\r\n            <th width=\"15%\">Name</th>\r\n            <th width=\"15%\">Contact</th>\r\n            <!-- <th width=\"15%\">Total</th> -->\r\n            <th width=\"15%\">Date</th>\r\n            <th width=\"10%\">Status</th>\r\n\r\n\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>{{item.orderNo}} </td>\r\n            <td>{{item.transactionNo}} </td>\r\n            <td>{{item.customerName}} </td>\r\n            <td>{{item.customerMobile}} </td>\r\n            <!-- <td> <span class=\"badge badge-success-soft text-success badge-pill py-2 px-3 mb-2\" style=\"background-color: #bfe5dc;\">{{item.grandTotal | number : '1.2-2'}} PKR</span> </td> -->\r\n            <td>{{item.orderDate | date}}</td>\r\n            <td>{{item.status}}</td>\r\n            <!--<td>\r\n                <ngb-highlight [ngClass]=\"{'btn-danger': item.statusID === 104,'btn-info': item.statusID === 103,'btn-warning': item.statusID === 102,'btn-success': item.statusID === 100, 'btn-primary':item.statusID === 103, 'btn-primary':item.statusID === 101 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==100 ? 'Completed' :\r\n                               item.statusID ==101 ? 'Pending' :\r\n                               item.statusID ==104 ? 'Out For Delivery' :\r\n                               item.statusID ==102 ? 'Approved' :\r\n                               item.statusID ==103 ? 'Cancelled' :\r\n                               item.statusID ==100 ? 'Completed' :'-'\" [term]=\"service.searchTerm\">\r\n                </ngb-highlight>\r\n              </td>-->\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1042,7 +1042,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Medicine Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Name</th>\r\n                        <th width=\"15%\">Brand Detail</th>\r\n                         \r\n                        <th width=\"15%\">Quantity Description </th>\r\n                        <th width=\"10%\">Status</th>\r\n                        \r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>{{item.name}} </td>\r\n                        <td>{{item.brandDetails}} </td>\r\n                         \r\n                        <td>{{item.quantityDescription}} </td>\r\n                       \r\n                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                          </td>\r\n\r\n                         \r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Medicine Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Medicine Report</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\"> </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">\r\n\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Brand Details\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span>Export</span>\r\n        </button>\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">Name</th>\r\n            <th width=\"15%\">Brand Detail</th>\r\n            <th width=\"15%\">Quantity Description </th>\r\n            <th width=\"10%\">Status</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>{{item.name}} </td>\r\n            <td>{{item.brandDetails}} </td>\r\n            <td>{{item.quantityDescription}} </td>\r\n            <td>\r\n              <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID ==1?'Active':'Inactive'\" [term]=\"service.searchTerm\">\r\n              </ngb-highlight>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1062,7 +1062,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Prescription Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Customer Name \" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Image</th>\r\n                        <th width=\"15%\">Customer Name</th>                         \r\n                        <th width=\"15%\">mobile</th>\r\n                        <th width=\"15%\">Address</th>\r\n                        <th width=\"15%\">note</th>\r\n                        <th width=\"15%\">Approved by</th>                        \r\n                        <th width=\"15%\">Status</th>\r\n                        \r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td><img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> </td>\r\n                        <td>{{item.customerName}} </td>                         \r\n                        <td>{{item.mobile}} </td>\r\n                        <td>{{item.address}} </td>\r\n                        <td>{{item.note}} </td>\r\n                        <td>{{item.lastUpdatedBy}} </td>\r\n                        <td>\r\n                            <span class=\"badge badge-warning\"\r\n                                  *ngIf=\"item.statusID == 101\">Pending</span>\r\n              \r\n                            <span class=\"badge badge-success\"\r\n                                  *ngIf=\"item.statusID == 102\">Approved</span>\r\n              \r\n                            <span class=\"badge badge-danger\"\r\n                                  *ngIf=\"item.statusID == 103\">Cancelled</span>\r\n              \r\n                            <span class=\"badge badge-info\"\r\n                                  *ngIf=\"item.statusID == 100\">Completed</span>\r\n              \r\n                            <span class=\"badge badge-dark\"\r\n                                  *ngIf=\"![101, 102, 103, 100].includes(item.statusID)\">-</span>\r\n                          </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Prescription Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Prescription Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Customer Name \" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Image</th>\r\n                        <th width=\"15%\">Customer Name</th>                         \r\n                        <th width=\"15%\">mobile</th>\r\n                        <th width=\"15%\">Address</th>\r\n                        <th width=\"15%\">note</th>\r\n                        <th width=\"15%\">Approved by</th>                        \r\n                        <!--<th width=\"15%\">Status</th>-->    \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td><img *ngIf=\"item.image !== ''\" [src]=\"item.image\" data-lightbox=\"image-1\" class=\"table-img\" alt=\"\" href=\"IMAGE_URL\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div> </td>\r\n                        <td>{{item.customerName}} </td>                         \r\n                        <td>{{item.mobile}} </td>\r\n                        <td>{{item.address}} </td>\r\n                        <td>{{item.note}} </td>\r\n                        <td>{{item.lastUpdatedBy}} </td>\r\n                        <!--<td>\r\n                            <span class=\"badge badge-warning\"\r\n                                  *ngIf=\"item.statusID == 101\">Pending</span>\r\n              \r\n                            <span class=\"badge badge-success\"\r\n                                  *ngIf=\"item.statusID == 102\">Approved</span>\r\n              \r\n                            <span class=\"badge badge-danger\"\r\n                                  *ngIf=\"item.statusID == 103\">Cancelled</span>\r\n              \r\n                            <span class=\"badge badge-info\"\r\n                                  *ngIf=\"item.statusID == 100\">Completed</span>\r\n              \r\n                            <span class=\"badge badge-dark\"\r\n                                  *ngIf=\"![101, 102, 103, 100].includes(item.statusID)\">-</span>\r\n                          </td>-->\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1122,7 +1122,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Mobile | Booking Date\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Appoint.No</th>\r\n                        <th width=\"15%\">Patient Name</th>\r\n                        <th width=\"10%\">Mobile</th>\r\n                        <th width=\"15%\">Booking Date / Time </th>\r\n                        <th width=\"10%\">Appointment Date</th>\r\n                        <th width=\"15%\">Appointment Slot</th>\r\n                        <th width=\"10%\">Appointment Status </th>\r\n                        <th width=\"15%\">Approved By </th>\r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>{{item.appointmentNo}} </td>\r\n                        <td>{{item.fullName}} </td>\r\n                        <td>{{item.mobile}} </td>\r\n                        <td>{{item.bookingDate}} </td>\r\n                        <td>{{item.createdOn }}</td>\r\n                        <td>{{item.timeslot}}</td>\r\n                        \r\n                        <td>\r\n                            <span class=\"badge badge-warning\"\r\n                                  *ngIf=\"item.appointmentStatus == 101\">Pending</span>\r\n              \r\n                            <span class=\"badge badge-success\"\r\n                                  *ngIf=\"item.appointmentStatus == 102\">Approved</span>\r\n              \r\n                            <span class=\"badge badge-danger\"\r\n                                  *ngIf=\"item.appointmentStatus == 103\">Cancelled</span>\r\n              \r\n                            <span class=\"badge badge-info\"\r\n                                  *ngIf=\"item.appointmentStatus == 100\">Completed</span>\r\n              \r\n                            <span class=\"badge badge-dark\"\r\n                                  *ngIf=\"![101, 102, 103, 100].includes(item.appointmentStatus)\">-</span>\r\n                          </td>\r\n\r\n                        <td>{{item.approvedBy}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Appointment Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Mobile | Booking Date\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Appoint.No</th>\r\n                        <th width=\"15%\">Patient Name</th>\r\n                        <th width=\"10%\">Mobile</th>\r\n                        <th width=\"15%\">Booking Date / Time </th>\r\n                        <th width=\"10%\">Appointment Date</th>\r\n                        <th width=\"15%\">Appointment Slot</th>\r\n                        <th width=\"10%\">Appointment Status </th>\r\n                        <th width=\"15%\">Approved By </th>\r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>{{item.appointmentNo}} </td>\r\n                        <td>{{item.fullName}} </td>\r\n                        <td>{{item.mobile}} </td>\r\n                        <td>{{item.bookingDate}} </td>\r\n                        <td>{{item.createdOn }}</td>\r\n                        <td>{{item.timeslot}}</td>\r\n                        \r\n                        <td>\r\n                         {{item.status}}\r\n                            <!--<span class=\"badge badge-warning\"\r\n                                  *ngIf=\"item.appointmentStatus == 101\">Pending</span>\r\n              \r\n                            <span class=\"badge badge-success\"\r\n                                  *ngIf=\"item.appointmentStatus == 102\">Approved</span>\r\n              \r\n                            <span class=\"badge badge-danger\"\r\n                                  *ngIf=\"item.appointmentStatus == 103\">Cancelled</span>\r\n              \r\n                            <span class=\"badge badge-info\"\r\n                                  *ngIf=\"item.appointmentStatus == 100\">Completed</span>\r\n              \r\n                            <span class=\"badge badge-dark\"\r\n                                  *ngIf=\"![101, 102, 103, 100].includes(item.appointmentStatus)\">-</span>-->\r\n                          </td>\r\n\r\n                        <td>{{item.approvedBy}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1802,7 +1802,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  \r\n  <div *ngIf=\"!isAdmin && isReception\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"true\" aria-controls=\"collapseThree\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseThree\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">          \r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isReception\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/salesdetail']\" >Appointment Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/medicinereport']\" >Medicine Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/prescriptionreport']\" >Prescription Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/dashboardreport']\" >Dashboard Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/medicineorderlistreport']\" >Medicine Order Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/customerreport']\" >Customer Report</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>-->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
+      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/logo-White.png\" style=\"width: 45%;\" />\r\n        </div>\r\n      </a>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Modules\r\n      </div>\r\n      <div *ngIf=\"isNoti\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseNot\" aria-expanded=\"true\" aria-controls=\"collapseNot\">\r\n          <i class=\"fas fa-fw fa-sticky-note\"></i>\r\n          <span>Notifications</span>\r\n        </a>\r\n        <div id=\"collapseNot\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['notification']\"> Notifications</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n  </div>\r\n  <!-- Divider -->\r\n  <div *ngIf=\"isDoctor\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Manage Doctors</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/speciality']\">Doctor's Specialities</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/managedoctor/doctor']\"> Doctor's</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  \r\n  <div *ngIf=\"!isAdmin && isReception\">\r\n    <hr class=\"sidebar-divider\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"true\" aria-controls=\"collapseThree\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Doctor's Appointment</span>\r\n      </a>\r\n      <div id=\"collapseThree\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">          \r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/appointment']\">Doctor's Appoinment</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n  </div>\r\n\r\n  <hr class=\"sidebar-divider\">\r\n\r\n  <div *ngIf=\"isUser\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUser\" aria-expanded=\"true\" aria-controls=\"collapseUser\">\r\n        <i class=\"fas fa-fw fa-user\"></i>\r\n        <span>Users</span>\r\n      </a>\r\n      <div id=\"collapseUser\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/user']\">Users & Roles</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/formpermission']\">Forms Permission</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Pages Collapse Menu -->\r\n  <div *ngIf=\"isPharmacy\">\r\n\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCustomer\" aria-expanded=\"true\" aria-controls=\"collapseCustomer\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Pharmacy</span>\r\n      </a>\r\n      <div id=\"collapseCustomer\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/medicine']\">Medicine</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/prescription']\">Prescription</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/pharmacy/orders']\">Orders</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <!-- Nav Item - Utilities Collapse Menu -->\r\n  <div *ngIf=\"isAdmin\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Reception</span>\r\n      </a>\r\n      <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/reception/customers']\">Patient Information</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n  <div *ngIf=\"isDiagnostic\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseLab\" aria-expanded=\"true\" aria-controls=\"collapseLab\">\r\n        <i class=\"fas fa-fw fa-folder\"></i>\r\n        <span>Diagnostic</span>\r\n      </a>\r\n      <div id=\"collapseLab\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/uploadreport']\">Diagnostic Reports</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/laboratory/diagnosticcategory']\">Diagnostic Category</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider\">\r\n  </div>\r\n\r\n  <div *ngIf=\"isReport\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseReport\" aria-expanded=\"true\" aria-controls=\"collapseReport\">\r\n        <i class=\"fas fa-fw fa-list\"></i>\r\n        <span>Reports</span>\r\n      </a>\r\n      <div id=\"collapseReport\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/salesdetail']\" >Appointment Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/medicinereport']\" >Medicine Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/prescriptionreport']\" >Prescription Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/dashboardreport']\" >Dashboard Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/medicineorderlistreport']\" >Medicine Order Report</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/report/customerreport']\" >Customer Report</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <div *ngIf=\"isSetting\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseSettings\" aria-expanded=\"true\" aria-controls=\"collapseSettings\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Settings</span>\r\n      </a>\r\n      <div id=\"collapseSettings\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/timeslot']\">Time Slots</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/delivery']\">Delivery</a>\r\n          <!--<a class=\"collapse-item\" [routerLink]=\"['/admin/settings/appsettings/add']\">Pharmacy Settings</a>-->\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/banner']\">Discount Banners | APP</a>\r\n          <a class=\"collapse-item\" [routerLink]=\"['/admin/settings/corporateclient']\">Corporate Client</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n  </div>\r\n  <!-- Sidebar Toggler (Sidebar) -->\r\n  <div class=\"text-center d-none d-md-inline\">\r\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n  </div>\r\n  </ul>\r\n  <!-- End of Sidebar -->\r\n  <!-- Content Wrapper -->\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <!-- Main Content -->\r\n    <div id=\"content\">\r\n      <!-- Topbar -->\r\n      <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n        <!-- Sidebar Toggle (Topbar) -->\r\n        <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n          <i class=\"fa fa-bars\"></i>\r\n        </button>\r\n\r\n        <!-- Topbar Search -->\r\n        <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n          <strong>Welcome</strong> : {{userName}}\r\n          <strong>to Mamji Hospital</strong>\r\n\r\n        </div>\r\n\r\n        <!-- Topbar Navbar -->\r\n        <ul class=\"navbar-nav ml-auto\">\r\n          <!-- Nav Item - User Information -->\r\n          <li class=\"nav-item dropdown no-arrow\">\r\n            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">{{userName}}</span>\r\n              <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n            </a>\r\n            <!-- Dropdown - User Information -->\r\n            <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n              <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n              </a>\r\n            </div>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n      </nav>\r\n      <!-- End of Topbar -->\r\n      <!-- Begin Page Content -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <!-- End of Main Content -->\r\n    <!-- Footer -->\r\n    <footer class=\"sticky-footer bg-white\">\r\n      <div class=\"container my-auto\">\r\n        <div class=\"copyright text-center my-auto\">\r\n          <span>Copyright &copy; Mamji 2022</span>\r\n        </div>\r\n      </div>\r\n    </footer>\r\n    <!-- End of Footer -->\r\n\r\n  </div>\r\n  <!-- End of Content Wrapper -->\r\n  </div>\r\n</body>\r\n";
       /***/
     },
 
@@ -1914,13 +1914,22 @@
       /* harmony import */
 
 
-      var xlsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! xlsx */
-      "./node_modules/xlsx/xlsx.js");
+      var exceljs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! exceljs */
+      "./node_modules/exceljs/dist/exceljs.min.js");
       /* harmony import */
 
 
-      var xlsx__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(xlsx__WEBPACK_IMPORTED_MODULE_2__);
+      var exceljs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(exceljs__WEBPACK_IMPORTED_MODULE_2__);
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js"); //import { Injectable } from '@angular/core';
+      //import * as FileSaver from 'file-saver';
+      //import * as XLSX from 'xlsx';
+
 
       var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
         var c = arguments.length,
@@ -1936,39 +1945,1260 @@
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
       };
 
-      var EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
-      var EXCEL_EXTENSION = '.xlsx';
+      var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
+        function adopt(value) {
+          return value instanceof P ? value : new P(function (resolve) {
+            resolve(value);
+          });
+        }
+
+        return new (P || (P = Promise))(function (resolve, reject) {
+          function fulfilled(value) {
+            try {
+              step(generator.next(value));
+            } catch (e) {
+              reject(e);
+            }
+          }
+
+          function rejected(value) {
+            try {
+              step(generator["throw"](value));
+            } catch (e) {
+              reject(e);
+            }
+          }
+
+          function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+          }
+
+          step((generator = generator.apply(thisArg, _arguments || [])).next());
+        });
+      }; //const EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
+      //const EXCEL_EXTENSION = '.xlsx';
+      //@Injectable()
+      //export class ExcelService {
+      // constructor() { }
+      // public exportAsExcelFile(json: any[], excelFileName: string): void {
+      //   const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(json);
+      //   console.log('worksheet',worksheet);
+      //   const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
+      //   const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+      //   //const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'buffer' });
+      //   this.saveAsExcelFile(excelBuffer, excelFileName);
+      // }
+      // private saveAsExcelFile(buffer: any, fileName: string): void {
+      //   const data: Blob = new Blob([buffer], {
+      //     type: EXCEL_TYPE
+      //   });
+      //   FileSaver.saveAs(data, fileName + '_export_' + new Date().getTime() + EXCEL_EXTENSION);
+      // }
+      //}
+
 
       var ExcelService = /*#__PURE__*/function () {
-        function ExcelService() {
+        function ExcelService(http) {
           _classCallCheck(this, ExcelService);
+
+          this.http = http;
         }
 
         _createClass(ExcelService, [{
           key: "exportAsExcelFile",
           value: function exportAsExcelFile(json, excelFileName) {
-            var worksheet = xlsx__WEBPACK_IMPORTED_MODULE_2__["utils"].json_to_sheet(json);
-            console.log('worksheet', worksheet);
-            var workbook = {
-              Sheets: {
-                'data': worksheet
-              },
-              SheetNames: ['data']
-            };
-            var excelBuffer = xlsx__WEBPACK_IMPORTED_MODULE_2__["write"](workbook, {
-              bookType: 'xlsx',
-              type: 'array'
-            }); //const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'buffer' });
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var logoUrl, footerUrl, logoBase64, footerBase64, workbook, worksheet, logo, footerImage, footerRow, buffer;
+              return regeneratorRuntime.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _context.prev = 0;
+                      logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
 
-            this.saveAsExcelFile(excelBuffer, excelFileName);
+                      footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+
+                      _context.next = 5;
+                      return this.getBase64ImageFromAssets(logoUrl);
+
+                    case 5:
+                      logoBase64 = _context.sent;
+                      _context.next = 8;
+                      return this.getBase64ImageFromAssets(footerUrl);
+
+                    case 8:
+                      footerBase64 = _context.sent;
+                      workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                      worksheet = workbook.addWorksheet('Report'); // Remove gridlines
+
+                      worksheet.properties.showGridLines = false; // Merge cells across more columns to center the logo horizontally
+
+                      worksheet.mergeCells('A1:C8');
+                      worksheet.getCell('A1').alignment = {
+                        vertical: 'middle',
+                        horizontal: 'centerContinuous'
+                      }; // Add the logo image to the worksheet
+
+                      logo = workbook.addImage({
+                        base64: logoBase64,
+                        extension: 'png'
+                      });
+                      worksheet.addImage(logo, {
+                        tl: {
+                          col: 0,
+                          row: 0
+                        },
+                        ext: {
+                          width: 400,
+                          height: 150
+                        }
+                      }); // Leave the necessary space before adding the data
+
+                      worksheet.addRow([]);
+                      worksheet.addRow([]); // Add data headers and rows, starting after the empty rows
+
+                      worksheet.addRow(Object.keys(json[0])); // Add header row
+
+                      json.forEach(function (order) {
+                        worksheet.addRow(Object.values(order)); // Add data rows
+                      }); // Adjust column widths
+
+                      worksheet.columns = [{
+                        key: 'col1',
+                        width: 15
+                      }, {
+                        key: 'col2',
+                        width: 30
+                      }, {
+                        key: 'col3',
+                        width: 30
+                      }, {
+                        key: 'col4',
+                        width: 30
+                      }, {
+                        key: 'col5',
+                        width: 30
+                      }, {
+                        key: 'col6',
+                        width: 30
+                      }, {
+                        key: 'col7',
+                        width: 30
+                      }, {
+                        key: 'col8',
+                        width: 30
+                      }, {
+                        key: 'col9',
+                        width: 30
+                      }, {
+                        key: 'col10',
+                        width: 30
+                      }]; // Add the footer image to the worksheet
+
+                      footerImage = workbook.addImage({
+                        base64: footerBase64,
+                        extension: 'png'
+                      }); // Determine the row for the footer image (e.g., 2 rows below the last data row)
+
+                      footerRow = worksheet.lastRow.number + 4;
+                      worksheet.mergeCells("A".concat(footerRow, ":C").concat(footerRow + 4)); // Adjust merging range as needed
+
+                      worksheet.addImage(footerImage, {
+                        tl: {
+                          col: 0,
+                          row: footerRow + 0
+                        },
+                        ext: {
+                          width: 500,
+                          height: 75
+                        }
+                      }); // Generate Excel file and trigger download
+
+                      _context.next = 27;
+                      return workbook.xlsx.writeBuffer();
+
+                    case 27:
+                      buffer = _context.sent;
+                      this.saveAsExcelFile(buffer, excelFileName);
+                      _context.next = 34;
+                      break;
+
+                    case 31:
+                      _context.prev = 31;
+                      _context.t0 = _context["catch"](0);
+                      console.error('Error exporting Excel file:', _context.t0);
+
+                    case 34:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this, [[0, 31]]);
+            }));
+          }
+        }, {
+          key: "exportAppointment",
+          value: function exportAppointment(json, excelFileName) {
+            var _a, _b;
+
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              var logoUrl, footerUrl, logoBase64, footerBase64, workbook, worksheet, logo, fromDateCell, toDateCell, headers, headerRow, footerImage, footerRow, buffer;
+              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                while (1) {
+                  switch (_context2.prev = _context2.next) {
+                    case 0:
+                      _context2.prev = 0;
+                      logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+
+                      footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+
+                      _context2.next = 5;
+                      return this.getBase64ImageFromAssets(logoUrl);
+
+                    case 5:
+                      logoBase64 = _context2.sent;
+                      _context2.next = 8;
+                      return this.getBase64ImageFromAssets(footerUrl);
+
+                    case 8:
+                      footerBase64 = _context2.sent;
+                      workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                      worksheet = workbook.addWorksheet('Report'); // Remove gridlines
+
+                      worksheet.properties.showGridLines = false; // Merge cells across more columns to center the logo horizontally
+
+                      worksheet.mergeCells('A1:C8');
+                      worksheet.getCell('A1').alignment = {
+                        vertical: 'middle',
+                        horizontal: 'centerContinuous'
+                      }; // Add the logo image to the worksheet
+
+                      logo = workbook.addImage({
+                        base64: logoBase64,
+                        extension: 'png'
+                      });
+                      worksheet.addImage(logo, {
+                        tl: {
+                          col: 0,
+                          row: 0
+                        },
+                        ext: {
+                          width: 400,
+                          height: 150
+                        }
+                      }); // Adjust the "From Date" and "To Date" filters
+
+                      worksheet.addRow([]);
+                      worksheet.mergeCells('A10');
+                      worksheet.mergeCells('C10');
+                      fromDateCell = worksheet.getCell('A10');
+                      toDateCell = worksheet.getCell('C10');
+                      fromDateCell.value = "From Date: ".concat(((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A');
+                      toDateCell.value = "To Date: ".concat(((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'); // Format the "From Date" and "To Date" cells
+
+                      fromDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      toDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      fromDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      };
+                      toDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      }; // Leave the necessary space before adding the data
+
+                      worksheet.addRow([]);
+                      worksheet.addRow([]); // Predefined Column Titles
+
+                      headers = ['Appointment #', 'Booking Date', 'Booking Day', 'Doctor Name', 'Patient Name', 'Mobile', 'CreatedOn', 'Approved By', 'Timeslot', 'Status'];
+                      headerRow = worksheet.addRow(headers); // Bold the header row
+
+                      headerRow.eachCell(function (cell) {
+                        cell.font = {
+                          bold: true
+                        };
+                      }); // Add data rows, starting after the header row
+
+                      json.forEach(function (order) {
+                        worksheet.addRow([order.appointmentNo, order.bookingDate, order.day, order.doctorName, order.fullName, order.mobile, order.createdOn, order.approvedBy, order.timeslot, order.status]);
+                      }); // Adjust column widths
+
+                      worksheet.columns = headers.map(function (header) {
+                        return {
+                          width: 25
+                        };
+                      }); // Add borders to each cell in the table
+
+                      worksheet.eachRow(function (row, rowNumber) {
+                        if (rowNumber >= 4) {
+                          // Assuming row 3 is headers and data starts from row 4
+                          row.eachCell({
+                            includeEmpty: true
+                          }, function (cell) {
+                            cell.border = {
+                              top: {
+                                style: 'thin'
+                              },
+                              left: {
+                                style: 'thin'
+                              },
+                              bottom: {
+                                style: 'thin'
+                              },
+                              right: {
+                                style: 'thin'
+                              }
+                            };
+                          });
+                        }
+                      }); // Add the footer image to the worksheet
+
+                      footerImage = workbook.addImage({
+                        base64: footerBase64,
+                        extension: 'png'
+                      }); // Determine the row for the footer image (e.g., 2 rows below the last data row)
+
+                      footerRow = worksheet.lastRow.number + 5;
+                      worksheet.mergeCells("A".concat(footerRow, ":E").concat(footerRow + 5)); // Adjust merging range as needed
+
+                      worksheet.addImage(footerImage, {
+                        tl: {
+                          col: 0,
+                          row: footerRow + 0
+                        },
+                        ext: {
+                          width: 750,
+                          height: 75
+                        }
+                      }); // Generate Excel file and trigger download
+
+                      _context2.next = 41;
+                      return workbook.xlsx.writeBuffer();
+
+                    case 41:
+                      buffer = _context2.sent;
+                      this.saveAsExcelFile(buffer, excelFileName);
+                      _context2.next = 48;
+                      break;
+
+                    case 45:
+                      _context2.prev = 45;
+                      _context2.t0 = _context2["catch"](0);
+                      console.error('Error exporting Excel file:', _context2.t0);
+
+                    case 48:
+                    case "end":
+                      return _context2.stop();
+                  }
+                }
+              }, _callee2, this, [[0, 45]]);
+            }));
+          }
+        }, {
+          key: "exportMedical",
+          value: function exportMedical(json, excelFileName) {
+            var _a, _b;
+
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+              var logoUrl, footerUrl, logoBase64, footerBase64, workbook, worksheet, logo, fromDateCell, toDateCell, headers, headerRow, footerImage, footerRow, buffer;
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                while (1) {
+                  switch (_context3.prev = _context3.next) {
+                    case 0:
+                      _context3.prev = 0;
+                      logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+
+                      footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+
+                      _context3.next = 5;
+                      return this.getBase64ImageFromAssets(logoUrl);
+
+                    case 5:
+                      logoBase64 = _context3.sent;
+                      _context3.next = 8;
+                      return this.getBase64ImageFromAssets(footerUrl);
+
+                    case 8:
+                      footerBase64 = _context3.sent;
+                      workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                      worksheet = workbook.addWorksheet('Report'); // Remove gridlines
+
+                      worksheet.properties.showGridLines = false; // Merge cells across more columns to center the logo horizontally
+
+                      worksheet.mergeCells('A1:C8');
+                      worksheet.getCell('A1').alignment = {
+                        vertical: 'middle',
+                        horizontal: 'centerContinuous'
+                      }; // Add the logo image to the worksheet
+
+                      logo = workbook.addImage({
+                        base64: logoBase64,
+                        extension: 'png'
+                      });
+                      worksheet.addImage(logo, {
+                        tl: {
+                          col: 0,
+                          row: 0
+                        },
+                        ext: {
+                          width: 400,
+                          height: 150
+                        }
+                      }); // Adjust the "From Date" and "To Date" filters
+
+                      worksheet.addRow([]);
+                      worksheet.mergeCells('A10');
+                      worksheet.mergeCells('C10');
+                      fromDateCell = worksheet.getCell('A10');
+                      toDateCell = worksheet.getCell('C10');
+                      fromDateCell.value = "From Date: ".concat(((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A');
+                      toDateCell.value = "To Date: ".concat(((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'); // Format the "From Date" and "To Date" cells
+
+                      fromDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      toDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      fromDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      };
+                      toDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      }; // Leave the necessary space before adding the data
+
+                      worksheet.addRow([]);
+                      worksheet.addRow([]); // Predefined Column Titles
+
+                      headers = ['Name', 'Brand Details', 'Price', 'Quantity'];
+                      headerRow = worksheet.addRow(headers); // Bold the header row
+
+                      headerRow.eachCell(function (cell) {
+                        cell.font = {
+                          bold: true
+                        };
+                      }); // Add data rows, starting after the header row
+
+                      json.forEach(function (order) {
+                        worksheet.addRow([order.name, order.brandDetails, order.price, order.quantityDescription]);
+                      }); // Adjust column widths
+
+                      worksheet.columns = headers.map(function (header) {
+                        return {
+                          width: 25
+                        };
+                      }); // Add borders to each cell in the table
+
+                      worksheet.eachRow(function (row, rowNumber) {
+                        if (rowNumber >= 2) {
+                          // Assuming row 3 is headers and data starts from row 4
+                          row.eachCell({
+                            includeEmpty: true
+                          }, function (cell) {
+                            cell.border = {
+                              top: {
+                                style: 'thin'
+                              },
+                              left: {
+                                style: 'thin'
+                              },
+                              bottom: {
+                                style: 'thin'
+                              },
+                              right: {
+                                style: 'thin'
+                              }
+                            };
+                          });
+                        }
+                      }); // Add the footer image to the worksheet
+
+                      footerImage = workbook.addImage({
+                        base64: footerBase64,
+                        extension: 'png'
+                      }); // Determine the row for the footer image (e.g., 2 rows below the last data row)
+
+                      footerRow = worksheet.lastRow.number + 5;
+                      worksheet.mergeCells("A".concat(footerRow, ":D").concat(footerRow + 5)); // Adjust merging range as needed
+
+                      worksheet.addImage(footerImage, {
+                        tl: {
+                          col: 0,
+                          row: footerRow + 0
+                        },
+                        ext: {
+                          width: 600,
+                          height: 75
+                        }
+                      }); // Generate Excel file and trigger download
+
+                      _context3.next = 41;
+                      return workbook.xlsx.writeBuffer();
+
+                    case 41:
+                      buffer = _context3.sent;
+                      this.saveAsExcelFile(buffer, excelFileName);
+                      _context3.next = 48;
+                      break;
+
+                    case 45:
+                      _context3.prev = 45;
+                      _context3.t0 = _context3["catch"](0);
+                      console.error('Error exporting Excel file:', _context3.t0);
+
+                    case 48:
+                    case "end":
+                      return _context3.stop();
+                  }
+                }
+              }, _callee3, this, [[0, 45]]);
+            }));
+          }
+        }, {
+          key: "exportPrescripiton",
+          value: function exportPrescripiton(json, excelFileName) {
+            var _a, _b;
+
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+              var logoUrl, footerUrl, logoBase64, footerBase64, workbook, worksheet, logo, fromDateCell, toDateCell, headers, headerRow, footerImage, footerRow, buffer;
+              return regeneratorRuntime.wrap(function _callee4$(_context4) {
+                while (1) {
+                  switch (_context4.prev = _context4.next) {
+                    case 0:
+                      _context4.prev = 0;
+                      logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+
+                      footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+
+                      _context4.next = 5;
+                      return this.getBase64ImageFromAssets(logoUrl);
+
+                    case 5:
+                      logoBase64 = _context4.sent;
+                      _context4.next = 8;
+                      return this.getBase64ImageFromAssets(footerUrl);
+
+                    case 8:
+                      footerBase64 = _context4.sent;
+                      workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                      worksheet = workbook.addWorksheet('Report'); // Remove gridlines
+
+                      worksheet.properties.showGridLines = false; // Merge cells across more columns to center the logo horizontally
+
+                      worksheet.mergeCells('A1:C8');
+                      worksheet.getCell('A1').alignment = {
+                        vertical: 'middle',
+                        horizontal: 'centerContinuous'
+                      }; // Add the logo image to the worksheet
+
+                      logo = workbook.addImage({
+                        base64: logoBase64,
+                        extension: 'png'
+                      });
+                      worksheet.addImage(logo, {
+                        tl: {
+                          col: 0,
+                          row: 0
+                        },
+                        ext: {
+                          width: 400,
+                          height: 150
+                        }
+                      }); // Adjust the "From Date" and "To Date" filters
+
+                      worksheet.addRow([]);
+                      worksheet.mergeCells('A10');
+                      worksheet.mergeCells('C10');
+                      fromDateCell = worksheet.getCell('A10');
+                      toDateCell = worksheet.getCell('C10');
+                      fromDateCell.value = "From Date: ".concat(((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A');
+                      toDateCell.value = "To Date: ".concat(((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'); // Format the "From Date" and "To Date" cells
+
+                      fromDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      toDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      fromDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      };
+                      toDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      }; // Leave the necessary space before adding the data
+
+                      worksheet.addRow([]);
+                      worksheet.addRow([]); // Predefined Column Titles
+
+                      headers = ['Image', 'Customer Name', 'Mobile', 'Address', 'Note', 'Approved By'];
+                      headerRow = worksheet.addRow(headers); // Bold the header row
+
+                      headerRow.eachCell(function (cell) {
+                        cell.font = {
+                          bold: true
+                        };
+                      }); // Add data rows, starting after the header row
+
+                      json.forEach(function (order) {
+                        worksheet.addRow([order.image, order.customerName, order.mobile, order.address, order.note, order.lastUpdatedBy]);
+                      }); // Adjust column widths
+
+                      worksheet.columns = headers.map(function (header) {
+                        return {
+                          width: 25
+                        };
+                      }); // Add borders to each cell in the table
+
+                      worksheet.eachRow(function (row, rowNumber) {
+                        if (rowNumber >= 2) {
+                          // Assuming row 3 is headers and data starts from row 4
+                          row.eachCell({
+                            includeEmpty: true
+                          }, function (cell) {
+                            cell.border = {
+                              top: {
+                                style: 'thin'
+                              },
+                              left: {
+                                style: 'thin'
+                              },
+                              bottom: {
+                                style: 'thin'
+                              },
+                              right: {
+                                style: 'thin'
+                              }
+                            };
+                          });
+                        }
+                      }); // Add the footer image to the worksheet
+
+                      footerImage = workbook.addImage({
+                        base64: footerBase64,
+                        extension: 'png'
+                      }); // Determine the row for the footer image (e.g., 2 rows below the last data row)
+
+                      footerRow = worksheet.lastRow.number + 5;
+                      worksheet.mergeCells("A".concat(footerRow, ":D").concat(footerRow + 5)); // Adjust merging range as needed
+
+                      worksheet.addImage(footerImage, {
+                        tl: {
+                          col: 0,
+                          row: footerRow + 0
+                        },
+                        ext: {
+                          width: 600,
+                          height: 75
+                        }
+                      }); // Generate Excel file and trigger download
+
+                      _context4.next = 41;
+                      return workbook.xlsx.writeBuffer();
+
+                    case 41:
+                      buffer = _context4.sent;
+                      this.saveAsExcelFile(buffer, excelFileName);
+                      _context4.next = 48;
+                      break;
+
+                    case 45:
+                      _context4.prev = 45;
+                      _context4.t0 = _context4["catch"](0);
+                      console.error('Error exporting Excel file:', _context4.t0);
+
+                    case 48:
+                    case "end":
+                      return _context4.stop();
+                  }
+                }
+              }, _callee4, this, [[0, 45]]);
+            }));
+          }
+        }, {
+          key: "exportDashboardReport",
+          value: function exportDashboardReport(json, excelFileName) {
+            var _a, _b;
+
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+              var logoUrl, footerUrl, logoBase64, footerBase64, workbook, worksheet, logo, fromDateCell, toDateCell, headers, headerRow, footerImage, footerRow, buffer;
+              return regeneratorRuntime.wrap(function _callee5$(_context5) {
+                while (1) {
+                  switch (_context5.prev = _context5.next) {
+                    case 0:
+                      _context5.prev = 0;
+                      logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+
+                      footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+
+                      _context5.next = 5;
+                      return this.getBase64ImageFromAssets(logoUrl);
+
+                    case 5:
+                      logoBase64 = _context5.sent;
+                      _context5.next = 8;
+                      return this.getBase64ImageFromAssets(footerUrl);
+
+                    case 8:
+                      footerBase64 = _context5.sent;
+                      workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                      worksheet = workbook.addWorksheet('Report'); // Remove gridlines
+
+                      worksheet.properties.showGridLines = false; // Merge cells across more columns to center the logo horizontally
+
+                      worksheet.mergeCells('A1:C8');
+                      worksheet.getCell('A1').alignment = {
+                        vertical: 'middle',
+                        horizontal: 'centerContinuous'
+                      }; // Add the logo image to the worksheet
+
+                      logo = workbook.addImage({
+                        base64: logoBase64,
+                        extension: 'png'
+                      });
+                      worksheet.addImage(logo, {
+                        tl: {
+                          col: 0,
+                          row: 0
+                        },
+                        ext: {
+                          width: 400,
+                          height: 150
+                        }
+                      }); // Adjust the "From Date" and "To Date" filters
+
+                      worksheet.addRow([]);
+                      worksheet.mergeCells('A10');
+                      worksheet.mergeCells('C10');
+                      fromDateCell = worksheet.getCell('A10');
+                      toDateCell = worksheet.getCell('C10');
+                      fromDateCell.value = "From Date: ".concat(((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A');
+                      toDateCell.value = "To Date: ".concat(((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'); // Format the "From Date" and "To Date" cells
+
+                      fromDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      toDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      fromDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      };
+                      toDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      }; // Leave the necessary space before adding the data
+
+                      worksheet.addRow([]);
+                      worksheet.addRow([]); // Predefined Column Titles
+
+                      headers = ['Total Doctors', 'Total Patients', 'Total Doctors Appointment', 'Total Prescription'];
+                      headerRow = worksheet.addRow(headers); // Bold the header row
+
+                      headerRow.eachCell(function (cell) {
+                        cell.font = {
+                          bold: true
+                        };
+                      }); // Add data rows, starting after the header row
+
+                      json.forEach(function (order) {
+                        worksheet.addRow([order.totalDoctors, order.totalPatients, order.totalDoctorAppointments, order.totalPrescription]);
+                      }); // Adjust column widths
+
+                      worksheet.columns = headers.map(function (header) {
+                        return {
+                          width: 25
+                        };
+                      }); // Add borders to each cell in the table
+
+                      worksheet.eachRow(function (row, rowNumber) {
+                        if (rowNumber >= 2) {
+                          // Assuming row 3 is headers and data starts from row 4
+                          row.eachCell({
+                            includeEmpty: true
+                          }, function (cell) {
+                            cell.border = {
+                              top: {
+                                style: 'thin'
+                              },
+                              left: {
+                                style: 'thin'
+                              },
+                              bottom: {
+                                style: 'thin'
+                              },
+                              right: {
+                                style: 'thin'
+                              }
+                            };
+                          });
+                        }
+                      }); // Add the footer image to the worksheet
+
+                      footerImage = workbook.addImage({
+                        base64: footerBase64,
+                        extension: 'png'
+                      }); // Determine the row for the footer image (e.g., 2 rows below the last data row)
+
+                      footerRow = worksheet.lastRow.number + 5;
+                      worksheet.mergeCells("A".concat(footerRow, ":D").concat(footerRow + 5)); // Adjust merging range as needed
+
+                      worksheet.addImage(footerImage, {
+                        tl: {
+                          col: 0,
+                          row: footerRow + 0
+                        },
+                        ext: {
+                          width: 600,
+                          height: 75
+                        }
+                      }); // Generate Excel file and trigger download
+
+                      _context5.next = 41;
+                      return workbook.xlsx.writeBuffer();
+
+                    case 41:
+                      buffer = _context5.sent;
+                      this.saveAsExcelFile(buffer, excelFileName);
+                      _context5.next = 48;
+                      break;
+
+                    case 45:
+                      _context5.prev = 45;
+                      _context5.t0 = _context5["catch"](0);
+                      console.error('Error exporting Excel file:', _context5.t0);
+
+                    case 48:
+                    case "end":
+                      return _context5.stop();
+                  }
+                }
+              }, _callee5, this, [[0, 45]]);
+            }));
+          }
+        }, {
+          key: "exportMedicineReport",
+          value: function exportMedicineReport(json, excelFileName) {
+            var _a, _b;
+
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+              var logoUrl, footerUrl, logoBase64, footerBase64, workbook, worksheet, logo, fromDateCell, toDateCell, headers, headerRow, footerImage, footerRow, buffer;
+              return regeneratorRuntime.wrap(function _callee6$(_context6) {
+                while (1) {
+                  switch (_context6.prev = _context6.next) {
+                    case 0:
+                      _context6.prev = 0;
+                      logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+
+                      footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+
+                      _context6.next = 5;
+                      return this.getBase64ImageFromAssets(logoUrl);
+
+                    case 5:
+                      logoBase64 = _context6.sent;
+                      _context6.next = 8;
+                      return this.getBase64ImageFromAssets(footerUrl);
+
+                    case 8:
+                      footerBase64 = _context6.sent;
+                      workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                      worksheet = workbook.addWorksheet('Report'); // Remove gridlines
+
+                      worksheet.properties.showGridLines = false; // Merge cells across more columns to center the logo horizontally
+
+                      worksheet.mergeCells('A1:C8');
+                      worksheet.getCell('A1').alignment = {
+                        vertical: 'middle',
+                        horizontal: 'centerContinuous'
+                      }; // Add the logo image to the worksheet
+
+                      logo = workbook.addImage({
+                        base64: logoBase64,
+                        extension: 'png'
+                      });
+                      worksheet.addImage(logo, {
+                        tl: {
+                          col: 0,
+                          row: 0
+                        },
+                        ext: {
+                          width: 400,
+                          height: 150
+                        }
+                      }); // Adjust the "From Date" and "To Date" filters
+
+                      worksheet.addRow([]);
+                      worksheet.mergeCells('A10');
+                      worksheet.mergeCells('C10');
+                      fromDateCell = worksheet.getCell('A10');
+                      toDateCell = worksheet.getCell('C10');
+                      fromDateCell.value = "From Date: ".concat(((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A');
+                      toDateCell.value = "To Date: ".concat(((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'); // Format the "From Date" and "To Date" cells
+
+                      fromDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      toDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      fromDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      };
+                      toDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      }; // Leave the necessary space before adding the data
+
+                      worksheet.addRow([]);
+                      worksheet.addRow([]); // Predefined Column Titles
+
+                      headers = ['Order #', 'Transaction #', 'Customer Name', 'Customer Mobile', 'Amount Total', 'Order Date', 'Status'];
+                      headerRow = worksheet.addRow(headers); // Bold the header row
+
+                      headerRow.eachCell(function (cell) {
+                        cell.font = {
+                          bold: true
+                        };
+                      }); // Add data rows, starting after the header row
+
+                      json.forEach(function (order) {
+                        worksheet.addRow([order.orderNo, order.transactionNo, order.customerName, order.customerMobile, order.amountTotal, order.orderDate, order.status]);
+                      }); // Adjust column widths
+
+                      worksheet.columns = headers.map(function (header) {
+                        return {
+                          width: 25
+                        };
+                      }); // Add borders to each cell in the table
+
+                      worksheet.eachRow(function (row, rowNumber) {
+                        if (rowNumber >= 2) {
+                          // Assuming row 3 is headers and data starts from row 4
+                          row.eachCell({
+                            includeEmpty: true
+                          }, function (cell) {
+                            cell.border = {
+                              top: {
+                                style: 'thin'
+                              },
+                              left: {
+                                style: 'thin'
+                              },
+                              bottom: {
+                                style: 'thin'
+                              },
+                              right: {
+                                style: 'thin'
+                              }
+                            };
+                          });
+                        }
+                      }); // Add the footer image to the worksheet
+
+                      footerImage = workbook.addImage({
+                        base64: footerBase64,
+                        extension: 'png'
+                      }); // Determine the row for the footer image (e.g., 2 rows below the last data row)
+
+                      footerRow = worksheet.lastRow.number + 5;
+                      worksheet.mergeCells("A".concat(footerRow, ":D").concat(footerRow + 5)); // Adjust merging range as needed
+
+                      worksheet.addImage(footerImage, {
+                        tl: {
+                          col: 0,
+                          row: footerRow + 0
+                        },
+                        ext: {
+                          width: 600,
+                          height: 75
+                        }
+                      }); // Generate Excel file and trigger download
+
+                      _context6.next = 41;
+                      return workbook.xlsx.writeBuffer();
+
+                    case 41:
+                      buffer = _context6.sent;
+                      this.saveAsExcelFile(buffer, excelFileName);
+                      _context6.next = 48;
+                      break;
+
+                    case 45:
+                      _context6.prev = 45;
+                      _context6.t0 = _context6["catch"](0);
+                      console.error('Error exporting Excel file:', _context6.t0);
+
+                    case 48:
+                    case "end":
+                      return _context6.stop();
+                  }
+                }
+              }, _callee6, this, [[0, 45]]);
+            }));
+          }
+        }, {
+          key: "exportCustomerReport",
+          value: function exportCustomerReport(json, excelFileName) {
+            var _a, _b;
+
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+              var logoUrl, footerUrl, logoBase64, footerBase64, workbook, worksheet, logo, fromDateCell, toDateCell, headers, headerRow, footerImage, footerRow, buffer;
+              return regeneratorRuntime.wrap(function _callee7$(_context7) {
+                while (1) {
+                  switch (_context7.prev = _context7.next) {
+                    case 0:
+                      _context7.prev = 0;
+                      logoUrl = 'assets/img/MamjiNewLogo.jpg'; // Path to your logo in assets folder
+
+                      footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+
+                      _context7.next = 5;
+                      return this.getBase64ImageFromAssets(logoUrl);
+
+                    case 5:
+                      logoBase64 = _context7.sent;
+                      _context7.next = 8;
+                      return this.getBase64ImageFromAssets(footerUrl);
+
+                    case 8:
+                      footerBase64 = _context7.sent;
+                      workbook = new exceljs__WEBPACK_IMPORTED_MODULE_2__["Workbook"]();
+                      worksheet = workbook.addWorksheet('Report'); // Remove gridlines
+
+                      worksheet.properties.showGridLines = false; // Merge cells across more columns to center the logo horizontally
+
+                      worksheet.mergeCells('A1:C8');
+                      worksheet.getCell('A1').alignment = {
+                        vertical: 'middle',
+                        horizontal: 'centerContinuous'
+                      }; // Add the logo image to the worksheet
+
+                      logo = workbook.addImage({
+                        base64: logoBase64,
+                        extension: 'png'
+                      });
+                      worksheet.addImage(logo, {
+                        tl: {
+                          col: 0,
+                          row: 0
+                        },
+                        ext: {
+                          width: 400,
+                          height: 150
+                        }
+                      }); // Adjust the "From Date" and "To Date" filters
+
+                      worksheet.addRow([]);
+                      worksheet.mergeCells('A10');
+                      worksheet.mergeCells('C10');
+                      fromDateCell = worksheet.getCell('A10');
+                      toDateCell = worksheet.getCell('C10');
+                      fromDateCell.value = "From Date: ".concat(((_a = json[0]) === null || _a === void 0 ? void 0 : _a.fromDate) || 'N/A');
+                      toDateCell.value = "To Date: ".concat(((_b = json[0]) === null || _b === void 0 ? void 0 : _b.toDate) || 'N/A'); // Format the "From Date" and "To Date" cells
+
+                      fromDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      toDateCell.font = {
+                        bold: true,
+                        color: {
+                          argb: 'FF0000'
+                        }
+                      }; // Bold and red color
+
+                      fromDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      };
+                      toDateCell.alignment = {
+                        vertical: 'middle',
+                        horizontal: 'left'
+                      }; // Leave the necessary space before adding the data
+
+                      worksheet.addRow([]);
+                      worksheet.addRow([]); // Predefined Column Titles
+
+                      headers = ['Image', 'Full Name', 'Address', 'Email', 'Mobile', 'Registration #', 'Password', 'Created On'];
+                      headerRow = worksheet.addRow(headers); // Bold the header row
+
+                      headerRow.eachCell(function (cell) {
+                        cell.font = {
+                          bold: true
+                        };
+                      }); // Add data rows, starting after the header row
+
+                      json.forEach(function (order) {
+                        debugger;
+                        worksheet.addRow([order.image, order.fullName, order.address, order.email, order.mobile, order.registrationNo, order.password, order.createdOn]);
+                      }); // Adjust column widths
+
+                      worksheet.columns = headers.map(function (header) {
+                        return {
+                          width: 25
+                        };
+                      }); // Add borders to each cell in the table
+
+                      worksheet.eachRow(function (row, rowNumber) {
+                        if (rowNumber >= 2) {
+                          // Assuming row 3 is headers and data starts from row 4
+                          row.eachCell({
+                            includeEmpty: true
+                          }, function (cell) {
+                            cell.border = {
+                              top: {
+                                style: 'thin'
+                              },
+                              left: {
+                                style: 'thin'
+                              },
+                              bottom: {
+                                style: 'thin'
+                              },
+                              right: {
+                                style: 'thin'
+                              }
+                            };
+                          });
+                        }
+                      }); // Add the footer image to the worksheet
+
+                      footerImage = workbook.addImage({
+                        base64: footerBase64,
+                        extension: 'png'
+                      }); // Determine the row for the footer image (e.g., 2 rows below the last data row)
+
+                      footerRow = worksheet.lastRow.number + 5;
+                      worksheet.mergeCells("A".concat(footerRow, ":D").concat(footerRow + 5)); // Adjust merging range as needed
+
+                      worksheet.addImage(footerImage, {
+                        tl: {
+                          col: 0,
+                          row: footerRow + 0
+                        },
+                        ext: {
+                          width: 600,
+                          height: 75
+                        }
+                      }); // Generate Excel file and trigger download
+
+                      _context7.next = 41;
+                      return workbook.xlsx.writeBuffer();
+
+                    case 41:
+                      buffer = _context7.sent;
+                      this.saveAsExcelFile(buffer, excelFileName);
+                      _context7.next = 48;
+                      break;
+
+                    case 45:
+                      _context7.prev = 45;
+                      _context7.t0 = _context7["catch"](0);
+                      console.error('Error exporting Excel file:', _context7.t0);
+
+                    case 48:
+                    case "end":
+                      return _context7.stop();
+                  }
+                }
+              }, _callee7, this, [[0, 45]]);
+            }));
+          }
+        }, {
+          key: "getBase64ImageFromAssets",
+          value: function getBase64ImageFromAssets(url) {
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+              return regeneratorRuntime.wrap(function _callee8$(_context8) {
+                while (1) {
+                  switch (_context8.prev = _context8.next) {
+                    case 0:
+                      return _context8.abrupt("return", new Promise(function (resolve, reject) {
+                        var img = new Image();
+                        img.src = url;
+
+                        img.onload = function () {
+                          var canvas = document.createElement('canvas');
+                          canvas.width = img.width;
+                          canvas.height = img.height;
+                          var ctx = canvas.getContext('2d');
+                          ctx === null || ctx === void 0 ? void 0 : ctx.drawImage(img, 0, 0);
+                          var base64data = canvas.toDataURL('image/png');
+                          resolve(base64data);
+                        };
+
+                        img.onerror = function (err) {
+                          reject("Failed to load image: ".concat(err));
+                        };
+                      }));
+
+                    case 1:
+                    case "end":
+                      return _context8.stop();
+                  }
+                }
+              }, _callee8);
+            }));
           }
         }, {
           key: "saveAsExcelFile",
           value: function saveAsExcelFile(buffer, fileName) {
-            var data = new Blob([buffer], {
-              type: EXCEL_TYPE
+            var blob = new Blob([buffer], {
+              type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8'
             });
-            file_saver__WEBPACK_IMPORTED_MODULE_1__["saveAs"](data, fileName + '_export_' + new Date().getTime() + EXCEL_EXTENSION);
+            file_saver__WEBPACK_IMPORTED_MODULE_1__["saveAs"](blob, fileName + '_export_' + new Date().getTime() + '.xlsx');
           }
         }]);
 
@@ -1976,10 +3206,12 @@
       }();
 
       ExcelService.ctorParameters = function () {
-        return [];
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
+        }];
       };
 
-      ExcelService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(), __metadata("design:paramtypes", [])], ExcelService);
+      ExcelService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])], ExcelService);
       /***/
     },
 
@@ -3021,18 +4253,18 @@
         _createClass(SignalrService, [{
           key: "startConnection",
           value: function startConnection() {
-            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
               var _this3 = this;
 
               var domain;
-              return regeneratorRuntime.wrap(function _callee$(_context) {
+              return regeneratorRuntime.wrap(function _callee9$(_context9) {
                 while (1) {
-                  switch (_context.prev = _context.next) {
+                  switch (_context9.prev = _context9.next) {
                     case 0:
                       //var domain = "http://localhost:59660";
                       domain = "http://admin.mamjihospital.online";
                       this.hubConnection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__["HubConnectionBuilder"]().withUrl("".concat(domain, "/Notify")).build();
-                      _context.next = 4;
+                      _context9.next = 4;
                       return this.hubConnection.start();
 
                     case 4:
@@ -3060,10 +4292,10 @@
 
                     case 8:
                     case "end":
-                      return _context.stop();
+                      return _context9.stop();
                   }
                 }
-              }, _callee, this);
+              }, _callee9, this);
             }));
           }
         }]);
@@ -12193,6 +13425,7 @@
             }), this._loading$.next(true);
             return this.http.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (res) {
               _this33.salesdetailReport = res;
+              debugger;
 
               _this33._data$.next(_this33.salesdetailReport);
 
@@ -14537,23 +15770,23 @@
         _createClass(DashboardComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+            return __awaiter(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
+              return regeneratorRuntime.wrap(function _callee10$(_context10) {
                 while (1) {
-                  switch (_context2.prev = _context2.next) {
+                  switch (_context10.prev = _context10.next) {
                     case 0:
                       this.GetDashboard();
                       this.GetChart();
                       this.GetLineChart();
-                      _context2.next = 5;
+                      _context10.next = 5;
                       return this.singlarService.startConnection();
 
                     case 5:
                     case "end":
-                      return _context2.stop();
+                      return _context10.stop();
                   }
                 }
-              }, _callee2, this);
+              }, _callee10, this);
             }));
           }
         }, {
@@ -22234,11 +23467,30 @@
           value: function parseDate(obj) {
             return obj.year + "-" + obj.month + "-" + obj.day;
             ;
-          }
+          } //exportAsXLSX(): void {
+          //  this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+          //}
+
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+            var _this121 = this;
+
+            var fromDate = this.parseDate(this._datepicker.fromDate);
+            var toDate = this.parseDate(this._datepicker.toDate);
+            this.orderDetails = this.orderDetails.map(function (order) {
+              return Object.assign(Object.assign({}, order), {
+                image: _this121.showImagePath(order),
+                fromDate: fromDate,
+                toDate: toDate
+              });
+            });
+            this.excelService.exportCustomerReport(this.orderDetails, 'Report_Export');
+          }
+        }, {
+          key: "showImagePath",
+          value: function showImagePath(order) {
+            return 'http://admin.mamjihospital.online/' + order.image;
           }
         }, {
           key: "Filter",
@@ -22420,16 +23672,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this121 = this;
+            var _this122 = this;
 
             this.service.DashboardRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
                 debugger; //this.orderDetails = res;
 
-                _this121.orderDetails = res;
-              } else _this121.ts.showError("Error", "Something went wrong");
+                _this122.orderDetails = res;
+              } else _this122.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this121.ts.showError("Error", "Failed to delete record.");
+              _this122.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -22450,11 +23702,30 @@
           value: function parseDate(obj) {
             return obj.year + "-" + obj.month + "-" + obj.day;
             ;
-          }
+          } //exportAsXLSX(): void {
+          //  this.excelService.exportDashboardReport(this.orderDetails, 'Report_Export');
+          //}
+
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+            var _this123 = this;
+
+            var fromDate = this.parseDate(this._datepicker.fromDate);
+            var toDate = this.parseDate(this._datepicker.toDate);
+            this.orderDetails = this.orderDetails.map(function (order) {
+              return Object.assign(Object.assign({}, order), {
+                image: _this123.showImagePath(order),
+                fromDate: fromDate,
+                toDate: toDate
+              });
+            });
+            this.excelService.exportDashboardReport(this.orderDetails, 'Report_Export');
+          }
+        }, {
+          key: "showImagePath",
+          value: function showImagePath(order) {
+            return 'http://admin.mamjihospital.online/' + order.image;
           }
         }, {
           key: "Filter",
@@ -22636,16 +23907,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this122 = this;
+            var _this124 = this;
 
             this.service.medicineorderlistRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
                 debugger; //this.orderDetails = res;
 
-                _this122.orderDetails = res;
-              } else _this122.ts.showError("Error", "Something went wrong");
+                _this124.orderDetails = res;
+              } else _this124.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this122.ts.showError("Error", "Failed to delete record.");
+              _this124.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -22666,11 +23937,30 @@
           value: function parseDate(obj) {
             return obj.year + "-" + obj.month + "-" + obj.day;
             ;
-          }
+          } //exportAsXLSX(): void {
+          //  this.excelService.exportMedicineReport(this.orderDetails, 'Report_Export');
+          //}
+
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+            var _this125 = this;
+
+            var fromDate = this.parseDate(this._datepicker.fromDate);
+            var toDate = this.parseDate(this._datepicker.toDate);
+            this.orderDetails = this.orderDetails.map(function (order) {
+              return Object.assign(Object.assign({}, order), {
+                image: _this125.showImagePath(order),
+                fromDate: fromDate,
+                toDate: toDate
+              });
+            });
+            this.excelService.exportMedicineReport(this.orderDetails, 'Report_Export');
+          }
+        }, {
+          key: "showImagePath",
+          value: function showImagePath(order) {
+            return 'http://admin.mamjihospital.online/' + order.image;
           }
         }, {
           key: "Filter",
@@ -22852,16 +24142,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this123 = this;
+            var _this126 = this;
 
             this.service.medicineDetailRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
                 debugger; //this.orderDetails = res;
 
-                _this123.orderDetails = res;
-              } else _this123.ts.showError("Error", "Something went wrong");
+                _this126.orderDetails = res;
+              } else _this126.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this123.ts.showError("Error", "Failed to delete record.");
+              _this126.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -22882,11 +24172,30 @@
           value: function parseDate(obj) {
             return obj.year + "-" + obj.month + "-" + obj.day;
             ;
-          }
+          } //exportAsXLSX(): void {
+          //  this.excelService.exportMedical(this.orderDetails, 'Report_Export');
+          //}
+
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+            var _this127 = this;
+
+            var fromDate = this.parseDate(this._datepicker.fromDate);
+            var toDate = this.parseDate(this._datepicker.toDate);
+            this.orderDetails = this.orderDetails.map(function (order) {
+              return Object.assign(Object.assign({}, order), {
+                image: _this127.showImagePath(order),
+                fromDate: fromDate,
+                toDate: toDate
+              });
+            });
+            this.excelService.exportMedical(this.orderDetails, 'Report_Export');
+          }
+        }, {
+          key: "showImagePath",
+          value: function showImagePath(order) {
+            return 'http://admin.mamjihospital.online/' + order.image;
           }
         }, {
           key: "Filter",
@@ -23068,16 +24377,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this124 = this;
+            var _this128 = this;
 
             this.service.PrescriptionRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
                 debugger; //this.orderDetails = res;
 
-                _this124.orderDetails = res;
-              } else _this124.ts.showError("Error", "Something went wrong");
+                _this128.orderDetails = res;
+              } else _this128.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this124.ts.showError("Error", "Failed to delete record.");
+              _this128.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -23098,11 +24407,30 @@
           value: function parseDate(obj) {
             return obj.year + "-" + obj.month + "-" + obj.day;
             ;
-          }
+          } //exportAsXLSX(): void {
+          //  this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+          //}
+
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+            var _this129 = this;
+
+            var fromDate = this.parseDate(this._datepicker.fromDate);
+            var toDate = this.parseDate(this._datepicker.toDate);
+            this.orderDetails = this.orderDetails.map(function (order) {
+              return Object.assign(Object.assign({}, order), {
+                image: _this129.showImagePath(order),
+                fromDate: fromDate,
+                toDate: toDate
+              });
+            });
+            this.excelService.exportPrescripiton(this.orderDetails, 'Report_Export');
+          }
+        }, {
+          key: "showImagePath",
+          value: function showImagePath(order) {
+            return 'http://admin.mamjihospital.online/' + order.image;
           }
         }, {
           key: "Filter",
@@ -23283,14 +24611,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this125 = this;
+            var _this130 = this;
 
             this.service.SalesCategorywiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this125.salesCategoryWise = res;
-              } else _this125.ts.showError("Error", "Something went wrong");
+                _this130.salesCategoryWise = res;
+              } else _this130.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this125.ts.showError("Error", "Failed to delete record.");
+              _this130.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -23302,27 +24630,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this126 = this;
+            var _this131 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this126.Locations = res;
-              _this126.locationID = _this126.selectedLocation;
+              _this131.Locations = res;
+              _this131.locationID = _this131.selectedLocation;
 
-              _this126.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
+              _this131.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this126.Locations = res;
+                _this131.Locations = res;
                 var arr = [];
 
-                _this126.Locations.forEach(function (element) {
+                _this131.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this126.selectedLocations = arr;
+                _this131.selectedLocations = arr;
 
-                _this126.getData(_this126.selectedLocations.toString());
+                _this131.getData(_this131.selectedLocations.toString());
               });
             });
           }
@@ -23514,14 +24842,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this127 = this;
+            var _this132 = this;
 
             this.service.SalesCustomerwiseRpt(this.selectedBrand, locaionID, 0, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this127.orders = res;
-              } else _this127.ts.showError("Error", "Something went wrong");
+                _this132.orders = res;
+              } else _this132.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this127.ts.showError("Error", "Failed to delete record.");
+              _this132.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -23533,27 +24861,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this128 = this;
+            var _this133 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this128.Locations = res;
-              _this128.locationID = _this128.selectedLocation;
+              _this133.Locations = res;
+              _this133.locationID = _this133.selectedLocation;
 
-              _this128.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this133.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this128.Locations = res;
+                _this133.Locations = res;
                 var arr = [];
 
-                _this128.Locations.forEach(function (element) {
+                _this133.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this128.selectedLocations = arr;
+                _this133.selectedLocations = arr;
 
-                _this128.getData(_this128.selectedLocations.toString());
+                _this133.getData(_this133.selectedLocations.toString());
               });
             });
           }
@@ -23746,21 +25074,21 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this129 = this;
+            var _this134 = this;
 
             debugger;
             this.service.SalesDetailRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
                 debugger; //this.orderDetails = res;
 
-                _this129.orderDetails = res.map(function (item) {
+                _this134.orderDetails = res.map(function (item) {
                   var rawDate = new Date(item.createdOn);
-                  item.createdOn = _this129.datePipe.transform(rawDate, 'dd-MM-yyyy hh:mm a');
+                  item.createdOn = _this134.datePipe.transform(rawDate, 'dd-MM-yyyy hh:mm a');
                   return item;
                 });
-              } else _this129.ts.showError("Error", "Something went wrong");
+              } else _this134.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this129.ts.showError("Error", "Failed to delete record.");
+              _this134.ts.showError("Error", "Failed to load record.");
             });
           }
         }, {
@@ -23781,11 +25109,30 @@
           value: function parseDate(obj) {
             return obj.year + "-" + obj.month + "-" + obj.day;
             ;
-          }
+          } //exportAsXLSX(): void {
+          //  this.excelService.exportAppointment(this.orderDetails, 'Report_Export');
+          //}
+
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            this.excelService.exportAsExcelFile(this.orderDetails, 'Report_Export');
+            var _this135 = this;
+
+            var fromDate = this.parseDate(this._datepicker.fromDate);
+            var toDate = this.parseDate(this._datepicker.toDate);
+            this.orderDetails = this.orderDetails.map(function (order) {
+              return Object.assign(Object.assign({}, order), {
+                image: _this135.showImagePath(order),
+                fromDate: fromDate,
+                toDate: toDate
+              });
+            });
+            this.excelService.exportAppointment(this.orderDetails, 'Report_Export');
+          }
+        }, {
+          key: "showImagePath",
+          value: function showImagePath(order) {
+            return 'http://admin.mamjihospital.online/' + order.image;
           }
         }, {
           key: "Filter",
@@ -23966,14 +25313,14 @@
         }, {
           key: "getData",
           value: function getData(locaionID) {
-            var _this130 = this;
+            var _this136 = this;
 
             this.service.SalesItemwiseRpt(this.selectedBrand, locaionID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this130.salesItemWise = res;
-              } else _this130.ts.showError("Error", "Something went wrong");
+                _this136.salesItemWise = res;
+              } else _this136.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this130.ts.showError("Error", "Failed to delete record.");
+              _this136.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -24004,27 +25351,27 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this131 = this;
+            var _this137 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this131.Locations = res;
-              _this131.locationID = _this131.selectedLocation;
+              _this137.Locations = res;
+              _this137.locationID = _this137.selectedLocation;
 
-              _this131.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
+              _this137.loadLocationsMulti().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (x) {
                 return x.filter(function (y) {
                   return !y.disabled;
                 });
               })).subscribe(function (res) {
-                _this131.Locations = res;
+                _this137.Locations = res;
                 var arr = [];
 
-                _this131.Locations.forEach(function (element) {
+                _this137.Locations.forEach(function (element) {
                   arr.push(element.locationID);
                 });
 
-                _this131.selectedLocations = arr;
+                _this137.selectedLocations = arr;
 
-                _this131.getData(_this131.selectedLocations.toString());
+                _this137.getData(_this137.selectedLocations.toString());
               });
             });
           }
@@ -24188,14 +25535,14 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this132 = this;
+            var _this138 = this;
 
             this.service.SalesDetailRpt(this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this132.data$ = res;
-              } else _this132.ts.showError("Error", "Something went wrong");
+                _this138.data$ = res;
+              } else _this138.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this132.ts.showError("Error", "Failed to delete record.");
+              _this138.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -24207,11 +25554,11 @@
         }, {
           key: "loadLocations",
           value: function loadLocations() {
-            var _this133 = this;
+            var _this139 = this;
 
             this.service.loadLocations(this.selectedBrand).subscribe(function (res) {
-              _this133.Locations = res;
-              _this133.locationID = _this133.selectedLocation;
+              _this139.Locations = res;
+              _this139.locationID = _this139.selectedLocation;
             });
           }
         }, {
@@ -24378,16 +25725,16 @@
         }, {
           key: "getData",
           value: function getData() {
-            var _this134 = this;
+            var _this140 = this;
 
             this.service.SalesSummaryRpt(this.selectedBrand, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
               if (res != null) {
-                _this134._model = res[0];
+                _this140._model = res[0];
 
-                _this134["export"].push(_this134._model);
-              } else _this134.ts.showError("Error", "Something went wrong");
+                _this140["export"].push(_this140._model);
+              } else _this140.ts.showError("Error", "Something went wrong");
             }, function (error) {
-              _this134.ts.showError("Error", "Failed to delete record.");
+              _this140.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -24562,14 +25909,14 @@
         }, {
           key: "setSelectedSetting",
           value: function setSelectedSetting() {
-            var _this135 = this;
+            var _this141 = this;
 
             this.loadingSetting = true;
             this.settingService.getById(1).subscribe(function (res) {
               //Set Forms
-              _this135.editForm(res);
+              _this141.editForm(res);
 
-              _this135.loadingSetting = false;
+              _this141.loadingSetting = false;
             }); // this.route.paramMap.subscribe(param => {
             //   const sid = +param.get('id');
             //   if (sid) {
@@ -24586,7 +25933,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this136 = this;
+            var _this142 = this;
 
             debugger;
             this.settingForm.markAllAsTouched();
@@ -24604,33 +25951,33 @@
               console.log(JSON.stringify(this.settingForm.value));
               this.settingService.insert(this.settingForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this136.ts.showSuccess("Success", "Record added successfully.");
+                  _this142.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this136.router.navigate(['/admin/settings/appsettings']);
+                  _this142.router.navigate(['/admin/settings/appsettings']);
                 }
 
-                _this136.loading = false;
+                _this142.loading = false;
               }, function (error) {
-                _this136.ts.showError("Error", "Failed to insert record.");
+                _this142.ts.showError("Error", "Failed to insert record.");
 
-                _this136.loading = false;
+                _this142.loading = false;
               });
             } else {
               //Update 
               this.settingService.update(this.settingForm.value).subscribe(function (data) {
-                _this136.loading = false;
+                _this142.loading = false;
 
                 if (data != 0) {
-                  _this136.ts.showSuccess("Success", "Record updated successfully.");
+                  _this142.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this136.setSelectedSetting();
+                  _this142.setSelectedSetting();
 
-                  _this136.router.navigate(['/admin/settings/appsettings/add']);
+                  _this142.router.navigate(['/admin/settings/appsettings/add']);
                 }
               }, function (error) {
-                _this136.ts.showError("Error", "Failed to update record.");
+                _this142.ts.showError("Error", "Failed to update record.");
 
-                _this136.loading = false;
+                _this142.loading = false;
               });
             }
           }
@@ -24801,16 +26148,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this137 = this;
+            var _this143 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this137.ts.showSuccess("Success", "Record deleted successfully.");
+                _this143.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this137.getData();
-              } else _this137.ts.showError("Error", "Failed to delete record.");
+                _this143.getData();
+              } else _this143.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this137.ts.showError("Error", "Failed to delete record.");
+              _this143.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -24997,21 +26344,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this138 = this;
+            var _this144 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this138.loadingCustomer = true;
+                _this144.loadingCustomer = true;
 
-                _this138.f.bannerID.setValue(sid);
+                _this144.f.bannerID.setValue(sid);
 
-                _this138.bannerService.getById(sid).subscribe(function (res) {
+                _this144.bannerService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this138.editForm(res);
+                  _this144.editForm(res);
 
-                  _this138.loadingCustomer = false;
+                  _this144.loadingCustomer = false;
                 });
               }
             });
@@ -25019,7 +26366,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this139 = this;
+            var _this145 = this;
 
             debugger;
             this.bannerForm.markAllAsTouched();
@@ -25038,31 +26385,31 @@
               console.log(JSON.stringify(this.bannerForm.value));
               this.bannerService.insert(this.bannerForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this139.ts.showSuccess("Success", "Record added successfully.");
+                  _this145.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this139.router.navigate(['/admin/settings/banner']);
+                  _this145.router.navigate(['/admin/settings/banner']);
                 }
 
-                _this139.loading = false;
+                _this145.loading = false;
               }, function (error) {
-                _this139.ts.showError("Error", "Failed to insert record.");
+                _this145.ts.showError("Error", "Failed to insert record.");
 
-                _this139.loading = false;
+                _this145.loading = false;
               });
             } else {
               //Update banner
               this.bannerService.update(this.bannerForm.value).subscribe(function (data) {
-                _this139.loading = false;
+                _this145.loading = false;
 
                 if (data != 0) {
-                  _this139.ts.showSuccess("Success", "Record updated successfully.");
+                  _this145.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this139.router.navigate(['/admin/settings/banner']);
+                  _this145.router.navigate(['/admin/settings/banner']);
                 }
               }, function (error) {
-                _this139.ts.showError("Error", "Failed to update record.");
+                _this145.ts.showError("Error", "Failed to update record.");
 
-                _this139.loading = false;
+                _this145.loading = false;
               });
             }
           }
@@ -25242,33 +26589,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this140 = this;
+            var _this146 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this140.ts.showSuccess("Success", "Record deleted successfully.");
+                _this146.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this140.getData();
-              } else _this140.ts.showError("Error", "Failed to delete record.");
+                _this146.getData();
+              } else _this146.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this140.ts.showError("Error", "Failed to delete record.");
+              _this146.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this141 = this;
+            var _this147 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this141.closeResult = "Closed with: ".concat(result);
+              _this147.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this141.Delete(obj);
+                _this147.Delete(obj);
               }
             }, function (reason) {
-              _this141.closeResult = "Dismissed ".concat(_this141.getDismissReason(reason));
+              _this147.closeResult = "Dismissed ".concat(_this147.getDismissReason(reason));
             });
           }
         }, {
@@ -25465,22 +26812,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this142 = this;
+            var _this148 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this142.loadingCustomer = true;
+                _this148.loadingCustomer = true;
 
-                _this142.f.corporateClientID.setValue(sid);
+                _this148.f.corporateClientID.setValue(sid);
 
-                _this142.addcorporateclientService.getById(sid).subscribe(function (res) {
+                _this148.addcorporateclientService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this142.editForm(res);
+                  _this148.editForm(res);
 
-                  _this142.loadingCustomer = false;
+                  _this148.loadingCustomer = false;
                 });
               }
             });
@@ -25488,7 +26835,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this143 = this;
+            var _this149 = this;
 
             debugger;
             this.corporateclientForm.markAllAsTouched();
@@ -25507,31 +26854,31 @@
               console.log(JSON.stringify(this.corporateclientForm.value));
               this.addcorporateclientService.insert(this.corporateclientForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this143.ts.showSuccess("Success", "Record added successfully.");
+                  _this149.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this143.router.navigate(['/admin/settings/corporateclient']);
+                  _this149.router.navigate(['/admin/settings/corporateclient']);
                 }
 
-                _this143.loading = false;
+                _this149.loading = false;
               }, function (error) {
-                _this143.ts.showError("Error", "Failed to insert record.");
+                _this149.ts.showError("Error", "Failed to insert record.");
 
-                _this143.loading = false;
+                _this149.loading = false;
               });
             } else {
               //Update banner
               this.addcorporateclientService.update(this.corporateclientForm.value).subscribe(function (data) {
-                _this143.loading = false;
+                _this149.loading = false;
 
                 if (data != 0) {
-                  _this143.ts.showSuccess("Success", "Record updated successfully.");
+                  _this149.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this143.router.navigate(['/admin/settings/corporateclient']);
+                  _this149.router.navigate(['/admin/settings/corporateclient']);
                 }
               }, function (error) {
-                _this143.ts.showError("Error", "Failed to update record.");
+                _this149.ts.showError("Error", "Failed to update record.");
 
-                _this143.loading = false;
+                _this149.loading = false;
               });
             }
           }
@@ -25711,33 +27058,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this144 = this;
+            var _this150 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this144.ts.showSuccess("Success", "Record deleted successfully.");
+                _this150.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this144.getData();
-              } else _this144.ts.showError("Error", "Failed to delete record.");
+                _this150.getData();
+              } else _this150.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this144.ts.showError("Error", "Failed to delete record.");
+              _this150.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this145 = this;
+            var _this151 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this145.closeResult = "Closed with: ".concat(result);
+              _this151.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this145.Delete(obj);
+                _this151.Delete(obj);
               }
             }, function (reason) {
-              _this145.closeResult = "Dismissed ".concat(_this145.getDismissReason(reason));
+              _this151.closeResult = "Dismissed ".concat(_this151.getDismissReason(reason));
             });
           }
         }, {
@@ -25915,21 +27262,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this146 = this;
+            var _this152 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this146.loadingCoupon = true;
+                _this152.loadingCoupon = true;
 
-                _this146.f.couponID.setValue(sid);
+                _this152.f.couponID.setValue(sid);
 
-                _this146.couponService.getById(sid).subscribe(function (res) {
+                _this152.couponService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this146.editForm(res);
+                  _this152.editForm(res);
 
-                  _this146.loadingCoupon = false;
+                  _this152.loadingCoupon = false;
                 });
               }
             });
@@ -25937,7 +27284,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this147 = this;
+            var _this153 = this;
 
             debugger;
             this.couponForm.markAllAsTouched();
@@ -25955,31 +27302,31 @@
               console.log(JSON.stringify(this.couponForm.value));
               this.couponService.insert(this.couponForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this147.ts.showSuccess("Success", "Record added successfully.");
+                  _this153.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this147.router.navigate(['/admin/settings/coupon']);
+                  _this153.router.navigate(['/admin/settings/coupon']);
                 }
 
-                _this147.loading = false;
+                _this153.loading = false;
               }, function (error) {
-                _this147.ts.showError("Error", "Failed to insert record.");
+                _this153.ts.showError("Error", "Failed to insert record.");
 
-                _this147.loading = false;
+                _this153.loading = false;
               });
             } else {
               //Update banner
               this.couponService.update(this.couponForm.value).subscribe(function (data) {
-                _this147.loading = false;
+                _this153.loading = false;
 
                 if (data != 0) {
-                  _this147.ts.showSuccess("Success", "Record updated successfully.");
+                  _this153.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this147.router.navigate(['/admin/settings/coupon']);
+                  _this153.router.navigate(['/admin/settings/coupon']);
                 }
               }, function (error) {
-                _this147.ts.showError("Error", "Failed to update record.");
+                _this153.ts.showError("Error", "Failed to update record.");
 
-                _this147.loading = false;
+                _this153.loading = false;
               });
             }
           }
@@ -26183,17 +27530,17 @@
         }, {
           key: "Delete",
           value: function Delete(item) {
-            var _this148 = this;
+            var _this154 = this;
 
             debugger;
             this.service["delete"](item).subscribe(function (res) {
               if (res != 0) {
-                _this148.ts.showSuccess("Success", "Record deleted successfully.");
+                _this154.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this148.getData();
-              } else _this148.ts.showError("Error", "Failed to delete record.");
+                _this154.getData();
+              } else _this154.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this148.ts.showError("Error", "Failed to delete record.");
+              _this154.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -26391,21 +27738,21 @@
         }, {
           key: "setSelecteditem",
           value: function setSelecteditem() {
-            var _this149 = this;
+            var _this155 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this149.loading = true;
+                _this155.loading = true;
 
-                _this149.f.deliveryAreaID.setValue(sid);
+                _this155.f.deliveryAreaID.setValue(sid);
 
-                _this149.deliveryService.getById(sid).subscribe(function (res) {
+                _this155.deliveryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this149.editForm(res);
+                  _this155.editForm(res);
 
-                  _this149.loading = false; //BrandsFill
+                  _this155.loading = false; //BrandsFill
                   // this.deliveryService.getBrands(this.ls.getSelectedBrand().brandID)
                   // .subscribe((res: any) => {            
                   //   var stringToConvert = res.items;
@@ -26418,7 +27765,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this150 = this;
+            var _this156 = this;
 
             debugger;
             this.deliveryForm.markAllAsTouched();
@@ -26435,41 +27782,41 @@
               //Insert delivery
               this.deliveryService.insert(this.deliveryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this150.ts.showSuccess("Success", "Record added successfully.");
+                  _this156.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this150.router.navigate(['/admin/delivery']);
+                  _this156.router.navigate(['/admin/delivery']);
                 }
 
-                _this150.loading = false;
+                _this156.loading = false;
               }, function (error) {
-                _this150.ts.showError("Error", "Failed to insert record.");
+                _this156.ts.showError("Error", "Failed to insert record.");
 
-                _this150.loading = false;
+                _this156.loading = false;
               });
             } else {
               //Update delivery
               this.deliveryService.update(this.deliveryForm.value).subscribe(function (data) {
-                _this150.loading = false;
+                _this156.loading = false;
 
                 if (data != 0) {
-                  _this150.ts.showSuccess("Success", "Record updated successfully.");
+                  _this156.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this150.router.navigate(['/admin/delivery']);
+                  _this156.router.navigate(['/admin/delivery']);
                 }
               }, function (error) {
-                _this150.ts.showError("Error", "Failed to update record.");
+                _this156.ts.showError("Error", "Failed to update record.");
 
-                _this150.loading = false;
+                _this156.loading = false;
               });
             }
           }
         }, {
           key: "loadBrands",
           value: function loadBrands() {
-            var _this151 = this;
+            var _this157 = this;
 
             this.deliveryService.loadBrands(this.f.brandID).subscribe(function (res) {
-              _this151.BrandsList = res; // this.setSelecteditem();
+              _this157.BrandsList = res; // this.setSelecteditem();
             });
           }
         }, {
@@ -26668,33 +28015,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this152 = this;
+            var _this158 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this152.ts.showSuccess("Success", "Record deleted successfully.");
+                _this158.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this152.getData();
-              } else _this152.ts.showError("Error", "Failed to delete record.");
+                _this158.getData();
+              } else _this158.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this152.ts.showError("Error", "Failed to delete record.");
+              _this158.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this153 = this;
+            var _this159 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this153.closeResult = "Closed with: ".concat(result);
+              _this159.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this153.Delete(obj);
+                _this159.Delete(obj);
               }
             }, function (reason) {
-              _this153.closeResult = "Dismissed ".concat(_this153.getDismissReason(reason));
+              _this159.closeResult = "Dismissed ".concat(_this159.getDismissReason(reason));
             });
           }
         }, {
@@ -26882,31 +28229,31 @@
         }, {
           key: "loadActiveType",
           value: function loadActiveType() {
-            var _this154 = this;
+            var _this160 = this;
 
             this.services.loadActiveTyp().subscribe(function (res) {
-              _this154.NursingTypeActive = res;
+              _this160.NursingTypeActive = res;
             });
           }
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this155 = this;
+            var _this161 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this155.loadingService = true;
+                _this161.loadingService = true;
 
-                _this155.f.medicalServiceID.setValue(sid);
+                _this161.f.medicalServiceID.setValue(sid);
 
-                _this155.services.getById(sid).subscribe(function (res) {
+                _this161.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this155.editForm(res);
+                  _this161.editForm(res);
 
-                  _this155.loadingService = false;
+                  _this161.loadingService = false;
                 });
               }
             });
@@ -26914,7 +28261,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this156 = this;
+            var _this162 = this;
 
             debugger;
             this.servicesForm.markAllAsTouched();
@@ -26933,31 +28280,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this156.ts.showSuccess("Success", "Record added successfully.");
+                  _this162.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this156.router.navigate(['/admin/settings/medicalservices']);
+                  _this162.router.navigate(['/admin/settings/medicalservices']);
                 }
 
-                _this156.loading = false;
+                _this162.loading = false;
               }, function (error) {
-                _this156.ts.showError("Error", "Failed to insert record.");
+                _this162.ts.showError("Error", "Failed to insert record.");
 
-                _this156.loading = false;
+                _this162.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this156.loading = false;
+                _this162.loading = false;
 
                 if (data != 0) {
-                  _this156.ts.showSuccess("Success", "Record updated successfully.");
+                  _this162.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this156.router.navigate(['/admin/settings/medicalservices']);
+                  _this162.router.navigate(['/admin/settings/medicalservices']);
                 }
               }, function (error) {
-                _this156.ts.showError("Error", "Failed to update record.");
+                _this162.ts.showError("Error", "Failed to update record.");
 
-                _this156.loading = false;
+                _this162.loading = false;
               });
             }
           }
@@ -27127,16 +28474,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this157 = this;
+            var _this163 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this157.ts.showSuccess("Success", "Record deleted successfully.");
+                _this163.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this157.getData();
-              } else _this157.ts.showError("Error", "Failed to delete record.");
+                _this163.getData();
+              } else _this163.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this157.ts.showError("Error", "Failed to delete record.");
+              _this163.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -27295,22 +28642,22 @@
         }, {
           key: "setSelectedType",
           value: function setSelectedType() {
-            var _this158 = this;
+            var _this164 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this158.loadingService = true;
+                _this164.loadingService = true;
 
-                _this158.f.nursingTypeID.setValue(sid);
+                _this164.f.nursingTypeID.setValue(sid);
 
-                _this158.services.getById(sid).subscribe(function (res) {
+                _this164.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this158.editForm(res);
+                  _this164.editForm(res);
 
-                  _this158.loadingService = false;
+                  _this164.loadingService = false;
                 });
               }
             });
@@ -27318,7 +28665,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this159 = this;
+            var _this165 = this;
 
             this.servicesForm.markAllAsTouched();
             this.submitted = true;
@@ -27335,31 +28682,31 @@
               console.log(JSON.stringify(this.servicesForm.value));
               this.services.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this159.ts.showSuccess("Success", "Record added successfully.");
+                  _this165.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this159.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this165.router.navigate(['/admin/settings/medicalservicetype']);
                 }
 
-                _this159.loading = false;
+                _this165.loading = false;
               }, function (error) {
-                _this159.ts.showError("Error", "Failed to insert record.");
+                _this165.ts.showError("Error", "Failed to insert record.");
 
-                _this159.loading = false;
+                _this165.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.servicesForm.value).subscribe(function (data) {
-                _this159.loading = false;
+                _this165.loading = false;
 
                 if (data != 0) {
-                  _this159.ts.showSuccess("Success", "Record updated successfully.");
+                  _this165.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this159.router.navigate(['/admin/settings/medicalservicetype']);
+                  _this165.router.navigate(['/admin/settings/medicalservicetype']);
                 }
               }, function (error) {
-                _this159.ts.showError("Error", "Failed to update record.");
+                _this165.ts.showError("Error", "Failed to update record.");
 
-                _this159.loading = false;
+                _this165.loading = false;
               });
             }
           }
@@ -27530,16 +28877,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this160 = this;
+            var _this166 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this160.ts.showSuccess("Success", "Record deleted successfully.");
+                _this166.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this160.getData();
-              } else _this160.ts.showError("Error", "Failed to delete record.");
+                _this166.getData();
+              } else _this166.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this160.ts.showError("Error", "Failed to delete record.");
+              _this166.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -27726,21 +29073,21 @@
         }, {
           key: "setSelectedOffers",
           value: function setSelectedOffers() {
-            var _this161 = this;
+            var _this167 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this161.loadingOffers = true;
+                _this167.loadingOffers = true;
 
-                _this161.f.promotionID.setValue(sid);
+                _this167.f.promotionID.setValue(sid);
 
-                _this161.promotion.getById(sid).subscribe(function (res) {
+                _this167.promotion.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this161.editForm(res);
+                  _this167.editForm(res);
 
-                  _this161.loadingOffers = false;
+                  _this167.loadingOffers = false;
                 });
               }
             });
@@ -27748,7 +29095,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this162 = this;
+            var _this168 = this;
 
             this.promotionForm.markAllAsTouched();
             this.submitted = true;
@@ -27766,31 +29113,31 @@
               debugger;
               this.promotion.insert(this.promotionForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this162.ts.showSuccess("Success", "Record added successfully.");
+                  _this168.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this162.router.navigate(['/admin/offers']);
+                  _this168.router.navigate(['/admin/offers']);
                 }
 
-                _this162.loading = false;
+                _this168.loading = false;
               }, function (error) {
-                _this162.ts.showError("Error", "Failed to insert record.");
+                _this168.ts.showError("Error", "Failed to insert record.");
 
-                _this162.loading = false;
+                _this168.loading = false;
               });
             } else {
               //Update offers
               this.promotion.update(this.promotionForm.value).subscribe(function (data) {
-                _this162.loading = false;
+                _this168.loading = false;
 
                 if (data != 0) {
-                  _this162.ts.showSuccess("Success", "Record updated successfully.");
+                  _this168.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this162.router.navigate(['/admin/offers']);
+                  _this168.router.navigate(['/admin/offers']);
                 }
               }, function (error) {
-                _this162.ts.showError("Error", "Failed to update record.");
+                _this168.ts.showError("Error", "Failed to update record.");
 
-                _this162.loading = false;
+                _this168.loading = false;
               });
             }
           }
@@ -27962,16 +29309,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this163 = this;
+            var _this169 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this163.ts.showSuccess("Success", "Record deleted successfully.");
+                _this169.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this163.getData();
-              } else _this163.ts.showError("Error", "Failed to delete record.");
+                _this169.getData();
+              } else _this169.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this163.ts.showError("Error", "Failed to delete record.");
+              _this169.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -28137,22 +29484,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this164 = this;
+            var _this170 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this164.loadingService = true;
+                _this170.loadingService = true;
 
-                _this164.f.specialistID.setValue(sid);
+                _this170.f.specialistID.setValue(sid);
 
-                _this164.services.getById(sid).subscribe(function (res) {
+                _this170.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this164.editForm(res);
+                  _this170.editForm(res);
 
-                  _this164.loadingService = false;
+                  _this170.loadingService = false;
                 });
               }
             });
@@ -28160,7 +29507,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this165 = this;
+            var _this171 = this;
 
             debugger;
             this.specialityForm.markAllAsTouched();
@@ -28179,31 +29526,31 @@
               console.log(JSON.stringify(this.specialityForm.value));
               this.services.insert(this.specialityForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this165.ts.showSuccess("Success", "Record added successfully.");
+                  _this171.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this165.router.navigate(['/admin/settings/speciality']);
+                  _this171.router.navigate(['/admin/settings/speciality']);
                 }
 
-                _this165.loading = false;
+                _this171.loading = false;
               }, function (error) {
-                _this165.ts.showError("Error", "Failed to insert record.");
+                _this171.ts.showError("Error", "Failed to insert record.");
 
-                _this165.loading = false;
+                _this171.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.specialityForm.value).subscribe(function (data) {
-                _this165.loading = false;
+                _this171.loading = false;
 
                 if (data != 0) {
-                  _this165.ts.showSuccess("Success", "Record updated successfully.");
+                  _this171.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this165.router.navigate(['/admin/settings/speciality']);
+                  _this171.router.navigate(['/admin/settings/speciality']);
                 }
               }, function (error) {
-                _this165.ts.showError("Error", "Failed to update record.");
+                _this171.ts.showError("Error", "Failed to update record.");
 
-                _this165.loading = false;
+                _this171.loading = false;
               });
             }
           }
@@ -28380,33 +29727,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this166 = this;
+            var _this172 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this166.ts.showSuccess("Success", "Record deleted successfully.");
+                _this172.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this166.getData();
-              } else _this166.ts.showError("Error", "Failed to delete record.");
+                _this172.getData();
+              } else _this172.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this166.ts.showError("Error", "Failed to delete record.");
+              _this172.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this167 = this;
+            var _this173 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this167.closeResult = "Closed with: ".concat(result);
+              _this173.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this167.Delete(obj);
+                _this173.Delete(obj);
               }
             }, function (reason) {
-              _this167.closeResult = "Dismissed ".concat(_this167.getDismissReason(reason));
+              _this173.closeResult = "Dismissed ".concat(_this173.getDismissReason(reason));
             });
           }
         }, {
@@ -28580,22 +29927,22 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this168 = this;
+            var _this174 = this;
 
             debugger;
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this168.loadingService = true;
+                _this174.loadingService = true;
 
-                _this168.f.timeSlotID.setValue(sid);
+                _this174.f.timeSlotID.setValue(sid);
 
-                _this168.services.getById(sid).subscribe(function (res) {
+                _this174.services.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this168.editForm(res);
+                  _this174.editForm(res);
 
-                  _this168.loadingService = false;
+                  _this174.loadingService = false;
                 });
               }
             });
@@ -28603,7 +29950,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this169 = this;
+            var _this175 = this;
 
             debugger;
             this.timeslotForm.markAllAsTouched();
@@ -28621,31 +29968,31 @@
               console.log(JSON.stringify(this.timeslotForm.value));
               this.services.insert(this.timeslotForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this169.ts.showSuccess("Success", "Record added successfully.");
+                  _this175.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this169.router.navigate(['/admin/settings/timeslot']);
+                  _this175.router.navigate(['/admin/settings/timeslot']);
                 }
 
-                _this169.loading = false;
+                _this175.loading = false;
               }, function (error) {
-                _this169.ts.showError("Error", "Failed to insert record.");
+                _this175.ts.showError("Error", "Failed to insert record.");
 
-                _this169.loading = false;
+                _this175.loading = false;
               });
             } else {
               //Update banner
               this.services.update(this.timeslotForm.value).subscribe(function (data) {
-                _this169.loading = false;
+                _this175.loading = false;
 
                 if (data != 0) {
-                  _this169.ts.showSuccess("Success", "Record updated successfully.");
+                  _this175.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this169.router.navigate(['/admin/settings/timeslot']);
+                  _this175.router.navigate(['/admin/settings/timeslot']);
                 }
               }, function (error) {
-                _this169.ts.showError("Error", "Failed to update record.");
+                _this175.ts.showError("Error", "Failed to update record.");
 
-                _this169.loading = false;
+                _this175.loading = false;
               });
             }
           }
@@ -28822,34 +30169,34 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this170 = this;
+            var _this176 = this;
 
             debugger;
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this170.ts.showSuccess("Success", "Record deleted successfully.");
+                _this176.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this170.getData();
-              } else _this170.ts.showError("Error", "Failed to delete record.");
+                _this176.getData();
+              } else _this176.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this170.ts.showError("Error", "Failed to delete record.");
+              _this176.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this171 = this;
+            var _this177 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this171.closeResult = "Closed with: ".concat(result);
+              _this177.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this171.Delete(obj);
+                _this177.Delete(obj);
               }
             }, function (reason) {
-              _this171.closeResult = "Dismissed ".concat(_this171.getDismissReason(reason));
+              _this177.closeResult = "Dismissed ".concat(_this177.getDismissReason(reason));
             });
           }
         }, {
@@ -29037,21 +30384,21 @@
         }, {
           key: "setSelectedCustomer",
           value: function setSelectedCustomer() {
-            var _this172 = this;
+            var _this178 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this172.loadingCustomer = true;
+                _this178.loadingCustomer = true;
 
-                _this172.f.id.setValue(sid);
+                _this178.f.id.setValue(sid);
 
-                _this172.userService.getById(sid).subscribe(function (res) {
+                _this178.userService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this172.editForm(res);
+                  _this178.editForm(res);
 
-                  _this172.loadingCustomer = false;
+                  _this178.loadingCustomer = false;
                 });
               }
             });
@@ -29059,7 +30406,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this173 = this;
+            var _this179 = this;
 
             debugger;
             this.userForm.markAllAsTouched();
@@ -29077,31 +30424,31 @@
               console.log(JSON.stringify(this.userForm.value));
               this.userService.insert(this.userForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this173.ts.showSuccess("Success", "Record added successfully.");
+                  _this179.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this173.router.navigate(['/admin/user']);
+                  _this179.router.navigate(['/admin/user']);
                 }
 
-                _this173.loading = false;
+                _this179.loading = false;
               }, function (error) {
-                _this173.ts.showError("Error", "Failed to insert record.");
+                _this179.ts.showError("Error", "Failed to insert record.");
 
-                _this173.loading = false;
+                _this179.loading = false;
               });
             } else {
               //Update customer
               this.userService.update(this.userForm.value).subscribe(function (data) {
-                _this173.loading = false;
+                _this179.loading = false;
 
                 if (data != 0) {
-                  _this173.ts.showSuccess("Success", "Record updated successfully.");
+                  _this179.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this173.router.navigate(['/admin/user']);
+                  _this179.router.navigate(['/admin/user']);
                 }
               }, function (error) {
-                _this173.ts.showError("Error", "Failed to update record.");
+                _this179.ts.showError("Error", "Failed to update record.");
 
-                _this173.loading = false;
+                _this179.loading = false;
               });
             }
           }
@@ -29286,13 +30633,13 @@
         }, {
           key: "onSelect",
           value: function onSelect(rolename) {
-            var _this174 = this;
+            var _this180 = this;
 
             debugger;
             this.userService.getPermissionId(rolename).subscribe(function (res) {
               //Set Forms
               if (res != null) {
-                _this174.formName = res[0];
+                _this180.formName = res[0];
               }
 
               debugger;
@@ -29301,22 +30648,22 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this175 = this;
+            var _this181 = this;
 
             debugger; //Update customer
 
             this.userService.permissionupdate(this.formName).subscribe(function (obj) {
-              _this175.loading = false;
+              _this181.loading = false;
 
               if (obj != 0) {
-                _this175.ts.showSuccess("Success", "Record updated successfully.");
+                _this181.ts.showSuccess("Success", "Record updated successfully.");
 
-                _this175.router.navigate(['/admin/permission']);
+                _this181.router.navigate(['/admin/permission']);
               }
             }, function (error) {
-              _this175.ts.showError("Error", "Failed to update record.");
+              _this181.ts.showError("Error", "Failed to update record.");
 
-              _this175.loading = false;
+              _this181.loading = false;
             });
           }
         }, {
@@ -29480,12 +30827,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this176 = this;
+            var _this182 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this176.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this182.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this176.ts.showError("Error", "Failed to export");
+              _this182.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -29517,16 +30864,16 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this177 = this;
+            var _this183 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this177.ts.showSuccess("Success", "Record deleted successfully.");
+                _this183.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this177.getData();
-              } else _this177.ts.showError("Error", "Failed to delete record.");
+                _this183.getData();
+              } else _this183.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this177.ts.showError("Error", "Failed to delete record.");
+              _this183.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
@@ -29678,12 +31025,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this178 = this;
+            var _this184 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this178.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this184.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this178.ts.showError("Error", "Failed to export");
+              _this184.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -29715,33 +31062,33 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this179 = this;
+            var _this185 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this179.ts.showSuccess("Success", "Record deleted successfully.");
+                _this185.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this179.getData();
-              } else _this179.ts.showError("Error", "Failed to delete record.");
+                _this185.getData();
+              } else _this185.ts.showError("Error", "Failed to delete record.");
             }, function (error) {
-              _this179.ts.showError("Error", "Failed to delete record.");
+              _this185.ts.showError("Error", "Failed to delete record.");
             });
           }
         }, {
           key: "open",
           value: function open(content, obj) {
-            var _this180 = this;
+            var _this186 = this;
 
             this.modalService.open(content, {
               ariaLabelledBy: 'modal-basic-title'
             }).result.then(function (result) {
-              _this180.closeResult = "Closed with: ".concat(result);
+              _this186.closeResult = "Closed with: ".concat(result);
 
               if (result === 'yes') {
-                _this180.Delete(obj);
+                _this186.Delete(obj);
               }
             }, function (reason) {
-              _this180.closeResult = "Dismissed ".concat(_this180.getDismissReason(reason));
+              _this186.closeResult = "Dismissed ".concat(_this186.getDismissReason(reason));
             });
           }
         }, {
@@ -31002,12 +32349,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this181 = this;
+        var _this187 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this181.forecasts = result;
+          _this187.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -31190,7 +32537,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this182 = this;
+            var _this188 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -31200,14 +32547,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this182.imageUrl = reader.result;
+                _this188.imageUrl = reader.result;
 
-                _this182.registrationForm.patchValue({
+                _this188.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this182.editFile = false;
-                _this182.removeUpload = true;
+                _this188.editFile = false;
+                _this188.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -31306,7 +32653,7 @@
         _createClass(ImageViewComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this183 = this;
+            var _this189 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -31316,14 +32663,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this183.imageUrl = reader.result;
+                _this189.imageUrl = reader.result;
 
-                _this183.registrationForm.patchValue({
+                _this189.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this183.editFile = false;
-                _this183.removeUpload = true;
+                _this189.editFile = false;
+                _this189.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -31450,7 +32797,7 @@
 
       var LayoutComponent = /*#__PURE__*/function () {
         function LayoutComponent(router, service, userService, ls) {
-          var _this184 = this;
+          var _this190 = this;
 
           _classCallCheck(this, LayoutComponent);
 
@@ -31478,7 +32825,7 @@
 
           this.permission = this.ls.getSelectedBrand();
           var role = this.permission.permissionForm.find(function (element) {
-            return element.roleName == _this184.type;
+            return element.roleName == _this190.type;
           });
           var roleNameType = role.roleName;
           this.isDiagnostic = role.diagnostic === 1 ? true : false;
@@ -31673,7 +33020,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this185 = this;
+            var _this191 = this;
 
             this.loginForm.markAllAsTouched();
 
@@ -31683,19 +33030,19 @@
 
             this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this185.ls.setSelectedBrand(data);
+                _this191.ls.setSelectedBrand(data);
 
-                _this185.userService.getAllData(); //this.userService.getpermission();
+                _this191.userService.getAllData(); //this.userService.getpermission();
 
 
                 src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_8__["environment"].rootScope = data;
 
-                _this185.router.navigate(["/admin/dashboard"]);
+                _this191.router.navigate(["/admin/dashboard"]);
               } else {
-                _this185.ts.showError("Error", "Username or password is not correct.");
+                _this191.ts.showError("Error", "Username or password is not correct.");
               }
             }, function (error) {
-              _this185.ts.showError("Error", "Something went wrong.");
+              _this191.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
@@ -31992,51 +33339,6 @@
       module.exports = __webpack_require__(
       /*! E:\Projects\Mamji_Admin\ClientApp\src\main.ts */
       "./src/main.ts");
-      /***/
-    },
-
-    /***/
-    1:
-    /*!********************!*\
-      !*** fs (ignored) ***!
-      \********************/
-
-    /*! no static exports found */
-
-    /***/
-    function _(module, exports) {
-      /* (ignored) */
-
-      /***/
-    },
-
-    /***/
-    2:
-    /*!************************!*\
-      !*** crypto (ignored) ***!
-      \************************/
-
-    /*! no static exports found */
-
-    /***/
-    function _(module, exports) {
-      /* (ignored) */
-
-      /***/
-    },
-
-    /***/
-    3:
-    /*!************************!*\
-      !*** stream (ignored) ***!
-      \************************/
-
-    /*! no static exports found */
-
-    /***/
-    function _(module, exports) {
-      /* (ignored) */
-
       /***/
     }
   }, [[0, "runtime", "vendor"]]]);
