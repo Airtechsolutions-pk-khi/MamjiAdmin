@@ -33,10 +33,9 @@ namespace MamjiAdmin._Models
         public string Mobile { get; set; }
         public string CreatedOn { get; set; }
         public string ApprovedBy { get; set; }
-        //public int AppointmentStatus { get; set; }
         public string Timeslot { get; set; }
-        //public string LastUpdatedBy { get; set; }
         public string Status { get; set; }
+        public string UpdatedBy { get; set; }
         public Nullable<System.DateTime> LastUpdatedDate { get; set; } 
     }
     public class MedicineDetailBLL

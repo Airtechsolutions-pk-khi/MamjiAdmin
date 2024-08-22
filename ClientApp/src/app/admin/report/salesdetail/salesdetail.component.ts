@@ -93,10 +93,12 @@ export class SalesdetailComponent implements OnInit {
     const toDate = this.parseDate(this._datepicker.toDate);
 
     this.orderDetails = this.orderDetails.map(order => {
+      debugger
       return {
         ...order,
         fromDate: fromDate,
-        toDate: toDate
+        toDate: toDate,
+        lastUpdatedDate: order.lastUpdatedDate
       };
     });
     this.excelService.exportAppointment(this.orderDetails, 'Report_Export');

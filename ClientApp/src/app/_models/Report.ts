@@ -64,7 +64,8 @@ export class SalesdetailReport {
   approvedBy: number;
   fullName: string;
   timeSlot: string;
-  lastUpdatedBy: string;
+  lastUpdatedDate: string;
+  updatedBy: string;
 }
 export class SalesitemwiseReport {
   itemName: string;

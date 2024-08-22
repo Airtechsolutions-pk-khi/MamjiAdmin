@@ -175,19 +175,16 @@ export class ExcelService {
       // Add data rows, starting after the header row
       json.forEach((order) => {
         debugger
-
-        const createdOnTime = new Date(order.lastUpdatedDate).toLocaleTimeString([], {
+        console.log(order.updatedBy);
+        // Extract only the date from CreatedOn field
+        const createdOnTime = new Date(order.createdOn).toLocaleTimeString([], {
           hour: '2-digit',
           minute: '2-digit',
           hour12: true
         });
-
         // Concatenate LastUpdatedBy with the time from CreatedOn
-        const lastUpdatedByWithTime = `${order.approvedBy} (at ${createdOnTime})`;
-
-        // Extract only the date from CreatedOn field
-        const createdOnDate = new Date(order.lastUpdatedDate).toLocaleDateString();
-
+        const lastUpdatedByWithTime = `${order.approvedBy} (at ${order.createdOn})`
+        const createdOnDate = new Date(order.createdOn).toLocaleDateString();
         worksheet.addRow([
           order.appointmentNo,
           order.bookingDate,
@@ -196,7 +193,7 @@ export class ExcelService {
           order.fullName,
           order.mobile,
           order.createdOn,
-          lastUpdatedByWithTime,
+          order.approvedBy,
           order.timeslot,
           order.status,
         ]);

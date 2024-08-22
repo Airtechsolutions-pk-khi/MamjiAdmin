@@ -23,6 +23,7 @@ export class Appointment {
   userName: string;
   lastUpdatedDate: string;
   lastUpdatedBy: string;
+  updatedBy: string;
   specialities: DoctorSpeciality[];
 }
 
@@ -66,6 +67,8 @@ export class AppointmentReport {
   mobile: string;
   timeslot: string;
   lastUpdatedBy: string;
+  lastUpdatedDate: string;
   appointmentStatus: number;
   status: string;
+  approvedBy: string;
 }

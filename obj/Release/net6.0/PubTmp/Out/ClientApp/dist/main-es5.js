@@ -1122,7 +1122,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Appointment Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Report</h6>\r\n            </div>\r\n            <div class=\"col-md-6 text-right\"> </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 form-group\">\r\n                <label>Select Date</label>\r\n                <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n            </div>\r\n\r\n            <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">   \r\n                          \r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Mobile | Booking Date\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n\r\n            <div class=\"col-md-4 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                <span>Export</span>\r\n              </button>\r\n                <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n            </div>\r\n        </div>\r\n       \r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">Appoint.No</th>\r\n                        <th width=\"15%\">Patient Name</th>\r\n                        <th width=\"10%\">Mobile</th>\r\n                        <th width=\"15%\">Booking Date / Time </th>\r\n                        <th width=\"10%\">Appointment Date</th>\r\n                        <th width=\"15%\">Appointment Slot</th>\r\n                        <th width=\"10%\">Appointment Status </th>\r\n                        <th width=\"15%\">Approved By </th>\r\n                        \r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>{{item.appointmentNo}} </td>\r\n                        <td>{{item.fullName}} </td>\r\n                        <td>{{item.mobile}} </td>\r\n                        <td>{{item.bookingDate}} </td>\r\n                        <td>{{item.createdOn }}</td>\r\n                        <td>{{item.timeslot}}</td>\r\n                        \r\n                        <td>\r\n                         {{item.status}}\r\n                            <!--<span class=\"badge badge-warning\"\r\n                                  *ngIf=\"item.appointmentStatus == 101\">Pending</span>\r\n              \r\n                            <span class=\"badge badge-success\"\r\n                                  *ngIf=\"item.appointmentStatus == 102\">Approved</span>\r\n              \r\n                            <span class=\"badge badge-danger\"\r\n                                  *ngIf=\"item.appointmentStatus == 103\">Cancelled</span>\r\n              \r\n                            <span class=\"badge badge-info\"\r\n                                  *ngIf=\"item.appointmentStatus == 100\">Completed</span>\r\n              \r\n                            <span class=\"badge badge-dark\"\r\n                                  *ngIf=\"![101, 102, 103, 100].includes(item.appointmentStatus)\">-</span>-->\r\n                          </td>\r\n\r\n                        <td>{{item.approvedBy}}</td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <p class=\"pagination-count\">\r\n                Showing\r\n                <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                <strong>{{(total$ | async)!}}</strong> results\r\n              </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n              <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n              </ngb-pagination>\r\n            </div>\r\n          </div>\r\n        \r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Appointment Report</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n  <div class=\"card-header py-3\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-6\">\r\n        <h6 class=\"m-0 font-weight-bold text-orange\">Appointment Report</h6>\r\n      </div>\r\n      <div class=\"col-md-6 text-right\"> </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4 form-group\">\r\n        <label>Select Date</label>\r\n        <ngbd-datepicker-range-popup></ngbd-datepicker-range-popup>\r\n      </div>\r\n\r\n      <div class=\" col-lg-4 input-group \" style=\"padding-top: 32px;\">\r\n\r\n        <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n          <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n        </div>\r\n        <input class=\"form-control search-filter\" placeholder=\"Filter by Patient Name | Mobile | Booking Date\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n      </div>\r\n\r\n      <div class=\"col-md-4 form-group text-right\">\r\n        <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n          <span>Export</span>\r\n        </button>\r\n        <button class=\"btn btn-primary mt-4\" (click)=\"Filter()\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"tile-body p-0 table-responsive \">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr class=\"table-header\">\r\n            <th width=\"10%\">Appoint.No</th>\r\n            <th width=\"15%\">Patient Name</th>\r\n            <th width=\"10%\">Mobile</th>\r\n            <th width=\"15%\">Booking Date / Time </th>\r\n            <th width=\"10%\">Appointment Date</th>\r\n            <th width=\"15%\">Appointment Slot</th>\r\n            <th width=\"10%\">Appointment Status </th>\r\n            <th width=\"15%\">Approved By </th>\r\n            <th width=\"15%\" style=\"display:none;\">Approved Date </th>\r\n\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let item of data$ | async \">\r\n            <td>{{item.appointmentNo}} </td>\r\n            <td>{{item.fullName}} </td>\r\n            <td>{{item.mobile}} </td>\r\n            <td>{{item.bookingDate}} </td>\r\n            <td>{{item.createdOn }}</td>\r\n            <td>{{item.timeslot}}</td>\r\n            <td>{{item.status}}</td>\r\n            <td>{{item.approvedBy}}</td>\r\n            <td style=\"display:none;\">{{item.lastUpdatedDate}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <p class=\"pagination-count\">\r\n          Showing\r\n          <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n          <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n          <strong>{{(total$ | async)!}}</strong> results\r\n        </p>\r\n      </div>\r\n      <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n        <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n        </ngb-pagination>\r\n      </div>\r\n    </div>\r\n\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -2232,6 +2232,17 @@
                       }); // Add data rows, starting after the header row
 
                       json.forEach(function (order) {
+                        debugger;
+                        console.log(order.updatedBy); // Extract only the date from CreatedOn field
+
+                        var createdOnTime = new Date(order.createdOn).toLocaleTimeString([], {
+                          hour: '2-digit',
+                          minute: '2-digit',
+                          hour12: true
+                        }); // Concatenate LastUpdatedBy with the time from CreatedOn
+
+                        var lastUpdatedByWithTime = "".concat(order.approvedBy, " (at ").concat(order.createdOn, ")");
+                        var createdOnDate = new Date(order.createdOn).toLocaleDateString();
                         worksheet.addRow([order.appointmentNo, order.bookingDate, order.day, order.doctorName, order.fullName, order.mobile, order.createdOn, order.approvedBy, order.timeslot, order.status]);
                       }); // Adjust column widths
 
@@ -2923,7 +2934,17 @@
                       }); // Add data rows, starting after the header row
 
                       json.forEach(function (order) {
-                        debugger; // Extract time from CreatedOn field in 12-hour format with AM/PM
+                        debugger; // Convert order.createdOn to a 12-hour format with date and AM/PM
+
+                        var orderDate = order.orderDate ? new Date(order.orderDate).toLocaleString('en-US', {
+                          year: 'numeric',
+                          month: '2-digit',
+                          day: '2-digit',
+                          hour: 'numeric',
+                          minute: 'numeric',
+                          second: 'numeric',
+                          hour12: true
+                        }) : ''; // Extract time from CreatedOn field in 12-hour format with AM/PM
 
                         var createdOnTime = new Date(order.lastUpdateDT).toLocaleTimeString([], {
                           hour: '2-digit',
@@ -2934,7 +2955,7 @@
                         var lastUpdatedByWithTime = "".concat(order.lastUpdateBy, " (at ").concat(createdOnTime, ")"); // Extract only the date from CreatedOn field
 
                         var createdOnDate = new Date(order.lastUpdateDT).toLocaleDateString();
-                        worksheet.addRow([order.orderNo, order.transactionNo, order.customerName, order.customerMobile, order.amountTotal, order.orderDate, order.status, lastUpdatedByWithTime]);
+                        worksheet.addRow([order.orderNo, order.transactionNo, order.customerName, order.customerMobile, order.amountTotal, orderDate, order.status, lastUpdatedByWithTime]);
                       }); // Adjust column widths
 
                       worksheet.columns = headers.map(function (header) {
@@ -3104,9 +3125,19 @@
                       }); // Add data rows, starting after the header row
 
                       json.forEach(function (order) {
-                        var _a, _b, _c, _d, _e, _f, _g, _h;
+                        var _a, _b, _c, _d, _e, _f, _g; // Convert order.createdOn to a 12-hour format with date and AM/PM
 
-                        worksheet.addRow([(_a = order.image) !== null && _a !== void 0 ? _a : '', (_b = order.fullName) !== null && _b !== void 0 ? _b : '', (_c = order.address) !== null && _c !== void 0 ? _c : '', (_d = order.email) !== null && _d !== void 0 ? _d : '', (_e = order.mobile) !== null && _e !== void 0 ? _e : '', (_f = order.registrationNo) !== null && _f !== void 0 ? _f : '', (_g = order.password) !== null && _g !== void 0 ? _g : '', (_h = order.createdOn) !== null && _h !== void 0 ? _h : '']);
+
+                        var createdOn = order.createdOn ? new Date(order.createdOn).toLocaleString('en-US', {
+                          year: 'numeric',
+                          month: '2-digit',
+                          day: '2-digit',
+                          hour: 'numeric',
+                          minute: 'numeric',
+                          second: 'numeric',
+                          hour12: true
+                        }) : '';
+                        worksheet.addRow([(_a = order.image) !== null && _a !== void 0 ? _a : '', (_b = order.fullName) !== null && _b !== void 0 ? _b : '', (_c = order.address) !== null && _c !== void 0 ? _c : '', (_d = order.email) !== null && _d !== void 0 ? _d : '', (_e = order.mobile) !== null && _e !== void 0 ? _e : '', (_f = order.registrationNo) !== null && _f !== void 0 ? _f : '', (_g = order.password) !== null && _g !== void 0 ? _g : '', createdOn !== null && createdOn !== void 0 ? createdOn : '']);
                       }); // Adjust column widths
 
                       worksheet.columns = headers.map(function (header) {
@@ -25121,9 +25152,11 @@
             var fromDate = this.parseDate(this._datepicker.fromDate);
             var toDate = this.parseDate(this._datepicker.toDate);
             this.orderDetails = this.orderDetails.map(function (order) {
+              debugger;
               return Object.assign(Object.assign({}, order), {
                 fromDate: fromDate,
-                toDate: toDate
+                toDate: toDate,
+                lastUpdatedDate: order.lastUpdatedDate
               });
             });
             this.excelService.exportAppointment(this.orderDetails, 'Report_Export');
