@@ -103,7 +103,7 @@ export class PrescriptionReportComponent implements OnInit {
     this.excelService.exportPrescripiton(this.orderDetails, 'Report_Export');
   }
   showImagePath(order) {
-    return 'http://admin.mamjihospital.online/' + order.image;
+    return 'http://mamjihospital.online/' + order.image;
   }
   
   Filter() {

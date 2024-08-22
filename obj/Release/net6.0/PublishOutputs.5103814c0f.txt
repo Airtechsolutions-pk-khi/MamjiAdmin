@@ -82,6 +82,8 @@ E:\Projects\Mamji_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\
 E:\Projects\Mamji_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\mamji.png
 E:\Projects\Mamji_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\MamjiNewLogo.jpg
 E:\Projects\Mamji_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\MamjiReportFooter.jpg
+E:\Projects\Mamji_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\ReportFooter.png
+E:\Projects\Mamji_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\img\ReportHeader.png
 E:\Projects\Mamji_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\js\demo\chart-area-demo.js
 E:\Projects\Mamji_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\js\demo\chart-bar-demo.js
 E:\Projects\Mamji_Admin\obj\Release\net6.0\PubTmp\Out\ClientApp\dist\assets\js\demo\chart-pie-demo.js

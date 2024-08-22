@@ -319,7 +319,7 @@ namespace MamjiAdmin.BLL._Services
                     {
                     }
                 }
-                obj.LastUpdatedDate = _UTCDateTime_SA();
+                obj.LastUpdatedDate = DateTime.Now.AddMinutes(300);
                 var result = _service.Update(obj);
 
                 return result;

@@ -18,6 +18,8 @@ export class Orders {
   orderID: number;
   orderPreparedDate: string;
   orderOFDDate: string;
+  lastUpdateBy: string;
+  lastUpdateDT: string;
 }
 
 export class OrderDetails {

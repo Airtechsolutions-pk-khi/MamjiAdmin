@@ -37,7 +37,7 @@ namespace MamjiAdmin._Models
         public string Timeslot { get; set; }
         //public string LastUpdatedBy { get; set; }
         public string Status { get; set; }
-        //public Nullable<System.DateTime> LastUpdatedDate { get; set; } 
+        public Nullable<System.DateTime> LastUpdatedDate { get; set; } 
     }
     public class MedicineDetailBLL
     {
@@ -60,6 +60,7 @@ namespace MamjiAdmin._Models
     }
     public class DashboardRptBLL
     {
+        public string NewDoctors { get; set; }
         public string TotalDoctors { get; set; }
         public string TotalPatients { get; set; }
         public string TotalDoctorAppointments { get; set; }
@@ -76,6 +77,8 @@ namespace MamjiAdmin._Models
         //public int? StatusID { get; set; }
         public string OrderDate { get; set; }
         public string Status { get; set; }
+        public string LastUpdateBy { get; set; }
+        public Nullable<System.DateTime> LastUpdateDT { get; set; }
     }
     public class SalesUserwiseBLL
     {

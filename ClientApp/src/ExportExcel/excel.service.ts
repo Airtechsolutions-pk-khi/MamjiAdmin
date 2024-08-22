@@ -40,8 +40,8 @@ export class ExcelService {
 
   public async exportAsExcelFile(json: any[], excelFileName: string): Promise<void> {
     try {
-      const logoUrl = 'assets/img/MamjiNewLogo.jpg';  // Path to your logo in assets folder
-      const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+      const logoUrl = 'assets/img/ReportHeader.png';  // Path to your logo in assets folder
+      const footerUrl = 'assets/img/ReportFooter.png'; // Path to your footer image in assets folder
       const logoBase64 = await this.getBase64ImageFromAssets(logoUrl);
       const footerBase64 = await this.getBase64ImageFromAssets(footerUrl);
 
@@ -63,7 +63,7 @@ export class ExcelService {
 
       worksheet.addImage(logo, {
         tl: { col: 0, row: 0 }, // Position the top-left of the image
-        ext: { width: 400, height: 150 }, // Adjust width and height as needed
+        ext: { width: 500, height: 150 }, // Adjust width and height as needed
       });
 
       // Leave the necessary space before adding the data
@@ -97,11 +97,11 @@ export class ExcelService {
       });
 
       // Determine the row for the footer image (e.g., 2 rows below the last data row)
-      const footerRow = worksheet.lastRow.number + 4;
-      worksheet.mergeCells(`A${footerRow}:C${footerRow + 4}`); // Adjust merging range as needed
+      const footerRow = worksheet.lastRow.number + 3;
+      worksheet.mergeCells(`A${footerRow}:C${footerRow + 3}`); // Adjust merging range as needed
       worksheet.addImage(footerImage, {
         tl: { col: 0, row: footerRow + 0 }, // Position the top-left of the footer image
-        ext: { width: 500, height: 75 }, // Adjust width and height as needed
+        ext: { width: 500, height: 50 }, // Adjust width and height as needed
       });
 
       // Generate Excel file and trigger download
@@ -114,8 +114,8 @@ export class ExcelService {
 
   public async exportAppointment(json: any[], excelFileName: string): Promise<void> {
     try {
-      const logoUrl = 'assets/img/MamjiNewLogo.jpg';  // Path to your logo in assets folder
-      const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+      const logoUrl = 'assets/img/ReportHeader.png';  // Path to your logo in assets folder
+      const footerUrl = 'assets/img/ReportFooter.png'; // Path to your footer image in assets folder
       const logoBase64 = await this.getBase64ImageFromAssets(logoUrl);
       const footerBase64 = await this.getBase64ImageFromAssets(footerUrl);
 
@@ -137,7 +137,7 @@ export class ExcelService {
 
       worksheet.addImage(logo, {
         tl: { col: 0, row: 0 }, // Position the top-left of the image
-        ext: { width: 400, height: 150 }, // Adjust width and height as needed
+        ext: { width: 500, height: 150 }, // Adjust width and height as needed
       });
 
 
@@ -174,6 +174,20 @@ export class ExcelService {
 
       // Add data rows, starting after the header row
       json.forEach((order) => {
+        debugger
+
+        const createdOnTime = new Date(order.lastUpdatedDate).toLocaleTimeString([], {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        });
+
+        // Concatenate LastUpdatedBy with the time from CreatedOn
+        const lastUpdatedByWithTime = `${order.approvedBy} (at ${createdOnTime})`;
+
+        // Extract only the date from CreatedOn field
+        const createdOnDate = new Date(order.lastUpdatedDate).toLocaleDateString();
+
         worksheet.addRow([
           order.appointmentNo,
           order.bookingDate,
@@ -182,7 +196,7 @@ export class ExcelService {
           order.fullName,
           order.mobile,
           order.createdOn,
-          order.approvedBy,
+          lastUpdatedByWithTime,
           order.timeslot,
           order.status,
         ]);
@@ -212,11 +226,11 @@ export class ExcelService {
       });
 
       // Determine the row for the footer image (e.g., 2 rows below the last data row)
-      const footerRow = worksheet.lastRow.number + 5;
-      worksheet.mergeCells(`A${footerRow}:E${footerRow + 5}`); // Adjust merging range as needed
+      const footerRow = worksheet.lastRow.number + 3;
+      worksheet.mergeCells(`A${footerRow}:C${footerRow + 3}`); // Adjust merging range as needed
       worksheet.addImage(footerImage, {
         tl: { col: 0, row: footerRow + 0 }, // Position the top-left of the footer image
-        ext: { width: 750, height: 75 }, // Adjust width and height as needed
+        ext: { width: 500, height: 50 }, // Adjust width and height as needed
       });
 
       // Generate Excel file and trigger download
@@ -229,8 +243,8 @@ export class ExcelService {
 
   public async exportMedical(json: any[], excelFileName: string): Promise<void> {
     try {
-      const logoUrl = 'assets/img/MamjiNewLogo.jpg';  // Path to your logo in assets folder
-      const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+      const logoUrl = 'assets/img/ReportHeader.png';  // Path to your logo in assets folder
+      const footerUrl = 'assets/img/ReportFooter.png'; // Path to your footer image in assets folder
       const logoBase64 = await this.getBase64ImageFromAssets(logoUrl);
       const footerBase64 = await this.getBase64ImageFromAssets(footerUrl);
 
@@ -252,7 +266,7 @@ export class ExcelService {
 
       worksheet.addImage(logo, {
         tl: { col: 0, row: 0 }, // Position the top-left of the image
-        ext: { width: 400, height: 150 }, // Adjust width and height as needed
+        ext: { width: 500, height: 150 }, // Adjust width and height as needed
       });
 
 
@@ -322,11 +336,11 @@ export class ExcelService {
       });
 
       // Determine the row for the footer image (e.g., 2 rows below the last data row)
-      const footerRow = worksheet.lastRow.number + 5;
-      worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+      const footerRow = worksheet.lastRow.number + 3;
+      worksheet.mergeCells(`A${footerRow}:C${footerRow + 3}`); // Adjust merging range as needed
       worksheet.addImage(footerImage, {
         tl: { col: 0, row: footerRow + 0 }, // Position the top-left of the footer image
-        ext: { width: 600, height: 75 }, // Adjust width and height as needed
+        ext: { width: 500, height: 50 }, // Adjust width and height as needed
       });
 
       // Generate Excel file and trigger download
@@ -339,8 +353,8 @@ export class ExcelService {
 
   public async exportPrescripiton(json: any[], excelFileName: string): Promise<void> {
     try {
-      const logoUrl = 'assets/img/MamjiNewLogo.jpg';  // Path to your logo in assets folder
-      const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+      const logoUrl = 'assets/img/ReportHeader.png';  // Path to your logo in assets folder
+      const footerUrl = 'assets/img/ReportFooter.png'; // Path to your footer image in assets folder
       const logoBase64 = await this.getBase64ImageFromAssets(logoUrl);
       const footerBase64 = await this.getBase64ImageFromAssets(footerUrl);
 
@@ -362,7 +376,7 @@ export class ExcelService {
 
       worksheet.addImage(logo, {
         tl: { col: 0, row: 0 }, // Position the top-left of the image
-        ext: { width: 400, height: 150 }, // Adjust width and height as needed
+        ext: { width: 500, height: 150 }, // Adjust width and height as needed
       });
 
 
@@ -390,7 +404,7 @@ export class ExcelService {
       worksheet.addRow([]);
 
       // Predefined Column Titles
-      const headers = ['Image', 'Customer Name', 'Mobile', 'Address', 'Note', 'Approved By'];
+      const headers = ['Image', 'Customer Name', 'Mobile', 'Address', 'Note', 'Approved By', 'Approved Date'];
       const headerRow = worksheet.addRow(headers);
 
       // Bold the header row
@@ -400,15 +414,31 @@ export class ExcelService {
 
       // Add data rows, starting after the header row
       json.forEach((order) => {
+        // Extract time from CreatedOn field in 12-hour format with AM/PM
+        const createdOnTime = new Date(order.createdOn).toLocaleTimeString([], {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        });
+
+        // Concatenate LastUpdatedBy with the time from CreatedOn
+        const lastUpdatedByWithTime = `${order.lastUpdatedBy} (at ${createdOnTime})`;
+
+        // Extract only the date from CreatedOn field
+        const createdOnDate = new Date(order.createdOn).toLocaleDateString();
+
+        // Add the row to the worksheet
         worksheet.addRow([
           order.image,
           order.customerName,
           order.mobile,
           order.address,
           order.note,
-          order.lastUpdatedBy,
+          lastUpdatedByWithTime,
+          createdOnDate
         ]);
       });
+
 
       // Adjust column widths
       worksheet.columns = headers.map((header) => ({ width: 25 }));
@@ -434,11 +464,11 @@ export class ExcelService {
       });
 
       // Determine the row for the footer image (e.g., 2 rows below the last data row)
-      const footerRow = worksheet.lastRow.number + 5;
-      worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+      const footerRow = worksheet.lastRow.number + 3;
+      worksheet.mergeCells(`A${footerRow}:C${footerRow + 3}`); // Adjust merging range as needed
       worksheet.addImage(footerImage, {
         tl: { col: 0, row: footerRow + 0 }, // Position the top-left of the footer image
-        ext: { width: 600, height: 75 }, // Adjust width and height as needed
+        ext: { width: 500, height: 50 }, // Adjust width and height as needed
       });
 
       // Generate Excel file and trigger download
@@ -451,8 +481,8 @@ export class ExcelService {
 
   public async exportDashboardReport(json: any[], excelFileName: string): Promise<void> {
     try {
-      const logoUrl = 'assets/img/MamjiNewLogo.jpg';  // Path to your logo in assets folder
-      const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+      const logoUrl = 'assets/img/ReportHeader.png';  // Path to your logo in assets folder
+      const footerUrl = 'assets/img/ReportFooter.png'; // Path to your footer image in assets folder
       const logoBase64 = await this.getBase64ImageFromAssets(logoUrl);
       const footerBase64 = await this.getBase64ImageFromAssets(footerUrl);
 
@@ -474,7 +504,7 @@ export class ExcelService {
 
       worksheet.addImage(logo, {
         tl: { col: 0, row: 0 }, // Position the top-left of the image
-        ext: { width: 400, height: 150 }, // Adjust width and height as needed
+        ext: { width: 500, height: 150 }, // Adjust width and height as needed
       });
 
 
@@ -502,7 +532,7 @@ export class ExcelService {
       worksheet.addRow([]);
 
       // Predefined Column Titles
-      const headers = ['Total Doctors', 'Total Patients', 'Total Doctors Appointment', 'Total Prescription'];
+      const headers = ['New Doctor', 'Total Doctors', 'Total Patients', 'Total Doctors Appointment', 'Total Prescription'];
       const headerRow = worksheet.addRow(headers);
 
       // Bold the header row
@@ -513,6 +543,7 @@ export class ExcelService {
       // Add data rows, starting after the header row
       json.forEach((order) => {
         worksheet.addRow([
+          order.newDoctors,
           order.totalDoctors,
           order.totalPatients,
           order.totalDoctorAppointments,
@@ -544,11 +575,11 @@ export class ExcelService {
       });
 
       // Determine the row for the footer image (e.g., 2 rows below the last data row)
-      const footerRow = worksheet.lastRow.number + 5;
-      worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+      const footerRow = worksheet.lastRow.number + 3;
+      worksheet.mergeCells(`A${footerRow}:C${footerRow + 3}`); // Adjust merging range as needed
       worksheet.addImage(footerImage, {
         tl: { col: 0, row: footerRow + 0 }, // Position the top-left of the footer image
-        ext: { width: 600, height: 75 }, // Adjust width and height as needed
+        ext: { width: 500, height: 50 }, // Adjust width and height as needed
       });
 
       // Generate Excel file and trigger download
@@ -561,8 +592,8 @@ export class ExcelService {
 
   public async exportMedicineReport(json: any[], excelFileName: string): Promise<void> {
     try {
-      const logoUrl = 'assets/img/MamjiNewLogo.jpg';  // Path to your logo in assets folder
-      const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+      const logoUrl = 'assets/img/ReportHeader.png';  // Path to your logo in assets folder
+      const footerUrl = 'assets/img/ReportFooter.png'; // Path to your footer image in assets folder
       const logoBase64 = await this.getBase64ImageFromAssets(logoUrl);
       const footerBase64 = await this.getBase64ImageFromAssets(footerUrl);
 
@@ -584,7 +615,7 @@ export class ExcelService {
 
       worksheet.addImage(logo, {
         tl: { col: 0, row: 0 }, // Position the top-left of the image
-        ext: { width: 400, height: 150 }, // Adjust width and height as needed
+        ext: { width: 500, height: 150 }, // Adjust width and height as needed
       });
 
 
@@ -611,7 +642,7 @@ export class ExcelService {
       worksheet.addRow([]);
 
       // Predefined Column Titles
-      const headers = ['Order #', 'Transaction #', 'Customer Name', 'Customer Mobile', 'Amount Total', 'Order Date', 'Status'];
+      const headers = ['Order #', 'Transaction #', 'Customer Name', 'Customer Mobile', 'Amount Total', 'Order Date', 'Status', 'Approved By'];
       const headerRow = worksheet.addRow(headers);
 
       // Bold the header row
@@ -621,14 +652,42 @@ export class ExcelService {
 
       // Add data rows, starting after the header row
       json.forEach((order) => {
+        debugger
+
+        // Convert order.createdOn to a 12-hour format with date and AM/PM
+        const orderDate = order.orderDate
+          ? new Date(order.orderDate).toLocaleString('en-US', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true
+          })
+          : '';
+
+        // Extract time from CreatedOn field in 12-hour format with AM/PM
+        const createdOnTime = new Date(order.lastUpdateDT).toLocaleTimeString([], {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        });
+
+        // Concatenate LastUpdatedBy with the time from CreatedOn
+        const lastUpdatedByWithTime = `${order.lastUpdateBy} (at ${createdOnTime})`;
+
+        // Extract only the date from CreatedOn field
+        const createdOnDate = new Date(order.lastUpdateDT).toLocaleDateString();
         worksheet.addRow([
           order.orderNo,
           order.transactionNo,
           order.customerName,
           order.customerMobile,
           order.amountTotal,
-          order.orderDate,
+          orderDate,
           order.status,
+          lastUpdatedByWithTime,
         ]);
       });
 
@@ -656,11 +715,11 @@ export class ExcelService {
       });
 
       // Determine the row for the footer image (e.g., 2 rows below the last data row)
-      const footerRow = worksheet.lastRow.number + 5;
-      worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+      const footerRow = worksheet.lastRow.number + 3;
+      worksheet.mergeCells(`A${footerRow}:C${footerRow + 3}`); // Adjust merging range as needed
       worksheet.addImage(footerImage, {
         tl: { col: 0, row: footerRow + 0 }, // Position the top-left of the footer image
-        ext: { width: 600, height: 75 }, // Adjust width and height as needed
+        ext: { width: 500, height: 50 }, // Adjust width and height as needed
       });
 
       // Generate Excel file and trigger download
@@ -673,8 +732,8 @@ export class ExcelService {
 
   public async exportCustomerReport(json: any[], excelFileName: string): Promise<void> {
     try {
-      const logoUrl = 'assets/img/MamjiNewLogo.jpg';  // Path to your logo in assets folder
-      const footerUrl = 'assets/img/MamjiReportFooter.jpg'; // Path to your footer image in assets folder
+      const logoUrl = 'assets/img/ReportHeader.png';  // Path to your logo in assets folder
+      const footerUrl = 'assets/img/ReportFooter.png'; // Path to your footer image in assets folder
       const logoBase64 = await this.getBase64ImageFromAssets(logoUrl);
       const footerBase64 = await this.getBase64ImageFromAssets(footerUrl);
 
@@ -696,7 +755,7 @@ export class ExcelService {
 
       worksheet.addImage(logo, {
         tl: { col: 0, row: 0 }, // Position the top-left of the image
-        ext: { width: 400, height: 150 }, // Adjust width and height as needed
+        ext: { width: 500, height: 150 }, // Adjust width and height as needed
       });
 
       // Adjust the "From Date" and "To Date" filters
@@ -732,6 +791,19 @@ export class ExcelService {
 
       // Add data rows, starting after the header row
       json.forEach((order) => {
+        // Convert order.createdOn to a 12-hour format with date and AM/PM
+        const createdOn = order.createdOn
+          ? new Date(order.createdOn).toLocaleString('en-US', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true
+          })
+          : '';
+
         worksheet.addRow([
           order.image ?? '',          
           order.fullName ?? '',       
@@ -740,7 +812,7 @@ export class ExcelService {
           order.mobile ?? '',         
           order.registrationNo ?? '', 
           order.password ?? '',       
-          order.createdOn ?? ''       
+          createdOn ?? ''       
         ]);
       });
 
@@ -768,11 +840,11 @@ export class ExcelService {
       });
 
       // Determine the row for the footer image (e.g., 2 rows below the last data row)
-      const footerRow = worksheet.lastRow.number + 5;
-      worksheet.mergeCells(`A${footerRow}:D${footerRow + 5}`); // Adjust merging range as needed
+      const footerRow = worksheet.lastRow.number + 3;
+      worksheet.mergeCells(`A${footerRow}:C${footerRow + 3}`); // Adjust merging range as needed
       worksheet.addImage(footerImage, {
         tl: { col: 0, row: footerRow + 0 }, // Position the top-left of the footer image
-        ext: { width: 600, height: 75 }, // Adjust width and height as needed
+        ext: { width: 500, height: 50 }, // Adjust width and height as needed
       });
 
       // Generate Excel file and trigger download

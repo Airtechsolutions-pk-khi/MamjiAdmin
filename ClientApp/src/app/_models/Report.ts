@@ -21,6 +21,7 @@ export class PrescriptionReport {
   lastUpdatedBy: string;
 }
 export class DashboardReport {
+  newDoctors: string;
   totalDoctors: string;
   totalPatients: string;
   DoctorAppointments: string;

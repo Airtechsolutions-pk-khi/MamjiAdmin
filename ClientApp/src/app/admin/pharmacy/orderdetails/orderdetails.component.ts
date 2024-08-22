@@ -17,6 +17,7 @@ export class OrderdetailsComponent implements OnInit {
   private selectedBrand;
   StatusMsg="";
   Locations: Location[] = [];
+  userName = "";
   selectedLocations = [];
   locationID = 0;
   public orderDetails = new OrderDetails();
@@ -29,6 +30,7 @@ export class OrderdetailsComponent implements OnInit {
     public ts: ToastService,
     public router: Router,
     private route: ActivatedRoute) {    
+    this.userName = this.ls.getSelectedBrand().userName;
   }
 
   ngOnInit() {
@@ -52,6 +54,7 @@ export class OrderdetailsComponent implements OnInit {
     debugger
     order.statusID = status;
     order.statusMsg = this.StatusMsg;
+    order.lastUpdateBy = this.userName;
     //Update 
     this.service.update(order).subscribe(data => {
 
